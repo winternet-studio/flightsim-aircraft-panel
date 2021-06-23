@@ -12,8 +12,8 @@ You're welcome to take a look at my online services at [aviation.allanville.com]
 ## Requirements
 
 - A browser! (only tested with Chrome)
-- [Microsoft Flight Simulator 2020](https://www.flightsimulator.com/)
-- Registered (I believe) version of [FSUIPC7](http://fsuipc.com/)
+- [Microsoft Flight Simulator 2020](https://www.flightsimulator.com/) or any flight simulator supported by FSUIPC
+- [FSUIPC7](http://fsuipc.com/) (free)
 - [FSUIPC WebSocket Server](http://fsuipcwebsockets.paulhenty.com/) (free)
 - Preferably a touchscreen monitor!
 
