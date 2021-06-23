@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aircraft Panel</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap 4 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link type="text/css" href="common.css" rel="stylesheet" />
+
+<script type="module">
+import { Config } from './Config.js';
+import Fsuipc from './Fsuipc.js';
+import FsuipcConnection from './FsuipcConnection.js';
+
+var offsetMap = Fsuipc.map();
+var debug = true;
+var connection;
+
+var urlParams = new URLSearchParams(window.location.search);
+if (!urlParams.has('config')) {
+	location.href = 'start.htm';
+} else {
+	var aircraftId = urlParams.get('config');
+
+	var aircraftFile = await import('./config-aircraft/'+ aircraftId +'.js?_='+ new Date().getTime() );  //source: https://javascript.info/modules-dynamic-imports
+	var aircraftClass = aircraftFile.default;
+
+	connection = new FsuipcConnection(Config.fsuipcUrl, aircraftId, aircraftClass, {debug: debug});
+
+	$.get('config-aircraft/'+ aircraftId +'.htm', function(data) {
+		$('#aircraft-specific-html').html(data);
+
+		// Attach event handler for clicking buttons that sends commands to the sim
+		$('.toggleable, .movable, .settable').on('click', function(ev) {
+			var $elem = $(this);
+
+			if ($elem.hasClass('defectwrite')) return false;
+
+			// Play sound
+			if (!$elem.hasClass('no-sound')) {
+				audioObj.play();
+			}
+
+			// Handle click
+			var offsetName = $elem.attr('id');
+			var currValue = convertBoolean($elem.attr('data-raw-value'));
+			var newValue, offsetsData;
+			if (offsetMap[offsetName].type === 'bits') {
+				// a value that is a given bit in an offset
+
+				// find the new value
+				newValue = (currValue == true ? false : true);
+
+				offsetsData = [
+					{
+						name: offsetMap[offsetName].address,
+						value: [
+							{ bit: offsetMap[offsetName].bit, value: newValue },
+						],
+					},
+				];
+			} else if (typeof offsetMap[offsetName] !== 'undefined') {
+				// regular offset
+				var toggleValues = offsetMap[offsetName].toggleValues;
+				if (toggleValues) {
+					// find the new value
+					var currIndx = toggleValues.indexOf(currValue);
+					if (currIndx < toggleValues.length - 1 && currIndx !== -1) {
+						newValue = toggleValues[currIndx + 1];
+					} else {
+						newValue = toggleValues[0];
+					}
+
+					offsetsData = [ {name: offsetName, value: newValue } ];
+				} else {
+					console.error('Dont know how to toggle values for offset name '+ offsetName + '.'); return;
+				}
+			} else {
+				console.error('Offset name '+ offsetName + ' was not found in the map.'); return;
+			}
+
+			connection.sendMessage({
+				command: 'offsets.write',
+				name: 'aircraftOffsets',
+				changesOnly: true,
+				offsets: offsetsData
+			});
+		});
+
+		// Attach event handler to "up/down" knobs that sends commands to the sim
+		$('.knob-down, .knob-up').on('click', function(ev) {
+			var $elem = $(this);
+			var $container = $elem.parent();
+
+			var action = ($elem.hasClass('knob-down') ? 'down' : 'up');
+
+			// Play sound
+			if (!$elem.hasClass('no-sound')) {
+				audioObj.play();
+			}
+
+			// Handle click
+			var offsetName = $container.attr('data-offset-name');
+			var currValue = convertBoolean($container.find('.indic').attr('data-raw-value'));
+			var newValue, offsetsData;
+			var offsetProps = offsetMap[offsetName];
+			if (!offsetProps.upDownSelector || offsetProps.validValues === 'undefined') {
+				console.error('The offset name '+ offsetName + ' is not defined as an up/down knob, or is valid values are missing.'); return;
+			}
+			var currIndx = offsetProps.validValues.indexOf(currValue);
+			if (action === 'up') {
+				if (currIndx < offsetProps.validValues.length - 1) {
+					newValue = offsetProps.validValues[currIndx + 1];
+				} else {
+					return;
+				}
+			} else if (action === 'down') {
+				if (currIndx > 0) {
+					newValue = offsetProps.validValues[currIndx - 1];
+				} else {
+					return;
+				}
+			}
+			offsetsData = [ {name: offsetName, value: newValue } ];
+
+			connection.sendMessage({
+				command: 'offsets.write',
+				name: 'aircraftOffsets',
+				changesOnly: true,
+				offsets: offsetsData
+			});
+		});
+	});
+}
+
+var audioObj = document.createElement('audio');
+audioObj.src = 'media/one-click.wav';
+audioObj.volume = 0.10;
+audioObj.autoPlay = false;
+audioObj.preLoad = true;
+
+console.log('AIRCRAFT: '+ aircraftId);
+
+function convertBoolean(value) {
+	if (value === 'true') {
+		return true;
+	} else if (value === 'false') {
+		return false;
+	} else if (!isNaN(value)) {
+		return parseFloat(value);
+	} else {
+		return value;
+	}
+}
+</script>
+</head>
+<body>
+
+<!-- 
+	<a href="#" onclick="btnGetAboutInfo(); return false;" class="btn btn-secondary btn-sm disabled only-on-connected" disabled>Read info</a>
+-->
+
+	<div id="fsuipcInfo"></div>
+	<div id="fsuipcReadOffsets"></div>
+	<div id="errorMessage" style="color: red; font-weight: bold"></div>
+
+	<div id="aircraft-specific-html"></div>
+
+</body>
+</html>

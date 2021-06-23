@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Select aircraft</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Bootstrap 4 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+body {
+	font-family: Arial;
+	font-size: 30px;
+}
+</style>
+
+<script type="module">
+import { Config } from './Config.js';
+
+var defaultAircraft = [
+	{
+		path: 'msfs20/default/BonanzaG36',
+		name: 'Beechcraft Bonanza G36',
+	},
+	{
+		path: 'msfs20/default/Airbus320neoFBW',
+		name: 'Airbus A320neo',
+	},
+];
+
+var aircraft = {};
+if (!Config.skipDefaultAircraft) {
+	$.extend(aircraft, defaultAircraft);
+}
+if (Config.aircraft !== 'undefined') {
+	$.extend(aircraft, Config.aircraft);
+}
+
+var $aircraftList = $('#aircraft-list');
+Object.keys(aircraft).forEach(function(key) {
+	$aircraftList.append('<div><a href="index.htm?config='+ aircraft[key].path +'">'+ aircraft[key].name +'</a></div>');
+});
+
+</script>
+
+</head>
+<body>
+	<div style="text-align: center; margin-top: 20%; line-height: 3">
+		<div id="aircraft-list"></div>
+	</div>
+</body>
+</html>
