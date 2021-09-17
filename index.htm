@@ -32,10 +32,11 @@ if (!urlParams.has('config')) {
 	var aircraftFile = await import('./config-aircraft/'+ aircraftId +'.js?_='+ new Date().getTime() );  //source: https://javascript.info/modules-dynamic-imports
 	var aircraftClass = aircraftFile.default;
 
-	connection = new FsuipcConnection(Config.fsuipcUrl, aircraftId, aircraftClass, {debug: debug});
-
 	$.get('config-aircraft/'+ aircraftId +'.htm', function(data) {
 		$('#aircraft-specific-html').html(data);
+
+		// Can't start connection until we have the panel layout in place - so that the elements are available before we try set them
+		connection = new FsuipcConnection(Config.fsuipcUrl, aircraftId, aircraftClass, {debug: debug});
 
 		// Attach event handler for clicking buttons that sends commands to the sim
 		$('.toggleable, .movable, .settable').on('click', function(ev) {
