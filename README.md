@@ -27,3 +27,18 @@ This uses [FSUIPC](http://fsuipc.com/) and is limited to its capabilities.
 Nothing speaks better than a visualization - this is a simple example screen:
 
 ![Example screen of an aircraft panel](https://aviation.allanville.com/media/flightsim-aircraft-panel-example.jpg "Example screen")
+
+## Documentation
+
+THIS IS JUST MISC NOTES SO FAR.
+
+Types of controls currently available:
+
+- toggleable: button that can be toggled and shows the current value
+- clickable: button that can be clicked but has no value
+- knob up/down: indicator that has up and down buttons and showing current value
+
+Special classes that can be used:
+
+- INOPERABLE: class that dims the control to indicate that it is inoperable
+- defectwrite: class that indicates the control cannot write to the sim but is read-only

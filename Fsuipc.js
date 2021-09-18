@@ -1,5 +1,7 @@
 export default class Fsuipc {
 
+	static simControls = null;
+
 	constructor(aircraftId) {
 		this.aircraftId = aircraftId;
 	}
@@ -56,6 +58,12 @@ export default class Fsuipc {
 		}
 	}
 
+	static presetCommands() {
+		return {
+			autoSetAltimeter: {method: 'simControl', control: 'BAROMETRIC', parameter: 0},   // (automatically set barometric pressure according to sim) https://www.avsim.com/forums/topic/492606-fsuipc-set-baro-via-b/
+		}
+	}
+
 	/**
 	 * Generate the array with the offsets we want to monitor for a given aircraft
 	 *
@@ -81,4 +89,35 @@ export default class Fsuipc {
 		return array;
 	}
 
+	static msfs20ControlNameToNumber(name) {
+		Fsuipc.loadMsfs20Controls();
+
+		return Fsuipc.simControls[name];
+	}
+
+	static loadMsfs20Controls() {
+		if (Fsuipc.simControls === null) {
+			var x = new XMLHttpRequest();
+			x.open('GET', 'MsfsControlsList.txt', false);
+			x.onreadystatechange = function() {
+				if (x.readyState === 4) {
+					switch (x.status) {
+					case 200:
+						var lines = x.responseText.trim().split("\n");
+						Fsuipc.simControls = {};
+						Object.values(lines).forEach(function(val) {
+							var [controlNumber, controlName] = val.trim().split(/\s{2,}/);
+							Fsuipc.simControls[controlName] = parseInt(controlNumber, 10);
+						});
+
+						break;
+					default:
+						throw 'Could not load flight sim Controls.';
+						break;
+					}
+				}
+			}
+			x.send();
+		}
+	}
 }

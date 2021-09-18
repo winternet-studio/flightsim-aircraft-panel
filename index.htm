@@ -20,8 +20,10 @@ import Fsuipc from './Fsuipc.js';
 import FsuipcConnection from './FsuipcConnection.js';
 
 var offsetMap = Fsuipc.map();
+var presetCommandsMap = Fsuipc.presetCommands();
 var debug = true;
 var connection;
+var simControls = null;
 
 var urlParams = new URLSearchParams(window.location.search);
 if (!urlParams.has('config')) {
@@ -32,14 +34,14 @@ if (!urlParams.has('config')) {
 	var aircraftFile = await import('./config-aircraft/'+ aircraftId +'.js?_='+ new Date().getTime() );  //source: https://javascript.info/modules-dynamic-imports
 	var aircraftClass = aircraftFile.default;
 
-	$.get('config-aircraft/'+ aircraftId +'.htm', function(data) {
+	$.get('config-aircraft/'+ aircraftId +'.htm?_='+ new Date().getTime(), function(data) {
 		$('#aircraft-specific-html').html(data);
 
 		// Can't start connection until we have the panel layout in place - so that the elements are available before we try set them
 		connection = new FsuipcConnection(Config.fsuipcUrl, aircraftId, aircraftClass, {debug: debug});
 
 		// Attach event handler for clicking buttons that sends commands to the sim
-		$('.toggleable, .movable, .settable').on('click', function(ev) {
+		$('.toggleable, .movable, .settable, .clickable').on('click', function(ev) {
 			var $elem = $(this);
 
 			if ($elem.hasClass('defectwrite')) return false;
@@ -50,49 +52,88 @@ if (!urlParams.has('config')) {
 			}
 
 			// Handle click
-			var offsetName = $elem.attr('id');
+			var elemID = $elem.attr('id');  //eg. `offset.eng1OilPress`
+			var [functionMethod, functionRef] = elemID.split('--');
 			var currValue = convertBoolean($elem.attr('data-raw-value'));
 			var newValue, offsetsData;
-			if (offsetMap[offsetName].type === 'bits') {
-				// a value that is a given bit in an offset
 
-				// find the new value
-				newValue = (currValue == true ? false : true);
+			if (functionMethod === 'offset') {
+				// Direct writing to offsets
+				var offsetName = functionRef;
+				if (offsetMap[offsetName].type === 'bits') {
+					// a value that is a given bit in an offset
 
-				offsetsData = [
-					{
-						name: offsetMap[offsetName].address,
-						value: [
-							{ bit: offsetMap[offsetName].bit, value: newValue },
-						],
-					},
-				];
-			} else if (typeof offsetMap[offsetName] !== 'undefined') {
-				// regular offset
-				var toggleValues = offsetMap[offsetName].toggleValues;
-				if (toggleValues) {
 					// find the new value
-					var currIndx = toggleValues.indexOf(currValue);
-					if (currIndx < toggleValues.length - 1 && currIndx !== -1) {
-						newValue = toggleValues[currIndx + 1];
+					newValue = (currValue == true ? false : true);
+
+					offsetsData = [
+						{
+							name: offsetMap[offsetName].address,
+							value: [
+								{ bit: offsetMap[offsetName].bit, value: newValue },
+							],
+						},
+					];
+				} else if (typeof offsetMap[offsetName] !== 'undefined') {
+					// regular offset
+					var toggleValues = offsetMap[offsetName].toggleValues;
+					if (toggleValues) {
+						// find the new value
+						var currIndx = toggleValues.indexOf(currValue);
+						if (currIndx < toggleValues.length - 1 && currIndx !== -1) {
+							newValue = toggleValues[currIndx + 1];
+						} else {
+							newValue = toggleValues[0];
+						}
+
+						offsetsData = [ {name: offsetName, value: newValue } ];
 					} else {
-						newValue = toggleValues[0];
+						console.error('Dont know how to toggle values for offset name '+ offsetName + '.'); return;
 					}
-
-					offsetsData = [ {name: offsetName, value: newValue } ];
 				} else {
-					console.error('Dont know how to toggle values for offset name '+ offsetName + '.'); return;
+					console.error('Offset name '+ offsetName + ' was not found in the map.'); return;
 				}
-			} else {
-				console.error('Offset name '+ offsetName + ' was not found in the map.'); return;
-			}
 
-			connection.sendMessage({
-				command: 'offsets.write',
-				name: 'aircraftOffsets',
-				changesOnly: true,
-				offsets: offsetsData
-			});
+				connection.sendMessage({
+					command: 'offsets.write',
+					name: 'aircraftOffsets',
+					changesOnly: true,
+					offsets: offsetsData
+				});
+
+			} else if (functionMethod === 'simControl') {
+				var controlNumber = functionRef;
+				var controlParameter = 0;
+				offsetsData = [ {name: 'simControlParam', value: controlParameter, name: 'simControlNumber', value: controlNumber} ];
+
+				connection.sendMessage({
+					command: 'offsets.write',
+					name: 'simControlOffsets',
+					changesOnly: true,
+					offsets: offsetsData
+				});
+
+			} else if (functionMethod === 'presetCommand') {
+				var commandName = functionRef;
+				if (presetCommandsMap[commandName]) {
+					if (presetCommandsMap[commandName].method === 'simControl') {
+						offsetsData = [
+							{name: 'simControlParam', value: (typeof presetCommandsMap[commandName].parameter !== 'undefined' ? presetCommandsMap[commandName].parameter : 0)},
+							{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommandsMap[commandName].control) },
+						];
+					} else {
+						return;
+					}
+				} else {
+					console.error('No preset command by the name of '+ offsetName + ' was found.'); return;
+				}
+
+				connection.sendMessage({
+					command: 'offsets.write',
+					name: 'simControlOffsets',
+					offsets: offsetsData,
+				});
+			}
 		});
 
 		// Attach event handler to "up/down" knobs that sends commands to the sim

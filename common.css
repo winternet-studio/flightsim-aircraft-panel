@@ -165,10 +165,12 @@ td {
 }
 
 .toggleable,
+.clickable,
 .knob-up, .knob-down {
 	cursor: pointer;
 }
 .toggleable:active,
+.clickable:active,
 .knob-up:active, .knob-down:active {
 	border: 1px solid #7f7f7f;
 	box-shadow: 0 0 20px white;
@@ -177,6 +179,16 @@ td {
 	/*background-color: red;*/
 	border: 1px solid red;
 	box-shadow: 0 0 20px red;
+}
+
+.clickable {
+	padding-top: 7px;   /* to match size of .toggleable */
+	padding-bottom: 6px;
+}
+.clickable .lbl {
+	color: #8d9093;
+	font-size: 14px;
+	line-height: 16px;
 }
 
 .INOPERABLE {

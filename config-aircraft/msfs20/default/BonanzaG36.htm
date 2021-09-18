@@ -4,35 +4,35 @@ http://dealerdiagnostics.com/blog/2008/05/create-bullet-graphs-with-google-chart
 https://google-developers.appspot.com/chart/interactive/docs/gallery/gauge
 -->
 
-<div class="indic INOPERABLE" id="navGpsSw"><div class="lbl">NAV/GPS</div><div class="val">&nbsp;</div></div>
+<div class="indic INOPERABLE" id="offset--navGpsSw"><div class="lbl">NAV/GPS</div><div class="val">&nbsp;</div></div>
 <div style="width: 20px; display: inline-block"></div>
 
-<div class="indic INOPERABLE" id="fuelTank1Level"><div class="lbl">L FUEL</div><div class="val">&nbsp;</div></div>
-<div class="indic INOPERABLE" id="fuelTank2Level"><div class="lbl">R FUEL</div><div class="val">&nbsp;</div></div>
-<div class="indic INOPERABLE" id="eng1OilPress"><div class="lbl">OIL PRESS</div><div class="val">&nbsp;</div></div>
-<div class="indic INOPERABLE" id="eng1OilTemp"><div class="lbl">OIL TEMP</div><div class="val">&nbsp;</div></div>
-<div class="indic INOPERABLE" id="OAT"><div class="lbl">AIR TEMP</div><div class="val">&nbsp;</div></div>
+<div class="indic INOPERABLE" id="offset--fuelTank1Level"><div class="lbl">L FUEL</div><div class="val">&nbsp;</div></div>
+<div class="indic INOPERABLE" id="offset--fuelTank2Level"><div class="lbl">R FUEL</div><div class="val">&nbsp;</div></div>
+<div class="indic INOPERABLE" id="offset--eng1OilPress"><div class="lbl">OIL PRESS</div><div class="val">&nbsp;</div></div>
+<div class="indic INOPERABLE" id="offset--eng1OilTemp"><div class="lbl">OIL TEMP</div><div class="val">&nbsp;</div></div>
+<div class="indic INOPERABLE" id="offset--OAT"><div class="lbl">AIR TEMP</div><div class="val">&nbsp;</div></div>
 
 <div style="width: 50px; display: inline-block"></div>
 
-<div class="indic toggleable" id="gearHandle"><div class="lbl">GEAR</div><div class="val">&nbsp;</div></div>
+<div class="indic toggleable" id="offset--gearHandle"><div class="lbl">GEAR</div><div class="val">&nbsp;</div></div>
 
-<div class="indic toggleable" id="lightsCabin" data-raw-value=""><div class="lbl">DOME LTS</div><div class="val">&nbsp;</div></div>
+<div class="indic toggleable" id="offset--lightsCabin" data-raw-value=""><div class="lbl">DOME LTS</div><div class="val">&nbsp;</div></div>
 
 <br>
-<div class="indic INOPERABLE" id="elecAmps"><div class="lbl">AMPERES</div><div class="val">&nbsp;</div></div>
+<div class="indic INOPERABLE" id="offset--elecAmps"><div class="lbl">AMPERES</div><div class="val">&nbsp;</div></div>
 
 <table align="center" style="width: 100%">
 <tr>
 	<td style="padding: 0 10px 0 10px; text-align: right">
-	<div class="indic INOPERABLE" id="sqwkCode"><div class="lbl">XPNDR</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--sqwkCode"><div class="lbl">XPNDR</div><div class="val">&nbsp;</div></div>
 	</td>
 	<td style="padding: 0 10px 0 10px; text-align: right; width: 20%">
-	<div class="indic INOPERABLE" id="eng1Egt"><div class="lbl">EGT</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1Egt"><div class="lbl">EGT</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic INOPERABLE" id="eng1ManifPress"><div class="lbl">MANIFOLD<br>PRESSURE</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1ManifPress"><div class="lbl">MANIFOLD<br>PRESSURE</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic INOPERABLE" id="eng1Rpm"><div class="lbl">RPM</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1Rpm"><div class="lbl">RPM</div><div class="val">&nbsp;</div></div>
 	</td>
 </tr>
 </table>
@@ -43,7 +43,7 @@ https://google-developers.appspot.com/chart/interactive/docs/gallery/gauge
 
 	<span class="knob-group" data-offset-name="transponderState">
 		<span class="knob-down"></span>
-		<span class="indic" id="transponderState"><div class="lbl">XPDR</div><div class="val">&nbsp;</div></span>
+		<span class="indic" id="offset--transponderState"><div class="lbl">XPDR</div><div class="val">&nbsp;</div></span>
 		<span class="knob-up"></span>
 	</span>
 
@@ -57,30 +57,30 @@ https://google-developers.appspot.com/chart/interactive/docs/gallery/gauge
 <tr>
 	<td style="padding: 30px">
 
-	<div class="indic INOPERABLE" id="eng1StarterSw"><div class="lbl">MAGNETOS</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1StarterSw"><div class="lbl">MAGNETOS</div><div class="val">&nbsp;</div></div>
 	<div class="vert-separator"></div>
-	<div class="indic toggleable" id="batteryMaster" data-raw-value=""><div class="lbl">BAT MASTER</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="alternator1Master" data-raw-value=""><div class="lbl">ALTERNATOR</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable defectwrite" id="avionicsMaster" data-raw-value=""><div class="lbl">AVIONICS</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="fuelPumpEng1"><div class="lbl">FUEL PUMP</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--batteryMaster" data-raw-value=""><div class="lbl">BAT MASTER</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--alternator1Master" data-raw-value=""><div class="lbl">ALTERNATOR</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable defectwrite" id="offset--avionicsMaster" data-raw-value=""><div class="lbl">AVIONICS</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--fuelPumpEng1"><div class="lbl">FUEL PUMP</div><div class="val">&nbsp;</div></div>
 	<div class="vert-separator"></div>
-	<div class="indic toggleable" id="lightsStrobe" data-raw-value=""><div class="lbl">STROBE</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="lightsBeacon" data-raw-value=""><div class="lbl">BEACON</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="lightsNav" data-raw-value=""><div class="lbl">NAV</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsStrobe" data-raw-value=""><div class="lbl">STROBE</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsBeacon" data-raw-value=""><div class="lbl">BEACON</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsNav" data-raw-value=""><div class="lbl">NAV</div><div class="val">&nbsp;</div></div>
 	<div class="vert-separator"></div>
-	<div class="indic toggleable" id="lightsInstruments" data-raw-value=""><div class="lbl">PANEL</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="lightsTaxi" data-raw-value=""><div class="lbl">TAXI</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable no-sound" id="lightsLanding"><div class="lbl">LANDING</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="pitotHeat"><div class="lbl">PROBE HEAT</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsInstruments" data-raw-value=""><div class="lbl">PANEL</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsTaxi" data-raw-value=""><div class="lbl">TAXI</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable no-sound" id="offset--lightsLanding"><div class="lbl">LANDING</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--pitotHeat"><div class="lbl">PROBE HEAT</div><div class="val">&nbsp;</div></div>
 
 	</td>
 	<td style="padding: 17px 10px 0 10px">
 
-	<div class="txtindic" id="mcpAPAnnun">A/P</div>
-	<div class="txtindic" id="mcpHdgAnnun">HDG</div>
-	<div class="txtindic" id="mcpNav1Annun">NAV</div>
-	<div class="txtindic" id="mcpAppAnnun">APR</div>
-	<div class="txtindic" id="mcpAltAnnun">ALT</div>
+	<div class="txtindic" id="offset--mcpAPAnnun">A/P</div>
+	<div class="txtindic" id="offset--mcpHdgAnnun">HDG</div>
+	<div class="txtindic" id="offset--mcpNav1Annun">NAV</div>
+	<div class="txtindic" id="offset--mcpAppAnnun">APR</div>
+	<div class="txtindic" id="offset--mcpAltAnnun">ALT</div>
 
 	</td>
 </tr>
@@ -92,9 +92,9 @@ https://google-developers.appspot.com/chart/interactive/docs/gallery/gauge
 <tr>
 	<td style="padding: 0 10px 0 10px">
 
-	<div class="indic INOPERABLE" id="eng1Throttle"><div class="lbl">THROTTLE</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="eng1Prop"><div class="lbl">PROP</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="eng1Mixture"><div class="lbl">MIXTURE</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1Throttle"><div class="lbl">THROTTLE</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1Prop"><div class="lbl">PROP</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1Mixture"><div class="lbl">MIXTURE</div><div class="val">&nbsp;</div></div>
 
 	</td>
 </tr>
@@ -106,9 +106,9 @@ https://google-developers.appspot.com/chart/interactive/docs/gallery/gauge
 <tr>
 	<td style="padding: 0 10px 0 10px">
 
-	<div class="indic INOPERABLE" id="ramAir"><div class="lbl">RAM AIR</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="parkingBrake"><div class="lbl">PARK BRAKE</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="eng1CowlFlap"><div class="lbl">COWL FLAPS</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--ramAir"><div class="lbl">RAM AIR</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--parkingBrake"><div class="lbl">PARK BRAKE</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1CowlFlap"><div class="lbl">COWL FLAPS</div><div class="val">&nbsp;</div></div>
 
 	</td>
 </tr>
@@ -117,12 +117,13 @@ https://google-developers.appspot.com/chart/interactive/docs/gallery/gauge
 <table align="center">
 <tr>
 	<td>
-	<div class="indic INOPERABLE" id="trim"><div class="lbl">Trim</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="flaps"><div class="lbl">Flaps</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--trim"><div class="lbl">Trim</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--flaps"><div class="lbl">Flaps</div><div class="val">&nbsp;</div></div>
 
 	<div style="height: 30px"></div>
 
-	<div class="indic INOPERABLE" id="fuelSel"><div class="lbl">Fuel Selector</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--fuelSel"><div class="lbl">Fuel Selector</div><div class="val">&nbsp;</div></div>
+	<div class="indic clickable" id="presetCommand--autoSetAltimeter"><div class="lbl">AUTO BARO</div></div>
 
 	</td>
 </tr>

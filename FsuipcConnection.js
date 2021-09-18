@@ -37,6 +37,17 @@ export default class FsuipcConnection {
 			};
 			myself.sendMessage(request);
 
+			// Declare offsets for sending flight sim controls
+			myself.sendMessage({
+				command: 'offsets.declare',
+				name: 'simControlOffsets',
+				offsets: [
+					//must be in this order (https://forum.simflight.com/topic/90512-best-way-to-make-browser-interface-with-fsuipc/page/2/?tab=comments#comment-562656)
+					{name: 'simControlParam', address: 0x3114, type: 'uint', size: 4},
+					{name: 'simControlNumber', address: 0x3110, type: 'uint', size: 4},
+				],
+			});
+
 			this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftClass);
 
 			// Declare offsets to monitor
@@ -148,7 +159,7 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 
 								// Generate the HTML we will show on screen
 								var html = theOffsets[offsetName](finalValue);
-								var $elem = $('#'+ offsetName);
+								var $elem = $('#offset--'+ offsetName);
 								if ($elem.length > 0) {
 									$elem.find('.val').html(html);
 									$elem.attr('data-raw-value', rawValue);
@@ -159,6 +170,10 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 						}
 					}
 
+				} else if (response.name == 'simControlOffsets') {
+					if (!response.success) {
+						alert('Failed to declare offsets for sim controls.');
+					}
 				} else {
 					console.log('Unknown name: ' + response.name);
 					document.getElementById('errorMessage').innerText = 'ERROR IN '+ msg.data;
