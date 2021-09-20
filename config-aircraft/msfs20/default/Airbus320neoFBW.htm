@@ -2,73 +2,81 @@
 <tr>
 	<!-- OVERHEAD -->
 	<td style="padding: 0 10px 0 10px">
+
+	<div class="indic clickable" id="lVar--A320_Neo_MFD_Range" data-lvar-value="0"><div class="lbl">10</div></div>
+	<div class="indic clickable" id="lVar--A320_Neo_MFD_Range" data-lvar-value="1"><div class="lbl">20</div></div>
+	<div class="indic clickable" id="hVar--A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_FUEL" data-lvar-value="1"><div class="lbl">FUEL</div></div>
+	<div class="indic clickable" id="hVar--A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_ENG" data-lvar-value="1"><div class="lbl">ENG</div></div>
+
+
+
 	<div class="section">Elec</div>
-	<div class="indic INOPERABLE toggleable" id="batteryMaster"><div class="lbl">BAT</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE toggleable" id="offset--batteryMaster"><div class="lbl">BAT</div><div class="val">&nbsp;</div></div>
 
 	<div>&nbsp;</div>
 
-	<div class="indic INOPERABLE" id="genEng1"><div class="lbl">GEN 1</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="genApu"><div class="lbl">APU GEN</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="genEng2"><div class="lbl">GEN 2</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--genEng1"><div class="lbl">GEN 1</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--genApu"><div class="lbl">APU GEN</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--genEng2"><div class="lbl">GEN 2</div><div class="val">&nbsp;</div></div>
 
 	<div style="height: 250px"></div>
 
-	<div class="indic toggleable" id="lightsNav"><div class="lbl">NAV</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="lightsBeacon"><div class="lbl">BEACON</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="lightsStrobe"><div class="lbl">STROBE</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="lightsWing"><div class="lbl">WING</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsNav"><div class="lbl">NAV</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsBeacon"><div class="lbl">BEACON</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsStrobe"><div class="lbl">STROBE</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsWing"><div class="lbl">WING</div><div class="val">&nbsp;</div></div>
 
 	<div style="height: 15px"></div>
 
-	<div class="indic toggleable" id="lightsLanding"><div class="lbl">LANDING LTS</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="lightsTaxi"><div class="lbl">TAXI</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsLanding"><div class="lbl">LANDING LTS</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--lightsTaxi"><div class="lbl">TAXI</div><div class="val">&nbsp;</div></div>
 
 	</td>
 	<td style="padding: 0 10px 0 10px">
 	<div class="section">Fuel</div>
 
-	<div class="indic INOPERABLE" id="fuelPump1"><div class="lbl">L BOOST<br/>PUMP</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="fuelPump2"><div class="lbl">R BOOST<br/>PUMP</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--fuelPump1"><div class="lbl">L BOOST<br/>PUMP</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--fuelPump2"><div class="lbl">R BOOST<br/>PUMP</div><div class="val">&nbsp;</div></div>
 
 	<br>
-	<div class="indic INOPERABLE" id="fuelXfeed"><div class="lbl">XFLOW</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--fuelXfeed"><div class="lbl">XFLOW</div><div class="val">&nbsp;</div></div>
 
 	<div class="section">BLEED</div>
-	<div class="indic INOPERABLE" id="bleedSrc"><div class="lbl">SOURCE</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--bleedSrc"><div class="lbl">SOURCE</div><div class="val">&nbsp;</div></div>
 
 	<div style="height: 15px"></div>
 
-	<div class="indic INOPERABLE" id="apuSw"><div class="lbl">APU</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--apuSw"><div class="lbl">APU</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic INOPERABLE" id="apuRpm"><div class="lbl">APU RPM</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="apuVoltage"><div class="lbl">APU VOLTAGE</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--apuRpm"><div class="lbl">APU RPM</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--apuVoltage"><div class="lbl">APU VOLTAGE</div><div class="val">&nbsp;</div></div>
 
 	<div style="height: 15px"></div>
 
-	<div class="indic INOPERABLE" id="eng1StarterSw"><div class="lbl">ENG L START</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="eng2StarterSw"><div class="lbl">ENG R START</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1StarterSw"><div class="lbl">ENG L START</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng2StarterSw"><div class="lbl">ENG R START</div><div class="val">&nbsp;</div></div>
 	<div class="vert-separator"></div>
-	<div class="indic INOPERABLE" id="ign"><div class="lbl">IGNITION</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--ign"><div class="lbl">IGNITION</div><div class="val">&nbsp;</div></div>
 
 	<div class="section">Hyd</div>
-	<div class="indic INOPERABLE" id="hydPumpEng1"><div class="lbl">ENG 1</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="hydPumpEng2"><div class="lbl">ENG 2</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--hydPumpEng1"><div class="lbl">ENG 1</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--hydPumpEng2"><div class="lbl">ENG 2</div><div class="val">&nbsp;</div></div>
 	</td>
 	<td style="padding: 0 10px 0 10px">
 	<div style="height: 190px"></div>
 
 	<div class="section">Anti-Ice</div>
 
-	<div class="indic INOPERABLE" id="antiIceWing"><div class="lbl">WING</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--antiIceWing"><div class="lbl">WING</div><div class="val">&nbsp;</div></div>
 	<!-- I think a bug causes anti-ice for eng 1 and 2 to be switched around -->
-	<div class="indic INOPERABLE" id="antiIceEng2"><div class="lbl">ENG 1</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="antiIceEng1"><div class="lbl">ENG 2</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--antiIceEng2"><div class="lbl">ENG 1</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--antiIceEng1"><div class="lbl">ENG 2</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic INOPERABLE" id="pitotHeat"><div class="lbl">PROBE HEAT</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--pitotHeat"><div class="lbl">PROBE HEAT</div><div class="val">&nbsp;</div></div>
 
 	<div style="height: 137px"></div>
 
-	<div class="indic INOPERABLE" id="seatbelt"><div class="lbl">SEAT BELT</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--seatbelt"><div class="lbl">SEAT BELT</div><div class="val">&nbsp;</div></div>
 	</td>
 </tr>
 </table>
@@ -77,14 +85,14 @@
 
 <!-- MCP -->
 <div style="text-align: center">
-	<div class="txtindic" id="mcpFDSw">FD</div>
-	<div class="txtindic" id="mcpAPAnnun">A/P</div>
-	<div class="txtindic" id="mcpSpdAnnun">SPEED</div>
-	<!-- <div class="txtindic" id="mcpN1Annun">N1</div> -->
-	<div class="txtindic" id="mcpAppAnnun">APPR</div>
-	<div class="txtindic" id="mcpHdgAnnun">HDG</div>
-	<div class="txtindic" id="mcpNav1Annun">NAV</div>
-	<div class="txtindic" id="mcpAltAnnun">ALT</div>
+	<div class="txtindic" id="offset--mcpFDSw">FD</div>
+	<div class="txtindic" id="offset--mcpAPAnnun">A/P</div>
+	<div class="txtindic" id="offset--mcpSpdAnnun">SPEED</div>
+	<!-- <div class="txtindic" id="offset--mcpN1Annun">N1</div> -->
+	<div class="txtindic" id="offset--mcpAppAnnun">APPR</div>
+	<div class="txtindic" id="offset--mcpHdgAnnun">HDG</div>
+	<div class="txtindic" id="offset--mcpNav1Annun">NAV</div>
+	<div class="txtindic" id="offset--mcpAltAnnun">ALT</div>
 </div>
 
 <div style="height: 30px"></div>
@@ -93,24 +101,24 @@
 <table align="center" style="width: 100%">
 <tr>
 	<td style="width: 35%; text-align: left">
-		<div class="indic INOPERABLE" id="navGpsSw"><div class="lbl">NAV/GPS</div><div class="val">&nbsp;</div></div>
+		<div class="indic INOPERABLE" id="offset--navGpsSw"><div class="lbl">NAV/GPS</div><div class="val">&nbsp;</div></div>
 	</td>
 	<td>
-	<div class="indic INOPERABLE" id="spdBreak"><div class="lbl">Speed Break</div><div class="val">&nbsp;</div></div>
-	<div class="indic toggleable" id="gearHandle"><div class="lbl">Gear</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--spdBreak"><div class="lbl">Speed Break</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--gearHandle"><div class="lbl">Gear</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic toggleable" id="parkingBrake"><div class="lbl">Parking Break</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="flaps"><div class="lbl">Flaps</div><div class="val">&nbsp;</div></div>
+	<div class="indic toggleable" id="offset--parkingBrake"><div class="lbl">Parking Break</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--flaps"><div class="lbl">Flaps</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic INOPERABLE" id="eng1CutoffSw"><div class="lbl">ENG 1 FUEL</div><div class="val">&nbsp;</div></div>
-	<div class="indic INOPERABLE" id="eng2CutoffSw"><div class="lbl">ENG 2 FUEL</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng1CutoffSw"><div class="lbl">ENG 1 FUEL</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--eng2CutoffSw"><div class="lbl">ENG 2 FUEL</div><div class="val">&nbsp;</div></div>
 	</td>
 	<td style="padding-left: 100px">
-	<div class="indic INOPERABLE" id="trim"><div class="lbl">Trim</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--trim"><div class="lbl">Trim</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic INOPERABLE" id="_something" style="opacity: 0"><div class="lbl">---</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--_something" style="opacity: 0"><div class="lbl">---</div><div class="val">&nbsp;</div></div>
 	<br>
-	<div class="indic INOPERABLE" id="sqwkCode"><div class="lbl">XPNDR</div><div class="val">&nbsp;</div></div>
+	<div class="indic INOPERABLE" id="offset--sqwkCode"><div class="lbl">XPNDR</div><div class="val">&nbsp;</div></div>
 	</td>
 	<td style="width: 35%">
 	</td>

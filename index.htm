@@ -54,11 +54,13 @@ if (!urlParams.has('config')) {
 			// Handle click
 			var elemID = $elem.attr('id');  //eg. `offset.eng1OilPress`
 			var [functionMethod, functionRef] = elemID.split('--');
-			var currValue = convertBoolean($elem.attr('data-raw-value'));
-			var newValue, offsetsData;
+			var offsetsData;
 
 			if (functionMethod === 'offset') {
 				// Direct writing to offsets
+
+				var newValue;
+				var currValue = convertBoolean($elem.attr('data-raw-value'));
 				var offsetName = functionRef;
 				if (offsetMap[offsetName].type === 'bits') {
 					// a value that is a given bit in an offset
@@ -132,6 +134,22 @@ if (!urlParams.has('config')) {
 					command: 'offsets.write',
 					name: 'simControlOffsets',
 					offsets: offsetsData,
+				});
+			} else if (functionMethod === 'lVar') {
+				var theVar = functionRef;
+				connection.sendMessage({
+					command: 'vars.write',
+					vars: [
+						{name: 'L:'+ theVar, value: $elem.attr('data-lvar-value')},
+					],
+				});
+			} else if (functionMethod === 'hVar') {
+				var theVar = functionRef;
+				connection.sendMessage({
+					command: 'vars.write',
+					vars: [
+						{name: 'H:'+ theVar},
+					],
 				});
 			}
 		});

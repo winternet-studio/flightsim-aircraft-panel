@@ -182,8 +182,11 @@ td {
 }
 
 .clickable {
-	padding-top: 7px;   /* to match size of .toggleable */
-	padding-bottom: 6px;
+	height: 45px;   /* to match size of .toggleable */
+	display: inline-flex;  /* for vert center of text - see https://stackoverflow.com/a/13515693/2404541 */
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
 }
 .clickable .lbl {
 	color: #8d9093;
