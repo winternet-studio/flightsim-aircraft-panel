@@ -1,6 +1,6 @@
 import FsuipcHtml from './../../../FsuipcHtml.js';
 
-export default class BonanzaG36 {
+export default class Cessna172_G1000 {
 
 	static getOffsets() {
 		return {  //key is the name from map() in Fsuipc.js, value is a function that will format and return HTML for displaying this value on the screen
@@ -8,10 +8,6 @@ export default class BonanzaG36 {
 			avionicsMaster: FsuipcHtml.brightOffValue,
 			alternator1Master: FsuipcHtml.brightOffValue,
 			fuelPumpEng1: FsuipcHtml.brightOnValue,
-			gearHandle: FsuipcHtml.gearHandle,
-			gearNose: FsuipcHtml.gearPosition,
-			gearRight: FsuipcHtml.gearPosition,
-			gearLeft: FsuipcHtml.gearPosition,
 			flapsPositionLeft: this.flapsHtml,
 			lightsStrobe: FsuipcHtml.brightOnValue,
 			lightsBeacon: FsuipcHtml.brightOnValue,
@@ -22,7 +18,6 @@ export default class BonanzaG36 {
 			lightsCabin: FsuipcHtml.brightOnValue,
 			cowlFlapEngine1: FsuipcHtml.cowlFlapPosition,
 			parkingBrake: FsuipcHtml.brightOnValue,
-			transponderState: FsuipcHtml.transponderState,
 		};
 	}
 
