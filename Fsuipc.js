@@ -61,6 +61,33 @@ export default class Fsuipc {
 	static presetCommands() {
 		return {
 			autoSetAltimeter: {method: 'simControl', control: 'BAROMETRIC', parameter: 0},   // (automatically set barometric pressure according to sim) https://www.avsim.com/forums/topic/492606-fsuipc-set-baro-via-b/
+
+			// Find these at https://hubhop.mobiflight.com/#/list
+			G1000_PFD_SOFTKEYS_1: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_1)'},
+			G1000_PFD_SOFTKEYS_2: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_2)'},
+			G1000_PFD_SOFTKEYS_3: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_3)'},
+			G1000_PFD_SOFTKEYS_4: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_4)'},
+			G1000_PFD_SOFTKEYS_5: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_5)'},
+			G1000_PFD_SOFTKEYS_6: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_6)'},
+			G1000_PFD_SOFTKEYS_7: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_7)'},
+			G1000_PFD_SOFTKEYS_8: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_8)'},
+			G1000_PFD_SOFTKEYS_9: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_9)'},
+			G1000_PFD_SOFTKEYS_10: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_10)'},
+			G1000_PFD_SOFTKEYS_11: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_11)'},
+			G1000_PFD_SOFTKEYS_12: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_12)'},
+			G1000_MFD_FLC_Push: {method: 'calculatorCode', code: '(>K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)'},
+			G1000_MFD_SOFTKEYS_1: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_1)'},
+			G1000_MFD_SOFTKEYS_2: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_2)'},
+			G1000_MFD_SOFTKEYS_3: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_3)'},
+			G1000_MFD_SOFTKEYS_4: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_4)'},
+			G1000_MFD_SOFTKEYS_5: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_5)'},
+			G1000_MFD_SOFTKEYS_6: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_6)'},
+			G1000_MFD_SOFTKEYS_7: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_7)'},
+			G1000_MFD_SOFTKEYS_8: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_8)'},
+			G1000_MFD_SOFTKEYS_9: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_9)'},
+			G1000_MFD_SOFTKEYS_10: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_10)'},
+			G1000_MFD_SOFTKEYS_11: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_11)'},
+			G1000_MFD_SOFTKEYS_12: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_12)'},
 		}
 	}
 

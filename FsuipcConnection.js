@@ -176,6 +176,8 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 					}
 				} else if (response.command == 'vars.write' && response.success == true) {
 					// success writing var
+				} else if (response.command == 'vars.calc' && response.success == true) {
+					// success writing calculator code
 				} else {
 					console.log('Unknown name: ' + response.name);
 					document.getElementById('errorMessage').innerText = 'ERROR IN '+ msg.data;
