@@ -22,12 +22,14 @@ export default class Cessna172_G1000 {
 	}
 
 	static flapsHtml(value) {
-		if (value == 0) {
+		if (value < 10) {
 			return '<span class="cdarkgray">UP</span>';
-		} else if (value < 8300) {
-			return 'TAKEOFF';
+		} else if (value < 5500) {
+			return '10°';
+		} else if (value < 11000) {
+			return '20°';
 		} else {
-			return 'DOWN';
+			return '30°';
 		}
 	}
 

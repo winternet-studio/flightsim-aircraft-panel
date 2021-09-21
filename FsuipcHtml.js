@@ -45,7 +45,7 @@ export default class FsuipcHtml {
 		if (value == 0) {
 			return '<span class="cdarkgray">CLOSED</span>';
 		} else {
-			return value +' %';
+			return Math.round(value * 100) +' %';
 		}
 	}
 
