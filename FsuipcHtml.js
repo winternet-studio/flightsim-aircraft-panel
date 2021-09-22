@@ -57,6 +57,34 @@ export default class FsuipcHtml {
 		return '<span class="cmediumgray" style="font-size: 70%">'+ perc +'%</span>';
 	}
 
+	static starterSwitchEngine1Prop(value) {
+		if (value == 0) {
+			return 'OFF';
+		} else if (value == 1) {
+			return 'RIGHT';
+		} else if (value == 2) {
+			return 'LEFT';
+		} else if (value == 3) {
+			return 'BOTH';
+		} else if (value == 4) {
+			return 'START';
+		} else {
+			return '?';
+		}
+	}
+
+	static starterSwitchEngine1JetTurbo(value) {
+		if (value == 0) {
+			return 'OFF';
+		} else if (value == 1) {
+			return 'START';
+		} else if (value == 2) {
+			return 'GEN/ALT';
+		} else {
+			return '?';
+		}
+	}
+
 	static transponderState(value) {
 		if (value == 0) {
 			return 'OFF';

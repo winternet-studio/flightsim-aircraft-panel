@@ -42,3 +42,4 @@ Special classes that can be used:
 
 - INOPERABLE: class that dims the control to indicate that it is inoperable
 - defectwrite: class that indicates the control cannot write to the sim but is read-only
+- no-sound: don't play sound when button is clicked

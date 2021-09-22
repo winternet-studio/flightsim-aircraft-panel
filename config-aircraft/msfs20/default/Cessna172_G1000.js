@@ -16,8 +16,10 @@ export default class Cessna172_G1000 {
 			lightsLanding: FsuipcHtml.brightOnValue,
 			lightsInstruments: FsuipcHtml.brightOnValue,
 			lightsCabin: FsuipcHtml.brightOnValue,
-			cowlFlapEngine1: FsuipcHtml.cowlFlapPosition,
 			parkingBrake: FsuipcHtml.brightOnValue,
+			pitotHeat: FsuipcHtml.brightOffValue,
+			starterSwitchEngine1Prop: FsuipcHtml.starterSwitchEngine1Prop,
+			transponderState: FsuipcHtml.transponderState,
 		};
 	}
 

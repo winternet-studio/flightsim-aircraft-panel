@@ -22,6 +22,8 @@ export default class BonanzaG36 {
 			lightsCabin: FsuipcHtml.brightOnValue,
 			cowlFlapEngine1: FsuipcHtml.cowlFlapPosition,
 			parkingBrake: FsuipcHtml.brightOnValue,
+			pitotHeat: FsuipcHtml.brightOffValue,
+			starterSwitchEngine1Prop: FsuipcHtml.starterSwitchEngine1Prop,
 			transponderState: FsuipcHtml.transponderState,
 		};
 	}

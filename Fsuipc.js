@@ -53,7 +53,10 @@ export default class Fsuipc {
 			lightsStrobe: {address: 0x0D0C, type: 'bits', size: 2, bit: 4},
 			lightsTaxi: {address: 0x0D0C, type: 'bits', size: 2, bit: 3},
 			lightsWing: {address: 0x0D0C, type: 'bits', size: 2, bit: 7},
+			starterSwitchEngine1Prop: {address: 0x0892, type: 'uint', size: 2, upDownSelector: true, validValues: [0, 1, 2, 3, 4]},
+			starterSwitchEngine1JetTurbo: {address: 0x0892, type: 'uint', size: 2, upDownSelector: true, validValues: [0, 1, 2]},
 			parkingBrake: {address: 0x0BC8, type: 'uint', size: 2, toggleValues: [0, 32767]},
+			pitotHeat: {address: 0x029C, type: 'uint', size: 1, toggleValues: [1, 0]},
 			transponderState: {address: 0x0B46, type: 'uint', size: 1, upDownSelector: true, validValues: [0, 1, 2, 3, 4, 5]},
 		}
 	}
