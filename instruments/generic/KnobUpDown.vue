@@ -1,5 +1,5 @@
 <template>
-	<span :class="'knob-group' + (clickOptions?.INOPERABLE ? ' INOPERABLE' : '')" v-vind:data-offset-name="functionRef">
+	<span :class="'knob-group' + (clickOptions?.INOPERABLE ? ' INOPERABLE' : '')" :data-offset-name="functionRef">
 		<span @click="eventHandlers.knobUpDownClick(method, functionRef, dataStore.state[method]?.[functionRef]?.internalValue, 'down', clickOptions)" class="knob-down"></span>
 		<span class="indic">
 			<div class="lbl">{{ label }}</div>

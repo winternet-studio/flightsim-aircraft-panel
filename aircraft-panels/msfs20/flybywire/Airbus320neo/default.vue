@@ -92,14 +92,14 @@
 	<div style="text-align: center">
 
 		<Annunciator label="APU VOLTAGE" method="offset" functionRef="apuVoltage" :dataStore="dataStore" />
-		<Annunciator label="FD" method="offset" functionRef="mcpFDSw" />
-		<Annunciator label="A/P" method="offset" functionRef="mcpAPAnnun" />
-		<Annunciator label="SPEED" method="offset" functionRef="mcpSpdAnnun" />
-		<Annunciator label="N1" method="offset" functionRef="mcpN1Annun" />
-		<Annunciator label="APPR" method="offset" functionRef="mcpAppAnnun" />
-		<Annunciator label="HDG" method="offset" functionRef="mcpHdgAnnun" />
-		<Annunciator label="NAV" method="offset" functionRef="mcpNav1Annun" />
-		<Annunciator label="ALT" method="offset" functionRef="mcpAltAnnun" />
+		<Annunciator label="FD" method="offset" functionRef="mcpFDSw" :dataStore="dataStore" />
+		<Annunciator label="A/P" method="offset" functionRef="mcpAPAnnun" :dataStore="dataStore" />
+		<Annunciator label="SPEED" method="offset" functionRef="mcpSpdAnnun" :dataStore="dataStore" />
+		<Annunciator label="N1" method="offset" functionRef="mcpN1Annun" :dataStore="dataStore" />
+		<Annunciator label="APPR" method="offset" functionRef="mcpAppAnnun" :dataStore="dataStore" />
+		<Annunciator label="HDG" method="offset" functionRef="mcpHdgAnnun" :dataStore="dataStore" />
+		<Annunciator label="NAV" method="offset" functionRef="mcpNav1Annun" :dataStore="dataStore" />
+		<Annunciator label="ALT" method="offset" functionRef="mcpAltAnnun" :dataStore="dataStore" />
 
 	</div>
 
@@ -141,17 +141,15 @@
 </template>
 
 <script>
-import Button from '../../../../instruments/generic/Button.vue';
-import Toggleable from '../../../../instruments/generic/Toggleable.vue';
-import Indicator from '../../../../instruments/generic/Indicator.vue';
-import Annunciator from '../../../../instruments/generic/Annunciator.vue';
-import SectionDivider from '../../../../instruments/layout/SectionDivider.vue';
+var components = {};
+import Button from '../../../../instruments/generic/Button.vue'; components.Button = Button;
+import Toggleable from '../../../../instruments/generic/Toggleable.vue'; components.Toggleable = Toggleable;
+import Indicator from '../../../../instruments/generic/Indicator.vue'; components.Indicator = Indicator;
+import Annunciator from '../../../../instruments/generic/Annunciator.vue'; components.Annunciator = Annunciator;
+import SectionDivider from '../../../../instruments/layout/SectionDivider.vue'; components.SectionDivider = SectionDivider;
 
 export default {
-	components: {
-		Button,
-		Toggleable,
-	},
+	components,
 	props: ['dataStore', 'eventHandlers'],
 	setup(props) {
 		/**

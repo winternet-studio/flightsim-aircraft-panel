@@ -17,7 +17,7 @@
 <!-- React (but lacks scoped CSS): https://stackoverflow.com/questions/36511100/how-do-i-use-react-js-without-a-bundler -->
 
 <script type="module">
-import * as Vue from 'https://unpkg.com/vue@3/dist/vue.runtime.esm-browser.prod.js';
+import * as Vue from 'https://unpkg.com/vue@3/dist/vue.runtime.esm-browser.js';
 import { loadModule } from 'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.esm.js';
 import Common from './Common.js';
 import { Config } from './Config.js';
@@ -197,8 +197,11 @@ if (!urlParams.has('config')) {
 			}
 		},
 
+		/**
+		 * Handle up/down knobs that sends commands to the sim
+		 */
 		knobUpDownClick: (functionMethod, functionRef, currInternalValue, direction, options) => {
-			// Handle "up/down" knobs that sends commands to the sim
+			if (!options) options = {};
 
 			// Play sound
 			if (options.sound !== false) {
@@ -269,7 +272,14 @@ if (!urlParams.has('config')) {
 				getContentData: (asBinary) => asBinary ? res.arrayBuffer() : res.text(),
 			}
 		},
-		addStyle: () => {},
+		addStyle: (textContent) => {
+			const style = Object.assign(document.createElement('style'), { textContent });
+			const ref = document.head.getElementsByTagName('style')[0] || null;
+			document.head.insertBefore(style, ref);
+		},
+		log(type, ...args) {
+			console[type](...args);
+		},
 	}
 	var app = Vue.createApp(Vue.defineAsyncComponent(() => loadModule('aircraft-panels/'+ aircraftPanelId +'.vue', options)), {dataStore, eventHandlers}).mount('#aircraft-specific-component');
 }
@@ -279,7 +289,7 @@ console.log('AIRCRAFT PANEL: '+ aircraftPanelId);
 </head>
 <body>
 
-<!-- 
+<!--
 	<a href="#" onclick="btnGetAboutInfo(); return false;" class="btn btn-secondary btn-sm disabled only-on-connected" disabled>Read info</a>
 -->
 	<div id="fsuipcInfo"></div>

@@ -122,16 +122,15 @@
 </template>
 
 <script>
-import Button from '../../../../instruments/generic/Button.vue';
-import Toggleable from '../../../../instruments/generic/Toggleable.vue';
-import Indicator from '../../../../instruments/generic/Indicator.vue';
-import SectionDivider from '../../../../instruments/layout/SectionDivider.vue';
+var components = {};
+import Button from '../../../../instruments/generic/Button.vue'; components.Button = Button;
+import Toggleable from '../../../../instruments/generic/Toggleable.vue'; components.Toggleable = Toggleable;
+import KnobUpDown from '../../../../instruments/generic/KnobUpDown.vue'; components.KnobUpDown = KnobUpDown;
+import Indicator from '../../../../instruments/generic/Indicator.vue'; components.Indicator = Indicator;
+import SectionDivider from '../../../../instruments/layout/SectionDivider.vue'; components.SectionDivider = SectionDivider;
 
 export default {
-	components: {
-		Button,
-		Toggleable,
-	},
+	components,
 	props: ['dataStore', 'eventHandlers'],
 	setup(props) {
 		/**

@@ -1,6 +1,6 @@
 <template>
 	<div :class="'indic'+ (options?.INOPERABLE ? ' INOPERABLE' : '')" :style="(options?.invisible ? {opacity: 0} : {})">
-		<div class="lbl">{{ label }}</div>
+		<div class="lbl"><span v-html="label"></span></div>
 		<div class="val" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue"><span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span></div>
 	</div>
 </template>
