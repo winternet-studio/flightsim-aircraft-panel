@@ -66,17 +66,17 @@
 
 			<SectionDivider />
 
-			<Toggleable label="BEACON" method="offset" functionRef="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="BEACON" method="offset" functionRef="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
 			<Toggleable label="LANDING" method="offset" functionRef="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
-			<Toggleable label="TAXI" method="offset" functionRef="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="NAV" method="offset" functionRef="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="STROBE" method="offset" functionRef="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="TAXI" method="offset" functionRef="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
+			<Toggleable label="NAV" method="offset" functionRef="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
+			<Toggleable label="STROBE" method="offset" functionRef="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
 
 			<SectionDivider />
 
 			<Toggleable label="PANEL" method="offset" functionRef="lightsInstruments" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="FUEL PUMP" method="offset" functionRef="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="PROBE HEAT" method="offset" functionRef="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="FUEL PUMP" method="offset" functionRef="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
+			<Toggleable label="PROBE HEAT" method="offset" functionRef="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
 
 		</td>
 	</tr>
