@@ -269,6 +269,7 @@ if (!urlParams.has('config')) {
 				throw Object.assign(new Error(res.statusText + ' ' + url), { res });
 			}
 			return {
+				type: (url.endsWith('.js') ? '.mjs' : '.vue'),
 				getContentData: (asBinary) => asBinary ? res.arrayBuffer() : res.text(),
 			}
 		},
