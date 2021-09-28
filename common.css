@@ -21,14 +21,6 @@ td {
 	color: #474D54;  /* #8FB170 */
 	text-transform: uppercase;
 }
-.vert-separator {
-	border: 1px solid gray;
-	height: 30px;
-	width: 0px;
-	top: 4px;
-	position: relative;
-	display: inline-block;
-}
 .indic {
 	margin: 4px;
 	padding: 3px;
@@ -107,14 +99,14 @@ td {
 	padding: 2px 3px;
 	margin: 0 2px;
 }
-.txtindic {
+.text-annun {
 	color: #202729;
 	display: inline-block;
 	font-weight: bold;
 	padding-left: 20px;
 	padding-right: 20px;
 }
-.txtindic2 {
+.text-annun2 {
 	color: #202729;
 	opacity: 0;
 	display: inline-block;

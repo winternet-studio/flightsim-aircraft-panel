@@ -62,35 +62,35 @@ export default class Fsuipc {
 	}
 
 	static presetCommands() {
-		return {
+		return {  // NOTE: these cannot be merged with map() because that is a definition of offsets and this is a definition of commands. They are often the same but multiple commands *could* use the same offsets - and we don't want to define the offsets multiple times
 			autoSetAltimeter: {method: 'simControl', control: 'BAROMETRIC', parameter: 0},   // (automatically set barometric pressure according to sim) https://www.avsim.com/forums/topic/492606-fsuipc-set-baro-via-b/
 
 			// Find these at https://hubhop.mobiflight.com/#/list
-			AS1000_PFD_SOFTKEYS_1: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_1)'},
-			AS1000_PFD_SOFTKEYS_2: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_2)'},
-			AS1000_PFD_SOFTKEYS_3: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_3)'},
-			AS1000_PFD_SOFTKEYS_4: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_4)'},
-			AS1000_PFD_SOFTKEYS_5: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_5)'},
-			AS1000_PFD_SOFTKEYS_6: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_6)'},
-			AS1000_PFD_SOFTKEYS_7: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_7)'},
-			AS1000_PFD_SOFTKEYS_8: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_8)'},
-			AS1000_PFD_SOFTKEYS_9: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_9)'},
-			AS1000_PFD_SOFTKEYS_10: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_10)'},
-			AS1000_PFD_SOFTKEYS_11: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_11)'},
-			AS1000_PFD_SOFTKEYS_12: {method: 'calculatorCode', code: '(>H:AS1000_PFD_SOFTKEYS_12)'},
-			AS1000_MFD_FLC_Push: {method: 'calculatorCode', code: '(>K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)'},
-			AS1000_MFD_SOFTKEYS_1: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_1)'},
-			AS1000_MFD_SOFTKEYS_2: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_2)'},
-			AS1000_MFD_SOFTKEYS_3: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_3)'},
-			AS1000_MFD_SOFTKEYS_4: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_4)'},
-			AS1000_MFD_SOFTKEYS_5: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_5)'},
-			AS1000_MFD_SOFTKEYS_6: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_6)'},
-			AS1000_MFD_SOFTKEYS_7: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_7)'},
-			AS1000_MFD_SOFTKEYS_8: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_8)'},
-			AS1000_MFD_SOFTKEYS_9: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_9)'},
-			AS1000_MFD_SOFTKEYS_10: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_10)'},
-			AS1000_MFD_SOFTKEYS_11: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_11)'},
-			AS1000_MFD_SOFTKEYS_12: {method: 'calculatorCode', code: '(>H:AS1000_MFD_SOFTKEYS_12)'},
+			AS1000_PFD_SOFTKEYS_1: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_1)'},
+			AS1000_PFD_SOFTKEYS_2: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_2)'},
+			AS1000_PFD_SOFTKEYS_3: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_3)'},
+			AS1000_PFD_SOFTKEYS_4: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_4)'},
+			AS1000_PFD_SOFTKEYS_5: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_5)'},
+			AS1000_PFD_SOFTKEYS_6: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_6)'},
+			AS1000_PFD_SOFTKEYS_7: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_7)'},
+			AS1000_PFD_SOFTKEYS_8: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_8)'},
+			AS1000_PFD_SOFTKEYS_9: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_9)'},
+			AS1000_PFD_SOFTKEYS_10: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_10)'},
+			AS1000_PFD_SOFTKEYS_11: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_11)'},
+			AS1000_PFD_SOFTKEYS_12: {method: 'calcCode', code: '(>H:AS1000_PFD_SOFTKEYS_12)'},
+			AS1000_MFD_FLC_Push: {method: 'calcCode', code: '(>K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)'},
+			AS1000_MFD_SOFTKEYS_1: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_1)'},
+			AS1000_MFD_SOFTKEYS_2: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_2)'},
+			AS1000_MFD_SOFTKEYS_3: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_3)'},
+			AS1000_MFD_SOFTKEYS_4: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_4)'},
+			AS1000_MFD_SOFTKEYS_5: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_5)'},
+			AS1000_MFD_SOFTKEYS_6: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_6)'},
+			AS1000_MFD_SOFTKEYS_7: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_7)'},
+			AS1000_MFD_SOFTKEYS_8: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_8)'},
+			AS1000_MFD_SOFTKEYS_9: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_9)'},
+			AS1000_MFD_SOFTKEYS_10: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_10)'},
+			AS1000_MFD_SOFTKEYS_11: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_11)'},
+			AS1000_MFD_SOFTKEYS_12: {method: 'calcCode', code: '(>H:AS1000_MFD_SOFTKEYS_12)'},
 		}
 	}
 
@@ -99,8 +99,7 @@ export default class Fsuipc {
 	 *
 	 * @return {array}
 	 */
-	static makeOffsetsArrayForAircraft(aircraftInstance) {
-		var offsets = aircraftInstance.getOffsets();
+	static makeOffsetsArrayForAircraft(offsets) {
 		var array = [];
 		var offsetMap = Fsuipc.map();
 

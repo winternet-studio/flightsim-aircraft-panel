@@ -1,9 +1,15 @@
 export const config = {
 
 	skipDefaultAircraft: false,  //skip showing default aircraft on start page and only show those configured here in Config.js
-	// aircraft: {
-	// 	'msfs20/myown/BonanzaG36': 'Beechcraft Bonanza G36',
-	// },
+	// aircraft: [
+	// 	{
+	// 		path: 'Cessna172_G1000',
+	// 		name: 'Cessna 172 Skyhawk (G1000)',
+	// 		panels: [
+	// 			{file: 'custom', name: 'My own custom panel'},
+	// 		],
+	// 	},
+	// ],
 
 
 	fsuipcUrl = 'ws://localhost:2048/fsuipc',  //the computer running the FSUIPC WebSocket Server. Can also use IP address like: 'ws://192.168.0.10:2048/fsuipc'

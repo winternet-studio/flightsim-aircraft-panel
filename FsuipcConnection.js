@@ -1,3 +1,4 @@
+import Common from './Common.js';
 import Fsuipc from './Fsuipc.js';
 import FsuipcConversion from './FsuipcConversion.js';
 
@@ -8,12 +9,12 @@ import FsuipcConversion from './FsuipcConversion.js';
  */
 export default class FsuipcConnection {
 
-	constructor(url, aircraftId, aircraftClass, options) {
+	constructor(url, aircraftId, aircraftValues, messageCallback, options) {
 		var myself = this;
 
 		this.url = url;
 		this.aircraftId = aircraftId;
-		this.aircraftClass = aircraftClass;
+		this.aircraftValues = aircraftValues;
 		this.options = {
 			debug: false,
 		};
@@ -48,7 +49,7 @@ export default class FsuipcConnection {
 				],
 			});
 
-			this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftClass);
+			this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftValues.offset);
 
 			// Declare offsets to monitor
 			myself.sendMessage({
@@ -128,11 +129,10 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 					if (response.command == 'offsets.read') {
 						if (response.data) {
 							var Conversion = new FsuipcConversion(myself.aircraftId);
-							var theOffsets = myself.aircraftClass.getOffsets();
 							var offsetMap = Fsuipc.map();
-							Object.keys(theOffsets).forEach(function(offsetName) {
+							Object.keys(myself.aircraftValues.offset).forEach(function(offsetName) {
 								// Get the raw value from FSUIPC
-								var rawValue, finalValue;
+								var rawValue, internalValue;
 								if (typeof response.data[offsetName] != 'undefined') {
 									// regular offset
 									rawValue = response.data[offsetName];
@@ -152,20 +152,13 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 
 								// Convert the value received from FSUIPC if needed
 								if (typeof Conversion[offsetName] == 'object') {
-									finalValue = Conversion[offsetName].from(rawValue);
+									internalValue = Conversion[offsetName].from(rawValue);
 								} else {
-									finalValue = rawValue;
+									internalValue = rawValue;
 								}
 
-								// Generate the HTML we will show on screen
-								var html = theOffsets[offsetName](finalValue);
-								var $elem = $('#offset--'+ offsetName);
-								if ($elem.length > 0) {
-									$elem.find('.val').html(html);
-									$elem.attr('data-raw-value', rawValue);
-								} else {
-									console.error('Element with ID '+ offsetName +' was not found.');
-								}
+								// Update the HTML component
+								messageCallback('offset', offsetName, internalValue);
 							});
 						}
 					}
@@ -180,12 +173,12 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 					// success writing calculator code
 				} else {
 					console.log('Unknown name: ' + response.name);
-					document.getElementById('errorMessage').innerText = 'ERROR IN '+ msg.data;
+					Common.showError('ERROR IN '+ msg.data);
 				}
 			} else {
 				var error = 'Error for ' + response.name + ' (' + response.command + '): ';
 				error += response.errorCode + ' - ' + response.errorMessage;
-				document.getElementById('errorMessage').innerText = error;
+				Common.showError(error);
 			}
 		};
 	}

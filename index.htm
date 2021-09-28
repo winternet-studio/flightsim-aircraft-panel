@@ -7,17 +7,23 @@
 <title>Aircraft Panel</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<!-- Bootstrap 4 -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
 
 <link type="text/css" href="common.css" rel="stylesheet" />
 
+<!-- Source: https://medium.com/@jamesweee/using-vue-js-single-file-component-without-module-bundlers-aea58d892ad9 -->
+<!-- Alternative idea: https://dev.to/arswaw/create-a-lightweight-componentized-spa-without-node-569j -->
+<!-- React (but lacks scoped CSS): https://stackoverflow.com/questions/36511100/how-do-i-use-react-js-without-a-bundler -->
+
 <script type="module">
+import * as Vue from 'https://unpkg.com/vue@3/dist/vue.runtime.esm-browser.prod.js';
+import { loadModule } from 'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.esm.js';
+import Common from './Common.js';
 import { Config } from './Config.js';
 import Fsuipc from './Fsuipc.js';
 import FsuipcConnection from './FsuipcConnection.js';
+import FsuipcHtml from './FsuipcHtml.js';
 
 var offsetMap = Fsuipc.map();
 var presetCommandsMap = Fsuipc.presetCommands();
@@ -25,49 +31,77 @@ var debug = true;
 var connection;
 var simControls = null;
 
+var audioObj = document.createElement('audio');
+audioObj.src = 'media/one-click.wav';
+audioObj.volume = 0.10;
+audioObj.autoPlay = false;
+audioObj.preLoad = true;
+
 var urlParams = new URLSearchParams(window.location.search);
 if (!urlParams.has('config')) {
 	location.href = 'start.htm';
 } else {
-	var aircraftId = urlParams.get('config');
+	var aircraftPanelId = urlParams.get('config');
 
-	var aircraftFile = await import('./config-aircraft/'+ aircraftId +'.js?_='+ new Date().getTime() );  //source: https://javascript.info/modules-dynamic-imports
-	var aircraftClass = aircraftFile.default;
+	const dataStore = {  //idea: https://v3.vuejs.org/guide/state-management.html#simple-state-management-from-scratch (alternative ideas: https://blog.logrocket.com/provide-inject-vue-js-3-composition-api/ --- https://stackoverflow.com/questions/64040286/access-this-root-in-vue-js-3-setup)
+		debug: false,
 
-	$.get('config-aircraft/'+ aircraftId +'.htm?_='+ new Date().getTime(), function(data) {
-		$('#aircraft-specific-html').html(data);
+		state: Vue.reactive({}),
 
-		// Can't start connection until we have the panel layout in place - so that the elements are available before we try set them
-		connection = new FsuipcConnection(Config.fsuipcUrl, aircraftId, aircraftClass, {debug: debug});
+		setStoreValue(method, functionRef, internalValue, valueHtml) {
+			if (this.debug) {
+				console.log('setStoreValue triggered with', method, functionRef, ':', valueHtml);
+			}
 
-		// Attach event handler for clicking buttons that sends commands to the sim
-		$('.toggleable, .movable, .settable, .clickable').on('click', function(ev) {
-			var $elem = $(this);
+			if (typeof this.state[method] === 'undefined') {
+				this.state[method] = {
+					[functionRef]: {internalValue, valueHtml}  // source: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
+				}
+			} else {
+				this.state[method][functionRef] = {internalValue, valueHtml};
+			}
+		},
+	}
 
-			if ($elem.hasClass('defectwrite')) return false;
+	// Other ideas for event handling:
+	//   https://v3.vuejs.org/guide/component-basics.html#emitting-a-value-with-an-event
+	//   https://v3.vuejs.org/guide/events.html#method-event-handlers
+	// Accessing child component data values and methods
+	//   https://forum.vuejs.org/t/vue3-accessing-child-component-data-values-and-methods/111329/4
+	// Declaring props dynamically
+	//   https://vuetiful.wordpress.com/2017/03/12/passing-dynamically-declared-props-in-vue-js/
+
+	/**
+	 * @param {object} options : Available options:
+	 *   - `sound` : set false to not play any clicking sound
+	 */
+	const eventHandlers = {
+		singleClick: (functionMethod, functionRef, currInternalValue, options) => {
+			if (!options) options = {};
+
+			if (options.defectWrite) return false;
 
 			// Play sound
-			if (!$elem.hasClass('no-sound')) {
+			if (options.sound !== false) {
 				audioObj.play();
 			}
 
 			// Handle click
-			var elemID = $elem.attr('id');  //eg. `offset.eng1OilPress`
-			var parts = elemID.split('--');
-			var [functionMethod, functionRef] = parts;
 			var offsetsData;
 
 			if (functionMethod === 'offset') {
 				// Direct writing to offsets
 
 				var newValue;
-				var currValue = convertBoolean($elem.attr('data-raw-value'));
 				var offsetName = functionRef;
-				if (offsetMap[offsetName].type === 'bits') {
+				if (typeof offsetMap[offsetName] === 'undefined') {
+					Common.showError('Offset name '+ offsetName +' was not found in the map.', {timeout: 6000});
+					return;
+				} else if (offsetMap[offsetName].type === 'bits') {
 					// a value that is a given bit in an offset
 
 					// find the new value
-					newValue = (currValue == true ? false : true);
+					newValue = (currInternalValue == true ? false : true);
 
 					offsetsData = [
 						{
@@ -77,12 +111,12 @@ if (!urlParams.has('config')) {
 							],
 						},
 					];
-				} else if (typeof offsetMap[offsetName] !== 'undefined') {
+				} else {
 					// regular offset
 					var toggleValues = offsetMap[offsetName].toggleValues;
 					if (toggleValues) {
 						// find the new value
-						var currIndx = toggleValues.indexOf(currValue);
+						var currIndx = toggleValues.indexOf(currInternalValue);
 						if (currIndx < toggleValues.length - 1 && currIndx !== -1) {
 							newValue = toggleValues[currIndx + 1];
 						} else {
@@ -93,8 +127,6 @@ if (!urlParams.has('config')) {
 					} else {
 						console.error('Dont know how to toggle values for offset name '+ offsetName + '.'); return;
 					}
-				} else {
-					console.error('Offset name '+ offsetName + ' was not found in the map.'); return;
 				}
 
 				connection.sendMessage({
@@ -155,7 +187,7 @@ if (!urlParams.has('config')) {
 						{name: 'H:'+ theVar},
 					],
 				});
-			} else if (functionMethod === 'calculatorCode') {
+			} else if (functionMethod === 'calcCode') {
 				var presetCommand = functionRef;
 				connection.sendMessage({
 					command: 'vars.calc',
@@ -163,73 +195,86 @@ if (!urlParams.has('config')) {
 					code: (presetCommand && Fsuipc.presetCommands()[presetCommand] ? Fsuipc.presetCommands()[presetCommand].code : $elem.attr('data-calc-code')),
 				});
 			}
-		});
+		},
 
-		// Attach event handler to "up/down" knobs that sends commands to the sim
-		$('.knob-down, .knob-up').on('click', function(ev) {
-			var $elem = $(this);
-			var $container = $elem.parent();
-
-			var action = ($elem.hasClass('knob-down') ? 'down' : 'up');
+		knobUpDownClick: (functionMethod, functionRef, currInternalValue, direction, options) => {
+			// Handle "up/down" knobs that sends commands to the sim
 
 			// Play sound
-			if (!$elem.hasClass('no-sound')) {
+			if (options.sound !== false) {
 				audioObj.play();
 			}
 
 			// Handle click
-			var offsetName = $container.attr('data-offset-name');
-			var currValue = convertBoolean($container.find('.indic').attr('data-raw-value'));
-			var newValue, offsetsData;
-			var offsetProps = offsetMap[offsetName];
-			if (!offsetProps.upDownSelector || offsetProps.validValues === 'undefined') {
-				console.error('The offset name '+ offsetName + ' is not defined as an up/down knob, or is valid values are missing.'); return;
-			}
-			var currIndx = offsetProps.validValues.indexOf(currValue);
-			if (action === 'up') {
-				if (currIndx < offsetProps.validValues.length - 1) {
-					newValue = offsetProps.validValues[currIndx + 1];
-				} else {
-					return;
+			if (functionMethod === 'offset') {
+				// Direct writing to offsets
+				var offsetName = functionRef;
+				var newValue, offsetsData;
+				var offsetProps = offsetMap[offsetName];
+				if (!offsetProps.upDownSelector || offsetProps.validValues === 'undefined') {
+					console.error('The offset name '+ offsetName + ' is not defined as an up/down knob, or is valid values are missing.'); return;
 				}
-			} else if (action === 'down') {
-				if (currIndx > 0) {
-					newValue = offsetProps.validValues[currIndx - 1];
-				} else {
-					return;
+				var currIndx = offsetProps.validValues.indexOf(currInternalValue);
+				if (direction === 'up') {
+					if (currIndx < offsetProps.validValues.length - 1) {
+						newValue = offsetProps.validValues[currIndx + 1];
+					} else {
+						return;
+					}
+				} else if (direction === 'down') {
+					if (currIndx > 0) {
+						newValue = offsetProps.validValues[currIndx - 1];
+					} else {
+						return;
+					}
 				}
+				offsetsData = [ {name: offsetName, value: newValue } ];
+
+				connection.sendMessage({
+					command: 'offsets.write',
+					name: 'aircraftOffsets',
+					changesOnly: true,
+					offsets: offsetsData,
+				});
 			}
-			offsetsData = [ {name: offsetName, value: newValue } ];
+		},
 
-			connection.sendMessage({
-				command: 'offsets.write',
-				name: 'aircraftOffsets',
-				changesOnly: true,
-				offsets: offsetsData
-			});
-		});
-	});
-}
+		aircraftInited: (aircraftValues) => {
+			console.log('Aircraft panel initializing...');
+			connection = new FsuipcConnection(Config.fsuipcUrl, aircraftPanelId, aircraftValues, function(method, functionRef, internalValue) {
+				// Convert the final value to its HTML representation
+				var valueHtml;
+				if (typeof aircraftValues[method][functionRef] == 'string') {
+					// The string is the name of a method in FsuipcHtml
+					var htmlMethod = aircraftValues[method][functionRef];
+					valueHtml = FsuipcHtml[htmlMethod](internalValue);
+				} else if (typeof aircraftValues[method][functionRef] == 'function') {
+					valueHtml = aircraftValues[method][functionRef](internalValue);
+				}
 
-var audioObj = document.createElement('audio');
-audioObj.src = 'media/one-click.wav';
-audioObj.volume = 0.10;
-audioObj.autoPlay = false;
-audioObj.preLoad = true;
+				dataStore.setStoreValue('offset', functionRef, internalValue, valueHtml);
 
-console.log('AIRCRAFT: '+ aircraftId);
-
-function convertBoolean(value) {
-	if (value === 'true') {
-		return true;
-	} else if (value === 'false') {
-		return false;
-	} else if (!isNaN(value)) {
-		return parseFloat(value);
-	} else {
-		return value;
+			}, {debug: debug});
+		},
 	}
+
+	const options = {
+		moduleCache: { vue: Vue },
+		async getFile(url) {
+			const res = await fetch(url);
+			if ( !res.ok ) {
+				throw Object.assign(new Error(res.statusText + ' ' + url), { res });
+			}
+			return {
+				getContentData: (asBinary) => asBinary ? res.arrayBuffer() : res.text(),
+			}
+		},
+		addStyle: () => {},
+	}
+	var app = Vue.createApp(Vue.defineAsyncComponent(() => loadModule('aircraft-panels/'+ aircraftPanelId +'.vue', options)), {dataStore, eventHandlers}).mount('#aircraft-specific-component');
 }
+
+console.log('AIRCRAFT PANEL: '+ aircraftPanelId);
 </script>
 </head>
 <body>
@@ -237,12 +282,11 @@ function convertBoolean(value) {
 <!-- 
 	<a href="#" onclick="btnGetAboutInfo(); return false;" class="btn btn-secondary btn-sm disabled only-on-connected" disabled>Read info</a>
 -->
-
 	<div id="fsuipcInfo"></div>
 	<div id="fsuipcReadOffsets"></div>
-	<div id="errorMessage" style="color: red; font-weight: bold"></div>
+	<div id="errorMessage" style="color: red; font-weight: bold; position: absolute; top: 5px; left: 5px; padding: 5px; background-color: #30383d;"></div>
 
-	<div id="aircraft-specific-html"></div>
+	<div id="aircraft-specific-component"></div>
 
 </body>
 </html>
