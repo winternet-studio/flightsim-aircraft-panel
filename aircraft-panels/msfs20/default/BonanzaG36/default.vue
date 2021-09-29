@@ -40,7 +40,7 @@
 	</tr>
 	</table>
 
-	<Toggleable label="NAV/GPS" method="offset" functionRef="navGpsSw" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{INOPERABLE: true}" />
+	<Toggleable label="NAV/GPS" method="offset" functionRef="navGpsSw" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
 
 	<div style="width: 20px; display: inline-block"></div>
 
@@ -66,7 +66,7 @@
 
 			<Toggleable label="BAT MASTER" method="offset" functionRef="batteryMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="ALTERNATOR" method="offset" functionRef="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="AVIONICS" method="offset" functionRef="avionicsMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{defectWrite: true}" />
+			<Toggleable label="AVIONICS" method="offset" functionRef="avionicsMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{defectWrite: true}" />
 			<Toggleable label="FUEL PUMP" method="offset" functionRef="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<SectionDivider />
@@ -79,7 +79,7 @@
 
 			<Toggleable label="PANEL" method="offset" functionRef="lightsInstruments" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="TAXI" method="offset" functionRef="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="LANDING" method="offset" functionRef="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{sound: false}" />
+			<Toggleable label="LANDING" method="offset" functionRef="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Toggleable label="PROBE HEAT" method="offset" functionRef="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
@@ -111,12 +111,12 @@
 	<tr>
 		<td>
 
-			<Indicator label="Trim" method="offset" functionRef="trim" :dataStore="dataStore" :options="{INOPERABLE: true}" />
+			<Indicator label="Trim" method="offset" functionRef="trim" :dataStore="dataStore" :options="{classes: 'INOPERABLE'}" />
 			<Indicator label="Flaps" method="offset" functionRef="flapsPositionLeft" :dataStore="dataStore" />
 
 			<div style="height: 30px"></div>
 
-			<Toggleable label="Fuel Selector" method="offset" functionRef="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :clickOptions="{INOPERABLE: true}" />
+			<Toggleable label="Fuel Selector" method="offset" functionRef="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
 			<Button label="AUTO BARO" method="presetCommand" functionRef="autoSetAltimeter" :eventHandlers="eventHandlers" />
 
 		</td>

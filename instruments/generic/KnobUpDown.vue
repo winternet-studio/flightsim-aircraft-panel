@@ -1,11 +1,16 @@
+<!--
+Indicator that has up and down buttons and showing current value
+-->
 <template>
-	<span :class="'knob-group' + (clickOptions?.INOPERABLE ? ' INOPERABLE' : '')" :data-offset-name="functionRef">
-		<span @click="eventHandlers.knobUpDownClick(method, functionRef, dataStore.state[method]?.[functionRef]?.internalValue, 'down', clickOptions)" class="knob-down"></span>
-		<span class="indic">
-			<div class="lbl">{{ label }}</div>
-			<div class="val" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue"><span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span></div>
+	<span :class="'knob-group' + (options?.classes ? ' '+ options.classes : '')" :data-offset-name="functionRef">
+		<span @click="eventHandlers.knobUpDownClick(method, functionRef, dataStore.state[method]?.[functionRef]?.internalValue, 'down', options)" class="knob-down pressable"></span>
+		<span class="bordered">
+			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
+			<div class="val" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue">
+				<span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span>
+			</div>
 		</span>
-		<span @click="eventHandlers.knobUpDownClick(method, functionRef, dataStore.state[method]?.[functionRef]?.internalValue, 'up', clickOptions)" class="knob-up"></span>
+		<span @click="eventHandlers.knobUpDownClick(method, functionRef, dataStore.state[method]?.[functionRef]?.internalValue, 'up', options)" class="knob-up pressable"></span>
 	</span>
 </template>
 
@@ -13,7 +18,7 @@
 module.exports = {
 	props: [
 		'method', 'functionRef', 'label', 'dataStore', 'eventHandlers',  //required
-		'clickOptions',  //optional
+		'options',  //optional
 	],
 }
 </script>

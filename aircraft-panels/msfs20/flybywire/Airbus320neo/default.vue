@@ -11,13 +11,13 @@
 
 
 			<div class="section">Elec</div>
-			<Toggleable label="BAT" method="offset" functionRef="batteryMaster" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="BAT" method="offset" functionRef="batteryMaster" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div>&nbsp;</div>
 
-			<Toggleable label="GEN 1" method="offset" functionRef="genEng1" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="APU GEN" method="offset" functionRef="genApu" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="GEN 2" method="offset" functionRef="genEng2" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="GEN 1" method="offset" functionRef="genEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="APU GEN" method="offset" functionRef="genApu" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="GEN 2" method="offset" functionRef="genEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div style="height: 250px"></div>
 
@@ -37,32 +37,32 @@
 
 			<!-- TODO: some of these are to be Toggleable instead of Indicator -->
 
-			<Indicator label="L BOOST<br/>PUMP" method="offset" functionRef="fuelPump1" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
-			<Indicator label="R BOOST<br/>PUMP" method="offset" functionRef="fuelPump2" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="L BOOST<br/>PUMP" method="offset" functionRef="fuelPump1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="R BOOST<br/>PUMP" method="offset" functionRef="fuelPump2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<br>
-			<Indicator label="XFLOW" method="offset" functionRef="fuelXfeed" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="XFLOW" method="offset" functionRef="fuelXfeed" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div class="section">BLEED</div>
-			<Indicator label="SOURCE" method="offset" functionRef="bleedSrc" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="SOURCE" method="offset" functionRef="bleedSrc" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div style="height: 15px"></div>
 
-			<Indicator label="APU" method="offset" functionRef="apuSw" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="APU" method="offset" functionRef="apuSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<br>
-			<Indicator label="APU RPM" method="offset" functionRef="apuRpm" :options="{INOPERABLE: true}" :dataStore="dataStore" />
-			<Indicator label="APU VOLTAGE" method="offset" functionRef="apuVoltage" :options="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="APU RPM" method="offset" functionRef="apuRpm" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="APU VOLTAGE" method="offset" functionRef="apuVoltage" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div style="height: 15px"></div>
 
-			<Indicator label="ENG L START" method="offset" functionRef="eng1StarterSw" :options="{INOPERABLE: true}" :dataStore="dataStore" />
-			<Indicator label="ENG R START" method="offset" functionRef="eng2StarterSw" :options="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="ENG L START" method="offset" functionRef="eng1StarterSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG R START" method="offset" functionRef="eng2StarterSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<SectionDivider />
-			<Indicator label="IGNITION" method="offset" functionRef="ign" :options="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="IGNITION" method="offset" functionRef="ign" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div class="section">Hyd</div>
-			<Indicator label="ENG 1" method="offset" functionRef="hydPumpEng1" :options="{INOPERABLE: true}" :dataStore="dataStore" />
-			<Indicator label="ENG 2" method="offset" functionRef="hydPumpEng2" :options="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="ENG 1" method="offset" functionRef="hydPumpEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG 2" method="offset" functionRef="hydPumpEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 		</td>
 		<td style="padding: 0 10px 0 10px">
@@ -110,28 +110,28 @@
 	<tr>
 		<td style="width: 35%; text-align: left">
 
-			<Toggleable label="NAV/GPS" method="offset" functionRef="navGpsSw" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="NAV/GPS" method="offset" functionRef="navGpsSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 		<td>
 
-			<Indicator label="Speed Break" method="offset" functionRef="spdBreak" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="Speed Break" method="offset" functionRef="spdBreak" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<Toggleable label="Gear" method="offset" functionRef="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<br>
 			<Toggleable label="Parking Break" method="offset" functionRef="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Indicator label="Flaps" method="offset" functionRef="flaps" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="Flaps" method="offset" functionRef="flaps" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<br>
-			<Indicator label="ENG 1 FUEL" method="offset" functionRef="eng1CutoffSw" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
-			<Indicator label="ENG 2 FUEL" method="offset" functionRef="eng2CutoffSw" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="ENG 1 FUEL" method="offset" functionRef="eng1CutoffSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG 2 FUEL" method="offset" functionRef="eng2CutoffSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 		</td>
 		<td style="padding-left: 100px">
 
-			<Indicator label="Trim" method="offset" functionRef="trim" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="Trim" method="offset" functionRef="trim" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<br>
 			<Indicator label="-SPACER-" :options="{invisible: true}" :dataStore="dataStore" />
 			<br>
-			<Indicator label="XPNDR" method="offset" functionRef="sqwkCode" :clickOptions="{INOPERABLE: true}" :dataStore="dataStore" />
+			<Indicator label="XPNDR" method="offset" functionRef="sqwkCode" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 		</td>
 		<td style="width: 35%">

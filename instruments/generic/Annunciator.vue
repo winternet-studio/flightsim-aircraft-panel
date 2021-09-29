@@ -1,5 +1,5 @@
 <template>
-	<div :class="'text-annun' + (options?.INOPERABLE ? ' INOPERABLE' : '')" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue">
+	<div :class="'annunciator' + (options?.classes ? ' '+ options.classes : '')" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue">
 		<span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span>
 	</div>
 </template>

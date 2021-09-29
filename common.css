@@ -21,23 +21,6 @@ td {
 	color: #474D54;  /* #8FB170 */
 	text-transform: uppercase;
 }
-.indic {
-	margin: 4px;
-	padding: 3px;
-	border-radius: 3px;
-	border: 1px solid #1C2021;
-	text-align: center;
-	width: 85px;
-	display: inline-block;
-}
-.indic.small {
-	width: 34px;
-	margin: 4px 2px;
-	padding-top: 5px;
-}
-.indic.defectwrite {
-	border-color: #640101;
-}
 
 .knob-group > span {
 	display: inline-block;
@@ -65,9 +48,6 @@ td {
 
 .lbl {
 	color: #B0B4B7;
-}
-.indic.small .lbl, .lbl.small {
-	font-size: 90%;
 }
 .val {
 	font-weight: bold;
@@ -99,14 +79,14 @@ td {
 	padding: 2px 3px;
 	margin: 0 2px;
 }
-.text-annun {
+.annunciator {
 	color: #202729;
 	display: inline-block;
 	font-weight: bold;
 	padding-left: 20px;
 	padding-right: 20px;
 }
-.text-annun2 {
+.annunciator2 {
 	color: #202729;
 	opacity: 0;
 	display: inline-block;
@@ -156,34 +136,39 @@ td {
 	right: 10px;
 }
 
-.toggleable,
-.clickable,
-.knob-up, .knob-down {
+.pressable {
 	cursor: pointer;
 }
-.toggleable:active,
-.clickable:active,
-.knob-up:active, .knob-down:active {
+
+.bordered {
+	margin: 4px;
+	padding: 3px;
+	border-radius: 3px;
+	border: 1px solid #1C2021;
+	text-align: center;
+	width: 85px;
+	display: inline-block;
+}
+.bordered.defect-write {
+	border-color: #640101;
+}
+.bordered:active {
 	border: 1px solid #7f7f7f;
 	box-shadow: 0 0 20px white;
 }
-.toggleable.defectwrite:active {
+.bordered.defect-write:active {
 	/*background-color: red;*/
 	border: 1px solid red;
 	box-shadow: 0 0 20px red;
 }
 
-.clickable {
-	height: 45px;   /* to match size of .toggleable */
-	display: inline-flex;  /* for vert center of text - see https://stackoverflow.com/a/13515693/2404541 */
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
+.bordered.small {
+	width: 65px;
+	margin: 4px 2px;
+	padding-top: 5px;
 }
-.clickable .lbl {
-	color: #8d9093;
-	font-size: 14px;
-	line-height: 16px;
+.bordered.small .lbl {
+	font-size: 70%;
 }
 
 .INOPERABLE {

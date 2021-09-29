@@ -1,7 +1,14 @@
+<!--
+Button that can be toggled and shows the current value
+-->
 <template>
-	<div @click="eventHandlers.singleClick(method, functionRef, dataStore.state[method]?.[functionRef]?.internalValue, clickOptions)" :class="'indic toggleable' + (clickOptions?.INOPERABLE ? ' INOPERABLE' : '') + (clickOptions?.defectWrite ? ' defectwrite' : '')">
-		<div class="lbl"><span v-html="label"></span></div>
-		<div class="val" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue"><span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span></div>
+	<div @click="eventHandlers.singleClick(method, functionRef, dataStore.state[method]?.[functionRef]?.internalValue, options)" :class="'toggleable bordered pressable' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
+		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
+			<span v-html="label"></span>
+		</div>
+		<div class="val" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue">
+			<span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span>
+		</div>
 	</div>
 </template>
 
@@ -9,7 +16,7 @@
 module.exports = {
 	props: [
 		'method', 'functionRef', 'label', 'dataStore', 'eventHandlers',  //required
-		'clickOptions',  //optional
+		'options',  //optional
 	],
 }
 </script>
