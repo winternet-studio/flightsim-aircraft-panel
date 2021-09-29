@@ -9,18 +9,18 @@
 
 			<table class="display-width pfd-horiz-position" style="position: absolute; top: 510px">
 			<tr>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_1" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_2" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_3" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_4" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_5" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_6" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_7" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_8" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_9" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_10" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_11" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_PFD_SOFTKEYS_12" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_1" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_2" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_3" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_4" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_5" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_6" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_7" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_8" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_9" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_10" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_11" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_PFD_SOFTKEYS_12" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
 			</tr>
 			</table>
 
@@ -31,18 +31,18 @@
 
 			<table class="display-width mfd-horiz-position" style="position: absolute; top: 510px">
 			<tr>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_1" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_2" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_3" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_4" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_5" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_6" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_7" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_8" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_9" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_10" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_11" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
-				<td><Button label="▲" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_12" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_1" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_2" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_3" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_4" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_5" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_6" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_7" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_8" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_9" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_10" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_11" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
+				<td><Button label="▲" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_12" :eventHandlers="eventHandlers" :options="{style: {width: '50px', height: '25px', margin: '2px'}, labelStyle: {'font-size': '10px', opacity: 0.3}}" /></td>
 			</tr>
 			</table>
 
@@ -61,7 +61,7 @@
 		<td style="padding: 20px">
 
 			<!-- MFD -->
-			<Button label="FLC" method="calcCode" functionRef="AS1000_MFD_FLC_Push" :eventHandlers="eventHandlers" />
+			<Button label="FLC" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_FLC_Push" :eventHandlers="eventHandlers" />
 			<Button label="DIR" method="hVar" functionRef="AS1000_MFD_DIRECTTO" :eventHandlers="eventHandlers" />
 			<Button label="MENU" method="hVar" functionRef="AS1000_MFD_MENU_Push" :eventHandlers="eventHandlers" />
 			<Button label="FPL" method="hVar" functionRef="AS1000_MFD_FPL_Push" :eventHandlers="eventHandlers" />
@@ -71,8 +71,8 @@
 			<Button label="ENT" method="hVar" functionRef="AS1000_MFD_ENT_Push" :eventHandlers="eventHandlers" />
 			<Button label="Zoom In" method="hVar" functionRef="AS1000_MFD_RANGE_DEC" :eventHandlers="eventHandlers" />
 			<Button label="Zoom Out" method="hVar" functionRef="AS1000_MFD_RANGE_INC" :eventHandlers="eventHandlers" />
-			<!-- <Button label="SOFT 3" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_3" :eventHandlers="eventHandlers" /> -->
-			<!-- <Button label="SOFT 11" method="calcCode" functionRef="AS1000_MFD_SOFTKEYS_11" :eventHandlers="eventHandlers" /> -->
+			<!-- <Button label="SOFT 3" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_3" :eventHandlers="eventHandlers" /> -->
+			<!-- <Button label="SOFT 11" method="presetCommand" functionRef="Microsoft.Generic.Avionics.AS1000_MFD_SOFTKEYS_11" :eventHandlers="eventHandlers" /> -->
 
 		</td>
 	</tr>

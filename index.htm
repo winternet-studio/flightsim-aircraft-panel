@@ -138,9 +138,10 @@ if (!urlParams.has('config')) {
 
 			} else if (functionMethod === 'simControl') {
 				var controlNumber = functionRef;
-				var controlParameter = 0;
-				if (!$.isNumeric(controlNumber)) {
-				}
+				console.info('Writing Lvars is not fully supported yet');
+				var controlParameter = 0;  //TODO: allow passing the parameter value to be used
+				// if (!$.isNumeric(controlNumber)) {
+				// }
 
 				offsetsData = [ {name: 'simControlParam', value: controlParameter, name: 'simControlNumber', value: controlNumber} ];
 
@@ -154,29 +155,39 @@ if (!urlParams.has('config')) {
 			} else if (functionMethod === 'presetCommand') {
 				var commandName = functionRef;
 				if (presetCommandsMap[commandName]) {
-					if (presetCommandsMap[commandName].method === 'simControl') {
+					if (typeof presetCommandsMap[commandName] === 'undefined') {
+						Common.showError('Command "'+ offsetName +'" was not found in list of preset commands. If this was a preset from MobiFlight it might have been changed or removed in place of something else. Please update /databases/MobiFlightHubHopPresets.js with the latest version and look for another preset to use in its place. Searching on https://hubhop.mobiflight.com/ might be of a help to you.', {timeout: 40000});
+					} else if (presetCommandsMap[commandName].method === 'simControl') {
 						offsetsData = [
 							{name: 'simControlParam', value: (typeof presetCommandsMap[commandName].parameter !== 'undefined' ? presetCommandsMap[commandName].parameter : 0)},
 							{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommandsMap[commandName].control) },
 						];
+						connection.sendMessage({
+							command: 'offsets.write',
+							name: 'simControlOffsets',
+							offsets: offsetsData,
+						});
+					} else if (presetCommandsMap[commandName].method === 'calcCode') {
+						connection.sendMessage({
+							command: 'vars.calc',
+							name: 'calc',
+							code: presetCommandsMap[commandName].code,
+						});
 					} else {
+						console.error('Dont know how to handle method '+ presetCommandsMap[commandName].method + ' in event handler.'); return;
 						return;
 					}
 				} else {
 					console.error('No preset command by the name of '+ offsetName + ' was found.'); return;
 				}
-
-				connection.sendMessage({
-					command: 'offsets.write',
-					name: 'simControlOffsets',
-					offsets: offsetsData,
-				});
 			} else if (functionMethod === 'lVar') {
 				var theVar = functionRef;
+				console.info('Writing Lvars is not fully supported yet');
+				var theValue = 0;  //TODO: allow passing the parameter value to be used
 				connection.sendMessage({
 					command: 'vars.write',
 					vars: [
-						{name: 'L:'+ theVar, value: $elem.attr('data-lvar-value')},
+						{name: 'L:'+ theVar, value: theValue},
 					],
 				});
 			} else if (functionMethod === 'hVar') {
@@ -188,11 +199,11 @@ if (!urlParams.has('config')) {
 					],
 				});
 			} else if (functionMethod === 'calcCode') {
-				var presetCommand = functionRef;
+				var calculatorCode = functionRef;
 				connection.sendMessage({
 					command: 'vars.calc',
 					name: 'calc',
-					code: (presetCommand && Fsuipc.presetCommands()[presetCommand] ? Fsuipc.presetCommands()[presetCommand].code : $elem.attr('data-calc-code')),
+					code: calculatorCode,
 				});
 			}
 		},
