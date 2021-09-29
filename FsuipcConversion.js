@@ -5,8 +5,8 @@ import FsuipcDefaultConversion from './FsuipcDefaultConversion.js';
  */
 export default class FsuipcConversion {
 
-	constructor(aircraftId) {
-		this._aircraftId = aircraftId;
+	constructor(aircraftPanelId) {
+		this._aircraftPanelId = aircraftPanelId;
 
 		this.gearLeft = new FsuipcDefaultConversion();
 

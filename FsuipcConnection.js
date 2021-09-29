@@ -9,11 +9,11 @@ import FsuipcConversion from './FsuipcConversion.js';
  */
 export default class FsuipcConnection {
 
-	constructor(url, aircraftId, aircraftValues, messageCallback, options) {
+	constructor(url, aircraftPanelId, aircraftValues, messageCallback, options) {
 		var myself = this;
 
 		this.url = url;
-		this.aircraftId = aircraftId;
+		this.aircraftPanelId = aircraftPanelId;
 		this.aircraftValues = aircraftValues;
 		this.options = {
 			debug: false,
@@ -128,7 +128,7 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 				} else if (response.name == 'aircraftOffsets') {
 					if (response.command == 'offsets.read') {
 						if (response.data) {
-							var Conversion = new FsuipcConversion(myself.aircraftId);
+							var Conversion = new FsuipcConversion(myself.aircraftPanelId);
 							var offsetMap = Fsuipc.map();
 							Object.keys(myself.aircraftValues.offset).forEach(function(offsetName) {
 								// Get the raw value from FSUIPC
