@@ -73,11 +73,13 @@ if (!urlParams.has('config')) {
 	//   https://vuetiful.wordpress.com/2017/03/12/passing-dynamically-declared-props-in-vue-js/
 
 	/**
-	 * @param {object} options : Available options:
+	 * @param {object} options : Available options (either currInternalValue or newInternalValue must be set):
+	 *   - `currInternalValue` : set this for toggling states, otherwise set it as undefined
+	 *   - `newInternalValue` : set this to set a specific value, otherwise set it as undefined
 	 *   - `sound` : set false to not play any clicking sound
 	 */
 	const eventHandlers = {
-		singleClick: (method, action, currInternalValue, options) => {
+		singleClick: (method, action, currInternalValue, newInternalValue, options) => {
 			if (!options) options = {};
 
 			if (options.defectWrite) return false;
@@ -113,37 +115,47 @@ if (!urlParams.has('config')) {
 					];
 				} else {
 					// regular offset
-					if (typeof offsetMap[offsetName].toggleValues !== 'undefined') {
+					if (newInternalValue != null) {
+						newValue = newInternalValue;
+					} else if (typeof offsetMap[offsetName].toggleValues !== 'undefined') {
 						newValue = Common.getNextToggleValue(offsetMap[offsetName].toggleValues, currInternalValue);
-						offsetsData = [ {name: offsetName, value: newValue } ];
 					} else {
-						// TODO: add handling setting just a specific value
-						console.error('Dont know how to toggle values for offset name '+ offsetName + '.'); return;
+						console.error('Dont know how to determine new value for offset name '+ offsetName + '.');
+					}
+					if (newValue != null) {
+						offsetsData = [ {name: offsetName, value: newValue } ];
 					}
 				}
 
-				connection.sendMessage({
-					command: 'offsets.write',
-					name: 'aircraftOffsets',
-					changesOnly: true,
-					offsets: offsetsData
-				});
+				if (offsetsData) {
+					connection.sendMessage({
+						command: 'offsets.write',
+						name: 'aircraftOffsets',
+						changesOnly: true,
+						offsets: offsetsData,
+					});
+				}
 
 			} else if (method === 'lVar') {
-				var theVar = action;
-				if (typeof lVarOptions[theVar].toggleValues !== 'undefined') {
-					newValue = Common.getNextToggleValue(lVarOptions[theVar].toggleValues, currInternalValue);
-					offsetsData = [ {name: theVar, value: newValue } ];
+				var theLVar = action;
+				if (newInternalValue != null) {
+					newValue = newInternalValue;
+				} else if (typeof lVarOptions[theLVar].toggleValues !== 'undefined') {
+					newValue = Common.getNextToggleValue(lVarOptions[theLVar].toggleValues, currInternalValue);
+				} else {
+					console.error('Dont know how to determine new value for lVar name '+ theLVar + '.');
+				}
+				if (newValue != null) {
+					offsetsData = [ {name: theLVar, value: newValue } ];
+				}
 
+				if (offsetsData) {
 					connection.sendMessage({
 						command: 'vars.write',
 						vars: [
-							{name: theVar, value: newValue},
+							{name: theLVar, value: newValue},
 						],
 					});
-				} else {
-					// TODO: add handling setting just a specific value
-					console.error('Dont know how to toggle values for lVar name '+ theVar + '.'); return;
 				}
 
 			} else if (method === 'simControl') {
@@ -159,7 +171,7 @@ if (!urlParams.has('config')) {
 					command: 'offsets.write',
 					name: 'simControlOffsets',
 					changesOnly: true,
-					offsets: offsetsData
+					offsets: offsetsData,
 				});
 
 			} else if (method === 'presetCommand') {
@@ -184,19 +196,18 @@ if (!urlParams.has('config')) {
 							code: presetCommands[commandName].code,
 						});
 					} else {
-						console.error('Dont know how to handle method '+ presetCommands[commandName].method + ' in event handler.'); return;
-						return;
+						console.error('Dont know how to handle method '+ presetCommands[commandName].method + ' in event handler.');
 					}
 				} else {
-					console.error('No preset command by the name of '+ offsetName + ' was found.'); return;
+					console.error('No preset command by the name of '+ offsetName + ' was found.');
 				}
 
 			} else if (method === 'hVar') {
-				var theVar = action;
+				var theHVar = action;
 				connection.sendMessage({
 					command: 'vars.write',
 					vars: [
-						{name: 'H:'+ theVar},
+						{name: 'H:'+ theHVar},
 					],
 				});
 

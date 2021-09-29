@@ -2,7 +2,7 @@
 Button that can be clicked but no value to display
 -->
 <template>
-	<div @click="eventHandlers.singleClick(method, action, undefined, options)" :class="'button bordered pressable' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
+	<div @click="eventHandlers.singleClick(method, action, undefined, setValue, options)" :class="'button bordered pressable' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
 		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
 	</div>
 </template>
@@ -13,7 +13,7 @@ import Common from '../../Common.js';
 module.exports = {
 	props: [
 		'method', 'action', 'label', 'eventHandlers',  //required
-		'options',  //optional
+		'setValue', 'options',  //optional
 	],
 	methods: {
 		objectToCss: Common.objectToCss,

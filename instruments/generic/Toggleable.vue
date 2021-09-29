@@ -2,7 +2,7 @@
 Button that can be toggled and shows the current value
 -->
 <template>
-	<div @click="eventHandlers.singleClick(method, action, dataStore.state[method]?.[action]?.internalValue, options)" :class="'toggleable bordered pressable' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
+	<div @click="eventHandlers.singleClick(method, action, dataStore.state[method]?.[action]?.internalValue, setValue, options)" :class="'toggleable bordered pressable' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
 		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
 			<span v-html="label"></span>
 		</div>
@@ -16,7 +16,7 @@ Button that can be toggled and shows the current value
 module.exports = {
 	props: [
 		'method', 'action', 'label', 'dataStore', 'eventHandlers',  //required
-		'options',  //optional
+		'setValue', 'options',  //optional
 	],
 }
 </script>
