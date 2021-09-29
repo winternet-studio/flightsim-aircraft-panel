@@ -124,7 +124,7 @@ export default class Fsuipc {
 	static loadMsfs20Controls() {
 		if (Fsuipc.simControls === null) {
 			var x = new XMLHttpRequest();
-			x.open('GET', 'MsfsControlsList.txt', false);
+			x.open('GET', 'databases/MsfsControlsList.txt', false);
 			x.onreadystatechange = function() {
 				if (x.readyState === 4) {
 					switch (x.status) {
