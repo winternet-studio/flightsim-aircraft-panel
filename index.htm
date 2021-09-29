@@ -49,17 +49,17 @@ if (!urlParams.has('config')) {
 
 		state: Vue.reactive({}),
 
-		setStoreValue(method, functionRef, internalValue, valueHtml) {
+		setStoreValue(method, action, internalValue, valueHtml) {
 			if (this.debug) {
-				console.log('setStoreValue triggered with', method, functionRef, ':', valueHtml);
+				console.log('setStoreValue triggered with', method, action, ':', valueHtml);
 			}
 
 			if (typeof this.state[method] === 'undefined') {
 				this.state[method] = {
-					[functionRef]: {internalValue, valueHtml}  // source: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
+					[action]: {internalValue, valueHtml}  // source: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
 				}
 			} else {
-				this.state[method][functionRef] = {internalValue, valueHtml};
+				this.state[method][action] = {internalValue, valueHtml};
 			}
 		},
 	}
@@ -77,7 +77,7 @@ if (!urlParams.has('config')) {
 	 *   - `sound` : set false to not play any clicking sound
 	 */
 	const eventHandlers = {
-		singleClick: (functionMethod, functionRef, currInternalValue, options) => {
+		singleClick: (method, action, currInternalValue, options) => {
 			if (!options) options = {};
 
 			if (options.defectWrite) return false;
@@ -90,10 +90,10 @@ if (!urlParams.has('config')) {
 			// Handle click
 			var newValue, offsetsData;
 
-			if (functionMethod === 'offset') {
+			if (method === 'offset') {
 				// Direct writing to offsets
 
-				var offsetName = functionRef;
+				var offsetName = action;
 				if (typeof offsetMap[offsetName] === 'undefined') {
 					Common.showError('Offset name '+ offsetName +' was not found in the map.', {timeout: 6000});
 					return;
@@ -129,8 +129,8 @@ if (!urlParams.has('config')) {
 					offsets: offsetsData
 				});
 
-			} else if (functionMethod === 'lVar') {
-				var theVar = functionRef;
+			} else if (method === 'lVar') {
+				var theVar = action;
 				if (typeof lVarOptions[theVar].toggleValues !== 'undefined') {
 					newValue = Common.getNextToggleValue(lVarOptions[theVar].toggleValues, currInternalValue);
 					offsetsData = [ {name: theVar, value: newValue } ];
@@ -146,8 +146,8 @@ if (!urlParams.has('config')) {
 					console.error('Dont know how to toggle values for lVar name '+ theVar + '.'); return;
 				}
 
-			} else if (functionMethod === 'simControl') {
-				var controlNumber = functionRef;
+			} else if (method === 'simControl') {
+				var controlNumber = action;
 				console.info('Writing Lvars is not fully supported yet');
 				var controlParameter = 0;  //TODO: allow passing the parameter value to be used
 				// if (!$.isNumeric(controlNumber)) {
@@ -162,8 +162,8 @@ if (!urlParams.has('config')) {
 					offsets: offsetsData
 				});
 
-			} else if (functionMethod === 'presetCommand') {
-				var commandName = functionRef;
+			} else if (method === 'presetCommand') {
+				var commandName = action;
 				if (presetCommands[commandName]) {
 					if (typeof presetCommands[commandName] === 'undefined') {
 						Common.showError('Command "'+ offsetName +'" was not found in list of preset commands. If this was a preset from MobiFlight it might have been changed or removed in place of something else. Please update /databases/MobiFlightHubHopPresets.js with the latest version and look for another preset to use in its place. Searching on https://hubhop.mobiflight.com/ might be of a help to you.', {timeout: 40000});
@@ -191,8 +191,8 @@ if (!urlParams.has('config')) {
 					console.error('No preset command by the name of '+ offsetName + ' was found.'); return;
 				}
 
-			} else if (functionMethod === 'hVar') {
-				var theVar = functionRef;
+			} else if (method === 'hVar') {
+				var theVar = action;
 				connection.sendMessage({
 					command: 'vars.write',
 					vars: [
@@ -200,8 +200,8 @@ if (!urlParams.has('config')) {
 					],
 				});
 
-			} else if (functionMethod === 'calcCode') {
-				var calculatorCode = functionRef;
+			} else if (method === 'calcCode') {
+				var calculatorCode = action;
 				connection.sendMessage({
 					command: 'vars.calc',
 					name: 'calc',
@@ -213,7 +213,7 @@ if (!urlParams.has('config')) {
 		/**
 		 * Handle up/down knobs that sends commands to the sim
 		 */
-		knobUpDownClick: (functionMethod, functionRef, currInternalValue, direction, options) => {
+		knobUpDownClick: (method, action, currInternalValue, direction, options) => {
 			if (!options) options = {};
 
 			// Play sound
@@ -222,9 +222,9 @@ if (!urlParams.has('config')) {
 			}
 
 			// Handle click
-			if (functionMethod === 'offset') {
+			if (method === 'offset') {
 				// Direct writing to offsets
-				var offsetName = functionRef;
+				var offsetName = action;
 				var newValue, offsetsData;
 				var offsetProps = offsetMap[offsetName];
 				if (!offsetProps.upDownSelector || offsetProps.validValues === 'undefined') {
@@ -257,18 +257,18 @@ if (!urlParams.has('config')) {
 
 		aircraftInited: (aircraftValues) => {
 			console.log('Aircraft panel initializing...');
-			connection = new FsuipcConnection(Config.fsuipcUrl, aircraftPanelId, aircraftValues, function(method, functionRef, internalValue) {
+			connection = new FsuipcConnection(Config.fsuipcUrl, aircraftPanelId, aircraftValues, function(method, action, internalValue) {
 				// Convert the final value to its HTML representation
 				var valueHtml;
-				if (typeof aircraftValues[method][functionRef] == 'string') {
+				if (typeof aircraftValues[method][action] == 'string') {
 					// The string is the name of a method in FsuipcHtml
-					var htmlMethod = aircraftValues[method][functionRef];
+					var htmlMethod = aircraftValues[method][action];
 					valueHtml = FsuipcHtml[htmlMethod](internalValue);
-				} else if (typeof aircraftValues[method][functionRef] == 'function') {
-					valueHtml = aircraftValues[method][functionRef](internalValue);
+				} else if (typeof aircraftValues[method][action] == 'function') {
+					valueHtml = aircraftValues[method][action](internalValue);
 				}
 
-				dataStore.setStoreValue(method, functionRef, internalValue, valueHtml);
+				dataStore.setStoreValue(method, action, internalValue, valueHtml);
 
 			}, {debug: debug});
 		},

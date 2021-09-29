@@ -1,13 +1,13 @@
 <template>
-	<div :class="'annunciator' + (options?.classes ? ' '+ options.classes : '')" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue">
-		<span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span>
+	<div :class="'annunciator' + (options?.classes ? ' '+ options.classes : '')" :data-internal-value="dataStore.state[method]?.[action]?.internalValue">
+		<span v-html="dataStore.state[method]?.[action]?.valueHtml ?? '&nbsp;'"></span>
 	</div>
 </template>
 
 <script>
 module.exports = {
 	props: [
-		'method', 'functionRef', 'dataStore',  //required
+		'method', 'action', 'dataStore',  //required
 		'options',  //optional
 	],
 }

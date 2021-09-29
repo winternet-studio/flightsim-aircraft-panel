@@ -6,8 +6,8 @@ Indicator that displays a value but cannot be clicked
 		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
 			<span v-html="label"></span>
 		</div>
-		<div class="val" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[method]?.[functionRef]?.internalValue">
-			<span v-html="dataStore.state[method]?.[functionRef]?.valueHtml ?? '&nbsp;'"></span>
+		<div class="val" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[method]?.[action]?.internalValue">
+			<span v-html="dataStore.state[method]?.[action]?.valueHtml ?? '&nbsp;'"></span>
 		</div>
 	</div>
 </template>
@@ -15,7 +15,7 @@ Indicator that displays a value but cannot be clicked
 <script>
 module.exports = {
 	props: [
-		'method', 'functionRef', 'label', 'dataStore',  //required
+		'method', 'action', 'label', 'dataStore',  //required
 		'options',  //optional
 	],
 }

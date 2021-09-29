@@ -4,32 +4,32 @@
 		<!-- OVERHEAD -->
 		<td style="padding: 0 10px 0 10px">
 
-			<Toggleable label="10" method="lVar" functionRef="A320_Neo_MFD_Range" lvarValue="0" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="20" method="lVar" functionRef="A320_Neo_MFD_Range" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="FUEL" method="hVar" functionRef="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_FUEL" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="ENG" method="hVar" functionRef="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_ENG" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="10" method="lVar" action="A320_Neo_MFD_Range" lvarValue="0" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="20" method="lVar" action="A320_Neo_MFD_Range" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="FUEL" method="hVar" action="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_FUEL" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="ENG" method="hVar" action="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_ENG" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 
 			<div class="section">Elec</div>
-			<Toggleable label="BAT" method="offset" functionRef="batteryMaster" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="BAT" method="offset" action="batteryMaster" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div>&nbsp;</div>
 
-			<Toggleable label="GEN 1" method="offset" functionRef="genEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="APU GEN" method="offset" functionRef="genApu" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="GEN 2" method="offset" functionRef="genEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="GEN 1" method="offset" action="genEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="APU GEN" method="offset" action="genApu" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="GEN 2" method="offset" action="genEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div style="height: 250px"></div>
 
-			<Toggleable label="NAV" method="offset" functionRef="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="BEACON" method="offset" functionRef="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="STROBE" method="offset" functionRef="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="WING" method="offset" functionRef="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="NAV" method="offset" action="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="BEACON" method="offset" action="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="STROBE" method="offset" action="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="WING" method="offset" action="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div style="height: 15px"></div>
 
-			<Toggleable label="LANDING LTS" method="offset" functionRef="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="TAXI" method="offset" functionRef="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="LANDING LTS" method="offset" action="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="TAXI" method="offset" action="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 		<td style="padding: 0 10px 0 10px">
@@ -37,32 +37,32 @@
 
 			<!-- TODO: some of these are to be Toggleable instead of Indicator -->
 
-			<Indicator label="L BOOST<br/>PUMP" method="offset" functionRef="fuelPump1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
-			<Indicator label="R BOOST<br/>PUMP" method="offset" functionRef="fuelPump2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="L BOOST<br/>PUMP" method="offset" action="fuelPump1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="R BOOST<br/>PUMP" method="offset" action="fuelPump2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<br>
-			<Indicator label="XFLOW" method="offset" functionRef="fuelXfeed" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="XFLOW" method="offset" action="fuelXfeed" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div class="section">BLEED</div>
-			<Indicator label="SOURCE" method="offset" functionRef="bleedSrc" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="SOURCE" method="offset" action="bleedSrc" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div style="height: 15px"></div>
 
-			<Indicator label="APU" method="offset" functionRef="apuSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="APU" method="offset" action="apuSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<br>
-			<Indicator label="APU RPM" method="offset" functionRef="apuRpm" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
-			<Indicator label="APU VOLTAGE" method="offset" functionRef="apuVoltage" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="APU RPM" method="offset" action="apuRpm" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="APU VOLTAGE" method="offset" action="apuVoltage" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div style="height: 15px"></div>
 
-			<Indicator label="ENG L START" method="offset" functionRef="eng1StarterSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
-			<Indicator label="ENG R START" method="offset" functionRef="eng2StarterSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG L START" method="offset" action="eng1StarterSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG R START" method="offset" action="eng2StarterSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<SectionDivider />
-			<Indicator label="IGNITION" method="offset" functionRef="ign" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="IGNITION" method="offset" action="ign" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 			<div class="section">Hyd</div>
-			<Indicator label="ENG 1" method="offset" functionRef="hydPumpEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
-			<Indicator label="ENG 2" method="offset" functionRef="hydPumpEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG 1" method="offset" action="hydPumpEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG 2" method="offset" action="hydPumpEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 		</td>
 		<td style="padding: 0 10px 0 10px">
@@ -71,16 +71,16 @@
 
 			<div class="section">Anti-Ice</div>
 
-			<Toggleable label="WING" method="offset" functionRef="antiIceWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="WING" method="offset" action="antiIceWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<!-- I think a bug causes anti-ice for eng 1 and 2 to be switched around -->
-			<Toggleable label="ENG 1" method="offset" functionRef="antiIceEng2" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="ENG 2" method="offset" functionRef="antiIceEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="ENG 1" method="offset" action="antiIceEng2" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="ENG 2" method="offset" action="antiIceEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<br>
-			<Toggleable label="PROBE HEAT" method="offset" functionRef="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="PROBE HEAT" method="offset" action="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div style="height: 137px"></div>
 
-			<Toggleable label="SEAT BELT" method="offset" functionRef="seatbelt" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="SEAT BELT" method="offset" action="seatbelt" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 	</tr>
@@ -91,15 +91,15 @@
 	<!-- MCP -->
 	<div style="text-align: center">
 
-		<Annunciator label="APU VOLTAGE" method="offset" functionRef="apuVoltage" :dataStore="dataStore" />
-		<Annunciator label="FD" method="offset" functionRef="mcpFDSw" :dataStore="dataStore" />
-		<Annunciator label="A/P" method="offset" functionRef="mcpAPAnnun" :dataStore="dataStore" />
-		<Annunciator label="SPEED" method="offset" functionRef="mcpSpdAnnun" :dataStore="dataStore" />
-		<Annunciator label="N1" method="offset" functionRef="mcpN1Annun" :dataStore="dataStore" />
-		<Annunciator label="APPR" method="offset" functionRef="mcpAppAnnun" :dataStore="dataStore" />
-		<Annunciator label="HDG" method="offset" functionRef="mcpHdgAnnun" :dataStore="dataStore" />
-		<Annunciator label="NAV" method="offset" functionRef="mcpNav1Annun" :dataStore="dataStore" />
-		<Annunciator label="ALT" method="offset" functionRef="mcpAltAnnun" :dataStore="dataStore" />
+		<Annunciator label="APU VOLTAGE" method="offset" action="apuVoltage" :dataStore="dataStore" />
+		<Annunciator label="FD" method="offset" action="mcpFDSw" :dataStore="dataStore" />
+		<Annunciator label="A/P" method="offset" action="mcpAPAnnun" :dataStore="dataStore" />
+		<Annunciator label="SPEED" method="offset" action="mcpSpdAnnun" :dataStore="dataStore" />
+		<Annunciator label="N1" method="offset" action="mcpN1Annun" :dataStore="dataStore" />
+		<Annunciator label="APPR" method="offset" action="mcpAppAnnun" :dataStore="dataStore" />
+		<Annunciator label="HDG" method="offset" action="mcpHdgAnnun" :dataStore="dataStore" />
+		<Annunciator label="NAV" method="offset" action="mcpNav1Annun" :dataStore="dataStore" />
+		<Annunciator label="ALT" method="offset" action="mcpAltAnnun" :dataStore="dataStore" />
 
 	</div>
 
@@ -110,28 +110,28 @@
 	<tr>
 		<td style="width: 35%; text-align: left">
 
-			<Toggleable label="NAV/GPS" method="offset" functionRef="navGpsSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="NAV/GPS" method="offset" action="navGpsSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 		<td>
 
-			<Indicator label="Speed Break" method="offset" functionRef="spdBreak" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
-			<Toggleable label="Gear" method="offset" functionRef="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Indicator label="Speed Break" method="offset" action="spdBreak" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Toggleable label="Gear" method="offset" action="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<br>
-			<Toggleable label="Parking Break" method="offset" functionRef="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Indicator label="Flaps" method="offset" functionRef="flaps" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Toggleable label="Parking Break" method="offset" action="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Indicator label="Flaps" method="offset" action="flaps" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<br>
-			<Indicator label="ENG 1 FUEL" method="offset" functionRef="eng1CutoffSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
-			<Indicator label="ENG 2 FUEL" method="offset" functionRef="eng2CutoffSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG 1 FUEL" method="offset" action="eng1CutoffSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="ENG 2 FUEL" method="offset" action="eng2CutoffSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 		</td>
 		<td style="padding-left: 100px">
 
-			<Indicator label="Trim" method="offset" functionRef="trim" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="Trim" method="offset" action="trim" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 			<br>
 			<Indicator label="-SPACER-" :options="{invisible: true}" :dataStore="dataStore" />
 			<br>
-			<Indicator label="XPNDR" method="offset" functionRef="sqwkCode" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
+			<Indicator label="XPNDR" method="offset" action="sqwkCode" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 
 		</td>
 		<td style="width: 35%">
