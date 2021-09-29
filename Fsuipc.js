@@ -11,7 +11,7 @@ export default class Fsuipc {
 	/**
 	 * Map names to offset addresses
 	 *
-	 * `toggleValues` should hold the raw values coming from FSUIPC
+	 * `toggleValues` and `validValues` should hold the raw values coming from FSUIPC
 	 *
 	 * Possible `type` values:
 	 * - `int`    A signed integer of size 1, 2, 4 or 8
@@ -63,6 +63,26 @@ export default class Fsuipc {
 		}
 	}
 
+	/**
+	 * Options for Lvars
+	 *
+	 * `toggleValues` and `validValues` should hold the raw values coming from FSUIPC
+	 *
+	 * @return {object}
+	 */
+	static lVarOptions() {
+		return {
+			PFD_CDI_Source: {toggleValues: [3, 1]},
+			AS1000_MFD_Brightness: {toggleValues: [2, 7]},  //TODO: should eventually be a knob up/down in a given range of numeric values
+			//SAMPLE: starterSwitchEngine1Prop: {upDownSelector: true, validValues: [0, 1, 2, 3, 4]},
+		}
+	}
+
+	/**
+	 * Return all preset commands that can be executed
+	 *
+	 * This is a combination of our own set of commands and those from MobiFlight HubHop (https://hubhop.mobiflight.com/).
+	 */
 	static presetCommands() {
 		var primary = {  // NOTE: these cannot be merged with map() because that is a definition of offsets and this is a definition of commands. They are often the same but multiple commands *could* use the same offsets - and we don't want to define the offsets multiple times
 			autoSetAltimeter: {method: 'simControl', control: 'BAROMETRIC', parameter: 0},   // (automatically set barometric pressure according to sim) https://www.avsim.com/forums/topic/492606-fsuipc-set-baro-via-b/

@@ -1,6 +1,7 @@
 import Common from './Common.js';
 import Fsuipc from './Fsuipc.js';
-import FsuipcConversion from './FsuipcConversion.js';
+import FsuipcConversionOffset from './FsuipcConversionOffset.js';
+import FsuipcConversionLVar from './FsuipcConversionLVar.js';
 
 /**
  * Handling the connection to Microsoft Flight Simulator via FSUIPC Websocket Server by Paul Henty
@@ -23,6 +24,7 @@ export default class FsuipcConnection {
 		}
 
 		this.offsetsDeclaration = null;
+		this.lVarsDeclaration = null;
 
 		this.ws = new WebSocket(this.url, 'fsuipc');
 
@@ -49,30 +51,60 @@ export default class FsuipcConnection {
 				],
 			});
 
-			this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftValues.offset);
+			// Declare offsets for aircraft and start monitoring them
+			if (typeof myself.aircraftValues.offset !== 'undefined') {
+				this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftValues.offset);
 
-			// Declare offsets to monitor
-			myself.sendMessage({
-				command: 'offsets.declare',
-				name: 'aircraftOffsets',
-				offsets: this.offsetsDeclaration
-			});
+				// Declare offsets to monitor
+				myself.sendMessage({
+					command: 'offsets.declare',
+					name: 'aircraftOffsets',
+					offsets: this.offsetsDeclaration
+				});
 
-			// Get initial values (can't do this while monitoring on an interval)
-			myself.sendMessage({
-				command: 'offsets.read',
-				name: 'aircraftOffsets',
-			});
+				// Get initial values (can't do this while monitoring on an interval)
+				myself.sendMessage({
+					command: 'offsets.read',
+					name: 'aircraftOffsets',
+				});
 
-			// Start monitoring offsets
-			myself.sendMessage({
-				command: 'offsets.read', // Tell the server to read offsets
-				name: 'aircraftOffsets', // An ID so we can match the response
-				interval: 100, // Send every 100ms - specify 0 for read once (no repeat)
-				changesOnly: true,
-			});
+				// Start monitoring offsets
+				myself.sendMessage({
+					command: 'offsets.read', // Tell the server to read offsets
+					name: 'aircraftOffsets', // An ID so we can match the response
+					interval: 100, // Send every 100ms - specify 0 for read once (no repeat)
+					changesOnly: true,
+				});
+			}
 
+			// Declare vars (Lvars) for aircraft and start monitoring them
+			if (typeof myself.aircraftValues.lVar !== 'undefined') {
+				this.lVarsDeclaration = [];
+				Object.keys(myself.aircraftValues.lVar).forEach((key) => {
+					this.lVarsDeclaration.push({name: key});
+				});
 
+				// Declare vars to monitor
+				myself.sendMessage({
+					command: 'vars.declare',
+					name: 'aircraftLVars',
+					vars: this.lVarsDeclaration
+				});
+
+				// Get initial values (can't do this while monitoring on an interval)
+				myself.sendMessage({
+					command: 'vars.read',
+					name: 'aircraftLVars',
+				});
+
+				// Start monitoring vars
+				myself.sendMessage({
+					command: 'vars.read', // Tell the server to read vars
+					name: 'aircraftLVars', // An ID so we can match the response
+					interval: 100, // Send every 100ms - specify 0 for read once (no repeat)
+					changesOnly: true,
+				});
+			}
 
 /*
 CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS IT LOOKS LIKE!)
@@ -128,7 +160,7 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 				} else if (response.name == 'aircraftOffsets') {
 					if (response.command == 'offsets.read') {
 						if (response.data) {
-							var Conversion = new FsuipcConversion(myself.aircraftPanelId);
+							var Conversion = new FsuipcConversionOffset(myself.aircraftPanelId);
 							var offsetMap = Fsuipc.map();
 							Object.keys(myself.aircraftValues.offset).forEach(function(offsetName) {
 								// Get the raw value from FSUIPC
@@ -159,6 +191,37 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 
 								// Update the HTML component
 								messageCallback('offset', offsetName, internalValue);
+							});
+						}
+					}
+
+				} else if (response.name == 'aircraftLVars') {
+					if (response.command == 'vars.read') {
+						if (response.data) {
+							var Conversion = new FsuipcConversionLVar(myself.aircraftPanelId);
+							Object.keys(myself.aircraftValues.lVar).forEach(function(lVarName) {
+								// Get the raw value from FSUIPC
+								var rawValue, internalValue;
+								if (typeof response.data[lVarName] != 'undefined') {
+									// regular offset
+									rawValue = response.data[lVarName];
+								} else {
+									// skip this offset as its value is not part included in the current response
+									if (myself.options.debug >= 2) {
+										console.log('Skipping '+ lVarName);
+									}
+									return true;
+								}
+
+								// Convert the value received from FSUIPC if needed
+								if (typeof Conversion[lVarName] == 'object') {
+									internalValue = Conversion[lVarName].from(rawValue);
+								} else {
+									internalValue = rawValue;
+								}
+
+								// Update the HTML component
+								messageCallback('lVar', lVarName, internalValue);
 							});
 						}
 					}

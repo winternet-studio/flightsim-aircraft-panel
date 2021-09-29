@@ -211,6 +211,11 @@ export default {
 				starterSwitchEngine1Prop: 'starterSwitchEngine1Prop',
 				transponderState: 'transponderState',
 			},
+			lVar: {
+				AS1000_MFD_Brightness: 'pass',
+				ParkingBrake_Position: 'pass',
+				PFD_CDI_Source: 'pass',  //TODO: make HTML formatting function
+			}
 		});
 	},
 }

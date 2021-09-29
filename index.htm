@@ -26,7 +26,8 @@ import FsuipcConnection from './FsuipcConnection.js';
 import FsuipcHtml from './FsuipcHtml.js';
 
 var offsetMap = Fsuipc.map();
-var presetCommandsMap = Fsuipc.presetCommands();
+var lVarOptions = Fsuipc.lVarOptions();
+var presetCommands = Fsuipc.presetCommands();
 var debug = true;
 var connection;
 var simControls = null;
@@ -87,12 +88,11 @@ if (!urlParams.has('config')) {
 			}
 
 			// Handle click
-			var offsetsData;
+			var newValue, offsetsData;
 
 			if (functionMethod === 'offset') {
 				// Direct writing to offsets
 
-				var newValue;
 				var offsetName = functionRef;
 				if (typeof offsetMap[offsetName] === 'undefined') {
 					Common.showError('Offset name '+ offsetName +' was not found in the map.', {timeout: 6000});
@@ -113,18 +113,11 @@ if (!urlParams.has('config')) {
 					];
 				} else {
 					// regular offset
-					var toggleValues = offsetMap[offsetName].toggleValues;
-					if (toggleValues) {
-						// find the new value
-						var currIndx = toggleValues.indexOf(currInternalValue);
-						if (currIndx < toggleValues.length - 1 && currIndx !== -1) {
-							newValue = toggleValues[currIndx + 1];
-						} else {
-							newValue = toggleValues[0];
-						}
-
+					if (typeof offsetMap[offsetName].toggleValues !== 'undefined') {
+						newValue = Common.getNextToggleValue(offsetMap[offsetName].toggleValues, currInternalValue);
 						offsetsData = [ {name: offsetName, value: newValue } ];
 					} else {
+						// TODO: add handling setting just a specific value
 						console.error('Dont know how to toggle values for offset name '+ offsetName + '.'); return;
 					}
 				}
@@ -135,6 +128,23 @@ if (!urlParams.has('config')) {
 					changesOnly: true,
 					offsets: offsetsData
 				});
+
+			} else if (functionMethod === 'lVar') {
+				var theVar = functionRef;
+				if (typeof lVarOptions[theVar].toggleValues !== 'undefined') {
+					newValue = Common.getNextToggleValue(lVarOptions[theVar].toggleValues, currInternalValue);
+					offsetsData = [ {name: theVar, value: newValue } ];
+
+					connection.sendMessage({
+						command: 'vars.write',
+						vars: [
+							{name: theVar, value: newValue},
+						],
+					});
+				} else {
+					// TODO: add handling setting just a specific value
+					console.error('Dont know how to toggle values for lVar name '+ theVar + '.'); return;
+				}
 
 			} else if (functionMethod === 'simControl') {
 				var controlNumber = functionRef;
@@ -154,42 +164,33 @@ if (!urlParams.has('config')) {
 
 			} else if (functionMethod === 'presetCommand') {
 				var commandName = functionRef;
-				if (presetCommandsMap[commandName]) {
-					if (typeof presetCommandsMap[commandName] === 'undefined') {
+				if (presetCommands[commandName]) {
+					if (typeof presetCommands[commandName] === 'undefined') {
 						Common.showError('Command "'+ offsetName +'" was not found in list of preset commands. If this was a preset from MobiFlight it might have been changed or removed in place of something else. Please update /databases/MobiFlightHubHopPresets.js with the latest version and look for another preset to use in its place. Searching on https://hubhop.mobiflight.com/ might be of a help to you.', {timeout: 40000});
-					} else if (presetCommandsMap[commandName].method === 'simControl') {
+					} else if (presetCommands[commandName].method === 'simControl') {
 						offsetsData = [
-							{name: 'simControlParam', value: (typeof presetCommandsMap[commandName].parameter !== 'undefined' ? presetCommandsMap[commandName].parameter : 0)},
-							{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommandsMap[commandName].control) },
+							{name: 'simControlParam', value: (typeof presetCommands[commandName].parameter !== 'undefined' ? presetCommands[commandName].parameter : 0)},
+							{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommands[commandName].control) },
 						];
 						connection.sendMessage({
 							command: 'offsets.write',
 							name: 'simControlOffsets',
 							offsets: offsetsData,
 						});
-					} else if (presetCommandsMap[commandName].method === 'calcCode') {
+					} else if (presetCommands[commandName].method === 'calcCode') {
 						connection.sendMessage({
 							command: 'vars.calc',
 							name: 'calc',
-							code: presetCommandsMap[commandName].code,
+							code: presetCommands[commandName].code,
 						});
 					} else {
-						console.error('Dont know how to handle method '+ presetCommandsMap[commandName].method + ' in event handler.'); return;
+						console.error('Dont know how to handle method '+ presetCommands[commandName].method + ' in event handler.'); return;
 						return;
 					}
 				} else {
 					console.error('No preset command by the name of '+ offsetName + ' was found.'); return;
 				}
-			} else if (functionMethod === 'lVar') {
-				var theVar = functionRef;
-				console.info('Writing Lvars is not fully supported yet');
-				var theValue = 0;  //TODO: allow passing the parameter value to be used
-				connection.sendMessage({
-					command: 'vars.write',
-					vars: [
-						{name: 'L:'+ theVar, value: theValue},
-					],
-				});
+
 			} else if (functionMethod === 'hVar') {
 				var theVar = functionRef;
 				connection.sendMessage({
@@ -198,6 +199,7 @@ if (!urlParams.has('config')) {
 						{name: 'H:'+ theVar},
 					],
 				});
+
 			} else if (functionMethod === 'calcCode') {
 				var calculatorCode = functionRef;
 				connection.sendMessage({
@@ -266,7 +268,7 @@ if (!urlParams.has('config')) {
 					valueHtml = aircraftValues[method][functionRef](internalValue);
 				}
 
-				dataStore.setStoreValue('offset', functionRef, internalValue, valueHtml);
+				dataStore.setStoreValue(method, functionRef, internalValue, valueHtml);
 
 			}, {debug: debug});
 		},

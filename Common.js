@@ -3,6 +3,20 @@
  */
 export default class Common {
 
+	static getNextToggleValue(toggleValues, currentValue) {
+		// find the new value
+		var currIndx = toggleValues.indexOf(currentValue);
+		if (currIndx < toggleValues.length - 1 && currIndx !== -1) {
+			return toggleValues[currIndx + 1];
+		} else {
+			return toggleValues[0];
+		}
+	}
+
+	static objectToCss(obj) {
+		return Object.entries(obj).map(([k, v]) => `${k}:${v}`).join(';');
+	}
+
 	/**
 	 * @param {string} message
 	 */
@@ -18,10 +32,6 @@ export default class Common {
 				}
 			}, options.timeout);
 		}
-	}
-
-	static objectToCss(obj) {
-		return Object.entries(obj).map(([k, v]) => `${k}:${v}`).join(';');
 	}
 
 }

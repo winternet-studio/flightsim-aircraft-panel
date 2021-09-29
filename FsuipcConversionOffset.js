@@ -3,7 +3,7 @@ import FsuipcDefaultConversion from './FsuipcDefaultConversion.js';
 /**
  * Convert FSUIPC offset values to and from human readable format
  */
-export default class FsuipcConversion {
+export default class FsuipcConversionOffset {
 
 	constructor(aircraftPanelId) {
 		this._aircraftPanelId = aircraftPanelId;
