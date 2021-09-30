@@ -146,15 +146,9 @@ if (!urlParams.has('config')) {
 					console.error('Dont know how to determine new value for lVar name '+ theLVar + '.');
 				}
 				if (newValue != null) {
-					offsetsData = [ {name: theLVar, value: newValue } ];
-				}
-
-				if (offsetsData) {
 					connection.sendMessage({
 						command: 'vars.write',
-						vars: [
-							{name: theLVar, value: newValue},
-						],
+						vars: [ {name: theLVar, value: newValue} ],
 					});
 				}
 
@@ -165,13 +159,11 @@ if (!urlParams.has('config')) {
 				// if (!$.isNumeric(controlNumber)) {
 				// }
 
-				offsetsData = [ {name: 'simControlParam', value: controlParameter, name: 'simControlNumber', value: controlNumber} ];
-
 				connection.sendMessage({
 					command: 'offsets.write',
 					name: 'simControlOffsets',
 					changesOnly: true,
-					offsets: offsetsData,
+					offsets: [ {name: 'simControlParam', value: controlParameter, name: 'simControlNumber', value: controlNumber} ],
 				});
 
 			} else if (method === 'presetCommand') {
@@ -180,14 +172,13 @@ if (!urlParams.has('config')) {
 					if (typeof presetCommands[commandName] === 'undefined') {
 						Common.showError('Command "'+ offsetName +'" was not found in list of preset commands. If this was a preset from MobiFlight it might have been changed or removed in place of something else. Please update /databases/MobiFlightHubHopPresets.js with the latest version and look for another preset to use in its place. Searching on https://hubhop.mobiflight.com/ might be of a help to you.', {timeout: 40000});
 					} else if (presetCommands[commandName].method === 'simControl') {
-						offsetsData = [
-							{name: 'simControlParam', value: (typeof presetCommands[commandName].parameter !== 'undefined' ? presetCommands[commandName].parameter : 0)},
-							{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommands[commandName].control) },
-						];
 						connection.sendMessage({
 							command: 'offsets.write',
 							name: 'simControlOffsets',
-							offsets: offsetsData,
+							offsets: [
+								{name: 'simControlParam', value: (typeof presetCommands[commandName].parameter !== 'undefined' ? presetCommands[commandName].parameter : 0)},
+								{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommands[commandName].control) },
+							],
 						});
 					} else if (presetCommands[commandName].method === 'calcCode') {
 						connection.sendMessage({
@@ -206,9 +197,7 @@ if (!urlParams.has('config')) {
 				var theHVar = action;
 				connection.sendMessage({
 					command: 'vars.write',
-					vars: [
-						{name: 'H:'+ theHVar},
-					],
+					vars: [ {name: 'H:'+ theHVar} ],
 				});
 
 			} else if (method === 'calcCode') {
@@ -224,7 +213,7 @@ if (!urlParams.has('config')) {
 		/**
 		 * Handle up/down knobs that sends commands to the sim
 		 */
-		knobUpDownClick: (method, action, currInternalValue, direction, options) => {
+		knobUpDownClick: (method, action, currInternalValue, direction, customStep, options) => {
 			if (!options) options = {};
 
 			// Play sound
@@ -233,36 +222,47 @@ if (!urlParams.has('config')) {
 			}
 
 			// Handle click
+			var actionProps, newValue;
+			if (method === 'offset') {
+				actionProps = offsetMap[action];
+			} else if (method === 'lVar') {
+				actionProps = lVarOptions[action];
+			}
+
+			if (typeof actionProps.validValues !== 'undefined') {
+				// ok
+			} else if (actionProps.min !== 'undefined' && actionProps.max !== 'undefined') {
+				// ok
+			} else {
+				console.error('The '+ method +' '+ action + ' is missing its valid values for up/down changes.'); return;
+			}
+
+			if (typeof actionProps.validValues !== 'undefined') {
+				newValue = Common.getNextUpDownValue(actionProps.validValues, currInternalValue, direction);
+			} else {
+				// Range (min, max, (step))
+				newValue = Common.getNextRangeValue(actionProps, currInternalValue, direction, customStep);
+			}
+			if (newValue === null) {
+				return;
+			}
+
 			if (method === 'offset') {
 				// Direct writing to offsets
-				var offsetName = action;
-				var newValue, offsetsData;
-				var offsetProps = offsetMap[offsetName];
-				if (!offsetProps.upDownSelector || offsetProps.validValues === 'undefined') {
-					console.error('The offset name '+ offsetName + ' is not defined as an up/down knob, or is valid values are missing.'); return;
-				}
-				var currIndx = offsetProps.validValues.indexOf(currInternalValue);
-				if (direction === 'up') {
-					if (currIndx < offsetProps.validValues.length - 1) {
-						newValue = offsetProps.validValues[currIndx + 1];
-					} else {
-						return;
-					}
-				} else if (direction === 'down') {
-					if (currIndx > 0) {
-						newValue = offsetProps.validValues[currIndx - 1];
-					} else {
-						return;
-					}
-				}
-				offsetsData = [ {name: offsetName, value: newValue } ];
-
 				connection.sendMessage({
 					command: 'offsets.write',
 					name: 'aircraftOffsets',
 					changesOnly: true,
-					offsets: offsetsData,
+					offsets: [ {name: action, value: newValue } ],
 				});
+			} else if (method === 'lVar') {
+				// Writing to Lvar
+				connection.sendMessage({
+					command: 'vars.write',
+					vars: [ {name: action, value: newValue } ],
+				});
+			} else {
+				Common.showError('Knob up/down change for method '+ method +' has not been defined.');
 			}
 		},
 
