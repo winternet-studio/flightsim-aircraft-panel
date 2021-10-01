@@ -191,43 +191,81 @@
 	</tr>
 	</table>
 
-	<div class="std-spacing" style="text-align: center">
+	<div style="height: 50px"></div>
+
+	<div class="std-spacing" style="padding-left: 10px">
 
 		<Toggleable label="BAT MASTER" method="offset" action="batteryMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		<Toggleable label="ALTERNATOR" method="offset" action="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		<Toggleable label="AVIONICS" method="offset" action="avionicsMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{defectWrite: true}" />
 
-		<SectionDivider />
-
-		<Toggleable label="BEACON" method="offset" action="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Toggleable label="LANDING" method="offset" action="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Toggleable label="TAXI" method="offset" action="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Toggleable label="NAV" method="offset" action="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Toggleable label="STROBE" method="offset" action="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-
-		<SectionDivider />
-
-		<Toggleable label="PANEL" method="offset" action="lightsInstruments" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		<Toggleable label="FUEL PUMP" method="offset" action="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Toggleable label="PROBE HEAT" method="offset" action="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-
 	</div>
 
-	<div>
-		<KnobUpDown label="MAGNETOS" method="offset" action="starterSwitchEngine1Prop" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-	</div>
+	<div style="height: 15px"></div>
 
-
-	<table align="center">
+	<table class="std-spacing">
 	<tr>
-		<td class="std-spacing" colspan="3">
+		<td style="padding-left: 10px">
 
-			<Toggleable label="PARK BRAKE" method="offset" action="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Button label="SW / CB<br>PANELS" method="offset" action="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+			<Button label="STBY<br>IND" method="offset" action="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+
+		</td>
+		<td>
+			<SectionDivider />
+		</td>
+		<td>
+
+			<Toggleable label="BEACON" method="offset" action="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Toggleable label="LANDING" method="offset" action="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Toggleable label="TAXI" method="offset" action="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Toggleable label="NAV" method="offset" action="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Toggleable label="STROBE" method="offset" action="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 
 		</td>
 	</tr>
 	<tr>
-		<td class="std-spacing" colspan="3">
+		<td style="padding-left: 10px">
+
+			<Button label="PEDESTAL" method="offset" action="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+			<Button label="AVIONICS" method="offset" action="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+
+		</td>
+		<td>
+			<SectionDivider />
+		</td>
+		<td>
+
+			<Toggleable label="PANEL" method="offset" action="lightsInstruments" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="FUEL PUMP" method="offset" action="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Toggleable label="PROBE HEAT" method="offset" action="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+
+		</td>
+	</tr>
+	</table>
+
+	<table>
+	<tr>
+		<td style="padding-left: 10px; vertical-align: middle">
+
+			<KnobUpDown label="MAGNETOS" method="offset" action="starterSwitchEngine1Prop" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+
+		</td>
+		<td style="padding-left: 380px; vertical-align: middle">
+
+			<Toggleable label="PARK BRAKE" method="offset" action="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+
+		</td>
+		<td>
+
+
+		</td>
+	</tr>
+	</table>
+
+	<table align="center">
+	<tr>
+		<td class="std-spacing" style="text-align: center">
 
 			<Indicator label="Trim" method="offset" action="trim" :dataStore="dataStore" :options="{classes: 'INOPERABLE'}" />
 			<Indicator label="Flaps" method="offset" action="flapsPositionLeft" :dataStore="dataStore" />
@@ -238,16 +276,19 @@
 		<td class="std-spacing">
 			<Toggleable label="Fuel Selector" method="offset" action="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
 		</td>
-		<td class="std-spacing">
-			<Button label="AUTO BARO" method="presetCommand" action="autoSetAltimeter" :eventHandlers="eventHandlers" />
-		</td>
-		<td class="std-spacing">
-			<Button label="AUTO" method="presetCommand" action="autoSetAltimeter" :eventHandlers="eventHandlers" />
-		</td>
 	</tr>
 	</table>
 
-	<Toggleable label="DOME LTS" method="offset" action="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+	<table align="right" class="std-spacing">
+	<tr>
+		<td>
+			<Toggleable label="DOME LTS" method="offset" action="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</td>
+		<td style="padding-right: 10px">
+			<Button label="AUTO BARO" method="presetCommand" action="autoSetAltimeter" :eventHandlers="eventHandlers" />
+		</td>
+	</tr>
+	</table>
 
 </template>
 

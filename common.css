@@ -1,13 +1,9 @@
-body, td {
+body {
 	background-color: #30383d;
+	overflow: hidden;
 	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
 	font-size: 10px;
 	color: #f5f8fa;
-	overflow: hidden;
-}
-td {
-	text-align: center;
-	vertical-align: top;
 }
 .section {
 	font-size: 200%;
