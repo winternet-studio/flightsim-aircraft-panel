@@ -2,12 +2,14 @@
 Button that can be toggled and shows the current value
 -->
 <template>
-	<div @click="eventHandlers.singleClick(method, action, dataStore.state[method]?.[action]?.internalValue, setValue, options)" :class="'toggleable bordered pressable' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
-		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
-			<span v-html="label"></span>
-		</div>
-		<div class="val" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')" :data-internal-value="dataStore.state[method]?.[action]?.internalValue">
-			<span v-html="dataStore.state[method]?.[action]?.valueHtml ?? '&nbsp;'"></span>
+	<div @click="eventHandlers.singleClick(method, action, dataStore.state[method]?.[action]?.internalValue, setValue, options)" :class="'instrument toggleable inline-block' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
+		<div class="bordered pressable">
+			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
+				<span v-html="label"></span>
+			</div>
+			<div class="val" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')" :data-internal-value="dataStore.state[method]?.[action]?.internalValue">
+				<span v-html="dataStore.state[method]?.[action]?.valueHtml ?? '&nbsp;'"></span>
+			</div>
 		</div>
 	</div>
 </template>
@@ -22,8 +24,11 @@ module.exports = {
 </script>
 
 <style scoped>
-p.example-css {
-	font-size: 2em;
-	text-align: center;
+.instrument {
+	height: 45px;   /* .toggleable should match this */
+	width: 85px;
+}
+.bordered {
+	width: 100%;
 }
 </style>

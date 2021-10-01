@@ -1,5 +1,5 @@
 <template>
-	<div :class="'annunciator' + (options?.classes ? ' '+ options.classes : '')" :data-internal-value="dataStore.state[method]?.[action]?.internalValue">
+	<div :class="'instrument annunciator inline-block' + (options?.classes ? ' '+ options.classes : '')" :data-internal-value="dataStore.state[method]?.[action]?.internalValue">
 		<span v-html="dataStore.state[method]?.[action]?.valueHtml ?? '&nbsp;'"></span>
 	</div>
 </template>

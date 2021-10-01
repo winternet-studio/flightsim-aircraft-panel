@@ -2,8 +2,10 @@
 Button that can be clicked but no value to display
 -->
 <template>
-	<div @click="eventHandlers.singleClick(method, action, undefined, setValue, options)" :class="'button bordered pressable' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
-		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
+	<div @click="eventHandlers.singleClick(method, action, undefined, setValue, options)" :class="'instrument button inline-block' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
+		<div class="bordered pressable">
+			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')"><span v-html="label"></span></div>
+		</div>
 	</div>
 </template>
 
@@ -22,22 +24,26 @@ module.exports = {
 </script>
 
 <style scoped>
-.clickable {
+.instrument {
 	height: 45px;   /* to match size of .toggleable */
-	display: inline-flex;  /* for vert center of text - see https://stackoverflow.com/a/13515693/2404541 */
-	justify-content: center;
-	align-content: center;
-	flex-direction: column;
+	width: 85px;
 }
-.clickable .lbl {
+.bordered {
+	height: inherit;
+	width: 100%;
+}
+.button .lbl {
 	color: #8d9093;
 	font-size: 14px;
 	line-height: 16px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
-.clickable.small {
+.button.small {
 	height: 25px;
 }
-.clickable.small .lbl {
+.button.small .lbl {
 	font-size: 10px;
 }
 </style>
