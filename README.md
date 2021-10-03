@@ -1,6 +1,6 @@
 # flightsim-aircraft-panel
 
-[Microsoft Flight Simulator](https://www.flightsimulator.com/) aircraft panel for touchscreens using [FSUIPC WebSocket Server](http://fsuipcwebsockets.paulhenty.com/).
+[Microsoft Flight Simulator](https://www.flightsimulator.com/) aircraft panel for touch screens using [FSUIPC WebSocket Server](http://fsuipcwebsockets.paulhenty.com/).
 
 **!!! THIS IS A PROJECT IN DEVELOPMENT !!!**<br>
 Only relevant for you if you are a programmer and know what you are doing. You are welcome to take a look and do pull requests if you have
@@ -11,15 +11,16 @@ You're welcome to take a look at my online services at [aviation.allanville.com]
 
 ## Requirements
 
-- A browser! (only tested with Chrome and Firefox)
-- A touchscreen monitor or tablet or phone (otherwise you still have to use the mouse)
+- A browser! (only tested with Chrome and Firefox (dragging touch events do not work in Firefox though))
+- A touch screen monitor or tablet or phone (otherwise you still have to use the mouse)
+	- Any touch screen will work but of course the larger the better. As of 2020 the best touch screen monitor seems to be the [23" Acer T232HL](https://www.acer.com/ac/en/US/content/model/UM.VT2AA.A01). They also have a [27" version, T272HL](https://www.acer.com/ac/en/US/content/model/UM.HT2AA.003).
 - [Microsoft Flight Simulator 2020](https://www.flightsimulator.com/) or any flight simulator supported by FSUIPC
 - [FSUIPC7](http://fsuipc.com/) (free)
 - [FSUIPC WebSocket Server](http://fsuipcwebsockets.paulhenty.com/) (free)
 
 ## What is this?
 
-The idea is to have a touchscreen with a browser window where you can easily click buttons, turn knobs etc in your aircraft
+The idea is to have a touch screen with a browser window where you can easily click buttons, turn knobs etc in your aircraft
 when you don't want to use the mouse and don't have a hardware panel.
 You can also monitor other values from your aircraft.
 This uses [FSUIPC](http://fsuipc.com/) and is limited to its capabilities.

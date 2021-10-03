@@ -47,19 +47,21 @@ if (!urlParams.has('config')) {
 	const dataStore = {  //idea: https://v3.vuejs.org/guide/state-management.html#simple-state-management-from-scratch (alternative ideas: https://blog.logrocket.com/provide-inject-vue-js-3-composition-api/ --- https://stackoverflow.com/questions/64040286/access-this-root-in-vue-js-3-setup)
 		debug: false,
 
+		appConfig: Config,
+
 		state: Vue.reactive({}),
 
-		setStoreValue(method, action, internalValue, valueHtml) {
+		setStoreValue(method, refName, internalValue, valueHtml) {
 			if (this.debug) {
-				console.log('setStoreValue triggered with', method, action, ':', valueHtml);
+				console.log('setStoreValue triggered with', method, refName, ':', valueHtml);
 			}
 
 			if (typeof this.state[method] === 'undefined') {
 				this.state[method] = {
-					[action]: {internalValue, valueHtml}  // source: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
+					[refName]: {internalValue, valueHtml}  // source: https://stackoverflow.com/questions/1184123/is-it-possible-to-add-dynamically-named-properties-to-javascript-object
 				}
 			} else {
-				this.state[method][action] = {internalValue, valueHtml};
+				this.state[method][refName] = {internalValue, valueHtml};
 			}
 		},
 	}
@@ -73,13 +75,14 @@ if (!urlParams.has('config')) {
 	//   https://vuetiful.wordpress.com/2017/03/12/passing-dynamically-declared-props-in-vue-js/
 
 	/**
+	 * @param {object} event The Javascript event
 	 * @param {object} options : Available options (either currInternalValue or newInternalValue must be set):
 	 *   - `currInternalValue` : set this for toggling states, otherwise set it as undefined
 	 *   - `newInternalValue` : set this to set a specific value, otherwise set it as undefined
 	 *   - `sound` : set false to not play any clicking sound
 	 */
 	const eventHandlers = {
-		singleClick: (method, action, currInternalValue, newInternalValue, options) => {
+		singleClick: (event, method, refName, currInternalValue, newInternalValue, options) => {
 			if (!options) options = {};
 
 			if (options.defectWrite) return false;
@@ -95,11 +98,10 @@ if (!urlParams.has('config')) {
 			if (method === 'offset') {
 				// Direct writing to offsets
 
-				var offsetName = action;
-				if (typeof offsetMap[offsetName] === 'undefined') {
-					Common.showError('Offset name '+ offsetName +' was not found in the map.', {timeout: 6000});
+				if (typeof offsetMap[refName] === 'undefined') {
+					Common.showError('Offset name '+ refName +' was not found in the map.', {timeout: 6000});
 					return;
-				} else if (offsetMap[offsetName].type === 'bits') {
+				} else if (offsetMap[refName].type === 'bits') {
 					// a value that is a given bit in an offset
 
 					// find the new value
@@ -107,9 +109,9 @@ if (!urlParams.has('config')) {
 
 					offsetsData = [
 						{
-							name: offsetMap[offsetName].address,
+							name: offsetMap[refName].address,
 							value: [
-								{ bit: offsetMap[offsetName].bit, value: newValue },
+								{ bit: offsetMap[refName].bit, value: newValue },
 							],
 						},
 					];
@@ -117,13 +119,14 @@ if (!urlParams.has('config')) {
 					// regular offset
 					if (newInternalValue != null) {
 						newValue = newInternalValue;
-					} else if (typeof offsetMap[offsetName].toggleValues !== 'undefined') {
-						newValue = Common.getNextToggleValue(offsetMap[offsetName].toggleValues, currInternalValue);
+					} else if (typeof offsetMap[refName].toggleValues !== 'undefined') {
+						newValue = Common.getNextToggleValue(offsetMap[refName].toggleValues, currInternalValue);
 					} else {
-						console.error('Dont know how to determine new value for offset name '+ offsetName + '.');
+						console.error('Dont know how to determine new value for offset name '+ refName + '.');
 					}
 					if (newValue != null) {
-						offsetsData = [ {name: offsetName, value: newValue } ];
+						newValue = Fsuipc.internalToRawConversion(aircraftPanelId, method, refName, newValue);
+						offsetsData = [ {name: refName, value: newValue } ];
 					}
 				}
 
@@ -137,23 +140,23 @@ if (!urlParams.has('config')) {
 				}
 
 			} else if (method === 'lVar') {
-				var theLVar = action;
 				if (newInternalValue != null) {
 					newValue = newInternalValue;
-				} else if (typeof lVarOptions[theLVar].toggleValues !== 'undefined') {
-					newValue = Common.getNextToggleValue(lVarOptions[theLVar].toggleValues, currInternalValue);
+				} else if (typeof lVarOptions[refName].toggleValues !== 'undefined') {
+					newValue = Common.getNextToggleValue(lVarOptions[refName].toggleValues, currInternalValue);
 				} else {
-					console.error('Dont know how to determine new value for lVar name '+ theLVar + '.');
+					console.error('Dont know how to determine new value for lVar name '+ refName + '.');
 				}
 				if (newValue != null) {
+					newValue = Fsuipc.internalToRawConversion(aircraftPanelId, method, refName, newValue);
 					connection.sendMessage({
 						command: 'vars.write',
-						vars: [ {name: theLVar, value: newValue} ],
+						vars: [ {name: refName, value: newValue} ],
 					});
 				}
 
 			} else if (method === 'simControl') {
-				var controlNumber = action;
+				var controlNumber = refName;
 				console.info('Writing Lvars is not fully supported yet');
 				var controlParameter = 0;  //TODO: allow passing the parameter value to be used
 				// if (!$.isNumeric(controlNumber)) {
@@ -167,7 +170,7 @@ if (!urlParams.has('config')) {
 				});
 
 			} else if (method === 'presetCommand') {
-				var commandName = action;
+				var commandName = refName;
 				if (presetCommands[commandName]) {
 					if (typeof presetCommands[commandName] === 'undefined') {
 						Common.showError('Command "'+ offsetName +'" was not found in list of preset commands. If this was a preset from MobiFlight it might have been changed or removed in place of something else. Please update /databases/MobiFlightHubHopPresets.js with the latest version and look for another preset to use in its place. Searching on https://hubhop.mobiflight.com/ might be of a help to you.', {timeout: 40000});
@@ -194,14 +197,14 @@ if (!urlParams.has('config')) {
 				}
 
 			} else if (method === 'hVar') {
-				var theHVar = action;
+				var theHVar = refName;
 				connection.sendMessage({
 					command: 'vars.write',
 					vars: [ {name: 'H:'+ theHVar} ],
 				});
 
 			} else if (method === 'calcCode') {
-				var calculatorCode = action;
+				var calculatorCode = refName;
 				connection.sendMessage({
 					command: 'vars.calc',
 					name: 'calc',
@@ -212,8 +215,10 @@ if (!urlParams.has('config')) {
 
 		/**
 		 * Handle up/down knobs that sends commands to the sim
+		 *
+		 * @param {object} event The Javascript event
 		 */
-		knobUpDownClick: (method, action, currInternalValue, direction, customStep, options) => {
+		knobUpDownClick: (event, method, refName, currInternalValue, direction, customStep, options) => {
 			if (!options) options = {};
 
 			// Play sound
@@ -222,29 +227,31 @@ if (!urlParams.has('config')) {
 			}
 
 			// Handle click
-			var actionProps, newValue;
+			var refProps, newValue;
 			if (method === 'offset') {
-				actionProps = offsetMap[action];
+				refProps = offsetMap[refName];
 			} else if (method === 'lVar') {
-				actionProps = lVarOptions[action];
+				refProps = lVarOptions[refName];
 			}
 
-			if (typeof actionProps.validValues !== 'undefined') {
+			if (typeof refProps.validValues !== 'undefined') {
 				// ok
-			} else if (actionProps.min !== 'undefined' && actionProps.max !== 'undefined') {
+			} else if (refProps.min !== 'undefined' && refProps.max !== 'undefined') {
 				// ok
 			} else {
-				console.error('The '+ method +' '+ action + ' is missing its valid values for up/down changes.'); return;
+				Common.showError('The '+ method +' '+ refName + ' is missing its valid values for up/down changes.'); return;
 			}
 
-			if (typeof actionProps.validValues !== 'undefined') {
-				newValue = Common.getNextUpDownValue(actionProps.validValues, currInternalValue, direction);
+			if (typeof refProps.validValues !== 'undefined') {
+				newValue = Common.getNextUpDownValue(refProps.validValues, currInternalValue, direction);
 			} else {
 				// Range (min, max, (step))
-				newValue = Common.getNextRangeValue(actionProps, currInternalValue, direction, customStep);
+				newValue = Common.getNextRangeValue(refProps, currInternalValue, direction, customStep);
 			}
 			if (newValue === null) {
 				return;
+			} else {
+				newValue = Fsuipc.internalToRawConversion(aircraftPanelId, method, refName, newValue);
 			}
 
 			if (method === 'offset') {
@@ -253,33 +260,183 @@ if (!urlParams.has('config')) {
 					command: 'offsets.write',
 					name: 'aircraftOffsets',
 					changesOnly: true,
-					offsets: [ {name: action, value: newValue } ],
+					offsets: [ {name: refName, value: newValue } ],
 				});
 			} else if (method === 'lVar') {
 				// Writing to Lvar
 				connection.sendMessage({
 					command: 'vars.write',
-					vars: [ {name: action, value: newValue } ],
+					vars: [ {name: refName, value: newValue } ],
 				});
 			} else {
 				Common.showError('Knob up/down change for method '+ method +' has not been defined.');
 			}
 		},
 
-		aircraftInited: (aircraftValues) => {
-			console.log('Aircraft panel initializing...');
-			connection = new FsuipcConnection(Config.fsuipcUrl, aircraftPanelId, aircraftValues, function(method, action, internalValue) {
-				// Convert the final value to its HTML representation
-				var valueHtml;
-				if (typeof aircraftValues[method][action] == 'string') {
-					// The string is the name of a method in FsuipcHtml
-					var htmlMethod = aircraftValues[method][action];
-					valueHtml = FsuipcHtml[htmlMethod](internalValue);
-				} else if (typeof aircraftValues[method][action] == 'function') {
-					valueHtml = aircraftValues[method][action](internalValue);
+		knobTouchSettings: {
+			minMsBetweenUpdates: 100,
+		},
+		knobTouchRuntime: {
+			method: null,
+			refName: null,
+			currInternalValue: null,
+			lastSetValue: null,
+			stepScale: null,
+			options: null,
+			startPosX: null,
+			startPosY: null,
+			currPosX: null,
+			currPosY: null,
+			lastSent: null,
+		},
+		/**
+		 * Handle start of knob touch
+		 *
+		 * @param {object} event The Javascript event
+		 */
+		knobTouchStart: (event, method, refName, currInternalValue, stepScale, options) => {
+			if (!currInternalValue) {
+				currInternalValue = 0;
+			}
+			var self = eventHandlers;
+			self.knobTouchRuntime.method = method;
+			self.knobTouchRuntime.refName = refName;
+			self.knobTouchRuntime.startingValue = currInternalValue;
+			self.knobTouchRuntime.stepScale = (isNaN(stepScale) ? 1 : stepScale);
+			self.knobTouchRuntime.options = options;
+			self.knobTouchRuntime.startPosX = event.touches[0].pageX;
+			self.knobTouchRuntime.startPosY = event.touches[0].pageY;
+
+			var refProps;
+			if (method === 'offset') {
+				refProps = offsetMap[refName];
+			} else if (method === 'lVar') {
+				refProps = lVarOptions[refName];
+			}
+			if (typeof refProps.min === 'undefined' || typeof refProps.max === 'undefined') {
+				Common.showError('The '+ method +' '+ refName + ' is missing its min/max values.'); return;
+				self.knobTouchEnd = {};
+			} else {
+				self.knobTouchRuntime.min = refProps.min;
+				self.knobTouchRuntime.max = refProps.max;
+				self.knobTouchRuntime.step = 1;
+				if (typeof refProps.step !== 'undefined') {
+					self.knobTouchRuntime.step = refProps.step;
+				}
+			}
+		},
+
+		/**
+		 * Handle dragging the touch on a knob
+		 *
+		 * @param {object} event The Javascript event
+		 */
+		knobTouchMove: (event) => {
+			if (!options) options = {};
+
+			var rt = eventHandlers.knobTouchRuntime;
+			var cfg = eventHandlers.knobTouchSettings;
+
+			rt.currPosX = event.touches[0].pageX;
+			rt.currPosY = event.touches[0].pageY;
+
+			// Play sound
+			try {
+				if (rt.options.sound !== false) {
+					audioObj.play();
+				}
+			} catch (e) {
+				// do nothing if fails, eg. because it sees no related user event
+			}
+
+			var now = new Date().getTime();
+			if (!rt.lastSent || now - rt.lastSent >= cfg.minMsBetweenUpdates) {
+				rt.lastSent = now;
+
+				// Handle move
+				var distSinceStart, useVerticalAxis;
+				var vertDist = rt.startPosY - rt.currPosY;
+				var horizDist = rt.currPosX - rt.startPosX;
+				if ((vertDist > 0 && horizDist < 0) || (vertDist < 0 && horizDist > 0)) {
+					// As we use the axis that we have moved the most in, there would be a conflict if one axis shows increase while the other a decrease. In that case we resolve to using the vertical axis.
+					distSinceStart = vertDist;
+				} else {
+					// Otherwise we just use the axis with the largest distance moved
+					if (vertDist > 0) {
+						distSinceStart = Math.max(vertDist, horizDist);
+					} else {
+						distSinceStart = Math.min(vertDist, horizDist);
+					}
 				}
 
-				dataStore.setStoreValue(method, action, internalValue, valueHtml);
+				var addSubtractFromCurrentValue = distSinceStart / 10 * parseFloat(rt.stepScale);  // the fixed number is an extra scale to make the stepScale not require very small numbers for small ranges
+				var newValue = rt.startingValue + addSubtractFromCurrentValue;
+
+				// Make new value align with the step
+				if (rt.step == 1) {
+					newValue = Math.round(newValue);
+				} else {
+					var temp;
+					temp = (newValue - rt.min) / rt.step;
+					if (temp % 1 < 0.5) {
+						temp = Math.floor(temp);  //number is closer to the step after this number
+					} else {
+						temp = Math.ceil(temp);  //number is closer to the step before this number
+					}
+					newValue = rt.min + rt.step * temp;
+				}
+
+				// Ensure it doesn't fall below or exceed min/max
+				if (newValue > rt.max) {
+					newValue = rt.max;
+				} else if (newValue < rt.min) {
+					newValue = rt.min;
+				}
+
+				if (newValue != rt.lastSetValue) {
+					newValue = Fsuipc.internalToRawConversion(aircraftPanelId, rt.method, rt.refName, newValue);
+					if (rt.method == 'offset') {
+						connection.sendMessage({
+							command: 'offsets.write',
+							name: 'aircraftOffsets',
+							changesOnly: true,
+							offsets: [ {name: rt.refName, value: newValue } ],
+						});
+					} else if (rt.method == 'lVar') {
+						connection.sendMessage({
+							command: 'vars.write',
+							vars: [ {name: rt.refName, value: newValue} ],
+						});
+					}
+
+					rt.lastSetValue = newValue;
+				}
+			}
+		},
+
+		/**
+		 * Handle end of knob touch
+		 *
+		 * @param {object} event The Javascript event
+		 */
+		knobTouchEnd: (event) => {
+			eventHandlers.knobTouchRuntime.knobTouchRuntime = {};
+		},
+
+		aircraftInited: (aircraftValues) => {
+			console.log('Aircraft panel initializing...');
+			connection = new FsuipcConnection(Config.fsuipcUrl, aircraftPanelId, aircraftValues, function(method, refName, internalValue) {
+				// Convert the final value to its HTML representation
+				var valueHtml;
+				if (typeof aircraftValues[method][refName] == 'string') {
+					// The string is the name of a method in FsuipcHtml
+					var htmlMethod = aircraftValues[method][refName];
+					valueHtml = FsuipcHtml[htmlMethod](internalValue);
+				} else if (typeof aircraftValues[method][refName] == 'function') {
+					valueHtml = aircraftValues[method][refName](internalValue);
+				}
+
+				dataStore.setStoreValue(method, refName, internalValue, valueHtml);
 
 			}, {debug: debug});
 		},

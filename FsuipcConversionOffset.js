@@ -32,6 +32,15 @@ export default class FsuipcConversionOffset {
 			return perc;
 		};
 
+		this.autopilotAltitude = new FsuipcDefaultConversion();
+		this.autopilotAltitude.from = function(value) {
+			// raw value is: metres*65536
+			return Math.round(value / 65536 * 3.28084);
+		};
+		this.autopilotAltitude.to = function(value) {
+			return Math.round(value / 3.28084 * 65536);
+		};
+
 		// ADD THESE EVENTUALLY:
 		// // Convert heading from FS units to degrees
 		// var headingDegrees = data['heading'] * 360 / (65536 * 65536);

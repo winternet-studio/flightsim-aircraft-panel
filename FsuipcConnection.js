@@ -1,7 +1,5 @@
 import Common from './Common.js';
 import Fsuipc from './Fsuipc.js';
-import FsuipcConversionOffset from './FsuipcConversionOffset.js';
-import FsuipcConversionLVar from './FsuipcConversionLVar.js';
 
 /**
  * Handling the connection to Microsoft Flight Simulator via FSUIPC Websocket Server by Paul Henty
@@ -160,37 +158,32 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 				} else if (response.name == 'aircraftOffsets') {
 					if (response.command == 'offsets.read') {
 						if (response.data) {
-							var Conversion = new FsuipcConversionOffset(myself.aircraftPanelId);
 							var offsetMap = Fsuipc.map();
-							Object.keys(myself.aircraftValues.offset).forEach(function(offsetName) {
+							Object.keys(myself.aircraftValues.offset).forEach(function(refName) {
 								// Get the raw value from FSUIPC
 								var rawValue, internalValue;
-								if (typeof response.data[offsetName] != 'undefined') {
+								if (typeof response.data[refName] != 'undefined') {
 									// regular offset
-									rawValue = response.data[offsetName];
+									rawValue = response.data[refName];
 								} else if (
-									typeof offsetMap[offsetName].bit != 'undefined' &&
-									typeof response.data[ offsetMap[offsetName].address ] != 'undefined' &&
-									typeof response.data[ offsetMap[offsetName].address ][ offsetMap[offsetName].bit ] != 'undefined') {
+									typeof offsetMap[refName].bit != 'undefined' &&
+									typeof response.data[ offsetMap[refName].address ] != 'undefined' &&
+									typeof response.data[ offsetMap[refName].address ][ offsetMap[refName].bit ] != 'undefined') {
 									// a value that is a given bit in an offset
-									rawValue = response.data[ offsetMap[offsetName].address ][ offsetMap[offsetName].bit ];
+									rawValue = response.data[ offsetMap[refName].address ][ offsetMap[refName].bit ];
 								} else {
 									// skip this offset as its value is not part included in the current response
 									if (myself.options.debug >= 2) {
-										console.log('Skipping '+ offsetName);
+										console.log('Skipping '+ refName);
 									}
 									return true;
 								}
 
 								// Convert the value received from FSUIPC if needed
-								if (typeof Conversion[offsetName] == 'object') {
-									internalValue = Conversion[offsetName].from(rawValue);
-								} else {
-									internalValue = rawValue;
-								}
+								internalValue = Fsuipc.rawToInternalConversion(myself.aircraftPanelId, 'offset', refName, rawValue);
 
 								// Update the HTML component
-								messageCallback('offset', offsetName, internalValue);
+								messageCallback('offset', refName, internalValue);
 							});
 						}
 					}
@@ -198,30 +191,25 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 				} else if (response.name == 'aircraftLVars') {
 					if (response.command == 'vars.read') {
 						if (response.data) {
-							var Conversion = new FsuipcConversionLVar(myself.aircraftPanelId);
-							Object.keys(myself.aircraftValues.lVar).forEach(function(lVarName) {
+							Object.keys(myself.aircraftValues.lVar).forEach(function(refName) {
 								// Get the raw value from FSUIPC
 								var rawValue, internalValue;
-								if (typeof response.data[lVarName] != 'undefined') {
+								if (typeof response.data[refName] != 'undefined') {
 									// regular offset
-									rawValue = response.data[lVarName];
+									rawValue = response.data[refName];
 								} else {
 									// skip this offset as its value is not part included in the current response
 									if (myself.options.debug >= 2) {
-										console.log('Skipping '+ lVarName);
+										console.log('Skipping '+ refName);
 									}
 									return true;
 								}
 
 								// Convert the value received from FSUIPC if needed
-								if (typeof Conversion[lVarName] == 'object') {
-									internalValue = Conversion[lVarName].from(rawValue);
-								} else {
-									internalValue = rawValue;
-								}
+								internalValue = Fsuipc.rawToInternalConversion(myself.aircraftPanelId, 'lVar', refName, rawValue);
 
 								// Update the HTML component
-								messageCallback('lVar', lVarName, internalValue);
+								messageCallback('lVar', refName, internalValue);
 							});
 						}
 					}

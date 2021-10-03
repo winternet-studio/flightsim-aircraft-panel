@@ -1,4 +1,6 @@
 import MobiFlightHubHopPresets from './databases/MobiFlightHubHopPresets.js';
+import FsuipcConversionOffset from './FsuipcConversionOffset.js';
+import FsuipcConversionLVar from './FsuipcConversionLVar.js';
 
 export default class Fsuipc {
 
@@ -11,7 +13,7 @@ export default class Fsuipc {
 	/**
 	 * Map names to offset addresses
 	 *
-	 * `toggleValues` and `validValues` should hold the raw values coming from FSUIPC
+	 * `toggleValues`, `validValues`, `min`, `max`, `step` must be based on the internal converted values, not the raw values coming from FSUIPC
 	 *
 	 * Possible `type` values:
 	 * - `int`    A signed integer of size 1, 2, 4 or 8
@@ -33,6 +35,7 @@ export default class Fsuipc {
 			aircraftName: {address: 0x3D00, type: 'string', size: 256},
 			alternator1Master: {address: 0x3101, type: 'uint', size: 1, toggleValues: [1, 0]},
 			apuVoltage: {address: 0x0B5C, type: 'float', size: 4},
+			autopilotAltitude: {address: 0x07D4, type: 'uint', size: 4, min: 0, max: 99999, step: 100},
 			avionicsMaster: {address: 0x2E80, type: 'uint', size: 4, toggleValues: [1, 0]},
 			// avionicsMaster: {address: 0x3103, type: 'uint', size: 1, toggleValues: [1, 0]},
 			batteryMaster: {address: 0x3102, type: 'uint', size: 1, toggleValues: [1, 0]},
@@ -67,7 +70,7 @@ export default class Fsuipc {
 	/**
 	 * Options for Lvars
 	 *
-	 * `toggleValues` and `validValues` should hold the raw values coming from FSUIPC
+	 * `toggleValues`, `validValues`, `min`, `max`, `step` must be based on the internal converted values, not the raw values coming from FSUIPC
 	 *
 	 * @return {object}
 	 */
@@ -115,6 +118,46 @@ export default class Fsuipc {
 		});
 
 		return array;
+	}
+
+	/**
+	 * Convert the raw FSUIPC value to the internal value for this system
+	 */
+	static rawToInternalConversion(aircraftPanelId, method, refName, rawValue) {
+		var Conversion;
+		if (method === 'offset') {
+			Conversion = new FsuipcConversionOffset(aircraftPanelId);
+		} else if (method === 'lVar') {
+			Conversion = new FsuipcConversionLVar(aircraftPanelId);
+		} else {
+			throw 'No conversion class defined for method "'+ method +'"';
+		}
+
+		if (typeof Conversion[refName] == 'object') {
+			return Conversion[refName].from(rawValue);
+		} else {
+			return rawValue;
+		}
+	}
+
+	/**
+	 * Convert the internal value for this system to the raw FSUIPC value
+	 */
+	static internalToRawConversion(aircraftPanelId, method, refName, internalValue) {
+		var Conversion;
+		if (method === 'offset') {
+			Conversion = new FsuipcConversionOffset(aircraftPanelId);
+		} else if (method === 'lVar') {
+			Conversion = new FsuipcConversionLVar(aircraftPanelId);
+		} else {
+			throw 'No conversion class defined for method "'+ method +'"';
+		}
+
+		if (typeof Conversion[refName] == 'object') {
+			return Conversion[refName].to(internalValue);
+		} else {
+			return internalValue;
+		}
 	}
 
 	static msfs20ControlNameToNumber(name) {

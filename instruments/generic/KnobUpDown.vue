@@ -3,23 +3,33 @@ Indicator that has up and down buttons and showing current value
 -->
 <template>
 	<div :class="'instrument knob-up-down inline-block' + (options?.classes ? ' '+ options.classes : '')">
-		<span @click="eventHandlers.knobUpDownClick(method, action, dataStore.state[method]?.[action]?.internalValue, 'down', customStep, options)" class="knob-down pressable"></span>
+		<span @click="clickedDown" class="knob-down pressable"></span>
 		<span class="knob-indicator bordered">
 			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
-			<div class="val" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[method]?.[action]?.internalValue">
-				<span v-html="dataStore.state[method]?.[action]?.valueHtml ?? '&nbsp;'"></span>
+			<div class="val" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[method]?.[refName]?.internalValue">
+				<span v-html="dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
 			</div>
 		</span>
-		<span @click="eventHandlers.knobUpDownClick(method, action, dataStore.state[method]?.[action]?.internalValue, 'up', customStep, options)" class="knob-up pressable"></span>
+		<span @click="clickedUp" class="knob-up pressable"></span>
 	</div>
 </template>
 
 <script>
 module.exports = {
 	props: [
-		'method', 'action', 'label', 'dataStore', 'eventHandlers',  //required
+		'method', 'refName', 'label', 'dataStore', 'eventHandlers',  //required
 		'customStep', 'options',  //optional   (custom step will override the default defined in Fsuipc.js)
 	],
+	methods: {
+		clickedDown(event) {  //NOTE: can NOT use arrow functions, then "this" wouldn't be bound (https://v3.vuejs.org/guide/data-methods.html#methods)
+			let p = this.$props;
+			p.eventHandlers.knobUpDownClick(event, p.method, p.refName, p.dataStore.state[p.method]?.[p.refName]?.internalValue, 'down', p.customStep, p.options);
+		},
+		clickedUp(event) {
+			let p = this.$props;
+			p.eventHandlers.knobUpDownClick(event, p.method, p.refName, p.dataStore.state[p.method]?.[p.refName]?.internalValue, 'up', p.customStep, p.options);
+		},
+	},
 }
 </script>
 

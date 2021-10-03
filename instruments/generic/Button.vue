@@ -2,7 +2,7 @@
 Button that can be clicked but no value to display
 -->
 <template>
-	<div @click="eventHandlers.singleClick(method, action, undefined, setValue, options)" :class="'instrument button inline-block' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
+	<div @click="clicked" :class="'instrument button inline-block' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
 		<div class="bordered pressable">
 			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')"><span v-html="label"></span></div>
 		</div>
@@ -14,10 +14,14 @@ import Common from '../../Common.js';
 
 module.exports = {
 	props: [
-		'method', 'action', 'label', 'eventHandlers',  //required
+		'method', 'refName', 'label', 'eventHandlers',  //required
 		'setValue', 'options',  //optional
 	],
 	methods: {
+		clicked(event) {  //NOTE: can NOT use arrow functions, then "this" wouldn't be bound (https://v3.vuejs.org/guide/data-methods.html#methods)
+			let p = this.$props;
+			p.eventHandlers.singleClick(event, p.method, p.refName, undefined, p.setValue, p.options);
+		},
 		objectToCss: Common.objectToCss,
 	},
 }
