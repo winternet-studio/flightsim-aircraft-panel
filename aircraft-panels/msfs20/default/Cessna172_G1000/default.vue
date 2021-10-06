@@ -4,8 +4,55 @@
 
 	<table class="glass-section">
 	<tr>
-		<td>
+		<td style="vertical-align: bottom">
 			<!-- Left of PFD -->
+			<table>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><Button label="AP" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="FD" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_FD" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+			</tr>
+			<tr>
+				<td><Button label="HDG" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_HDG" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="ALT" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_ALT" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+			</tr>
+			<tr>
+				<td><Button label="NAV" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_NAV" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><Button label="APR" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_APR" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="BC" method="presetCommand" refName="Microsoft.Generic.Autopilot.AP_BC_HOLD" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+			</tr>
+			<tr>
+				<td><Button label="VS" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_VS" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="NOSE UP" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MFD_NOSE_UP" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+			</tr>
+			<tr>
+				<td><Button label="FLC" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MFD_FLC_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="NOSE DN" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MFD_NOSE_DN" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center">
+					<KnobTouchDrag label="ALT" method="offset" refName="autopilotAltitude" stepScale="100" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+				</td>
+			</tr>
+			</table>
 
 		</td>
 		<td>
@@ -50,20 +97,20 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><Button label="🔎+" method="hVar" refName="AS1000_MFD_RANGE_DEC" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="🔎-" method="hVar" refName="AS1000_MFD_RANGE_INC" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="🔎+" method="hVar" refName="AS1000_PFD_RANGE_DEC" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="🔎-" method="hVar" refName="AS1000_PFD_RANGE_INC" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
 			</tr>
 			<tr>
-				<td><Button label="DIR" method="hVar" refName="AS1000_MFD_DIRECTTO" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="MENU" method="hVar" refName="AS1000_MFD_MENU_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="DIR" method="hVar" refName="AS1000_PFD_DIRECTTO" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="MENU" method="hVar" refName="AS1000_PFD_MENU_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
 			</tr>
 			<tr>
-				<td><Button label="FPL" method="hVar" refName="AS1000_MFD_FPL_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="PROC" method="hVar" refName="AS1000_MFD_PROC_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="FPL" method="hVar" refName="AS1000_PFD_FPL_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="PROC" method="hVar" refName="AS1000_PFD_PROC_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
 			</tr>
 			<tr>
-				<td><Button label="CLR" method="hVar" refName="AS1000_MFD_CLR" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="ENT" method="hVar" refName="AS1000_MFD_ENT_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="CLR" method="hVar" refName="AS1000_PFD_CLR" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="ENT" method="hVar" refName="AS1000_PFD_ENT_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
 			</tr>
 			</table>
 
@@ -72,66 +119,44 @@
 			<!-- Center panel -->
 			<table>
 			<tr>
-				<td><Button label="COM1<br>MIC" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MID_COM_Mic_1_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="COM1" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MID_COM_1_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="COM1<br>MIC" method="presetCommand" refName="Microsoft.Generic.Radio.COM1_TRANSMIT_SELECT" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<!-- <td><Button label="COM1" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MID_COM_1_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td> -->
+				<td><Button label="ALL" method="presetCommand" refName="Microsoft.Generic.Radio.COM_RECEIVE_ALL_TOGGLE" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
 			</tr>
 			<tr>
-				<td><Button label="COM2<br>MIC" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MID_COM_Mic_2_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="COM2" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MID_COM_2_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="COM2<br>MIC" method="presetCommand" refName="Microsoft.Generic.Radio.COM2_TRANSMIT_SELECT" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<!-- <td><Button label="COM2" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MID_COM_2_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td> -->
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><Button label="DME" method="presetCommand" refName="Microsoft.Generic.Radio.RADIO_DME1_IDENT_TOGGLE" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="NAV1" method="presetCommand" refName="Microsoft.Generic.Radio.RADIO_VOR1_IDENT_TOGGLE" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+			</tr>
+			<tr>
+				<td><Button label="ADF" method="presetCommand" refName="Microsoft.Generic.Radio.RADIO_ADF_IDENT_TOGGLE" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
+				<td><Button label="NAV2" method="presetCommand" refName="Microsoft.Generic.Radio.RADIO_VOR2_IDENT_TOGGLE" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
 			</tr>
 			</table>
 
 		</td>
-		<td style="vertical-align: bottom">
+		<td>
 			<!-- Left side of MFD -->
-			<table>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><Button label="AP" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="FD" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_FD" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-			</tr>
-			<tr>
-				<td><Button label="HDG" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_HDG" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="ALT" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_ALT" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-			</tr>
-			<tr>
-				<td><Button label="NAV" method="presetCommand" refName="sobo.Cessna 172.Autopilot.C_172_AP_NAV" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td><Button label="APR" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_APR" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="BC" method="presetCommand" refName="Microsoft.Generic.Autopilot.AP_BC_HOLD" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-			</tr>
-			<tr>
-				<td><Button label="VS" method="presetCommand" refName="Asobo.Cessna 172.Autopilot.C_172_AP_VS" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="NOSE UP" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MFD_NOSE_UP" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-			</tr>
-			<tr>
-				<td><Button label="FLC" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MFD_FLC_Push" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-				<td><Button label="NOSE DN" method="presetCommand" refName="Microsoft.Generic.Avionics.AS1000_MFD_NOSE_DN" :eventHandlers="eventHandlers" :options="{classes: 'g1000-buttons'}" /></td>
-			</tr>
-			<tr>
-				<td colspan="2" style="text-align: center">
-					<KnobTouchDrag label="ALT" method="offset" refName="autopilotAltitude" stepScale="100" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-				</td>
-			</tr>
-			</table>
-			
+			<!-- Is identical to left side of PFD! -->
 		</td>
 		<td>
 			<!-- MFD -->
@@ -203,6 +228,10 @@
 		<Toggleable label="BAT MASTER" method="offset" refName="batteryMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		<Toggleable label="ALTERNATOR" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		<Toggleable label="AVIONICS" method="offset" refName="avionicsMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{defectWrite: true}" />
+
+		<div style="display: inline-block; width: 50px"></div>
+
+		<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 	</div>
 
