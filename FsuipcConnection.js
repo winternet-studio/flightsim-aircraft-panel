@@ -14,6 +14,7 @@ export default class FsuipcConnection {
 		this.url = url;
 		this.aircraftPanelId = aircraftPanelId;
 		this.aircraftValues = aircraftValues;
+		this.messageCallback = messageCallback;
 		this.options = {
 			debug: false,
 		};
@@ -24,7 +25,14 @@ export default class FsuipcConnection {
 		this.offsetsDeclaration = null;
 		this.lVarsDeclaration = null;
 
+		console.log('FSUIPC Websocket Connection opening...');
+		this.openConnection();
+	}
+
+	openConnection() {
 		this.ws = new WebSocket(this.url, 'fsuipc');
+
+		var myself = this;
 
 		this.ws.onopen = function () {
 			console.log('FSUIPC Websocket Connection is open');
@@ -136,12 +144,15 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 		};
 
 		this.ws.onclose = function () {
+			var retryInSecs = 10;
 			console.log('FSUIPC Websocket Connection closed');
-			// this.ws = null;
+			Common.showError('FSUIPC Websocket Connection failed - trying again in '+ retryInSecs +' secs...', {timeout: retryInSecs*1000});
+			// myself.ws = null;
 			$('.only-on-connected').prop('disabled', true).addClass('disabled');
 			setTimeout(function() {
-				myself.ws = new WebSocket(myself.url, 'fsuipc');
-			}, 10000);
+				console.log('Retrying opening FSUIPC Websocket Connection...');
+				myself.openConnection();
+			}, retryInSecs*1000);
 		};
 
 		this.ws.onmessage = function(msg) {
@@ -183,7 +194,7 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 								internalValue = Fsuipc.rawToInternalConversion(myself.aircraftPanelId, 'offset', refName, rawValue);
 
 								// Update the HTML component
-								messageCallback('offset', refName, internalValue);
+								myself.messageCallback('offset', refName, internalValue);
 							});
 						}
 					}
@@ -209,7 +220,7 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 								internalValue = Fsuipc.rawToInternalConversion(myself.aircraftPanelId, 'lVar', refName, rawValue);
 
 								// Update the HTML component
-								messageCallback('lVar', refName, internalValue);
+								myself.messageCallback('lVar', refName, internalValue);
 							});
 						}
 					}
