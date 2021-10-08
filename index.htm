@@ -21,10 +21,32 @@
 import * as Vue from 'https://unpkg.com/vue@3/dist/vue.runtime.esm-browser.js';
 import { loadModule } from 'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.esm.js';
 import Common from './Common.js';
-import { Config } from './Config.js';
 import Fsuipc from './Fsuipc.js';
 import FsuipcConnection from './FsuipcConnection.js';
 import FsuipcHtml from './FsuipcHtml.js';
+
+var Config, UserFsuipc, UserFsuipcHtml, UserFsuipcConversionLVar, UserFsuipcConversionOffset;
+
+await import('./userdata/Config.js?_='+ new Date().getTime())
+	.then(module => Config = module.Config)
+	.catch(() => console.log('Config not found, skipped'));
+
+await import('./userdata/UserFsuipc.js?_='+ new Date().getTime())
+	.then(module => UserFsuipc = module.default)
+	.catch(() => console.log('UserFsuipc not found, skipped'));
+
+await import('./userdata/UserFsuipcHtml.js?_='+ new Date().getTime())
+	.then(module => UserFsuipcHtml = module.default)
+	.catch(() => console.log('UserFsuipcHtml not found, skipped'));
+
+await import('./userdata/UserFsuipcConversionLVar.js?_='+ new Date().getTime())
+	.then(module => UserFsuipcConversionLVar = module.default)
+	.catch(() => console.log('UserFsuipcConversionLVar not found, skipped'));
+
+await import('./userdata/UserFsuipcConversionOffset.js?_='+ new Date().getTime())
+	.then(module => UserFsuipcConversionOffset = module.default)
+	.catch(() => console.log('UserFsuipcConversionOffset not found, skipped'));
+
 
 var offsetMap = Fsuipc.map();
 var lVarOptions = Fsuipc.lVarOptions();
@@ -32,6 +54,14 @@ var presetCommands = Fsuipc.presetCommands();
 var debug = true;
 var connection;
 var simControls = null;
+
+// Set default Config
+if (!Config) {
+	Config = {
+		skipDefaultAircraft: false,
+		fsuipcUrl: 'ws://localhost:2048/fsuipc',
+	}
+}
 
 var audioObj = document.createElement('audio');
 audioObj.src = 'media/one-click.wav';

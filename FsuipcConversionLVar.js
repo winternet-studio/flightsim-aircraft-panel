@@ -1,7 +1,7 @@
 import FsuipcDefaultConversion from './FsuipcDefaultConversion.js';
 
 /**
- * Convert FSUIPC Lvar values to and from human readable format
+ * Convert FSUIPC LVar values to and from human readable format
  */
 export default class FsuipcConversionLVar {
 
