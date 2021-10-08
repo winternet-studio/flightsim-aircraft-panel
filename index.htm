@@ -187,17 +187,20 @@ if (!urlParams.has('config')) {
 				}
 
 			} else if (method === 'simControl') {
-				var controlNumber = refName;
-				console.info('Writing Lvars is not fully supported yet');
-				var controlParameter = 0;  //TODO: allow passing the parameter value to be used
-				// if (!$.isNumeric(controlNumber)) {
-				// }
+				var controlName = refName;
+				var controlParameter = 0;
+				if (!isNaN(newInternalValue)) {
+					controlParameter = newInternalValue;
+				}
 
 				connection.sendMessage({
 					command: 'offsets.write',
 					name: 'simControlOffsets',
 					changesOnly: true,
-					offsets: [ {name: 'simControlParam', value: controlParameter, name: 'simControlNumber', value: controlNumber} ],
+					offsets: [
+						{name: 'simControlParam', value: controlParameter},
+						{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(controlName)},
+					],
 				});
 
 			} else if (method === 'presetCommand') {

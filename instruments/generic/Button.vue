@@ -29,7 +29,7 @@ module.exports = {
 
 <style scoped>
 .instrument {
-	height: 45px;   /* to match size of .toggleable */
+	height: 47px;   /* to match size of .toggleable */
 	width: 85px;
 }
 .bordered {
@@ -38,8 +38,8 @@ module.exports = {
 }
 .button .lbl {
 	color: #8d9093;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 11px;
+	line-height: 14px;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);

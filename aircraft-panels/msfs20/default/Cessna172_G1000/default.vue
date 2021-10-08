@@ -221,17 +221,36 @@
 	</tr>
 	</table>
 
-	<div style="height: 50px"></div>
+	<div style="height: 30px"></div>
+
+	<table class="std-spacing">
+	<tr>
+		<td>
+			<Toggleable label="MASTER ALT" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		</td>
+		<td>
+			<Button label="MASTER BAT" method="simControl" refName="TOGGLE_MASTER_BATTERY" setValue="1" :eventHandlers="eventHandlers" />
+		</td>
+		<td>
+			<Button label="AVIONICS BUS 1" method="calcCode" refName="24 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)" :eventHandlers="eventHandlers" />
+		</td>
+		<td>
+			<Button label="AVIONICS BUS 2" method="calcCode" refName="25 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)" :eventHandlers="eventHandlers" />
+		</td>
+		<td>
+			<Button label="STBY BATT" method="simControl" refName="TOGGLE_MASTER_BATTERY" setValue="2" :eventHandlers="eventHandlers" />
+		</td>
+		<td style="padding-left: 50px">
+			<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</td>
+	</tr>
+	</table>
 
 	<div class="std-spacing" style="padding-left: 10px">
 
-		<Toggleable label="BAT MASTER" method="offset" refName="batteryMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		<Toggleable label="ALTERNATOR" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		<Toggleable label="AVIONICS" method="offset" refName="avionicsMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{defectWrite: true}" />
 
 		<div style="display: inline-block; width: 50px"></div>
 
-		<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 	</div>
 
