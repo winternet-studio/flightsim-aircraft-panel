@@ -289,7 +289,7 @@
 		</td>
 		<td style="text-align: center">
 
-			<KnobTouchDrag label="AVIONICS" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<KnobTouchDrag label="AVIONICS" method="lVar" refName="AS1000_MFD_Brightness" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 		<td>

@@ -1,7 +1,7 @@
 import FsuipcDefaultConversion from './FsuipcDefaultConversion.js';
 
 /**
- * Convert FSUIPC offset values to and from human readable format
+ * Convert FSUIPC offset values to and from our internal value (more human friendly format)
  */
 export default class FsuipcConversionOffset {
 
