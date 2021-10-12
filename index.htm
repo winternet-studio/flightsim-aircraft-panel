@@ -25,43 +25,40 @@ import Fsuipc from './Fsuipc.js';
 import FsuipcConnection from './FsuipcConnection.js';
 import FsuipcHtml from './FsuipcHtml.js';
 
-var Config, UserFsuipc, UserFsuipcHtml, UserFsuipcConversionLVar, UserFsuipcConversionOffset;
+var Config, UserFsuipc, UserFsuipcHtml;
 
-await import('./userdata/Config.js?_='+ new Date().getTime())
+await import('./user-config/Config.js?_='+ new Date().getTime())
 	.then(module => Config = module.Config)
 	.catch(() => console.log('Config not found, skipped'));
 
-await import('./userdata/UserFsuipc.js?_='+ new Date().getTime())
+await import('./user-config/UserFsuipc.js?_='+ new Date().getTime())
 	.then(module => UserFsuipc = module.default)
 	.catch(() => console.log('UserFsuipc not found, skipped'));
 
-await import('./userdata/UserFsuipcHtml.js?_='+ new Date().getTime())
+await import('./user-config/UserFsuipcHtml.js?_='+ new Date().getTime())
 	.then(module => UserFsuipcHtml = module.default)
 	.catch(() => console.log('UserFsuipcHtml not found, skipped'));
-
-await import('./userdata/UserFsuipcConversionLVar.js?_='+ new Date().getTime())
-	.then(module => UserFsuipcConversionLVar = module.default)
-	.catch(() => console.log('UserFsuipcConversionLVar not found, skipped'));
-
-await import('./userdata/UserFsuipcConversionOffset.js?_='+ new Date().getTime())
-	.then(module => UserFsuipcConversionOffset = module.default)
-	.catch(() => console.log('UserFsuipcConversionOffset not found, skipped'));
 
 
 var offsetMap = Fsuipc.map();
 var lVarOptions = Fsuipc.lVarOptions();
 var presetCommands = Fsuipc.presetCommands();
+var userOffsetMap, userLVarOptions, userPresetCommands;
+if (UserFsuipc) {
+	if (typeof UserFsuipc.map !== 'undefined') {
+		offsetMap = { ...UserFsuipc.map(), ...offsetMap };
+	}
+	if (typeof UserFsuipc.lVarOptions !== 'undefined') {
+		lVarOptions = { ...UserFsuipc.lVarOptions(), ...lVarOptions };
+	}
+	if (typeof UserFsuipc.presetCommands !== 'undefined') {
+		presetCommands = { ...UserFsuipc.presetCommands(), ...presetCommands };
+	}
+}
+
 var debug = true;
 var connection;
 var simControls = null;
-
-// Set default Config
-if (!Config) {
-	Config = {
-		skipDefaultAircraft: false,
-		fsuipcUrl: 'ws://localhost:2048/fsuipc',
-	}
-}
 
 var audioObj = document.createElement('audio');
 audioObj.src = 'media/one-click.wav';
@@ -114,6 +111,7 @@ if (!urlParams.has('config')) {
 	 */
 	const eventHandlers = {
 		singleClick: (event, method, refName, currInternalValue, newInternalValue, options) => {
+			console.log('Single click: '+ method +':'+ refName);
 			if (!options) options = {};
 
 			if (options.defectWrite) return false;
@@ -253,6 +251,7 @@ if (!urlParams.has('config')) {
 		 * @param {object} event The Javascript event
 		 */
 		knobUpDownClick: (event, method, refName, currInternalValue, direction, customStep, options) => {
+			console.log('Knob '+ direction +': '+ method +':'+ refName);
 			if (!options) options = {};
 
 			// Play sound
@@ -329,6 +328,7 @@ if (!urlParams.has('config')) {
 		 * @param {object} event The Javascript event
 		 */
 		knobTouchStart: (event, method, refName, currInternalValue, stepScale, options) => {
+			console.log('Knob touch start: '+ method +':'+ refName);
 			if (!currInternalValue) {
 				currInternalValue = 0;
 			}
@@ -454,18 +454,25 @@ if (!urlParams.has('config')) {
 		 * @param {object} event The Javascript event
 		 */
 		knobTouchEnd: (event) => {
+			console.log('Knob touch end: '+ eventHandlers.knobTouchRuntime.method +':'+ eventHandlers.knobTouchRuntime.refName);
 			eventHandlers.knobTouchRuntime.knobTouchRuntime = {};
 		},
 
 		aircraftInited: (aircraftValues) => {
 			console.log('Aircraft panel initializing...');
-			connection = new FsuipcConnection(Config.fsuipcUrl, aircraftPanelId, aircraftValues, function(method, refName, internalValue) {
+			connection = new FsuipcConnection( (Config && Config.fsuipcUrl ? Config.fsuipcUrl : 'ws://localhost:2048/fsuipc'), aircraftPanelId, aircraftValues, offsetMap, function(method, refName, internalValue) {
 				// Convert the final value to its HTML representation
 				var valueHtml;
 				if (typeof aircraftValues[method][refName] == 'string') {
 					// The string is the name of a method in FsuipcHtml
 					var htmlMethod = aircraftValues[method][refName];
-					valueHtml = FsuipcHtml[htmlMethod](internalValue);
+					if (typeof FsuipcHtml[htmlMethod] !== 'undefined') {
+						valueHtml = FsuipcHtml[htmlMethod](internalValue);
+					} else if (typeof UserFsuipcHtml[htmlMethod] !== 'undefined') {
+						valueHtml = UserFsuipcHtml[htmlMethod](internalValue);
+					} else {
+						Common.showError('Failed to find method named '+ method +':'+ refName +' to convert value to HTML representation.');
+					}
 				} else if (typeof aircraftValues[method][refName] == 'function') {
 					valueHtml = aircraftValues[method][refName](internalValue);
 				}

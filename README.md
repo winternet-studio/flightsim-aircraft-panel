@@ -29,6 +29,7 @@ Nothing speaks better than a visualization - this is a simple example screen:
 
 ![Example screen of an aircraft panel](https://aviation.allanville.com/media/flightsim-aircraft-panel-example.jpg "Example screen")
 
+
 ## Documentation
 
 ### Installation
@@ -58,6 +59,15 @@ Special classes that can be used:
 - INOPERABLE: class that dims the control to indicate that it is inoperable
 - defect-write: class that indicates the control cannot write to the sim but is read-only
 - no-sound: don't play sound when button is clicked
+
+
+## Adding and customizing your own panels and FSUIPC offsets
+
+**ALL** customization must be done in the `user-config` to keep things organized.
+
+When you have created new panels that other people can benefit from I will gladly include them in the official application.
+You can send them to me or do a pull request.
+
 
 ## Troubleshooting
 

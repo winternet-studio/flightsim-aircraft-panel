@@ -8,12 +8,13 @@ import Fsuipc from './Fsuipc.js';
  */
 export default class FsuipcConnection {
 
-	constructor(url, aircraftPanelId, aircraftValues, messageCallback, options) {
+	constructor(url, aircraftPanelId, aircraftValues, offsetMap, messageCallback, options) {
 		var myself = this;
 
 		this.url = url;
 		this.aircraftPanelId = aircraftPanelId;
 		this.aircraftValues = aircraftValues;
+		this.offsetMap = offsetMap;
 		this.messageCallback = messageCallback;
 		this.options = {
 			debug: false,
@@ -59,7 +60,7 @@ export default class FsuipcConnection {
 
 			// Declare offsets for aircraft and start monitoring them
 			if (typeof myself.aircraftValues.offset !== 'undefined') {
-				this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftValues.offset);
+				this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftValues.offset, myself.offsetMap);
 
 				// Declare offsets to monitor
 				myself.sendMessage({
@@ -169,19 +170,22 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 				} else if (response.name == 'aircraftOffsets') {
 					if (response.command == 'offsets.read') {
 						if (response.data) {
-							var offsetMap = Fsuipc.map();
 							Object.keys(myself.aircraftValues.offset).forEach(function(refName) {
 								// Get the raw value from FSUIPC
 								var rawValue, internalValue;
 								if (typeof response.data[refName] != 'undefined') {
 									// regular offset
 									rawValue = response.data[refName];
+								} else if (!myself.offsetMap[refName]) {
+									// offset has not been defined
+									Common.showError('The offset '+ refName +' has not been defined. Skipping.');
+									return true;
 								} else if (
-									typeof offsetMap[refName].bit != 'undefined' &&
-									typeof response.data[ offsetMap[refName].address ] != 'undefined' &&
-									typeof response.data[ offsetMap[refName].address ][ offsetMap[refName].bit ] != 'undefined') {
+									typeof myself.offsetMap[refName].bit != 'undefined' &&
+									typeof response.data[ myself.offsetMap[refName].address ] != 'undefined' &&
+									typeof response.data[ myself.offsetMap[refName].address ][ myself.offsetMap[refName].bit ] != 'undefined') {
 									// a value that is a given bit in an offset
-									rawValue = response.data[ offsetMap[refName].address ][ offsetMap[refName].bit ];
+									rawValue = response.data[ myself.offsetMap[refName].address ][ myself.offsetMap[refName].bit ];
 								} else {
 									// skip this offset as its value is not part included in the current response
 									if (myself.options.debug >= 2) {

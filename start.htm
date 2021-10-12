@@ -33,15 +33,19 @@ h3:first-child {
 </style>
 
 <script type="module">
-import { Config } from './Config.js';
 import defaultAircraft from './DefaultAircraftPanels.js';
 
+var Config;
+await import('./user-config/Config.js?_='+ new Date().getTime())
+	.then(module => Config = module.Config)
+	.catch(() => console.log('Config not found, skipped'));
+
 var aircraft = {};
-if (!Config.skipDefaultAircraft) {
+if (Config && !Config.skipDefaultAircraft) {
 	$.extend(aircraft, defaultAircraft.list());
 }
-if (Config.aircraft !== 'undefined') {
-	$.extend(aircraft, Config.aircraft);
+if (Config && Config.userAircraft !== 'undefined') {
+	$.extend(aircraft, Config.userAircraft);
 }
 
 var $aircraftList = $('#aircraft-list');

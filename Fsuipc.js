@@ -1,6 +1,18 @@
+import Common from './Common.js';
 import MobiFlightHubHopPresets from './databases/MobiFlightHubHopPresets.js';
 import FsuipcConversionOffset from './FsuipcConversionOffset.js';
 import FsuipcConversionLVar from './FsuipcConversionLVar.js';
+
+var UserFsuipcConversionLVar, UserFsuipcConversionOffset;
+
+await import('./user-config/UserFsuipcConversionLVar.js?_='+ new Date().getTime())
+	.then(module => UserFsuipcConversionLVar = module.default)
+	.catch(() => console.log('UserFsuipcConversionLVar not found, skipped'));
+
+await import('./user-config/UserFsuipcConversionOffset.js?_='+ new Date().getTime())
+	.then(module => UserFsuipcConversionOffset = module.default)
+	.catch(() => console.log('UserFsuipcConversionOffset not found, skipped'));
+
 
 export default class Fsuipc {
 
@@ -99,14 +111,19 @@ export default class Fsuipc {
 	/**
 	 * Generate the array with the offsets we want to monitor for a given aircraft
 	 *
+	 * @param {object} aircraftOffsets : List of offsets from aircraft confiruation
+	 * @param {object} offsetMap : List of all FSUIPC offsets that are available (combination of standard plus user's offsets)
 	 * @return {array}
 	 */
-	static makeOffsetsArrayForAircraft(offsets) {
+	static makeOffsetsArrayForAircraft(aircraftOffsets, offsetMap) {
 		var array = [];
-		var offsetMap = Fsuipc.map();
 
 		var added = [];
-		Object.keys(offsets).forEach(function(key) {
+		Object.keys(aircraftOffsets).forEach(function(key) {
+			if (typeof offsetMap[key] === 'undefined') {
+				Common.showError('The offset '+ key +' has not been defined. Skipping.');
+				return true;
+			}
 			var offsetProps = offsetMap[key];
 			var offsetAddress = offsetProps.address;
 			var effName = (offsetProps.type === 'bits' ? offsetAddress : key);
@@ -124,17 +141,25 @@ export default class Fsuipc {
 	 * Convert the raw FSUIPC value to the internal value for this system
 	 */
 	static rawToInternalConversion(aircraftPanelId, method, refName, rawValue) {
-		var Conversion;
+		var Conversion, UserConversion;
 		if (method === 'offset') {
 			Conversion = new FsuipcConversionOffset(aircraftPanelId);
+			if (UserFsuipcConversionOffset) {
+				UserConversion = new UserFsuipcConversionOffset(aircraftPanelId);
+			}
 		} else if (method === 'lVar') {
 			Conversion = new FsuipcConversionLVar(aircraftPanelId);
+			if (UserFsuipcConversionLVar) {
+				UserConversion = new UserFsuipcConversionLVar(aircraftPanelId);
+			}
 		} else {
 			throw 'No conversion class defined for method "'+ method +'"';
 		}
 
 		if (typeof Conversion[refName] == 'object') {
 			return Conversion[refName].from(rawValue);
+		} else if (typeof UserConversion[refName] == 'object') {
+			return UserConversion[refName].from(rawValue);
 		} else {
 			return rawValue;
 		}

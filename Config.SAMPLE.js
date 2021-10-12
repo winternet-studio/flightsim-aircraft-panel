@@ -1,7 +1,9 @@
+// Sample file for the user-config folder
+
 export const config = {
 
 	skipDefaultAircraft: false,  //skip showing default aircraft on start page and only show those configured here in Config.js
-	// aircraft: [
+	// userAircraft: [
 	// 	{
 	// 		path: 'Cessna172_G1000',
 	// 		name: 'Cessna 172 Skyhawk (G1000)',
@@ -10,7 +12,6 @@ export const config = {
 	// 		],
 	// 	},
 	// ],
-
 
 	fsuipcUrl = 'ws://localhost:2048/fsuipc',  //the computer running the FSUIPC WebSocket Server. Can also use IP address like: 'ws://192.168.0.10:2048/fsuipc'
 	/*
