@@ -46,9 +46,9 @@ module.exports = {
 }
 .knob-up, .knob-down {
 	position: relative;
-	top: -11px;
-	width: 50px;
-	height: 50px;
+	top: -9px;
+	width: 45px;
+	height: 45px;
 	background-color: #353d42;
 	border-radius: 5px;
 }

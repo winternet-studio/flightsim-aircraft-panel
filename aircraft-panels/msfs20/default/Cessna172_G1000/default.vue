@@ -254,7 +254,7 @@
 
 	</div>
 
-	<div style="height: 15px"></div>
+	<div style="height: 2px"></div>
 
 	<table class="std-spacing">
 	<tr>
@@ -440,7 +440,7 @@ export default {
 }
 .g1000-buttons {
 	width: 56px !important;
-	height: 25px !important;
+	height: 40px !important;
 	margin: 2px;
 }
 .g1000-buttons .bordered {

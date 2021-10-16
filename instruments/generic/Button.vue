@@ -45,7 +45,7 @@ module.exports = {
 	transform: translateY(-50%);
 }
 .button.small {
-	height: 25px;
+	height: 45px;
 }
 .button.small .lbl {
 	font-size: 10px;
