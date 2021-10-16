@@ -16,13 +16,18 @@ Indicator that where dragging up/down/left/right increases or decreases the valu
 <script>
 module.exports = {
 	props: [
-		'method', 'refName', 'label', 'dataStore', 'eventHandlers',  //required
+		'method', 'refName', 'label', 'dataStore', 'eventHandlers',  //required (except refName if refNameIncr and refNameDecr is set instead)
 		'pushMethod', 'pushRefName', 'pullMethod', 'pullRefName', 'stepScale', 'options',  //optional
+		'refNameIncr', 'refNameDecr', 'triggerDist',  //optional  (can be used instead of refName when no specific values and scale exist)
 	],
 	methods: {
 		touchStart(event) {  //NOTE: can NOT use arrow functions, then "this" wouldn't be bound (https://v3.vuejs.org/guide/data-methods.html#methods)
 			let p = this.$props;
-			p.eventHandlers.knobTouchStart(event, p.method, p.refName, p.dataStore.state[p.method]?.[p.refName]?.internalValue, p.stepScale, p.options);
+			if (p.refName) {
+				p.eventHandlers.knobTouchStart(event, p.method, p.refName, p.dataStore.state[p.method]?.[p.refName]?.internalValue, p.stepScale, p.options);
+			} else {
+				p.eventHandlers.knobTouchStart(event, p.method, {incr: p.refNameIncr, decr: p.refNameDecr}, null, p.triggerDist, p.options);
+			}
 		},
 		touchMove(event) {
 			let p = this.$props;
@@ -52,8 +57,16 @@ module.exports = {
 .knob-indicator {
 	height: 45px;
 	width: 45px;
-	border-radius: 45px;
+	border-radius: 100px;
 	/*user-select: none;*/
+}
+.instrument.larger .knob-indicator {
+	height: 50px;
+	width: 50px;
+}
+.instrument.smaller .knob-indicator {
+	height: 40px;
+	width: 40px;
 }
 .instrument .val {
 	position: relative;

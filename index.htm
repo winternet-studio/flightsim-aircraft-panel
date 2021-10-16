@@ -202,31 +202,7 @@ if (!urlParams.has('config')) {
 				});
 
 			} else if (method === 'presetCommand') {
-				var commandName = refName;
-				if (presetCommands[commandName]) {
-					if (typeof presetCommands[commandName] === 'undefined') {
-						Common.showError('Command "'+ offsetName +'" was not found in list of preset commands. If this was a preset from MobiFlight it might have been changed or removed in place of something else. Please update /databases/MobiFlightHubHopPresets.js with the latest version and look for another preset to use in its place. Searching on https://hubhop.mobiflight.com/ might be of a help to you.', {timeout: 40000});
-					} else if (presetCommands[commandName].method === 'simControl') {
-						connection.sendMessage({
-							command: 'offsets.write',
-							name: 'simControlOffsets',
-							offsets: [
-								{name: 'simControlParam', value: (typeof presetCommands[commandName].parameter !== 'undefined' ? presetCommands[commandName].parameter : 0)},
-								{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommands[commandName].control) },
-							],
-						});
-					} else if (presetCommands[commandName].method === 'calcCode') {
-						connection.sendMessage({
-							command: 'vars.calc',
-							name: 'calc',
-							code: presetCommands[commandName].code,
-						});
-					} else {
-						console.error('Dont know how to handle method '+ presetCommands[commandName].method + ' in event handler.');
-					}
-				} else {
-					console.error('No preset command by the name of '+ offsetName + ' was found.');
-				}
+				sendPresetCommand(refName);
 
 			} else if (method === 'hVar') {
 				var theHVar = refName;
@@ -310,6 +286,7 @@ if (!urlParams.has('config')) {
 			minMsBetweenUpdates: 100,
 		},
 		knobTouchRuntime: {
+			mechanism: null,  //'range' (sets values within a specified range) or 'infinite' (infinite increase/decrease commands, no specific values)
 			method: null,
 			refName: null,
 			currInternalValue: null,
@@ -327,35 +304,45 @@ if (!urlParams.has('config')) {
 		 *
 		 * @param {object} event The Javascript event
 		 */
-		knobTouchStart: (event, method, refName, currInternalValue, stepScale, options) => {
-			console.log('Knob touch start: '+ method +':'+ refName);
+		knobTouchStart: (event, method, refName, currInternalValue, stepScaleOrTriggerDist, options) => {
+			var self = eventHandlers;
+
+			if (typeof refName == 'object' && typeof refName.incr !== 'undefined') {
+				console.log('Knob touch start: '+ method +':'+ refName.incr +' / '+ refName.decr);
+				self.knobTouchRuntime.mechanism = 'infinite';
+			} else {
+				console.log('Knob touch start: '+ method +':'+ refName);
+				self.knobTouchRuntime.mechanism = 'range';
+			}
 			if (!currInternalValue) {
 				currInternalValue = 0;
 			}
-			var self = eventHandlers;
+
 			self.knobTouchRuntime.method = method;
 			self.knobTouchRuntime.refName = refName;
 			self.knobTouchRuntime.startingValue = currInternalValue;
-			self.knobTouchRuntime.stepScale = (isNaN(stepScale) ? 1 : stepScale);
+			self.knobTouchRuntime.stepScaleOrTriggerDist = (isNaN(stepScaleOrTriggerDist) ? 1 : stepScaleOrTriggerDist);
 			self.knobTouchRuntime.options = options;
 			self.knobTouchRuntime.startPosX = event.touches[0].pageX;
 			self.knobTouchRuntime.startPosY = event.touches[0].pageY;
 
-			var refProps;
-			if (method === 'offset') {
-				refProps = offsetMap[refName];
-			} else if (method === 'lVar') {
-				refProps = lVarOptions[refName];
-			}
-			if (typeof refProps.min === 'undefined' || typeof refProps.max === 'undefined') {
-				Common.showError('The '+ method +' '+ refName + ' is missing its min/max values.'); return;
-				self.knobTouchEnd = {};
-			} else {
-				self.knobTouchRuntime.min = refProps.min;
-				self.knobTouchRuntime.max = refProps.max;
-				self.knobTouchRuntime.step = 1;
-				if (typeof refProps.step !== 'undefined') {
-					self.knobTouchRuntime.step = refProps.step;
+			if (self.knobTouchRuntime.mechanism == 'range') {
+				var refProps;
+				if (method === 'offset') {
+					refProps = offsetMap[refName];
+				} else if (method === 'lVar') {
+					refProps = lVarOptions[refName];
+				}
+				if (typeof refProps.min === 'undefined' || typeof refProps.max === 'undefined') {
+					Common.showError('The '+ method +' '+ refName + ' is missing its min/max values.'); return;
+					self.knobTouchEnd = {};
+				} else {
+					self.knobTouchRuntime.min = refProps.min;
+					self.knobTouchRuntime.max = refProps.max;
+					self.knobTouchRuntime.step = 1;
+					if (typeof refProps.step !== 'undefined') {
+						self.knobTouchRuntime.step = refProps.step;
+					}
 				}
 			}
 		},
@@ -388,7 +375,7 @@ if (!urlParams.has('config')) {
 				rt.lastSent = now;
 
 				// Handle move
-				var distSinceStart, useVerticalAxis;
+				var distSinceStart;  //will become the distance we have moved since start (or for 'infinite' mechanism: since last time we sent a command). Will be positive for an increase, negative for decrease
 				var vertDist = rt.startPosY - rt.currPosY;
 				var horizDist = rt.currPosX - rt.startPosX;
 				if ((vertDist > 0 && horizDist < 0) || (vertDist < 0 && horizDist > 0)) {
@@ -403,47 +390,68 @@ if (!urlParams.has('config')) {
 					}
 				}
 
-				var addSubtractFromCurrentValue = distSinceStart / 10 * parseFloat(rt.stepScale);  // the fixed number is an extra scale to make the stepScale not require very small numbers for small ranges
-				var newValue = rt.startingValue + addSubtractFromCurrentValue;
+				if (rt.mechanism == 'range') {
+					var stepScale = rt.stepScaleOrTriggerDist;
 
-				// Make new value align with the step
-				if (rt.step == 1) {
-					newValue = Math.round(newValue);
-				} else {
-					var temp;
-					temp = (newValue - rt.min) / rt.step;
-					if (temp % 1 < 0.5) {
-						temp = Math.floor(temp);  //number is closer to the step after this number
+					var addSubtractFromCurrentValue = distSinceStart / 10 * parseFloat(stepScale);  // the fixed number is an extra scale to make the stepScale not require very small numbers for small ranges
+					var newValue = rt.startingValue + addSubtractFromCurrentValue;
+
+					// Make new value align with the step
+					if (rt.step == 1) {
+						newValue = Math.round(newValue);
 					} else {
-						temp = Math.ceil(temp);  //number is closer to the step before this number
-					}
-					newValue = rt.min + rt.step * temp;
-				}
-
-				// Ensure it doesn't fall below or exceed min/max
-				if (newValue > rt.max) {
-					newValue = rt.max;
-				} else if (newValue < rt.min) {
-					newValue = rt.min;
-				}
-
-				if (newValue != rt.lastSetValue) {
-					newValue = Fsuipc.internalToRawConversion(aircraftPanelId, rt.method, rt.refName, newValue);
-					if (rt.method == 'offset') {
-						connection.sendMessage({
-							command: 'offsets.write',
-							name: 'aircraftOffsets',
-							changesOnly: true,
-							offsets: [ {name: rt.refName, value: newValue } ],
-						});
-					} else if (rt.method == 'lVar') {
-						connection.sendMessage({
-							command: 'vars.write',
-							vars: [ {name: rt.refName, value: newValue} ],
-						});
+						var temp;
+						temp = (newValue - rt.min) / rt.step;
+						if (temp % 1 < 0.5) {
+							temp = Math.floor(temp);  //number is closer to the step after this number
+						} else {
+							temp = Math.ceil(temp);  //number is closer to the step before this number
+						}
+						newValue = rt.min + rt.step * temp;
 					}
 
-					rt.lastSetValue = newValue;
+					// Ensure it doesn't fall below or exceed min/max
+					if (newValue > rt.max) {
+						newValue = rt.max;
+					} else if (newValue < rt.min) {
+						newValue = rt.min;
+					}
+
+					if (newValue != rt.lastSetValue) {
+						newValue = Fsuipc.internalToRawConversion(aircraftPanelId, rt.method, rt.refName, newValue);
+						if (rt.method == 'offset') {
+							connection.sendMessage({
+								command: 'offsets.write',
+								name: 'aircraftOffsets',
+								changesOnly: true,
+								offsets: [ {name: rt.refName, value: newValue } ],
+							});
+						} else if (rt.method == 'lVar') {
+							connection.sendMessage({
+								command: 'vars.write',
+								vars: [ {name: rt.refName, value: newValue} ],
+							});
+						}
+
+						rt.lastSetValue = newValue;
+					}
+				} else if (rt.mechanism == 'infinite') {
+					var triggerDist = rt.stepScaleOrTriggerDist;
+
+					if (Math.abs(distSinceStart) >= triggerDist) {
+						if (distSinceStart > 0) {
+							if (rt.method == 'presetCommand') {
+								sendPresetCommand(rt.refName.incr);
+							}
+						} else {
+							if (rt.method == 'presetCommand') {
+								sendPresetCommand(rt.refName.decr);
+							}
+						}
+						// Set starting position as current position so that on next move this becomes our starting point and we can again use triggerDist to determine when to send next command
+						rt.startPosY = rt.currPosY;
+						rt.startPosX = rt.currPosX;
+					}
 				}
 			}
 		},
@@ -454,8 +462,12 @@ if (!urlParams.has('config')) {
 		 * @param {object} event The Javascript event
 		 */
 		knobTouchEnd: (event) => {
-			console.log('Knob touch end: '+ eventHandlers.knobTouchRuntime.method +':'+ eventHandlers.knobTouchRuntime.refName);
-			eventHandlers.knobTouchRuntime.knobTouchRuntime = {};
+			if (eventHandlers.knobTouchRuntime.mechanism == 'range') {
+				console.log('Knob touch end: '+ eventHandlers.knobTouchRuntime.method +':'+ eventHandlers.knobTouchRuntime.refName);
+			} else {
+				console.log('Knob touch end: '+ eventHandlers.knobTouchRuntime.method +':'+ eventHandlers.knobTouchRuntime.refName.incr +' / '+ eventHandlers.knobTouchRuntime.refName.decr);
+			}
+			eventHandlers.knobTouchRuntime = {};
 		},
 
 		aircraftInited: (aircraftValues) => {
@@ -505,6 +517,29 @@ if (!urlParams.has('config')) {
 		},
 	}
 	var app = Vue.createApp(Vue.defineAsyncComponent(() => loadModule('aircraft-panels/'+ aircraftPanelId +'.vue', options)), {dataStore, eventHandlers}).mount('#aircraft-specific-component');
+}
+
+function sendPresetCommand(commandName) {
+	if (typeof presetCommands[commandName] === 'undefined') {
+		Common.showError('Command "'+ commandName +'" was not found in list of preset commands. If this was a preset from MobiFlight it might have been changed or removed in place of something else. Please update /databases/MobiFlightHubHopPresets.js with the latest version and look for another preset to use in its place. Searching on https://hubhop.mobiflight.com/ might be of a help to you.', {timeout: 40000});
+	} else if (presetCommands[commandName].method === 'simControl') {
+		connection.sendMessage({
+			command: 'offsets.write',
+			name: 'simControlOffsets',
+			offsets: [
+				{name: 'simControlParam', value: (typeof presetCommands[commandName].parameter !== 'undefined' ? presetCommands[commandName].parameter : 0)},
+				{name: 'simControlNumber', value: Fsuipc.msfs20ControlNameToNumber(presetCommands[commandName].control) },
+			],
+		});
+	} else if (presetCommands[commandName].method === 'calcCode') {
+		connection.sendMessage({
+			command: 'vars.calc',
+			name: 'calc',
+			code: presetCommands[commandName].code,
+		});
+	} else {
+		console.error('Dont know how to handle method '+ presetCommands[commandName].method + ' in event handler.');
+	}
 }
 
 console.log('AIRCRAFT PANEL: '+ aircraftPanelId);
