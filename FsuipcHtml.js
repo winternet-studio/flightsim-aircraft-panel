@@ -41,6 +41,22 @@ export default class FsuipcHtml {
 		}
 	}
 
+	static spoilerPosition(value) {  //see FSUIPC offset 0BD0
+		if (value == 0) {
+			return '<span class="cdarkgray">STOWED</span>';
+		} else if (value == 4800) {
+			return '<span class="cgreen">ARMED</span>';
+		} else {
+			if (value >= 5620 ) {
+				var base = 5620;
+				var perc = Math.round((value - base) / (16383 - base) * 93) + 7;
+				return '<span class="corange">'+ perc +'%</span>';  //extended/deployed
+			} else {
+				return '<span class="corange">EXTDD</span>';  //extended/deployed
+			}
+		}
+	}
+
 	static cowlFlapPosition(value) {
 		if (value == 0) {
 			return '<span class="cdarkgray">CLOSED</span>';

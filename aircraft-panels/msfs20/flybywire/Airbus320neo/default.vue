@@ -1,14 +1,23 @@
+<!--
+
+Complete API:
+	https://docs.flybywiresim.com/pilots-corner/a32nx-briefing/a32nx_api/
+
+-->
+
 <template>
-	<table align="center">
+	<table align="center" class="std-spacing">
 	<tr>
 		<!-- OVERHEAD -->
 		<td style="padding: 0 10px 0 10px">
 
+			<!--
+			DOESN'T CURRENTLY WORK
 			<Toggleable label="10" method="lVar" refName="A320_Neo_MFD_Range" lvarValue="0" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="20" method="lVar" refName="A320_Neo_MFD_Range" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="FUEL" method="hVar" refName="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_FUEL" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="ENG" method="hVar" refName="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_ENG" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
+			-->
 
 			<div class="section">Elec</div>
 			<Toggleable label="BAT" method="offset" refName="batteryMaster" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
@@ -72,15 +81,12 @@
 			<div class="section">Anti-Ice</div>
 
 			<Toggleable label="WING" method="offset" refName="antiIceWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<!-- I think a bug causes anti-ice for eng 1 and 2 to be switched around -->
-			<Toggleable label="ENG 1" method="offset" refName="antiIceEng2" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="ENG 2" method="offset" refName="antiIceEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<br>
-			<Toggleable label="PROBE HEAT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="ENG 1" method="offset" refName="antiIceEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="ENG 2" method="offset" refName="antiIceEng2" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div style="height: 137px"></div>
 
-			<Toggleable label="SEAT BELT" method="offset" refName="seatbelt" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="SEAT BELT" method="offset" refName="seatBelts" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 	</tr>
@@ -106,7 +112,15 @@
 	<div style="height: 30px"></div>
 
 	<!-- PEDESTAL and other -->
-	<table align="center" style="width: 100%">
+	<table align="center" class="std-spacing" style="width: 100%">
+	<tr>
+		<td></td>
+		<td>
+			<Toggleable label="Spoilers" method="offset" refName="spoilersArm" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
 	<tr>
 		<td style="width: 35%; text-align: left">
 
@@ -173,6 +187,9 @@ export default {
 			 */
 			offset: {
 				batteryMaster: 'brightOffValue',
+				antiIceWing: 'brightOnValue',
+				antiIceEng1: 'brightOnValue',
+				antiIceEng2: 'brightOnValue',
 				avionicsMaster: 'brightOffValue',
 				alternator1Master: 'brightOffValue',
 				fuelPumpEng1: 'brightOnValue',
@@ -192,6 +209,8 @@ export default {
 				lightsCabin: 'brightOnValue',
 				cowlFlapEngine1: 'cowlFlapPosition',
 				parkingBrake: 'brightOnValue',
+				seatBelts: 'brightOnValue',
+				spoilersArm: 'spoilerPosition',
 			},
 		});
 	},
