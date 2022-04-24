@@ -30,14 +30,15 @@ Complete API:
 
 			<div style="height: 250px"></div>
 
-			<Toggleable label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="WING" method="offset" refName="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="NAV & LOGO" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<div style="height: 15px"></div>
 
-			<Toggleable label="LANDING LTS" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Toggleable label="----" method="" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" style="opacity: 0" /><!-- just for proper spacing -->
+			<Toggleable label="LANDING LTS" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" style="width: 178px" />
 			<Toggleable label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
