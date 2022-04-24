@@ -22,12 +22,14 @@ You're welcome to take a look at my online services at [aviation.allanville.com]
 
 The idea is to have a touch screen with a browser window where you can easily click buttons, turn knobs etc in your aircraft
 when you don't want to use the mouse and don't have a hardware panel.
-You can also monitor other values from your aircraft.
+You can also monitor other values from your aircraft. So this can even be better than a hardware panel that only has buttons but doesn't give you any feedback on the state of the function. For that very reason I'm not even using all the hardware buttons I have.
 This uses [FSUIPC](http://fsuipc.com/) and is limited to its capabilities.
 
 Nothing speaks better than a visualization - this is a simple example screen:
 
 ![Example screen of an aircraft panel](https://aviation.allanville.com/media/flightsim-aircraft-panel-example.jpg "Example screen")
+
+You might wonder why there are no auto-pilot or radio functions added yet but that's because I have a separate hardware panel for that (VRInsight MCP Combo I) so I haven't really had a need to add them yet.
 
 
 ## Documentation
