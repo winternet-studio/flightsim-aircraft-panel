@@ -30,6 +30,13 @@ export default class DefaultAircraftPanels {
 					{file: 'default', name: 'Default'},
 				],
 			},
+			{
+				path: 'msfs20/default/Airbus_H135',
+				name: 'Airbus H135',
+				panels: [
+					{file: 'default', name: 'Default'},
+				],
+			},
 		];
 	}
 
