@@ -1,6 +1,6 @@
 <template>
 
-	<div style="height: 35px"></div>
+	<div style="height: 465px"></div>
 
 	<table align="center" class="std-spacing">
 	<tr>
