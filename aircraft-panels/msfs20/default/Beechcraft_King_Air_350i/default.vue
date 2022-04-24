@@ -16,7 +16,7 @@
 	<table align="center" class="std-spacing">
 	<tr>
 		<td>
-			<Toggleable label="YD" method="offset" refName="yawDamper" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Toggleable label="YD" method="offset" refName="yawDamper" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		</td>
 	</tr>
 	</table>
@@ -43,7 +43,7 @@
 			<Toggleable label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Toggleable label="RECOG" method="offset" refName="lightsRecognition" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		</td>
-		<td>
+		<td style="padding-left: 50px; padding-right: 50px">
 			<SectionDivider />
 		</td>
 		<td>
