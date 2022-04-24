@@ -47,6 +47,17 @@ export default class FsuipcConnection {
 			};
 			myself.sendMessage(request);
 
+			var fullOffsetMap = Fsuipc.map();
+
+			// Declare offsets for general sim info (that won't usually change throughout a session)
+			myself.sendMessage({
+				command: 'offsets.declare',
+				name: 'simInfoOffsets',
+				offsets: [
+					{name: 'aircraftName', address: fullOffsetMap.aircraftName.address, type: fullOffsetMap.aircraftName.type, size: fullOffsetMap.aircraftName.size},
+				],
+			});
+
 			// Declare offsets for sending flight sim controls
 			myself.sendMessage({
 				command: 'offsets.declare',
@@ -67,6 +78,12 @@ export default class FsuipcConnection {
 					command: 'offsets.declare',
 					name: 'aircraftOffsets',
 					offsets: this.offsetsDeclaration
+				});
+
+				// Get general sim values
+				myself.sendMessage({
+					command: 'offsets.read',
+					name: 'simInfoOffsets',
 				});
 
 				// Get initial values (can't do this while monitoring on an interval)
@@ -232,6 +249,10 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 				} else if (response.name == 'simControlOffsets') {
 					if (!response.success) {
 						alert('Failed to declare offsets for sim controls.');
+					}
+				} else if (response.name == 'simInfoOffsets') {
+					if (!response.success) {
+						alert('Failed to declare offsets for general sim info.');
 					}
 				} else if (response.command == 'vars.write' && response.success == true) {
 					// success writing var
