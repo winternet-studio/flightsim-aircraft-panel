@@ -75,6 +75,7 @@ export default class Fsuipc {
 			parkingBrake: {address: 0x0BC8, type: 'uint', size: 2, toggleValues: [0, 32767]},
 			pitotHeat: {address: 0x029C, type: 'uint', size: 1, toggleValues: [1, 0]},
 			transponderState: {address: 0x0B46, type: 'uint', size: 1, validValues: [0, 1, 2, 3, 4, 5]},
+			yawDamper: {address: 0x0808, type: 'uint', size: 4, toggleValues: [1, 0]},
 			//SAMPLE: transponderState: {address: 0x0B46, type: 'uint', size: 1, min: 0, max: 5, step: 1},
 		}
 	}
@@ -187,6 +188,10 @@ export default class Fsuipc {
 
 	static msfs20ControlNameToNumber(name) {
 		Fsuipc.loadMsfs20Controls();
+
+		if (typeof Fsuipc.simControls[name] === 'undefined') {
+			console.error('Sim control '+ name +' not found');
+		}
 
 		return Fsuipc.simControls[name];
 	}
