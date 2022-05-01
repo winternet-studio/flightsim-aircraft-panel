@@ -313,7 +313,6 @@
 		</td>
 		<td>
 
-			<Toggleable label="PANEL" method="offset" refName="lightsInstruments" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Toggleable label="FUEL PUMP" method="offset" refName="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Toggleable label="PROBE HEAT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 
