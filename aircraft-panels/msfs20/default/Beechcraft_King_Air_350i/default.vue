@@ -133,11 +133,6 @@ export default {
 		}
 
 		props.eventHandlers.aircraftInited({
-			/**
-			 * Add all the values that are being displayed for this aircraft
-			 *
-			 * Key is the name from map() in Fsuipc.js, value is a function that will format and return HTML for displaying this value on the screen. The value can also be a string in which case it refers to a method in FsuipcHtml.
-			 */
 			offset: {
 				flapsPositionLeft: flapsHtml,
 				lightsStrobe: 'brightOnValue',

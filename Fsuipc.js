@@ -86,7 +86,7 @@ export default class Fsuipc {
 	}
 
 	/**
-	 * Options for Lvars
+	 * Options for common LVars
 	 *
 	 * `toggleValues`, `validValues`, `min`, `max`, `step` must be based on the internal converted values, not the raw values coming from FSUIPC
 	 *
@@ -96,8 +96,6 @@ export default class Fsuipc {
 		return {
 			PFD_CDI_Source: {toggleValues: [3, 1]},
 			AS1000_MFD_Brightness: {min: 0, max: 30},
-			//SAMPLE: someLVarName: {min: 0, max: 100, step: 5},
-			//SAMPLE: someLVarName: {validValues: [0, 1, 2, 3, 4]},
 		}
 	}
 
