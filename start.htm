@@ -30,6 +30,21 @@ h3:first-child {
 	top: 50%;
 	transform: translateY(-50%);
 }
+#aircraft-list {
+	display: grid;
+	grid-gap: 10px 30px;
+	grid-template-columns: auto auto;
+	align-items: center;
+}
+.aircraft {
+	text-align: right;
+}
+.panels {
+	text-align: left;
+}
+.the-panel {
+	margin-right: 20px;
+}
 </style>
 
 <script type="module">
@@ -50,10 +65,15 @@ if (Config && Config.userAircraft !== 'undefined') {
 
 var $aircraftList = $('#aircraft-list');
 Object.keys(aircraft).forEach(function(key) {
-	$aircraftList.append('<h3>'+ aircraft[key].name +'</h3>');
+	var $aircraft = $('<div class="aircraft">');
+	$aircraft.append('<h3>'+ aircraft[key].name +'</h3>');
+
+	var $panels = $('<div class="panels">');
 	Object.values(aircraft[key].panels).forEach(function(panel) {
-		$aircraftList.append('<a href="index.htm?config='+ aircraft[key].path +'/'+ panel.file +'" class="btn btn-secondary">'+ panel.name +'</a>');
+		$panels.append('<a href="index.htm?config='+ aircraft[key].path +'/'+ panel.file +'" class="btn btn-secondary the-panel">'+ panel.name +'</a>');
 	});
+
+	$aircraftList.append($aircraft, $panels);
 });
 </script>
 
