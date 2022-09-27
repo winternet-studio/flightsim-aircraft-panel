@@ -1,10 +1,6 @@
 // Credits to https://hubhop.mobiflight.com/ for providing this.
-// Generated from dataset of 2022-04-24 11:08Z
+// Generated from dataset of 2022-09-25 15:51Z
 export default {
-	"Microsoft.Generic.Avionics.Input.AS1000_PFD_VOL_1_INC": {
-		"method": "calcCode",
-		"code": "(>H:AS1000_PFD_VOL_1_INC)"
-	},
 	"Microsoft.Generic.Avionics.AS1000_PFD_VOL_1_DEC": {
 		"method": "calcCode",
 		"code": "(>H:AS1000_PFD_VOL_1_DEC)"
@@ -85,7 +81,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:AS1000_PFD_CRS_DEC)"
 	},
-	"Microsoft.Generic.Avionics.AS1000_PFD_CRS_PUSH": {
+	"Microsoft.Generic.Avionics.Input.AS1000_PFD_CRS_PUSH": {
 		"method": "calcCode",
 		"code": "(>H:AS1000_PFD_CRS_PUSH)"
 	},
@@ -305,7 +301,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:AS1000_MFD_COM_Small_DEC)"
 	},
-	"Microsoft.Generic.Avionics.AS1000_MFD_COM_Push": {
+	"Microsoft.Generic.Avionics.Input.AS1000_MFD_COM_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS1000_MFD_COM_Push)"
 	},
@@ -481,7 +477,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:HEADING INDICATOR, degrees) (>K:HEADING_BUG_SET)"
 	},
-	"Microsoft.Generic.Avionics.AS1000_MFD_FLC_Push": {
+	"Microsoft.Generic.Avionics.Input.AS1000_MFD_FLC_Push": {
 		"method": "calcCode",
 		"code": "(>K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)"
 	},
@@ -913,191 +909,191 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:oclock_control)"
 	},
-	"Microsoft.Generic.Avionics.AS530_ENT_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_ENT_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_ENT_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_MENU_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_MENU_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_MENU_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_FPL_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_FPL_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_FPL_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_DirectTo_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_DirectTo_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_DirectTo_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_CLR_Push_Long": {
+	"Microsoft.Generic.Avionics.Input.AS530_CLR_Push_Long": {
 		"method": "calcCode",
 		"code": "(>H:AS530_CLR_Push_Long)"
 	},
-	"Microsoft.Generic.Avionics.AS530_CLR_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_CLR_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_CLR_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_MSG_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_MSG_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_MSG_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_OBS_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_OBS_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_OBS_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_VNAV_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_VNAV_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_VNAV_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_PROC_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_PROC_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_PROC_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_COMSWAP_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_COMSWAP_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_COMSWAP_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_NAVSWAP_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_NAVSWAP_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_NAVSWAP_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_RNG_Dezoom": {
+	"Microsoft.Generic.Avionics.Input.AS530_RNG_Dezoom": {
 		"method": "calcCode",
 		"code": "(>H:AS530_RNG_Dezoom)"
 	},
-	"Microsoft.Generic.Avionics.AS530_RNG_Zoom": {
+	"Microsoft.Generic.Avionics.Input.AS530_RNG_Zoom": {
 		"method": "calcCode",
 		"code": "(>H:AS530_RNG_Zoom)"
 	},
-	"Microsoft.Generic.Avionics.AS530_RightLargeKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS530_RightLargeKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS530_RightLargeKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS530_RightLargeKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS530_RightLargeKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS530_RightLargeKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS530_LeftLargeKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS530_LeftLargeKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS530_LeftLargeKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS530_LeftLargeKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS530_LeftLargeKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS530_LeftLargeKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS530_RightSmallKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS530_RightSmallKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS530_RightSmallKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS530_RightSmallKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS530_RightSmallKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS530_RightSmallKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS530_RightSmallKnob_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_RightSmallKnob_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_RightSmallKnob_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS530_LeftSmallKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS530_LeftSmallKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS530_LeftSmallKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS530_LeftSmallKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS530_LeftSmallKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS530_LeftSmallKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS530_LeftSmallKnob_Push": {
+	"Microsoft.Generic.Avionics.Input.AS530_LeftSmallKnob_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS530_LeftSmallKnob_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_ENT_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_ENT_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_ENT_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_MENU_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_MENU_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_MENU_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_FPL_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_FPL_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_FPL_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_DirectTo_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_DirectTo_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_DirectTo_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_CLR_Push_Long": {
+	"Microsoft.Generic.Avionics.Input.AS430_CLR_Push_Long": {
 		"method": "calcCode",
 		"code": "(>H:AS430_CLR_Push_Long)"
 	},
-	"Microsoft.Generic.Avionics.AS430_CLR_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_CLR_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_CLR_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_MSG_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_MSG_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_MSG_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_OBS_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_OBS_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_OBS_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_PROC_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_PROC_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_PROC_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_COMSWAP_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_COMSWAP_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_COMSWAP_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_NAVSWAP_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_NAVSWAP_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_NAVSWAP_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_RNG_Dezoom": {
+	"Microsoft.Generic.Avionics.Input.AS430_RNG_Dezoom": {
 		"method": "calcCode",
 		"code": "(>H:AS430_RNG_Dezoom)"
 	},
-	"Microsoft.Generic.Avionics.AS430_RNG_Zoom": {
+	"Microsoft.Generic.Avionics.Input.AS430_RNG_Zoom": {
 		"method": "calcCode",
 		"code": "(>H:AS430_RNG_Zoom)"
 	},
-	"Microsoft.Generic.Avionics.AS430_RightLargeKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS430_RightLargeKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS430_RightLargeKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS430_RightLargeKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS430_RightLargeKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS430_RightLargeKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS430_LeftLargeKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS430_LeftLargeKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS430_LeftLargeKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS430_LeftLargeKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS430_LeftLargeKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS430_LeftLargeKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS430_RightSmallKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS430_RightSmallKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS430_RightSmallKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS430_RightSmallKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS430_RightSmallKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS430_RightSmallKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS430_RightSmallKnob_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_RightSmallKnob_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_RightSmallKnob_Push)"
 	},
-	"Microsoft.Generic.Avionics.AS430_LeftSmallKnob_Right": {
+	"Microsoft.Generic.Avionics.Input.AS430_LeftSmallKnob_Right": {
 		"method": "calcCode",
 		"code": "(>H:AS430_LeftSmallKnob_Right)"
 	},
-	"Microsoft.Generic.Avionics.AS430_LeftSmallKnob_Left": {
+	"Microsoft.Generic.Avionics.Input.AS430_LeftSmallKnob_Left": {
 		"method": "calcCode",
 		"code": "(>H:AS430_LeftSmallKnob_Left)"
 	},
-	"Microsoft.Generic.Avionics.AS430_LeftSmallKnob_Push": {
+	"Microsoft.Generic.Avionics.Input.AS430_LeftSmallKnob_Push": {
 		"method": "calcCode",
 		"code": "(>H:AS430_LeftSmallKnob_Push)"
 	},
@@ -1133,35 +1129,35 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:TransponderCLR)"
 	},
-	"Microsoft.Generic.Avionics.Transponder0": {
+	"Microsoft.Generic.Avionics.Input.Transponder0": {
 		"method": "calcCode",
 		"code": "(>H:Transponder0)"
 	},
-	"Microsoft.Generic.Avionics.Transponder1": {
+	"Microsoft.Generic.Avionics.Input.Transponder1": {
 		"method": "calcCode",
 		"code": "(>H:Transponder1)"
 	},
-	"Microsoft.Generic.Avionics.Transponder2": {
+	"Microsoft.Generic.Avionics.Input.Transponder2": {
 		"method": "calcCode",
 		"code": "(>H:Transponder2)"
 	},
-	"Microsoft.Generic.Avionics.Transponder3": {
+	"Microsoft.Generic.Avionics.Input.Transponder3": {
 		"method": "calcCode",
 		"code": "(>H:Transponder3)"
 	},
-	"Microsoft.Generic.Avionics.Transponder4": {
+	"Microsoft.Generic.Avionics.Input.Transponder4": {
 		"method": "calcCode",
 		"code": "(>H:Transponder4)"
 	},
-	"Microsoft.Generic.Avionics.Transponder5": {
+	"Microsoft.Generic.Avionics.Input.Transponder5": {
 		"method": "calcCode",
 		"code": "(>H:Transponder5)"
 	},
-	"Microsoft.Generic.Avionics.Transponder6": {
+	"Microsoft.Generic.Avionics.Input.Transponder6": {
 		"method": "calcCode",
 		"code": "(>H:Transponder6)"
 	},
-	"Microsoft.Generic.Avionics.Transponder7": {
+	"Microsoft.Generic.Avionics.Input.Transponder7": {
 		"method": "calcCode",
 		"code": "(>H:Transponder7)"
 	},
@@ -1257,7 +1253,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT HEADING LOCK,Bool)"
 	},
-	"Microsoft.Generic.Autopilot.AUTOPILOT HEADING LOCK DIR": {
+	"Microsoft.Generic.Autopilot.Output.AUTOPILOT HEADING LOCK DIR": {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT HEADING LOCK DIR,Degrees)"
 	},
@@ -2649,21 +2645,21 @@ export default {
 		"method": "calcCode",
 		"code": "(L:ASCRJ_APU_STARTSTOP) ! s0 (>L:ASCRJ_APU_STARTSTOP)\nl0 (>L:ASCRJ_APU_STARTSTOP_ANIM)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Gear.ASCRJ_GEAR_GEAR_LEVER_SWITCH_ON": {
+	"Aerosoft.CRJ 550-700-1000.Gear.Input.ASCRJ_GEAR_GEAR_LEVER_SWITCH_ON": {
 		"method": "calcCode",
-		"code": "1 (L:ASCRJ_GEAR_GEAR_LEVER, Bool) ! (>L:ASCRJ_GEAR_GEAR_LEVER)"
+		"code": "1 (>L:ASCRJ_GEAR_GEAR_LEVER)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Gear.ASCRJ_GEAR_GEAR_LEVER_SWITCH_OFF": {
+	"Aerosoft.CRJ 550-700-1000.Gear.Input.ASCRJ_GEAR_GEAR_LEVER_SWITCH_OFF": {
 		"method": "calcCode",
-		"code": "0 (L:ASCRJ_GEAR_GEAR_LEVER, Bool) ! (>L:ASCRJ_GEAR_GEAR_LEVER)"
+		"code": "0 (>L:ASCRJ_GEAR_GEAR_LEVER)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Gear.ASCRJ_PARK_BRAKE_SWITCH_ON": {
+	"Aerosoft.CRJ 550-700-1000.Gear.Input.ASCRJ_PARK_BRAKE_SWITCH_ON": {
 		"method": "calcCode",
-		"code": "1 (L:ASCRJ_PARK_BRAKE, Bool) ! (>L:ASCRJ_PARK_BRAKE)"
+		"code": "1 (>L:ASCRJ_PARK_BRAKE)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Gear.ASCRJ_PARK_BRAKE_SWITCH_OFF": {
+	"Aerosoft.CRJ 550-700-1000.Gear.Input.ASCRJ_PARK_BRAKE_SWITCH_OFF": {
 		"method": "calcCode",
-		"code": "0 (L:ASCRJ_PARK_BRAKE, Bool) ! (>L:ASCRJ_PARK_BRAKE)"
+		"code": "0 (>L:ASCRJ_PARK_BRAKE)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Navigation.ASCRJ_LSP_BARO_CHANGE_INC": {
 		"method": "calcCode",
@@ -2893,7 +2889,7 @@ export default {
 		"method": "calcCode",
 		"code": " (L:ASCRJ_RTU1_KNOB_OUTER, Number) 10 + dnor (>L:ASCRJ_RTU1_KNOB_OUTER) (ASCRJ_RTU1_KNOB_OUTER_CHANGE, Number) ++ (>L:ASCRJ_RTU1_KNOB_OUTER_CHANGE)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Radio.ASCRJ_RTU1_KNOB_OUTER_DEC": {
+	"Aerosoft.CRJ 550-700-1000.Radio.Input.ASCRJ_RTU1_KNOB_OUTER_DEC": {
 		"method": "calcCode",
 		"code": " (L:ASCRJ_RTU1_KNOB_OUTER, Number) 10 - dnor (>L:ASCRJ_RTU1_KNOB_OUTER) (ASCRJ_RTU1_KNOB_OUTER_CHANGE, Number) -- (>L:ASCRJ_RTU1_KNOB_OUTER_CHANGE)"
 	},
@@ -3437,7 +3433,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_AUTOTHRUST_STATUS)"
 	},
-	"Fly By Wire.A320.Autopilot.Autopilot 1 Push": {
+	"Fly By Wire.A320.Autopilot.Input. A32NX_FCU_AP_1_PUSH": {
 		"method": "calcCode",
 		"code": "(>K:A32NX.FCU_AP_1_PUSH)"
 	},
@@ -3593,9 +3589,9 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:A320_Neo_FCU_ALT_PUSH)\n(>H:A320_Neo_CDU_MODE_MANAGED_ALTITUDE)"
 	},
-	"Fly By Wire.A320.Autopilot.A320_Neo_FCU_ALT_PUSH_PULL_TOG": {
+	"Fly By Wire.A320.Autopilot.Input.A320_Neo_FCU_ALT_PUSH_PULL_TOG": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT ALTITUDE SLOT INDEX, Number) 1 == if{ (>K:A32NX.FCU_ALT_PUSH) } els{ (>K:A32NX.FCU_ALT_PULL) }"
+		"code": "(A:AUTOPILOT ALTITUDE SLOT INDEX, Number) 1 == if{ \n   (>H:A320_Neo_FCU_ALT_PUSH) (>H:A320_Neo_CDU_MODE_MANAGED_ALTITUDE) } \n   els{ (>H:A320_Neo_FCU_ALT_PULL) (>H:A320_Neo_CDU_MODE_SELECTED_ALTITUDE) }"
 	},
 	"Fly By Wire.A320.Autopilot.A32NX_FCU_ALT_INC": {
 		"method": "calcCode",
@@ -5077,11 +5073,11 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:A32NX_EMERELECPWR_MANONLOCK_TOGGLE)"
 	},
-	"Fly By Wire.A320.Warning System.A32NX_GPWS_TERR_OFF_OFF": {
+	"Fly By Wire.A320.Warning System.Input.A32NX_GPWS_TERR_OFF_OFF": {
 		"method": "calcCode",
 		"code": "0 (>L:A32NX_GPWS_TERR_OFF)"
 	},
-	"Fly By Wire.A320.Warning System.A32NX_GPWS_TERR_OFF_ON": {
+	"Fly By Wire.A320.Warning System.Input.A32NX_GPWS_TERR_OFF_ON": {
 		"method": "calcCode",
 		"code": "1 (>L:A32NX_GPWS_TERR_OFF)"
 	},
@@ -5223,19 +5219,19 @@ export default {
 	},
 	"Fly By Wire.A320.Lights.Input.DOME_LIGHT_TOGGLE": {
 		"method": "calcCode",
-		"code": "DOME_LIGHT_TOGGLE#(A:LIGHT POTENTIOMETER:7, Percent) 0 == if{ 1 (>K:CABIN_LIGHTS_SET) 50 (>K:LIGHT_POTENTIOMETER_7_SET) } els{ (A:LIGHT POTENTIOMETER:7, Percent) 100 == if{ 0 (>K:CABIN_LIGHTS_SET) 0 (>K:LIGHT_POTENTIOMETER_7_SET) } els{ 1 (>K:CABIN_LIGHTS_SET) 100 (>K:LIGHT_POTENTIOMETER_7_SET) } }"
+		"code": "(A:LIGHT POTENTIOMETER:7, Percent) 0 == if{ 1 (>K:CABIN_LIGHTS_SET) 50 (>K:LIGHT_POTENTIOMETER_7_SET) } els{ (A:LIGHT POTENTIOMETER:7, Percent) 100 == if{ 0 (>K:CABIN_LIGHTS_SET) 0 (>K:LIGHT_POTENTIOMETER_7_SET) } els{ 1 (>K:CABIN_LIGHTS_SET) 100 (>K:LIGHT_POTENTIOMETER_7_SET) } }"
 	},
-	"Fly By Wire.A320.Lights.EMER_EXIT_ON": {
+	"Fly By Wire.A320.Lights.Input.EMER_EXIT_ON": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Positon) 2 == is{ 1 if{(>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } } els} (L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 == if{ 1 if{ 0 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 0 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } }"
+		"code": "2 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position)"
 	},
-	"Fly By Wire.A320.Lights.EMER_EXIT_OFF": {
+	"Fly By Wire.A320.Lights.Input.EMER_EXIT_OFF": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Positon) 0 == is{ 1 if{(>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } } els} (L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 == if{ 1 if{ 2 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 2 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } } }"
+		"code": "0 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position)"
 	},
-	"Fly By Wire.A320.Lights.EMER_EXIT_ARM": {
+	"Fly By Wire.A320.Lights.Input.EMER_EXIT_ARM": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Positon) 1 == is{ 1 if{(>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } } els} (L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 == if{ 1 if{ 1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } }"
+		"code": "1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position)"
 	},
 	"Fly By Wire.A320.Lights.A32NX_OH_LANDING_LIGHTS_ON": {
 		"method": "calcCode",
@@ -5369,11 +5365,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:dc6_445_obj, enum) 1 == if{ 44508 (>K:ROTOR_BRAKE) } "
 	},
-	"PMDG.DC-6.Gear.PMDGDC6_GEAR_UP": {
+	"PMDG.DC-6.Gear.Input.PMDGDC6_GEAR_UP": {
 		"method": "calcCode",
 		"code": "40508 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.DC-6.Gear.PMDGDC6_GEAR_DOWN": {
+	"PMDG.DC-6.Gear.Input.PMDGDC6_GEAR_DOWN": {
 		"method": "calcCode",
 		"code": "40507 (>K:ROTOR_BRAKE)"
 	},
@@ -5701,25 +5697,25 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:WT_CJ4_AP_BC_PRESSED)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_CRS1_DEC": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_CRS1_DEC": {
 		"method": "calcCode",
-		"code": "(L:WT_CJ4_LNAV_MODE, Number) 2 == if{ (A:NAV OBS:2, degree) 1 - dnor (>K:VOR2_SET) } els{ (A:NAV OBS:1, degree) 1 - dnor (>K:VOR1_SET) }"
+		"code": "(L:WT_CJ4_LNAV_MODE, Number) 2 == if{ \n(A:NAV OBS:2, degree) 1 - dnor (>K:VOR2_SET) } \n   els{ (A:NAV OBS:1, degree) 1 - dnor (>K:VOR1_SET) }"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_CRS1_INC": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_CRS1_INC": {
 		"method": "calcCode",
-		"code": "(L:WT_CJ4_LNAV_MODE, Number) 2 == if{ (A:NAV OBS:2, degree) 1 + dnor (>K:VOR2_SET) } els{ (A:NAV OBS:1, degree) 1 + dnor (>K:VOR1_SET) }"
+		"code": "(L:WT_CJ4_LNAV_MODE, Number) 2 == if{ \n(A:NAV OBS:2, degree) 1 + dnor (>K:VOR2_SET) } \n   els{ (A:NAV OBS:1, degree) 1 + dnor (>K:VOR1_SET) }"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_CRS1_PRESSED": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_CRS1_PRESSED": {
 		"method": "calcCode",
-		"code": "(L:WT_CJ4_LNAV_MODE, Number) 2 == if{ (A:HEADING INDICATOR, degrees) (>K:VOR2_SET) } els{ (A:HEADING INDICATOR, degrees) (>K:VOR1_SET) }"
+		"code": "(A:HEADING INDICATOR, degrees) sp0 \n(L:WT_CJ4_LNAV_MODE, Number) 2 == if{ l0 (>K:VOR2_SET) } \n   els{ l0 (>K:VOR1_SET) }"
 	},
 	"Working Title.CJ4.Autopilot.WT_CJ4_AP_FD_PRESSED": {
 		"method": "calcCode",
 		"code": "(>H:WT_CJ4_AP_FD_TOGGLE)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_FLC_PRESSED": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_FLC_PRESSED": {
 		"method": "calcCode",
-		"code": "(>H:WT_CJ4_AP_FLC_PRESSED)"
+		"code": "(>H:WT_CJ4_AP_FLC_PRESSED) \n(A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)"
 	},
 	"Working Title.CJ4.Autopilot.WT_CJ4_AP_HALFBANK_PRESSED": {
 		"method": "calcCode",
@@ -5749,21 +5745,21 @@ export default {
 		"method": "calcCode",
 		"code": "(A:HEADING INDICATOR, degrees) (>K:HEADING_BUG_SET)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_MASTER_OFF": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_DISENGAGE_BAR_TOGGLE": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT DISENGAGED, Bool) if{ 0 (>K:AUTOPILOT_DISENGAGE_SET) } els{ 1 (>K:AUTOPILOT_DISENGAGE_SET) }"
+		"code": "(A:AUTOPILOT DISENGAGED, Bool) if{ 0 } els{ 1 } (>K:AUTOPILOT_DISENGAGE_SET) "
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_MASTER_ON": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_BUTTON_PRESSED": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT DISENGAGED, Bool) ! if{ (>K:AP_MASTER) (A:AUTOPILOT MASTER, Bool) ! if{ (>H:Generic_Autopilot_Manual_Off) } }"
+		"code": "(A:AUTOPILOT DISENGAGED, Bool) ! if{ (>K:AP_MASTER) \n(A:AUTOPILOT MASTER, Bool) ! if{ (>H:Generic_Autopilot_Manual_Off) \n(A:AUTOPILOT YAW DAMPER, bool) \nif{ (>K:YAW_DAMPER_TOGGLE) } }\nels{ (A:AUTOPILOT YAW DAMPER, bool) ! if{ (>K:YAW_DAMPER_TOGGLE) } } }"
 	},
 	"Working Title.CJ4.Autopilot.WT_CJ4_AP_NAV_PRESSED": {
 		"method": "calcCode",
 		"code": "(>H:WT_CJ4_AP_NAV_PRESSED)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_SPEED_DEC": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_SPEED_DEC": {
 		"method": "calcCode",
-		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_DEC) } els{ (>K:AP_SPD_VAR_DEC) }"
+		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_DEC) }\n	els{ (>K:AP_SPD_VAR_DEC) }"
 	},
 	"Working Title.CJ4.Autopilot.WT_CJ4_AP_SPEED_FAST_DEC": {
 		"method": "calcCode",
@@ -5773,9 +5769,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_AirSpeedIsInMach) if{ (>K:AP_MACH_VAR_INC) } els{ (A:AUTOPILOT AIRSPEED HOLD VAR, knot) 10 + 10 / ceil 10 * 0 max (>K:AP_SPD_VAR_SET) }"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_SPEED_INC": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_SPEED_INC": {
 		"method": "calcCode",
-		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_INC) } els{ (>K:AP_SPD_VAR_INC) }"
+		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_INC) } \n   els{ (>K:AP_SPD_VAR_INC) }"
 	},
 	"Working Title.CJ4.Autopilot.WT_CJ4_AP_SPEED_PRESSED": {
 		"method": "calcCode",
@@ -5785,13 +5781,13 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:WT_CJ4_AP_VNAV_PRESSED)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_VS_DEC": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_VS_DEC": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT VERTICAL HOLD, bool) if{ (>K:AP_VS_VAR_DEC) } els{ (>K:AP_PITCH_REF_INC_DN) }"
+		"code": "(A:AUTOPILOT VERTICAL HOLD, bool) if{ (>K:AP_VS_VAR_DEC) }\n	els{ (>K:AP_PITCH_REF_INC_DN) }"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_VS_INC": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_VS_INC": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT VERTICAL HOLD, bool) if{ (>K:AP_VS_VAR_INC) } els{ (>K:AP_PITCH_REF_INC_UP) }"
+		"code": "(A:AUTOPILOT VERTICAL HOLD, bool) if{ (>K:AP_VS_VAR_INC) } \n   els{ (>K:AP_PITCH_REF_INC_UP) }"
 	},
 	"Working Title.CJ4.Autopilot.WT_CJ4_AP_VS_PRESSED": {
 		"method": "calcCode",
@@ -6469,13 +6465,13 @@ export default {
 		"method": "calcCode",
 		"code": "(A:COM TRANSMIT:2, bool)"
 	},
-	"Working Title.CJ4.Anti-Ice.WT_CJ4_ANTIICE_WINGENG_LEFT_TOG": {
+	"Working Title.CJ4.Anti-Ice.Input.WT_CJ4_ANTIICE_WINGENG_LEFT_TOG": {
 		"method": "calcCode",
-		"code": "(L:DEICE_Airframe_1) ! (>L:DEICE_Airframe_1) (L:DEICE_Airframe_1) ! (L:DEICE_Airframe_2) ! and (A:STRUCTURAL DEICE SWITCH, Bool) == if{ (>K:TOGGLE_STRUCTURAL_DEICE) }"
+		"code": "(L:DEICE_Airframe_1) ! (>L:DEICE_Airframe_1) \n(L:DEICE_Airframe_1) ! (L:DEICE_Airframe_2) ! and (A:STRUCTURAL DEICE SWITCH, Bool) == if{ (>K:TOGGLE_STRUCTURAL_DEICE) }"
 	},
-	"Working Title.CJ4.Anti-Ice.WT_CJ4_ANTIICE_WINGENG_RIGHT_TOG": {
+	"Working Title.CJ4.Anti-Ice.Input.WT_CJ4_ANTIICE_WINGENG_RIGHT_TOG": {
 		"method": "calcCode",
-		"code": "(L:DEICE_Airframe_2) ! (>L:DEICE_Airframe_2) (L:DEICE_Airframe_1) ! (L:DEICE_Airframe_2) ! and (A:STRUCTURAL DEICE SWITCH, Bool) == if{ (>K:TOGGLE_STRUCTURAL_DEICE) }"
+		"code": "(L:DEICE_Airframe_2) ! (>L:DEICE_Airframe_2) \n(L:DEICE_Airframe_1) ! (L:DEICE_Airframe_2) ! and (A:STRUCTURAL DEICE SWITCH, Bool) == if{ (>K:TOGGLE_STRUCTURAL_DEICE) }"
 	},
 	"Working Title.CJ4.Anti-Ice.WT_CJ4_ANTIICE_WINGENG_LR_TOG": {
 		"method": "calcCode",
@@ -8445,7 +8441,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT WING LEVELER, Bool) if{ (>K:AP_WING_LEVELER) (A:AUTOPILOT MASTER, Bool) if{ (>K:AUTOPILOT_OFF) } (>K:AP_PITCH_LEVELER_OFF) }"
 	},
-	"Asobo.TBM 930.Autopilot.TBM930_AUTOPILOT_VNV_ON": {
+	"Asobo.TBM 930.Autopilot.Input.TBM930_AUTOPILOT_VNV_ON": {
 		"method": "calcCode",
 		"code": "1 (>L:XMLVAR_VNAVButtonValue)"
 	},
@@ -8469,15 +8465,15 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT HEADING LOCK, Bool)"
 	},
-	"Asobo.TBM 930.Autopilot.TBM930_AUTOPILOT_SPD_LED": {
+	"Asobo.TBM 930.Autopilot.Output.TBM930_AUTOPILOT_SPD_LED": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_AirSpeedIsInMach, Number)"
+		"code": "(L:XMLVAR_AirSpeedIsInMach, Bool)"
 	},
 	"Asobo.TBM 930.Autopilot.TBM930_AUTOPILOT_VS_LED": {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT VERTICAL HOLD, Bool)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_ALT_ALERT_CANCEL": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_ALT_ALERT_CANCEL": {
 		"method": "calcCode",
 		"code": " 0 (>L:WT_CJ4_Altitude_Alerter_Active) 1 (>L:WT_CJ4_Altitude_Alerter_Cancel)"
 	},
@@ -8721,7 +8717,7 @@ export default {
 		"method": "calcCode",
 		"code": "1\u00b70\u00b7(A:GEAR\u00b7LEFT\u00b7POSITION,\u00b7Percent)\u00b7100\u00b7==\u00b7?"
 	},
-	"Fly By Wire.A320.EFIS.Toggle Flight Director": {
+	"Fly By Wire.A320.EFIS.Input.Toggle Flight Director": {
 		"method": "calcCode",
 		"code": "(>K:TOGGLE_FLIGHT_DIRECTOR)"
 	},
@@ -8801,7 +8797,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:NAV SOUND:index,Bool)"
 	},
-	"Microsoft.Generic.Avionics.NAV STANDBY FREQUENCY:index": {
+	"Microsoft.Generic.Avionics.Output.NAV STANDBY FREQUENCY:index": {
 		"method": "calcCode",
 		"code": "(A:NAV STANDBY FREQUENCY:index,MHz)"
 	},
@@ -9209,7 +9205,7 @@ export default {
 		"method": "calcCode",
 		"code": "(E:TIME ZONE OFFSET,second)"
 	},
-	"Microsoft.Generic.Environment.TIME OF DAY": {
+	"Microsoft.Generic.Environment.Output.TIME OF DAY": {
 		"method": "calcCode",
 		"code": "(E:TIME OF DAY,enum)"
 	},
@@ -10189,7 +10185,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:DYNAMIC PRESSURE,Pounds)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL OLD CHARGING AMPS": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL OLD CHARGING AMPS": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL OLD CHARGING AMPS,Amps)"
 	},
@@ -10649,19 +10645,19 @@ export default {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL AVIONICS BUS VOLTAGE,Volts)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL BATTERY BUS AMPS": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL BATTERY BUS AMPS": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL BATTERY BUS AMPS,Amperes)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL BATTERY BUS VOLTAGE": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL BATTERY BUS VOLTAGE": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL BATTERY BUS VOLTAGE,Volts)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL BATTERY LOAD": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL BATTERY LOAD": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL BATTERY LOAD,Amperes)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL BATTERY VOLTAGE": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL BATTERY VOLTAGE": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL BATTERY VOLTAGE,Volts)"
 	},
@@ -10673,11 +10669,11 @@ export default {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL GENALT BUS VOLTAGE:index,Volts)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL HOT BATTERY BUS AMPS": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL HOT BATTERY BUS AMPS": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL HOT BATTERY BUS AMPS,Amperes)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL HOT BATTERY BUS VOLTAGE": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL HOT BATTERY BUS VOLTAGE": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL HOT BATTERY BUS VOLTAGE,Volts)"
 	},
@@ -10689,7 +10685,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL MAIN BUS VOLTAGE,Volts)"
 	},
-	"Microsoft.Generic.Miscellaneous.ELECTRICAL MASTER BATTERY": {
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL MASTER BATTERY": {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL MASTER BATTERY,Bool)"
 	},
@@ -14137,7 +14133,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:AXIS_PAN_HEADING)"
 	},
-	"Microsoft.Generic.Unsorted.BAROMETRIC": {
+	"Microsoft.Generic.Unsorted.Input.BAROMETRIC": {
 		"method": "calcCode",
 		"code": "(>K:BAROMETRIC)"
 	},
@@ -14173,13 +14169,13 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT HEADING LOCK DIR:1,Degrees)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_VS_LOCK_DIR": {
+	"Working Title.CJ4.Autopilot.Output.WT_CJ4_AP_VS_LOCK_DIR": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT VERTICAL LOCK DIR:1,Feet/minute)"
+		"code": "(A:AUTOPILOT VERTICAL HOLD VAR,Feet/minute)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_FLC_LOCK_DIR": {
+	"Working Title.CJ4.Autopilot.Output.WT_CJ4_AP_FLC_LOCK_DIR": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT AIRSPEED LOCK DIR:1, knots)"
+		"code": "(A:AUTOPILOT AIRSPEED HOLD VAR,Knots) near"
 	},
 	"Asobo.Cessna 172.Environment.TOGGLE_ALTERNATE_AIR": {
 		"method": "calcCode",
@@ -14221,15 +14217,15 @@ export default {
 		"method": "calcCode",
 		"code": "44007 (>K:ROTOR_BRAKE)"
 	},
-	"Fly By Wire.A320-Dev.Gear.AUTOBRAKE LOW HARD-TOGGLE": {
+	"Fly By Wire.A320-Dev.Gear.Input.AUTOBRAKE LOW HARD-TOGGLE": {
 		"method": "calcCode",
 		"code": "(L:A32NX_AUTOBRAKES_ARMED_MODE) 1 == if{ 0 } els{ 1 } (>L:A32NX_AUTOBRAKES_ARMED_MODE)"
 	},
-	"Fly By Wire.A320-Dev.Gear.AUTOBRAKE MED HARD-TOGGLE": {
+	"Fly By Wire.A320-Dev.Gear.Input.AUTOBRAKE MED HARD-TOGGLE": {
 		"method": "calcCode",
 		"code": "(L:A32NX_AUTOBRAKES_ARMED_MODE) 2 == if{ 0 } els{ 2 } (>L:A32NX_AUTOBRAKES_ARMED_MODE)"
 	},
-	"Fly By Wire.A320-Dev.Gear.AUTOBRAKE MAX HARD-TOGGLE": {
+	"Fly By Wire.A320-Dev.Gear.Input.AUTOBRAKE MAX HARD-TOGGLE": {
 		"method": "calcCode",
 		"code": "(L:A32NX_AUTOBRAKES_ARMED_MODE) 3 == if{ 0 } els{ 3 } (>L:A32NX_AUTOBRAKES_ARMED_MODE)"
 	},
@@ -14593,9 +14589,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO, Bool) ! (>L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO) (L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT1_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT1_Pressed)"
 	},
-	"Fly By Wire.A320-Dev.Electrical.OVHD ELEC BATTERY 2 TOGGLE": {
+	"Fly By Wire.A320-Dev.Electrical.Input.OVHD ELEC BATTERY 2 TOGGLE": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO, Bool) ! (>L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) } (L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed)"
+		"code": "(L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO, Bool) ! (>L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) \n(L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed)"
 	},
 	"Microsoft.Generic.Radio.ADF_100_INC": {
 		"method": "calcCode",
@@ -14769,53 +14765,53 @@ export default {
 		"method": "calcCode",
 		"code": "128401 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_BEFORE_START": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_BEFORE_START": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeBeforeStart, bool) ! (>L:AfeBeforeStart, bool) (L:AfeBeforeStart, bool) if{ 7 (>K:ROTOR_BRAKE) } els{ 8 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeBeforeStart, bool) ! (>L:AfeBeforeStart, bool) (L:AfeBeforeStart, bool) ! if{ 7 (>K:ROTOR_BRAKE) } els{ 8 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_AFTER_START": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_AFTER_START": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeAfterStart, bool) ! (>L:AfeAfterStart, bool) (L:AfeAfterStart, bool) if{ 9 (>K:ROTOR_BRAKE) } els{ 10 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeAfterStart, bool) ! (>L:AfeAfterStart, bool) (L:AfeAfterStart, bool) ! if{ 9 (>K:ROTOR_BRAKE) } els{ 10 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_BEFORE_TAKEOFF": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_BEFORE_TAKEOFF": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeBeforeTakeoff, bool) ! (>L:AfeBeforeTakeoff, bool) (L:AfeBeforeTakeoff, bool) if{ 11 (>K:ROTOR_BRAKE) } els{ 12 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeBeforeTakeoff, bool) ! (>L:AfeBeforeTakeoff, bool) (L:AfeBeforeTakeoff, bool) ! if{ 11 (>K:ROTOR_BRAKE) } els{ 12 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_DESCENT": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_DESCENT": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeDescent, bool) ! (>L:AfeDescent, bool) (L:AfeDescent, bool) if{ 19 (>K:ROTOR_BRAKE) } els{ 20 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeDescent, bool) ! (>L:AfeDescent, bool) (L:AfeDescent, bool) ! if{ 19 (>K:ROTOR_BRAKE) } els{ 20 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_CRUISE": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_CRUISE": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeCruise, bool) ! (>L:AfeCruise, bool) (L:AfeCruise, bool) if{ 17 (>K:ROTOR_BRAKE) } els{ 18 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeCruise, bool) ! (>L:AfeCruise, bool) (L:AfeCruise, bool) ! if{ 17 (>K:ROTOR_BRAKE) } els{ 18 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_IN_RANGE": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_IN_RANGE": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeInRange, bool) ! (>L:AfeInRange, bool) (L:AfeInRange, bool) if{ 21 (>K:ROTOR_BRAKE) } els{ 22 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeInRange, bool) ! (>L:AfeInRange, bool) (L:AfeInRange, bool) ! if{ 21 (>K:ROTOR_BRAKE) } els{ 22 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_BEFORE_LANDING": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_BEFORE_LANDING": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeBeforeLanding, bool) ! (>L:AfeBeforeLanding, bool) (L:AfeBeforeLanding, bool) if{ 23 (>K:ROTOR_BRAKE) } els{ 24 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeBeforeLanding, bool) ! (>L:AfeBeforeLanding, bool) (L:AfeBeforeLanding, bool) ! if{ 23 (>K:ROTOR_BRAKE) } els{ 24 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_AFTER_LANDING": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_AFTER_LANDING": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeParking, bool) (L:AfeAfterLanding, bool) ! (>L:AfeAfterLanding, bool) (L:AfeAfterLanding, bool) if{ 25 (>K:ROTOR_BRAKE) } els{ 26 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeParking, bool) (L:AfeAfterLanding, bool) ! (>L:AfeAfterLanding, bool) (L:AfeAfterLanding, bool) ! if{ 25 (>K:ROTOR_BRAKE) } els{ 26 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_PARKING": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_PARKING": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) (L:AfeParking, bool) ! (>L:AfeParking, bool) (L:AfeParking, bool) if{ 27 (>K:ROTOR_BRAKE) } els{ 28 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) (L:AfeParking, bool) ! (>L:AfeParking, bool) (L:AfeParking, bool) ! if{ 27 (>K:ROTOR_BRAKE) } els{ 28 (>K:ROTOR_BRAKE) }"
 	},
 	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_ABORT": {
 		"method": "calcCode",
 		"code": ">0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) 29 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_TAKEOFF_DRY": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_TAKEOFF_DRY": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeTakeoffDry, bool) ! (>L:AfeTakeoffDry, bool) (L:AfeTakeoffDry, bool) if{ 13 (>K:ROTOR_BRAKE) } els{ 14 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffWet, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeTakeoffDry, bool) ! (>L:AfeTakeoffDry, bool) (L:AfeTakeoffDry, bool) ! if{ 13 (>K:ROTOR_BRAKE) } els{ 14 (>K:ROTOR_BRAKE) }"
 	},
-	"PMDG.DC-6.Miscellaneous.PMDGDC6_TABLET_TAKEOFF_WET": {
+	"PMDG.DC-6.Miscellaneous.Input.PMDGDC6_TABLET_TAKEOFF_WET": {
 		"method": "calcCode",
-		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeTakeoffWet, bool) ! (>L:AfeTakeoffWet, bool) (L:AfeTakeoffWet, bool) if{ 15 (>K:ROTOR_BRAKE) } els{ 16 (>K:ROTOR_BRAKE) }"
+		"code": "0 (>L:AfeBeforeStart, number) 0 (>L:AfeAfterStart, bool) 0 (>L:AfeBeforeTakeoff, bool) 0 (>L:AfeTakeoffDry, bool) 0 (>L:AfeCruise, bool) 0 (>L:AfeDescent, bool) 0 (>L:AfeInRange, bool) 0 (>L:AfeBeforeLanding, bool) 0 (>L:AfeAfterLanding, bool) 0 (>L:AfeParking, bool) (L:AfeTakeoffWet, bool) ! (>L:AfeTakeoffWet, bool) (L:AfeTakeoffWet, bool) ! if{ 15 (>K:ROTOR_BRAKE) } els{ 16 (>K:ROTOR_BRAKE) }"
 	},
 	"PMDG.DC-6.Fuel.PMDGDC6_ALT_FUEL_BOOST_1_TOGGLE": {
 		"method": "calcCode",
@@ -15085,17 +15081,17 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_FIRE_BUTTON_APU) ! if{ \n(L:A32NX_FIRE_GUARD_APU) ! (>L:A32NX_FIRE_GUARD_APU) }"
 	},
-	"Fly By Wire.A320-Dev.Fire.FIRE_BUTTON_ENG1_ON": {
+	"Fly By Wire.A320-Dev.Fire.Input.FIRE_BUTTON_ENG1_ON": {
 		"method": "calcCode",
-		"code": "(L:A32NX_FIRE_GUARD_ENG1) if{ 1 (>L:A32NX_FIRE_BUTTON_ENG1) }"
+		"code": "(L:A32NX_FIRE_GUARD_ENG1) if{ (L:A32NX_FIRE_BUTTON_ENG1) ! (>L:A32NX_FIRE_BUTTON_ENG1) }"
 	},
-	"Fly By Wire.A320-Dev.Fire.FIRE_BUTTON_ENG2_ON": {
+	"Fly By Wire.A320-Dev.Fire.Input.FIRE_BUTTON_ENG2_ON": {
 		"method": "calcCode",
-		"code": "(L:A32NX_FIRE_GUARD_ENG2) if{ 1 (>L:A32NX_FIRE_BUTTON_ENG2) }"
+		"code": "(L:A32NX_FIRE_GUARD_ENG2) if{ (L:A32NX_FIRE_BUTTON_ENG2) ! (>L:A32NX_FIRE_BUTTON_ENG2) }"
 	},
-	"Fly By Wire.A320-Dev.Fire.FIRE_BUTTON_APU_ON": {
+	"Fly By Wire.A320-Dev.Fire.Input.FIRE_BUTTON_APU_ON": {
 		"method": "calcCode",
-		"code": "(L:A32NX_FIRE_GUARD_APU) if{ 1 (>L:A32NX_FIRE_BUTTON_APU) }"
+		"code": "(L:A32NX_FIRE_GUARD_APU) if{ (>L:A32NX_FIRE_BUTTON_APU) ! (>L:A32NX_FIRE_BUTTON_APU) }"
 	},
 	"Fly By Wire.A320-Dev.Fire.FIRE_ENG1_AGENT1_DISCHARGE": {
 		"method": "calcCode",
@@ -15217,29 +15213,29 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT HEADING LOCK DIR, degrees)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND COCKPIT KNOB INC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND COCKPIT KNOB INC": {
 		"method": "calcCode",
-		"code": "(L:A320_Neo_AIRCOND_LVL_1, Percent) 5 + 100 min (>L:A320_Neo_AIRCOND_LVL_1)"
+		"code": "(L:A32NX_OVHD_COND_CKPT_SELECTOR_KNOB,percent) 5 + 300 min  (>L:A32NX_OVHD_COND_CKPT_SELECTOR_KNOB)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND COCKPIT KNOB DEC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND COCKPIT KNOB DEC": {
 		"method": "calcCode",
-		"code": "(L:A320_Neo_AIRCOND_LVL_1, Percent) 5 - 0 max (>L:A320_Neo_AIRCOND_LVL_1)"
+		"code": "(L:A32NX_OVHD_COND_CKPT_SELECTOR_KNOB,percent) 5 - 0 max (>L:A32NX_OVHD_COND_CKPT_SELECTOR_KNOB)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND FWD CABIN KNOB INC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND FWD CABIN KNOB INC": {
 		"method": "calcCode",
-		"code": "(L:A320_Neo_AIRCOND_LVL_2, Percent) 5 + 100 min (>L:A320_Neo_AIRCOND_LVL_2)"
+		"code": "(L:A32NX_OVHD_COND_FWD_SELECTOR_KNOB,percent) 5 + 300 min  (>L:A32NX_OVHD_COND_FWD_SELECTOR_KNOB)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND FWD CABIN KNOB DEC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND FWD CABIN KNOB DEC": {
 		"method": "calcCode",
-		"code": "(L:A320_Neo_AIRCOND_LVL_2, Percent) 5 - 0 max (>L:A320_Neo_AIRCOND_LVL_2)"
+		"code": "(L:A32NX_OVHD_COND_FWD_SELECTOR_KNOB,percent) 5 - 0 max (>L:A32NX_OVHD_COND_FWD_SELECTOR_KNOB)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND AFT CABIN KNOB INC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND AFT CABIN KNOB INC": {
 		"method": "calcCode",
-		"code": "(L:A320_Neo_AIRCOND_LVL_3, Percent) 5 + 100 min (>L:A320_Neo_AIRCOND_LVL_3)"
+		"code": "(L:A32NX_OVHD_COND_AFT_SELECTOR_KNOB,percent) 5 + 300 min (>L:A32NX_OVHD_COND_AFT_SELECTOR_KNOB)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND AFT CABIN KNOB DEC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND AFT CABIN KNOB DEC": {
 		"method": "calcCode",
-		"code": "(L:A320_Neo_AIRCOND_LVL_3, Percent) 5 - 0 max (>L:A320_Neo_AIRCOND_LVL_3)"
+		"code": "(L:A32NX_OVHD_COND_AFT_SELECTOR_KNOB,percent) 5 - 0 max (>L:A32NX_OVHD_COND_AFT_SELECTOR_KNOB)"
 	},
 	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND PACK FLOW KNOB LO": {
 		"method": "calcCode",
@@ -15497,17 +15493,17 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:A32NX.FCU_VS_PULL)"
 	},
-	"Fly By Wire.A320-Dev.Autopilot.A32NX.FCU_LOC_PUSH": {
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX_FCU_LOC_PUSH": {
 		"method": "calcCode",
-		"code": "(>K:A32NX.FCU_LOC_PUSH)"
+		"code": "(>H:A320_Neo_FCU_LOC_PUSH)"
 	},
-	"Fly By Wire.A320-Dev.Autopilot.A32NX.FCU_APPR_PUSH": {
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX_FCU_APPR_PUSH": {
 		"method": "calcCode",
-		"code": "(>K:A32NX.FCU_APPR_PUSH)"
+		"code": "(>H:A320_Neo_FCU_APPR_PUSH)"
 	},
-	"Fly By Wire.A320-Dev.Autopilot.A32NX.FCU_EXPED_PUSH": {
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX_FCU_EXPED_PUSH": {
 		"method": "calcCode",
-		"code": "(>K:A32NX.FCU_EXPED_PUSH)"
+		"code": "(>H:A320_Neo_FCU_EXPED_PUSH)"
 	},
 	"Fly By Wire.A320-Dev.Autopilot.A32NX_AUTOPILOT_1_ACTIVE": {
 		"method": "calcCode",
@@ -15673,9 +15669,9 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:A320_Neo_CDU_1_BTN_DIR)"
 	},
-	"Just Flight.Piper Arrow III.Electrical.Center_Lower_Alternator_OFF": {
+	"Just Flight.Piper Arrow III.Electrical.Input.Center_Lower_Alternator_OFF": {
 		"method": "calcCode",
-		"code": "0 (>L:center_lower_alt)"
+		"code": "0 (>L:CENTRE_LOWER_alt)"
 	},
 	"Just Flight.Piper Arrow III.Electrical.Center_Lower_Alternator_ON": {
 		"method": "calcCode",
@@ -15813,15 +15809,15 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:MF_Master_Warning_Test) "
 	},
-	"Working Title.CJ4.Warning System.WT_CJ4_MASTER_CAUTION_ON": {
+	"Working Title.CJ4.Warning System.Output.WT_CJ4_MASTER_CAUTION_ON": {
 		"method": "calcCode",
-		"code": "(L:Generic_Master_Caution_Active) (L:MF_Master_Caution_Test) or"
+		"code": "(A:MASTER CAUTION ACTIVE, bool) (A:MASTER CAUTION ACKNOWLEDGED, bool) ! and (L:MF_Master_Caution_Test) or"
 	},
-	"Working Title.CJ4.Warning System.WT_CJ4_MASTER_WARNING_ON": {
+	"Working Title.CJ4.Warning System.Output.WT_CJ4_MASTER_WARNING_ON": {
 		"method": "calcCode",
-		"code": "(L:Generic_Master_Warning_Active) (L:MF_Master_Warning_Test) or"
+		"code": "(A:MASTER WARNING ACTIVE, bool) (A:MASTER WARNING ACKNOWLEDGED, bool) ! and  (L:MF_Master_Warning_Test) or"
 	},
-	"Asobo.TBM 930.Safety.TBM930_ELT_LED": {
+	"Asobo.TBM 930.Safety.Output.TBM930_ELT_LED - DUPLICATE (OLD)": {
 		"method": "calcCode",
 		"code": "(A:ELT ACTIVATED, Bool) (E:SIMULATION TIME, second) 3 * 2 % and (L:XMLVAR_ELT_STATE) 3 =="
 	},
@@ -16085,9 +16081,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_FCU_APPR_MODE_ACTIVE, bool) (L:A32NX_OVHD_INTLT_ANN) 0 == max (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
-	"Fly By Wire.A320-Dev.EFIS.CSTR 1 Active": {
+	"Fly By Wire.A320-Dev.EFIS.Output.EFIS L CSTR 1 Active": {
 		"method": "calcCode",
-		"code": "(L:A32NX_EFIS_L_OPTION, enum) 1 == (L:A32NX_OVHD_INTLT_ANN) 0 == or 0 ! and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and 1 and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
+		"code": "(L:A32NX_EFIS_L_OPTION, enum) 1 == "
 	},
 	"Fly By Wire.A320-Dev.EFIS.WPT 1 Active": {
 		"method": "calcCode",
@@ -16267,6 +16263,10 @@ export default {
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_LSP_SPEED_SEL": {
 		"method": "calcCode",
+		"code": "1 (>L:ASCRJ_LSP_SPEED_SEL)"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_LSP_SPEED_SEL - DUPLICATE (OLD)": {
+		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_LSP_SPEED_SEL) \n0 (>L:ASCRJ_LSP_SPEED_SEL) \n1 (>L:ASCRJ_LSP_SPEED_SET)\n"
 	},
 	"Microsoft.Generic.Radio.COM1_VOLUME_INC": {
@@ -16301,17 +16301,17 @@ export default {
 		"method": "calcCode",
 		"code": "(L:Aircraft.Systems.Instruments.Enabled)"
 	},
-	"FlyInside.Bell 47 G.Lights.STROBE_LIGHT_SWITCH_TOGGLE": {
+	"FlyInside.Bell 47 G.Lights.Input.STROBE_LIGHT_SWITCH_TOGGLE": {
 		"method": "calcCode",
-		"code": "(K:STROBES_TOGGLE) ! (>K:STROBES_TOGGLE)"
+		"code": "(>K:STROBES_TOGGLE)"
 	},
-	"FlyInside.Bell 47 G.Lights.NAVIGATION_LIGHTS_SWITCH_TOGGLE": {
+	"FlyInside.Bell 47 G.Lights.Input.NAVIGATION_LIGHTS_SWITCH_TOGGLE": {
 		"method": "calcCode",
-		"code": "(K:TOGGLE_NAV_LIGHTS) ! (>K:TOGGLE_NAV_LIGHTS)"
+		"code": "(>K:TOGGLE_NAV_LIGHTS)"
 	},
-	"FlyInside.Bell 47 G.Lights.BEACON_LIGHT_SWITCH_TOGGLE": {
+	"FlyInside.Bell 47 G.Lights.Input.BEACON_LIGHT_SWITCH_TOGGLE": {
 		"method": "calcCode",
-		"code": "(K:TOGGLE_BEACON_LIGHTS) ! (>K:TOGGLE_BEACON_LIGHTS)"
+		"code": "(>K:TOGGLE_BEACON_LIGHTS)"
 	},
 	"FlyInside.Bell 47 G.Lights.LANDING_LIGHT_SWITCH_TOGGLE": {
 		"method": "calcCode",
@@ -16333,9 +16333,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:Aircraft.Lights.Landing.On)"
 	},
-	"FlyInside.Bell 47 G.Electrical.IGNITION_KEY_SWITCH": {
+	"FlyInside.Bell 47 G.Electrical.Input.IGNITION_KEY_SWITCH": {
 		"method": "calcCode",
-		"code": "(L:Aircraft.Engine.1.Input.MagnetosPosition, Number) 3 == if{ 2 (>L:Aircraft.Engine.1.Input.MagnetosPosition, Number) } els{ (L:Aircraft.Engine.1.Input.MagnetosPosition, Number) 2 == if{ 1 (>L:Aircraft.Engine.1.Input.MagnetosPosition, Number) } els{ (L:Aircraft.Engine.1.Input.MagnetosPosition, Number) 1 == if{ 0 (>L:Aircraft.Engine.1.Input.MagnetosPosition, Number) } els{ (L:Aircraft.Engine.1.Input.MagnetosPosition, Number) 0 == if{ 3 (>L:Aircraft.Engine.1.Input.MagnetosPosition, Number) }"
+		"code": "(L:Aircraft.Engine.1.Input.MagnetosPosition, Number) 3 + 4 % (>L:Aircraft.Engine.1.Input.MagnetosPosition, Number)"
 	},
 	"FlyInside.Bell 47 G.Electrical.STARTER_COLLECTIVE_SWITCH": {
 		"method": "calcCode",
@@ -16365,25 +16365,25 @@ export default {
 		"method": "calcCode",
 		"code": "(L:Aircraft.Radios.Transponder.State)"
 	},
-	"FlyInside.Bell 47 G.Radio.TRANSPONDER_MODE_CHANGE_ENCODER": {
+	"FlyInside.Bell 47 G.Radio.Input.TRANSPONDER_MODE_CHANGE_ENCODER": {
 		"method": "calcCode",
-		"code": "(L:Aircraft.Radios.Transponder.State, Number) 4 == if{ 3 (>L:Aircraft.Radios.Transponder.State, Number) } els{ (L:Aircraft.Radios.Transponder.State, Number) 3 == if{ 2 (>L:Aircraft.Radios.Transponder.State, Number) } els{ (L:Aircraft.Radios.Transponder.State, Number) 2 == if{ 1 (>L:Aircraft.Radios.Transponder.State, Number) } els{ (L:Aircraft.Radios.Transponder.State, Number) 1 == if{ 0 (>L:Aircraft.Radios.Transponder.State, Number) }"
+		"code": "(L:Aircraft.Radios.Transponder.State, Number) 4 + 5 % (>L:Aircraft.Radios.Transponder.State, Number) }"
 	},
-	"FlyInside.Bell 47 G.Radio.TRANSPONDER_CODE_1000_INC": {
+	"FlyInside.Bell 47 G.Radio.Input.TRANSPONDER_CODE_1000_INC": {
 		"method": "calcCode",
-		"code": "(K:XPNDR_1000_INC) ++ (>K:XPNDR_1000_INC)"
+		"code": "(>K:XPNDR_1000_INC)"
 	},
-	"FlyInside.Bell 47 G.Radio.TRANSPONDER_CODE_100_INC": {
+	"FlyInside.Bell 47 G.Radio.Input.TRANSPONDER_CODE_100_INC": {
 		"method": "calcCode",
-		"code": "(K:XPNDR_100_INC) ++ (>K:XPNDR_100_INC)"
+		"code": "(>K:XPNDR_100_INC)"
 	},
-	"FlyInside.Bell 47 G.Radio.TRANSPONDER_CODE_10_INC": {
+	"FlyInside.Bell 47 G.Radio.Input.TRANSPONDER_CODE_10_INC": {
 		"method": "calcCode",
-		"code": "(K:XPNDR_10_INC) ++ (>K:XPNDR_10_INC)"
+		"code": "(>K:XPNDR_10_INC)"
 	},
-	"FlyInside.Bell 47 G.Radio.TRANSPONDER_CODE_1_INC": {
+	"FlyInside.Bell 47 G.Radio.Input.TRANSPONDER_CODE_1_INC": {
 		"method": "calcCode",
-		"code": "(K:XPNDR_1_INC) ++ (>K:XPNDR_1_INC)"
+		"code": "(>K:XPNDR_1_INC)"
 	},
 	"FlyInside.Bell 47 G.Radio.COM_RADIO_MHZ_DEC_ENCODER": {
 		"method": "calcCode",
@@ -16485,17 +16485,17 @@ export default {
 		"method": "calcCode",
 		"code": "(L:Doors.Hidden) ! (>L:Doors.Hidden)"
 	},
-	"FlyInside.Bell 47 G.Flight Instrumentation.BAROMETRIC_PRESSURE_ENCODER_DEC": {
+	"FlyInside.Bell 47 G.Flight Instrumentation.Input.BAROMETRIC_PRESSURE_ENCODER_DEC": {
 		"method": "calcCode",
-		"code": "(L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number) 0.01 - 1 if{ 30.8 min } (>L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number)"
+		"code": "(L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number) 0.01 - 30.8 min (>L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number)"
 	},
-	"FlyInside.Bell 47 G.Flight Instrumentation.BAROMETRIC_PRESSURE_ENCODER_INC": {
+	"FlyInside.Bell 47 G.Flight Instrumentation.Input.BAROMETRIC_PRESSURE_ENCODER_INC": {
 		"method": "calcCode",
-		"code": "(L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number) 0.01 + 1 if{ 30.8 min } (>L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number)"
+		"code": "(L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number) 0.01 + 30.8 min  (>L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number)"
 	},
-	"FlyInside.Bell 47 G.Flight Instrumentation.STD_PRESSURE_SW": {
+	"FlyInside.Bell 47 G.Flight Instrumentation.Input.STD_PRESSURE_SW": {
 		"method": "calcCode",
-		"code": "(L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number) 29.92 (>L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number)"
+		"code": "29.92 (>L:Aircraft.Instruments.Altimeter.Kohlsman.HG, number)"
 	},
 	"FlyInside.Bell 47 G.Lights.CABIN_LIGHTS_ON_OFF": {
 		"method": "calcCode",
@@ -16737,9 +16737,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:H145_SDK_OH_INT_LIGHT_EMERGENCY_EXITS)"
 	},
-	"Hype Performance Group.H145.Lights.H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANE": {
+	"Hype Performance Group.H145.Lights.Output.H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL": {
 		"method": "calcCode",
-		"code": "(L:H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANE)"
+		"code": "(L:H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL)"
 	},
 	"Hype Performance Group.H145.Lights.H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL_POT": {
 		"method": "calcCode",
@@ -17621,13 +17621,13 @@ export default {
 		"method": "calcCode",
 		"code": "(A:CABIN SEATBELTS ALERT SWITCH, bool)"
 	},
-	"Fly By Wire.A320.Avionics.Adjust PFD brightness": {
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).Adjust PFD brightness": {
 		"method": "calcCode",
-		"code": "(A:LIGHT POTENTIOMETER:88, Percent over 100) 3 - @ 0.0015259 * 0 max 100 min 88 (>K:2:LIGHT_POTENTIOMETER_SET)"
+		"code": "@ 10.23 / 0 max 100 min 88  (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
-	"Fly By Wire.A320.Avionics.Adjust MFD brightness": {
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).Adjust MFD brightness": {
 		"method": "calcCode",
-		"code": "(A:LIGHT POTENTIOMETER:89, Percent over 100) 3 - @ 0.0015259 * 0 max 100 min 89 (>K:2:LIGHT_POTENTIOMETER_SET)"
+		"code": "@ 10.23 / 0 max 100 min 89 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
 	"Fly By Wire.A320.Avionics.Adjust upper EICAS brightness": {
 		"method": "calcCode",
@@ -18597,11 +18597,11 @@ export default {
 		"method": "calcCode",
 		"code": " (A:LIGHT POTENTIOMETER:11, percent) 5 + 100 min 11 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
-	"Fly By Wire.A320-Dev.Lights.MAIN PNL FLOOD LT_INC": {
+	"Fly By Wire.A320-Dev.Lights.Input.MAIN PNL FLOOD LT_INC": {
 		"method": "calcCode",
 		"code": "(A:LIGHT POTENTIOMETER:83, percent) 5 - 0 max 83 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
-	"Fly By Wire.A320-Dev.Lights.MAIN PNL FLOOD LT_DEC": {
+	"Fly By Wire.A320-Dev.Lights.Input.MAIN PNL FLOOD LT_DEC": {
 		"method": "calcCode",
 		"code": "(A:LIGHT POTENTIOMETER:83, percent) 5 + 100 min 83 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
@@ -20185,13 +20185,13 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:FLIGHT_LEVEL_CHANGE) (A:AUTOPILOT FLIGHT LEVEL CHANGE, bool) if { (A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET) }"
 	},
-	"Asobo.XCub.Lights.XCUB_AUX_DIMMER_VALUE": {
+	"Asobo.XCub.Lights.Output.XCUB_AUX_DIMMER_VALUE": {
 		"method": "calcCode",
-		"code": "(A:LIGHT POTENTIOMETER:3, Percent)"
+		"code": "(A:LIGHT POTENTIOMETER:2, Percent)"
 	},
-	"Asobo.XCub.Lights.XCUB_AUX_DIMMER": {
+	"Asobo.XCub.Lights.Input.XCUB_AUX_DIMMER": {
 		"method": "calcCode",
-		"code": "@ s0 (>L:LIGHTING_PANEL_1) l0 3 (>K:2:LIGHT_POTENTIOMETER_SET) "
+		"code": "@ s0 (>L:LIGHTING_PANEL_1) l0 2 (>K:2:LIGHT_POTENTIOMETER_SET) "
 	},
 	"Asobo.XCub.Autopilot.XCUB_AP_FLC_DEC_1": {
 		"method": "calcCode",
@@ -21129,7 +21129,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_AUTOPILOT_TRACK_SELECTED)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_AUTOPILOT_FPA_SELECTED": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_AUTOPILOT_FPA_SELECTED - DUPLICATE (OLD)": {
 		"method": "calcCode",
 		"code": "(L:A32NX_AUTOPILOT_FPA_SELECTED)"
 	},
@@ -23593,7 +23593,7 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:SWS_ENGINE_Switch_Starter_ThreeState_1, Enum)"
 	},
-	"SimWorks Studios.Kodiak 100.Fuel.Fuel Pump Switch Off": {
+	"SimWorks Studios.Kodiak 100.Fuel.Input.Kodiak 100 Fuel Pump Switch Off": {
 		"method": "calcCode",
 		"code": "0 (>L:SWS_FUEL_Switch_Pump_1, Enum)"
 	},
@@ -24209,21 +24209,21 @@ export default {
 		"method": "calcCode",
 		"code": "(L:LDG_GEAR_AUTO_EXT,Bool)"
 	},
-	"Fly By Wire.A320-Dev.Electrical.FORCE OVHD ELEC BATTERTY 1 ON": {
+	"Fly By Wire.A320-Dev.Electrical.Input.FORCE OVHD ELEC BATTERTY 1 ON": {
 		"method": "calcCode",
-		"code": "1 (>L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO) (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT1_Pressed)"
+		"code": "1 (>L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO) \n1 (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT1_Pressed)"
 	},
-	"Fly By Wire.A320-Dev.Electrical.FORCE OVHD ELEC BATTERTY 1 OFF": {
+	"Fly By Wire.A320-Dev.Electrical.Input.FORCE OVHD ELEC BATTERTY 1 OFF": {
 		"method": "calcCode",
-		"code": "0 (>L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO) (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT1_Pressed)\n"
+		"code": "0 (>L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO) \n0 (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT1_Pressed)\n"
 	},
-	"Fly By Wire.A320-Dev.Electrical.FORCE OVHD ELEC BATTERTY 2 ON": {
+	"Fly By Wire.A320-Dev.Electrical.Input.FORCE OVHD ELEC BATTERTY 2 ON": {
 		"method": "calcCode",
-		"code": "1 (>L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed)"
+		"code": "1 (>L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) \n1 (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed)"
 	},
-	"Fly By Wire.A320-Dev.Electrical.FORCE OVHD ELEC BATTERTY 2 OFF": {
+	"Fly By Wire.A320-Dev.Electrical.Input.FORCE OVHD ELEC BATTERTY 2 OFF": {
 		"method": "calcCode",
-		"code": "0 (>L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed)"
+		"code": "0 (>L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) \n0 (>L:XMLVAR_Momentary_PUSH_OVHD_ELEC_BAT2_Pressed)"
 	},
 	"Asobo.DA62.Fuel.DA62_LH_Fuel_Control_On": {
 		"method": "calcCode",
@@ -24489,7 +24489,7 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_PRESS_PRESS_CONT_ANIM)"
 	},
-	"Fly By Wire.A320-Dev.EICAS.A32NX_ECAM_KNOB_LOWER_INC": {
+	"Fly By Wire.A320-Dev.EICAS.Input.A32NX_ECAM_KNOB_LOWER_INC - DUPLICATE (WRONG INPUT TYPE)": {
 		"method": "calcCode",
 		"code": "(A:LIGHT POTENTIOMETER:93,percent) 5 + 100 min 93 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
@@ -24529,9 +24529,9 @@ export default {
 		"method": "calcCode",
 		"code": "3 (>K:KOHLSMAN_DEC)"
 	},
-	"Microsoft.Generic.Engine.Kodiak 100 Throttle with reverse": {
+	"SimWorks Studios.Kodiak 100.Engine.Input (Potentiometer).Kodiak 100 Throttle with reverse": {
 		"method": "calcCode",
-		"code": "@ 20.383 * 4500 - -16383 max 16383 min (>K:THROTTLE_SET)"
+		"code": "@ 20.0186 * 4096 - -4096 max 16383 min (>K:THROTTLE1_SET)"
 	},
 	"Asobo.TBM 930.Autopilot.TBM930_AUTOPILOT_HDG_TOGGLE": {
 		"method": "calcCode",
@@ -24545,9 +24545,9 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:AP_PANEL_VS_HOLD)"
 	},
-	"Asobo.Cessna 172.Engine.Starter Knob (Potentiometer)": {
+	"Asobo.Cessna 172.Engine.Input (Potentiometer).Starter Knob (Potentiometer)": {
 		"method": "calcCode",
-		"code": "@ 200 < if{  0 (>K:MAGNETO1_SET) } els{ \n@ 400 < if{  1 (>K:MAGNETO1_SET) } els{ \n@ 600 < if{  2 (>K:MAGNETO1_SET) } els{ \n@ 800 < if{  3 (>K:MAGNETO1_SET) } els{ \n4 (>K:MAGNETO1_SET) \n(A:GENERAL ENG STARTER:1, Bool) if{ \n1 (>K:SET_STARTER1_HELD) } } } } }\n"
+		"code": "@ 200 < if{  0 g1 }  \n@ 400 < if{  1 g1 } \n@ 600 < if{  2 g1 } \n@ 800 < if{  3 } els{ 4 } \n:1  (>K:MAGNETO1_SET) \n(A:GENERAL ENG STARTER:1, Bool) if{ \n1 (>K:SET_STARTER1_HELD) } } } } }\n"
 	},
 	"Just Flight.Piper Arrow III.Autopilot.PA28_AUTOPILOT_TOGGLE": {
 		"method": "calcCode",
@@ -24585,19 +24585,19 @@ export default {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_TBM930_CargoDoor_State)"
 	},
-	"SimWorks Studios.Kodiak 100.Fuel.KODIAK_100_TANK_SELECT_L_CLOSE": {
+	"SimWorks Studios.Kodiak 100.Fuel.Input.KODIAK_100_TANK_SELECT_L_CLOSE": {
 		"method": "calcCode",
 		"code": "0 (>L:SWS_Kodiak_TankSelector_1, Bool)"
 	},
-	"SimWorks Studios.Kodiak 100.Fuel.KODIAK_100_TANK_SELECT_L_OPEN": {
+	"SimWorks Studios.Kodiak 100.Fuel.Input.KODIAK_100_TANK_SELECT_L_OPEN": {
 		"method": "calcCode",
 		"code": "1 (>L:SWS_Kodiak_TankSelector_1, Bool)"
 	},
-	"SimWorks Studios.Kodiak 100.Fuel.KODIAK_100_TANK_SELECT_R_CLOSE": {
+	"SimWorks Studios.Kodiak 100.Fuel.Input.KODIAK_100_TANK_SELECT_R_CLOSE": {
 		"method": "calcCode",
 		"code": "0 (>L:SWS_Kodiak_TankSelector_2, Bool)"
 	},
-	"SimWorks Studios.Kodiak 100.Fuel.KODIAK_100_TANK_SELECT_R_OPEN": {
+	"SimWorks Studios.Kodiak 100.Fuel.Input.KODIAK_100_TANK_SELECT_R_OPEN": {
 		"method": "calcCode",
 		"code": "1 (>L:SWS_Kodiak_TankSelector_2, Bool)"
 	},
@@ -24656,6 +24656,10 @@ export default {
 	"Asobo.TBM 930.Miscellaneous.TBM930_SWAP_ACTION_LEFT-RIGHT_UP-DOWN_ENCODER_SWITCH": {
 		"method": "calcCode",
 		"code": "(L:TBM930_VISOR_SWAP_LR-UD_SWAP-SWITCH_POS) ! (>L:TBM930_VISOR_SWAP_LR-UD_SWAP-SWITCH_POS)"
+	},
+	"SC Designs.F16C.MCDU.Input.F16C_KEYPAD_0 - DUPLICATE": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_BTN_0)"
 	},
 	"SC Designs.F16C.Miscellaneous.F16C_LEFT_TAILHOOK_UP": {
 		"method": "calcCode",
@@ -24957,15 +24961,15 @@ export default {
 		"method": "calcCode",
 		"code": "2 (>L:ECM_ARM)"
 	},
-	"SC Designs.F16C.Weapons.F16C_FRONT_MASTER_ARM_ON": {
+	"SC Designs.F16C.Weapons.Input.F16C_FRONT_MASTER_ARM_ON": {
 		"method": "calcCode",
 		"code": "0 (>L:MASTER_ARM)"
 	},
-	"SC Designs.F16C.Weapons.F16C_FRONT_MASTER_ARM_OFF": {
+	"SC Designs.F16C.Weapons.Input.F16C_FRONT_MASTER_ARM_OFF": {
 		"method": "calcCode",
 		"code": "1 (>L:MASTER_ARM)"
 	},
-	"SC Designs.F16C.Weapons.F16C_FRONT_ARM_SIMULATE": {
+	"SC Designs.F16C.Weapons.Input.F16C_FRONT_ARM_SIMULATE": {
 		"method": "calcCode",
 		"code": "2 (>L:MASTER_ARM)"
 	},
@@ -25505,11 +25509,11 @@ export default {
 		"method": "calcCode",
 		"code": "2 (>L:SWS_ENGINE_Switch_Starter_ThreeState_1, Enum)"
 	},
-	"SimWorks Studios.Kodiak 100.Fuel.Fuel Pump Switch Stby": {
+	"SimWorks Studios.Kodiak 100.Fuel.Input.Kodiak 100 Fuel Pump Switch Stby": {
 		"method": "calcCode",
 		"code": "0 (>L:SWS_FUEL_Switch_Pump_1, Enum)"
 	},
-	"SimWorks Studios.Kodiak 100.Fuel.Fuel Pump Switch On": {
+	"SimWorks Studios.Kodiak 100.Fuel.Input.Kodiak 100 Fuel Pump Switch On": {
 		"method": "calcCode",
 		"code": "2 (>L:SWS_FUEL_Switch_Pump_1, Enum)"
 	},
@@ -25580,10 +25584,6 @@ export default {
 	"Fly By Wire.A320-Dev.Safety.A32NX_OVHD_EMEREXIT_LIGHT_OFF": {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 2 =="
-	},
-	"Microsoft.A320.EFIS.LED QFE ENCENDIDO": {
-		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_Mode) ++ 2 %"
 	},
 	"Fly By Wire.A320-Dev.Lights.A32NX_OH_INTEG_LIGHT_INC": {
 		"method": "calcCode",
@@ -25961,7 +25961,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:AP_HDG_HOLD_ON) (>H:B747_8_FMC_1_AP_HEADING_HOLD)"
 	},
-	"Fly By Wire.A320-Dev.Warning System.GPWS Terr Off Toggle": {
+	"Fly By Wire.A320-Dev.Warning System.Input.GPWS Terr Off Toggle": {
 		"method": "calcCode",
 		"code": "(L:A32NX_GPWS_TERR_OFF,bool) ! (>L:A32NX_GPWS_TERR_OFF)"
 	},
@@ -25985,7 +25985,7 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_HUD_KEY_1_BTN_ANIM)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_2": {
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_2_BTN_ANIM": {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_HUD_KEY_2_BTN_ANIM)"
 	},
@@ -25993,69 +25993,129 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_1)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_BTN": {
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_2": {
 		"method": "calcCode",
-		"code": "1 (>L:ASCRJ_HUD_KEY_8)"
+		"code": "1 (>L:ASCRJ_HUD_KEY_2)\t"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_3_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_3_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_3_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_3)"
 	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_4_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_4_BTN_ANIM)"
+	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_4_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_4)\t"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_5_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_5_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_5_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_5)"
 	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_6_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_6_BTN_ANIM)"
+	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_6_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_6)\t"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_7_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_7_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_7_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_7)\t"
 	},
-	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_8_BTN": {
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_8_BTN_ANIM": {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_HUD_KEY_8_BTN_ANIM)"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_8": {
+		"method": "calcCode",
+		"code": "1 (>L:ASCRJ_HUD_KEY_8)"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_9_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_9_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_9_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_9)"
 	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_0_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_0_BTN_ANIM)"
+	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_0_BTN": {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_HUD_KEY_0_BTN_ANIM)"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_ENTER_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_ENTER_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_ENTER_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_ENTER)"
 	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_TEST_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_TEST_BTN_ANIM)"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_KEY_TEST_BTN_ANIM - DUPLICATE": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_KEY_TEST_BTN_ANIM)"
+	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_KEY_TEST_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_KEY_TEST)"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_ACT_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_ACT_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_ACT_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_ACT)\t"
 	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_STBY_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_STBY_BTN_ANIM)"
+	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_STBY_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_STBY)"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_RWY_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_RWY_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_RWY_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_RWY)\t"
 	},
-	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_GS_BTN": {
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_GS_BTN_ANIM": {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_HUD_GS_BTN_ANIM)\t"
 	},
-	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_GS)_BTN": {
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_GS_BTN": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_HUD_GS)\t"
+	},
+	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.Input.ASCRJ_HUD_BRT_BTN_ANIM": {
+		"method": "calcCode",
+		"code": "0 (>L:ASCRJ_HUD_BRT_BTN_ANIM)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Flight Instrumentation.ASCRJ_HUD_BRT_BTN": {
 		"method": "calcCode",
@@ -26085,13 +26145,13 @@ export default {
 		"method": "calcCode",
 		"code": "(A:LIGHT POTENTIOMETER:8, Percent over 100) (L:ASCRJ_HUD_KEY_TEST_LED, Bool) * 0 >  (A:CIRCUIT GENERAL PANEL ON, Bool) and"
 	},
-	"Microsoft.Generic.Controls.Axis Left Brake Set": {
+	"Microsoft.Generic.Controls.Input (Potentiometer).Axis Left Brake Set": {
 		"method": "calcCode",
-		"code": "@ 16.0147 * 0 max 16383 min (>K:AXIS_LEFT_BRAKE_SET)"
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_LEFT_BRAKE_SET)"
 	},
-	"Microsoft.Generic.Controls.Axis Right Brake Set": {
+	"Microsoft.Generic.Controls.Input (Potentiometer).Axis Right Brake Set": {
 		"method": "calcCode",
-		"code": "@ 16.0147 * 0 max 16383 min (>K:AXIS_RIGHT_BRAKE_SET)"
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_RIGHT_BRAKE_SET)"
 	},
 	"Microsoft.Generic.Controls.Axis Spoiler Set": {
 		"method": "calcCode",
@@ -26133,17 +26193,17 @@ export default {
 		"method": "calcCode",
 		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AILERON_TRIM_SET_EX1)"
 	},
-	"Microsoft.Generic.Controls.Axis Aileron Set": {
+	"Microsoft.Generic.Controls.Input (Potentiometer).Axis Aileron Set": {
 		"method": "calcCode",
 		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_AILERON_SET)"
 	},
-	"Fly By Wire.A320-Dev.Navigation.TRANSPONDER MODE ON": {
+	"Fly By Wire.A320-Dev.Navigation.Input.TRANSPONDER MODE ON": {
 		"method": "calcCode",
-		"code": "2(>L:A32NX_TRANSPONDER_MODE)"
+		"code": "2 (>L:A32NX_TRANSPONDER_MODE)"
 	},
-	"Fly By Wire.A320-Dev.Navigation.TRANSPONDER MODE STBY": {
+	"Fly By Wire.A320-Dev.Navigation.Input.TRANSPONDER MODE STBY": {
 		"method": "calcCode",
-		"code": "0(>L:A32NX_TRANSPONDER_MODE)"
+		"code": "0 (>L:A32NX_TRANSPONDER_MODE)"
 	},
 	"PMDG.DC-6.Lights.PMDGDC6_Entrance_Lights": {
 		"method": "calcCode",
@@ -26221,25 +26281,25 @@ export default {
 		"method": "calcCode",
 		"code": "(L:YD_MODE, bool) ! (>L:YD_MODE)"
 	},
-	"Flysimware.Cessna 414A.Lights.C414A_TAXI_LIGHTS_ON": {
+	"Flysimware.Cessna 414A.Lights.Input.C414A_TAXI_LIGHTS_ON": {
 		"method": "calcCode",
-		"code": "1 (>K:TAXI_LIGHTS_SET)"
+		"code": "1 (>K:TAXI_LIGHTS_SET)\n(A:GEAR HANDLE POSITION,Bool) (L:LIGHT_TAXI, bool) ! and if{ 1 } els{ 0 } (>L:LIGHT_TAXI)"
 	},
-	"Flysimware.Cessna 414A.Lights.C414A_TAXI_LIGHTS_OFF": {
+	"Flysimware.Cessna 414A.Lights.Input.C414A_TAXI_LIGHTS_OFF": {
 		"method": "calcCode",
-		"code": "0 (>K:TAXI_LIGHTS_SET)"
+		"code": "0 (>K:TAXI_LIGHTS_SET)\n(A:GEAR HANDLE POSITION,Bool) (L:LIGHT_TAXI, bool) ! and if{ 1 } els{ 0 } (>L:LIGHT_TAXI)"
 	},
-	"Flysimware.Cessna 414A.Lights.C414A_LANDING_LIGHTS_ON": {
+	"Flysimware.Cessna 414A.Lights.Input.C414A_LANDING_LIGHTS_ON": {
 		"method": "calcCode",
-		"code": "1 (>K:LANDING_LIGHTS_SET) 2 (>L:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1)"
+		"code": "2 (>L:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1) \n1 (>K:LANDING_LIGHTS_SET) \n100 (>L:LANDING_LIGHT_MOTOR,Number) \n(>H:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1) "
 	},
-	"Flysimware.Cessna 414A.Lights.C414A_LANDING_LIGHTS_OFF": {
+	"Flysimware.Cessna 414A.Lights.Input.C414A_LANDING_LIGHTS_OFF": {
 		"method": "calcCode",
-		"code": "0 (>K:LANDING_LIGHTS_SET) 1 (>L:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1)"
+		"code": "1 (>L:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1) \n0 (>K:LANDING_LIGHTS_SET)  \n(>H:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1) "
 	},
-	"Flysimware.Cessna 414A.Lights.C414A_LANDING_LIGHTS_RETRACT": {
+	"Flysimware.Cessna 414A.Lights.Input.C414A_LANDING_LIGHTS_RETRACT": {
 		"method": "calcCode",
-		"code": "0 (>K:LANDING_LIGHTS_SET) 0 (>L:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1) 0 (>L:LANDING_LIGHT_MOTOR)"
+		"code": "0 (>K:LANDING_LIGHTS_SET) \n0 (>L:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1) \n0 (>L:LANDING_LIGHT_MOTOR)\n(>H:GENERIC_Momentary_LIGHT_SWITCH_LANDING_1) "
 	},
 	"Flysimware.Cessna 414A.Lights.C414A_LANDING_LIGHTS_EXTEND": {
 		"method": "calcCode",
@@ -26545,45 +26605,45 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:TDSGTNXI750U1_RKnobInnerDec)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Direct_to_Press": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Direct_to_Press": {
 		"method": "calcCode",
-		"code": "1 (>L:TDSGTNXI750U1_DTOKEY)"
+		"code": "1 (>L:TDSGTNXI750U2_DTOKEY)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Direct_to_Rls": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Direct_to_Rls": {
 		"method": "calcCode",
-		"code": "0 (>L:TDSGTNXI750U1_DTOKEY)"
+		"code": "0 (>L:TDSGTNXI750U2_DTOKEY)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Home_Press": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Home_Press": {
 		"method": "calcCode",
-		"code": "1 (>L:TDSGTNXI750U1_HomeKEY)"
+		"code": "1 (>L:TDSGTNXI750U2_HomeKEY)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Home_Rls": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Home_Rls": {
 		"method": "calcCode",
-		"code": "0 (>L:TDSGTNXI750U1_HomeKEY)"
+		"code": "0 (>L:TDSGTNXI750U2_HomeKEY)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Knob_Push_Press": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Knob_Push_Press": {
 		"method": "calcCode",
-		"code": "1 (>L:TDSGTNXI750U1_RKnobCRSR) "
+		"code": "1 (>L:TDSGTNXI750U2_RKnobCRSR) "
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Knob_Push_Rls": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Knob_Push_Rls": {
 		"method": "calcCode",
-		"code": "0 (>L:TDSGTNXI750U1_RKnobCRSR) "
+		"code": "0 (>L:TDSGTNXI750U2_RKnobCRSR) "
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Large_Knob_Inc": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Large_Knob_Inc": {
 		"method": "calcCode",
-		"code": "1 (>L:TDSGTNXI750U1_RKnobOuterInc)"
+		"code": "1 (>L:TDSGTNXI750U2_RKnobOuterInc)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Large_Knob_Dec": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Large_Knob_Dec": {
 		"method": "calcCode",
-		"code": "1 (>L:TDSGTNXI750U1_RKnobOuterDec)"
+		"code": "1 (>L:TDSGTNXI750U2_RKnobOuterDec)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Small_Knob_Inc": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Small_Knob_Inc": {
 		"method": "calcCode",
-		"code": "1 (>L:TDSGTNXI750U1_RKnobInnerInc)"
+		"code": "1 (>L:TDSGTNXI750U2_RKnobInnerInc)"
 	},
-	"Flysimware.Cessna 414A.Navigation.TDS_GTN750U2_Small_Knob_Dec": {
+	"Flysimware.Cessna 414A.Navigation.Input.TDS_GTN750U2_Small_Knob_Dec": {
 		"method": "calcCode",
-		"code": "1 (>L:TDSGTNXI750U1_RKnobInnerDec)"
+		"code": "1 (>L:TDSGTNXI750U2_RKnobInnerDec)"
 	},
 	"Fly By Wire.A320-Dev.Autopilot.A32NX_FCU_ALT_SELECTED": {
 		"method": "calcCode",
@@ -26669,7 +26729,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:Generic_Upr_Push_NAV)"
 	},
-	"Microsoft.Generic.Interaction.COCKPIT-EXTERNAL-VIEW-SWAP-SWITCH": {
+	"Microsoft.Generic.Interaction.Input.COCKPIT-EXTERNAL-VIEW-SWAP-SWITCH - DUPLICATE (OLD)": {
 		"method": "calcCode",
 		"code": "50 (>A:COCKPIT CAMERA ZOOM,Percent)\n50 (>A:CHASE CAMERA ZOOM,Percent)\n(A:CAMERA STATE,Enum) 2 == if{ 3 (>A:CAMERA STATE,Enum) } els{ (A:CAMERA STATE,Enum) 3 == if{ 2 (>A:CAMERA STATE,Enum) }"
 	},
@@ -26733,11 +26793,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:AS1000_MID_COM_Mic_3_Push)"
 	},
-	"Asobo.747-8i.Autopilot.Input.APP": {
+	"Asobo.747-8i.Autopilot.Input.AP_APP_ARMED": {
 		"method": "calcCode",
 		"code": "(>H:B747_8_FMC_1_AP_APP_ARMED)"
 	},
-	"Asobo.747-8i.Autopilot.Input.VNAV": {
+	"Asobo.747-8i.Autopilot.Input.AP_VNAV": {
 		"method": "calcCode",
 		"code": "(>H:B747_8_FMC_1_AP_VNAV)"
 	},
@@ -26745,19 +26805,19 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:B747_8_FMC_1_AP_HEADING_HOLD)"
 	},
-	"Asobo.747-8i.Autopilot.Input.LNAV": {
+	"Asobo.747-8i.Autopilot.Input.AP_LNAV": {
 		"method": "calcCode",
 		"code": "(>H:B747_8_FMC_1_AP_LNAV)"
 	},
-	"Asobo.747-8i.Autopilot.Input.VS": {
+	"Asobo.747-8i.Autopilot.Input.AP_VSPEED": {
 		"method": "calcCode",
 		"code": "(>H:B747_8_FMC_1_AP_VSPEED)"
 	},
-	"Asobo.747-8i.Autopilot.Input.ALT": {
+	"Asobo.747-8i.Autopilot.Input.AP_ALT": {
 		"method": "calcCode",
 		"code": "(>H:B747_8_FMC_1_AP_ALT)"
 	},
-	"Asobo.747-8i.Autopilot.Input.FLCH": {
+	"Asobo.747-8i.Autopilot.Input.AP_FLCH": {
 		"method": "calcCode",
 		"code": "(>H:B747_8_FMC_1_AP_FLCH)"
 	},
@@ -26885,11 +26945,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:AP_SPD_ACTIVE)"
 	},
-	"Asobo.747-8i.Autopilot.Output.FLCH": {
+	"Asobo.747-8i.Autopilot.Output.AP_FLCH_ACTIVE": {
 		"method": "calcCode",
 		"code": "(L:AP_FLCH_ACTIVE)"
 	},
-	"Asobo.747-8i.Autopilot.Output.VNAV": {
+	"Asobo.747-8i.Autopilot.Output.AP_VNAV_ARMED": {
 		"method": "calcCode",
 		"code": "(L:AP_VNAV_ARMED)"
 	},
@@ -26897,11 +26957,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:AP_APP_ARMED)"
 	},
-	"Asobo.747-8i.Autopilot.Output.ALT": {
+	"Asobo.747-8i.Autopilot.Output.AP_ALT_HOLD_ACTIVE": {
 		"method": "calcCode",
 		"code": "(L:AP_ALT_HOLD_ACTIVE)"
 	},
-	"Asobo.747-8i.Autopilot.Output.VS": {
+	"Asobo.747-8i.Autopilot.Output.AP_VS_ACTIVE": {
 		"method": "calcCode",
 		"code": "(L:AP_VS_ACTIVE)"
 	},
@@ -26909,7 +26969,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:Generic_Master_Caution_Active)"
 	},
-	"Asobo.747-8i.Autopilot.Output.LNAV": {
+	"Asobo.747-8i.Autopilot.Output.AP_LNAV_ARMED": {
 		"method": "calcCode",
 		"code": "(L:AP_LNAV_ARMED)"
 	},
@@ -26951,7 +27011,7 @@ export default {
 	},
 	"Fly By Wire.A320-Dev.Passengers/Crew.Input.CABIN_EMERGENCY_LIGHT_TOGGLE": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 0 == if{ 2 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } els{ (L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 1 == if{ 0 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) } els{ (L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) 2 == if{ 1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) }"
+		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position) ++ 3 % (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position)"
 	},
 	"Fly By Wire.A320.Air Condition / Pressurization.Input.PUSH_OVHD_OXYGEN_CREW_TOGGLE": {
 		"method": "calcCode",
@@ -26972,5 +27032,16853 @@ export default {
 	"Fly By Wire.A320-Dev.Controls.Input.Overhead ELAC2 Toggle": {
 		"method": "calcCode",
 		"code": "2 (>K:FLY_BY_WIRE_ELAC_TOGGLE) \n(L:XMLVAR_Momentary_PUSH_OVHD_FLTCTL_ELAC2_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_FLTCTL_ELAC2_Pressed)"
+	},
+	"Asobo.747-8i.MCDU.Output.Execute LED ": {
+		"method": "calcCode",
+		"code": "(L:FMC_EXEC_ACTIVE)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX_PEDEST_KNOB_FLOOD_CPT_DEC": {
+		"method": "calcCode",
+		"code": "A32NX_PEDEST_KNOB_FLOOD_CPT_DEC#(A:LIGHT POTENTIOMETER:83,percent) 5 - 0 max 83 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX_PEDEST_KNOB_FLOOD_CPT_INC": {
+		"method": "calcCode",
+		"code": "A32NX_PEDEST_KNOB_FLOOD_CPT_INC#(A:LIGHT POTENTIOMETER:83,percent) 5 + 100 min 83 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX_PEDEST_KNOB_FLOOD_FO_DEC": {
+		"method": "calcCode",
+		"code": "A32NX_PEDEST_KNOB_FLOOD_FO_DEC#(A:LIGHT POTENTIOMETER:76,percent) 5 - 0 max 76 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX_PEDEST_KNOB_FLOOD_FO_INC": {
+		"method": "calcCode",
+		"code": "A32NX_PEDEST_KNOB_FLOOD_FO_INC#(A:LIGHT POTENTIOMETER:76,percent) 5 + 100 min 76 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX_PEDEST_KNOB_INTEG_DEC": {
+		"method": "calcCode",
+		"code": "A32NX_PEDEST_KNOB_INTEG_DEC#(A:LIGHT POTENTIOMETER:85,percent) 5 - 0 max 85 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX_PEDEST_KNOB_INTEG_INC": {
+		"method": "calcCode",
+		"code": "A32NX_PEDEST_KNOB_INTEG_INC#(A:LIGHT POTENTIOMETER:85,percent) 5 + 100 min 85 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320-Dev.Navigation.Input.A32NX_XPNDR_MODE_STBY": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_TRANSPONDER_MODE, enum)"
+	},
+	"Fly By Wire.A320-Dev.Navigation.Input.A32NX_XPNDR_MODE_AUTO": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_TRANSPONDER_MODE, enum)"
+	},
+	"Fly By Wire.A320-Dev.Navigation.Input.A32NX_XPNDR_MODE_ON": {
+		"method": "calcCode",
+		"code": "2 (>L:A32NX_TRANSPONDER_MODE, enum)"
+	},
+	"Asobo.C208 Caravan.Fuel.Input.Fuel Condition Lever High Idle": {
+		"method": "calcCode",
+		"code": "2 (>L:Condition_Lever_CutOff_1) \n0 (L:ENG FUEL VALVE:1, Bool) != if{ 1 (>K:SET_FUEL_VALVE_ENG1) }\n2 (>A:TURB ENG CONDITION LEVER POSITION:1,enum) "
+	},
+	"Asobo.C208 Caravan.Fuel.Input.Fuel Condition Lever Low Idle": {
+		"method": "calcCode",
+		"code": "1 (>L:Condition_Lever_CutOff_1) \n0 (L:ENG FUEL VALVE:1, Bool) != if{ 1 (>K:SET_FUEL_VALVE_ENG1) } \n1 (>A:TURB ENG CONDITION LEVER POSITION:1,enum)"
+	},
+	"Asobo.C208 Caravan.Fuel.Input.Fuel Condition Lever Cutoff": {
+		"method": "calcCode",
+		"code": "0 (>L:Condition_Lever_CutOff_1) \n0 (>K:SET_FUEL_VALVE_ENG1) \n0 (>A:TURB ENG CONDITION LEVER POSITION:1,enum) "
+	},
+	"Asobo.C208 Caravan.Fuel.Input (Potentiometer).Fuel Condition Lever Set": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min s0 33 < if{\n  2 (>L:Condition_Lever_CutOff_1) \n  0 (L:ENG FUEL VALVE:1, Bool) != if{ 1 (>K:SET_FUEL_VALVE_ENG1) }\n  2 (>A:TURB ENG CONDITION LEVER POSITION:1,enum) quit }\nels{ l0 90 < if{ \n  1 (>L:Condition_Lever_CutOff_1) \n  0 (L:ENG FUEL VALVE:1, Bool) != if{ 1 (>K:SET_FUEL_VALVE_ENG1) } \n  1 (>A:TURB ENG CONDITION LEVER POSITION:1,enum) quit }\nels{ \n  0 (>L:Condition_Lever_CutOff_1) \n  0 (>K:SET_FUEL_VALVE_ENG1) \n  0 (>A:TURB ENG CONDITION LEVER POSITION:1,enum) } }"
+	},
+	"Fly By Wire.A320-Dev.Avionics.Input (Potentiometer).Adjust FO MFD Brightness": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min 91 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320-Dev.Avionics.Input (Potentiometer).Adjust FO PFD Brightness": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min 90 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.Piper Arrow III.Autopilot.Input.AUTOPILOT_HSI_HDG_BUG_DEC": {
+		"method": "calcCode",
+		"code": "(L:HSI_hdg_bug,enum) -- 0 max (>L:HSI_hdg_bug,enum) (>K:HEADING_BUG_DEC) (L:HSI_hdg_bug,enum) 0 == if{ 100  (>L:HSI_hdg_bug,enum) }"
+	},
+	"Just Flight.Piper Arrow III.Autopilot.Input.AUTOPILOT_HSI_HDG_BUG_INC": {
+		"method": "calcCode",
+		"code": "(L:HSI_hdg_bug,enum) ++ 100 min (>L:HSI_hdg_bug,enum) (>K:HEADING_BUG_INC) (L:HSI_hdg_bug,enum) 100 == if{ 0  (>L:HSI_hdg_bug,enum) }"
+	},
+	"Leonardo.MadDog MD-82.Gear.Input.MD_82_VC_PARKING_BRAKE_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 1 + (>L:cockpit_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Electrical.Input.MD_82_OVHD_APU_LEFT_BUS_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 34 + (>L:overhead_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Electrical.Input.MD_82_OVHD_APU_RIGHT_BUS_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 35 + (>L:overhead_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Electrical.Input.MD_82_OVHD_EXT_POWER_LEFT_BUS_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 36 + (>L:overhead_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Electrical.Input.MD_82_OVHD_EXT_POWER_RIGHT_BUS_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 37 + (>L:overhead_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Electrical.Output.MD_82_OVHD_EXT_POWER_AVAILABLE_LED": {
+		"method": "calcCode",
+		"code": "(L:ovhd_gnd_ext_avail_adv1)"
+	},
+	"Leonardo.MadDog MD-82.Electrical.Output.MD_82_OVHD_APU_POWER_AVAILABLE_LED": {
+		"method": "calcCode",
+		"code": "(L:ovhd_apu_bus_adv1)"
+	},
+	"Leonardo.MadDog MD-82.Electrical.Input.MD_82_OVHD_BATTERY_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 42 + (>L:overhead_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Gear.Output.MD_82_VC_PARKING_BRAKE_STATE_LED": {
+		"method": "calcCode",
+		"code": " (L:vc_parking_brake_knob)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD_82_VC_FGCP_AP_ENGAGE_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 19 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD_82_FGCP_AP_AUTOTHROTTLE_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 7 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD_82_CM1_FD_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 0 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD_82_CM2_FD_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 1 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_AP_SPEED_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 3 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_AP_MACH_SEL_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 4 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_FMS_OVRD_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 2 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_EPR_LIM_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 5 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_NAV_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 8 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_VOR_LOC_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 9 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_ILS_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 10 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_AUTOLAND_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 11 + (>L:fgcp_event, number)"
+	},
+	"Microsoft.737-MAX.Autopilot.Input.Bank Angle Limit  - 10 Degrees": {
+		"method": "calcCode",
+		"code": "4 (>K:AP_MAX_BANK_SET)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot MACH Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_MACH)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot IAS Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_IAS)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot VS Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_VS)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot GSL Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_GSL)"
+	},
+	"Just Flight.BAE146.FMS.Input.FMS System": {
+		"method": "calcCode",
+		"code": "Same Inputs like CJ4"
+	},
+	"Just Flight.BAE146.Autopilot System.Output.Autopilot ALT SEL": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_dig1, number) 10000 * (L:MCP_Alt_dig2, number) 1000 * + (L:MCP_Alt_dig3, number) 100 * +"
+	},
+	"Just Flight.BAE146.Autopilot System.Input.Autopilot ALT SEL Encoder": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_sel_knob, enum) -- (>L:MCP_Alt_sel_knob, enum) (L:MCP_Alt_sel_knob, enum) 0 < if{ 99 (>MCP_Alt_sel_knob, enum) }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot MACH Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_MACH_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot IAS Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_IAS_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot VS Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_VS_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot ALT Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_ALT_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot HDG Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_HDG_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot System.Output.Pedestal Yaw Damper 1 indication": {
+		"method": "calcCode",
+		"code": "(L:PED_AFT_AP_YD1_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot System.Output.Pedestal Yaw Damper 2 indication": {
+		"method": "calcCode",
+		"code": "(L:PED_AFT_AP_YD2_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot ON Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_AP_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot System.Input.Autopilot ALT ARM Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_ALT_arm)"
+	},
+	"Just Flight.BAE146.Autopilot System.Output.Autopilot ALT ARM Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_arm_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot LNAV Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_LNAV_iL, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Flight Instrumentation.Output.Annunciator RNAV Indication": {
+		"method": "calcCode",
+		"code": "(L:L_ANNUNS_Rnav_green_il, bool) if{ (L:L_MISC_annun_lts, number) } els{ 0 }"
+	},
+	"Just Flight.BAE146.Flight Instrumentation.Input.HSI/RNAV Mode on": {
+		"method": "calcCode",
+		"code": "1 (>L:L_MISC_HSI_mode, bool)"
+	},
+	"Just Flight.BAE146.Flight Instrumentation.Input.HSI/RNAV Mode off": {
+		"method": "calcCode",
+		"code": "0 (>L:L_MISC_HSI_mode, bool)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS Power Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Pwr)"
+	},
+	"Just Flight.BAE146.Autothrust System.Output.TMS Power On Indication": {
+		"method": "calcCode",
+		"code": "(L:R_TMS_Pwr_on_il, bool) if{ (L:TMS_annun_lts, number) } els{ 0 }"
+	},
+	"Just Flight.BAE146.Electrical.Input.OVHD APU ON": {
+		"method": "calcCode",
+		"code": "1 (>L:OVHD_APU_StartStop, bool)"
+	},
+	"Just Flight.BAE146.Electrical.Input.OVHD APU OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:OVHD_APU_StartStop, bool)"
+	},
+	"Microsoft.737-MAX.Autopilot.Input.Bank Angle Limit  - 15 Degrees": {
+		"method": "calcCode",
+		"code": "3 (>K:AP_MAX_BANK_SET)"
+	},
+	"Microsoft.737-MAX.Autopilot.Input.Bank Angle Limit  - 20 Degrees": {
+		"method": "calcCode",
+		"code": "2 (>K:AP_MAX_BANK_SET)"
+	},
+	"Microsoft.737-MAX.Autopilot.Input.Bank Angle Limit  - 25 Degrees": {
+		"method": "calcCode",
+		"code": "1 (>K:AP_MAX_BANK_SET)"
+	},
+	"Microsoft.737-MAX.Autopilot.Input.Bank Angle Limit  - 30 Degrees": {
+		"method": "calcCode",
+		"code": "0 (>K:AP_MAX_BANK_SET)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS Disconnect Button Left Lever ": {
+		"method": "calcCode",
+		"code": "1 (>L:PED_MID_TMS_disc_L)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS Disconnect Button Right Lever": {
+		"method": "calcCode",
+		"code": "1 (>L:PED_MID_TMS_disc_R)"
+	},
+	"Fly By Wire.A320-Dev.Miscellaneous.Input.Chrono ET Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A32NX_CHRONO_ET_SWITCH_POS, number) 1 - 0 max (>L:A32NX_CHRONO_ET_SWITCH_POS, number)\n(>H:A32NX_CHRONO_ET_POS_CHANGED)\n"
+	},
+	"Fly By Wire.A320-Dev.Miscellaneous.Input.Chrono ET Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A32NX_CHRONO_ET_SWITCH_POS, number) 1 + 2 min  (>L:A32NX_CHRONO_ET_SWITCH_POS, number)\n(>H:A32NX_CHRONO_ET_POS_CHANGED)"
+	},
+	"Just Flight.BAE146.Flight Instrumentation.Output.HSI HDG Bug": {
+		"method": "calcCode",
+		"code": "(L:L_HSI_Hdg_bug, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737_MCP_CPT_FD_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_FDLeft,Number)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737-7_CPT_FD_TOGGLE": {
+		"method": "calcCode",
+		"code": "37801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_IAS_MACH_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_SPDwindow, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_CPT_CRS": {
+		"method": "calcCode",
+		"code": "(L:ngx_CRSwindowL, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_FO_CRS": {
+		"method": "calcCode",
+		"code": "(L:ngx_CRSwindowR, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_HDG": {
+		"method": "calcCode",
+		"code": "(L:ngx_HDGwindow, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_ALT": {
+		"method": "calcCode",
+		"code": "(L:ngx_ALTwindow, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_V_SPEED": {
+		"method": "calcCode",
+		"code": "(L:ngx_VSwindow, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CMD_A_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_CMDA, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CMD_B_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_CMDB, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CWS_A_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_CWSA, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CWS_B_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_CWSB, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_AT_ARM_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_ATArm, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_VNAV_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_VNav, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_LNAV_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_LNav, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_VOR_LOC_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_VORLock, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_N1_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_N1, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_SPEED_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_Speed, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_LVL_CHANGE_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_LvlChg, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_HDG_SEL_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_HdgSel, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_APP_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_App, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_ALT_HOLD_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_AltHold, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_VS_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_VS, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737_MCP_FO_FD_IND": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_FDRight,Number)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737-7_FO_FD_TOGGLE": {
+		"method": "calcCode",
+		"code": "40701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_AFT_LEFT_SW": {
+		"method": "calcCode",
+		"code": "3701  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_FWD_LEFT_SW": {
+		"method": "calcCode",
+		"code": "3801  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_FWD_RIGHT_SW": {
+		"method": "calcCode",
+		"code": "3901  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_AFT_RIGHT_SW": {
+		"method": "calcCode",
+		"code": "4001  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_CTR_L_SW": {
+		"method": "calcCode",
+		"code": "4501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_CTR_R_SW": {
+		"method": "calcCode",
+		"code": "4601 (>K:ROTOR_BRAKE)"
+	},
+	"Microsoft.737-MAX.Autopilot.Input.Altitude Knob": {
+		"method": "calcCode",
+		"code": "1 (>B:AUTOPILOT_Altitude_Inc)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_CPT_CRS_INC": {
+		"method": "calcCode",
+		"code": "37607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_CPT_CRS_DEC": {
+		"method": "calcCode",
+		"code": "37608 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_HDG_INC": {
+		"method": "calcCode",
+		"code": "39007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_HDG_DEC": {
+		"method": "calcCode",
+		"code": "39008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_IAS_MACH_INC": {
+		"method": "calcCode",
+		"code": "38407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_IAS_MACH_DEC": {
+		"method": "calcCode",
+		"code": "38408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_ALT_INC": {
+		"method": "calcCode",
+		"code": "40007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_ALT_DEC": {
+		"method": "calcCode",
+		"code": "40008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_VS_INC": {
+		"method": "calcCode",
+		"code": "40108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_VS_DEC": {
+		"method": "calcCode",
+		"code": "40107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_FO_CRS_INC": {
+		"method": "calcCode",
+		"code": "40907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_FO_CRS_DEC": {
+		"method": "calcCode",
+		"code": "40908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_GEAR_UP": {
+		"method": "calcCode",
+		"code": "30 (L:switch_455_73X) - 10 div == if{ 45502 (>K:ROTOR_BRAKE) } els{ (>K:GEAR_UP) }"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_GEAR_DOWN": {
+		"method": "calcCode",
+		"code": "(>K:GEAR_DOWN)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_GEAR_OFF": {
+		"method": "calcCode",
+		"code": "30 (L:switch_455_73X) - 10 div s0 :1 l0 0 > if{ 45501 (>K:ROTOR_BRAKE) l0 -- s0 g1 } l0 0 < if{ 45502 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_VNAV_SWITCH": {
+		"method": "calcCode",
+		"code": "38601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_A/T_ TOGGLE": {
+		"method": "calcCode",
+		"code": "38001  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_BANK_ANGLE_INC": {
+		"method": "calcCode",
+		"code": "38902 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_BANK_ANGLE_DEC": {
+		"method": "calcCode",
+		"code": "38901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_BANK_ANGLE": {
+		"method": "calcCode",
+		"code": "(L:switch_389_73X, number)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_GEAR_LEVER_INC": {
+		"method": "calcCode",
+		"code": "45502 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_GEAR_LEVER_DEC": {
+		"method": "calcCode",
+		"code": "45501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_LNAV_SWITCH": {
+		"method": "calcCode",
+		"code": "39701  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_SPEED_SWITCH": {
+		"method": "calcCode",
+		"code": "38201  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_LVL_CHG_SWITCH": {
+		"method": "calcCode",
+		"code": "39101  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_HDG_SEL-SWITCH": {
+		"method": "calcCode",
+		"code": "39201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_VOR_LOC_SWITCH": {
+		"method": "calcCode",
+		"code": "39601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_APP_SWITCH": {
+		"method": "calcCode",
+		"code": "39301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_ALT_HLD_SWITCH": {
+		"method": "calcCode",
+		"code": "39401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_V/S_SWITCH": {
+		"method": "calcCode",
+		"code": "39501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_LEFT_OFF_POS_SW": {
+		"method": "calcCode",
+		"code": "0 (L:switch_36_73X) - 10 div s0\n:1\nl0 0 > if{ 3607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 3608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_LEFT_INT_POS_SW": {
+		"method": "calcCode",
+		"code": "10 (L:switch_36_73X) - 10 div s0\n:1\nl0 0 > if{ 3607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 3608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_LEFT_LOW_POS_SW": {
+		"method": "calcCode",
+		"code": "20 (L:switch_36_73X) - 10 div s0\n:1\nl0 0 > if{ 3607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 3608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_LEFT_HIGH_POS_SW": {
+		"method": "calcCode",
+		"code": "30 (L:switch_36_73X) - 10 div s0\n:1\nl0 0 > if{ 3607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 3608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_RIGHT_OFF_POS_SW": {
+		"method": "calcCode",
+		"code": "0 (L:switch_109_73X) - 10 div s0\n:1\nl0 0 > if{ 10907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 10908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_RIGHT_INT_POS_SW": {
+		"method": "calcCode",
+		"code": "10 (L:switch_109_73X) - 10 div s0\n:1\nl0 0 > if{ 10907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 10908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_RIGHT_LOW_POS_SW": {
+		"method": "calcCode",
+		"code": "20 (L:switch_109_73X) - 10 div s0\n:1\nl0 0 > if{ 10907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 10908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.Input.PMDG_B737-7_WIPER_RIGHT_HIGH_POS_SW": {
+		"method": "calcCode",
+		"code": "30 (L:switch_109_73X) - 10 div s0\n:1\nl0 0 > if{ 10907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 10908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_LEFT_OFF_POS_SW": {
+		"method": "calcCode",
+		"code": "0 (L:switch_255_73X) - 10 div s0\n:1\nl0 0 > if{ 25507 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_LEFT_ALIGN_POS_SW": {
+		"method": "calcCode",
+		"code": "10 (L:switch_255_73X) - 10 div s0\n:1\nl0 0 > if{ 25507 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_LEFT_NAV_POS_SW": {
+		"method": "calcCode",
+		"code": "20 (L:switch_255_73X) - 10 div s0\n:1\nl0 0 > if{ 25507 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_LEFT_ATT_POS_SW": {
+		"method": "calcCode",
+		"code": "30 (L:switch_255_73X) - 10 div s0\n:1\nl0 0 > if{ 25507 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_RIGHT_OFF_POS_SW": {
+		"method": "calcCode",
+		"code": "0 (L:switch_256_73X) - 10 div s0\n:1\nl0 0 > if{ 25607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_RIGHT_ALIGN_POS_SW": {
+		"method": "calcCode",
+		"code": "10 (L:switch_256_73X) - 10 div s0\n:1\nl0 0 > if{ 25607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_RIGHT_NAV_POS_SW": {
+		"method": "calcCode",
+		"code": "20 (L:switch_256_73X) - 10 div s0\n:1\nl0 0 > if{ 25607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.Input.PMDG_B737-7_IRS_RIGHT_ATT_POS_SW": {
+		"method": "calcCode",
+		"code": "30 (L:switch_256_73X) - 10 div s0\n:1\nl0 0 > if{ 25607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 25608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_LEFT_ROTARY_SWITCH_GRD_POS": {
+		"method": "calcCode",
+		"code": "0 (L:switch_119_73X) - 10 div s0\n:1\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_LEFT_ROTARY_SWITCH_OFF_POS": {
+		"method": "calcCode",
+		"code": "10 (L:switch_119_73X) - 10 div s0\n:1\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_LEFT_ROTARY_SWITCH_CONT_POS": {
+		"method": "calcCode",
+		"code": "20 (L:switch_119_73X) - 10 div s0\n:1\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_LEFT_ROTARY_SWITCH_FLT_POS": {
+		"method": "calcCode",
+		"code": "30 (L:switch_119_73X) - 10 div s0\n:1\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_RIGHT_ROTARY_SWITCH_GRD_POS": {
+		"method": "calcCode",
+		"code": "0 (L:switch_121_73X) - 10 div s0\n:1\nl0 0 > if{ 12107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 12108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_RIGHT_ROTARY_SWITCH_OFF_POS": {
+		"method": "calcCode",
+		"code": "10 (L:switch_121_73X) - 10 div s0\n:1\nl0 0 > if{ 12107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 12108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_RIGHT_ROTARY_SWITCH_CONT_POS": {
+		"method": "calcCode",
+		"code": "20 (L:switch_121_73X) - 10 div s0\n:1\nl0 0 > if{ 12107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 12108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737-7_ENGINE_START_RIGHT_ROTARY_SWITCH_FLT_POS": {
+		"method": "calcCode",
+		"code": "30 (L:switch_121_73X) - 10 div s0\n:1\nl0 0 > if{ 12107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 12108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_GRD_PWR_OFF_POS_SW": {
+		"method": "calcCode",
+		"code": "1702 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_GRD_PWR_ON_POS_SW": {
+		"method": "calcCode",
+		"code": "1701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_ANTISKID_RTO_POS_SW": {
+		"method": "calcCode",
+		"code": "0 (L:switch_460_73X) - 10 div s0\n:1\nl0 0 > if{ 46007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_ANTISKID_OFF_POS_SW": {
+		"method": "calcCode",
+		"code": "10 (L:switch_460_73X) - 10 div s0\n:1\nl0 0 > if{ 46007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_ANTISKID_1_POS_SW": {
+		"method": "calcCode",
+		"code": "20 (L:switch_460_73X) - 10 div s0\n:1\nl0 0 > if{ 46007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_ANTISKID_2_POS_SW": {
+		"method": "calcCode",
+		"code": "30 (L:switch_460_73X) - 10 div s0\n:1\nl0 0 > if{ 46007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_ANTISKID_3_POS_SW": {
+		"method": "calcCode",
+		"code": "40 (L:switch_460_73X) - 10 div s0\n:1\nl0 0 > if{ 46007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_ANTISKID_MAX_POS_SW": {
+		"method": "calcCode",
+		"code": "50 (L:switch_460_73X) - 10 div s0\n:1\nl0 0 > if{ 46007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_N1_LIMIT_SWITCH": {
+		"method": "calcCode",
+		"code": "38101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_CWS_A_SWITCH": {
+		"method": "calcCode",
+		"code": "40401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_CWS_B_SWITCH": {
+		"method": "calcCode",
+		"code": "40501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_CMD_A_SWITCH": {
+		"method": "calcCode",
+		"code": "40201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_CMD_B_SWITCH": {
+		"method": "calcCode",
+		"code": "40301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_AUTOPILOT_DISENGAGE_SWITCH": {
+		"method": "calcCode",
+		"code": "40601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_SPD_INTV_BUTTON": {
+		"method": "calcCode",
+		"code": "38701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_CUT_OFF_LEVER1_UP": {
+		"method": "calcCode",
+		"code": "(L:switch_688_73X) 100 == if{ 68801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_CUT_OFF_LEVER1_DN": {
+		"method": "calcCode",
+		"code": "(L:switch_688_73X) 0 == if{ 68801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_CUT_OFF_LEVER2_UP": {
+		"method": "calcCode",
+		"code": "(L:switch_689_73X) 100 == if{ 68901 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_CUT_OFF_LEVER2_DN": {
+		"method": "calcCode",
+		"code": "(L:switch_689_73X) 0 == if{ 68901 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737-7_MCP_C/O_BUTTON": {
+		"method": "calcCode",
+		"code": "38301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737-7_MCP_ALT_INTV_BUTTON": {
+		"method": "calcCode",
+		"code": "88501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG_B737_AUTOBRAKE_DISARM_IND": {
+		"method": "calcCode",
+		"code": "(L:switch_459_73X, number) 10 *"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737_BATT_ON_OFF_SWITCH": {
+		"method": "calcCode",
+		"code": "101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737_BATT_GUARD_SWITCH": {
+		"method": "calcCode",
+		"code": "201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_LOGO_TOGGLE": {
+		"method": "calcCode",
+		"code": "12201  (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_ANTI_COLLISION_TOGGLE": {
+		"method": "calcCode",
+		"code": "12401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_TAXI_TOGGLE": {
+		"method": "calcCode",
+		"code": "11701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_L_TOGGLE": {
+		"method": "calcCode",
+		"code": "11501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_R_TOGGLE": {
+		"method": "calcCode",
+		"code": "11601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_WING_TOGGLE": {
+		"method": "calcCode",
+		"code": "12501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_CPT_RANGE_DEC": {
+		"method": "calcCode",
+		"code": "36108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_CPT_RANGE_INC": {
+		"method": "calcCode",
+		"code": "36107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Output.PMDG_B737_BATTERY_GUARD_POSITION": {
+		"method": "calcCode",
+		"code": "(L:switch_02_73X, number)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_WHEEL_WELL_TOGGLE": {
+		"method": "calcCode",
+		"code": "12601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_L_TOGGLE": {
+		"method": "calcCode",
+		"code": "11301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_R_TOGGLE": {
+		"method": "calcCode",
+		"code": "11401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_BOTH_TOGGLE": {
+		"method": "calcCode",
+		"code": "11301 (>K:ROTOR_BRAKE)\n11401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_BOTH_TOGGLE": {
+		"method": "calcCode",
+		"code": "11501 (>K:ROTOR_BRAKE)\n11601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_ALL_ON": {
+		"method": "calcCode",
+		"code": "11001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_ALL_OFF": {
+		"method": "calcCode",
+		"code": "11002 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_TAXI_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_117_73X, number) == if{ 11701 (>K:ROTOR_BRAKE) } "
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_TAXI_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_117_73X, number) == if{ 11701 (>K:ROTOR_BRAKE) } "
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_LOGO_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_122_73X, number) == if{ 12201 (>K:ROTOR_BRAKE) } "
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_LOGO_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_122_73X, number) == if{ 12201 (>K:ROTOR_BRAKE) } "
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_ANTI_COLLISION_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_124_73X, number) == if{ 12401 (>K:ROTOR_BRAKE) } "
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_ANTI_COLLISION_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_124_73X, number) == if{ 12401 (>K:ROTOR_BRAKE) } "
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_WHEEL_WELL_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_126_73X, number) == if{ 12601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_WHEEL_WELL_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_126_73X, number) == if{ 12601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_WING_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_125_73X, number) == if{ 12501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_WING_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_125_73X, number) == if{ 12501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_L_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_115_73X, number) == if{ 11501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_R_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_116_73X, number) == if{ 11601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_L_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_115_73X, number) == if{ 11501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_R_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_116_73X, number) == if{ 11601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_BOTH_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_115_73X, number) == if{ 11501 (>K:ROTOR_BRAKE) }\n0 (L:switch_116_73X, number) == if{ 11601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RUNWAY_BOTH_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_115_73X, number) == if{ 11501 (>K:ROTOR_BRAKE) }\n100 (L:switch_116_73X, number) == if{ 11601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_L_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_113_73X, number) == if{ 11301 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_R_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_114_73X, number) == if{ 11401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_BOTH_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_113_73X, number) == if{ 11301 (>K:ROTOR_BRAKE) }\n0 (L:switch_114_73X, number) == if{ 11401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_L_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_113_73X, number) == if{ 11301 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_R_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_114_73X, number) == if{ 11401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_FIXED_LANDING_BOTH_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_113_73X, number) == if{ 11301 (>K:ROTOR_BRAKE) }\n100 (L:switch_114_73X, number) == if{ 11401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_L_EXTENDED": {
+		"method": "calcCode",
+		"code": "(L:switch_111_73X, number) s0 \nl0 0 == if{ 11101 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 11102 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_R_EXTENDED": {
+		"method": "calcCode",
+		"code": "(L:switch_112_73X, number) s0 \nl0 0 == if{ 11201 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 11202 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_BOTH_EXTENDED": {
+		"method": "calcCode",
+		"code": "(L:switch_111_73X, number) s0\n(L:switch_112_73X, number) s1\nl0 0 == if{ 11101 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 11102 (>K:ROTOR_BRAKE) }\nl1 0 == if{ 11201 (>K:ROTOR_BRAKE) }\nl1 100  == if{ 11202 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_L_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_111_73X, number) s0\nl0 50 == if{ 11102 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 11102 (>K:ROTOR_BRAKE) 11102 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_R_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_112_73X, number) s0\nl0 50 == if{ 11202 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 11202 (>K:ROTOR_BRAKE) 11202 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_BOTH_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_111_73X, number) s0\n(L:switch_112_73X, number) s1\nl0 50 == if{ 11102 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 11102 (>K:ROTOR_BRAKE) 11102 (>K:ROTOR_BRAKE) }\nl1 50 == if{ 11202 (>K:ROTOR_BRAKE) }\nl1 100  == if{ 11202 (>K:ROTOR_BRAKE) 11202 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_L_ON": {
+		"method": "calcCode",
+		"code": "(L:switch_111_73X, number) s0\nl0 50 == if{ 11101 (>K:ROTOR_BRAKE) }\nl0 0  == if{ 11101 (>K:ROTOR_BRAKE) 11101 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_R_ON": {
+		"method": "calcCode",
+		"code": "(L:switch_112_73X, number) s0\nl0 50 == if{ 11201 (>K:ROTOR_BRAKE) }\nl0 0  == if{ 11201 (>K:ROTOR_BRAKE) 11201 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_RETRACTABLE_LANDING_BOTH_ON": {
+		"method": "calcCode",
+		"code": "(L:switch_111_73X, number) s0\n(L:switch_112_73X, number) s1\nl0 50 == if{ 11101 (>K:ROTOR_BRAKE) }\nl0 0  == if{ 11101 (>K:ROTOR_BRAKE) 11101 (>K:ROTOR_BRAKE) }\nl1 50 == if{ 11201 (>K:ROTOR_BRAKE) }\nl1 0  == if{ 11201 (>K:ROTOR_BRAKE) 11201 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_POSITION_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_123_73X, number) s0 \nl0 0 == if{ 12301 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 12302 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_POSITION_STEADY": {
+		"method": "calcCode",
+		"code": "(L:switch_123_73X, number) s0\nl0 50 == if{ 12301 (>K:ROTOR_BRAKE) }\nl0 0  == if{ 12301 (>K:ROTOR_BRAKE) 12301 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_POSITION_STROBE": {
+		"method": "calcCode",
+		"code": "(L:switch_123_73X, number) s0\nl0 50 == if{ 12302 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 12302 (>K:ROTOR_BRAKE) 12302 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_INTERIOR_DOME_WHITE_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_258_73X, number) s0 \nl0 0 == if{ 25801 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 25802 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_INTERIOR_DOME_WHITE_BRIGHT": {
+		"method": "calcCode",
+		"code": "(L:switch_258_73X, number) s0\nl0 50 == if{ 25801 (>K:ROTOR_BRAKE) }\nl0 0  == if{ 25801 (>K:ROTOR_BRAKE) 25801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG_B737-7_LIGHTS_INTERIOR_DOME_WHITE_DIM": {
+		"method": "calcCode",
+		"code": "(L:switch_258_73X, number) s0\nl0 50 == if{ 25802 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 25802 (>K:ROTOR_BRAKE) 25802 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_A_ENG_1_TOGGLE": {
+		"method": "calcCode",
+		"code": "16501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_B_ENG_2_TOGGLE": {
+		"method": "calcCode",
+		"code": "16601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_A_ELEC_2_TOGGLE": {
+		"method": "calcCode",
+		"code": "16701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_B_ELEC_1_TOGGLE": {
+		"method": "calcCode",
+		"code": "16801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_A_ENG_1_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_165_73X, number) == if{ 16501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_B_ENG_2_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_166_73X, number) == if{ 16601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_A_ELEC_2_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_167_73X, number) == if{ 16701 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_B_ELEC_1_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_168_73X, number) == if{ 16801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_A_ENG_1_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_165_73X, number) == if{ 16502 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_B_ENG_2_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_166_73X, number) == if{ 16602 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_A_ELEC_2_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_167_73X, number) == if{ 16702 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Hydraulic.Input.PMDG_B737-7_HYDRAULIC_PUMP_B_ELEC_1_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_168_73X, number) == if{ 16802 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Flight Controls.Input.PMDG_B737-7_FLT_CONTROL_YAW_DAMPER_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_63_73X, number) == if{ 6301 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Flight Controls.Input.PMDG_B737-7_FLT_CONTROL_YAW_DAMPER_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_63_73X, number) == if{ 6302 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Flight Controls.Input.PMDG_B737-7_FLT_CONTROL_YAW_DAMPER_TOGGLE": {
+		"method": "calcCode",
+		"code": "6301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WING_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_156_73X, number) == if{ 15601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WING_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_156_73X, number) == if{ 15602 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WING_TOGGLE": {
+		"method": "calcCode",
+		"code": "15601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_APU_OFF_POS_SW": {
+		"method": "calcCode",
+		"code": "50 (L:switch_118_73X) - 10 div == if{ 11802 (>K:ROTOR_BRAKE) (SLEEP:500) } "
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_APU_ON_POS_SW": {
+		"method": "calcCode",
+		"code": "(L:switch_118_73X) 10 div == if{ 11801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_APU_START_POS_SW": {
+		"method": "calcCode",
+		"code": "50 (L:switch_118_73X) - 10 div == if{ 11801 (>K:ROTOR_BRAKE) } els{ 11801 (>K:ROTOR_BRAKE) (SLEEP:500) 11801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_ENG_1_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_157_73X, number) == if{ 15701 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_ENG_1_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_157_73X, number) == if{ 15702 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_ENG_1_TOGGLE": {
+		"method": "calcCode",
+		"code": "15701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_ENG_2_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_158_73X, number) == if{ 15801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_ENG_2_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_158_73X, number) == if{ 15802 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_ENG_2_TOGGLE": {
+		"method": "calcCode",
+		"code": "15801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_AFT_LEFT_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_37_73X, number) == if{ 3701 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_FWD_LEFT_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_38_73X, number) == if{ 3801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_FWD_RIGHT_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_39_73X, number) == if{ 3901 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_AFT_RIGHT_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_40_73X, number) == if{ 4001 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_CTR_L_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_45_73X, number) == if{ 4501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_CTR_R_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_46_73X, number) == if{ 4601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_AFT_LEFT_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_37_73X, number) == if{ 3702 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_FWD_LEFT_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_38_73X, number) == if{ 3802 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_FWD_RIGHT_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_39_73X, number) == if{ 3902 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_AFT_RIGHT_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_40_73X, number) == if{ 4002 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_CTR_L_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_45_73X, number) == if{ 4502 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_PUMP_CTR_R_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_46_73X, number) == if{ 4602 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_GALLEY_POWER_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_974_73X, number) == if{ 97401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_GALLEY_POWER_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_974_73X, number) == if{ 97402 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_GALLEY_POWER_TOGGLE": {
+		"method": "calcCode",
+		"code": "97401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_PROBE_A_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_140_73X, number) == if{ 14001 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_PROBE_A_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_140_73X, number) == if{ 14002 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_PROBE_A_TOGGLE": {
+		"method": "calcCode",
+		"code": "14001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_PROBE_B_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_141_73X, number) == if{ 14101 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_PROBE_B_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_141_73X, number) == if{ 14102 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_PROBE_B_TOGGLE": {
+		"method": "calcCode",
+		"code": "14101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_SIDE_L_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_135_73X, number) == if{ 13501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_SIDE_L_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_135_73X, number) == if{ 13502 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_SIDE_L_TOGGLE": {
+		"method": "calcCode",
+		"code": "13501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_FWD_L_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_136_73X, number) == if{ 13601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_FWD_L_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_136_73X, number) == if{ 13602 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_FWD_L_TOGGLE": {
+		"method": "calcCode",
+		"code": "13601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_FWD_R_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_138_73X, number) == if{ 13801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_FWD_R_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_138_73X, number) == if{ 13802 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_FWD_R_TOGGLE": {
+		"method": "calcCode",
+		"code": "13801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_SIDE_R_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_139_73X, number) == if{ 13901 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_SIDE_R_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_139_73X, number) == if{ 13902 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_SIDE_R_TOGGLE": {
+		"method": "calcCode",
+		"code": "13901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_TEST_OVTH": {
+		"method": "calcCode",
+		"code": "13702 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.Input.PMDG_B737-7_ANTI_ICE_WINDOW_HEAT_TEST_POWER": {
+		"method": "calcCode",
+		"code": "13701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ENG_BLEED_1_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_210_73X, number) == if{ 21001 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ENG_BLEED_1_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_210_73X, number) == if{ 21002 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ENG_BLEED_1_TOGGLE": {
+		"method": "calcCode",
+		"code": "21001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ENG_BLEED_2_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_212_73X, number) == if{ 21201 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ENG_BLEED_2_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_212_73X, number) == if{ 21202 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ENG_BLEED_2_TOGGLE": {
+		"method": "calcCode",
+		"code": "21201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_APU_BLEED_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_211_73X, number) == if{ 21101 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_APU_BLEED_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_211_73X, number) == if{ 21102 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_APU_BLEED_TOGGLE": {
+		"method": "calcCode",
+		"code": "21101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_RECIRC_FAN_AUTO": {
+		"method": "calcCode",
+		"code": "0 (L:switch_196_73X, number) == if{ 19601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_RECIRC_FAN_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_196_73X, number) == if{ 19602 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_RECIRC_FAN_TOGGLE": {
+		"method": "calcCode",
+		"code": "19601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Passengers/Crew.Input.PMDG_B737-7_MISCELLANEOUS_NO_SMOKING_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_103_73X, number) == if{ 10301 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Passengers/Crew.Input.PMDG_B737-7_MISCELLANEOUS_NO_SMOKING_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_103_73X, number) == if{ 10302 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Passengers/Crew.Input.PMDG_B737-7_MISCELLANEOUS_NO_SMOKING_TOGGLE": {
+		"method": "calcCode",
+		"code": "10301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG_B737-7_SAFETY_FASTEN_BELTS_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_104_73X, number) s0\nl0 50 == if{ 10402 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 10402 (>K:ROTOR_BRAKE) 10402 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG_B737-7_SAFETY_FASTEN_BELTS_AUTO": {
+		"method": "calcCode",
+		"code": "(L:switch_104_73X, number) s0 \nl0 0 == if{ 10401 (>K:ROTOR_BRAKE) }\nl0 100  == if{ 10402 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG_B737-7_SAFETY_FASTEN_BELTS_ON": {
+		"method": "calcCode",
+		"code": "(L:switch_104_73X, number) s0\nl0 50 == if{ 10401 (>K:ROTOR_BRAKE) }\nl0 0  == if{ 10401 (>K:ROTOR_BRAKE) 10401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_CROSSFEED_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_49_73X, number) == if{ 4901 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_CROSSFEED_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_49_73X, number) == if{ 4902 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Fuel.Input.PMDG_B737-7_FUEL_CROSSFEED_TOGGLE": {
+		"method": "calcCode",
+		"code": "4901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autothrust System.Input.PMDG_B737-7_AUTOTHRUST_TOGA_L_BTN": {
+		"method": "calcCode",
+		"code": "68401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autothrust System.Input.PMDG_B737-7_AUTOTHRUST_TOGA_R_BTN": {
+		"method": "calcCode",
+		"code": "68701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Passengers/Crew.Input.PMDG_B737-7_MISCELLANEOUS_ATTENDANT_CALL_BTN": {
+		"method": "calcCode",
+		"code": "10501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_GEN1_ON": {
+		"method": "calcCode",
+		"code": "2701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_GEN1_OFF": {
+		"method": "calcCode",
+		"code": "2702 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_APU_GEN1_ON": {
+		"method": "calcCode",
+		"code": "2801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_APU_GEN1_OFF": {
+		"method": "calcCode",
+		"code": "2802 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_APU_GEN2_ON": {
+		"method": "calcCode",
+		"code": "2901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_APU_GEN2_OFF": {
+		"method": "calcCode",
+		"code": "2902 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_GEN2_ON": {
+		"method": "calcCode",
+		"code": "3001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG_B737-7_ELECTRICAL_GEN2_OFF": {
+		"method": "calcCode",
+		"code": "3002 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_PACK_L_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_200_73X, number) s0\nl0 50 == if{ 20002 (>K:ROTOR_BRAKE) }\nl0 100 == if{ 20002 (>K:ROTOR_BRAKE) 20002 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_PACK_L_AUTO": {
+		"method": "calcCode",
+		"code": "(L:switch_200_73X, number) s0 \nl0 0 == if{ 20001 (>K:ROTOR_BRAKE) }\nl0 100 == if{ 20002 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_PACK_L_HIGH": {
+		"method": "calcCode",
+		"code": "(L:switch_200_73X, number) s0\nl0 50 == if{ 20001 (>K:ROTOR_BRAKE) }\nl0 0 == if{ 20001 (>K:ROTOR_BRAKE) 20001 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_PACK_R_OFF": {
+		"method": "calcCode",
+		"code": "(L:switch_201_73X, number) s0\nl0 50 == if{ 20102 (>K:ROTOR_BRAKE) }\nl0 100 == if{ 20102 (>K:ROTOR_BRAKE) 20102 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_PACK_R_AUTO": {
+		"method": "calcCode",
+		"code": "(L:switch_201_73X, number) s0 \nl0 0 == if{ 20101 (>K:ROTOR_BRAKE) }\nl0 100 == if{ 20102 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_PACK_R_HIGH": {
+		"method": "calcCode",
+		"code": "(L:switch_201_73X, number) s0\nl0 50 == if{ 20101 (>K:ROTOR_BRAKE) }\nl0 0 == if{ 20101 (>K:ROTOR_BRAKE) 20101 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ISOLATION_VALVE_CLOSE": {
+		"method": "calcCode",
+		"code": "(L:switch_202_73X, number) s0\nl0 50 == if{ 20202 (>K:ROTOR_BRAKE) }\nl0 100 == if{ 20202 (>K:ROTOR_BRAKE) 20202 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ISOLATION_VALVE_AUTO": {
+		"method": "calcCode",
+		"code": "(L:switch_202_73X, number) s0 \nl0 0 == if{ 20201 (>K:ROTOR_BRAKE) }\nl0 100 == if{ 20202 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Pneumatic.Input.PMDG_B737-7_PNEUMATIC_ISOLATION_VALVE_OPEN": {
+		"method": "calcCode",
+		"code": "(L:switch_202_73X, number) s0\nl0 50 == if{ 20201 (>K:ROTOR_BRAKE) }\nl0 0 == if{ 20201 (>K:ROTOR_BRAKE) 20201 (>K:ROTOR_BRAKE) }"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_VNAV_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 17 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_VERTSPD_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 15 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_VERTSPD_DEC_KNOB": {
+		"method": "calcCode",
+		"code": "16384 14 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_VERTSPD_INC_KNOB": {
+		"method": "calcCode",
+		"code": "8192 14 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_IASMACH_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 16 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_ALT_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 23 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_SPDSEL_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 6 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_SPD_INC_KNOB": {
+		"method": "calcCode",
+		"code": "16384 6 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_SPD_DEC_KNOB": {
+		"method": "calcCode",
+		"code": "8192 6 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.MD82_FMA_AUTOPILOT_LED": {
+		"method": "calcCode",
+		"code": "(L:CM1_fma_adv11, bool)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.MD82_FMA_CM1_FD_LED": {
+		"method": "calcCode",
+		"code": "(L:CM1_fma_adv10, bool)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.MD82_FMA_CM2_FD_LED": {
+		"method": "calcCode",
+		"code": "(L:CM2_fma_adv10, bool)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_HDG_DEC_KNOB": {
+		"method": "calcCode",
+		"code": "8192 13 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_HDG_INC_KNOB": {
+		"method": "calcCode",
+		"code": "16384 13 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_ALT_INC_KNOB": {
+		"method": "calcCode",
+		"code": "16384 23 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_ALT_DEC_KNOB": {
+		"method": "calcCode",
+		"code": "8192 23 + (>L:fgcp_event,number)"
+	},
+	"Just Flight.Piper Arrow III.Miscellaneous.Input.Timer mode": {
+		"method": "calcCode",
+		"code": "Press  = 1  (>L:YOKE_mode)  Release = 0  (>L:YOKE_mode)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).Must delete": {
+		"method": "calcCode",
+		"code": ""
+	},
+	"PMDG.B737-700.Warning System.Output.PMDG_B737_MASTER_CAUTION_YELLOW_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_3481_73X, number) 2 *"
+	},
+	"PMDG.B737-700.Warning System.Output.PMDG_B737_MASTER_WARNING_RED_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_3471_73X, number) 2 *"
+	},
+	"PMDG.B737-700.Warning System.Input.PMDG_B737_MASTER_CAUTION_YELLOW_SWITCH": {
+		"method": "calcCode",
+		"code": "34801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning System.Input.PMDG_B737_MASTER_WARNING_FIRE_RED_SWITCH": {
+		"method": "calcCode",
+		"code": "34701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_TRANSPONDER_MODE_CHANGE_ENCODER_DEC": {
+		"method": "calcCode",
+		"code": "80008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_TRANSPONDER_MODE_CHANGE_ENCODER_INC": {
+		"method": "calcCode",
+		"code": "80007 (>K:ROTOR_BRAKE)"
+	},
+	"Leonardo.MadDog MD-82.Fuel.Input.MD82_PED_FUELCUT_LEVER1_ON": {
+		"method": "calcCode",
+		"code": "536870912 11 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Fuel.Input.MD82_PED_FUELCUT_LEVER1_OFF": {
+		"method": "calcCode",
+		"code": "2147483648 11 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Fuel.Input.MD82_PED_FUELCUT_LEVER2_ON": {
+		"method": "calcCode",
+		"code": "536870912 12 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Fuel.Input.MD82_PED_FUELCUT_LEVER2_OFF": {
+		"method": "calcCode",
+		"code": "2147483648 12 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Flight Instrumentation.Output.MD_82_ACTUAL_AIRSPEED_INDICATED": {
+		"method": "calcCode",
+		"code": "(A:AIRSPEED INDICATED,Knots)"
+	},
+	"Leonardo.MadDog MD-82.Flight Instrumentation.Output.MD_82_ACTUAL_HEADING": {
+		"method": "calcCode",
+		"code": "(A:HEADING INDICATOR,Degrees)"
+	},
+	"Leonardo.MadDog MD-82.Flight Instrumentation.Output.MD_82_ACTUAL_ALTITUDE": {
+		"method": "calcCode",
+		"code": "(A:INDICATED ALTITUDE,Feet)"
+	},
+	"Leonardo.MadDog MD-82.Gear.Input.MD82_PED_GEAR_HORN_SW_RELEASE": {
+		"method": "calcCode",
+		"code": "131072 17 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Gear.Input.MD82_PED_GEAR_HORN_SW_PUSH": {
+		"method": "calcCode",
+		"code": "536870912 17 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_HDG_PULL_KNOB": {
+		"method": "calcCode",
+		"code": "536870912 13 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input (Potentiometer).MD82_FGCP_HDG_PUSH_KNOB": {
+		"method": "calcCode",
+		"code": "2147483648 13 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.MD_82_AUTOPILOT_TARGET_AIRSPEED": {
+		"method": "calcCode",
+		"code": "(L:CM1_asi_needle3)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_ALTHOLD_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 18 + (>L:fgcp_event, number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_SPD_KNOB_PUSH": {
+		"method": "calcCode",
+		"code": "536870912 6 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD_82_YOKE_AP_DISC": {
+		"method": "calcCode",
+		"code": "536870912 8 + (>L:cockpit_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autothrust System.Input.MD82_PED_THROTTLE1_SWITCH": {
+		"method": "calcCode",
+		"code": "536870912 9 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autothrust System.Input.MD82_PED_THROTTLE2_SWITCH": {
+		"method": "calcCode",
+		"code": "#536870912 28 + (>L:pedestal_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM1_NOSELIGHT_SWITCH_DN": {
+		"method": "calcCode",
+		"code": "8192 2 + (>L:ext_lights_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM1_NOSELIGHT_SWITCH_UP": {
+		"method": "calcCode",
+		"code": "16384 2 + (>L:ext_lights_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM1_WINGLIGHTL_SWITCH_DN": {
+		"method": "calcCode",
+		"code": "536870912 0 + (>L:ext_lights_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM1_WINGLIGHTL_SWITCH_UP": {
+		"method": "calcCode",
+		"code": "2147483648 0 + (>L:ext_lights_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM1_WINGLIGHTR_SWITCH_DN": {
+		"method": "calcCode",
+		"code": "536870912 1 + (>L:ext_lights_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM1_WINGLIGHTR_SWITCH_UP": {
+		"method": "calcCode",
+		"code": "2147483648 1 + (>L:ext_lights_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM2_STROBE_SWITCH1_DN": {
+		"method": "calcCode",
+		"code": "536870912 7 + (>L:ext_lights_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_CM2_STROBE_SWITCH1_UP": {
+		"method": "calcCode",
+		"code": "2147483648 7 + (>L:ext_lights_event,number)"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Autobrake Inop Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_4611_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 LE Flaps Extended Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_456_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 LE Flaps Transit Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_457_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Nose Gear Safe Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_450_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Left Gear Safe Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_453_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Right Gear Safe Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_454_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Nose Gear Unsafe Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_449_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Left Gear Unsafe Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_451_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Right Gear Unsafe Indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_452_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 Autopilot A/T Arm Light": {
+		"method": "calcCode",
+		"code": "(L:switch_3801_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Spotlight Capt Knob Inc": {
+		"method": "calcCode",
+		"code": "201507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Spotlight Capt Knob Dec": {
+		"method": "calcCode",
+		"code": "201508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 1": {
+		"method": "calcCode",
+		"code": "53401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 2": {
+		"method": "calcCode",
+		"code": "53501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 3": {
+		"method": "calcCode",
+		"code": "53601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 4": {
+		"method": "calcCode",
+		"code": "53701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 5": {
+		"method": "calcCode",
+		"code": "53801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 6": {
+		"method": "calcCode",
+		"code": "53901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 7": {
+		"method": "calcCode",
+		"code": "54001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 8": {
+		"method": "calcCode",
+		"code": "54101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 9": {
+		"method": "calcCode",
+		"code": "54201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 10": {
+		"method": "calcCode",
+		"code": "54301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 11": {
+		"method": "calcCode",
+		"code": "54401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LS 12": {
+		"method": "calcCode",
+		"code": "54501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left INIT REF": {
+		"method": "calcCode",
+		"code": "54601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left RTE": {
+		"method": "calcCode",
+		"code": "54701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left CLB": {
+		"method": "calcCode",
+		"code": "54801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left CRZ": {
+		"method": "calcCode",
+		"code": "54901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left DES": {
+		"method": "calcCode",
+		"code": "55001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left MENU": {
+		"method": "calcCode",
+		"code": "55101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left LEGS": {
+		"method": "calcCode",
+		"code": "55201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left DEP ARR": {
+		"method": "calcCode",
+		"code": "55301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left HOLD": {
+		"method": "calcCode",
+		"code": "55401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left PROG": {
+		"method": "calcCode",
+		"code": "55501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left EXEC": {
+		"method": "calcCode",
+		"code": "55601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left N1 LIMIT": {
+		"method": "calcCode",
+		"code": "55701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left FIX": {
+		"method": "calcCode",
+		"code": "55801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left PREV PAGE": {
+		"method": "calcCode",
+		"code": "55901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NEXT PAGE": {
+		"method": "calcCode",
+		"code": "56001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 1": {
+		"method": "calcCode",
+		"code": "56101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 2": {
+		"method": "calcCode",
+		"code": "56201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 3": {
+		"method": "calcCode",
+		"code": "56301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 4": {
+		"method": "calcCode",
+		"code": "56401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 5": {
+		"method": "calcCode",
+		"code": "56501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 6": {
+		"method": "calcCode",
+		"code": "56601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 7": {
+		"method": "calcCode",
+		"code": "56701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 8": {
+		"method": "calcCode",
+		"code": "56801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 9": {
+		"method": "calcCode",
+		"code": "56901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left DECIMAL": {
+		"method": "calcCode",
+		"code": "57001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left NUM 0": {
+		"method": "calcCode",
+		"code": "57101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left +/-": {
+		"method": "calcCode",
+		"code": "57201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left A": {
+		"method": "calcCode",
+		"code": "57301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left B": {
+		"method": "calcCode",
+		"code": "57401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left C": {
+		"method": "calcCode",
+		"code": "57501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left D": {
+		"method": "calcCode",
+		"code": "57601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left E": {
+		"method": "calcCode",
+		"code": "57701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left F": {
+		"method": "calcCode",
+		"code": "57801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left G": {
+		"method": "calcCode",
+		"code": "57901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left H": {
+		"method": "calcCode",
+		"code": "58001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left I": {
+		"method": "calcCode",
+		"code": "58101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left J": {
+		"method": "calcCode",
+		"code": "58201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left K": {
+		"method": "calcCode",
+		"code": "58301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left L": {
+		"method": "calcCode",
+		"code": "58401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left M": {
+		"method": "calcCode",
+		"code": "58501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left N": {
+		"method": "calcCode",
+		"code": "58601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left O": {
+		"method": "calcCode",
+		"code": "58701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left P": {
+		"method": "calcCode",
+		"code": "58801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left Q": {
+		"method": "calcCode",
+		"code": "58901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left R": {
+		"method": "calcCode",
+		"code": "59001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left S": {
+		"method": "calcCode",
+		"code": "59101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left T": {
+		"method": "calcCode",
+		"code": "59201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left U": {
+		"method": "calcCode",
+		"code": "59301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left V": {
+		"method": "calcCode",
+		"code": "59401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left W": {
+		"method": "calcCode",
+		"code": "59501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left X": {
+		"method": "calcCode",
+		"code": "59601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left Y": {
+		"method": "calcCode",
+		"code": "59701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left Z": {
+		"method": "calcCode",
+		"code": "59801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left SP": {
+		"method": "calcCode",
+		"code": "59901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left DEL": {
+		"method": "calcCode",
+		"code": "60001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left /": {
+		"method": "calcCode",
+		"code": "60101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left CLR": {
+		"method": "calcCode",
+		"code": "60201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left BRT Inc": {
+		"method": "calcCode",
+		"code": "60501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Left BRT Dec": {
+		"method": "calcCode",
+		"code": "60502 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 1": {
+		"method": "calcCode",
+		"code": "60601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 2": {
+		"method": "calcCode",
+		"code": "60701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 3": {
+		"method": "calcCode",
+		"code": "60801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 4": {
+		"method": "calcCode",
+		"code": "60901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 5": {
+		"method": "calcCode",
+		"code": "61001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 6": {
+		"method": "calcCode",
+		"code": "61101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 7": {
+		"method": "calcCode",
+		"code": "61201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 8": {
+		"method": "calcCode",
+		"code": "61301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 9": {
+		"method": "calcCode",
+		"code": "61401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 10": {
+		"method": "calcCode",
+		"code": "61501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 11": {
+		"method": "calcCode",
+		"code": "61601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LS 12": {
+		"method": "calcCode",
+		"code": "61701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right INIT REF": {
+		"method": "calcCode",
+		"code": "61801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right RTE": {
+		"method": "calcCode",
+		"code": "61901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right CLB": {
+		"method": "calcCode",
+		"code": "62001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right CRZ": {
+		"method": "calcCode",
+		"code": "62101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right DES": {
+		"method": "calcCode",
+		"code": "62201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right MENU": {
+		"method": "calcCode",
+		"code": "62301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right LEGS": {
+		"method": "calcCode",
+		"code": "62401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right DEP ARR": {
+		"method": "calcCode",
+		"code": "62501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right HOLD": {
+		"method": "calcCode",
+		"code": "62601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right PROG": {
+		"method": "calcCode",
+		"code": "62701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right EXEC": {
+		"method": "calcCode",
+		"code": "62801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right N1 LIMIT": {
+		"method": "calcCode",
+		"code": "62901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right FIX": {
+		"method": "calcCode",
+		"code": "63001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right PREV PAGE": {
+		"method": "calcCode",
+		"code": "63101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NEXT PAGE": {
+		"method": "calcCode",
+		"code": "63201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 1": {
+		"method": "calcCode",
+		"code": "63301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 2": {
+		"method": "calcCode",
+		"code": "63401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 3": {
+		"method": "calcCode",
+		"code": "63501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 4": {
+		"method": "calcCode",
+		"code": "63601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 5": {
+		"method": "calcCode",
+		"code": "63701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 6": {
+		"method": "calcCode",
+		"code": "63801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 7": {
+		"method": "calcCode",
+		"code": "63901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 8": {
+		"method": "calcCode",
+		"code": "64001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 9": {
+		"method": "calcCode",
+		"code": "64101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right DECIMAL": {
+		"method": "calcCode",
+		"code": "64201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right NUM 0": {
+		"method": "calcCode",
+		"code": "64301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right +/-": {
+		"method": "calcCode",
+		"code": "64401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right A": {
+		"method": "calcCode",
+		"code": "64501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right B": {
+		"method": "calcCode",
+		"code": "64601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right C": {
+		"method": "calcCode",
+		"code": "64701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right D": {
+		"method": "calcCode",
+		"code": "64801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right E": {
+		"method": "calcCode",
+		"code": "64901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right F": {
+		"method": "calcCode",
+		"code": "65001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right G": {
+		"method": "calcCode",
+		"code": "65101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right H": {
+		"method": "calcCode",
+		"code": "65201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right I": {
+		"method": "calcCode",
+		"code": "65301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right J": {
+		"method": "calcCode",
+		"code": "65401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right K": {
+		"method": "calcCode",
+		"code": "65501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right L": {
+		"method": "calcCode",
+		"code": "65601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right M": {
+		"method": "calcCode",
+		"code": "65701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right N": {
+		"method": "calcCode",
+		"code": "65801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right O": {
+		"method": "calcCode",
+		"code": "65901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right P": {
+		"method": "calcCode",
+		"code": "66001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right Q": {
+		"method": "calcCode",
+		"code": "66101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right R": {
+		"method": "calcCode",
+		"code": "66201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right S": {
+		"method": "calcCode",
+		"code": "66301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right T": {
+		"method": "calcCode",
+		"code": "66401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right U": {
+		"method": "calcCode",
+		"code": "66501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right V": {
+		"method": "calcCode",
+		"code": "66601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right W": {
+		"method": "calcCode",
+		"code": "66701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right X": {
+		"method": "calcCode",
+		"code": "66801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right Y": {
+		"method": "calcCode",
+		"code": "66901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right Z": {
+		"method": "calcCode",
+		"code": "67001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right SP": {
+		"method": "calcCode",
+		"code": "67101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right DEL": {
+		"method": "calcCode",
+		"code": "67201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right /": {
+		"method": "calcCode",
+		"code": "67301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right CLR": {
+		"method": "calcCode",
+		"code": "67401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right BRT Inc": {
+		"method": "calcCode",
+		"code": "67701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 FMS Right BRT Dec": {
+		"method": "calcCode",
+		"code": "67702 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_AUTOBRAKE_DEC": {
+		"method": "calcCode",
+		"code": "46008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_AUTOBRAKE_INC": {
+		"method": "calcCode",
+		"code": "46007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L MINS Slew Dec": {
+		"method": "calcCode",
+		"code": "35508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L MINS Slew Inc": {
+		"method": "calcCode",
+		"code": "35507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L MINS REF": {
+		"method": "calcCode",
+		"code": "35601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L MINS RST": {
+		"method": "calcCode",
+		"code": "35701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L VOR/ADF VOR1": {
+		"method": "calcCode",
+		"code": "0 (L:switch_358_73X) - 50 div s0\n:1\nl0 0 > if{ 35801 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 35802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L VOR/ADF OFF": {
+		"method": "calcCode",
+		"code": "50 (L:switch_358_73X) - 50 div s0\n:1\nl0 0 > if{ 35801 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 35802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L VOR/ADF ADF1": {
+		"method": "calcCode",
+		"code": "100 (L:switch_358_73X) - 50 div s0\n:1\nl0 0 > if{ 35801 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 35802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Mode APP": {
+		"method": "calcCode",
+		"code": "0 (L:switch_359_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 35907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 35908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Mode VOR": {
+		"method": "calcCode",
+		"code": "10 (L:switch_359_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 35907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 35908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Mode MAP": {
+		"method": "calcCode",
+		"code": "20 (L:switch_359_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 35907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 35908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Mode PLN": {
+		"method": "calcCode",
+		"code": "30 (L:switch_359_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 35907 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 35908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Mode Dec": {
+		"method": "calcCode",
+		"code": "35908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Mode Inc": {
+		"method": "calcCode",
+		"code": "35907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Mode CTR": {
+		"method": "calcCode",
+		"code": "36001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 5": {
+		"method": "calcCode",
+		"code": "0 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 10": {
+		"method": "calcCode",
+		"code": "10 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 20": {
+		"method": "calcCode",
+		"code": "20 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 40": {
+		"method": "calcCode",
+		"code": "30 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 80": {
+		"method": "calcCode",
+		"code": "40 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 160": {
+		"method": "calcCode",
+		"code": "50 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 320": {
+		"method": "calcCode",
+		"code": "60 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range 640": {
+		"method": "calcCode",
+		"code": "70 (L:switch_361_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 36107 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 36108 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range Inc": {
+		"method": "calcCode",
+		"code": "36107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L TFC": {
+		"method": "calcCode",
+		"code": "36201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L FPV": {
+		"method": "calcCode",
+		"code": "36301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L MTRS": {
+		"method": "calcCode",
+		"code": "36401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Range Dec": {
+		"method": "calcCode",
+		"code": "36108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L BARO Dec": {
+		"method": "calcCode",
+		"code": "36508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L BARO Inc": {
+		"method": "calcCode",
+		"code": "36507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L BARO IN HPA": {
+		"method": "calcCode",
+		"code": "36601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L BARO STD Press": {
+		"method": "calcCode",
+		"code": "36701 (>K:ROTOR_BRAKE)\n(L:mf_STD_Push,number) ! (>L:mf_STD_Push,number)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L VOR2/ADF2 VOR2": {
+		"method": "calcCode",
+		"code": "0 (L:switch_368_73X) - 50 div s0\n:1\nl0 0 > if{ 36801 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 36802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Map Btn WXR": {
+		"method": "calcCode",
+		"code": "36901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Map Btn STA": {
+		"method": "calcCode",
+		"code": "37001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Map Btn WPT": {
+		"method": "calcCode",
+		"code": "37101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Map Btn ARPT": {
+		"method": "calcCode",
+		"code": "37201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Map Btn DATA": {
+		"method": "calcCode",
+		"code": "37301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Map Btn POS": {
+		"method": "calcCode",
+		"code": "37401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS L Map Btn TERR": {
+		"method": "calcCode",
+		"code": "37501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS R Map Btn WXR": {
+		"method": "calcCode",
+		"code": "42501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS R Map Btn STA": {
+		"method": "calcCode",
+		"code": "42601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS R Map Btn WPT": {
+		"method": "calcCode",
+		"code": "42701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS R Map Btn ARPT": {
+		"method": "calcCode",
+		"code": "42801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS R Map Btn Data": {
+		"method": "calcCode",
+		"code": "42901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.PMDG B737 EFIS R Map Btn POS": {
+		"method": "calcCode",
+		"code": "43001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R Map Btn TERR": {
+		"method": "calcCode",
+		"code": "43101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.Input.PMDG B737 Flap Inhibit": {
+		"method": "calcCode",
+		"code": "50101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.Input.PMDG B737 Flap Inhibit Guard": {
+		"method": "calcCode",
+		"code": "50201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.Input.PMDG B737 Gear Inhibit": {
+		"method": "calcCode",
+		"code": "50301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.Input.PMDG B737 Gear Inhibit Guard": {
+		"method": "calcCode",
+		"code": "50401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.Input.PMDG B737 TERR Inhibit": {
+		"method": "calcCode",
+		"code": "50501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.Input.PMDG B737 TERR Inhibit Guard": {
+		"method": "calcCode",
+		"code": "50601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Output.PMDG_B737_LANDING_LIGHT_LEFT_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_113_73X,number) 100 /"
+	},
+	"PMDG.B737-700.Lights.Output.PMDG_B737_LANDING_RIGHT_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_114_73X, number) 100 /"
+	},
+	"PMDG.B737-700.Lights.Output.PMDG_B737_LEFT_RUNWAY_TURNOFF_LIGHT_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_115_73X, number) 100 /"
+	},
+	"PMDG.B737-700.Lights.Output.PMDG_B737_RIGHT_RUNWAY_TURNOFF_LIGHT_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_116_73X, number) 100 /"
+	},
+	"PMDG.B737-700.Lights.Output.PMDG_B737_TAXI_LIGHT_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_117_73X, number) 100 /"
+	},
+	"PMDG.B737-700.Anti-Ice.Output.PMDG_B737-7_ANTI_ICE_WING_LEFT _VALVE_ANNUNC": {
+		"method": "calcCode",
+		"code": "(L:switch_152_73X, number) 10 *"
+	},
+	"PMDG.B737-700.Anti-Ice.Output.PMDG_B737-7_ANTI_ICE_WING_RIGHT _VALVE_ANNUNC": {
+		"method": "calcCode",
+		"code": "(L:switch_153_73X, number) 10 *"
+	},
+	"PMDG.B737-700.Anti-Ice.Output.PMDG_B737-7_ANTI_ICE_ENG_LEFT _VALVE_ANNUNC": {
+		"method": "calcCode",
+		"code": "(L:switch_157_73X, number)"
+	},
+	"PMDG.B737-700.Anti-Ice.Output.PMDG_B737-7_ANTI_ICE_ENG_RIGHT _VALVE_ANNUNC": {
+		"method": "calcCode",
+		"code": "(L:switch_158_73X, number)"
+	},
+	"PMDG.B737-700.Autothrust System.Input.PMDG_B737-7_AUTOTHRUST_DISENGAGE": {
+		"method": "calcCode",
+		"code": "68201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_PARKING_BRAKE_ON": {
+		"method": "calcCode",
+		"code": "0 (L:switch_693_73X, number) == if{ 69302 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_PARKING_BRAKE_OFF": {
+		"method": "calcCode",
+		"code": "100 (L:switch_693_73X, number) == if{ 69301 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_AUTOPILOT_DISENGAGE_YOKE": {
+		"method": "calcCode",
+		"code": "100401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Emergency Light Switch Off": {
+		"method": "calcCode",
+		"code": "0 (L:switch_100_73X) - 50 div s0\n:1\nl0 0 > if{ 10001 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 10002 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Emergency Light Switch Armed": {
+		"method": "calcCode",
+		"code": "50 (L:switch_100_73X) - 50 div s0\n:1\nl0 0 > if{ 10001 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 10002 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Emergency Light Switch On": {
+		"method": "calcCode",
+		"code": "100 (L:switch_100_73X) - 50 div s0\n:1\nl0 0 > if{ 10001 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 10002 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG_B737_PARKING_BRAKE_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_692_73X) 2 *"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG B737 Master Battery Switch On": {
+		"method": "calcCode",
+		"code": "(L:switch_01_73X) 0 == if{ 101 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Electrical.Input.PMDG B737 Master Battery Switch Off": {
+		"method": "calcCode",
+		"code": "(L:switch_01_73X) 0 != if{ 101 (>K:ROTOR_BRAKE) }"
+	},
+	"FenixSim.A320.Engine.Input.FNX320_ENG_MODE_CRANK": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ENG_MODE)"
+	},
+	"FenixSim.A320.Engine.Input.FNX320_ENG_MODE_NORMAL": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ENG_MODE) "
+	},
+	"FenixSim.A320.Engine.Input.FNX320_ENG_MODE_IGNSTART": {
+		"method": "calcCode",
+		"code": "2 (>L:S_ENG_MODE)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_INT_LT_DOME)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_DIM": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_INT_LT_DOME)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_BRT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_INT_LT_DOME)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Flood Lights Knob Dec": {
+		"method": "calcCode",
+		"code": "75608 (>K:ROTOR_BRAKE) "
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Flood Lights Knob Inc": {
+		"method": "calcCode",
+		"code": "75607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Panel Lights Knob  Dec": {
+		"method": "calcCode",
+		"code": "75708 (>K:ROTOR_BRAKE)\n"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Panel Lights Knob  Inc": {
+		"method": "calcCode",
+		"code": "75707 (>K:ROTOR_BRAKE)\n"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Emergency Light Switch Guard Toggle": {
+		"method": "calcCode",
+		"code": "10101 (>K:ROTOR_BRAKE)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_NAVLOGO_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_NAV_LOGO)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_NAVLOGO_NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_NAV_LOGO)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_NAVLOGO_LOGO": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_EXT_LT_NAV_LOGO)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_STROBE_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_STROBE)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_STROBE_AUTO": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_STROBE)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_STROBE_ON": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_EXT_LT_STROBE)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_BEACON_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_BEACON)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_BEACON_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_BEACON)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_WING_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_WING)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_WING_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_WING)"
+	},
+	"Microsoft.Generic.Avionics.Input.AS530_CDI_Push": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_GPS_DRIVES_NAV1)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_AP1_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_AP1) ++ (>L:S_FCU_AP1)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_AP1_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_AP1) ++ (>L:S_FCU_AP1)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_AP2_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_AP2) ++ (>L:S_FCU_AP2)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_AP2_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_AP2) ++ (>L:S_FCU_AP2)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS1_FD_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_FD) ++ (>L:S_FCU_EFIS1_FD)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS1_FD_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_FD) ++ (>L:S_FCU_EFIS1_FD)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS2_FD_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_FD) ++ (>L:S_FCU_EFIS2_FD)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS2_FD_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_FD) (>L:S_FCU_EFIS2_FD"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_LOC_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_LOC) ++ (>L:S_FCU_LOC)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_LOC_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_LOC) ++ (>L:S_FCU_LOC)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_APPR_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_APPR) ++ (>L:S_FCU_APPR)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_APPR_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_APPR) ++ (>L:S_FCU_APPR)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_TRK_FPA_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_HDGVS_TRKFPA) ++ (>L:S_FCU_HDGVS_TRKFPA)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_TRK_FPA_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_HDGVS_TRKFPA) ++ (>L:S_FCU_HDGVS_TRKFPA)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EXPED_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EXPED) ++ (>L:S_FCU_EXPED)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EXPED_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EXPED) ++ (>L:S_FCU_EXPED)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ALTITUDE_SCALE_1000": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_ALTITUDE_SCALE)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ALTITUDE_SCALE_100": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_ALTITUDE_SCALE)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ATHR_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_ATHR) ++ (>L:S_FCU_ATHR)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ATHR_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_ATHR) ++ (>L:S_FCU_ATHR)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS1_LS_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_LS) ++ (>L:S_FCU_EFIS1_LS)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS1_LS_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_LS) ++ (>L:S_FCU_EFIS1_LS)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS2_LS_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_LS) ++ (>L:S_FCU_EFIS2_LS)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_EFIS2_LS_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_LS) ++ (>L:S_FCU_EFIS2_LS)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_L_RETRACT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_LANDING_L)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_L_OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_LANDING_L)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_L_ON": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_EXT_LT_LANDING_L)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_R_RETRACT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_LANDING_R)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_R_OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_LANDING_R)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_R_ON": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_EXT_LT_LANDING_R)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_BOTH_RETRACT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_LANDING_L) 0 (>L:S_OH_EXT_LT_LANDING_R) \n0 (>L:S_OH_EXT_LT_LANDING_BOTH) "
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_BOTH_OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_LANDING_L) 1 (>L:S_OH_EXT_LT_LANDING_R) \n1 (>L:S_OH_EXT_LT_LANDING_BOTH) "
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_LANDING_BOTH_ON": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_EXT_LT_LANDING_L) 2 (>L:S_OH_EXT_LT_LANDING_R) \n2 (>L:S_OH_EXT_LT_LANDING_BOTH) "
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_RWY_TURNOFF)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_RWY_TURNOFF)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_NOSE_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EXT_LT_NOSE)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_NOSE_TAXI": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EXT_LT_NOSE)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_NOSE_TO": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_EXT_LT_NOSE)"
+	},
+	"Just Flight.Piper Arrow III.Radio.Input.GNS530_COM_RADIO_VOLUME_POTENTIOMETER": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min (>K:COM1_VOLUME_SET)"
+	},
+	"Just Flight.Piper Arrow III.Radio.Input.GNS530_NAV_RADIO_VOLUME_POTENTIOMETER": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min (>K:NAV1_VOLUME_SET_EX1)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ALTITUDE_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_ALTITUDE) ++ (>L:E_FCU_ALTITUDE)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ALTITUDE_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_ALTITUDE) -- (>L:E_FCU_ALTITUDE)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ALTITUDE_KNOB_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_ALTITUDE) -- (>L:S_FCU_ALTITUDE)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ALTITUDE_KNOB_PULL": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_ALTITUDE) ++ (>L:S_FCU_ALTITUDE)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_HEADING_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_HEADING) ++ (>L:E_FCU_HEADING)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_HEADING_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_HEADING) -- (>L:E_FCU_HEADING)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_HEADING_KNOB_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_HEADING) -- (>L:S_FCU_HEADING)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_HEADING_KNOB_PULL": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_HEADING) ++ (>L:S_FCU_HEADING)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_SPEED_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_SPEED) ++ (>L:E_FCU_SPEED)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_SPEED_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_SPEED) -- (>L:E_FCU_SPEED)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_SPEED_KNOB_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_SPEED) -- (>L:S_FCU_SPEED)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_SPEED_KNOB_PULL": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_SPEED) ++ (>L:S_FCU_SPEED)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_VS_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_VS) -- (>L:E_FCU_VS)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_VS_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_VS) ++ (>L:E_FCU_VS)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_VS_KNOB_PULL": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_VERTICAL_SPEED) ++ (>L:S_FCU_VERTICAL_SPEED)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_VS_KNOB_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_VERTICAL_SPEED) -- (>L:S_FCU_VERTICAL_SPEED)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_SEAT_BELTS_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_SIGNS)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_SEAT_BELTS_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_SIGNS)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_NO_SMOKING_ON": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_SIGNS_SMOKING)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_NO_SMOKING_AUTO": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_SIGNS_SMOKING)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_NO_SMOKING_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_SIGNS_SMOKING)"
+	},
+	"PMDG.B737-700.Flight Instrumentation.Input.PMDG_B737-7_HGS_HUD_UP_DOWN_SWITCH": {
+		"method": "calcCode",
+		"code": "97901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Flight Instrumentation.Input.PMDG_B737-7_HGS_HUD_BRT_AUTO_MAN_SWITCH": {
+		"method": "calcCode",
+		"code": "98101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Flight Instrumentation.Input.PMDG_B737-7_HGS_HUD_BRIGHTNESS_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "98008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Flight Instrumentation.Input.PMDG_B737-7_HGS_HUD_BRIGHTNESS_KNOB_INC": {
+		"method": "calcCode",
+		"code": "98007 (>K:ROTOR_BRAKE)"
+	},
+	"Hype Performance Group.H135.Electrical.Input.H135 MASTER AND STANDBY BATTERY ON": {
+		"method": "calcCode",
+		"code": "1 (>K:MASTER_BATTERY_SET)"
+	},
+	"Hype Performance Group.H135.Electrical.Input.H135 MASTER AND STANDBY BATTERY OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:MASTER_BATTERY_SET)"
+	},
+	"Hype Performance Group.H135.Electrical.Input.H135 MASTER AND STANDBY BATTERY TOGGLE": {
+		"method": "calcCode",
+		"code": "0 (>K:TOGGLE_MASTER_BATTERY)\t"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 AVIONICS 1 ON": {
+		"method": "calcCode",
+		"code": "1 (>K:AVIONICS_MASTER_1_SET)"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 AVIONICS 1 OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:AVIONICS_MASTER_1_SET)"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 AVIONICS 2 ON": {
+		"method": "calcCode",
+		"code": "1 (>K:AVIONICS_MASTER_2_SET)"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 AVIONICS 2 OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:AVIONICS_MASTER_2_SET)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_ALTITUDE_SCALE_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_ALTITUDE_SCALE, Bool) if{ 0 (>L:S_FCU_ALTITUDE_SCALE) } els{ 1 (>L:S_FCU_ALTITUDE_SCALE) }"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_METRIC_ALT_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_METRIC_ALT) ++ (>L:S_FCU_METRIC_ALT)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_METRIC_ALT_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_METRIC_ALT) ++ (>L:S_FCU_METRIC_ALT)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_SPD_MACH_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_SPD_MACH) ++ (>L:S_FCU_SPD_MACH)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320_FCU_SPD_MACH_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_SPD_MACH) ++ (>L:S_FCU_SPD_MACH)"
+	},
+	"PMDG.B737-700.Gear.Input.PMDG_B737-7_GEAR_HORN_CUTOUT": {
+		"method": "calcCode",
+		"code": "71301 (>K:ROTOR_BRAKE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_MODE_LS": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_ND_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_MODE_VOR": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_ND_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_MODE_NAV": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS1_ND_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_MODE_ARC": {
+		"method": "calcCode",
+		"code": "3 (>L:S_FCU_EFIS1_ND_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_MODE_PLAN": {
+		"method": "calcCode",
+		"code": "4 (>L:S_FCU_EFIS1_ND_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_10": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_20": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_40": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_80": {
+		"method": "calcCode",
+		"code": "3 (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_160": {
+		"method": "calcCode",
+		"code": "4 (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_320": {
+		"method": "calcCode",
+		"code": "5 (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_INC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_ND_ZOOM) ++ 5 min (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_RANGE_DEC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_ND_ZOOM) -- 0 max (>L:S_FCU_EFIS1_ND_ZOOM)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_MODE_INC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_ND_MODE) ++ 4 min (>L:S_FCU_EFIS1_ND_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_ND_MODE_DEC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_ND_MODE) -- 0 max (>L:S_FCU_EFIS1_ND_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_STD_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_BARO_STD)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_STD_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_BARO_STD)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_STD_TOG": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_BARO_STD) 0 == if{ 1 (>L:S_FCU_EFIS1_BARO_STD) } els{ 0 (>L:S_FCU_EFIS1_BARO_STD) }\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_MODE_INHG": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_BARO_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_MODE_HPA": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_BARO_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_MODE_TOG": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_BARO_MODE) 0 == if{ 1 (>L:S_FCU_EFIS1_BARO_MODE) } els{ 0 (>L:S_FCU_EFIS1_BARO_MODE) }\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_MODE_LS": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_ND_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_MODE_VOR": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_ND_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_MODE_NAV": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS2_ND_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_MODE_ARC": {
+		"method": "calcCode",
+		"code": "3 (>L:S_FCU_EFIS2_ND_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_MODE_PLAN": {
+		"method": "calcCode",
+		"code": "4 (>L:S_FCU_EFIS2_ND_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_10": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_20": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_40": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_80": {
+		"method": "calcCode",
+		"code": "3 (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_160": {
+		"method": "calcCode",
+		"code": "4 (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_320": {
+		"method": "calcCode",
+		"code": "5 (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_STD_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_BARO_STD)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_STD_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_BARO_STD)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_STD_TOG": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_BARO_STD) 0 == if{ 1 (>L:S_FCU_EFIS2_BARO_STD) } els{ 0 (>L:S_FCU_EFIS2_BARO_STD) }\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_MODE_INHG": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_BARO_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_MODE_HPA": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_BARO_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_MODE_TOG": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_BARO_MODE) 0 == if{ 1 (>L:S_FCU_EFIS2_BARO_MODE) } els{ 0 (>L:S_FCU_EFIS2_BARO_MODE) }\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_INC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_ND_ZOOM) ++ 5 min (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_RANGE_DEC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_ND_ZOOM) -- 0 max (>L:S_FCU_EFIS2_ND_ZOOM)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_MODE_INC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_ND_MODE) ++ 4 min (>L:S_FCU_EFIS2_ND_MODE)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_ND_MODE_DEC": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_ND_MODE) -- 0 max (>L:S_FCU_EFIS2_ND_MODE)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_L_PFD_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_CO) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_CO)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_L_PFD_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_CO) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_CO)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_L_ND_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_CI) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_CI)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_L_ND_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_CI) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_CI)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_L_ND_WX_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_CI_OUTER) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_CI_OUTER)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_L_ND_WX_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_CI_OUTER) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_CI_OUTER)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_R_PFD_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_FO) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_FO)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_R_PFD_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_FO) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_FO)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_R_ND_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_FI) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_FI)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_R_ND_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_FI) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_FI)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_R_ND_WX_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_FI_OUTER) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_FI_OUTER)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_R_ND_WX_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_FI_OUTER) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_FI_OUTER)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNES_ECAM_U_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_ECAM_U) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_ECAM_U)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNES_ECAM_U_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_ECAM_U) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_ECAM_U)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNES_ECAM_L_INC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_ECAM_L) 0.05 + 1 min (>L:A_DISPLAY_BRIGHTNESS_ECAM_L)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNES_ECAM_L_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_DISPLAY_BRIGHTNESS_ECAM_L) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_ECAM_L)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_FCU_INC": {
+		"method": "calcCode",
+		"code": "(L:A_FCU_LIGHTING_TEXT) 0.05 + 1 min (>L:A_FCU_LIGHTING_TEXT)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_FCU_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_FCU_LIGHTING_TEXT) 0.05 - 0 max (>L:A_FCU_LIGHTING_TEXT)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_MAP_L_INC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_MAP_L) 0.05 + 1 min (>L:A_MIP_LIGHTING_MAP_L)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_MAP_L_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_MAP_L) 0.05 - 0 max (>L:A_MIP_LIGHTING_MAP_L)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_MAP_R_INC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_MAP_R) 0.05 + 1 min (>L:A_MIP_LIGHTING_MAP_R)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_MAP_R_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_MAP_R) 0.05 - 0 max (>L:A_MIP_LIGHTING_MAP_R)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_FLOOD_MAIN_INC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_FLOOD_MAIN) 0.05 + 1 min (>L:A_MIP_LIGHTING_FLOOD_MAIN)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_FLOOD_MAIN_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_FLOOD_MAIN) 0.05 - 0 max (>L:A_MIP_LIGHTING_FLOOD_MAIN)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_FLOOD_PED_INC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_FLOOD_PEDESTAL) 0.05 + 1 min (>L:A_MIP_LIGHTING_FLOOD_PEDESTAL)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_LIGHTING_FLOOD_PED_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LIGHTING_FLOOD_PEDESTAL) 0.05 - 0 max (>L:A_MIP_LIGHTING_FLOOD_PEDESTAL)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_FCU_INTG_LIGHTING_INC": {
+		"method": "calcCode",
+		"code": "(L:A_FCU_LIGHTING) 0.05 + 1 min (>L:A_FCU_LIGHTING)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_FCU_INTG_LIGHTING_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_FCU_LIGHTING) 0.05 - 0 max (>L:A_FCU_LIGHTING)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_OH_INTG_LIGHTING_INC": {
+		"method": "calcCode",
+		"code": "(L:A_OH_LIGHTING_OVD) 0.05 + 1 min (>L:A_OH_LIGHTING_OVD)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_OH_INTG_LIGHTING_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_OH_LIGHTING_OVD) 0.05 - 0 max (>L:A_OH_LIGHTING_OVD)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_INTG_LIGHTING_INC": {
+		"method": "calcCode",
+		"code": "(L:A_PED_LIGHTING_PEDESTAL) 0.05 + 1 min (>L:A_PED_LIGHTING_PEDESTAL)\n"
+	},
+	"FenixSim.A320.Lights.Input.FNX32_MIP_INTG_LIGHTING_DEC": {
+		"method": "calcCode",
+		"code": "(L:A_PED_LIGHTING_PEDESTAL) 0.05 - 0 max (>L:A_PED_LIGHTING_PEDESTAL)"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 PITOT HEATER 1 ON": {
+		"method": "calcCode",
+		"code": "1 (>K:PITOT_HEAT_ON)"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 PITOT HEATER 1 OFF": {
+		"method": "calcCode",
+		"code": "1 (>K:PITOT_HEAT_OFF)"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 PITOT HEATER 2 ON": {
+		"method": "calcCode",
+		"code": "2 (>K:PITOT_HEAT_ON)"
+	},
+	"Hype Performance Group.H135.Avionics.Input.H135 PITOT HEATER 2 OFF": {
+		"method": "calcCode",
+		"code": "2 (>K:PITOT_HEAT_OFF)"
+	},
+	"Hype Performance Group.H135.Warning System.Input.H135 WARNING LIGHTS TEST TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:WARNIGNS_TEST_ON) ! (>L:WARNIGNS_TEST_ON)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 CABIN LIGHT ON": {
+		"method": "calcCode",
+		"code": "1 (>K:CABIN_LIGHTS_ON)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 CABIN LIGHT OFF": {
+		"method": "calcCode",
+		"code": "1 (>K:CABIN_LIGHTS_OFF)"
+	},
+	"FenixSim.A320.Engine.Input.FNX320_AUTOTHROTTLE_LEFT_DISC_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FC_THR_INST_DISCONNECT1) ++ (>L:S_FC_THR_INST_DISCONNECT1)"
+	},
+	"FenixSim.A320.Engine.Input.FNX320_AUTOTHROTTLE_LEFT_DISC_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FC_THR_INST_DISCONNECT1) ++ (>L:S_FC_THR_INST_DISCONNECT1) "
+	},
+	"FenixSim.A320.Engine.Input.FNX320_AUTOTHROTTLE_RIGHT_DISC_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FC_THR_INST_DISCONNECT2) ++ (>L:S_FC_THR_INST_DISCONNECT2) "
+	},
+	"FenixSim.A320.Engine.Input.FNX320_AUTOTHROTTLE_RIGHT_DISC_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FC_THR_INST_DISCONNECT2) ++ (>L:S_FC_THR_INST_DISCONNECT2) "
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_OVHD_BAT1_L_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_BAT1)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_OVHD_BAT2_L_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_BAT2)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_OVHD_BAT1_L_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_BAT1)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_OVHD_BAT2_L_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_BAT2)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 CABIN LIGHT TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_CABIN_LIGHTS)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 POS LIGHT ON": {
+		"method": "calcCode",
+		"code": "1 (>K:NAV_LIGHTS_ON)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 POS LIGHT OFF": {
+		"method": "calcCode",
+		"code": "1 (>K:NAV_LIGHTS_OFF)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 POS LIGHT TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_NAV_LIGHTS)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 ACOL LIGHT ON": {
+		"method": "calcCode",
+		"code": "1 (>K:BEACON_LIGHTS_ON)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 ACOL LIGHT OFF": {
+		"method": "calcCode",
+		"code": "1 (>K:BEACON_LIGHTS_OFF)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 ACOL LIGHT Toggle": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_BEACON_LIGHTS)"
+	},
+	"Hype Performance Group.H135.Autopilot System.Input.H135 AP A_TRIM TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:APCP_ATRIM) ! (>L:APCP_ATRIM)"
+	},
+	"Hype Performance Group.H135.Autopilot System.Input.H135 AP BACKUP TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:APCP_BACKUP) ! (>L:APCP_BACKUP)"
+	},
+	"Hype Performance Group.H135.Autopilot System.Input.H135 AP AP1 TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:APCP_AP1) ! (>L:APCP_AP1)"
+	},
+	"Hype Performance Group.H135.Autopilot System.Input.H135 AP AP2 TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:APCP_AP2) ! (>L:APCP_AP2)"
+	},
+	"Hype Performance Group.H135.Autopilot System.Input.H135 AP ALT HOLD TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_HOLD)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Main Panel Bright Dec": {
+		"method": "calcCode",
+		"code": "32808 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Main Panel Bright Inc": {
+		"method": "calcCode",
+		"code": "32807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 OUTBD DU BRT Inc": {
+		"method": "calcCode",
+		"code": "32908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 OUTBD DU BRT Dec": {
+		"method": "calcCode",
+		"code": "32907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 INBD DU BRT Dec": {
+		"method": "calcCode",
+		"code": "33008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 INBD DU BRT Inc": {
+		"method": "calcCode",
+		"code": "33007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 INBD DU RDR BRT Dec": {
+		"method": "calcCode",
+		"code": "33108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 INBD DU RDR BRT Inc": {
+		"method": "calcCode",
+		"code": "33107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 LOW DU BRT Dec": {
+		"method": "calcCode",
+		"code": "33208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 LOW DU BRT Inc": {
+		"method": "calcCode",
+		"code": "33207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 LOW DU BRT Dec C": {
+		"method": "calcCode",
+		"code": "33308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 LOW DU BRT Inc C": {
+		"method": "calcCode",
+		"code": "33307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 UPPER DU BRT Dec": {
+		"method": "calcCode",
+		"code": "33408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 UPPER DU BRT Inc": {
+		"method": "calcCode",
+		"code": "33407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 MAIN PANEL Dus Dec": {
+		"method": "calcCode",
+		"code": "33508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 MAIN PANEL Dus Inc": {
+		"method": "calcCode",
+		"code": "33507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 LOWER DU Dec": {
+		"method": "calcCode",
+		"code": "33608 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 LOWER DU Inc": {
+		"method": "calcCode",
+		"code": "33607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Panel Bright Inc": {
+		"method": "calcCode",
+		"code": "33708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Panel Bright Dec": {
+		"method": "calcCode",
+		"code": "33707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Background Bright Dec": {
+		"method": "calcCode",
+		"code": "33808 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Background Bright Inc": {
+		"method": "calcCode",
+		"code": "33807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 A/P P/RST Button": {
+		"method": "calcCode",
+		"code": "33901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 A/T P/RST Button": {
+		"method": "calcCode",
+		"code": "34001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 FMC P/RST Button": {
+		"method": "calcCode",
+		"code": "34101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Lights Switch Test": {
+		"method": "calcCode",
+		"code": "0 (L:switch_346_73X) - 50 div s0\n:1\nl0 0 > if{ 34601 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 34602 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Lights Switch BRT": {
+		"method": "calcCode",
+		"code": "50 (L:switch_346_73X) - 50 div s0\n:1\nl0 0 > if{ 34601 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 34602 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input.PMDG B737 Lights Switch DIM": {
+		"method": "calcCode",
+		"code": "100 (L:switch_346_73X) - 50 div s0\n:1\nl0 0 > if{ 34601 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 34602 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L VHF1 RECEIVE": {
+		"method": "calcCode",
+		"code": "73901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L VHF2 RECEIVE": {
+		"method": "calcCode",
+		"code": "74001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L VHF3 RECEIVE": {
+		"method": "calcCode",
+		"code": "74101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L HF1 RECEIVE": {
+		"method": "calcCode",
+		"code": "74201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L FLT RECEIVE": {
+		"method": "calcCode",
+		"code": "74301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L SVC RECEIVE": {
+		"method": "calcCode",
+		"code": "74401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L PA RECEIVE": {
+		"method": "calcCode",
+		"code": "74501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L NAV1 RECEIVE": {
+		"method": "calcCode",
+		"code": "74601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L NAV2 RECEIVE": {
+		"method": "calcCode",
+		"code": "74701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L ADF1 RECEIVE": {
+		"method": "calcCode",
+		"code": "74801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L ADF2 RECEIVE": {
+		"method": "calcCode",
+		"code": "74901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L MKR RECEIVE": {
+		"method": "calcCode",
+		"code": "75001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L SPKR RECEIVE": {
+		"method": "calcCode",
+		"code": "75101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L R/T I/C": {
+		"method": "calcCode",
+		"code": "75201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L MASK/BOOM": {
+		"method": "calcCode",
+		"code": "75301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio L ALT/NORM": {
+		"method": "calcCode",
+		"code": "75501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Lights FLOOD Brightness Dec": {
+		"method": "calcCode",
+		"code": "75608 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Lights FLOOD Brightness Inc": {
+		"method": "calcCode",
+		"code": "75607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Lights PANEL Brightness Dec": {
+		"method": "calcCode",
+		"code": "75708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Lights PANEL Brightness Inc": {
+		"method": "calcCode",
+		"code": "75707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Select XPNDR 1/2": {
+		"method": "calcCode",
+		"code": "79801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS MODE Knob Dec": {
+		"method": "calcCode",
+		"code": "80008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS MODE Knob Inc": {
+		"method": "calcCode",
+		"code": "80007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS MODE STBY": {
+		"method": "calcCode",
+		"code": "0 (L:switch_800_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 80007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 80008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS MODE ALT RPTG OFF": {
+		"method": "calcCode",
+		"code": "10 (L:switch_800_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 80007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 80008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS MODE XPNDR": {
+		"method": "calcCode",
+		"code": "20 (L:switch_800_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 80007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 80008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS MODE TA ONLY": {
+		"method": "calcCode",
+		"code": "30 (L:switch_800_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 80007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 80008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS MODE TA RA": {
+		"method": "calcCode",
+		"code": "40 (L:switch_800_73X) - 10 div s0\r\n:1\r\nl0 0 > if{ 80007 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\r\nl0 0 < if{ 80008 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 TCAS TEST Button": {
+		"method": "calcCode",
+		"code": "80101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC ALT SOURCE": {
+		"method": "calcCode",
+		"code": "80301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Left Outer Dec": {
+		"method": "calcCode",
+		"code": "80408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Left Outer Inc": {
+		"method": "calcCode",
+		"code": "80407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Left Inner Dec": {
+		"method": "calcCode",
+		"code": "80508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Left Inner Inc": {
+		"method": "calcCode",
+		"code": "80507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 IDENT Button": {
+		"method": "calcCode",
+		"code": "80601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Right Outer Dec": {
+		"method": "calcCode",
+		"code": "80708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Right Outer Inc": {
+		"method": "calcCode",
+		"code": "80707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Right Inner Dec": {
+		"method": "calcCode",
+		"code": "80808 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 ATC Code Right Inner Inc": {
+		"method": "calcCode",
+		"code": "80807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R VHF1 RECEIVE": {
+		"method": "calcCode",
+		"code": "85501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R VHF2 RECEIVE": {
+		"method": "calcCode",
+		"code": "85601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R VHF3 RECEIVE": {
+		"method": "calcCode",
+		"code": "85701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R HF1 RECEIVE": {
+		"method": "calcCode",
+		"code": "85801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R FLT RECEIVE": {
+		"method": "calcCode",
+		"code": "85901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R SVC RECEIVE": {
+		"method": "calcCode",
+		"code": "86001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R PA RECEIVE": {
+		"method": "calcCode",
+		"code": "86101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R NAV1 RECEIVE": {
+		"method": "calcCode",
+		"code": "86201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R NAV2 RECEIVE": {
+		"method": "calcCode",
+		"code": "86301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R ADF1 RECEIVE": {
+		"method": "calcCode",
+		"code": "86401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R ADF2 RECEIVE": {
+		"method": "calcCode",
+		"code": "86501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R MKR RECEIVE": {
+		"method": "calcCode",
+		"code": "86601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R SPKR RECEIVE": {
+		"method": "calcCode",
+		"code": "86701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R R/T I/C": {
+		"method": "calcCode",
+		"code": "86801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R MASK/BOOM": {
+		"method": "calcCode",
+		"code": "86901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Radio R ALT/NORM": {
+		"method": "calcCode",
+		"code": "87101 (>K:ROTOR_BRAKE)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 BRIGHTNESS DOWN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_BRIGHTNESS_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 BRIGHTNESS DOWN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_BRIGHTNESS_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 BRIGHTNESS UP Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_BRIGHTNESS_UP)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 BRIGHTNESS UP Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_BRIGHTNESS_UP)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 0 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_0)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 0 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_0)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 1 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_1)"
+	},
+	"FenixSim.A320.MCDU.Input.FNX320 CDU1 KEY 1 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_1)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 2 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_2)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 2 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_2)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 3 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_3)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 3 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_3)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 4 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_4)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 4 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_4)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 5 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_5)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 5 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_5)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 6 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_6)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 6 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_6)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 7 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_7)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 7 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_7)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 8 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_8)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 8 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_8)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 9 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_9)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY 9 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_9)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY A Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_A)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY A Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_A)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY AIRPORT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_AIRPORT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY AIRPORT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_AIRPORT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW DOWN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_ARROW_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW DOWN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_ARROW_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW LEFT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_ARROW_LEFT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW LEFT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_ARROW_LEFT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW RIGHT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_ARROW_RIGHT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW RIGHT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_ARROW_RIGHT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW UP Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_ARROW_UP)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ARROW UP Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_ARROW_UP)"
+	},
+	"FenixSim.A320.MCDU.Input.FNX320 CDU1 KEY ATC COM Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_ATC_COM)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY ATC COM Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_ATC_COM)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY B Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_B)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY B Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_B)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY C Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_C)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY C Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_C)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY CLEAR Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_CLEAR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY CLEAR Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_CLEAR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY D Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_D)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY D Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_D)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY DATA Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_DATA)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY DATA Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_DATA)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY DIR Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_DIR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY DIR Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_DIR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY DOT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_DOT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY DOT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_DOT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY E Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_E)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY E Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_E)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY F Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_F)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY F Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_F)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY FPLN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY FPLN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY FUEL PRED Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_FUEL_PRED)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY FUEL PRED Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_FUEL_PRED)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY G Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_G)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY G Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_G)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY H Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_H)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY H Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_H)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY I Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_I)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY I Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_I)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY INIT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_INIT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY INIT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_INIT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY J Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_J)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY J Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_J)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY K Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_K)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY K Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_K)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK1L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK1L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK1L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK1L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK1R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK1R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK1R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK1R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK2L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK2L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK2L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK2L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK2R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK2R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK2R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK2R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK3L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK3L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK3L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK3L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK3R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK3R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK3R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK3R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK4L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK4L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK4L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK4L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK4R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK4R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK4R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK4R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK5L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK5L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK5L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK5L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK5R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK5R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK5R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK5R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK6L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK6L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK6L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK6L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK6R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_LSK6R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY LSK6R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_LSK6R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY M Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_M)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY M Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_M)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY MENU Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_MENU)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY MENU Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_MENU)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY MINUS Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_MINUS)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY MINUS Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_MINUS)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY N Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_N)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY N Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_N)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY O Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_O)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY O Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_O)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY OVFLY Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_OVFLY)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY OVFLY Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_OVFLY)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY P Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_P)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY P Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_P)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY PERF Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_PERF)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY PERF Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_PERF)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY PROG Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_PROG)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY PROG Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_PROG)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY Q Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_Q)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY Q Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_Q)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY RAD NAV Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_RAD_NAV)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY RAD NAV Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_RAD_NAV)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY S Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_S)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY S Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_S)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY SEC FPLN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_SEC_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY SEC FPLN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_SEC_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY SLASH Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_SLASH)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY SLASH Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_SLASH)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY SPACE Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_SPACE)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY SPACE Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_SPACE)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY T Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_T)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY T Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_T)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY U Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_U)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY U Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_U)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY V Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_V)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY V Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_V)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY W Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_W)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY W Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_W)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY X Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_X)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY X Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_X)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY Y Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_Y)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY Y Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_Y)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY Z Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU1_KEY_Z)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU1 KEY Z Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU1_KEY_Z)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 BRIGHTNESS DOWN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_BRIGHTNESS_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 BRIGHTNESS DOWN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_BRIGHTNESS_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 BRIGHTNESS UP Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_BRIGHTNESS_UP)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 BRIGHTNESS UP Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_BRIGHTNESS_UP)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 0 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_0)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 0 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_0)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 1 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_1)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 1 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_1)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 2 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_2)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 2 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_2)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 3 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_3)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 3 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_3)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 4 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_4)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 4 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_4)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 5 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_5)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 5 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_5)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 6 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_6)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 6 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_6)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 7 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_7)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 7 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_7)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 8 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_8)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 8 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_8)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 9 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_9)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY 9 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_9)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY A Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_A)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY A Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_A)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY AIRPORT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_AIRPORT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY AIRPORT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_AIRPORT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW DOWN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_ARROW_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW DOWN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_ARROW_DOWN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW LEFT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_ARROW_LEFT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW LEFT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_ARROW_LEFT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW RIGHT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_ARROW_RIGHT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW RIGHT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_ARROW_RIGHT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW UP Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_ARROW_UP)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ARROW UP Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_ARROW_UP)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ATC COM Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_ATC_COM)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY ATC COM Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_ATC_COM)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY B Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_B)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY B Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_B)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY C Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_C)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY C Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_C)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY CLEAR Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_CLEAR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY CLEAR Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_CLEAR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY D Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_D)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY D Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_D)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY DATA Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_DATA)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY DATA Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_DATA)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY DIR Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_DIR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY DIR Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_DIR)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY DOT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_DOT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY DOT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_DOT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY E Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_E)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY E Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_E)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY F Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_F)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY F Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_F)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY FPLN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY FPLN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY FUEL PRED Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_FUEL_PRED)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY FUEL PRED Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_FUEL_PRED)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY G Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_G)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY G Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_G)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY H Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_H)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY H Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_H)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY I Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_I)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY I Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_I)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY INIT Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_INIT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY INIT Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_INIT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY J Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_J)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY J Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_J)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY K Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_K)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY K Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_K)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK1L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK1L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK1L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK1L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK1R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK1R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK1R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK1R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK2L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK2L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK2L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK2L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK2R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK2R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK2R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK2R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK3L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK3L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK3L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK3L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK3R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK3R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK3R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK3R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK4L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK4L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK4L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK4L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK4R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK4R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK4R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK4R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK5L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK5L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK5L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK5L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK5R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK5R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK5R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK5R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK6L Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK6L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK6L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK6L)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK6R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_LSK6R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY LSK6R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_LSK6R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY M Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_M)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY M Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_M)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY MENU Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_MENU)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY MENU Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_MENU)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY MINUS Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_MINUS)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY MINUS Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_MINUS)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY N Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_N)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY N Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_N)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY O Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_O)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY O Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_O)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY OVFLY Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_OVFLY)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY OVFLY Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_OVFLY)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY P Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_P)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY P Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_P)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY PERF Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_PERF)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY PERF Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_PERF)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY PROG Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_PROG)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY PROG Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_PROG)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY Q Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_Q)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY Q Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_Q)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_R)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY RAD NAV Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_RAD_NAV)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY RAD NAV Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_RAD_NAV)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY S Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_S)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY S Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_S)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY SEC FPLN Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_SEC_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY SEC FPLN Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_SEC_FPLN)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY SLASH Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_SLASH)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY SLASH Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_SLASH)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY SPACE Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_SPACE)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY SPACE Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_SPACE)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY T Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_T)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY T Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_T)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY U Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_U)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY U Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_U)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY V Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_V)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY V Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_V)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY W Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_W)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY W Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_W)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY X Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_X)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY X Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_X)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY Y Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_Y)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY Y Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_Y)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY Z Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_CDU2_KEY_Z)"
+	},
+	"FenixSim.A320.MCDU.FNX320 CDU2 KEY Z Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_CDU2_KEY_Z)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A01 HP FUEL SOV 1": {
+		"method": "calcCode",
+		"code": "(L:CB_A01_HP_FUEL_SOV_1) ! (>L:CB_A01_HP_FUEL_SOV_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A02 HP FUEL SOV 2": {
+		"method": "calcCode",
+		"code": "(L:CB_A02_HP_FUEL_SOV_2) ! (>L:CB_A02_HP_FUEL_SOV_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A03 ENG12 IGN SYSA": {
+		"method": "calcCode",
+		"code": "(L:CB_A03_ENG12_IGN_SYSA) ! (>L:CB_A03_ENG12_IGN_SYSA)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A04 ENG1 FADEC A EIU 1": {
+		"method": "calcCode",
+		"code": "(L:CB_A04_ENG1_FADEC_A_EIU_1) ! (>L:CB_A04_ENG1_FADEC_A_EIU_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A05 ENG2 FADEC A EIU 2": {
+		"method": "calcCode",
+		"code": "(L:CB_A05_ENG2_FADEC_A_EIU_2) ! (>L:CB_A05_ENG2_FADEC_A_EIU_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A06 ENG1 DET LOOP A": {
+		"method": "calcCode",
+		"code": "(L:CB_A06_ENG1_DET_LOOP_A) ! (>L:CB_A06_ENG1_DET_LOOP_A)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A07 ENG2 DET LOOP B": {
+		"method": "calcCode",
+		"code": "(L:CB_A07_ENG2_DET_LOOP_B) ! (>L:CB_A07_ENG2_DET_LOOP_B)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A08 LP VALVE MOT1 ENG1": {
+		"method": "calcCode",
+		"code": "(L:CB_A08_LP_VALVE_MOT1_ENG1) ! (>L:CB_A08_LP_VALVE_MOT1_ENG1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A09 LP VALVE MOT1 ENG2": {
+		"method": "calcCode",
+		"code": "(L:CB_A09_LP_VALVE_MOT1_ENG2) ! (>L:CB_A09_LP_VALVE_MOT1_ENG2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A10 XFR VALVE 1 L": {
+		"method": "calcCode",
+		"code": "(L:CB_A10_XFR_VALVE_1_L) ! (>L:CB_A10_XFR_VALVE_1_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A11 XFR VALVE 1 R": {
+		"method": "calcCode",
+		"code": "(L:CB_A11_XFR_VALVE_1_R) ! (>L:CB_A11_XFR_VALVE_1_R)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A12 XFEED VALVE MOT1": {
+		"method": "calcCode",
+		"code": "(L:CB_A12_XFEED_VALVE_MOT1) ! (>L:CB_A12_XFEED_VALVE_MOT1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A13 FQI CHAN 1": {
+		"method": "calcCode",
+		"code": "(L:CB_A13_FQI_CHAN_1) ! (>L:CB_A13_FQI_CHAN_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker A14 SMOKE CONFIG PUMP CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_A14_SMOKE_CONFIG_PUMP_CTL) ! (>L:CB_A14_SMOKE_CONFIG_PUMP_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker AB01 BUS 2 231XP SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_AB01_BUS_2_231XP_SPLY) ! (>L:CB_AB01_BUS_2_231XP_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker AB09 B HYD ELEC PUMP": {
+		"method": "calcCode",
+		"code": "(L:CB_AB09_B_HYD_ELEC_PUMP) ! (>L:CB_AB09_B_HYD_ELEC_PUMP)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker AB12 BUS 1 131XP SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_AB12_BUS_1_131XP_SPLY) ! (>L:CB_AB12_BUS_1_131XP_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B01 MCDU 1": {
+		"method": "calcCode",
+		"code": "(L:CB_B01_MCDU_1) ! (>L:CB_B01_MCDU_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B02 FMGC1": {
+		"method": "calcCode",
+		"code": "(L:CB_B02_FMGC1) ! (>L:CB_B02_FMGC1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B03 FAC 1 NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_B03_FAC_1_NORM) ! (>L:CB_B03_FAC_1_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B04 FAC 1 STBY": {
+		"method": "calcCode",
+		"code": "(L:CB_B04_FAC_1_STBY) ! (>L:CB_B04_FAC_1_STBY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B05 FCU1": {
+		"method": "calcCode",
+		"code": "(L:CB_B05_FCU1) ! (>L:CB_B05_FCU1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B06 SLAT CTL MON SYS 1": {
+		"method": "calcCode",
+		"code": "(L:CB_B06_SLAT_CTL_MON_SYS_1) ! (>L:CB_B06_SLAT_CTL_MON_SYS_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B07 FLAP CTL MON SYS 1": {
+		"method": "calcCode",
+		"code": "(L:CB_B07_FLAP_CTL_MON_SYS_1) ! (>L:CB_B07_FLAP_CTL_MON_SYS_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B08 SEC 1 NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_B08_SEC_1_NORM) ! (>L:CB_B08_SEC_1_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B09 FC THS MOT2": {
+		"method": "calcCode",
+		"code": "(L:CB_B09_FC_THS_MOT2) ! (>L:CB_B09_FC_THS_MOT2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B10 FCTL FCDC1 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_B10_FCTL_FCDC1_SPLY) ! (>L:CB_B10_FCTL_FCDC1_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B11 ELAC 1 NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_B11_ELAC_1_NORM) ! (>L:CB_B11_ELAC_1_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B12 SLT FLP 1 POS IND": {
+		"method": "calcCode",
+		"code": "(L:CB_B12_SLT_FLP_1_POS_IND) ! (>L:CB_B12_SLT_FLP_1_POS_IND)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker B14 APU FUEL BLOWOFF PUMP": {
+		"method": "calcCode",
+		"code": "(L:CB_B14_APU_FUEL_BLOWOFF_PUMP) ! (>L:CB_B14_APU_FUEL_BLOWOFF_PUMP)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C01 WING ANTI ICE MON": {
+		"method": "calcCode",
+		"code": "(L:CB_C01_WING_ANTI_ICE_MON) ! (>L:CB_C01_WING_ANTI_ICE_MON)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C02 WING ANTI ICE CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_C02_WING_ANTI_ICE_CTL) ! (>L:CB_C02_WING_ANTI_ICE_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C07 AFT CARGO VENT CTL MON": {
+		"method": "calcCode",
+		"code": "(L:CB_C07_AFT_CARGO_VENT_CTL_MON) ! (>L:CB_C07_AFT_CARGO_VENT_CTL_MON)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C09 LGCIU 1": {
+		"method": "calcCode",
+		"code": "(L:CB_C09_LGCIU_1) ! (>L:CB_C09_LGCIU_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C10 ABCU SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_C10_ABCU_SPLY) ! (>L:CB_C10_ABCU_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C11 HYD RESS XMTR": {
+		"method": "calcCode",
+		"code": "(L:CB_C11_HYD_RESS_XMTR) ! (>L:CB_C11_HYD_RESS_XMTR)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C12 HYD POWER B WARN CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_C12_HYD_POWER_B_WARN_CTL) ! (>L:CB_C12_HYD_POWER_B_WARN_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C13 FIRE VALVE G ENG 1": {
+		"method": "calcCode",
+		"code": "(L:CB_C13_FIRE_VALVE_G_ENG_1) ! (>L:CB_C13_FIRE_VALVE_G_ENG_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker C14 FIRE VALVE Y ENG 2": {
+		"method": "calcCode",
+		"code": "(L:CB_C14_FIRE_VALVE_Y_ENG_2) ! (>L:CB_C14_FIRE_VALVE_Y_ENG_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D02 PROBES 1 PITOT": {
+		"method": "calcCode",
+		"code": "(L:CB_D02_PROBES_1_PITOT) ! (>L:CB_D02_PROBES_1_PITOT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D03 PROBES 1 PHC SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_D03_PROBES_1_PHC_SUPPLY) ! (>L:CB_D03_PROBES_1_PHC_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D04 PROBES 1 AOA": {
+		"method": "calcCode",
+		"code": "(L:CB_D04_PROBES_1_AOA) ! (>L:CB_D04_PROBES_1_AOA)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D05 AVNCS VENT CTL DC": {
+		"method": "calcCode",
+		"code": "(L:CB_D05_AVNCS_VENT_CTL_DC) ! (>L:CB_D05_AVNCS_VENT_CTL_DC)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D06 AVNCS VENT CTL ESS": {
+		"method": "calcCode",
+		"code": "(L:CB_D06_AVNCS_VENT_CTL_ESS) ! (>L:CB_D06_AVNCS_VENT_CTL_ESS)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D08 TEMP CTL SYS1 CHANB": {
+		"method": "calcCode",
+		"code": "(L:CB_D08_TEMP_CTL_SYS1_CHANB) ! (>L:CB_D08_TEMP_CTL_SYS1_CHANB)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D09 CAB PRESS CTL 1": {
+		"method": "calcCode",
+		"code": "(L:CB_D09_CAB_PRESS_CTL_1) ! (>L:CB_D09_CAB_PRESS_CTL_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D10 RAM AIR INLET": {
+		"method": "calcCode",
+		"code": "(L:CB_D10_RAM_AIR_INLET) ! (>L:CB_D10_RAM_AIR_INLET)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D11 AIRBLEED ENG1 MONG": {
+		"method": "calcCode",
+		"code": "(L:CB_D11_AIRBLEED_ENG1_MONG) ! (>L:CB_D11_AIRBLEED_ENG1_MONG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D12 AIRBLEED ENG1 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_D12_AIRBLEED_ENG1_CTL) ! (>L:CB_D12_AIRBLEED_ENG1_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker D13 X FEED VALVE BAT": {
+		"method": "calcCode",
+		"code": "(L:CB_D13_X_FEED_VALVE_BAT) ! (>L:CB_D13_X_FEED_VALVE_BAT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E01 CAPT ND": {
+		"method": "calcCode",
+		"code": "(L:CB_E01_CAPT_ND) ! (>L:CB_E01_CAPT_ND)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E02 DU ND CAPT SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_E02_DU_ND_CAPT_SWTG) ! (>L:CB_E02_DU_ND_CAPT_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E03 CAPT PFD": {
+		"method": "calcCode",
+		"code": "(L:CB_E03_CAPT_PFD) ! (>L:CB_E03_CAPT_PFD)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E04 DU PFD CAPT SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_E04_DU_PFD_CAPT_SWTG) ! (>L:CB_E04_DU_PFD_CAPT_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E05 UPPER ECAM": {
+		"method": "calcCode",
+		"code": "(L:CB_E05_UPPER_ECAM) ! (>L:CB_E05_UPPER_ECAM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E06 DU ECAM UPPER SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_E06_DU_ECAM_UPPER_SWTG) ! (>L:CB_E06_DU_ECAM_UPPER_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E07 DMC3 SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_E07_DMC3_SWTG) ! (>L:CB_E07_DMC3_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E09 DMC1 SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_E09_DMC1_SWTG) ! (>L:CB_E09_DMC1_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E10 DMC3 STDBY SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_E10_DMC3_STDBY_SPLY) ! (>L:CB_E10_DMC3_STDBY_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E11 DMC1 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_E11_DMC1_SPLY) ! (>L:CB_E11_DMC1_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E12 ECAM CTL PNL": {
+		"method": "calcCode",
+		"code": "(L:CB_E12_ECAM_CTL_PNL) ! (>L:CB_E12_ECAM_CTL_PNL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E13 CVR CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_E13_CVR_CTL) ! (>L:CB_E13_CVR_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker E14 CVR DC SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_E14_CVR_DC_SPLY) ! (>L:CB_E14_CVR_DC_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker F01 FWC 1 SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_F01_FWC_1_SUPPLY) ! (>L:CB_F01_FWC_1_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker F02 SDAC1 AC ESS REF": {
+		"method": "calcCode",
+		"code": "(L:CB_F02_SDAC1_AC_ESS_REF) ! (>L:CB_F02_SDAC1_AC_ESS_REF)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker F03 SDAC2 AC ESS REF": {
+		"method": "calcCode",
+		"code": "(L:CB_F03_SDAC2_AC_ESS_REF) ! (>L:CB_F03_SDAC2_AC_ESS_REF)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker F04 SDAC 1 SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_F04_SDAC_1_SUPPLY) ! (>L:CB_F04_SDAC_1_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker F06 ADIRU 1 115": {
+		"method": "calcCode",
+		"code": "(L:CB_F06_ADIRU_1_115) ! (>L:CB_F06_ADIRU_1_115)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker F11 CLOCK NORM SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_F11_CLOCK_NORM_SPLY) ! (>L:CB_F11_CLOCK_NORM_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G01 CIDS DIR ESS 1": {
+		"method": "calcCode",
+		"code": "(L:CB_G01_CIDS_DIR_ESS_1) ! (>L:CB_G01_CIDS_DIR_ESS_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G06 ACP CAPT": {
+		"method": "calcCode",
+		"code": "(L:CB_G06_ACP_CAPT) ! (>L:CB_G06_ACP_CAPT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G07 ACP FO": {
+		"method": "calcCode",
+		"code": "(L:CB_G07_ACP_FO) ! (>L:CB_G07_ACP_FO)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G09 COM VHF1": {
+		"method": "calcCode",
+		"code": "(L:CB_G09_COM_VHF1) ! (>L:CB_G09_COM_VHF1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G10 COM RMP1": {
+		"method": "calcCode",
+		"code": "(L:CB_G10_COM_RMP1) ! (>L:CB_G10_COM_RMP1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G11 NAV ATC1": {
+		"method": "calcCode",
+		"code": "(L:CB_G11_NAV_ATC1) ! (>L:CB_G11_NAV_ATC1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G12 NAV ILS1": {
+		"method": "calcCode",
+		"code": "(L:CB_G12_NAV_ILS1) ! (>L:CB_G12_NAV_ILS1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G13 NAV VOR1": {
+		"method": "calcCode",
+		"code": "(L:CB_G13_NAV_VOR1) ! (>L:CB_G13_NAV_VOR1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker G14 NAV DME1": {
+		"method": "calcCode",
+		"code": "(L:CB_G14_NAV_DME1) ! (>L:CB_G14_NAV_DME1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker H01 COM FWD ATT": {
+		"method": "calcCode",
+		"code": "(L:CB_H01_COM_FWD_ATT) ! (>L:CB_H01_COM_FWD_ATT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker H04 ICE STBY COMPASS LT": {
+		"method": "calcCode",
+		"code": "(L:CB_H04_ICE_STBY_COMPASS_LT) ! (>L:CB_H04_ICE_STBY_COMPASS_LT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker H08 CKPT DOME": {
+		"method": "calcCode",
+		"code": "(L:CB_H08_CKPT_DOME) ! (>L:CB_H08_CKPT_DOME)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker H10 LT CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_H10_LT_CTL) ! (>L:CB_H10_LT_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker H11 AC BUS 8XP MONG": {
+		"method": "calcCode",
+		"code": "(L:CB_H11_AC_BUS_8XP_MONG) ! (>L:CB_H11_AC_BUS_8XP_MONG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker H11 CIDS L AFT": {
+		"method": "calcCode",
+		"code": "(L:CB_H11_CIDS_L_AFT) ! (>L:CB_H11_CIDS_L_AFT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker H14 NAV ADF1": {
+		"method": "calcCode",
+		"code": "(L:CB_H14_NAV_ADF1) ! (>L:CB_H14_NAV_ADF1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA1 CREW OXY SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_HA1_CREW_OXY_SPLY) ! (>L:CB_HA1_CREW_OXY_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA10 CIDS R FWD": {
+		"method": "calcCode",
+		"code": "(L:CB_HA10_CIDS_R_FWD) ! (>L:CB_HA10_CIDS_R_FWD)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA12 CIDS R AFT": {
+		"method": "calcCode",
+		"code": "(L:CB_HA12_CIDS_R_AFT) ! (>L:CB_HA12_CIDS_R_AFT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA14 COM HF1": {
+		"method": "calcCode",
+		"code": "(L:CB_HA14_COM_HF1) ! (>L:CB_HA14_COM_HF1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA2 PASS OXY CTL 1": {
+		"method": "calcCode",
+		"code": "(L:CB_HA2_PASS_OXY_CTL_1) ! (>L:CB_HA2_PASS_OXY_CTL_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA3 PASS OXY CTL 2": {
+		"method": "calcCode",
+		"code": "(L:CB_HA3_PASS_OXY_CTL_2) ! (>L:CB_HA3_PASS_OXY_CTL_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA4 PASS OXY CTL 3": {
+		"method": "calcCode",
+		"code": "(L:CB_HA4_PASS_OXY_CTL_3) ! (>L:CB_HA4_PASS_OXY_CTL_3)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA5 PASS OXY ACT 1": {
+		"method": "calcCode",
+		"code": "(L:CB_HA5_PASS_OXY_ACT_1) ! (>L:CB_HA5_PASS_OXY_ACT_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA6 PASS OXY ACT 2": {
+		"method": "calcCode",
+		"code": "(L:CB_HA6_PASS_OXY_ACT_2) ! (>L:CB_HA6_PASS_OXY_ACT_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA7 PASS OXY ACT 3": {
+		"method": "calcCode",
+		"code": "(L:CB_HA7_PASS_OXY_ACT_3) ! (>L:CB_HA7_PASS_OXY_ACT_3)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA8 PASS OXY ACT 4": {
+		"method": "calcCode",
+		"code": "(L:CB_HA8_PASS_OXY_ACT_4) ! (>L:CB_HA8_PASS_OXY_ACT_4)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker HA9 CIDS L FWD": {
+		"method": "calcCode",
+		"code": "(L:CB_HA9_CIDS_L_FWD) ! (>L:CB_HA9_CIDS_L_FWD)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker J18 CFDIU": {
+		"method": "calcCode",
+		"code": "(L:CB_J18_CFDIU) ! (>L:CB_J18_CFDIU)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K02 NAV ADF2": {
+		"method": "calcCode",
+		"code": "(L:CB_K02_NAV_ADF2) ! (>L:CB_K02_NAV_ADF2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K06 NAV DME2": {
+		"method": "calcCode",
+		"code": "(L:CB_K06_NAV_DME2) ! (>L:CB_K06_NAV_DME2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K07 NAV ATC2": {
+		"method": "calcCode",
+		"code": "(L:CB_K07_NAV_ATC2) ! (>L:CB_K07_NAV_ATC2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K08 NAV VOR2": {
+		"method": "calcCode",
+		"code": "(L:CB_K08_NAV_VOR2) ! (>L:CB_K08_NAV_VOR2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K11 RADIO ALT 1": {
+		"method": "calcCode",
+		"code": "(L:CB_K11_RADIO_ALT_1) ! (>L:CB_K11_RADIO_ALT_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K12 RADIO ALT 2": {
+		"method": "calcCode",
+		"code": "(L:CB_K12_RADIO_ALT_2) ! (>L:CB_K12_RADIO_ALT_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K19 PDL PWR SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_K19_PDL_PWR_SPLY) ! (>L:CB_K19_PDL_PWR_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K23 ": {
+		"method": "calcCode",
+		"code": "(L:CB_K23_) ! (>L:CB_K23_)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K25 STAT INV": {
+		"method": "calcCode",
+		"code": "(L:CB_K25_STAT_INV) ! (>L:CB_K25_STAT_INV)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker K39 APU FUEL BLOWOFF CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_K39_APU_FUEL_BLOWOFF_CTL) ! (>L:CB_K39_APU_FUEL_BLOWOFF_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L02 COM RMP2": {
+		"method": "calcCode",
+		"code": "(L:CB_L02_COM_RMP2) ! (>L:CB_L02_COM_RMP2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L03 COM RMP3": {
+		"method": "calcCode",
+		"code": "(L:CB_L03_COM_RMP3) ! (>L:CB_L03_COM_RMP3)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L04 COM VHF2": {
+		"method": "calcCode",
+		"code": "(L:CB_L04_COM_VHF2) ! (>L:CB_L04_COM_VHF2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L05 COM VHF3": {
+		"method": "calcCode",
+		"code": "(L:CB_L05_COM_VHF3) ! (>L:CB_L05_COM_VHF3)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 FCU EXPED Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EXPED)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 FCU ATHR Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_ATHR)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 FCU APPR Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_APPR)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 FCU AP2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_AP2)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 FCU AP1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_AP1)"
+	},
+	"FenixSim.A320.Warning.FNX320 Evacuation Command Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_EVAC_COMMAND_U)"
+	},
+	"FenixSim.A320.Warning.FNX320 Evacuation Command Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_EVAC_COMMAND_L)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine N1 Mode 2 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:PlaceholderVar)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine N1 Mode 1 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:PlaceholderVar)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine Manual Start 2 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ENG_MANSTART_2_L)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine Manual Start 1 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ENG_MANSTART_1_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 EmergencyElectrical RAT Emergency Generator Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_EMERG_GEN_FAULT)"
+	},
+	"FenixSim.A320.Warning.FNX320 EmergencyElectrical Generator 1 Line Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GEN1_LINE_U)"
+	},
+	"FenixSim.A320.Warning.FNX320 EmergencyElectrical Generator 1 Line Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GEN1_LINE_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical IDG 2 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_IDG2_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical IDG 1 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_IDG1_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GEN2_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GEN2_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GEN1_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GEN1_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Galley Cabin Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GALY_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Galley Cabin Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_GALY_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical External Power Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_EXT_PWR_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical External Power Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_EXT_PWR_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Commercial Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_COMMERCIAL_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Commercial Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_COMMERCIAL_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Bus Tie Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_BUSTIE_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Battery 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_BAT2_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Battery 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_BAT2_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Battery 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_BAT1_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Battery 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_BAT1_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical APU Generator Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_APU_GENERATOR_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical APU Generator Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_APU_GENERATOR_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical AC Essential Feed Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_AC_ESS_FEED_U)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical AC Essential Feed Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_AC_ESS_FEED_L)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 WPT Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS2_WPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 VORD Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS2_VORD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 NDB Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS2_NDB)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 LS Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS2_LS)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 FD Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS2_FD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 CSTR Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS2_CSTR)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 ARPT Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS2_ARPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 WPT Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS1_WPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 VORD Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS1_VORD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 NDB Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS1_NDB)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 LS Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS1_LS)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 FD Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS1_FD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 CSTR Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS1_CSTR)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 ARPT Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_EFIS1_ARPT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM WHEEL Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_WHEEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM STS Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_STATUS)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM PRESS Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_CAB_PRESS)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM HYD Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_HYD)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM FUEL Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_FUEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM FCTL Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_FCTL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ENG Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_ENGINE)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ELEC Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_ELEC)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM DOOR Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_DOOR)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM COND Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_COND)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM CLR Right Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_CLR_RIGHT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM CLR Left Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_CLR_LEFT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM BLEED Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_BLEED)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM APU Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_APU)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM EMER CANC Button On": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_EMER_CANCEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM EMER CANC Button Off": {
+		"method": "calcCode",
+		"code": "(L:I_ECAM_EMER_CANCEL)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 CargoSmoke Forward Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_CARGO_SMOKE_FWD_U)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 CargoSmoke Aft Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_CARGO_SMOKE_AFT_U)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 CargoHeat Hot Air Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_HOT_AIR_AFT_CARGO_U)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 CargoHeat Hot Air Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_HOT_AIR_AFT_CARGO_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 CargoHeat Aft Isolation Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_CARGO_AFT_ISOL_VALVE_U)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 CargoHeat Aft Isolation Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_CARGO_AFT_ISOL_VALVE_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 Call Emergency Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_CALLS_EMER_U)"
+	},
+	"FenixSim.A320.Warning.FNX320 Call Emergency Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_CALLS_EMER_L)"
+	},
+	"FenixSim.A320.Engines.FNX320 APU Start Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_APU_START_U)"
+	},
+	"FenixSim.A320.Engines.FNX320 APU Start Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_APU_START_L)"
+	},
+	"FenixSim.A320.Engines.FNX320 APU Master Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_APU_MASTER_U)"
+	},
+	"FenixSim.A320.Engines.FNX320 APU Master Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_ELEC_APU_MASTER_L)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS IR 3 Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_IR3_SWITCH_U)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS IR 3 Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_IR3_SWITCH_L)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS IR 2 Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_IR2_SWITCH_U)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS IR 2 Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_IR2_SWITCH_L)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS IR 1 Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_IR1_SWITCH_U)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS IR 1 Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_IR1_SWITCH_L)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS ADR 3 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADR3_U)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS ADR 3 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADR3_L)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS ADR 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADR2_U)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS ADR 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADR2_L)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS ADR 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADR1_U)"
+	},
+	"FenixSim.A320.Radio.FNX320 ADIRS ADR 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADR1_L)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VOICE Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_VOICE)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 3 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_VHF_3_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 3 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_VHF_3_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 2 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_VHF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 2 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_VHF_2_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 1 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_VHF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 1 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_VHF_1_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INT Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_INT_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INT Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_INT_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 2 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_HF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 2 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_HF_2_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 1 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 1 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_HF_1_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 CAB Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_CAB_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 CAB Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_CAB_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VOICE Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_VOICE)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 3 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_VHF_3_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 3 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_VHF_3_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 2 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_VHF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 2 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_VHF_2_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 1 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_VHF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 1 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_VHF_1_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 PA SEND Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_PA_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INT Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_INT_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INT Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_INT_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 2 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_HF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 2 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_HF_2_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 1 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 1 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_HF_1_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 CAB Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_CAB_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 CAB Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP2_CAB_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VOICE Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_VOICE)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 3 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_VHF_3_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 3 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_VHF_3_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 2 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_VHF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 2 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_VHF_2_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 1 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_VHF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 1 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_VHF_1_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 PA SEND Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_PA_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INT Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_INT_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INT Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_INT_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 2 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 2 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_HF_2_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 1 Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 1 Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_HF_1_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 CAB Send Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_CAB_SEND)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L13 COM HF1": {
+		"method": "calcCode",
+		"code": "(L:CB_L13_COM_HF1) ! (>L:CB_L13_COM_HF1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L15 ATSU": {
+		"method": "calcCode",
+		"code": "(L:CB_L15_ATSU) ! (>L:CB_L15_ATSU)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L16 ATSU": {
+		"method": "calcCode",
+		"code": "(L:CB_L16_ATSU) ! (>L:CB_L16_ATSU)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L17 DCDU1": {
+		"method": "calcCode",
+		"code": "(L:CB_L17_DCDU1) ! (>L:CB_L17_DCDU1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L18 DCDU2": {
+		"method": "calcCode",
+		"code": "(L:CB_L18_DCDU2) ! (>L:CB_L18_DCDU2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L32 BRK FAN12": {
+		"method": "calcCode",
+		"code": "(L:CB_L32_BRK_FAN12) ! (>L:CB_L32_BRK_FAN12)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L35 BRK FAN34": {
+		"method": "calcCode",
+		"code": "(L:CB_L35_BRK_FAN34) ! (>L:CB_L35_BRK_FAN34)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L38 FIRE EXTNG APU A": {
+		"method": "calcCode",
+		"code": "(L:CB_L38_FIRE_EXTNG_APU_A) ! (>L:CB_L38_FIRE_EXTNG_APU_A)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L39 FIRE EXTNG APU B": {
+		"method": "calcCode",
+		"code": "(L:CB_L39_FIRE_EXTNG_APU_B) ! (>L:CB_L39_FIRE_EXTNG_APU_B)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L40 APU AUTO EXT GND TEST": {
+		"method": "calcCode",
+		"code": "(L:CB_L40_APU_AUTO_EXT_GND_TEST) ! (>L:CB_L40_APU_AUTO_EXT_GND_TEST)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L41 ECP SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_L41_ECP_SUPPLY) ! (>L:CB_L41_ECP_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L42 APU CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_L42_APU_CTL) ! (>L:CB_L42_APU_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L43 FIRE DET APU LOOP A": {
+		"method": "calcCode",
+		"code": "(L:CB_L43_FIRE_DET_APU_LOOP_A) ! (>L:CB_L43_FIRE_DET_APU_LOOP_A)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker L44 FIRE DET APU LOOP B": {
+		"method": "calcCode",
+		"code": "(L:CB_L44_FIRE_DET_APU_LOOP_B) ! (>L:CB_L44_FIRE_DET_APU_LOOP_B)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M02 ACP 3D": {
+		"method": "calcCode",
+		"code": "(L:CB_M02_ACP_3D) ! (>L:CB_M02_ACP_3D)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M17 FMGC2": {
+		"method": "calcCode",
+		"code": "(L:CB_M17_FMGC2) ! (>L:CB_M17_FMGC2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M18 FAC 2 NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_M18_FAC_2_NORM) ! (>L:CB_M18_FAC_2_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M19 FAC 2 STBY": {
+		"method": "calcCode",
+		"code": "(L:CB_M19_FAC_2_STBY) ! (>L:CB_M19_FAC_2_STBY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M20 RUDDER TRIM IND": {
+		"method": "calcCode",
+		"code": "(L:CB_M20_RUDDER_TRIM_IND) ! (>L:CB_M20_RUDDER_TRIM_IND)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M21 FCU2": {
+		"method": "calcCode",
+		"code": "(L:CB_M21_FCU2) ! (>L:CB_M21_FCU2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M22 XFR VALVE 2 L": {
+		"method": "calcCode",
+		"code": "(L:CB_M22_XFR_VALVE_2_L) ! (>L:CB_M22_XFR_VALVE_2_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M23 XFR VALVE 2 R": {
+		"method": "calcCode",
+		"code": "(L:CB_M23_XFR_VALVE_2_R) ! (>L:CB_M23_XFR_VALVE_2_R)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M24 XFEED VALVE MOT2": {
+		"method": "calcCode",
+		"code": "(L:CB_M24_XFEED_VALVE_MOT2) ! (>L:CB_M24_XFEED_VALVE_MOT2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M25 LP VALVE MOT2 ENG1": {
+		"method": "calcCode",
+		"code": "(L:CB_M25_LP_VALVE_MOT2_ENG1) ! (>L:CB_M25_LP_VALVE_MOT2_ENG1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M26 LP VALVE MOT2 ENG2": {
+		"method": "calcCode",
+		"code": "(L:CB_M26_LP_VALVE_MOT2_ENG2) ! (>L:CB_M26_LP_VALVE_MOT2_ENG2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M27 FQI CHAN 2": {
+		"method": "calcCode",
+		"code": "(L:CB_M27_FQI_CHAN_2) ! (>L:CB_M27_FQI_CHAN_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M32 BRK FAN CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_M32_BRK_FAN_CTL) ! (>L:CB_M32_BRK_FAN_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M33 BSCU 1 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_M33_BSCU_1_SPLY) ! (>L:CB_M33_BSCU_1_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M34 BSCU 1 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_M34_BSCU_1_CTL) ! (>L:CB_M34_BSCU_1_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M35 BSCU 2 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_M35_BSCU_2_SPLY) ! (>L:CB_M35_BSCU_2_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M36 BSCU 2 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_M36_BSCU_2_CTL) ! (>L:CB_M36_BSCU_2_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M38 APU FUEL PUMP CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_M38_APU_FUEL_PUMP_CTL) ! (>L:CB_M38_APU_FUEL_PUMP_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M39 APU LP VALVE SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_M39_APU_LP_VALVE_SPLY) ! (>L:CB_M39_APU_LP_VALVE_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M40 APU LP VALVE CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_M40_APU_LP_VALVE_CTL) ! (>L:CB_M40_APU_LP_VALVE_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M41 APU FIRE STBY": {
+		"method": "calcCode",
+		"code": "(L:CB_M41_APU_FIRE_STBY) ! (>L:CB_M41_APU_FIRE_STBY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker M42 APU FIRE NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_M42_APU_FIRE_NORM) ! (>L:CB_M42_APU_FIRE_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N03 CLOCK STBY SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_N03_CLOCK_STBY_SPLY) ! (>L:CB_N03_CLOCK_STBY_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N04 ADIRS 3 28": {
+		"method": "calcCode",
+		"code": "(L:CB_N04_ADIRS_3_28) ! (>L:CB_N04_ADIRS_3_28)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N05 ADIRS 2 28": {
+		"method": "calcCode",
+		"code": "(L:CB_N05_ADIRS_2_28) ! (>L:CB_N05_ADIRS_2_28)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N06 ADIRU 3 115": {
+		"method": "calcCode",
+		"code": "(L:CB_N06_ADIRU_3_115) ! (>L:CB_N06_ADIRU_3_115)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N07 ADIRU 2 115": {
+		"method": "calcCode",
+		"code": "(L:CB_N07_ADIRU_2_115) ! (>L:CB_N07_ADIRU_2_115)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N10 2PWR SHED": {
+		"method": "calcCode",
+		"code": "(L:CB_N10_2PWR_SHED) ! (>L:CB_N10_2PWR_SHED)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N16 STICK LOCK": {
+		"method": "calcCode",
+		"code": "(L:CB_N16_STICK_LOCK) ! (>L:CB_N16_STICK_LOCK)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N20 MCDU 2": {
+		"method": "calcCode",
+		"code": "(L:CB_N20_MCDU_2) ! (>L:CB_N20_MCDU_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N23 L PUMP1 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_N23_L_PUMP1_SPLY) ! (>L:CB_N23_L_PUMP1_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N26 L PUMP2 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_N26_L_PUMP2_SPLY) ! (>L:CB_N26_L_PUMP2_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N28 IGGS CTLR": {
+		"method": "calcCode",
+		"code": "(L:CB_N28_IGGS_CTLR) ! (>L:CB_N28_IGGS_CTLR)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N30 HYD POWER Y": {
+		"method": "calcCode",
+		"code": "(L:CB_N30_HYD_POWER_Y) ! (>L:CB_N30_HYD_POWER_Y)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N34 PTU CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_N34_PTU_CTL) ! (>L:CB_N34_PTU_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N35 GYB LEAK TEST": {
+		"method": "calcCode",
+		"code": "(L:CB_N35_GYB_LEAK_TEST) ! (>L:CB_N35_GYB_LEAK_TEST)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N36 PARKING BRAKE CTL NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_N36_PARKING_BRAKE_CTL_NORM) ! (>L:CB_N36_PARKING_BRAKE_CTL_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N37 PARKING BRAKE CTL STBY": {
+		"method": "calcCode",
+		"code": "(L:CB_N37_PARKING_BRAKE_CTL_STBY) ! (>L:CB_N37_PARKING_BRAKE_CTL_STBY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N44 ENG1 REV LOCK": {
+		"method": "calcCode",
+		"code": "(L:CB_N44_ENG1_REV_LOCK) ! (>L:CB_N44_ENG1_REV_LOCK)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker N45 ENG2 REV LOCK": {
+		"method": "calcCode",
+		"code": "(L:CB_N45_ENG2_REV_LOCK) ! (>L:CB_N45_ENG2_REV_LOCK)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P06 GPWS 28": {
+		"method": "calcCode",
+		"code": "(L:CB_P06_GPWS_28) ! (>L:CB_P06_GPWS_28)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P07 GPWS 115": {
+		"method": "calcCode",
+		"code": "(L:CB_P07_GPWS_115) ! (>L:CB_P07_GPWS_115)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P09 HORN SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_P09_HORN_SUPPLY) ! (>L:CB_P09_HORN_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P16 SLT FLP 2 POS IND": {
+		"method": "calcCode",
+		"code": "(L:CB_P16_SLT_FLP_2_POS_IND) ! (>L:CB_P16_SLT_FLP_2_POS_IND)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P19 WTB SLT 2": {
+		"method": "calcCode",
+		"code": "(L:CB_P19_WTB_SLT_2) ! (>L:CB_P19_WTB_SLT_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P20 WTB FLP 2": {
+		"method": "calcCode",
+		"code": "(L:CB_P20_WTB_FLP_2) ! (>L:CB_P20_WTB_FLP_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P29 ACT XFR VLV AUTO CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_P29_ACT_XFR_VLV_AUTO_CTL) ! (>L:CB_P29_ACT_XFR_VLV_AUTO_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P30 ABCU HOT BUS SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_P30_ABCU_HOT_BUS_SPLY) ! (>L:CB_P30_ABCU_HOT_BUS_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P33 RAT SPLY EXTN SOL1": {
+		"method": "calcCode",
+		"code": "(L:CB_P33_RAT_SPLY_EXTN_SOL1) ! (>L:CB_P33_RAT_SPLY_EXTN_SOL1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P39 IGN ENG1 SYSA": {
+		"method": "calcCode",
+		"code": "(L:CB_P39_IGN_ENG1_SYSA) ! (>L:CB_P39_IGN_ENG1_SYSA)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P40 IGN ENG2 SYSA": {
+		"method": "calcCode",
+		"code": "(L:CB_P40_IGN_ENG2_SYSA) ! (>L:CB_P40_IGN_ENG2_SYSA)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P41 IGN ENG1 SYSB": {
+		"method": "calcCode",
+		"code": "(L:CB_P41_IGN_ENG1_SYSB) ! (>L:CB_P41_IGN_ENG1_SYSB)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker P42 IGN ENG2 SYSB": {
+		"method": "calcCode",
+		"code": "(L:CB_P42_IGN_ENG2_SYSB) ! (>L:CB_P42_IGN_ENG2_SYSB)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q02 SDAC2 AC REF 2": {
+		"method": "calcCode",
+		"code": "(L:CB_Q02_SDAC2_AC_REF_2) ! (>L:CB_Q02_SDAC2_AC_REF_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q03 SDAC1 AC REF 2": {
+		"method": "calcCode",
+		"code": "(L:CB_Q03_SDAC1_AC_REF_2) ! (>L:CB_Q03_SDAC1_AC_REF_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q05 SDAC2 AC REF 1": {
+		"method": "calcCode",
+		"code": "(L:CB_Q05_SDAC2_AC_REF_1) ! (>L:CB_Q05_SDAC2_AC_REF_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q06 SDAC 2 SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Q06_SDAC_2_SUPPLY) ! (>L:CB_Q06_SDAC_2_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q07 FWC 2 SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Q07_FWC_2_SUPPLY) ! (>L:CB_Q07_FWC_2_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q08 DMC2 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Q08_DMC2_SPLY) ! (>L:CB_Q08_DMC2_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q09 DMC3 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Q09_DMC3_SPLY) ! (>L:CB_Q09_DMC3_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q16 FC THS MOT1": {
+		"method": "calcCode",
+		"code": "(L:CB_Q16_FC_THS_MOT1) ! (>L:CB_Q16_FC_THS_MOT1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q17 FC THS MOT3": {
+		"method": "calcCode",
+		"code": "(L:CB_Q17_FC_THS_MOT3) ! (>L:CB_Q17_FC_THS_MOT3)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q18 SEC 2": {
+		"method": "calcCode",
+		"code": "(L:CB_Q18_SEC_2) ! (>L:CB_Q18_SEC_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q19 SEC 3": {
+		"method": "calcCode",
+		"code": "(L:CB_Q19_SEC_3) ! (>L:CB_Q19_SEC_3)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q20 FCTL FCDC1 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Q20_FCTL_FCDC1_SPLY) ! (>L:CB_Q20_FCTL_FCDC1_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q21 FLAP CTL MON SYS 2": {
+		"method": "calcCode",
+		"code": "(L:CB_Q21_FLAP_CTL_MON_SYS_2) ! (>L:CB_Q21_FLAP_CTL_MON_SYS_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q23 R PUMP1 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Q23_R_PUMP1_SPLY) ! (>L:CB_Q23_R_PUMP1_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q26 R PUMP2 SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Q26_R_PUMP2_SPLY) ! (>L:CB_Q26_R_PUMP2_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q34 LGCIU 1 GND": {
+		"method": "calcCode",
+		"code": "(L:CB_Q34_LGCIU_1_GND) ! (>L:CB_Q34_LGCIU_1_GND)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q35 LGCIU 2": {
+		"method": "calcCode",
+		"code": "(L:CB_Q35_LGCIU_2) ! (>L:CB_Q35_LGCIU_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q38 ENG1 DET LOOP B": {
+		"method": "calcCode",
+		"code": "(L:CB_Q38_ENG1_DET_LOOP_B) ! (>L:CB_Q38_ENG1_DET_LOOP_B)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q39 ENG2 DET LOOP A": {
+		"method": "calcCode",
+		"code": "(L:CB_Q39_ENG2_DET_LOOP_A) ! (>L:CB_Q39_ENG2_DET_LOOP_A)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q40 ENG2 FADEC B EIU 2": {
+		"method": "calcCode",
+		"code": "(L:CB_Q40_ENG2_FADEC_B_EIU_2) ! (>L:CB_Q40_ENG2_FADEC_B_EIU_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q41 FIRE EXTNG 2A": {
+		"method": "calcCode",
+		"code": "(L:CB_Q41_FIRE_EXTNG_2A) ! (>L:CB_Q41_FIRE_EXTNG_2A)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q42 FIRE EXTNG 2B": {
+		"method": "calcCode",
+		"code": "(L:CB_Q42_FIRE_EXTNG_2B) ! (>L:CB_Q42_FIRE_EXTNG_2B)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q43 FIRE EXTNG 1A": {
+		"method": "calcCode",
+		"code": "(L:CB_Q43_FIRE_EXTNG_1A) ! (>L:CB_Q43_FIRE_EXTNG_1A)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Q44 FIRE EXTNG 1B": {
+		"method": "calcCode",
+		"code": "(L:CB_Q44_FIRE_EXTNG_1B) ! (>L:CB_Q44_FIRE_EXTNG_1B)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R03 FO PFD": {
+		"method": "calcCode",
+		"code": "(L:CB_R03_FO_PFD) ! (>L:CB_R03_FO_PFD)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R04 FO ND": {
+		"method": "calcCode",
+		"code": "(L:CB_R04_FO_ND) ! (>L:CB_R04_FO_ND)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R05 DU PFD FO SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_R05_DU_PFD_FO_SWTG) ! (>L:CB_R05_DU_PFD_FO_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R06 DU ND FO SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_R06_DU_ND_FO_SWTG) ! (>L:CB_R06_DU_ND_FO_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R08 DMC2 SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_R08_DMC2_SWTG) ! (>L:CB_R08_DMC2_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R10 DU ECAM LOWER SWTG": {
+		"method": "calcCode",
+		"code": "(L:CB_R10_DU_ECAM_LOWER_SWTG) ! (>L:CB_R10_DU_ECAM_LOWER_SWTG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R11 LOWER ECAM": {
+		"method": "calcCode",
+		"code": "(L:CB_R11_LOWER_ECAM) ! (>L:CB_R11_LOWER_ECAM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R14 ELT NAV AC IDENT": {
+		"method": "calcCode",
+		"code": "(L:CB_R14_ELT_NAV_AC_IDENT) ! (>L:CB_R14_ELT_NAV_AC_IDENT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R16 RUDDER FTU": {
+		"method": "calcCode",
+		"code": "(L:CB_R16_RUDDER_FTU) ! (>L:CB_R16_RUDDER_FTU)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R20 ELAC 2 NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_R20_ELAC_2_NORM) ! (>L:CB_R20_ELAC_2_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R21 SLAT CTL MON SYS 2": {
+		"method": "calcCode",
+		"code": "(L:CB_R21_SLAT_CTL_MON_SYS_2) ! (>L:CB_R21_SLAT_CTL_MON_SYS_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R23 L PUMP1 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_R23_L_PUMP1_CTL) ! (>L:CB_R23_L_PUMP1_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R24 L PUMP2 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_R24_L_PUMP2_CTL) ! (>L:CB_R24_L_PUMP2_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R25 CTR PUMP1 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_R25_CTR_PUMP1_CTL) ! (>L:CB_R25_CTR_PUMP1_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R26 CTR PUMP2 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_R26_CTR_PUMP2_CTL) ! (>L:CB_R26_CTR_PUMP2_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R27 CTR AUTO CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_R27_CTR_AUTO_CTL) ! (>L:CB_R27_CTR_AUTO_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R28 R PUMP1 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_R28_R_PUMP1_CTL) ! (>L:CB_R28_R_PUMP1_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R29 L PUMP2 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_R29_L_PUMP2_CTL) ! (>L:CB_R29_L_PUMP2_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker R41 ENG1 FADEC B EIU 1": {
+		"method": "calcCode",
+		"code": "(L:CB_R41_ENG1_FADEC_B_EIU_1) ! (>L:CB_R41_ENG1_FADEC_B_EIU_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker S06 WTB SLT 1": {
+		"method": "calcCode",
+		"code": "(L:CB_S06_WTB_SLT_1) ! (>L:CB_S06_WTB_SLT_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker S07 WTB FLP 1": {
+		"method": "calcCode",
+		"code": "(L:CB_S07_WTB_FLP_1) ! (>L:CB_S07_WTB_FLP_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker S22 AFT CARGO VENT FAN": {
+		"method": "calcCode",
+		"code": "(L:CB_S22_AFT_CARGO_VENT_FAN) ! (>L:CB_S22_AFT_CARGO_VENT_FAN)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker T02 NAV LOGO 2": {
+		"method": "calcCode",
+		"code": "(L:CB_T02_NAV_LOGO_2) ! (>L:CB_T02_NAV_LOGO_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker T03 NAV LOGO 1": {
+		"method": "calcCode",
+		"code": "(L:CB_T03_NAV_LOGO_1) ! (>L:CB_T03_NAV_LOGO_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker T04 LANDING LIGHT SPLY L": {
+		"method": "calcCode",
+		"code": "(L:CB_T04_LANDING_LIGHT_SPLY_L) ! (>L:CB_T04_LANDING_LIGHT_SPLY_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker T05 LANDING LIGHT CTL L": {
+		"method": "calcCode",
+		"code": "(L:CB_T05_LANDING_LIGHT_CTL_L) ! (>L:CB_T05_LANDING_LIGHT_CTL_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker T06 LANDING LIGHT SPLY R": {
+		"method": "calcCode",
+		"code": "(L:CB_T06_LANDING_LIGHT_SPLY_R) ! (>L:CB_T06_LANDING_LIGHT_SPLY_R)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker T07 LANDING LIGHT CTL R": {
+		"method": "calcCode",
+		"code": "(L:CB_T07_LANDING_LIGHT_CTL_R) ! (>L:CB_T07_LANDING_LIGHT_CTL_R)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker T13 CPKT LOCK": {
+		"method": "calcCode",
+		"code": "(L:CB_T13_CPKT_LOCK) ! (>L:CB_T13_CPKT_LOCK)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker U03 BEACON LOWER": {
+		"method": "calcCode",
+		"code": "(L:CB_U03_BEACON_LOWER) ! (>L:CB_U03_BEACON_LOWER)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker U06 BEACON UPPER": {
+		"method": "calcCode",
+		"code": "(L:CB_U06_BEACON_UPPER) ! (>L:CB_U06_BEACON_UPPER)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker U19 LAV GALLEY FAN SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_U19_LAV_GALLEY_FAN_SPLY) ! (>L:CB_U19_LAV_GALLEY_FAN_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker U21 LAV GALLEY FAN CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_U21_LAV_GALLEY_FAN_CTL) ! (>L:CB_U21_LAV_GALLEY_FAN_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker V02 LOGO LIGHT RIGHT": {
+		"method": "calcCode",
+		"code": "(L:CB_V02_LOGO_LIGHT_RIGHT) ! (>L:CB_V02_LOGO_LIGHT_RIGHT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker V03 LOGO LIGHT LEFT": {
+		"method": "calcCode",
+		"code": "(L:CB_V03_LOGO_LIGHT_LEFT) ! (>L:CB_V03_LOGO_LIGHT_LEFT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker V05 WING STROBE LIGHT": {
+		"method": "calcCode",
+		"code": "(L:CB_V05_WING_STROBE_LIGHT) ! (>L:CB_V05_WING_STROBE_LIGHT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker V12 ICE DET L": {
+		"method": "calcCode",
+		"code": "(L:CB_V12_ICE_DET_L) ! (>L:CB_V12_ICE_DET_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker V13 ICE DET R": {
+		"method": "calcCode",
+		"code": "(L:CB_V13_ICE_DET_R) ! (>L:CB_V13_ICE_DET_R)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W02 WING LIGHT LEFT": {
+		"method": "calcCode",
+		"code": "(L:CB_W02_WING_LIGHT_LEFT) ! (>L:CB_W02_WING_LIGHT_LEFT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W03 WING LIGHT RIGHT": {
+		"method": "calcCode",
+		"code": "(L:CB_W03_WING_LIGHT_RIGHT) ! (>L:CB_W03_WING_LIGHT_RIGHT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W05 RWY TURNOFF R": {
+		"method": "calcCode",
+		"code": "(L:CB_W05_RWY_TURNOFF_R) ! (>L:CB_W05_RWY_TURNOFF_R)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W06 RWY TURNOFF L": {
+		"method": "calcCode",
+		"code": "(L:CB_W06_RWY_TURNOFF_L) ! (>L:CB_W06_RWY_TURNOFF_L)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W07 NOSE LIGHT TAKEOFF": {
+		"method": "calcCode",
+		"code": "(L:CB_W07_NOSE_LIGHT_TAKEOFF) ! (>L:CB_W07_NOSE_LIGHT_TAKEOFF)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W08 NOSE LIGHT TAXI": {
+		"method": "calcCode",
+		"code": "(L:CB_W08_NOSE_LIGHT_TAXI) ! (>L:CB_W08_NOSE_LIGHT_TAXI)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W09 NOSE LIGHT CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_W09_NOSE_LIGHT_CTL) ! (>L:CB_W09_NOSE_LIGHT_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W10 ENG ANTI ICE 2": {
+		"method": "calcCode",
+		"code": "(L:CB_W10_ENG_ANTI_ICE_2) ! (>L:CB_W10_ENG_ANTI_ICE_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W12 WIPER FO": {
+		"method": "calcCode",
+		"code": "(L:CB_W12_WIPER_FO) ! (>L:CB_W12_WIPER_FO)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W13 WHC 2": {
+		"method": "calcCode",
+		"code": "(L:CB_W13_WHC_2) ! (>L:CB_W13_WHC_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W18 RECIRC R SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_W18_RECIRC_R_SPLY) ! (>L:CB_W18_RECIRC_R_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W20 RECIRC R CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_W20_RECIRC_R_CTL) ! (>L:CB_W20_RECIRC_R_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W25 DC BUS TIE": {
+		"method": "calcCode",
+		"code": "(L:CB_W25_DC_BUS_TIE) ! (>L:CB_W25_DC_BUS_TIE)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker W26 ESS DC BUS TIE": {
+		"method": "calcCode",
+		"code": "(L:CB_W26_ESS_DC_BUS_TIE) ! (>L:CB_W26_ESS_DC_BUS_TIE)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker X10 ENG ANTI ICE 1": {
+		"method": "calcCode",
+		"code": "(L:CB_X10_ENG_ANTI_ICE_1) ! (>L:CB_X10_ENG_ANTI_ICE_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker X12 WIPER CAPT": {
+		"method": "calcCode",
+		"code": "(L:CB_X12_WIPER_CAPT) ! (>L:CB_X12_WIPER_CAPT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker X13 WHC 1": {
+		"method": "calcCode",
+		"code": "(L:CB_X13_WHC_1) ! (>L:CB_X13_WHC_1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker X18 RECIRC L SPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_X18_RECIRC_L_SPLY) ! (>L:CB_X18_RECIRC_L_SPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker X20 RECIRC L CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_X20_RECIRC_L_CTL) ! (>L:CB_X20_RECIRC_L_CTL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y03 OVHD PANEL": {
+		"method": "calcCode",
+		"code": "(L:CB_Y03_OVHD_PANEL) ! (>L:CB_Y03_OVHD_PANEL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y04 INST LIGHT PED": {
+		"method": "calcCode",
+		"code": "(L:CB_Y04_INST_LIGHT_PED) ! (>L:CB_Y04_INST_LIGHT_PED)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y05 GLARE SHIELD": {
+		"method": "calcCode",
+		"code": "(L:CB_Y05_GLARE_SHIELD) ! (>L:CB_Y05_GLARE_SHIELD)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y06 CKPT DOME": {
+		"method": "calcCode",
+		"code": "(L:CB_Y06_CKPT_DOME) ! (>L:CB_Y06_CKPT_DOME)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y11 PROBES 2 STATIC": {
+		"method": "calcCode",
+		"code": "(L:CB_Y11_PROBES_2_STATIC) ! (>L:CB_Y11_PROBES_2_STATIC)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y12 PROBES 2 PHC SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Y12_PROBES_2_PHC_SUPPLY) ! (>L:CB_Y12_PROBES_2_PHC_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y13 PROBES 2 AOA": {
+		"method": "calcCode",
+		"code": "(L:CB_Y13_PROBES_2_AOA) ! (>L:CB_Y13_PROBES_2_AOA)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y14 PROBES 2 PITOT": {
+		"method": "calcCode",
+		"code": "(L:CB_Y14_PROBES_2_PITOT) ! (>L:CB_Y14_PROBES_2_PITOT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y15 PROBES 2 TAT": {
+		"method": "calcCode",
+		"code": "(L:CB_Y15_PROBES_2_TAT) ! (>L:CB_Y15_PROBES_2_TAT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y16 PROBES 3 PHC SUPPLY": {
+		"method": "calcCode",
+		"code": "(L:CB_Y16_PROBES_3_PHC_SUPPLY) ! (>L:CB_Y16_PROBES_3_PHC_SUPPLY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y17 AVNCS VENT MONG": {
+		"method": "calcCode",
+		"code": "(L:CB_Y17_AVNCS_VENT_MONG) ! (>L:CB_Y17_AVNCS_VENT_MONG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y22 CAB PRESS CTL 2": {
+		"method": "calcCode",
+		"code": "(L:CB_Y22_CAB_PRESS_CTL_2) ! (>L:CB_Y22_CAB_PRESS_CTL_2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Y23 CAB MAN PRESS": {
+		"method": "calcCode",
+		"code": "(L:CB_Y23_CAB_MAN_PRESS) ! (>L:CB_Y23_CAB_MAN_PRESS)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z04 LIGHTING FLOOD CTR": {
+		"method": "calcCode",
+		"code": "(L:CB_Z04_LIGHTING_FLOOD_CTR) ! (>L:CB_Z04_LIGHTING_FLOOD_CTR)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z05 LIGHTING FLOOD CAPT": {
+		"method": "calcCode",
+		"code": "(L:CB_Z05_LIGHTING_FLOOD_CAPT) ! (>L:CB_Z05_LIGHTING_FLOOD_CAPT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z06 LIGHTING FLOOD FO": {
+		"method": "calcCode",
+		"code": "(L:CB_Z06_LIGHTING_FLOOD_FO) ! (>L:CB_Z06_LIGHTING_FLOOD_FO)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z07 LIGHTING AVNCS CPT": {
+		"method": "calcCode",
+		"code": "(L:CB_Z07_LIGHTING_AVNCS_CPT) ! (>L:CB_Z07_LIGHTING_AVNCS_CPT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z08 AVNCS CPT DC": {
+		"method": "calcCode",
+		"code": "(L:CB_Z08_AVNCS_CPT_DC) ! (>L:CB_Z08_AVNCS_CPT_DC)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z09 AVNCS CPT AC": {
+		"method": "calcCode",
+		"code": "(L:CB_Z09_AVNCS_CPT_AC) ! (>L:CB_Z09_AVNCS_CPT_AC)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z12 PROBES 1 TAT": {
+		"method": "calcCode",
+		"code": "(L:CB_Z12_PROBES_1_TAT) ! (>L:CB_Z12_PROBES_1_TAT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z13 PROBES 1 STATIC": {
+		"method": "calcCode",
+		"code": "(L:CB_Z13_PROBES_1_STATIC) ! (>L:CB_Z13_PROBES_1_STATIC)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z14 PROBES 3 STATIC": {
+		"method": "calcCode",
+		"code": "(L:CB_Z14_PROBES_3_STATIC) ! (>L:CB_Z14_PROBES_3_STATIC)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z15 PROBES 3 AOA": {
+		"method": "calcCode",
+		"code": "(L:CB_Z15_PROBES_3_AOA) ! (>L:CB_Z15_PROBES_3_AOA)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z16 PROBES 3 PITOT": {
+		"method": "calcCode",
+		"code": "(L:CB_Z16_PROBES_3_PITOT) ! (>L:CB_Z16_PROBES_3_PITOT)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z20 X FEED VALVE NORM": {
+		"method": "calcCode",
+		"code": "(L:CB_Z20_X_FEED_VALVE_NORM) ! (>L:CB_Z20_X_FEED_VALVE_NORM)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z22 AIRBLEED ENG2 MONG": {
+		"method": "calcCode",
+		"code": "(L:CB_Z22_AIRBLEED_ENG2_MONG) ! (>L:CB_Z22_AIRBLEED_ENG2_MONG)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Breaker Z23 AIRBLEED ENG2 CTL": {
+		"method": "calcCode",
+		"code": "(L:CB_Z23_AIRBLEED_ENG2_CTL) ! (>L:CB_Z23_AIRBLEED_ENG2_CTL)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Transponder ATC FAIL Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_XPDR_FAIL)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Landing Gear Arrow Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GEAR_RED)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Landing Gear 3 Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GEAR_3_U)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Landing Gear 3 Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GEAR_3_L)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Landing Gear 2 Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GEAR_2_U)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Landing Gear 2 Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GEAR_2_L)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Landing Gear 1 Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GEAR_1_U)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Landing Gear 1 Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GEAR_1_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 Throttle Engine Fire 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ENG_FIRE_2)"
+	},
+	"FenixSim.A320.Warning.FNX320 Throttle Engine Fire 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ENG_FIRE_1)"
+	},
+	"FenixSim.A320.Warning.FNX320 Throttle Engine Fault 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ENG_FAULT_2)"
+	},
+	"FenixSim.A320.Warning.FNX320 Throttle Engine Fault 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ENG_FAULT_1)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 VOR Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_VOR)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 VHF 3 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_VHF3)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 VHF 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_VHF2)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 VHF 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_VHF1)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 SEL Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_SEL)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 NAV Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_NAV)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 LS Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_ILS)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 HF 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_HF2)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 HF 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_HF1)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 GLS Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_MLS)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 BFO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_BFO)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 AM Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_AM)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP3 ADF Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP3_ADF)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 VOR Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_VOR)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 VHF 3 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_VHF3)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 VHF 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_VHF2)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 VHF 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_VHF1)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 SEL Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_SEL)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 NAV Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_NAV)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 LS Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_ILS)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 HF 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_HF2)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 HF 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_HF1)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 GLS Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_MLS)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 BFO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_BFO)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 AM Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_AM)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP2 ADF Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP2_ADF)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 VOR Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_VOR)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 VHF 3 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_VHF3)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 VHF 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_VHF2)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 VHF 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_VHF1)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 SEL Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_SEL)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 NAV Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_NAV)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 LS Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_ILS)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 HF 2 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_HF2)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 HF 1 Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_HF1)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 GLS Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_MLS)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 BFO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_BFO)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 AM Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_AM)"
+	},
+	"FenixSim.A320.Radio.FNX320 RMP1 ADF Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_RMP1_ADF)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 PedestalMisc Cockpit Door Open Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_COCKPIT_DOOR_OPEN)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 PedestalMisc Cockpit Door Fault Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_PED_COCKPIT_DOOR_FAULT)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU RDY FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_RDY)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU RDY Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_RDY)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU MENU FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_MCDU_MENU)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU MENU Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_MCDU_MENU)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU IND FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_IND)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU IND Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_IND)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FM2 FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_FM2)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FM2 Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_FM2)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FM1 FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_FM1)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FM1 Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_FM1)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FM FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_FM)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FM Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_FM)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FAIL FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_FAIL)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU FAIL Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_FAIL)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU Dash FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU2_DASH)"
+	},
+	"FenixSim.A320.MCDU.FNX320 MCDU Dash Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_CDU1_DASH)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Ventilation Extract Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_EXTRACT_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Ventilation Extract Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_EXTRACT_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Ventilation Cabin Fans Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_CAB_FANS_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Ventilation Cabin Fans Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_CAB_FANS_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Ventilation Blower Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_BLOWER_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Ventilation Blower Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_BLOWER_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 Sign Emergency Exit Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_INT_LT_EMER_OFF)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Recorder Ground Control Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_RCRD_GND_CTL_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Mode Select Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_PRESS_MODE_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Mode Select Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_PRESS_MODE_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Ditching Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_DITCHING_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Ram Air Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_RAM_AIR_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Pack 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_PACK_2_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Pack 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_PACK_2_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Pack 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_PACK_1_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Pack 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_PACK_1_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Hot Air Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_HOT_AIR_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Hot Air Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_HOT_AIR_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Engine Bleed 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG2_BLEED_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Engine Bleed 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG2_BLEED_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Engine Bleed 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG1_BLEED_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic Engine Bleed 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG1_BLEED_L)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic APU Bleed Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_APU_BLEED_U)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pneumatic APU Bleed Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_APU_BLEED_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen Passenger Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_OXYGEN_PASSENGER_U)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen Crew Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_OXYGEN_CREW_OXYGEN_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen High Alt Landing Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_OXYGEN_HIGH_ALT_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Svce Int Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_SVCE_INT_OVRD)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Oxygen TMR Reset Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_OXYGEN_TMR_RESET_U)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Oxygen TMR Reset Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_OXYGEN_TMR_RESET_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc LMV Yellow Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_LMV_YELLOW_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc LMV Green Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_LMV_GREEN_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc LMV Blue Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_LMV_BLUE_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Engine FADEC Ground 2 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_AFT_FADEC_GND_2_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Engine FADEC Ground 1 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_AFT_FADEC_GND_1_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Cockpit Door Video Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_DOOR_VIDEO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Blue Pump Override Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_BLUE_PUMP_OVERRIDE_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Avionics Compt Light Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_LIGHTING_AVIONICS_COMPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc APU Auto Exiting Test Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_APU_AUTOEXTING_TEST_U)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc APU Auto Exiting Test Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_APU_AUTOEXTING_TEST_L)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Cockpit Door CTL Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_DOOR_CTL_U)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Cockpit Door CTL Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_DOOR_CTL_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 CargoSmoke Discharge Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_CARGO_SMOKE_DISCHARGE_2)"
+	},
+	"FenixSim.A320.Safety.FNX320 CargoSmoke Discharge Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_CARGO_SMOKE_DISCHARGE_1)"
+	},
+	"FenixSim.A320.Safety.FNX320 CargoSmoke Discharge Agent Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_CARGO_SMOKE_DISCHARGE_AGENT_2)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 OverheadMisc Toilet Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_TOILET)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 PA SEND Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_ASP3_PA_SEND)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Terrain On ND FO Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GPWS_TERRAIN_ON_ND_FO_L)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Terrain On ND Captain Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GPWS_TERRAIN_ON_ND_CAPT_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS FO Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GPWS_VISUAL_ALERT_FO_u)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS FO Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GPWS_VISUAL_ALERT_FO_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS Captain Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GPWS_VISUAL_ALERT_CAPT_U)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS Captain Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_GPWS_VISUAL_ALERT_CAPT_L)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Brake Fan Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_BRAKE_FAN_U)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Brake Fan Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_BRAKE_FAN_L)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Medium Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOBRAKE_MED_U)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Medium Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOBRAKE_MED_L)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Max Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOBRAKE_MAX_U)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Max Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOBRAKE_MAX_L)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Low Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOBRAKE_LO_U)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Low Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOBRAKE_LO_L)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Wing Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_WING_ANTI_ICE_U)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Wing Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_WING_ANTI_ICE_L)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Probe Heat Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PROBE_HEAT_U)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Probe Heat Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PROBE_HEAT_L)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG2_ANTI_ICE_U)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG2_ANTI_ICE_L)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG1_ANTI_ICE_U)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_PNEUMATIC_ENG1_ANTI_ICE_L)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic PTU Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_PTU_U)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic PTU Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_PTU_L)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_ENG_2_PUMP_U)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_ENG_2_PUMP_L)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_ENG_1_PUMP_U)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_ENG_1_PUMP_L)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Yellow Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_YELLOW_ELEC_PUMP_U)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Yellow Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_YELLOW_ELEC_PUMP_L)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Blue Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_BLUE_ELEC_PUMP_U)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Blue Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_HYD_BLUE_ELEC_PUMP_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Terrain Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_GPWS_TERR_U)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Terrain Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_GPWS_TERR_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS System Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_GPWS_SYS_U)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS System Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_GPWS_SYS_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Landing Flap 3 Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_GPWS_LDG_FLAP3_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS GS Mode Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_GPWS_GS_MODE_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Flap Mode Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_GPWS_FLAP_MODE_L)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield MSG FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_ATC_MSG_FO_L)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield ATC FO Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_ATC_MSG_FO_U)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield MSG Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_ATC_MSG_CAPT_L)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield ATC Captain Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_ATC_MSG_CAPT_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority FO Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FC_SIDESTICK_PRIORITY_FO_ARROW)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority FO Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_FC_SIDESTICK_PRIORITY_FO)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority Captain Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FC_SIDESTICK_PRIORITY_CAPT_ARROW)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority Captain Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_FC_SIDESTICK_PRIORITY_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning FO Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_WARNING_FO_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning FO Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_WARNING_FO)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning Captain Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_WARNING_CAPT_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning Captain Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_WARNING_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution FO Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_CAUTION_FO_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution FO Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_CAUTION_FO)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution Captain Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_CAUTION_CAPT_L)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution Captain Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_MASTER_CAUTION_CAPT)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield Autoland FO Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOLAND_FO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield Autoland Captain Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_MIP_AUTOLAND_CAPT)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Right 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_RIGHT_2_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Right 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_RIGHT_2_L)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Right 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_RIGHT_1_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Right 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_RIGHT_1_L)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Left 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_LEFT_2_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Left 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_LEFT_2_L)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Left 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_LEFT_1_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Wing Tank Pump Left 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_LEFT_1_L)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Mode Select Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_MODE_SEL_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Mode Select Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_MODE_SEL_L)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Crossfeed Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_XFEED_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Crossfeed Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_XFEED_L)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Center Tank Pump 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_CENTER_2_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Center Tank Pump 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_CENTER_2_L)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Center Tank Pump 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_CENTER_1_U)"
+	},
+	"FenixSim.A320.Fuel.FNX320 Fuel Center Tank Pump 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FUEL_CENTER_1_L)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl SEC 3 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_SEC_3_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl SEC 3 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_SEC_3_L)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl SEC 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_SEC_2_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl SEC 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_SEC_2_L)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl SEC 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_SEC_1_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl SEC 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_SEC_1_L)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl FAC 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_FAC_2_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl FAC 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_FAC_2_L)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl FAC 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_FAC_1_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl FAC 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_FAC_1_L)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl ELAC 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_ELAC_2_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl ELAC 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_ELAC_2_L)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl ELAC 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_ELAC_1_U)"
+	},
+	"FenixSim.A320.Controls.FNX320 FlightControl ELAC 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FLT_CTL_ELAC_1_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG2_AGENT2_U)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG2_AGENT2_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG2_AGENT1_U)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG2_AGENT1_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 2 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG1_AGENT2_U)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 2 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG1_AGENT2_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 1 Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG1_AGENT1_U)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 1 Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_ENG1_AGENT1_L)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Agent Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_APU_AGENT_U)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Agent Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_OH_FIRE_APU_AGENT_L)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 FCU LOC Button Annunciator Upper": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_LOC)"
+	},
+	"FenixSim.A320.Navigation.FNX320 ADIRS Key Clear Dot": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADIRS_QUEUE_CLR)"
+	},
+	"FenixSim.A320.Navigation.FNX320 ADIRS Key Enter Dot": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADIRS_QUEUE_ENT)"
+	},
+	"FenixSim.A320.Navigation.FNX320 ADIRS On Bat Annunciator": {
+		"method": "calcCode",
+		"code": "(L:I_OH_NAV_ADIRS_ON_BAT)"
+	},
+	"FenixSim.A320.Flight Instrumentation.Output.FXNX320_ACTUAL_ALTITUDE_DISPLAY": {
+		"method": "calcCode",
+		"code": "(A:INDICATED ALTITUDE,Feet)"
+	},
+	"FenixSim.A320.Flight Instrumentation.Output.FXNX320_ACTUAL_HEADING_DISPLAY": {
+		"method": "calcCode",
+		"code": "(A:PLANE HEADING DEGREES MAGNETIC, Degrees)"
+	},
+	"FenixSim.A320.Flight Instrumentation.Output.FXNX320_ACTUAL_AIRSPEED_DISPLAY": {
+		"method": "calcCode",
+		"code": "(A:AIRSPEED INDICATED,Knots)"
+	},
+	"FenixSim.A320.Flight Instrumentation.Output.FXNX320_ACTUAL_VERTICAL_SPEED_DISPLAY": {
+		"method": "calcCode",
+		"code": "(A:VERTICAL SPEED,Feet/minute)"
+	},
+	"FenixSim.A320.Gear.Input.FNX320_MIP_PARKING_BRAKE ON_SWITCH": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_PARKING_BRAKE)"
+	},
+	"FenixSim.A320.Gear.Input.FNX320_MIP_PARKING_BRAKE OFF_SWITCH": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_PARKING_BRAKE)"
+	},
+	"FenixSim.A320.Gear.Output.FNX320_MIP_PARKING_BRAKE STATE_LED": {
+		"method": "calcCode",
+		"code": "(L:S_MIP_PARKING_BRAKE)"
+	},
+	"FenixSim.A320.Flight Controls.Output.FNX320_FC_FLAPS_LEVER_POSITION_INDEX": {
+		"method": "calcCode",
+		"code": "(L:S_FC_FLAPS) near"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FLAPS_LEVER_POSITION_0_SWITCH": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_FLAPS)"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FLAPS_LEVER_POSITION_1_SWITCH": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_FLAPS)"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FLAPS_LEVER_POSITION_2_SWITCH": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FC_FLAPS)"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FLAPS_LEVER_POSITION_3_SWITCH": {
+		"method": "calcCode",
+		"code": "3 (>L:S_FC_FLAPS)"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FLAPS_LEVER_POSITION_FULL_SWITCH": {
+		"method": "calcCode",
+		"code": "4 (>L:S_FC_FLAPS)"
+	},
+	"FenixSim.A320.Flight Controls.Output.FNX320_FC_FLAPS_EFFECTIVE_LEFT_POSITION": {
+		"method": "calcCode",
+		"code": "(L:A320_FC_L_FLAPS)"
+	},
+	"FenixSim.A320.Flight Controls.Output.FNX320_FC_FLAPS_EFFECTIVE_RIGHT_POSITION": {
+		"method": "calcCode",
+		"code": "(L:A320_FC_R_FLAPS)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_EFIS1_BARO) ++ (>L:E_FCU_EFIS1_BARO)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_L_BARO_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_EFIS1_BARO) -- (>L:E_FCU_EFIS1_BARO)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_EFIS2_BARO) ++ (>L:E_FCU_EFIS2_BARO)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_R_BARO_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_FCU_EFIS2_BARO) -- (>L:E_FCU_EFIS2_BARO)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_1_INNER_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP1_INNER) ++ (>L:E_PED_RMP1_INNER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_1_INNER_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP1_INNER) -- (>L:E_PED_RMP1_INNER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_1_OUTER_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP1_OUTER) ++ (>L:E_PED_RMP1_OUTER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_1_OUTER_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP1_OUTER) -- (>L:E_PED_RMP1_OUTER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_2_INNER_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP2_INNER) ++ (>L:E_PED_RMP2_INNER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_2_INNER_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP2_INNER) -- (>L:E_PED_RMP2_INNER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_2_OUTER_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP2_OUTER) ++ (>L:E_PED_RMP2_OUTER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_2_OUTER_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP2_OUTER) -- (>L:E_PED_RMP2_OUTER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_3_INNER_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP3_INNER) ++ (>L:E_PED_RMP3_INNER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_3_INNER_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP3_INNER) -- (>L:E_PED_RMP3_INNER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_3_OUTER_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP3_OUTER) ++ (>L:E_PED_RMP3_OUTER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX32_RADIO_3_OUTER_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_PED_RMP3_OUTER) -- (>L:E_PED_RMP3_OUTER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_RADIO_1_XFER_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_PED_RMP1_XFER) ++ (>L:S_PED_RMP1_XFER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_RADIO_1_XFER_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_PED_RMP1_XFER) ++ (>L:S_PED_RMP1_XFER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_RADIO_2_XFER_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_PED_RMP2_XFER) ++ (>L:S_PED_RMP2_XFER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_RADIO_2_XFER_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_PED_RMP2_XFER) ++ (>L:S_PED_RMP2_XFER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_RADIO_3_XFER_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_PED_RMP3_XFER) ++ (>L:S_PED_RMP3_XFER)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_RADIO_3_XFER_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_PED_RMP3_XFER) ++ (>L:S_PED_RMP3_XFER)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM1_RADIO_WHOLE_DEC": {
+		"method": "calcCode",
+		"code": "72608 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM1_RADIO_WHOLE_INC": {
+		"method": "calcCode",
+		"code": "72607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM1_RADIO_FRACT_DEC": {
+		"method": "calcCode",
+		"code": "72708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM1_RADIO_FRACT_INC": {
+		"method": "calcCode",
+		"code": "72707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM1_RADIO_SWAP_SWITCH": {
+		"method": "calcCode",
+		"code": "72101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM2_RADIO_WHOLE_DEC": {
+		"method": "calcCode",
+		"code": "84208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM2_RADIO_WHOLE_INC": {
+		"method": "calcCode",
+		"code": "84207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM2_RADIO_FRACT_DEC": {
+		"method": "calcCode",
+		"code": "84308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM2_RADIO_FRACT_INC": {
+		"method": "calcCode",
+		"code": "84307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_COM2_RADIO_SWAP_SWITCH": {
+		"method": "calcCode",
+		"code": "83701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV1_RADIO_WHOLE_DEC": {
+		"method": "calcCode",
+		"code": "73308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV1_RADIO_WHOLE_INC": {
+		"method": "calcCode",
+		"code": "73307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV1_RADIO_FRACT_DEC": {
+		"method": "calcCode",
+		"code": "73208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV1_RADIO_FRACT_INC": {
+		"method": "calcCode",
+		"code": "73207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV1_RADIO_SWAP_SWITCH": {
+		"method": "calcCode",
+		"code": "72901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV2_RADIO_WHOLE_DEC": {
+		"method": "calcCode",
+		"code": "84808 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV2_RADIO_WHOLE_INC": {
+		"method": "calcCode",
+		"code": "84807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV2_RADIO_FRACT_DEC": {
+		"method": "calcCode",
+		"code": "84908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV2_RADIO_FRACT_INC": {
+		"method": "calcCode",
+		"code": "84907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG_B737-7_NAV2_RADIO_SWAP_SWITCH": {
+		"method": "calcCode",
+		"code": "84501 (>K:ROTOR_BRAKE)"
+	},
+	"Flysimware.Cessna 414A.Avionics.Input.Honeywell_Alt_Alerter_1000s_INC": {
+		"method": "calcCode",
+		"code": "(>H:KNOB_ALT_SEL_1000_INC)"
+	},
+	"Flysimware.Cessna 414A.Avionics.Input.Honeywell_Alt_Alerter_1000s_DEC": {
+		"method": "calcCode",
+		"code": "(>H:KNOB_ALT_SEL_1000_DEC)"
+	},
+	"Flysimware.Cessna 414A.Avionics.Input.Honeywell_Alt_Alerter_100s_INC": {
+		"method": "calcCode",
+		"code": "(>H:KNOB_ALT_SEL_100_INC)"
+	},
+	"Flysimware.Cessna 414A.Avionics.Input.Honeywell_Alt_Alerter_100s_DEC": {
+		"method": "calcCode",
+		"code": "(>H:KNOB_ALT_SEL_100_DEC)"
+	},
+	"Hype Performance Group.H135.Fire.Input.H135 FIRE TEST ENG1": {
+		"method": "calcCode",
+		"code": "(L:ENG1_FIRE_TEST) ! (>L:ENG1_FIRE_TEST)"
+	},
+	"Hype Performance Group.H135.Fire.Input.H135 FIRE TEST ENG2": {
+		"method": "calcCode",
+		"code": "(L:ENG2_FIRE_TEST) ! (>L:ENG2_FIRE_TEST)"
+	},
+	"FenixSim.A320.Gear.Input.FNX320_LANDING_GEAR_DOWN": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_GEAR)"
+	},
+	"FenixSim.A320.Gear.Input.FNX320_LANDING_GEAR_UP": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_GEAR)"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FLAPS_LEVER_FOR_TCAQ-ADDON": {
+		"method": "calcCode",
+		"code": "@ 16383.75 / 0 max 4 min (>L:S_FC_FLAPS)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 STROBE LIGHT ON": {
+		"method": "calcCode",
+		"code": "1 (>K:STROBES_SET)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 STROBE LIGHT OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:STROBES_SET)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 LANDING LIGHTS ON": {
+		"method": "calcCode",
+		"code": "1 (>K:LANDING_LIGHTS_SET)"
+	},
+	"Hype Performance Group.H135.Lights.Input.H135 LANDING LIGHTS OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:LANDING_LIGHTS_SET)"
+	},
+	"Hype Performance Group.H135.Air Condition / Pressurization.Input.H135 AIR CONDITION ON": {
+		"method": "calcCode",
+		"code": "1 (>L:AIR_COND)"
+	},
+	"Hype Performance Group.H135.Air Condition / Pressurization.Input.H135 AIR CONDITION OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:AIR_COND)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL AUX TOGGLE": {
+		"method": "calcCode",
+		"code": "3 (>K:FUELSYSTEM_VALVE_TOGGLE)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PRIME PUMP 1 ON": {
+		"method": "calcCode",
+		"code": "1 (>L:ENG1_PRIME)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PRIME PUMP 1 OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:ENG1_PRIME)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PRIME PUMP 2 ON": {
+		"method": "calcCode",
+		"code": "1 (>L:ENG2_PRIME)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PRIME PUMP 2 OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:ENG2_PRIME)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PUMP 1 ON": {
+		"method": "calcCode",
+		"code": "1 (>K:FUELSYSTEM_PUMP_ON)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PUMP 1 OFF": {
+		"method": "calcCode",
+		"code": "1 (>K:FUELSYSTEM_PUMP_OFF)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PUMP 2 ON": {
+		"method": "calcCode",
+		"code": "4 (>K:FUELSYSTEM_PUMP_ON)"
+	},
+	"Hype Performance Group.H135.Fuel.Input.H135 FUEL PUMP 2 OFF": {
+		"method": "calcCode",
+		"code": "4 (>K:FUELSYSTEM_PUMP_OFF)"
+	},
+	"FenixSim.A320.ISIS.Input.FNX320_ISIS_BARO_KNOB_INC": {
+		"method": "calcCode",
+		"code": "(L:E_MIP_ISFD_BARO) ++ (>L:E_MIP_ISFD_BARO)"
+	},
+	"FenixSim.A320.ISIS.Input.FNX320_ISIS_BARO_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "(L:E_MIP_ISFD_BARO) -- (>L:E_MIP_ISFD_BARO)"
+	},
+	"FenixSim.A320.ISIS.Input.FNX320_ISIS_BARO_KNOB_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_MIP_ISFD_BARO_BUTTON) ++ (>L:S_MIP_ISFD_BARO_BUTTON)"
+	},
+	"FenixSim.A320.ISIS.Input.FNX320_ISIS_BARO_KNOB_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_MIP_ISFD_BARO_BUTTON) ++ (>L:S_MIP_ISFD_BARO_BUTTON)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_SEAT_BELTS_TOG": {
+		"method": "calcCode",
+		"code": "(L:S_OH_SIGNS) 0 == if{ 1 (>L:S_OH_SIGNS) } els{ 0 (>L:S_OH_SIGNS) }"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_LIGHT_BEACON_TOG": {
+		"method": "calcCode",
+		"code": "(L:S_OH_EXT_LT_BEACON) 0 == if{ 1 (>L:S_OH_EXT_LT_BEACON) } els{ 0 (>L:S_OH_EXT_LT_BEACON) }"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_APU_MASTER_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_APU_MASTER) ! (>L:S_OH_ELEC_APU_MASTER)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_APU_START_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_APU_START) 2 +  (>L:S_OH_ELEC_APU_START)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_APU_BLEED_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_APU_BLEED) ! (>L:S_OH_PNEUMATIC_APU_BLEED)"
+	},
+	"FenixSim.A320.Navigation.Input.FNX320_OVHD_IR1_KNOB_OFF-NAV_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_IR1_MODE) ! (>L:S_OH_NAV_IR1_MODE)"
+	},
+	"FenixSim.A320.Navigation.Input.FNX320_OVHD_IR2_KNOB_OFF-NAV_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_IR2_MODE) ! (>L:S_OH_NAV_IR2_MODE)"
+	},
+	"FenixSim.A320.Navigation.Input.FNX320_OVHD_IR3_KNOB_OFF-NAV_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_IR3_MODE) ! (>L:S_OH_NAV_IR3_MODE)"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_L_TK_PUMP_1_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_LEFT_1) ! (>L:S_OH_FUEL_LEFT_1) 1 (>L:S_OH_FUEL_LEFT_1_Anim)"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_L_TK_PUMP_2_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_LEFT_2) ! (>L:S_OH_FUEL_LEFT_2) 1 (>L:S_OH_FUEL_LEFT_2_Anim)"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_CENTER_TK_PUMP_1_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_CENTER_1) ! (>L:S_OH_FUEL_CENTER_1) 1 (>L:S_OH_FUEL_CENTER_1_Anim)\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_CENTER_TK_PUMP_2_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_CENTER_2) ! (>L:S_OH_FUEL_CENTER_2) 1 (>L:S_OH_FUEL_CENTER_2_Anim)\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_R_TK_PUMP_1_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_RIGHT_1) ! (>L:S_OH_FUEL_RIGHT_1) 1 (>L:S_OH_FUEL_RIGHT_1_Anim)\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_R_TK_PUMP_2_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_RIGHT_2) ! (>L:S_OH_FUEL_RIGHT_2) 1 (>L:S_OH_FUEL_RIGHT_2_Anim)\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_X-FEED_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_XFEED) ! (>L:S_OH_FUEL_XFEED) 1 (>L:S_OH_FUEL_XFEED_Anim)\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_MODE_SEL_ON-PRESS_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_MODE_SEL) ! (>L:S_OH_FUEL_MODE_SEL) 1 (>L:S_OH_FUEL_MODE_SEL_Anim)\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_L_TK_PUMP_1_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_LEFT_1) 0 == if{ 0 (>L:S_OH_FUEL_LEFT_1_Anim) } (L:S_OH_FUEL_LEFT_1) 1 == if{ 2 (>L:S_OH_FUEL_LEFT_1_Anim) }\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_L_TK_PUMP_2_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_LEFT_2) 0 == if{ 0 (>L:S_OH_FUEL_LEFT_2_Anim) } (L:S_OH_FUEL_LEFT_2) 1 == if{ 2 (>L:S_OH_FUEL_LEFT_2_Anim) }\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_R_TK_PUMP_1_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_RIGHT_1) 0 == if{ 0 (>L:S_OH_FUEL_RIGHT_1_Anim) } (L:S_OH_FUEL_RIGHT_1) 1 == if{ 2 (>L:S_OH_FUEL_RIGHT_1_Anim) }\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_R_TK_PUMP_2_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_RIGHT_2) 0 == if{ 0 (>L:S_OH_FUEL_RIGHT_2_Anim) } (L:S_OH_FUEL_RIGHT_2) 1 == if{ 2 (>L:S_OH_FUEL_RIGHT_2_Anim) }\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_X-FEED_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_XFEED) 0 == if{ 0 (>L:S_OH_FUEL_XFEED_Anim) } (L:S_OH_FUEL_XFEED) 1 == if{ 2 (>L:S_OH_FUEL_XFEED_Anim) }\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_MODE_SEL_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_MODE_SEL) 0 == if{ 0 (>L:S_OH_FUEL_MODE_SEL_Anim) } (L:S_OH_FUEL_MODE_SEL) 1 == if{ 2 (>L:S_OH_FUEL_MODE_SEL_Anim) }\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_CENTER_TK_PUMP_1_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_CENTER_1) 0 == if{ 0 (>L:S_OH_FUEL_CENTER_1_Anim) } (L:S_OH_FUEL_CENTER_1) 1 == if{ 2 (>L:S_OH_FUEL_CENTER_1_Anim) }\n"
+	},
+	"FenixSim.A320.Fuel.Input.FNX320_OVHD_FUEL_CENTER_TK_PUMP_2_ON-RELEASE_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FUEL_CENTER_2) 0 == if{ 0 (>L:S_OH_FUEL_CENTER_2_Anim) } (L:S_OH_FUEL_CENTER_2) 1 == if{ 2 (>L:S_OH_FUEL_CENTER_2_Anim) }\n"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 CAB Send Button Annunciator Lower": {
+		"method": "calcCode",
+		"code": "(L:I_ASP_CAB_CALL)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 0 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_0)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 0 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_0)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 1 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_1)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 1 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_1)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_2)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 2 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_2)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 3 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_3)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 3 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_3)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 4 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_4)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 4 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_4)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 5 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_5)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 5 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_5)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 6 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_6)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 6 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_6)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 7 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_7)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder 7 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_7)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Alt Reporting": {
+		"method": "calcCode",
+		"code": "(L:S_XPDR_ALTREPORTING) ! (>L:S_XPDR_ALTREPORTING)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder ATC Switch": {
+		"method": "calcCode",
+		"code": "(L:S_XPDR_ATC) ! (>L:S_XPDR_ATC)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Clear Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_ATC_CLR)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Clear Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_ATC_CLR)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Ident Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_XPDR_IDENT)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Ident Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_XPDR_IDENT)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Mode Knob STBY": {
+		"method": "calcCode",
+		"code": "0 (>L:S_XPDR_MODE)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Mode Knob TA": {
+		"method": "calcCode",
+		"code": "1 (>L:S_XPDR_MODE)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Mode Knob TARA": {
+		"method": "calcCode",
+		"code": "2 (>L:S_XPDR_MODE)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Operation Knob AUTO": {
+		"method": "calcCode",
+		"code": "1 (>L:S_XPDR_OPERATION)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Operation Knob ON": {
+		"method": "calcCode",
+		"code": "2 (>L:S_XPDR_OPERATION)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder Operation Knob STBY": {
+		"method": "calcCode",
+		"code": "0 (>L:S_XPDR_OPERATION)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder TCAS Range Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:S_TCAS_RANGE) 0.1 - 0 max (>L:S_TCAS_RANGE)"
+	},
+	"FenixSim.A320.Radio.FNX320 Transponder TCAS Range Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:S_TCAS_RANGE) 0.1 + 1 min (>L:S_TCAS_RANGE)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX GCS Switch": {
+		"method": "calcCode",
+		"code": "(L:S_WR_GCS) ! (>L:S_WR_GCS)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX Multiscan Switch": {
+		"method": "calcCode",
+		"code": "(L:S_WR_MULTISCAN) ! (>L:S_WR_MULTISCAN)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX System Switch 1": {
+		"method": "calcCode",
+		"code": "0 (>L:S_WR_SYS)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX Image Selector Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:S_WR_MODE) 0.1 + 1 min (>L:S_WR_MODE)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX Tilt Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_WR_TILT) 0.1 + 1 min (>L:A_WR_TILT)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX Gain Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_WR_GAIN) 0.1 + 1 min (>L:A_WR_GAIN)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX System Switch OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_WR_SYS)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX Image Selector Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:S_WR_MODE) 0.1 - 0 max (>L:S_WR_MODE)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX Tilt Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_WR_TILT) 0.1 - 0 max (>L:A_WR_TILT)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX Gain Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_WR_GAIN) 0.1 - 0 max (>L:A_WR_GAIN)"
+	},
+	"FenixSim.A320.Radar.FNX320 WX System Switch 2": {
+		"method": "calcCode",
+		"code": "2 (>L:S_WR_SYS)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX230 Ventilation Cabin Fans Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_CAB_FANS) ! (>L:S_OH_PNEUMATIC_CAB_FANS) 1 (>L:S_OH_PNEUMATIC_CAB_FANS_Anim)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX230 Ventilation Extract Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_EXTRACT) ! (>L:S_OH_PNEUMATIC_EXTRACT) 1 (>L:S_OH_PNEUMATIC_EXTRACT_Anim)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX230 Ventilation Blower Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_BLOWER) ! (>L:S_OH_PNEUMATIC_BLOWER) 1 (>L:S_OH_PNEUMATIC_BLOWER_Anim)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX230 Ventilation Cabin Fans Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_CAB_FANS) 0 == if{ 0 (>L:S_OH_PNEUMATIC_CAB_FANS_Anim) } (L:S_OH_PNEUMATIC_CAB_FANS) 1 == if{ 2 (>L:S_OH_PNEUMATIC_CAB_FANS_Anim) }"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX230 Ventilation Extract Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_EXTRACT) 0 == if{ 0 (>L:S_OH_PNEUMATIC_EXTRACT_Anim) } (L:S_OH_PNEUMATIC_EXTRACT) 1 == if{ 2 (>L:S_OH_PNEUMATIC_EXTRACT_Anim) }"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX230 Ventilation Blower Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_BLOWER) 0 == if{ 0 (>L:S_OH_PNEUMATIC_BLOWER_Anim) } (L:S_OH_PNEUMATIC_BLOWER) 1 == if{ 2 (>L:S_OH_PNEUMATIC_BLOWER_Anim) }"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching ECAM ND XFR Knob CAPT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DISPLAY_ECAM_ND_XFR)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching EIS DMC Knob  CAPT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DISPLAY_EIS_DMC)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching AIR DATA Knob CAPT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DISPLAY_AIR_DATA)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching ATT HDG Knob CAPT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DISPLAY_ATT_HDG)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching ECAM ND XFR Knob Normal": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DISPLAY_ECAM_ND_XFR)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching EIS DMC Knob  Normal": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DISPLAY_EIS_DMC)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching AIR DATA Knob Normal": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DISPLAY_AIR_DATA)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching ATT HDG Knob Normal": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DISPLAY_ATT_HDG)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching ECAM ND XFR Knob FO": {
+		"method": "calcCode",
+		"code": "2 (>L:S_DISPLAY_ECAM_ND_XFR)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching EIS DMC Knob  FO": {
+		"method": "calcCode",
+		"code": "2 (>L:S_DISPLAY_EIS_DMC)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching AIR DATA Knob FO": {
+		"method": "calcCode",
+		"code": "2 (>L:S_DISPLAY_AIR_DATA)"
+	},
+	"FenixSim.A320.Radio.FNX320 Switching ATT HDG Knob FO": {
+		"method": "calcCode",
+		"code": "2 (>L:S_DISPLAY_ATT_HDG)"
+	},
+	"FenixSim.A320.Safety.FNX320 Sign Emergency Exit Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_INT_LT_EMER)"
+	},
+	"FenixSim.A320.Safety.FNX320 Sign Emergency Exit Switch ARM": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_INT_LT_EMER)"
+	},
+	"FenixSim.A320.Safety.FNX320 Sign Emergency Exit Switch ON": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_INT_LT_EMER)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Ditching Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_DITCHING) ! (>L:S_OH_PNEUMATIC_DITCHING) 1 (>L:S_OH_PNEUMATIC_DITCHING_Anim)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Ditching Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_DITCHING) 0 == if{ 0 (>L:S_OH_PNEUMATIC_DITCHING_Anim) } (L:S_OH_PNEUMATIC_DITCHING) 1 == if{ 2 (>L:S_OH_PNEUMATIC_DITCHING_Anim) }"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Landing Elevation Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_LDG_ELEV) 0.1 - 0 max (>L:A_OH_PNEUMATIC_LDG_ELEV)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Landing Elevation Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_LDG_ELEV) 0.1 + 1 min (>L:A_OH_PNEUMATIC_LDG_ELEV)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Manual Vertical Speed Control Down": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_PNEUMATIC_PRESS_MAN)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Manual Vertical Speed Control Mid": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_PNEUMATIC_PRESS_MAN)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Manual Vertical Speed Control Up": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_PNEUMATIC_PRESS_MAN)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Mode Select Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_PRESS_MODE) ! (>L:S_OH_PNEUMATIC_PRESS_MODE) 1 (>L:S_OH_PNEUMATIC_PRESS_MODE_Anim)"
+	},
+	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Mode Select Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_PRESS_MODE) 0 == if{ 0 (>L:S_OH_PNEUMATIC_PRESS_MODE_Anim) } (L:S_OH_PNEUMATIC_PRESS_MODE) 1 == if{ 2 (>L:S_OH_PNEUMATIC_PRESS_MODE_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Temp Cabin Aft Selector Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_AFT_TEMP) 0.1 + 1 min (>L:A_OH_PNEUMATIC_AFT_TEMP)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Temp Cabin Forward Selector Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_FWD_TEMP) 0.1 + 1 min (>L:A_OH_PNEUMATIC_FWD_TEMP)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Temp Cockpit Selector Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_COCKPIT_TEMP) 0.1 + 1 min (>L:A_OH_PNEUMATIC_COCKPIT_TEMP)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Cross Bleed Selector Knob SHUT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_PNEUMATIC_XBLEED_SELECTOR)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Pack Flow Selector Knob LOW": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_PNEUMATIC_PACK_FLOW)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Hot Air Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_HOT_AIR) ! (>L:S_OH_PNEUMATIC_HOT_AIR) 1 (>L:S_OH_PNEUMATIC_HOT_AIR_Anim)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Ram Air Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_RAM_AIR) ! (>L:S_OH_PNEUMATIC_RAM_AIR) 1 (>L:S_OH_PNEUMATIC_RAM_AIR_Anim)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic APU Bleed Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_APU_BLEED) ! (>L:S_OH_PNEUMATIC_APU_BLEED) 1 (>L:S_OH_PNEUMATIC_APU_BLEED_Anim)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Engine Bleed 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG2_BLEED) ! (>L:S_OH_PNEUMATIC_ENG2_BLEED) 1 (>L:S_OH_PNEUMATIC_ENG2_BLEED_Anim)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Engine Bleed 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG1_BLEED) ! (>L:S_OH_PNEUMATIC_ENG1_BLEED) 1 (>L:S_OH_PNEUMATIC_ENG1_BLEED_Anim)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Pack 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_PACK_2) ! (>L:S_OH_PNEUMATIC_PACK_2) 1 (>L:S_OH_PNEUMATIC_PACK_2_Anim)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Pack 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_PACK_1) ! (>L:S_OH_PNEUMATIC_PACK_1) 1 (>L:S_OH_PNEUMATIC_PACK_1_Anim)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Temp Cabin Aft Selector Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_AFT_TEMP) 0.1 - 0 max (>L:A_OH_PNEUMATIC_AFT_TEMP)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Temp Cabin Forward Selector Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_FWD_TEMP) 0.1 - 0 max (>L:A_OH_PNEUMATIC_FWD_TEMP)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Temp Cockpit Selector Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_OH_PNEUMATIC_COCKPIT_TEMP) 0.1 - 0 max (>L:A_OH_PNEUMATIC_COCKPIT_TEMP)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Cross Bleed Selector Knob AUTO": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_PNEUMATIC_XBLEED_SELECTOR)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Pack Flow Selector Knob NORMAL": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_PNEUMATIC_PACK_FLOW)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Hot Air Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_HOT_AIR) 0 == if{ 0 (>L:S_OH_PNEUMATIC_HOT_AIR_Anim) } (L:S_OH_PNEUMATIC_HOT_AIR) 1 == if{ 2 (>L:S_OH_PNEUMATIC_HOT_AIR_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Ram Air Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_RAM_AIR) 0 == if{ 0 (>L:S_OH_PNEUMATIC_RAM_AIR_Anim) } (L:S_OH_PNEUMATIC_RAM_AIR) 1 == if{ 2 (>L:S_OH_PNEUMATIC_RAM_AIR_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic APU Bleed Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_APU_BLEED) 0 == if{ 0 (>L:S_OH_PNEUMATIC_APU_BLEED_Anim) } (L:S_OH_PNEUMATIC_APU_BLEED) 1 == if{ 2 (>L:S_OH_PNEUMATIC_APU_BLEED_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Engine Bleed 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG2_BLEED) 0 == if{ 0 (>L:S_OH_PNEUMATIC_ENG2_BLEED_Anim) } (L:S_OH_PNEUMATIC_ENG2_BLEED) 1 == if{ 2 (>L:S_OH_PNEUMATIC_ENG2_BLEED_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Engine Bleed 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG1_BLEED) 0 == if{ 0 (>L:S_OH_PNEUMATIC_ENG1_BLEED_Anim) } (L:S_OH_PNEUMATIC_ENG1_BLEED) 1 == if{ 2 (>L:S_OH_PNEUMATIC_ENG1_BLEED_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Pack 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_PACK_2) 0 == if{ 0 (>L:S_OH_PNEUMATIC_PACK_2_Anim) } (L:S_OH_PNEUMATIC_PACK_2) 1 == if{ 2 (>L:S_OH_PNEUMATIC_PACK_2_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Pack 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_PACK_1) 0 == if{ 0 (>L:S_OH_PNEUMATIC_PACK_1_Anim) } (L:S_OH_PNEUMATIC_PACK_1) 1 == if{ 2 (>L:S_OH_PNEUMATIC_PACK_1_Anim) }"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Cross Bleed Selector Knob OPEN": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_PNEUMATIC_XBLEED_SELECTOR)"
+	},
+	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Pack Flow Selector Knob HIGH": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_PNEUMATIC_PACK_FLOW)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen Crew Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_OXYGEN_CREW_OXYGEN)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen Crew Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_OXYGEN_CREW_OXYGEN)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen High Alt Landing Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_OXYGEN_HIGH_ALT)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen High Alt Landing Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_OXYGEN_HIGH_ALT)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen Mask Manual Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_OXYGEN_MASK_MAN_ON)"
+	},
+	"FenixSim.A320.Safety.FNX320 Oxygen Mask Manual Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_OXYGEN_MASK_MAN_ON)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal AIDS Print Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_AIDS_PRINT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal AIDS Print Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_AIDS_PRINT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal Cockpit Door Mode Switch Lock": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_COCKPIT_DOOR)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal Cockpit Door Mode Switch Mid": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_COCKPIT_DOOR)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal Cockpit Door Mode Switch Unlock": {
+		"method": "calcCode",
+		"code": "2 (>L:S_PED_COCKPIT_DOOR)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal Cockpit Door Video Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_COCKPIT_DOOR_VIDEO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal Cockpit Door Video Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_COCKPIT_DOOR_VIDEO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal DFDR Event Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_PED_DFDR_EVENT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Pedestal DFDR Event Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_PED_DFDR_EVENT)"
+	},
+	"FenixSim.A320.Gear.FNX320 Pedestal Parking Brake Handle Toggle": {
+		"method": "calcCode",
+		"code": "(L:S_MIP_PARKING_BRAKE) ! (>L:S_MIP_PARKING_BRAKE)"
+	},
+	"FenixSim.A320.Controls.FNX320 Pedestal Rudder Trim Reset Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_RUDDER_TRIM_RESET)"
+	},
+	"FenixSim.A320.Controls.FNX320 Pedestal Rudder Trim Reset Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_RUDDER_TRIM_RESET)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Floods Main Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:1, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Spot Light R Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:10, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Spot Light C Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:11, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Dome Lights Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:12, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Emerg Dome Light Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:13, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Parking Brake Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:14, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Fire Handle 1 Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:15, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Fire Handle 2 Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:16, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Fire Handle Apu Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:17, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Floods Afds Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:2, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Floods Pedestal Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:3, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Floods Cb Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:4, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light L Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:5, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light R Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:6, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Chart Light L Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:7, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Chart Light R Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:8, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Spot Light L Source": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:9, Percent)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Bl Circuit Breakers": {
+		"method": "calcCode",
+		"code": "(L:BL_CBs, number)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Bl Compass": {
+		"method": "calcCode",
+		"code": "(L:BL_Compass, number)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Bl Main Ca": {
+		"method": "calcCode",
+		"code": "(L:BL_MainCA, number)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Bl Main Fo": {
+		"method": "calcCode",
+		"code": "(L:BL_MainFO, number)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Bl Overhead": {
+		"method": "calcCode",
+		"code": "(L:BL_Overhead, number)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Bl Pedestal": {
+		"method": "calcCode",
+		"code": "(L:BL_Pedestal, number)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Drive 1 Disconnect": {
+		"method": "calcCode",
+		"code": "(L:switch_07_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Standby Power Off LED": {
+		"method": "calcCode",
+		"code": "(L:switch_08_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Drive 2 Disconnect": {
+		"method": "calcCode",
+		"code": "(L:switch_09_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Emer Exit Lights Not Armed": {
+		"method": "calcCode",
+		"code": "(L:switch_102_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Attend Call": {
+		"method": "calcCode",
+		"code": "(L:switch_107_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Pa In Use": {
+		"method": "calcCode",
+		"code": "(L:switch_108_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Left Side Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_127_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Left Fwd Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_128_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Right Fwd Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_129_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Right Side Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_130_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Left Side On": {
+		"method": "calcCode",
+		"code": "(L:switch_131_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Left Fwd On": {
+		"method": "calcCode",
+		"code": "(L:switch_132_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Right Fwd On": {
+		"method": "calcCode",
+		"code": "(L:switch_133_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Window Heat Right Side On": {
+		"method": "calcCode",
+		"code": "(L:switch_134_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Capt Pitot": {
+		"method": "calcCode",
+		"code": "(L:switch_142_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 L Elev Pitot": {
+		"method": "calcCode",
+		"code": "(L:switch_143_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 L Alpha Vane": {
+		"method": "calcCode",
+		"code": "(L:switch_144_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Temp Probe": {
+		"method": "calcCode",
+		"code": "(L:switch_145_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Fo Pitot": {
+		"method": "calcCode",
+		"code": "(L:switch_146_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 R Elev Pitot": {
+		"method": "calcCode",
+		"code": "(L:switch_147_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 R Alpha Vane": {
+		"method": "calcCode",
+		"code": "(L:switch_148_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Aux Pitot": {
+		"method": "calcCode",
+		"code": "(L:switch_149_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Eng Anti-Ice L Cowl Anti-Ice": {
+		"method": "calcCode",
+		"code": "(L:switch_150_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Eng Anti-Ice R Cowl Anti-Ice": {
+		"method": "calcCode",
+		"code": "(L:switch_151_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Eng Anti-Ice L Cowl Valve Open": {
+		"method": "calcCode",
+		"code": "(L:switch_154_73X, number) 10 *"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Eng Anti-Ice R Cowl Valve Open": {
+		"method": "calcCode",
+		"code": "(L:switch_155_73X, number) 10 *"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Hyd Pump A Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_159_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ground Power Available": {
+		"method": "calcCode",
+		"code": "(L:switch_16_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Hyd Pump B Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_160_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Hyd Pump A Eng1 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_161_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Hyd Pump B Eng2 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_162_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Hyd Pump A Elec2 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_163_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Hyd Pump B Elec1 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_164_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Fwd Entry": {
+		"method": "calcCode",
+		"code": "(L:switch_169_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Fwd Service": {
+		"method": "calcCode",
+		"code": "(L:switch_170_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Fwd Cargo": {
+		"method": "calcCode",
+		"code": "(L:switch_171_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Main Cargo Fo Bdsf": {
+		"method": "calcCode",
+		"code": "(L:switch_1711_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Equip": {
+		"method": "calcCode",
+		"code": "(L:switch_172_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Left Overwing": {
+		"method": "calcCode",
+		"code": "(L:switch_173_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Right Overwing": {
+		"method": "calcCode",
+		"code": "(L:switch_174_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Aft Cargo": {
+		"method": "calcCode",
+		"code": "(L:switch_175_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Aft Entry": {
+		"method": "calcCode",
+		"code": "(L:switch_176_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Aft Service": {
+		"method": "calcCode",
+		"code": "(L:switch_177_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Cvr Test Annunciator": {
+		"method": "calcCode",
+		"code": "(L:switch_179_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Duct Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_188_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Duct Overheat 1": {
+		"method": "calcCode",
+		"code": "(L:switch_189_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Dual Bleed": {
+		"method": "calcCode",
+		"code": "(L:switch_193_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Ram Door1 Full Open": {
+		"method": "calcCode",
+		"code": "(L:switch_194_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Ram Door2 Full Open": {
+		"method": "calcCode",
+		"code": "(L:switch_195_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Left Transfer Bus Off": {
+		"method": "calcCode",
+		"code": "(L:switch_20_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 L Pack - Pack Trip Off": {
+		"method": "calcCode",
+		"code": "(L:switch_203_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 L Pack - Wing-Body Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_204_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 L Pack - Bleed Trip Off": {
+		"method": "calcCode",
+		"code": "(L:switch_205_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 R Pack - Pack Trip Off": {
+		"method": "calcCode",
+		"code": "(L:switch_206_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 R Pack - Wing-Body Overheat": {
+		"method": "calcCode",
+		"code": "(L:switch_207_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 R Pack - Bleed Trip Off": {
+		"method": "calcCode",
+		"code": "(L:switch_208_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Right Transfer Bus Off": {
+		"method": "calcCode",
+		"code": "(L:switch_21_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Press Auto Fail": {
+		"method": "calcCode",
+		"code": "(L:switch_213_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Press Off Sched Descent": {
+		"method": "calcCode",
+		"code": "(L:switch_214_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Press Altn": {
+		"method": "calcCode",
+		"code": "(L:switch_215_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Press Manual": {
+		"method": "calcCode",
+		"code": "(L:switch_216_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Left Source Off": {
+		"method": "calcCode",
+		"code": "(L:switch_22_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Pseu": {
+		"method": "calcCode",
+		"code": "(L:switch_225_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Right Source Off": {
+		"method": "calcCode",
+		"code": "(L:switch_23_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Left Gen Off Bus": {
+		"method": "calcCode",
+		"code": "(L:switch_24_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Ent Lights": {
+		"method": "calcCode",
+		"code": "(L:switch_242_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Clr Lights": {
+		"method": "calcCode",
+		"code": "(L:switch_245_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Gps": {
+		"method": "calcCode",
+		"code": "(L:switch_246_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Align 1": {
+		"method": "calcCode",
+		"code": "(L:switch_247_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs On Dc 1": {
+		"method": "calcCode",
+		"code": "(L:switch_248_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Fault 1": {
+		"method": "calcCode",
+		"code": "(L:switch_249_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Apu Gen Off Bus": {
+		"method": "calcCode",
+		"code": "(L:switch_25_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Dc Fail 1": {
+		"method": "calcCode",
+		"code": "(L:switch_250_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Align": {
+		"method": "calcCode",
+		"code": "(L:switch_251_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs On Dc": {
+		"method": "calcCode",
+		"code": "(L:switch_252_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Fault": {
+		"method": "calcCode",
+		"code": "(L:switch_253_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Irs Dc Fail": {
+		"method": "calcCode",
+		"code": "(L:switch_254_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Right Gen Off Bus": {
+		"method": "calcCode",
+		"code": "(L:switch_26_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Pass Oxy On": {
+		"method": "calcCode",
+		"code": "(L:switch_263_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng1 Engine Control": {
+		"method": "calcCode",
+		"code": "(L:switch_266_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng1 Eec1 Altn": {
+		"method": "calcCode",
+		"code": "(L:switch_2691_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng2 Eec2 Altn": {
+		"method": "calcCode",
+		"code": "(L:switch_2721_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng2 Engine Control": {
+		"method": "calcCode",
+		"code": "(L:switch_273_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng1 Reverser": {
+		"method": "calcCode",
+		"code": "(L:switch_274_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng2 Reverser": {
+		"method": "calcCode",
+		"code": "(L:switch_275_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav1 Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2801_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav2 Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2811_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf1 Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2821_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf2 Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2831_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Mkr Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2841_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Spkr Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2851_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf1 Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2861_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2 Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2871_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2881_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Svc Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2891_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Pa Receiver Knobswitch": {
+		"method": "calcCode",
+		"code": "(L:switch_2901_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 Left Acp Vhf1 Button": {
+		"method": "calcCode",
+		"code": "(L:switch_2911_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 Left Acp Vhf2 Button": {
+		"method": "calcCode",
+		"code": "(L:switch_2921_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 Left Acp Vhf3 Button": {
+		"method": "calcCode",
+		"code": "(L:switch_2931_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 Left Acp Hf1 Button": {
+		"method": "calcCode",
+		"code": "(L:switch_2941_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 Left Radio Hf2 Button": {
+		"method": "calcCode",
+		"code": "(L:switch_2951_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 Left Acp Flt Button": {
+		"method": "calcCode",
+		"code": "(L:switch_2961_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 Left Acp Svc Button": {
+		"method": "calcCode",
+		"code": "(L:switch_2971_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Flight Recorder Off": {
+		"method": "calcCode",
+		"code": "(L:switch_300_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Cont Cab Zone Temp": {
+		"method": "calcCode",
+		"code": "(L:switch_308_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Fwd Cab Zone Temp": {
+		"method": "calcCode",
+		"code": "(L:switch_309_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Main": {
+		"method": "calcCode",
+		"code": "(L:switch_31_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Aft Cab Zone Temp": {
+		"method": "calcCode",
+		"code": "(L:switch_310_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.PMDG B737 EGT Low Oil Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_32_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.PMDG B737 EGT Fault": {
+		"method": "calcCode",
+		"code": "(L:switch_33_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 A/P P/Rst 1": {
+		"method": "calcCode",
+		"code": "(L:switch_3391_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Dsp Ap L Red": {
+		"method": "calcCode",
+		"code": "(L:switch_3392_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 EGT Overspeed": {
+		"method": "calcCode",
+		"code": "(L:switch_34_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Dsp At L Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_3401_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Dsp At L Red": {
+		"method": "calcCode",
+		"code": "(L:switch_3402_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 Fmc P/Rst 1": {
+		"method": "calcCode",
+		"code": "(L:switch_3411_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Speedbrake Armed": {
+		"method": "calcCode",
+		"code": "(L:switch_343_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Stab Out Of Trim": {
+		"method": "calcCode",
+		"code": "(L:switch_344_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Speedbrake Do Not Arm": {
+		"method": "calcCode",
+		"code": "(L:switch_345_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 6 Pack Flt Cont": {
+		"method": "calcCode",
+		"code": "(L:switch_3491_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 6 Pack Irs": {
+		"method": "calcCode",
+		"code": "(L:switch_350_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 6 Pack Fuel": {
+		"method": "calcCode",
+		"code": "(L:switch_351_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 6 Pack Elec": {
+		"method": "calcCode",
+		"code": "(L:switch_352_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Annunciator Panel.Output.PMDG B737 6 Pack APU": {
+		"method": "calcCode",
+		"code": "(L:switch_353_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 6 Pack Ovht/Det": {
+		"method": "calcCode",
+		"code": "(L:switch_354_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 MA Annunciator L": {
+		"method": "calcCode",
+		"code": "(L:switch_379_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 N1 Switch": {
+		"method": "calcCode",
+		"code": "(L:switch_3811_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Speed Switch": {
+		"method": "calcCode",
+		"code": "(L:switch_3821_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 Vnav Led": {
+		"method": "calcCode",
+		"code": "(L:switch_3861_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Level Change (Lvl Chg)": {
+		"method": "calcCode",
+		"code": "(L:switch_3911_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Heading Select (Hdg Sel)": {
+		"method": "calcCode",
+		"code": "(L:switch_3921_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 Approach (App) ": {
+		"method": "calcCode",
+		"code": "(L:switch_3931_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Altitude Hold (Alt Hld)": {
+		"method": "calcCode",
+		"code": "(L:switch_3941_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 Vertical Speed (V/S)": {
+		"method": "calcCode",
+		"code": "(L:switch_3951_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Vor Localizer (Vor Loc)": {
+		"method": "calcCode",
+		"code": "(L:switch_3961_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 Lnav Led": {
+		"method": "calcCode",
+		"code": "(L:switch_3971_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Command Engage (Cmd A)": {
+		"method": "calcCode",
+		"code": "(L:switch_4021_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Command Engage (Cmd B)": {
+		"method": "calcCode",
+		"code": "(L:switch_4031_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Control Wheel Steering Engage (Cws A)": {
+		"method": "calcCode",
+		"code": "(L:switch_4041_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Control Wheel Steering Engage (Cws B)": {
+		"method": "calcCode",
+		"code": "(L:switch_4051_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 MA Annunciator R": {
+		"method": "calcCode",
+		"code": "(L:switch_408_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Fuel Pump Aft 1 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_41_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Fuel Pump Fwd 1 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_42_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.Output.PMDG B737 Fuel Pump Aft 2 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_44_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Anti-Ice": {
+		"method": "calcCode",
+		"code": "(L:switch_432_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Hyd": {
+		"method": "calcCode",
+		"code": "(L:switch_433_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.Output.PMDG B737 Doors": {
+		"method": "calcCode",
+		"code": "(L:switch_434_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Eng": {
+		"method": "calcCode",
+		"code": "(L:switch_435_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Overhead": {
+		"method": "calcCode",
+		"code": "(L:switch_436_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Air Cond": {
+		"method": "calcCode",
+		"code": "(L:switch_4371_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Master Caution Light Right": {
+		"method": "calcCode",
+		"code": "(L:switch_4381_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Master Fire Warning  Light Right": {
+		"method": "calcCode",
+		"code": "(L:switch_4391_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.Output.PMDG B737 Fuel Pump Fwd 2 Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_43_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Fmc P/Rst": {
+		"method": "calcCode",
+		"code": "(L:switch_4431_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 A/T P/Rst": {
+		"method": "calcCode",
+		"code": "(L:switch_4441_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Dsp At R Red": {
+		"method": "calcCode",
+		"code": "(L:switch_4442_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.Output.PMDG B737 A/P P/Rst": {
+		"method": "calcCode",
+		"code": "(L:switch_4451_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Dsp Ap R Red": {
+		"method": "calcCode",
+		"code": "(L:switch_4452_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Below G/S P-Inhibit LED": {
+		"method": "calcCode",
+		"code": "(L:switch_4461_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Speedbrakes Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_447_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Takeoff Config": {
+		"method": "calcCode",
+		"code": "(L:switch_4471_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Cabin Altitude": {
+		"method": "calcCode",
+		"code": "(L:switch_4472_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Center Left Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_47_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Center Right Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_48_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Ground Proximity Inop Annunciator": {
+		"method": "calcCode",
+		"code": "(L:switch_499_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Left Filter Bypass": {
+		"method": "calcCode",
+		"code": "(L:switch_50_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Cross Feed Valve Open": {
+		"method": "calcCode",
+		"code": "(L:switch_51_73X, number) 10 *"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Right Filter Bypass": {
+		"method": "calcCode",
+		"code": "(L:switch_52_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Hgs Fail Switch": {
+		"method": "calcCode",
+		"code": "(L:switch_5221_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Green Light On Clock Bezel": {
+		"method": "calcCode",
+		"code": "(L:switch_528_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Left Spar Valve Closed": {
+		"method": "calcCode",
+		"code": "(L:switch_53_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Right Spar Valve Closed": {
+		"method": "calcCode",
+		"code": "(L:switch_54_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Left Engine Valve Closed": {
+		"method": "calcCode",
+		"code": "(L:switch_55_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Right Engine Valve Closed": {
+		"method": "calcCode",
+		"code": "(L:switch_56_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Alert Capt": {
+		"method": "calcCode",
+		"code": "(L:switch_5661_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Maint Capt": {
+		"method": "calcCode",
+		"code": "(L:switch_5662_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Alert Ind Capt": {
+		"method": "calcCode",
+		"code": "(L:switch_5663_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Maint Ind Capt": {
+		"method": "calcCode",
+		"code": "(L:switch_5664_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Alert Fo": {
+		"method": "calcCode",
+		"code": "(L:switch_5665_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Maint Fo": {
+		"method": "calcCode",
+		"code": "(L:switch_5666_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Alert Ind Fo ": {
+		"method": "calcCode",
+		"code": "(L:switch_5667_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Maint Ind Fo": {
+		"method": "calcCode",
+		"code": "(L:switch_5668_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 Fms Call Light 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6030_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 Fms Fail Light 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6031_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 Fms Msg Light 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6040_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 Fms Ofst Light 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6041_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.PMDG B737 Fms Exec Light 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6042_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Yaw Damper": {
+		"method": "calcCode",
+		"code": "(L:switch_64_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.Output.PMDG B737 Fms Call Light 2": {
+		"method": "calcCode",
+		"code": "(L:switch_6750_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.Output.PMDG B737 Fms Fail Light 2": {
+		"method": "calcCode",
+		"code": "(L:switch_6751_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.Output.PMDG B737 Fms Msg Light 2": {
+		"method": "calcCode",
+		"code": "(L:switch_6760_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.Output.PMDG B737 Fms Ofst Light 2": {
+		"method": "calcCode",
+		"code": "(L:switch_6761_73X, number) 0 >"
+	},
+	"PMDG.B737-700.FMS.Output.PMDG B737 Fms Exec Light 2": {
+		"method": "calcCode",
+		"code": "(L:switch_6762_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Auto Slat Fail": {
+		"method": "calcCode",
+		"code": "(L:switch_69_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Eng1 Overheat Light": {
+		"method": "calcCode",
+		"code": "(L:switch_695_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.Output.PMDG B737 Eng 1 Start": {
+		"method": "calcCode",
+		"code": "(L:switch_688_73X, number)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Apu Fire Warn/Disch 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6982_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.Output.PMDG B737 Eng 2 Start": {
+		"method": "calcCode",
+		"code": "(L:switch_689_73X, number)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Mach Trim Fail": {
+		"method": "calcCode",
+		"code": "(L:switch_70_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Wheel Well Fire Light": {
+		"method": "calcCode",
+		"code": "(L:switch_700_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Fire Det Fault Light": {
+		"method": "calcCode",
+		"code": "(L:switch_701_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Apu Det Inop Light": {
+		"method": "calcCode",
+		"code": "(L:switch_702_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Apu Bottle Discharge Light": {
+		"method": "calcCode",
+		"code": "(L:switch_703_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Eng2 Overheat Light": {
+		"method": "calcCode",
+		"code": "(L:switch_706_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 L Bottle Discharge Light": {
+		"method": "calcCode",
+		"code": "(L:switch_707_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 R Bottle Discharge Light": {
+		"method": "calcCode",
+		"code": "(L:switch_708_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Stabtrim Main Elec Cutout": {
+		"method": "calcCode",
+		"code": "(L:switch_71_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 L Eng Test Light": {
+		"method": "calcCode",
+		"code": "(L:switch_716_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 R Eng Test Light": {
+		"method": "calcCode",
+		"code": "(L:switch_717_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Apu Test Light": {
+		"method": "calcCode",
+		"code": "(L:switch_718_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Feel Diff Press": {
+		"method": "calcCode",
+		"code": "(L:switch_72_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf1 Mic LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7341_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2 Mic LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7351_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Mic LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7361_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Svc Mic LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7371_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Pa Mic LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7381_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf1 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7391_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7401_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf3 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7411_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf1 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7421_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7431_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Svc Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7441_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Pa Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7451_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav1 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7461_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav2 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7471_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf1 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7481_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf2 Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7491_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Mkr Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7501_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Spkr Receive LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7511_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Ext Fwd Light LED": {
+		"method": "calcCode",
+		"code": "(L:switch_758_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Ext Aft Light LED": {
+		"method": "calcCode",
+		"code": "(L:switch_759_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Main Light": {
+		"method": "calcCode",
+		"code": "(L:switch_7591_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Flt Control A Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_76_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Main Det Select Switch": {
+		"method": "calcCode",
+		"code": "(L:switch_7621_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Fwd Cargo Fire Arm LED": {
+		"method": "calcCode",
+		"code": "(L:switch_764_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Aft Cargo Fire Arm LED": {
+		"method": "calcCode",
+		"code": "(L:switch_766_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Fire Discharge LED": {
+		"method": "calcCode",
+		"code": "(L:switch_7671_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Flt Control B Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_77_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Xpndr Fail Light": {
+		"method": "calcCode",
+		"code": "(L:switch_799_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Standby Hyd Stby Rud On": {
+		"method": "calcCode",
+		"code": "(L:switch_82_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Hydraulic.PMDG B737 Standby Hyd Low Pressure": {
+		"method": "calcCode",
+		"code": "(L:switch_83_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Lock Fail Light": {
+		"method": "calcCode",
+		"code": "(L:switch_832_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Auto Unlk Light": {
+		"method": "calcCode",
+		"code": "(L:switch_833_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 COM Unit 2 (FO) Multi select LED": {
+		"method": "calcCode",
+		"code": "(L:switch_836_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf1 Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8551_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2 Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8561_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8591_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Svc Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8601_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Pa Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8611_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav1 Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8621_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav2 Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8631_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf1 Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8641_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf2 Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8651_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Mkr Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8661_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Spkr Receive": {
+		"method": "calcCode",
+		"code": "(L:switch_8671_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Left Acp Pa Button": {
+		"method": "calcCode",
+		"code": "(L:switch_8731_73X, number)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Airstair": {
+		"method": "calcCode",
+		"code": "(L:switch_8951_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Left Fwd Overwing": {
+		"method": "calcCode",
+		"code": "(L:switch_896_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Left Aft Overwing": {
+		"method": "calcCode",
+		"code": "(L:switch_897_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Right Fwd Overwing": {
+		"method": "calcCode",
+		"code": "(L:switch_898_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Right Aft Overwing": {
+		"method": "calcCode",
+		"code": "(L:switch_899_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Bat Discharge": {
+		"method": "calcCode",
+		"code": "(L:switch_90_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 1 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9051_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 1 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9052_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 2 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9053_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 2 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9054_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 3 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9055_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 3 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9056_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 4 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9057_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 4 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9058_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 5 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9059_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 5 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9060_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 6 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9061_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 6 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9062_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 7 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9063_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 7 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9064_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 8 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9065_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 8 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9066_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 9 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9067_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 9 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9068_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 10 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9069_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 10 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9070_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 11 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9071_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 11 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9072_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 12 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9073_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 12 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9074_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 13 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9075_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 13 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9076_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 14 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9077_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 14 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9078_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 15 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9079_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 15 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9080_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 16 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9081_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 16 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9082_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 17 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9083_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 17 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9084_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 18 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9085_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 18 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9086_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 19 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9087_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 19 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9088_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 20 Green": {
+		"method": "calcCode",
+		"code": "(L:switch_9089_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke 20 Amber": {
+		"method": "calcCode",
+		"code": "(L:switch_9090_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke Depress": {
+		"method": "calcCode",
+		"code": "(L:switch_9091_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Main Smoke Cargo": {
+		"method": "calcCode",
+		"code": "(L:switch_9092_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Tr Unit": {
+		"method": "calcCode",
+		"code": "(L:switch_91_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Lav Smoke Sys Fault": {
+		"method": "calcCode",
+		"code": "(L:switch_9131_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Lav Smoke Det Fault 1": {
+		"method": "calcCode",
+		"code": "(L:switch_9132_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Lav Smoke Det Fault": {
+		"method": "calcCode",
+		"code": "(L:switch_9133_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Lav Smoke Smoke": {
+		"method": "calcCode",
+		"code": "(L:switch_9134_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Supn Smoke Smoke": {
+		"method": "calcCode",
+		"code": "(L:switch_9135_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Main Smoke Det Fault": {
+		"method": "calcCode",
+		"code": "(L:switch_9136_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Main Smoke Smoke": {
+		"method": "calcCode",
+		"code": "(L:switch_9137_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Elec": {
+		"method": "calcCode",
+		"code": "(L:switch_92_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Flight Instrumentation.PMDG B737 Hud Stow/Hide": {
+		"method": "calcCode",
+		"code": "(L:switch_98_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Equip Cooling Exhaust Off": {
+		"method": "calcCode",
+		"code": "(L:switch_99_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 00 Alt Gear Ext Door": {
+		"method": "calcCode",
+		"code": "200201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 00 Alt Gear Ext Handle Left": {
+		"method": "calcCode",
+		"code": "200401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 00 Alt Gear Ext Handle Nose": {
+		"method": "calcCode",
+		"code": "200501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 00 Alt Gear Ext Handle Right": {
+		"method": "calcCode",
+		"code": "200301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Checklist Knob Left": {
+		"method": "calcCode",
+		"code": "752101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Checklist Knob Right": {
+		"method": "calcCode",
+		"code": "752201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Combiner Cover": {
+		"method": "calcCode",
+		"code": "200601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Left Arrow": {
+		"method": "calcCode",
+		"code": "170101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Left Chart": {
+		"method": "calcCode",
+		"code": "170001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Left Power": {
+		"method": "calcCode",
+		"code": "173001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Left Star": {
+		"method": "calcCode",
+		"code": "172901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Left Sun": {
+		"method": "calcCode",
+		"code": "172801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Right Arrow": {
+		"method": "calcCode",
+		"code": "178701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Right Chart": {
+		"method": "calcCode",
+		"code": "178601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Right Power": {
+		"method": "calcCode",
+		"code": "181601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Right Star": {
+		"method": "calcCode",
+		"code": "181501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Efb Right Sun": {
+		"method": "calcCode",
+		"code": "181401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Grimes Light Ca": {
+		"method": "calcCode",
+		"code": "202001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Hgs Projector Mover": {
+		"method": "calcCode",
+		"code": "(L:hgs_projector_mover,bool) ! (>L:hgs_projector_mover,bool)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Jumpseat": {
+		"method": "calcCode",
+		"code": "200101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Noclick": {
+		"method": "calcCode",
+		"code": "0 (L:NoClick,bool) ! (>L:NoClick,bool) 1"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Yoke Left Hide": {
+		"method": "calcCode",
+		"code": "200701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 00 Yoke Right Hide": {
+		"method": "calcCode",
+		"code": "200801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 A Testswitch": {
+		"method": "calcCode",
+		"code": "(L:TestSwitch,bool) ! (>L:TestSwitch,bool)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel A Aft": {
+		"method": "calcCode",
+		"code": "201101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel A Fwd": {
+		"method": "calcCode",
+		"code": "200901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Aft Bleed": {
+		"method": "calcCode",
+		"code": "201401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel B Aft": {
+		"method": "calcCode",
+		"code": "201201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel B Fwd": {
+		"method": "calcCode",
+		"code": "201001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Fwd Bleed": {
+		"method": "calcCode",
+		"code": "201301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Gnd Guard": {
+		"method": "calcCode",
+		"code": "201801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Aux Fuel Gnd Switch": {
+		"method": "calcCode",
+		"code": "201901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Bbj Aux Fuel Left Alert Switch": {
+		"method": "calcCode",
+		"code": "203201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Bbj Aux Fuel Left Maint Switch": {
+		"method": "calcCode",
+		"code": "203401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Bbj Aux Fuel Left Test Switch": {
+		"method": "calcCode",
+		"code": "203001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Bbj Aux Fuel Right Alert Switch": {
+		"method": "calcCode",
+		"code": "203301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Bbj Aux Fuel Right Maint Switch": {
+		"method": "calcCode",
+		"code": "203501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Fuel.PMDG B737 Bbj Aux Fuel Right Test Switch": {
+		"method": "calcCode",
+		"code": "203101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Chart Light CA Adjust Dec": {
+		"method": "calcCode",
+		"code": "31908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Chart Light CA Adjust Inc": {
+		"method": "calcCode",
+		"code": "31907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Chart Light FO Adjust Dec": {
+		"method": "calcCode",
+		"code": "32208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Chart Light FO Adjust Inc": {
+		"method": "calcCode",
+		"code": "32207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Compass Stow": {
+		"method": "calcCode",
+		"code": "(L:NGXCompassStow,bool) ! (>L:NGXCompassStow,bool)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light L Adjust Dec": {
+		"method": "calcCode",
+		"code": "32308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light L Adjust Inc": {
+		"method": "calcCode",
+		"code": "32307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light L Pull": {
+		"method": "calcCode",
+		"code": "89501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light R Adjust Dec": {
+		"method": "calcCode",
+		"code": "32408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light R Adjust Inc": {
+		"method": "calcCode",
+		"code": "32407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Map Light R Pull": {
+		"method": "calcCode",
+		"code": "89601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob Dec": {
+		"method": "calcCode",
+		"code": "308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob Inc": {
+		"method": "calcCode",
+		"code": "307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob STBY PWR": {
+		"method": "calcCode",
+		"code": "0 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob BAT BUS": {
+		"method": "calcCode",
+		"code": "10 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob BAT": {
+		"method": "calcCode",
+		"code": "20 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob AUX BAT": {
+		"method": "calcCode",
+		"code": "30 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob TR1": {
+		"method": "calcCode",
+		"code": "40 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob TR2": {
+		"method": "calcCode",
+		"code": "50 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob TR3": {
+		"method": "calcCode",
+		"code": "60 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Dc Source Knob TEST": {
+		"method": "calcCode",
+		"code": "70 (L:switch_03_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob Dec": {
+		"method": "calcCode",
+		"code": "408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob Inc": {
+		"method": "calcCode",
+		"code": "407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob STBY PWR": {
+		"method": "calcCode",
+		"code": "0 (L:switch_04_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 407 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob GND PWR": {
+		"method": "calcCode",
+		"code": "10 (L:switch_04_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 407 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob GEN 1": {
+		"method": "calcCode",
+		"code": "20 (L:switch_04_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 407 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob APU GEN": {
+		"method": "calcCode",
+		"code": "30 (L:switch_04_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 407 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob GEN 2": {
+		"method": "calcCode",
+		"code": "40 (L:switch_04_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 407 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob INV": {
+		"method": "calcCode",
+		"code": "50 (L:switch_04_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 407 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Ac Source Knob TEST": {
+		"method": "calcCode",
+		"code": "60 (L:switch_04_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 407 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Cab Util": {
+		"method": "calcCode",
+		"code": "501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Ife/Pass": {
+		"method": "calcCode",
+		"code": "601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Standby Power Bat": {
+		"method": "calcCode",
+		"code": "0 (L:switch_10_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 1002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 1001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Standby Power Off": {
+		"method": "calcCode",
+		"code": "50 (L:switch_10_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 1002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 1001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Standby Power Auto": {
+		"method": "calcCode",
+		"code": "100 (L:switch_10_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 1002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 1001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Yoke Counter 3": {
+		"method": "calcCode",
+		"code": "100001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Yoke Counter 4": {
+		"method": "calcCode",
+		"code": "100101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Yoke Counter 5": {
+		"method": "calcCode",
+		"code": "100201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Yoke Counter 6": {
+		"method": "calcCode",
+		"code": "100301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Ap Disc Right": {
+		"method": "calcCode",
+		"code": "100501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Ca Left Arm Rest": {
+		"method": "calcCode",
+		"code": "100601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Ca Right Arm Rest": {
+		"method": "calcCode",
+		"code": "100701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Fo Left Arm Rest": {
+		"method": "calcCode",
+		"code": "100801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Fo Right Arm Rest": {
+		"method": "calcCode",
+		"code": "100901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.PMDG B737 Ap Disc Left": {
+		"method": "calcCode",
+		"code": "101501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 Right Manual Gear Extension": {
+		"method": "calcCode",
+		"code": "101701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 Left Manual Gear Extension": {
+		"method": "calcCode",
+		"code": "101901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 Center Manual Gear Extension": {
+		"method": "calcCode",
+		"code": "102001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 No Smoking OFF": {
+		"method": "calcCode",
+		"code": "0 (L:switch_103_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 10301 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 10302 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 No Smoking AUTO": {
+		"method": "calcCode",
+		"code": "50 (L:switch_103_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 10301 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 10302 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 No Smoking ON": {
+		"method": "calcCode",
+		"code": "100 (L:switch_103_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 10301 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 10302 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Fasten Belts OFF": {
+		"method": "calcCode",
+		"code": "0 (L:switch_104_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 10401 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 10402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Fasten Belts AUTO": {
+		"method": "calcCode",
+		"code": "50 (L:switch_104_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 10401 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 10402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Fasten Belts ON": {
+		"method": "calcCode",
+		"code": "100 (L:switch_104_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 10401 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 10402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Ground Call": {
+		"method": "calcCode",
+		"code": "10601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Standby Power Guard": {
+		"method": "calcCode",
+		"code": "1101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Retractable Landing Light Left RET": {
+		"method": "calcCode",
+		"code": "0 (L:switch_111_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11101 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11102 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Retractable Landing Light Left EXT": {
+		"method": "calcCode",
+		"code": "50 (L:switch_111_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11101 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11102 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Retractable Landing Light Left ON": {
+		"method": "calcCode",
+		"code": "100 (L:switch_111_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11101 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11102 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Retractable Landing Light Right RET": {
+		"method": "calcCode",
+		"code": "0 (L:switch_112_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11201 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11202 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Retractable Landing Light Right EXT": {
+		"method": "calcCode",
+		"code": "50 (L:switch_112_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11201 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11202 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Retractable Landing Light Right ON": {
+		"method": "calcCode",
+		"code": "100 (L:switch_112_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11201 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11202 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Apu Start OFF": {
+		"method": "calcCode",
+		"code": "0 (L:switch_118_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11801 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Apu Start ON": {
+		"method": "calcCode",
+		"code": "50 (L:switch_118_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11801 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Apu Start START": {
+		"method": "calcCode",
+		"code": "100 (L:switch_118_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 11801 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Engine Start Left Dec": {
+		"method": "calcCode",
+		"code": "11908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Engine Start Left Inc": {
+		"method": "calcCode",
+		"code": "11909 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG B737 Engine Start Left GRD": {
+		"method": "calcCode",
+		"code": "0 (L:switch_119_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Engine Start Left OFF": {
+		"method": "calcCode",
+		"code": "10 (L:switch_119_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Engine Start Left CONT": {
+		"method": "calcCode",
+		"code": "20 (L:switch_119_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Engine Start Left FLT": {
+		"method": "calcCode",
+		"code": "30 (L:switch_119_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 11907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 11908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Gen Drive Disc Left": {
+		"method": "calcCode",
+		"code": "1201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Ignition Select IGN L": {
+		"method": "calcCode",
+		"code": "0 (L:switch_120_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 12002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 12001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Ignition Select Both": {
+		"method": "calcCode",
+		"code": "50 (L:switch_120_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 12002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 12001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Ignition Select IGN R": {
+		"method": "calcCode",
+		"code": "100 (L:switch_120_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 12002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 12001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Position Light STROBE STEADY": {
+		"method": "calcCode",
+		"code": "0 (L:switch_123_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 12301 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 12302 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Position Light OFF": {
+		"method": "calcCode",
+		"code": "50 (L:switch_123_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 12301 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 12302 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Position Light STEADY": {
+		"method": "calcCode",
+		"code": "100 (L:switch_123_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 12301 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 12302 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Gen Drive Disc Left Guard": {
+		"method": "calcCode",
+		"code": "1301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Gen Drive Disc Right": {
+		"method": "calcCode",
+		"code": "1401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Gen Drive Disc Right Guard": {
+		"method": "calcCode",
+		"code": "1501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Cvr Test": {
+		"method": "calcCode",
+		"code": "17801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG B737 Eng 2 Reverse Thrust Kill": {
+		"method": "calcCode",
+		"code": "68101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng 1 Throttle": {
+		"method": "calcCode",
+		"code": "68301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng 2 A/T Disengage": {
+		"method": "calcCode",
+		"code": "68501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.PMDG B737 Eng 2 Throttle": {
+		"method": "calcCode",
+		"code": "68601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eng 1 Ovht Det A": {
+		"method": "calcCode",
+		"code": "0 (L:switch_694_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 69402 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 69401 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eng 1 Ovht Det Normal": {
+		"method": "calcCode",
+		"code": "50 (L:switch_694_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 69402 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 69401 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eng 1 Ovht Det B": {
+		"method": "calcCode",
+		"code": "100 (L:switch_694_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 69402 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 69401 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Ovht Test Fault Inop": {
+		"method": "calcCode",
+		"code": "0 (L:switch_696_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 69602 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 69601 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Ovht Test Normal ": {
+		"method": "calcCode",
+		"code": "50 (L:switch_696_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 69602 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 69601 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Ovht Test Fire": {
+		"method": "calcCode",
+		"code": "100 (L:switch_696_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 69602 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 69601 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 1 Fire Warn/Disch Rotate Left": {
+		"method": "calcCode",
+		"code": "69701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 1 Fire Warn/Disch Rotate Right": {
+		"method": "calcCode",
+		"code": "69702 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 1 Fire Warn/Disch Handle Up": {
+		"method": "calcCode",
+		"code": "697101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Apu Fire Warn/Disch Rotate Left": {
+		"method": "calcCode",
+		"code": "69801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Apu Fire Warn/Disch Rotate Right": {
+		"method": "calcCode",
+		"code": "69802 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Apu Fire Warn/Disch Handle Up": {
+		"method": "calcCode",
+		"code": "698101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 2 Fire Warn/Disch Rotate Left": {
+		"method": "calcCode",
+		"code": "69901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 2 Fire Warn/Disch Rotate Right": {
+		"method": "calcCode",
+		"code": "69902 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Bell Cutout": {
+		"method": "calcCode",
+		"code": "70401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eng 2 Ovht Det A": {
+		"method": "calcCode",
+		"code": "0 (L:switch_705_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 70502 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 70501 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eng 2 Ovht Det Normal": {
+		"method": "calcCode",
+		"code": "50 (L:switch_705_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 70502 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 70501 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eng 2 Ovht Det B": {
+		"method": "calcCode",
+		"code": "100 (L:switch_705_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 70502 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 70501 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Stabtrim Main Elec Cutout": {
+		"method": "calcCode",
+		"code": "70901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Stabtrim Main Elec Cutout Guard": {
+		"method": "calcCode",
+		"code": "71001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Stabtrim Autopilot Cutout": {
+		"method": "calcCode",
+		"code": "71101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Stabtrim Autopilot Cutout Guard": {
+		"method": "calcCode",
+		"code": "71201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Move Flap Lever": {
+		"method": "calcCode",
+		"code": "71401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps Up": {
+		"method": "calcCode",
+		"code": "714101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 1": {
+		"method": "calcCode",
+		"code": "714201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 2": {
+		"method": "calcCode",
+		"code": "714301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 5": {
+		"method": "calcCode",
+		"code": "714401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 10": {
+		"method": "calcCode",
+		"code": "714501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 15": {
+		"method": "calcCode",
+		"code": "714601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 25": {
+		"method": "calcCode",
+		"code": "714701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 30": {
+		"method": "calcCode",
+		"code": "714801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Flaps 40": {
+		"method": "calcCode",
+		"code": "714901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Engines Fire Ext Test 1": {
+		"method": "calcCode",
+		"code": "0 (L:switch_715_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 71502 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 71501 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Engines Fire Ext Test Middle": {
+		"method": "calcCode",
+		"code": "50 (L:switch_715_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 71502 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 71501 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Engines Fire Ext Test 2": {
+		"method": "calcCode",
+		"code": "100 (L:switch_715_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 71502 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 71501 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Outer Frq": {
+		"method": "calcCode",
+		"code": "72301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf Sensor Dec 1": {
+		"method": "calcCode",
+		"code": "72408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf Sensor Inc 1": {
+		"method": "calcCode",
+		"code": "72407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Test 1": {
+		"method": "calcCode",
+		"code": "72501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Alternate Flaps Master": {
+		"method": "calcCode",
+		"code": "7301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav1 Test": {
+		"method": "calcCode",
+		"code": "73101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf1 Mic 1": {
+		"method": "calcCode",
+		"code": "73401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2 Mic 1": {
+		"method": "calcCode",
+		"code": "73501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Mic 1": {
+		"method": "calcCode",
+		"code": "73601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Svc Mic 1": {
+		"method": "calcCode",
+		"code": "73701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Pa Mic 1": {
+		"method": "calcCode",
+		"code": "73801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Alternate Flaps Master Guard": {
+		"method": "calcCode",
+		"code": "7401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Alternate Flaps Down Press": {
+		"method": "calcCode",
+		"code": "7501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Filter Switch Dec": {
+		"method": "calcCode",
+		"code": "75408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Filter Switch Inc": {
+		"method": "calcCode",
+		"code": "75407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Fwd Det Select Dec": {
+		"method": "calcCode",
+		"code": "76008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Fwd Det Select Inc": {
+		"method": "calcCode",
+		"code": "76007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Aft Det Select Switch Dec": {
+		"method": "calcCode",
+		"code": "76108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Aft Det Select Switch Inc": {
+		"method": "calcCode",
+		"code": "76107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Main Det Select Switch Dec": {
+		"method": "calcCode",
+		"code": "761108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Main Det Select Switch Inc": {
+		"method": "calcCode",
+		"code": "761107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Fwd Cargo Fire Arm": {
+		"method": "calcCode",
+		"code": "76301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Aft Cargo Fire Arm": {
+		"method": "calcCode",
+		"code": "76501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Fire Discharge": {
+		"method": "calcCode",
+		"code": "76701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Fire Discharge Guard": {
+		"method": "calcCode",
+		"code": "76801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Cargo Fire Test": {
+		"method": "calcCode",
+		"code": "76901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Mode": {
+		"method": "calcCode",
+		"code": "77001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Stby": {
+		"method": "calcCode",
+		"code": "77101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Rwy": {
+		"method": "calcCode",
+		"code": "77201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS G/S": {
+		"method": "calcCode",
+		"code": "77301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Clr": {
+		"method": "calcCode",
+		"code": "77501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Brt+": {
+		"method": "calcCode",
+		"code": "77601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Dim-": {
+		"method": "calcCode",
+		"code": "77701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 1": {
+		"method": "calcCode",
+		"code": "77801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 2": {
+		"method": "calcCode",
+		"code": "77901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control A Stby": {
+		"method": "calcCode",
+		"code": "0 (L:switch_78_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 7801 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 7802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control A Off": {
+		"method": "calcCode",
+		"code": "50 (L:switch_78_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 7801 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 7802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control A On": {
+		"method": "calcCode",
+		"code": "100 (L:switch_78_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 7801 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 7802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 3": {
+		"method": "calcCode",
+		"code": "78001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 4": {
+		"method": "calcCode",
+		"code": "78101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 5": {
+		"method": "calcCode",
+		"code": "78201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 6": {
+		"method": "calcCode",
+		"code": "78301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 7": {
+		"method": "calcCode",
+		"code": "78401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 8": {
+		"method": "calcCode",
+		"code": "78501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 9": {
+		"method": "calcCode",
+		"code": "78601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Enter": {
+		"method": "calcCode",
+		"code": "78701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Num 0": {
+		"method": "calcCode",
+		"code": "78801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 HGS Test": {
+		"method": "calcCode",
+		"code": "78901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control A Guard": {
+		"method": "calcCode",
+		"code": "7901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Tfr Left": {
+		"method": "calcCode",
+		"code": "79001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Wx Left": {
+		"method": "calcCode",
+		"code": "79101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Map Left": {
+		"method": "calcCode",
+		"code": "79201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Gc Left": {
+		"method": "calcCode",
+		"code": "79301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Tilt Control Left Dec": {
+		"method": "calcCode",
+		"code": "79408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Tilt Control Left Inc": {
+		"method": "calcCode",
+		"code": "79407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Tilt Control Right Dec": {
+		"method": "calcCode",
+		"code": "79508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Tilt Control Right Inc": {
+		"method": "calcCode",
+		"code": "79507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Wx Right": {
+		"method": "calcCode",
+		"code": "79601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Map Right": {
+		"method": "calcCode",
+		"code": "79701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control B Stby": {
+		"method": "calcCode",
+		"code": "0 (L:switch_80_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 8001 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 8002 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control B Off": {
+		"method": "calcCode",
+		"code": "50 (L:switch_80_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 8001 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 8002 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control B On": {
+		"method": "calcCode",
+		"code": "100 (L:switch_80_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 8001 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 8002 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flight Control B Guard": {
+		"method": "calcCode",
+		"code": "8101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Aileron Trim Switch Left": {
+		"method": "calcCode",
+		"code": "81001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Aileron Trim Switch Right": {
+		"method": "calcCode",
+		"code": "81002 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Rudder Trim Dec": {
+		"method": "calcCode",
+		"code": "81108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Rudder Trim Inc": {
+		"method": "calcCode",
+		"code": "81107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG B737 SELCAL VHF1": {
+		"method": "calcCode",
+		"code": "81201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG B737 SELCAL VHF2": {
+		"method": "calcCode",
+		"code": "81301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG B737 SELCAL VHF3": {
+		"method": "calcCode",
+		"code": "81401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Outer 1": {
+		"method": "calcCode",
+		"code": "81501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Middle": {
+		"method": "calcCode",
+		"code": "81601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Outer": {
+		"method": "calcCode",
+		"code": "81701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf/Ant": {
+		"method": "calcCode",
+		"code": "81801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Test 1/2 R": {
+		"method": "calcCode",
+		"code": "81901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Off/On": {
+		"method": "calcCode",
+		"code": "82001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Test": {
+		"method": "calcCode",
+		"code": "82101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Inner Dec": {
+		"method": "calcCode",
+		"code": "82208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Inner Inc": {
+		"method": "calcCode",
+		"code": "82207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Middle Dec": {
+		"method": "calcCode",
+		"code": "82308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Middle Inc": {
+		"method": "calcCode",
+		"code": "82307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Outer Dec": {
+		"method": "calcCode",
+		"code": "82408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Adf Frq Outer Inc": {
+		"method": "calcCode",
+		"code": "82407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG B737 ADF Tfr": {
+		"method": "calcCode",
+		"code": "82701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Stab Trim": {
+		"method": "calcCode",
+		"code": "83001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Stab Trim Guard": {
+		"method": "calcCode",
+		"code": "83101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Dk Door Dec": {
+		"method": "calcCode",
+		"code": "83408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Dk Door Inc": {
+		"method": "calcCode",
+		"code": "83407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2 Outer Frq": {
+		"method": "calcCode",
+		"code": "83901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Nav2 Test": {
+		"method": "calcCode",
+		"code": "84701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf1 Mic": {
+		"method": "calcCode",
+		"code": "85001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2 Mic": {
+		"method": "calcCode",
+		"code": "85101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Flt Mic": {
+		"method": "calcCode",
+		"code": "85201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Svc Mic": {
+		"method": "calcCode",
+		"code": "85301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Filter Switch Dec": {
+		"method": "calcCode",
+		"code": "87008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Filter Switch Inc": {
+		"method": "calcCode",
+		"code": "87007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Recirc Fan": {
+		"method": "calcCode",
+		"code": "87201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Pa Mic": {
+		"method": "calcCode",
+		"code": "87301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf3 Receive": {
+		"method": "calcCode",
+		"code": "87401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf1 Receive": {
+		"method": "calcCode",
+		"code": "87501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Wlan": {
+		"method": "calcCode",
+		"code": "88801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Wlan Guard": {
+		"method": "calcCode",
+		"code": "88901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Smoke Test": {
+		"method": "calcCode",
+		"code": "90501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Smoke Bell Cut Out": {
+		"method": "calcCode",
+		"code": "90701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Smoke": {
+		"method": "calcCode",
+		"code": "90901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Freighter Smoke Switch Guard": {
+		"method": "calcCode",
+		"code": "91101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Freighter Lav Smoke Test": {
+		"method": "calcCode",
+		"code": "91301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf2 Switch": {
+		"method": "calcCode",
+		"code": "91401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Freighter Lav Bell Cut Out": {
+		"method": "calcCode",
+		"code": "91501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Wx+T Left": {
+		"method": "calcCode",
+		"code": "91601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Auto": {
+		"method": "calcCode",
+		"code": "91701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Test": {
+		"method": "calcCode",
+		"code": "91801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Tfr Right": {
+		"method": "calcCode",
+		"code": "91901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Wx+T Right": {
+		"method": "calcCode",
+		"code": "92001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Gc Right": {
+		"method": "calcCode",
+		"code": "92101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Gain Control Right Dec": {
+		"method": "calcCode",
+		"code": "92208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Gain Control Right Inc": {
+		"method": "calcCode",
+		"code": "92207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Gain Control Left Dec": {
+		"method": "calcCode",
+		"code": "92308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Weather Radar Gain Control Left Inc": {
+		"method": "calcCode",
+		"code": "92307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Off 1": {
+		"method": "calcCode",
+		"code": "92401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Elec Maint": {
+		"method": "calcCode",
+		"code": "9301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf1 1": {
+		"method": "calcCode",
+		"code": "93101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Am Switch 1": {
+		"method": "calcCode",
+		"code": "93301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf2 1": {
+		"method": "calcCode",
+		"code": "93501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Circuit Breaker Light Control Dec": {
+		"method": "calcCode",
+		"code": "9408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Circuit Breaker Light Control Inc": {
+		"method": "calcCode",
+		"code": "9407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG B737 COM Unit 3 Vhf Frq Tfr": {
+		"method": "calcCode",
+		"code": "94601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf Sensor Dec": {
+		"method": "calcCode",
+		"code": "94908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf Sensor Inc": {
+		"method": "calcCode",
+		"code": "94907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Panel Light Control Dec": {
+		"method": "calcCode",
+		"code": "9508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Panel Light Control Inc": {
+		"method": "calcCode",
+		"code": "9507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Test": {
+		"method": "calcCode",
+		"code": "95001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Outer Frq Dec": {
+		"method": "calcCode",
+		"code": "95108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Outer Frq Inc": {
+		"method": "calcCode",
+		"code": "95107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Inner Frq Dec": {
+		"method": "calcCode",
+		"code": "95208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Inner Frq Inc": {
+		"method": "calcCode",
+		"code": "95207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Off": {
+		"method": "calcCode",
+		"code": "95301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf1": {
+		"method": "calcCode",
+		"code": "95401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf2": {
+		"method": "calcCode",
+		"code": "95601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Equipment Cooling Supply": {
+		"method": "calcCode",
+		"code": "9601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf1": {
+		"method": "calcCode",
+		"code": "96001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Am Switch": {
+		"method": "calcCode",
+		"code": "96201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Hf2": {
+		"method": "calcCode",
+		"code": "96401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Equipment Cooling Exhaust": {
+		"method": "calcCode",
+		"code": "9701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Galley": {
+		"method": "calcCode",
+		"code": "97501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 1 Fire Warn/Disch Lock Switch": {
+		"method": "calcCode",
+		"code": "97601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Apu Fire Warn/Disch Lock Switch": {
+		"method": "calcCode",
+		"code": "97701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 2 Fire Warn Lock Switch": {
+		"method": "calcCode",
+		"code": "97801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Compass Light": {
+		"method": "calcCode",
+		"code": "98201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 O2 Test/Reset 1": {
+		"method": "calcCode",
+		"code": "98301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 O2 Test/Reset 2": {
+		"method": "calcCode",
+		"code": "983101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 O2 Test/Reset 3": {
+		"method": "calcCode",
+		"code": "983201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 O2 Test/Reset 4": {
+		"method": "calcCode",
+		"code": "983301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Hp/In": {
+		"method": "calcCode",
+		"code": "98601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd App": {
+		"method": "calcCode",
+		"code": "98701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd +": {
+		"method": "calcCode",
+		"code": "98801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd -": {
+		"method": "calcCode",
+		"code": "98901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Att Rst Switch": {
+		"method": "calcCode",
+		"code": "99001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Baro Knob Dec": {
+		"method": "calcCode",
+		"code": "99108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Baro Knob Inc": {
+		"method": "calcCode",
+		"code": "99107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Std": {
+		"method": "calcCode",
+		"code": "99301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Menu": {
+		"method": "calcCode",
+		"code": "202101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Adjust Knob Dec": {
+		"method": "calcCode",
+		"code": "202208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Adjust Knob Inc": {
+		"method": "calcCode",
+		"code": "202207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Isfd Adjust Push": {
+		"method": "calcCode",
+		"code": "202301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Yoke Counter 1": {
+		"method": "calcCode",
+		"code": "99801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Yoke Counter 2": {
+		"method": "calcCode",
+		"code": "99901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Spotlight Knob Fo Dec": {
+		"method": "calcCode",
+		"code": "201608 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Spotlight Knob Fo Inc": {
+		"method": "calcCode",
+		"code": "201607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Spotlight Knob Obs Dec": {
+		"method": "calcCode",
+		"code": "201708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Spotlight Knob Obs Inc": {
+		"method": "calcCode",
+		"code": "201707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).OH Circuit Breaker Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_94_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 9407 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 9408 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).OH Panel Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_95_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 9507 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 9508 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Chartlight L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_319_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 31907 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 31908 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Chartlight R Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_322_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 32207 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 32208 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Main Panel L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_328_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 32807 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 32808 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Outbd DU L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_329_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 32907 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 32908 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Inbd DU Outer L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_330_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 33007 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 33008 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Inbd DU Inner L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_331_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 33107 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 33108 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Lower DU Outer L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_332_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 33207 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 33208 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Lower DU Inner L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_333_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 33307 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 33308 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Upper DU L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_334_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 33407 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 33408 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Background L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_337_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 33707 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 33708 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).AFDS Flood L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_338_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 33807 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 33808 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Inbd DU R Outer Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_507_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 50707 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 50708 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Inbd DU R Inner Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_508_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 50807 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 50808 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Outbd DU R Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_509_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 50907 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 50908 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Main Panel R Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_510_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 51007 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 51008 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Pedestal Flood Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_756_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 75607 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 75608 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Pedestal Panel Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_757_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 75707 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 75708 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Maplight L Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_895_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 89507 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 89508 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Maplight R Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_896_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 89607 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 89608 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Spotlight CA Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_2015_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 201507 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 201508 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Spotlight FO Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_2016_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 201607 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 201608 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Lights.Input (Potentiometer).Spotlight OBS Brt Poti": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min  (L:switch_2017_73X) - 9 div s1\r\n:1 \r\nl1 0 > if{ 201707 (>K:ROTOR_BRAKE) l1 -- s1 g1 }\r\nl1 0 < if{ 201708 (>K:ROTOR_BRAKE) l1 ++ s1 g1 }"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Bus Transfer": {
+		"method": "calcCode",
+		"code": "1801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Cvr Erase": {
+		"method": "calcCode",
+		"code": "18001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Alt Horn Cutout": {
+		"method": "calcCode",
+		"code": "18301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Source": {
+		"method": "calcCode",
+		"code": "18701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Bus Transfer Guard": {
+		"method": "calcCode",
+		"code": "1901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Cont Cabin Temp Dec": {
+		"method": "calcCode",
+		"code": "19108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Cont Cabin Temp Inc": {
+		"method": "calcCode",
+		"code": "19107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Pass Cabin Temp Dec": {
+		"method": "calcCode",
+		"code": "19208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Pass Cabin Temp Inc": {
+		"method": "calcCode",
+		"code": "19207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Anti-Ice.PMDG B737 Ovht Test": {
+		"method": "calcCode",
+		"code": "19901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Fs2Crew": {
+		"method": "calcCode",
+		"code": "200001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Electrical.PMDG B737 Trip Reset": {
+		"method": "calcCode",
+		"code": "20901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flt Alt Dec": {
+		"method": "calcCode",
+		"code": "21808 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Flt Alt Inc": {
+		"method": "calcCode",
+		"code": "21807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Land Alt Dec": {
+		"method": "calcCode",
+		"code": "22008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Land Alt Inc": {
+		"method": "calcCode",
+		"code": "22007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Outflow Valve Close": {
+		"method": "calcCode",
+		"code": "22201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Outflow Valve Open": {
+		"method": "calcCode",
+		"code": "22202 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Pressurization Mode AUTO": {
+		"method": "calcCode",
+		"code": "0 (L:switch_223_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Pressurization Mode ALTN": {
+		"method": "calcCode",
+		"code": "10 (L:switch_223_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Pressurization Mode MAN": {
+		"method": "calcCode",
+		"code": "20 (L:switch_223_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Le Devices Test": {
+		"method": "calcCode",
+		"code": "22401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Display Selector Dec": {
+		"method": "calcCode",
+		"code": "22908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Display Selector Inc": {
+		"method": "calcCode",
+		"code": "22907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Display Selector TEST": {
+		"method": "calcCode",
+		"code": "0 (L:switch_229_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Display Selector TK GS": {
+		"method": "calcCode",
+		"code": "10 (L:switch_229_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Display Selector PPOS": {
+		"method": "calcCode",
+		"code": "20 (L:switch_229_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Display Selector WIND": {
+		"method": "calcCode",
+		"code": "30 (L:switch_229_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Display Selector HDG STS": {
+		"method": "calcCode",
+		"code": "40 (L:switch_229_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 22907 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 22908 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Dspl Brt Dec": {
+		"method": "calcCode",
+		"code": "23008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Dspl Brt Inc": {
+		"method": "calcCode",
+		"code": "23007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Sys Dspl Dec": {
+		"method": "calcCode",
+		"code": "23108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Sys Dspl Inc": {
+		"method": "calcCode",
+		"code": "23107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 1": {
+		"method": "calcCode",
+		"code": "23201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 2": {
+		"method": "calcCode",
+		"code": "23301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 3": {
+		"method": "calcCode",
+		"code": "23401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 4": {
+		"method": "calcCode",
+		"code": "23501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 5": {
+		"method": "calcCode",
+		"code": "23601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 6": {
+		"method": "calcCode",
+		"code": "23701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 7": {
+		"method": "calcCode",
+		"code": "23801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 8": {
+		"method": "calcCode",
+		"code": "23901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 9": {
+		"method": "calcCode",
+		"code": "24001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS Ent": {
+		"method": "calcCode",
+		"code": "24101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS 0": {
+		"method": "calcCode",
+		"code": "24301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 IRS Clr": {
+		"method": "calcCode",
+		"code": "24401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Miscellaneous.PMDG B737 Service Interphone": {
+		"method": "calcCode",
+		"code": "25701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Pass Oxygen": {
+		"method": "calcCode",
+		"code": "26401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Pass Oxygen Guard": {
+		"method": "calcCode",
+		"code": "26501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eec 1 Guard": {
+		"method": "calcCode",
+		"code": "26701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eec 1": {
+		"method": "calcCode",
+		"code": "26801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eec 2 Guard": {
+		"method": "calcCode",
+		"code": "27001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Eec 2": {
+		"method": "calcCode",
+		"code": "27101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 R/T I/C": {
+		"method": "calcCode",
+		"code": "27601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Mask Boom": {
+		"method": "calcCode",
+		"code": "27701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Filter Dec": {
+		"method": "calcCode",
+		"code": "27808 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Filter Inc": {
+		"method": "calcCode",
+		"code": "27807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Filter V": {
+		"method": "calcCode",
+		"code": "0 (L:switch_278_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 27807 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 27808 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Filter B": {
+		"method": "calcCode",
+		"code": "10 (L:switch_278_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 27807 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 27808 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Filter R": {
+		"method": "calcCode",
+		"code": "20 (L:switch_278_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 27807 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 27808 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Alt Norm": {
+		"method": "calcCode",
+		"code": "27901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Nav1 Receive": {
+		"method": "calcCode",
+		"code": "28001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Nav2 Receive": {
+		"method": "calcCode",
+		"code": "28101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Adf1 Receive": {
+		"method": "calcCode",
+		"code": "28201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Adf2 Receive": {
+		"method": "calcCode",
+		"code": "28301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Mkr Receive": {
+		"method": "calcCode",
+		"code": "28401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Spkr Receive": {
+		"method": "calcCode",
+		"code": "28501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Vhf1 Receive": {
+		"method": "calcCode",
+		"code": "28601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Vhf2 Receive": {
+		"method": "calcCode",
+		"code": "28701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Flt Receive": {
+		"method": "calcCode",
+		"code": "28801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Svc Receive": {
+		"method": "calcCode",
+		"code": "28901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Pa Receive": {
+		"method": "calcCode",
+		"code": "29001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Vhf1 Mic": {
+		"method": "calcCode",
+		"code": "29101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Vhf2 Mic": {
+		"method": "calcCode",
+		"code": "29201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Vhf3 Mic": {
+		"method": "calcCode",
+		"code": "29301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Hf1 Mic": {
+		"method": "calcCode",
+		"code": "29401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Hf2 Mic": {
+		"method": "calcCode",
+		"code": "29501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Flt Mic": {
+		"method": "calcCode",
+		"code": "29601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Svc Mic": {
+		"method": "calcCode",
+		"code": "29701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Flight Recorder": {
+		"method": "calcCode",
+		"code": "29801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Safety.PMDG B737 Flight Recorder Guard": {
+		"method": "calcCode",
+		"code": "29901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Mach Airspeed Warning Test 1": {
+		"method": "calcCode",
+		"code": "30101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Mach Airspeed Warning Test 2": {
+		"method": "calcCode",
+		"code": "30201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Stall Warning Test 1": {
+		"method": "calcCode",
+		"code": "30301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Stall Warning Test 2": {
+		"method": "calcCode",
+		"code": "30401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Cont Cab Temp Dec": {
+		"method": "calcCode",
+		"code": "30508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Cont Cab Temp Inc": {
+		"method": "calcCode",
+		"code": "30507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Fwd Cab Temp Dec": {
+		"method": "calcCode",
+		"code": "30608 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Fwd Cab Temp Inc": {
+		"method": "calcCode",
+		"code": "30607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Aft Cab Temp Dec 1": {
+		"method": "calcCode",
+		"code": "30708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Aft Cab Temp Dec": {
+		"method": "calcCode",
+		"code": "30707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Trim Air": {
+		"method": "calcCode",
+		"code": "31101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src Dec": {
+		"method": "calcCode",
+		"code": "31308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src Inc": {
+		"method": "calcCode",
+		"code": "31307 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src PASS CAB AFT": {
+		"method": "calcCode",
+		"code": "0 (L:switch_313_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 31307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 31308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src PACK R": {
+		"method": "calcCode",
+		"code": "10 (L:switch_313_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 31307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 31308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src PACK L": {
+		"method": "calcCode",
+		"code": "20 (L:switch_313_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 31307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 31308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src CONT CAB FWD": {
+		"method": "calcCode",
+		"code": "30 (L:switch_313_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 31307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 31308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src CONT CAB AFT": {
+		"method": "calcCode",
+		"code": "40 (L:switch_313_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 31307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 31308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.PMDG B737 Air Temp Src PASS CAB FWD": {
+		"method": "calcCode",
+		"code": "50 (L:switch_313_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 31307 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 31308 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr 1": {
+		"method": "calcCode",
+		"code": "31401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Tc/Sr": {
+		"method": "calcCode",
+		"code": "314101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Time/Date": {
+		"method": "calcCode",
+		"code": "31501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Set": {
+		"method": "calcCode",
+		"code": "31601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 +": {
+		"method": "calcCode",
+		"code": "31701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 -": {
+		"method": "calcCode",
+		"code": "31801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Reset": {
+		"method": "calcCode",
+		"code": "32001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Et": {
+		"method": "calcCode",
+		"code": "32101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Nose Wheel Steering Switch": {
+		"method": "calcCode",
+		"code": "32501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Nose Wheel Steering Guard": {
+		"method": "calcCode",
+		"code": "32601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Below G/S P-Inhibit": {
+		"method": "calcCode",
+		"code": "32701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 ADSF Test 2 Switch Press": {
+		"method": "calcCode",
+		"code": "34201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Annunciator Panel L Press": {
+		"method": "calcCode",
+		"code": "34901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Mins Slew FO Dec": {
+		"method": "calcCode",
+		"code": "41108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Mins Slew FO Inc": {
+		"method": "calcCode",
+		"code": "41107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R Mins Ref Toggle": {
+		"method": "calcCode",
+		"code": "41201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Mins R Rst": {
+		"method": "calcCode",
+		"code": "41301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Vor1/Adf1 R": {
+		"method": "calcCode",
+		"code": "41401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 Efis Mode FO Dec": {
+		"method": "calcCode",
+		"code": "41508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 Efis Mode FO Inc": {
+		"method": "calcCode",
+		"code": "41507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Ctr R": {
+		"method": "calcCode",
+		"code": "41601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 Efis Range FO Dec": {
+		"method": "calcCode",
+		"code": "41708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 Efis Range FO Inc": {
+		"method": "calcCode",
+		"code": "41709 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Tfc R": {
+		"method": "calcCode",
+		"code": "41801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Fpv R": {
+		"method": "calcCode",
+		"code": "41901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Mtrs R": {
+		"method": "calcCode",
+		"code": "42001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Baro FO Dec": {
+		"method": "calcCode",
+		"code": "42108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Baro FO Inc": {
+		"method": "calcCode",
+		"code": "42107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Baro Ref": {
+		"method": "calcCode",
+		"code": "42201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Std R": {
+		"method": "calcCode",
+		"code": "42301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Vor2/Adf2 R": {
+		"method": "calcCode",
+		"code": "42401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Annunciator Panel R Press": {
+		"method": "calcCode",
+		"code": "43701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Master Caution": {
+		"method": "calcCode",
+		"code": "43801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.PMDG B737 Fire Warn": {
+		"method": "calcCode",
+		"code": "43901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Main Panel Dus R Dec": {
+		"method": "calcCode",
+		"code": "44008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Main Panel Dus R Inc": {
+		"method": "calcCode",
+		"code": "44007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Lower Du R Dec": {
+		"method": "calcCode",
+		"code": "44108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Lower Du R Inc": {
+		"method": "calcCode",
+		"code": "44107 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Test 1/2 R": {
+		"method": "calcCode",
+		"code": "44201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Fmc P/Rst R": {
+		"method": "calcCode",
+		"code": "44301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 A/T P/Rst R": {
+		"method": "calcCode",
+		"code": "44401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 A/P P/Rst R": {
+		"method": "calcCode",
+		"code": "44501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Below G/S P-Inhibit": {
+		"method": "calcCode",
+		"code": "44601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 Landing Gear Off": {
+		"method": "calcCode",
+		"code": "455101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Gear.PMDG B737 Landing Gear Unlock": {
+		"method": "calcCode",
+		"code": "455201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Sys": {
+		"method": "calcCode",
+		"code": "46201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Cr": {
+		"method": "calcCode",
+		"code": "462101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Eng": {
+		"method": "calcCode",
+		"code": "46301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Spd Ref Mode Dec": {
+		"method": "calcCode",
+		"code": "46408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Spd Ref Mode Inc": {
+		"method": "calcCode",
+		"code": "46407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Spd Ref Sel Dec": {
+		"method": "calcCode",
+		"code": "46508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Spd Ref Sel Inc": {
+		"method": "calcCode",
+		"code": "46507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Mode Outer Dec": {
+		"method": "calcCode",
+		"code": "46608 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Mode Outer Inc": {
+		"method": "calcCode",
+		"code": "46607 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Inner Dec": {
+		"method": "calcCode",
+		"code": "46708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Inner Inc": {
+		"method": "calcCode",
+		"code": "46707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Fuel Flow Switch Used": {
+		"method": "calcCode",
+		"code": "46801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Ai Mode Dec": {
+		"method": "calcCode",
+		"code": "47408 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Ai Mode Inc": {
+		"method": "calcCode",
+		"code": "47407 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Cage": {
+		"method": "calcCode",
+		"code": "47601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 STBY Baro Set Dec": {
+		"method": "calcCode",
+		"code": "49208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 STBY Baro Set Inc": {
+		"method": "calcCode",
+		"code": "49207 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 STBY RMI Vor1/Adf1": {
+		"method": "calcCode",
+		"code": "49701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 STBY RMI Vor2/Adf2": {
+		"method": "calcCode",
+		"code": "49801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Sys Test": {
+		"method": "calcCode",
+		"code": "50001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Inbd Du R Brt Dec": {
+		"method": "calcCode",
+		"code": "50708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Inbd Du R Brt Inc": {
+		"method": "calcCode",
+		"code": "50707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Inbd Du Rdr R Brt Dec": {
+		"method": "calcCode",
+		"code": "50808 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Inbd Du Rdr R Brt Inc": {
+		"method": "calcCode",
+		"code": "50807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Outbd Du R Brt Dec": {
+		"method": "calcCode",
+		"code": "50908 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Outbd Du R Brt Inc": {
+		"method": "calcCode",
+		"code": "50907 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Main Panel R Brt Dec": {
+		"method": "calcCode",
+		"code": "51008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Lights.PMDG B737 Main Panel R Brt Inc": {
+		"method": "calcCode",
+		"code": "51007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Hgs Fail": {
+		"method": "calcCode",
+		"code": "52201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr": {
+		"method": "calcCode",
+		"code": "52301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr Tc/Sr": {
+		"method": "calcCode",
+		"code": "523101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr Time/Date": {
+		"method": "calcCode",
+		"code": "52401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr Set": {
+		"method": "calcCode",
+		"code": "52501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr +": {
+		"method": "calcCode",
+		"code": "52601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr -": {
+		"method": "calcCode",
+		"code": "52701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr Reset": {
+		"method": "calcCode",
+		"code": "52901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Navigation.PMDG B737 Chr Et": {
+		"method": "calcCode",
+		"code": "53001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Displays Source All 1": {
+		"method": "calcCode",
+		"code": "0 (L:switch_58_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 5807 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 5808 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Displays Source Auto": {
+		"method": "calcCode",
+		"code": "10 (L:switch_58_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 5807 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 5808 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Displays Source All 2": {
+		"method": "calcCode",
+		"code": "20 (L:switch_58_73X,number) - 10 div s0 \r\n:1 \r\nl0 0 > if{ 5807 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 5808 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Control Panel Both 1": {
+		"method": "calcCode",
+		"code": "0 (L:switch_59_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 5902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 5901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Control Panel Normal": {
+		"method": "calcCode",
+		"code": "50 (L:switch_59_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 5902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 5901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Control Panel Both 2": {
+		"method": "calcCode",
+		"code": "100 (L:switch_59_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 5902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 5901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Fmc Source Both L": {
+		"method": "calcCode",
+		"code": "0 (L:switch_60_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Fmc Source Normal": {
+		"method": "calcCode",
+		"code": "50 (L:switch_60_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Fmc Source Both R": {
+		"method": "calcCode",
+		"code": "100 (L:switch_60_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6002 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Transfer Both L": {
+		"method": "calcCode",
+		"code": "0 (L:switch_61_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6102 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6101 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Transfer Normal": {
+		"method": "calcCode",
+		"code": "50 (L:switch_61_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6102 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6101 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.PMDG B737 Irs Transfer Both R": {
+		"method": "calcCode",
+		"code": "100 (L:switch_61_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6102 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6101 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Nav Both on 1": {
+		"method": "calcCode",
+		"code": "0 (L:switch_62_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6202 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6201 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Nav Normal": {
+		"method": "calcCode",
+		"code": "50 (L:switch_62_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6202 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6201 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 Vhf Nav Both on 2": {
+		"method": "calcCode",
+		"code": "100 (L:switch_62_73X,number) - 50 div s0 \r\n:1 \r\nl0 0 > if{ 6202 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \r\nl0 0 < if{ 6201 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\r\n"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Spoiler A": {
+		"method": "calcCode",
+		"code": "6501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Spoiler A Guard": {
+		"method": "calcCode",
+		"code": "6601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Spoiler B": {
+		"method": "calcCode",
+		"code": "6701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Move Spoilers Lever": {
+		"method": "calcCode",
+		"code": "67901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Spoilers Down": {
+		"method": "calcCode",
+		"code": "679101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Spoilers Armed": {
+		"method": "calcCode",
+		"code": "679201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Spoilers 50 Percent": {
+		"method": "calcCode",
+		"code": "679301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Spoilers Flight Detent": {
+		"method": "calcCode",
+		"code": "679401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Set Spoilers Up": {
+		"method": "calcCode",
+		"code": "679501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.PMDG B737 Spoiler B Guard": {
+		"method": "calcCode",
+		"code": "6801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG B737 Eng 1 Reverse Thrust Kill": {
+		"method": "calcCode",
+		"code": "68001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Annunciator Panel L Release": {
+		"method": "calcCode",
+		"code": "34904 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Warning.Input.PMDG B737 Annunciator Panel R Release": {
+		"method": "calcCode",
+		"code": "43704 (>K:ROTOR_BRAKE)"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead Engine FADEC Ground 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_AFT_FADEC_GND_2) ! (>L:S_OH_AFT_FADEC_GND_2) 1 (>L:S_OH_AFT_FADEC_GND_2_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead Engine FADEC Ground 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_AFT_FADEC_GND_1) ! (>L:S_OH_AFT_FADEC_GND_1) 1 (>L:S_OH_AFT_FADEC_GND_1_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead LMV Yellow Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_LMV_YELLOW) ! (>L:S_OH_HYD_LMV_YELLOW) 1 (>L:S_OH_HYD_LMV_YELLOW_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead LMV Blue Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_LMV_BLUE) ! (>L:S_OH_HYD_LMV_BLUE) 1 (>L:S_OH_HYD_LMV_BLUE_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead LMV Green Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_LMV_GREEN) ! (>L:S_OH_HYD_LMV_GREEN) 1 (>L:S_OH_HYD_LMV_GREEN_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead Blue Pump Override Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_BLUE_PUMP_OVERRIDE) ! (>L:S_OH_HYD_BLUE_PUMP_OVERRIDE) 1 (>L:S_OH_HYD_BLUE_PUMP_OVERRIDE_Anim)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Overhead Cockpit Door Video Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_COCKPIT_DOOR_VIDEO) ! (>L:S_OH_COCKPIT_DOOR_VIDEO) 1 (>L:S_OH_COCKPIT_DOOR_VIDEO_Anim)"
+	},
+	"FenixSim.A320.Safety.FNX320 Overhead ELT Test Switch Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELT_TEST)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Overhead APU Auto Exiting Reset Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_APU_AUTOEXTING_RESET)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Overhead APU Auto Exiting Test Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_APU_AUTOEXTING_TEST)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Overhead Avionics Compt Light Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_LIGHTING_AVIONICS_COMPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Overhead Svce Int Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_SVCE_INT_OVRD)"
+	},
+	"FenixSim.A320.Safety.FNX320 Overhead Oxygen TMR Reset Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_OXYGEN_TMR_RESET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Overhead Audio Switching Knob CA": {
+		"method": "calcCode",
+		"code": "0 (>L:S_AUDIO_SWITCHING)"
+	},
+	"FenixSim.A320.Lights.FNX320 Overhead Reading Light FO Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_OH_LIGHTING_READING_FO) 0.1 + 1 min (>L:A_OH_LIGHTING_READING_FO)"
+	},
+	"FenixSim.A320.Lights.FNX320 Overhead Reading Light Captain Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_OH_LIGHTING_READING_CAPT) 0.1 + 1 min (>L:A_OH_LIGHTING_READING_CAPT)"
+	},
+	"FenixSim.A320.Safety.FNX320 Overhead ELT Switch Toggle": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELT) ! (>L:S_OH_ELT)"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead Engine FADEC Ground 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_AFT_FADEC_GND_2) 0 == if{ 0 (>L:S_OH_AFT_FADEC_GND_2_Anim) } (L:S_OH_AFT_FADEC_GND_2) 1 == if{ 2 (>L:S_OH_AFT_FADEC_GND_2_Anim) }"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead Engine FADEC Ground 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_AFT_FADEC_GND_1) 0 == if{ 0 (>L:S_OH_AFT_FADEC_GND_1_Anim) } (L:S_OH_AFT_FADEC_GND_1) 1 == if{ 2 (>L:S_OH_AFT_FADEC_GND_1_Anim) }"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead LMV Yellow Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_LMV_YELLOW) 0 == if{ 0 (>L:S_OH_HYD_LMV_YELLOW_Anim) } (L:S_OH_HYD_LMV_YELLOW) 1 == if{ 2 (>L:S_OH_HYD_LMV_YELLOW_Anim) }"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead LMV Blue Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_LMV_BLUE) 0 == if{ 0 (>L:S_OH_HYD_LMV_BLUE_Anim) } (L:S_OH_HYD_LMV_BLUE) 1 == if{ 2 (>L:S_OH_HYD_LMV_BLUE_Anim) }"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead LMV Green Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_LMV_GREEN) 0 == if{ 0 (>L:S_OH_HYD_LMV_GREEN_Anim) } (L:S_OH_HYD_LMV_GREEN) 1 == if{ 2 (>L:S_OH_HYD_LMV_GREEN_Anim) }"
+	},
+	"FenixSim.A320.Engines.FNX320 Overhead Blue Pump Override Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_HYD_BLUE_PUMP_OVERRIDE) 0 == if{ 0 (>L:S_OH_HYD_BLUE_PUMP_OVERRIDE_Anim) } (L:S_OH_HYD_BLUE_PUMP_OVERRIDE) 1 == if{ 2 (>L:S_OH_HYD_BLUE_PUMP_OVERRIDE_Anim) }"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Overhead Cockpit Door Video Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_COCKPIT_DOOR_VIDEO) 0 == if{ 0 (>L:S_OH_COCKPIT_DOOR_VIDEO_Anim) } (L:S_OH_COCKPIT_DOOR_VIDEO) 1 == if{ 2 (>L:S_OH_COCKPIT_DOOR_VIDEO_Anim) }"
+	},
+	"FenixSim.A320.Safety.FNX320 Overhead ELT Test Switch Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELT_TEST)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Overhead APU Auto Exiting Reset Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_APU_AUTOEXTING_RESET)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Overhead APU Auto Exiting Test Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_APU_AUTOEXTING_TEST)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Overhead Avionics Compt Light Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_LIGHTING_AVIONICS_COMPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Overhead Svce Int Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_SVCE_INT_OVRD)"
+	},
+	"FenixSim.A320.Safety.FNX320 Overhead Oxygen TMR Reset Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_OXYGEN_TMR_RESET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Overhead Audio Switching Knob Norm": {
+		"method": "calcCode",
+		"code": "1 (>L:S_AUDIO_SWITCHING)"
+	},
+	"FenixSim.A320.Lights.FNX320 Overhead Reading Light FO Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_OH_LIGHTING_READING_FO) 0.1 - 0 max (>L:A_OH_LIGHTING_READING_FO)"
+	},
+	"FenixSim.A320.Lights.FNX320 Overhead Reading Light Captain Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_OH_LIGHTING_READING_CAPT) 0.1 - 0 max (>L:A_OH_LIGHTING_READING_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Overhead Audio Switching Knob FO": {
+		"method": "calcCode",
+		"code": "2 (>L:S_AUDIO_SWITCHING)"
+	},
+	"FenixSim.A320.Lights.FNX320 Misc Chart Light Captain Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_CHART_LIGHT_TEMP_CAPT) 0.1 - 0 max (>L:A_CHART_LIGHT_TEMP_CAPT)"
+	},
+	"FenixSim.A320.Lights.FNX320 Misc Chart Light Captain Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_CHART_LIGHT_TEMP_CAPT) 0.1 + 1 min (>L:A_CHART_LIGHT_TEMP_CAPT)"
+	},
+	"FenixSim.A320.Lights.FNX320 Misc Chart Light Captain Switch Press": {
+		"method": "calcCode",
+		"code": "(L:S_CHART_LIGHT_TEMP_CAPT) ! (>L:S_CHART_LIGHT_TEMP_CAPT)"
+	},
+	"FenixSim.A320.Lights.FNX320 Misc Chart Light FO Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_CHART_LIGHT_TEMP_FO) 0.1 - 0 max (>L:A_CHART_LIGHT_TEMP_FO)"
+	},
+	"FenixSim.A320.Lights.FNX320 Misc Chart Light FO Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_CHART_LIGHT_TEMP_FO) 0.1 + 1 min (>L:A_CHART_LIGHT_TEMP_FO)"
+	},
+	"FenixSim.A320.Lights.FNX320 Misc Chart Light FO Switch Press": {
+		"method": "calcCode",
+		"code": "(L:S_CHART_LIGHT_TEMP_FO) ! (>L:S_CHART_LIGHT_TEMP_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Cockpit Door Press": {
+		"method": "calcCode",
+		"code": "(L:S_COCKPIT_DOOR) ! (>L:S_COCKPIT_DOOR)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Emergency Gear Lever Dec": {
+		"method": "calcCode",
+		"code": "(L:S_HYD_GRAVITY_GEAR_EXTEND_ROTATION) 3 == if{ 0 (>L:S_HYD_GRAVITY_GEAR_EXTEND) } (L:S_HYD_GRAVITY_GEAR_EXTEND_ROTATION) 0.05 - 0 max (>L:S_HYD_GRAVITY_GEAR_EXTEND_ROTATION)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Emergency Gear Lever Inc": {
+		"method": "calcCode",
+		"code": "(L:S_HYD_GRAVITY_GEAR_EXTEND_ROTATION) 0.05 + 3 min (>L:S_HYD_GRAVITY_GEAR_EXTEND_ROTATION) (L:S_HYD_GRAVITY_GEAR_EXTEND_ROTATION) 3 == if{ 1 (>L:S_HYD_GRAVITY_GEAR_EXTEND) }"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Jumpseat Headrest Press": {
+		"method": "calcCode",
+		"code": "(L:S_JUMPSEAT_HEADREST) ! (>L:S_JUMPSEAT_HEADREST)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Jumpseat Press": {
+		"method": "calcCode",
+		"code": "(L:S_JUMPSEAT) ! (>L:S_JUMPSEAT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 1 Test Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OXYGEN_MASK_1_TEST_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 1 Test Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OXYGEN_MASK_1_TEST_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 1 Test FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OXYGEN_MASK_1_TEST_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 1 Test FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OXYGEN_MASK_1_TEST_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 2 Test Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OXYGEN_MASK_2_TEST_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 2 Test Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OXYGEN_MASK_2_TEST_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 2 Test FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OXYGEN_MASK_2_TEST_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask 2 Test FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OXYGEN_MASK_2_TEST_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask Cover Captain Press": {
+		"method": "calcCode",
+		"code": "(L:S_OXYGEN_MASK_COVER_CAPT) ! (>L:S_OXYGEN_MASK_COVER_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Oxygen Mask Cover FO Press": {
+		"method": "calcCode",
+		"code": "(L:S_OXYGEN_MASK_COVER_FO) ! (>L:S_OXYGEN_MASK_COVER_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Seat Armrest Left Captain Press": {
+		"method": "calcCode",
+		"code": "(L:S_ARMREST_LEFT_CAPT) ! (>L:S_ARMREST_LEFT_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Seat Armrest Left FO Press": {
+		"method": "calcCode",
+		"code": "(L:S_ARMREST_LEFT_FO) ! (>L:S_ARMREST_LEFT_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Seat Armrest Right Captain Press": {
+		"method": "calcCode",
+		"code": "(L:S_ARMREST_RIGHT_CAPT) ! (>L:S_ARMREST_RIGHT_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Seat Armrest Right FO Press": {
+		"method": "calcCode",
+		"code": "(L:S_ARMREST_RIGHT_FO) ! (>L:S_ARMREST_RIGHT_FO)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 Misc Sidestick AP Disconnect Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_CAPT_INST_DISCONNECT)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 Misc Sidestick AP Disconnect Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_CAPT_INST_DISCONNECT)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 Misc Sidestick AP Disconnect FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_FO_INST_DISCONNECT)"
+	},
+	"FenixSim.A320.Autopilot.FNX320 Misc Sidestick AP Disconnect FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_FO_INST_DISCONNECT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Standby Compass Position Press": {
+		"method": "calcCode",
+		"code": "(L:S_STANDBY_COMPASS) ! (>L:S_STANDBY_COMPASS)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Sunshade Captain Press": {
+		"method": "calcCode",
+		"code": "(L:S_SUNSHADE_CAPT) ! (>L:S_SUNSHADE_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Sunshade FO Press": {
+		"method": "calcCode",
+		"code": "(L:S_SUNSHADE_FO) ! (>L:S_SUNSHADE_FO)"
+	},
+	"FenixSim.A320.Gear.FNX320 Misc Tiller Pedal Disconnect Captain Press": {
+		"method": "calcCode",
+		"code": "(L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT) ! (>L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT) 1 (>L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT_Anim)"
+	},
+	"FenixSim.A320.Gear.FNX320 Misc Tiller Pedal Disconnect Captain Release": {
+		"method": "calcCode",
+		"code": "(L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT) 0 == if{ 0 (>L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT_Anim) } (L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT) 1 == if{ 2 (>L:S_FC_CAPT_TILLER_PEDAL_DISCONNECT_Anim) }"
+	},
+	"FenixSim.A320.Gear.FNX320 Misc Tiller Pedal Disconnect FO Press": {
+		"method": "calcCode",
+		"code": "(L:S_FC_FO_TILLER_PEDAL_DISCONNECT) ! (>L:S_FC_FO_TILLER_PEDAL_DISCONNECT) 1 (>L:S_FC_FO_TILLER_PEDAL_DISCONNECT_Anim)"
+	},
+	"FenixSim.A320.Gear.FNX320 Misc Tiller Pedal Disconnect FO Release": {
+		"method": "calcCode",
+		"code": "(L:S_FC_FO_TILLER_PEDAL_DISCONNECT) 0 == if{ 0 (>L:S_FC_FO_TILLER_PEDAL_DISCONNECT_Anim) } (L:S_FC_FO_TILLER_PEDAL_DISCONNECT) 1 == if{ 2 (>L:S_FC_FO_TILLER_PEDAL_DISCONNECT_Anim) }"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Window Blinds Captain Press": {
+		"method": "calcCode",
+		"code": "(L:S_WINDOW_BLINDS_CAPT) ! (>L:S_WINDOW_BLINDS_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Window Blinds FO Press": {
+		"method": "calcCode",
+		"code": "(L:S_WINDOW_BLINDS_FO) ! (>L:S_WINDOW_BLINDS_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Window Blinds Rear Captain Press": {
+		"method": "calcCode",
+		"code": "(L:S_WINDOW_BLINDS_REAR_CAPT) ! (>L:S_WINDOW_BLINDS_REAR_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Misc Window Blinds Rear FO Press": {
+		"method": "calcCode",
+		"code": "(L:S_WINDOW_BLINDS_REAR_FO) ! (>L:S_WINDOW_BLINDS_REAR_FO)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Anti Skid Switch Press": {
+		"method": "calcCode",
+		"code": "(L:S_FC_MIP_ANTI_SKID) ! (>L:S_FC_MIP_ANTI_SKID)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Low Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_AUTOBRAKE_LO)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Low Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_AUTOBRAKE_LO)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Max Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_AUTOBRAKE_MAX)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Max Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_AUTOBRAKE_MAX)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Medium Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_AUTOBRAKE_MED)"
+	},
+	"FenixSim.A320.Gear.FNX320 MainPanel Autobrake Medium Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_AUTOBRAKE_MED)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock CHR Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_CLOCK_CHR)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock CHR Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_CLOCK_CHR)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock Date Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_CLOCK_SET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock Date Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_CLOCK_SET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock Date Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:E_MIP_CLOCK_SET) -- (>L:E_MIP_CLOCK_SET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock Date Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:E_MIP_CLOCK_SET) ++ (>L:E_MIP_CLOCK_SET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock ET Selector Knob RST": {
+		"method": "calcCode",
+		"code": "2 (>L:S_MIP_CLOCK_ET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock ET Selector Knob Run": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_CLOCK_ET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock ET Selector Knob STP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_CLOCK_ET)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock Reset Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_CLOCK_RST)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock Reset Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_CLOCK_RST)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock UTC Selector Knob GPS": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_CLOCK_UTC)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock UTC Selector Knob INT": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_CLOCK_UTC)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 MainPanel Clock UTC Selector Knob SET": {
+		"method": "calcCode",
+		"code": "2 (>L:S_MIP_CLOCK_UTC)"
+	},
+	"FenixSim.A320.Lights.FNX320 MainPanel Console Floor Light Captain Switch BRT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_MIP_LIGHT_CONSOLEFLOOR_CAPT)"
+	},
+	"FenixSim.A320.Lights.FNX320 MainPanel Console Floor Light Captain Switch DIM": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_LIGHT_CONSOLEFLOOR_CAPT)"
+	},
+	"FenixSim.A320.Lights.FNX320 MainPanel Console Floor Light Captain Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_LIGHT_CONSOLEFLOOR_CAPT)"
+	},
+	"FenixSim.A320.Lights.FNX320 MainPanel Console Floor Light FO Switch BRT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_MIP_LIGHT_CONSOLEFLOOR_FO)"
+	},
+	"FenixSim.A320.Lights.FNX320 MainPanel Console Floor Light FO Switch DIM": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_LIGHT_CONSOLEFLOOR_FO)"
+	},
+	"FenixSim.A320.Lights.FNX320 MainPanel Console Floor Light FO Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_LIGHT_CONSOLEFLOOR_FO)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Dim Bright Captain Button BRT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_DCDU1_DIM_BRT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Dim Bright Captain Button DIM": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_DIM_BRT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Dim Bright Captain Button Mid": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_DIM_BRT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Dim Bright FO Button BRT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_DCDU2_DIM_BRT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Dim Bright FO Button DIM": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_DIM_BRT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Dim Bright FO Button Mid": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_DIM_BRT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Left Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_LSK1L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Left Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_LSK1L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Left FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_LSK1L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Left FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_LSK1L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Right Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_LSK1R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Right Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_LSK1R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Right FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_LSK1R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 1 Right FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_LSK1R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Left Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_LSK2L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Left Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_LSK2L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Left FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_LSK2L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Left FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_LSK2L)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Right Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_LSK2R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Right Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_LSK2R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Right FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_LSK2R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC LSK 2 Right FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_LSK2R)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Minus Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_MSGDWN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Minus Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_MSGDWN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Minus FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_MSGDWN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Minus FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_MSGDWN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Plus Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_MSGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Plus Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_MSGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Plus FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_MSGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Message Plus FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_MSGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Minus Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_PGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Minus Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_PGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Minus FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_PGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Minus FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_PGUP)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Plus Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_PGDN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Plus Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_PGDN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Plus FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_PGDN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Page Plus FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_PGDN)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Print Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU1_PRINT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Print Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU1_PRINT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Print FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DCDU2_PRINT)"
+	},
+	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Print FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DCDU2_PRINT)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_GPWS_VISUAL_ALERT_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_GPWS_VISUAL_ALERT_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_GPWS_VISUAL_ALERT_FO)"
+	},
+	"FenixSim.A320.Warning.FNX320 MainPanel GPWS GS FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_GPWS_VISUAL_ALERT_FO)"
+	},
+	"FenixSim.A320.Radio.FNX320 MainPanel Loud Speaker Captain Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LOUDSPEAKER_CAPT) 0.1 - 0 max (>L:A_MIP_LOUDSPEAKER_CAPT)"
+	},
+	"FenixSim.A320.Radio.FNX320 MainPanel Loud Speaker Captain Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LOUDSPEAKER_CAPT) 0.1 + 1 min (>L:A_MIP_LOUDSPEAKER_CAPT)"
+	},
+	"FenixSim.A320.Radio.FNX320 MainPanel Loud Speaker Captain Knob Press": {
+		"method": "calcCode",
+		"code": "0.1 (>L:A_MIP_LOUDSPEAKER_CAPT)"
+	},
+	"FenixSim.A320.Radio.FNX320 MainPanel Loud Speaker FO Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LOUDSPEAKER_FO) 0.1 - 0 max (>L:A_MIP_LOUDSPEAKER_FO)"
+	},
+	"FenixSim.A320.Radio.FNX320 MainPanel Loud Speaker FO Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_MIP_LOUDSPEAKER_FO) 0.1 + 1 min (>L:A_MIP_LOUDSPEAKER_FO)"
+	},
+	"FenixSim.A320.Radio.FNX320 MainPanel Loud Speaker FO Knob Press": {
+		"method": "calcCode",
+		"code": "0.1 (>L:A_MIP_LOUDSPEAKER_FO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel PFD ND Transfer Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DISPLAY_PFDND_XFER_CAPT)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel PFD ND Transfer Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DISPLAY_PFDND_XFER_CAPT)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel PFD ND Transfer FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_DISPLAY_PFDND_XFER_FO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel PFD ND Transfer FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_DISPLAY_PFDND_XFER_FO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Altimeter Imperial Baro Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:E_STANDBY_ALT_IMPERIAL_BARO) -- (>L:E_STANDBY_ALT_IMPERIAL_BARO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Altimeter Imperial Baro Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:E_STANDBY_ALT_IMPERIAL_BARO) ++ (>L:E_STANDBY_ALT_IMPERIAL_BARO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Altimeter Metric Baro Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:E_STANDBY_ALT_METRIC_BARO) -- (>L:E_STANDBY_ALT_METRIC_BARO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Altimeter Metric Baro Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:E_STANDBY_ALT_METRIC_BARO) ++ (>L:E_STANDBY_ALT_METRIC_BARO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Attitude Cage Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_STANDBY_ATTITUDE_CAGE)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Attitude Cage Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_STANDBY_ATTITUDE_CAGE)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Baro Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:E_MIP_ISFD_BARO) -- (>L:E_MIP_ISFD_BARO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Baro Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:E_MIP_ISFD_BARO) ++ (>L:E_MIP_ISFD_BARO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Bugs Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_ISFD_BUGS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Bugs Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_ISFD_BUGS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby LS Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_ISFD_LS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby LS Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_ISFD_LS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Minus Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_ISFD_MINUS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Minus Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_ISFD_MINUS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Plus Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_ISFD_PLUS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby Plus Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_ISFD_PLUS)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby RST Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_ISFD_RST)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Standby RST Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_ISFD_RST)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Terrain On ND Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_GPWS_TERRAIN_ON_ND_CAPT)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Terrain On ND Captain ButtonRelease": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_GPWS_TERRAIN_ON_ND_CAPT)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Terrain On ND FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_GPWS_TERRAIN_ON_ND_FO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 MainPanel Terrain On ND FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_GPWS_TERRAIN_ON_ND_FO)"
+	},
+	"FenixSim.A320.Lights.FNX320 Int Light Annunciator Switch BRT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_IN_LT_ANN_LT)"
+	},
+	"FenixSim.A320.Lights.FNX320 Int Light Annunciator Switch DIM": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_IN_LT_ANN_LT)"
+	},
+	"FenixSim.A320.Lights.FNX320 Int Light Annunciator Switch TEST": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_IN_LT_ANN_LT)"
+	},
+	"FenixSim.A320.Lights.FNX320 Int Light Ice Standby Switch Toggle": {
+		"method": "calcCode",
+		"code": "(L:S_OH_IN_LT_ICE) ! (>L:S_OH_IN_LT_ICE)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG1_ANTI_ICE) ! (>L:S_OH_PNEUMATIC_ENG1_ANTI_ICE) 1 (>L:S_OH_PNEUMATIC_ENG1_ANTI_ICE_Anim)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG1_ANTI_ICE) 0 == if{ 0 (>L:S_OH_PNEUMATIC_ENG1_ANTI_ICE_Anim) } (L:S_OH_PNEUMATIC_ENG1_ANTI_ICE) 1 == if{ 2 (>L:S_OH_PNEUMATIC_ENG1_ANTI_ICE_Anim) }"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG2_ANTI_ICE) ! (>L:S_OH_PNEUMATIC_ENG2_ANTI_ICE) 1 (>L:S_OH_PNEUMATIC_ENG2_ANTI_ICE_Anim)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Engine 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_ENG2_ANTI_ICE) 0 == if{ 0 (>L:S_OH_PNEUMATIC_ENG2_ANTI_ICE_Anim) } (L:S_OH_PNEUMATIC_ENG2_ANTI_ICE) 1 == if{ 2 (>L:S_OH_PNEUMATIC_ENG2_ANTI_ICE_Anim) }"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Probe Heat Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PROBE_HEAT) ! (>L:S_OH_PROBE_HEAT) 1 (>L:S_OH_PROBE_HEAT_Anim)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Probe Heat Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PROBE_HEAT) 0 == if{ 0 (>L:S_OH_PROBE_HEAT_Anim) } (L:S_OH_PROBE_HEAT) 1 == if{ 2 (>L:S_OH_PROBE_HEAT_Anim) }"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Wing Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_WING_ANTI_ICE) ! (>L:S_OH_PNEUMATIC_WING_ANTI_ICE) 1 (>L:S_OH_PNEUMATIC_WING_ANTI_ICE_Anim)"
+	},
+	"FenixSim.A320.Anti-Ice.FNX320 Icing Wing Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_PNEUMATIC_WING_ANTI_ICE) 0 == if{ 0 (>L:S_OH_PNEUMATIC_WING_ANTI_ICE_Anim) } (L:S_OH_PNEUMATIC_WING_ANTI_ICE) 1 == if{ 2 (>L:S_OH_PNEUMATIC_WING_ANTI_ICE_Anim) }"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Blue Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_HYD_BLUE_ELEC_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Blue Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_HYD_BLUE_ELEC_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Yellow Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_HYD_YELLOW_ELEC_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Electrical Pump Yellow Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_HYD_YELLOW_ELEC_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 1 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_HYD_ENG_1_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 1 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_HYD_ENG_1_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_HYD_ENG_2_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic Engine Pump 2 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_HYD_ENG_2_PUMP)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic PTU Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_HYD_PTU)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic PTU Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_HYD_PTU)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic RAT Manual Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_HYD_RAT_MAN_ON)"
+	},
+	"FenixSim.A320.Hydraulic.FNX320 Hydraulic RAT Manual Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_HYD_RAT_MAN_ON)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Flap Mode Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_FLAP_MODE) ! (>L:S_OH_GPWS_FLAP_MODE) 1 (>L:S_OH_GPWS_FLAP_MODE_Anim)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Flap Mode Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_FLAP_MODE) 0 == if{ 0 (>L:S_OH_GPWS_FLAP_MODE_Anim) } (L:S_OH_GPWS_FLAP_MODE) 1 == if{ 2 (>L:S_OH_GPWS_FLAP_MODE_Anim) }"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS GS Mode Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_GS_MODE) ! (>L:S_OH_GPWS_GS_MODE) 1 (>L:S_OH_GPWS_GS_MODE_Anim)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS GS Mode Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_GS_MODE) 0 == if{ 0 (>L:S_OH_GPWS_GS_MODE_Anim) } (L:S_OH_GPWS_GS_MODE) 1 == if{ 2 (>L:S_OH_GPWS_GS_MODE_Anim) }"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Landing Flap 3 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_LDG_FLAP3) ! (>L:S_OH_GPWS_LDG_FLAP3) 1 (>L:S_OH_GPWS_LDG_FLAP3_Anim)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Landing Flap 3 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_LDG_FLAP3) 0 == if{ 0 (>L:S_OH_GPWS_LDG_FLAP3_Anim) } (L:S_OH_GPWS_LDG_FLAP3) 1 == if{ 2 (>L:S_OH_GPWS_LDG_FLAP3_Anim) }"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS System Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_SYS) ! (>L:S_OH_GPWS_SYS) 1 (>L:S_OH_GPWS_SYS_Anim)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS System Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_SYS) 0 == if{ 0 (>L:S_OH_GPWS_SYS_Anim) } (L:S_OH_GPWS_SYS) 1 == if{ 2 (>L:S_OH_GPWS_SYS_Anim) }"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Terrain Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_TERR) ! (>L:S_OH_GPWS_TERR) 1 (>L:S_OH_GPWS_TERR_Anim)"
+	},
+	"FenixSim.A320.Warning.FNX320 GPWS Terrain Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_GPWS_TERR) 0 == if{ 0 (>L:S_OH_GPWS_TERR_Anim) } (L:S_OH_GPWS_TERR) 1 == if{ 2 (>L:S_OH_GPWS_TERR_Anim) }"
+	},
+	"FenixSim.A320.Radio.FNX320 Glareshield ATC Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_ATC_MSG_CAPT)"
+	},
+	"FenixSim.A320.Radio.FNX320 Glareshield ATC Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_ATC_MSG_CAPT)"
+	},
+	"FenixSim.A320.Radio.FNX320 Glareshield ATC FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_ATC_MSG_FO)"
+	},
+	"FenixSim.A320.Radio.FNX320 Glareshield ATC FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_ATC_MSG_FO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield Autoland Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_AUTOLAND_CAPT)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield Autoland Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_AUTOLAND_CAPT)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield Autoland FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_AUTOLAND_FO)"
+	},
+	"FenixSim.A320.Avionics.FNX320 Glareshield Autoland FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_AUTOLAND_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Glareshield Chrono Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_CHRONO_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Glareshield Chrono Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_CHRONO_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Glareshield Chrono FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_CHRONO_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.FNX320 Glareshield Chrono FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_CHRONO_FO)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_MASTER_CAUTION_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_MASTER_CAUTION_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_MASTER_CAUTION_FO)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Caution FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_MASTER_CAUTION_FO)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_MASTER_WARNING_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_MASTER_WARNING_CAPT)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_MIP_MASTER_WARNING_FO)"
+	},
+	"FenixSim.A320.Warning.FNX320 Glareshield Master Warning FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_MIP_MASTER_WARNING_FO)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority Captain Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_CAPT_PRIORITY)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority Captain Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_CAPT_PRIORITY)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority FO Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_FO_PRIORITY)"
+	},
+	"FenixSim.A320.Controls.FNX320 Glareshield Sidestick Priority FO Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_FO_PRIORITY)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Agent Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_APU_AGENT)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Agent Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_APU_AGENT)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FIRE_APU_BUTTON) ! (>L:S_OH_FIRE_APU_BUTTON) 1 (>L:S_OH_FIRE_APU_BUTTON_Anim)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FIRE_APU_BUTTON) 0 == if{ 0 (>L:S_OH_FIRE_APU_BUTTON_Anim) } (L:S_OH_FIRE_APU_BUTTON) 1 == if{ 2 (>L:S_OH_FIRE_APU_BUTTON_Anim) }"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Test Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_APU_TEST)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire APU Test Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_APU_TEST)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 1 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_ENG1_AGENT1)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 1 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_ENG1_AGENT1)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_ENG1_AGENT2)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Agent 2 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_ENG1_AGENT2)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FIRE_ENG1_BUTTON) ! (>L:S_OH_FIRE_ENG1_BUTTON) 1 (>L:S_OH_FIRE_ENG1_BUTTON_Anim)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FIRE_ENG1_BUTTON) 0 == if{ 0 (>L:S_OH_FIRE_ENG1_BUTTON_Anim) } (L:S_OH_FIRE_ENG1_BUTTON) 1 == if{ 2 (>L:S_OH_FIRE_ENG1_BUTTON_Anim) }"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Test Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_ENG1_TEST)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 1 Test Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_ENG1_TEST)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 1 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_ENG2_AGENT1)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 1 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_ENG2_AGENT1)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_ENG2_AGENT2)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Agent 2 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_ENG2_AGENT2)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FIRE_ENG2_BUTTON) ! (>L:S_OH_FIRE_ENG2_BUTTON) 1 (>L:S_OH_FIRE_ENG2_BUTTON_Anim)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FIRE_ENG2_BUTTON) 0 == if{ 0 (>L:S_OH_FIRE_ENG2_BUTTON_Anim) } (L:S_OH_FIRE_ENG2_BUTTON) 1 == if{ 2 (>L:S_OH_FIRE_ENG2_BUTTON_Anim) }"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Test Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_FIRE_ENG2_TEST)"
+	},
+	"FenixSim.A320.Safety.FNX320 Fire Engine 2 Test Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_FIRE_ENG2_TEST)"
+	},
+	"FenixSim.A320.Safety.FNX320 Evacuation Alert Switch Toggle": {
+		"method": "calcCode",
+		"code": "(L:S_OH_EVAC_CAPT_PURSER) ! (>L:S_OH_EVAC_CAPT_PURSER)"
+	},
+	"FenixSim.A320.Safety.FNX320 Evacuation Command Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_EVAC_COMMAND) ! (>L:S_OH_EVAC_COMMAND) 1 (>L:S_OH_EVAC_COMMAND_Anim)"
+	},
+	"FenixSim.A320.Safety.FNX320 Evacuation Command Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_EVAC_COMMAND) 0 == if{ 0 (>L:S_OH_EVAC_COMMAND_Anim) } (L:S_OH_EVAC_COMMAND) 1 == if{ 2 (>L:S_OH_EVAC_COMMAND_Anim) }"
+	},
+	"FenixSim.A320.Safety.FNX320 Evacuation Horn Shutoff Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_EVAC_HORN_SHUTOFF)"
+	},
+	"FenixSim.A320.Safety.FNX320 Evacuation Horn Shutoff Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_EVAC_HORN_SHUTOFF)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine Manual Start 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_MANSTART_1) ! (>L:S_OH_ENG_MANSTART_1) 1 (>L:S_OH_ENG_MANSTART_1_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine Manual Start 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_MANSTART_1) 0 == if{ 0 (>L:S_OH_ENG_MANSTART_1_Anim) (L:S_OH_ENG_MANSTART_1) 1 == if{ 2 (>L:S_OH_ENG_MANSTART_1_Anim) "
+	},
+	"FenixSim.A320.Engines.FNX320 Engine Manual Start 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_MANSTART_2) ! (>L:S_OH_ENG_MANSTART_2) 1 (>L:S_OH_ENG_MANSTART_2_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine Manual Start 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_MANSTART_2) 0 == if{ 0 (>L:S_OH_ENG_MANSTART_2_Anim) (L:S_OH_ENG_MANSTART_2) 1 == if{ 2 (>L:S_OH_ENG_MANSTART_2_Anim) "
+	},
+	"FenixSim.A320.Engines.FNX320 Engine N1 Mode 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_N1_MODE_1) ! (>L:S_OH_ENG_N1_MODE_1) 1 (>L:S_OH_ENG_N1_MODE_1_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine N1 Mode 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_N1_MODE_1) 0 == if{ 0 (>L:S_OH_ENG_N1_MODE_1_Anim) (L:S_OH_ENG_N1_MODE_1) 1 == if{ 2 (>L:S_OH_ENG_N1_MODE_1_Anim) "
+	},
+	"FenixSim.A320.Engines.FNX320 Engine N1 Mode 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_N1_MODE_2) ! (>L:S_OH_ENG_N1_MODE_2) 1 (>L:S_OH_ENG_N1_MODE_2_Anim)"
+	},
+	"FenixSim.A320.Engines.FNX320 Engine N1 Mode 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ENG_N1_MODE_2) 0 == if{ 0 (>L:S_OH_ENG_N1_MODE_2_Anim) (L:S_OH_ENG_N1_MODE_2) 1 == if{ 2 (>L:S_OH_ENG_N1_MODE_2_Anim) "
+	},
+	"FenixSim.A320.Electrical.FNX320 Emergency Electrical Generator 1 Line Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_GEN1_LINE) ! (>L:S_OH_ELEC_GEN1_LINE) 1 (>L:S_OH_ELEC_GEN1_LINE_Anim)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Emergency Electrical Generator 1 Line Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_GEN1_LINE) 0 == if{ 0 (>L:S_OH_ELEC_GEN1_LINE_Anim) } (L:S_OH_ELEC_GEN1_LINE) 1 == if{ 2 (>L:S_OH_ELEC_GEN1_LINE_Anim) }"
+	},
+	"FenixSim.A320.Electrical.FNX320 Emergency Electrical Generator Test Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_EMER_GEN_TEST) ! (>L:S_OH_ELEC_EMER_GEN_TEST) 1 (>L:S_OH_ELEC_EMER_GEN_TEST_Anim)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Emergency Electrical Generator Test Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_EMER_GEN_TEST) 0 == if{ 0 (>L:S_OH_ELEC_EMER_GEN_TEST_Anim) } (L:S_OH_ELEC_EMER_GEN_TEST) 1 == if{ 2 (>L:S_OH_ELEC_EMER_GEN_TEST_Anim) }"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320 Emergency Electrical Manual On Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_EMER_GEN_MAN_ON) ! (>L:S_OH_ELEC_EMER_GEN_MAN_ON) \n1 (>L:S_OH_ELEC_EMER_GEN_MAN_ON_Anim)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Emergency Electrical Manual On Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_EMER_GEN_MAN_ON) 0 == if{ 0 (>L:S_OH_ELEC_EMER_GEN_MAN_ON_Anim) } (L:S_OH_ELEC_EMER_GEN_MAN_ON) 1 == if{ 2 (>L:S_OH_ELEC_EMER_GEN_MAN_ON_Anim) }"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 ARPT Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_ARPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 ARPT Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_ARPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 CSTR Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_CSTR)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 CSTR Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_CSTR)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 NDB Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_NDB)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 NDB Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_NDB)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 VORD Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_VORD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 VORD Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_VORD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 WPT Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_WPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 1 WPT Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_WPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 ARPT Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_ARPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 ARPT Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_ARPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 CSTR Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_CSTR)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 CSTR Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_CSTR)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 NDB Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_NDB)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 NDB Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_NDB)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 VORD Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_VORD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 VORD Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_VORD)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 WPT Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_WPT)"
+	},
+	"FenixSim.A320.EFIS.FNX320 EFIS 2 WPT Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_WPT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ALL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_ALL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ALL Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_ALL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM APU Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_APU)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM APU Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_APU)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM BLEED Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_BLEED)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM BLEED Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_BLEED)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM CLR Left Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_CLR_LEFT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM CLR Left Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_CLR_LEFT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM CLR Right Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_CLR_RIGHT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM CLR Right Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_CLR_RIGHT)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM COND Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_COND)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM COND Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_COND)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM DOOR Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_DOOR)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM DOOR Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_DOOR)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ELEC Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_ELEC)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ELEC Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_ELEC)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM EMER CANC Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_EMER_CANCEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM EMER CANC Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_EMER_CANCEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ENG Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_ENGINE)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM ENG Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_ENGINE)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM FCTL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_FCTL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM FCTL Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_FCTL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM FUEL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_FUEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM FUEL Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_FUEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM HYD Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_HYD)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM HYD Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_HYD)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM PRESS Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_CAB_PRESS)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM PRESS Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_CAB_PRESS)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM RCL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_RCL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM RCL Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_RCL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM STS Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_STATUS)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM STS Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_STATUS)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM TO CONFIG Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_TO)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM TO CONFIG Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_TO)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM WHEEL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ECAM_WHEEL)"
+	},
+	"FenixSim.A320.ECAM.FNX320 ECAM WHEEL Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ECAM_WHEEL)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS ADR 1 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_NAV_ADR1)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS ADR 1 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_NAV_ADR1)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS ADR 2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_NAV_ADR2)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS ADR 2 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_NAV_ADR2)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS ADR 3 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_NAV_ADR3)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS ADR 3 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_NAV_ADR3)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Data Selector Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_DATA_DISP) 0.1 - 0 max (>L:S_OH_NAV_DATA_DISP)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Data Selector Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_DATA_DISP) 0.1 + 1 min (>L:S_OH_NAV_DATA_DISP)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 1 Knob ATT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_NAV_IR1_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 1 Knob NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_NAV_IR1_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 1 Knob OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_NAV_IR1_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 2 Knob ATT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_NAV_IR2_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 2 Knob NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_NAV_IR2_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 2 Knob OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_NAV_IR2_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 3 Knob ATT": {
+		"method": "calcCode",
+		"code": "2 (>L:S_OH_NAV_IR3_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 3 Knob NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_NAV_IR3_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS IR 3 Knob OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_NAV_IR3_MODE)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 0 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_0)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 0 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_0)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 1 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_1)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 1 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_1)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 2 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_2)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 2 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_2)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 3 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_3)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 3 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_3)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 4 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_4)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 4 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_4)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 5 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_5)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 5 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_5)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 6 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_6)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 6 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_6)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 7 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_7)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 7 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_7)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 8 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_8)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 8 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_8)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 9 Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_9)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key 9 Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_9)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key Clear Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_CLR)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key Clear Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_CLR)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key Enter Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ADIRS_KEY_ENT)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS Key Enter Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ADIRS_KEY_ENT)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS System Selector Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_SYS_DISP) 0.1 - 0 max (>L:S_OH_NAV_SYS_DISP)"
+	},
+	"FenixSim.A320.ADIRS.FNX320 ADIRS System Selector Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_SYS_DISP) 0.1 + 1 min (>L:S_OH_NAV_SYS_DISP)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot master": {
+		"method": "calcCode",
+		"code": "(>H:APGA_AP)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Flight director": {
+		"method": "calcCode",
+		"code": "(>H:APGA_FD)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Yaw damper": {
+		"method": "calcCode",
+		"code": "(>H:APGA_YD)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot HDG": {
+		"method": "calcCode",
+		"code": "(>H:APGA_HDG)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot NAV": {
+		"method": "calcCode",
+		"code": "(>H:APGA_NAV)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Approach mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_APR)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Back course mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_REV)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot ALT mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_ALT)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot VS mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_VS)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot FLC mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_FLC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot LVL mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_LVL)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot CGA Mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_CGA)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot CLVL mode": {
+		"method": "calcCode",
+		"code": "(>H:APGA_CLVL)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot ARM": {
+		"method": "calcCode",
+		"code": "(>H:APGA_ARM)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot UP": {
+		"method": "calcCode",
+		"code": "(>H:APGA_UP)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot DOWN": {
+		"method": "calcCode",
+		"code": "(>H:APGA_DOWN)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected altitude small inc": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_ALT_SMALL_INC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected altitude large inc": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_ALT_LARGE_INC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected altitude very large inc": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_ALT_VERY_LARGE_INC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected altitude small dec": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_ALT_SMALL_DEC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected altitude large dec": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_ALT_LARGE_DEC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected altitude very large dec": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_ALT_VERY_LARGE_DEC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected VS small inc": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_VS_SMALL_INC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected VS small dec": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_VS_SMALL_DEC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected VS large inc": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_VS_LARGE_INC)"
+	},
+	"PMS50.APGA.Autopilot.Input.Autopilot Selected VS large dec": {
+		"method": "calcCode",
+		"code": "(>H:APGA_SEL_VS_LARGE_DEC)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 ADF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ADF_1_VOLUME) 0.05 - 0 max (>L:A_ASP_ADF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 ADF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ADF_1_VOLUME) 0.05 + 1 min (>L:A_ASP_ADF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 ADF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ADF_2_VOLUME) 0.05 - 0 max (>L:A_ASP_ADF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 ADF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ADF_2_VOLUME) 0.05 + 1 min (>L:A_ASP_ADF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 CAB Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_CAB_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 CAB Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_CAB_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 CAB Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_CAB_VOLUME) 0.05 - 0 max (>L:A_ASP_CAB_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 CAB Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_CAB_VOLUME) 0.05 + 1 min (>L:A_ASP_CAB_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 1 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_HF_1_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 1 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_HF_1_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_HF_1_VOLUME) 0.05 - 0 max (>L:A_ASP_HF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_HF_1_VOLUME) 0.05 + 1 min (>L:A_ASP_HF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 2 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_HF_2_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 2 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_HF_2_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_HF_2_VOLUME) 0.05 - 0 max (>L:A_ASP_HF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 HF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_HF_2_VOLUME) 0.05 + 1 min (>L:A_ASP_HF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 ILS Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ILS_VOLUME) 0.05 - 0 max (>L:A_ASP_ILS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 ILS Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ILS_VOLUME) 0.05 + 1 min (>L:A_ASP_ILS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INT Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_INT_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INT Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_INT_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INT Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_INT_VOLUME) 0.05 - 0 max (>L:A_ASP_INT_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INT Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_INT_VOLUME) 0.05 + 1 min (>L:A_ASP_INT_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INTRAD Switch INT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INTRAD Switch OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 INTRAD Switch RAD": {
+		"method": "calcCode",
+		"code": "2 (>L:S_ASP_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 MARKER Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_MARKER_VOLUME) 0.05 - 0 max (>L:A_ASP_MARKER_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 MARKER Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_MARKER_VOLUME) 0.05 + 1 min (>L:A_ASP_MARKER_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 MLS Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_MLS_VOLUME) 0.05 - 0 max (>L:A_ASP_MLS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 MLS Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_MLS_VOLUME) 0.05 + 1 min (>L:A_ASP_MLS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 PA SEND Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_PA_SEND_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 PA SEND Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_PA_SEND_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 PA Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_PA_VOLUME) 0.05 - 0 max (>L:A_ASP_PA_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 PA Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_PA_VOLUME) 0.05 + 1 min (>L:A_ASP_PA_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 RESET Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_RESET_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 RESET Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_RESET_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 1 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_VHF_1_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 1 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_VHF_1_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_1_VOLUME) 0.05 - 0 max (>L:A_ASP_VHF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_1_VOLUME) 0.05 + 1 min (>L:A_ASP_VHF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 2 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_VHF_2_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 2 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_VHF_2_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_2_VOLUME) 0.05 - 0 max (>L:A_ASP_VHF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_2_VOLUME) 0.05 + 1 min (>L:A_ASP_VHF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 3 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_VHF_3_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 3 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_VHF_3_Send_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 3 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_3_VOLUME) 0.05 - 0 max (>L:A_ASP_VHF_3_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VHF 3 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_3_VOLUME) 0.05 + 1 min (>L:A_ASP_VHF_3_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VOICE Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:ACP1_VOICE_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VOICE Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:ACP1_VOICE_Button)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VOR 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VOR_1_VOLUME) 0.05 - 0 max (>L:A_ASP_VOR_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VOR 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VOR_1_VOLUME) 0.05 + 1 min (>L:A_ASP_VOR_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VOR 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VOR_2_VOLUME) 0.05 - 0 max (>L:A_ASP_VOR_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP1 VOR 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VOR_2_VOLUME) 0.05 + 1 min (>L:A_ASP_VOR_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 ADF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ADF_1_VOLUME) 0.05 - 0 max (>L:A_ASP_ADF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 ADF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_ADF_1_VOLUME) 0.05 + 1 min (>L:A_ASP2_ADF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 ADF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ADF_2_VOLUME) 0.05 - 0 max (>L:A_ASP_ADF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 ADF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_ADF_2_VOLUME) 0.05 + 1 min (>L:A_ASP2_ADF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 CAB Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_CAB_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 CAB Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_CAB_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 CAB Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_CAB_VOLUME) 0.05 - 0 max (>L:A_ASP_CAB_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 CAB Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_CAB_VOLUME) 0.05 + 1 min (>L:A_ASP2_CAB_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 1 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 1 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_HF_1_VOLUME) 0.05 - 0 max (>L:A_ASP_HF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_HF_1_VOLUME) 0.05 + 1 min (>L:A_ASP2_HF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 2 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_HF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 2 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_HF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_HF_2_VOLUME) 0.05 - 0 max (>L:A_ASP_HF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 HF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_HF_2_VOLUME) 0.05 + 1 min (>L:A_ASP2_HF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 ILS Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_ILS_VOLUME) 0.05 - 0 max (>L:A_ASP_ILS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 ILS Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_ILS_VOLUME) 0.05 + 1 min (>L:A_ASP2_ILS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INT Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_INT_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INT Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_INT_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INT Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_INT_VOLUME) 0.05 - 0 max (>L:A_ASP_INT_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INT Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_INT_VOLUME) 0.05 + 1 min (>L:A_ASP2_INT_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INTRAD Switch INT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INTRAD Switch OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 INTRAD Switch RAD": {
+		"method": "calcCode",
+		"code": "2 (>L:S_ASP2_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 MARKER Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_MARKER_VOLUME) 0.05 - 0 max (>L:A_ASP_MARKER_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 MARKER Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_MARKER_VOLUME) 0.05 + 1 min (>L:A_ASP2_MARKER_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 MLS Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_MLS_VOLUME) 0.05 - 0 max (>L:A_ASP_MLS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 MLS Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_MLS_VOLUME) 0.05 + 1 min (>L:A_ASP2_MLS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 PA SEND Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_PA_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 PA SEND Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_PA_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 PA Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_PA_VOLUME) 0.05 + 1 min (>L:A_ASP2_PA_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 PA Volume Knob Release": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_PA_VOLUME) 0.05 - 0 max (>L:A_ASP_PA_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 RESET Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_RESET)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 RESET Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_RESET)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 1 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_VHF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 1 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_VHF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_1_VOLUME) 0.05 - 0 max (>L:A_ASP_VHF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_VHF_1_VOLUME) 0.05 + 1 min (>L:A_ASP2_VHF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 2 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_VHF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 2 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_VHF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_2_VOLUME) 0.05 - 0 max (>L:A_ASP_VHF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_VHF_2_VOLUME) 0.05 + 1 min (>L:A_ASP2_VHF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 3 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_VHF_3_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 3 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_VHF_3_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 3 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VHF_3_VOLUME) 0.05 - 0 max (>L:A_ASP_VHF_3_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VHF 3 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_VHF_3_VOLUME) 0.05 + 1 min (>L:A_ASP2_VHF_3_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VOICE Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP2_VOICE)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VOICE Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP2_VOICE)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VOR 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VOR_1_VOLUME) 0.05 - 0 max (>L:A_ASP_VOR_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VOR 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_VOR_1_VOLUME) 0.05 + 1 min (>L:A_ASP2_VOR_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VOR 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP_VOR_2_VOLUME) 0.05 - 0 max (>L:A_ASP_VOR_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP2 VOR 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP2_VOR_2_VOLUME) 0.05 + 1 min (>L:A_ASP2_VOR_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 ADF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_ADF_1_VOLUME) 0.05 - 0 max (>L:A_ASP3_ADF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 ADF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_ADF_1_VOLUME) 0.05 + 1 min (>L:A_ASP3_ADF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 ADF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_ADF_2_VOLUME) 0.05 - 0 max (>L:A_ASP3_ADF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 ADF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_ADF_2_VOLUME) 0.05 + 1 min (>L:A_ASP3_ADF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 CAB Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_CAB_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 CAB Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_CAB_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 CAB Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_CAB_VOLUME) 0.05 - 0 max (>L:A_ASP3_CAB_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 CAB Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_CAB_VOLUME) 0.05 + 1 min (>L:A_ASP3_CAB_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 1 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 1 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_HF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_HF_1_VOLUME) 0.05 - 0 max (>L:A_ASP3_HF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_HF_1_VOLUME) 0.05 + 1 min (>L:A_ASP3_HF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 2 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_HF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 2 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_HF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_HF_2_VOLUME) 0.05 - 0 max (>L:A_ASP3_HF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 HF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_HF_2_VOLUME) 0.05 + 1 min (>L:A_ASP3_HF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 ILS Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_ILS_VOLUME) 0.05 - 0 max (>L:A_ASP3_ILS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 ILS Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_ILS_VOLUME) 0.05 + 1 min (>L:A_ASP3_ILS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INT Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_INT_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INT Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_INT_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INT Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_INT_VOLUME) 0.05 - 0 max (>L:A_ASP3_INT_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INT Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_INT_VOLUME) 0.05 + 1 min (>L:A_ASP3_INT_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INTRAD Switch INT": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INTRAD Switch OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 INTRAD Switch RAD": {
+		"method": "calcCode",
+		"code": "2 (>L:S_ASP3_INTRAD)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 MARKER Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_MARKER_VOLUME) 0.05 - 0 max (>L:A_ASP3_MARKER_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 MARKER Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_MARKER_VOLUME) 0.05 + 1 min (>L:A_ASP3_MARKER_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 MLS Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_MLS_VOLUME) 0.05 - 0 max (>L:A_ASP3_MLS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 MLS Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_MLS_VOLUME) 0.05 + 1 min (>L:A_ASP3_MLS_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 PA SEND Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_PA_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 PA SEND Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_PA_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 PA Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_PA_VOLUME) 0.05 + 1 min (>L:A_ASP3_PA_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 PA Volume Knob Release": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_PA_VOLUME) 0.05 - 0 max (>L:A_ASP3_PA_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 RESET Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_RESET)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 RESET Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_RESET)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 1 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_VHF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 1 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_VHF_1_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VHF_1_VOLUME) 0.05 - 0 max (>L:A_ASP3_VHF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VHF_1_VOLUME) 0.05 + 1 min (>L:A_ASP3_VHF_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 2 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_VHF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 2 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_VHF_2_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VHF_2_VOLUME) 0.05 - 0 max (>L:A_ASP3_VHF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VHF_2_VOLUME) 0.05 + 1 min (>L:A_ASP3_VHF_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 3 Send Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_VHF_3_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 3 Send Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_VHF_3_SEND)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 3 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VHF_3_VOLUME) 0.05 - 0 max (>L:A_ASP3_VHF_3_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VHF 3 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VHF_3_VOLUME) 0.05 + 1 min (>L:A_ASP3_VHF_3_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VOICE Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_ASP3_VOICE)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VOICE Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_ASP3_VOICE)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VOR 1 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VOR_1_VOLUME) 0.05 - 0 max (>L:A_ASP3_VOR_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VOR 1 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VOR_1_VOLUME) 0.05 + 1 min (>L:A_ASP3_VOR_1_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VOR 2 Volume Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VOR_2_VOLUME) 0.05 - 0 max (>L:A_ASP3_VOR_2_VOLUME)"
+	},
+	"FenixSim.A320.Radio.FNX320 ACP3 VOR 2 Volume Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A_ASP3_VOR_2_VOLUME) 0.05 + 1 min (>L:A_ASP3_VOR_2_VOLUME)"
+	},
+	"PMDG.B737-700.Engines.Input.Engine 2 Start Lever": {
+		"method": "calcCode",
+		"code": "ENG2\n68901 (>K:ROTOR_BRAKE) - ON\n68902 (>K:ROTOR_BRAKE - OFF\nRead variable to get switch position from aircraft\nL:switch_689_73X"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320_OH_ELEC_EXT_PWR_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_EXT_PWR) ! (>L:S_OH_ELEC_EXT_PWR)"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 ENG1 Fire Warn/Disch 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6972_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 ENG2 Fire Warn/Disch 1": {
+		"method": "calcCode",
+		"code": "(L:switch_6992_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Fire Bottle Discharge L": {
+		"method": "calcCode",
+		"code": "(L:switch_716_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Fire Bottle Discharge APU": {
+		"method": "calcCode",
+		"code": "(L:switch_717_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 Fire Bottle Discharge R": {
+		"method": "calcCode",
+		"code": "(L:switch_718_73X, number) 0 >"
+	},
+	"Fly By Wire.A320-Dev.Miscellaneous.Input.A32NX Chrono Date Display": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_CHRONO_DATE)"
+	},
+	"FenixSim.A320.Engines.Input.FNX320 Throttle Engine 1 Master Switch Toggle": {
+		"method": "calcCode",
+		"code": "(L:S_ENG_MASTER_1) ! (>L:S_ENG_MASTER_1)\n"
+	},
+	"FenixSim.A320.Engines.Input.FNX320 Throttle Engine 2 Master Switch Toggle": {
+		"method": "calcCode",
+		"code": "(L:S_ENG_MASTER_2) ! (>L:S_ENG_MASTER_2)\n"
+	},
+	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Left Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_THR_INST_DISCONNECT1)\n"
+	},
+	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Left Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_THR_INST_DISCONNECT1)\n"
+	},
+	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Right Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FC_THR_INST_DISCONNECT2)\n"
+	},
+	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Right Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FC_THR_INST_DISCONNECT2)\n"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_CALLS_MECH-SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_CALLS_MECH) ++ (>L:S_OH_CALLS_MECH)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_CALLS_ALL-SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_CALLS_ALL) ++ (>L:S_OH_CALLS_ALL)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_CALLS_FWD-SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_CALLS_FWD) ++ (>L:S_OH_CALLS_FWD)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_CALLS_AFT-SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_CALLS_AFT) ++ (>L:S_OH_CALLS_AFT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_CALLS_EMER-COVER": {
+		"method": "calcCode",
+		"code": "(L:S_OH_CALLS_EMER_Cover) ! (>L:S_OH_CALLS_EMER_Cover)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_CALLS_EMER_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:S_OH_CALLS_EMER) ! (>L:S_OH_CALLS_EMER)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical AC Essential Feed Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_AC_ESS_FEED)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical AC Essential Feed Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_AC_ESS_FEED)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical APU Generator Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_APU_GENERATOR) ! (>L:S_OH_ELEC_APU_GENERATOR) 1 (>L:S_OH_ELEC_APU_GENERATOR_Anim)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical APU Generator Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_APU_GENERATOR) 0 == if{ 0 (>L:S_OH_ELEC_APU_GENERATOR_Anim) } (L:S_OH_ELEC_APU_GENERATOR) 1 == if{ 2 (>L:S_OH_ELEC_APU_GENERATOR_Anim) }"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Bus Tie Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_BUSTIE)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Bus Tie Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_BUSTIE)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Commercial Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_COMMERCIAL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Commercial Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_COMMERCIAL)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Galley Cabin Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_GALY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Galley Cabin Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_GALY)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_GEN1) ! (>L:S_OH_ELEC_GEN1) 1 (>L:S_OH_ELEC_GEN1_Anim)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_GEN1) 0 == if{ 0 (>L:S_OH_ELEC_GEN1_Anim) } (L:S_OH_ELEC_GEN1) 1 == if{ 2 (>L:S_OH_ELEC_GEN1_Anim) }"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_GEN2) ! (>L:S_OH_ELEC_GEN2) 1 (>L:S_OH_ELEC_GEN2_Anim)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical Generator 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_GEN2) 0 == if{ 0 (>L:S_OH_ELEC_GEN2_Anim) } (L:S_OH_ELEC_GEN2) 1 == if{ 2 (>L:S_OH_ELEC_GEN2_Anim) }"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical IDG 1 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_IDG1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical IDG 1 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_IDG1)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical IDG 2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:S_OH_ELEC_IDG2)"
+	},
+	"FenixSim.A320.Electrical.FNX320 Electrical IDG 2 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:S_OH_ELEC_IDG2)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl ELAC 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_ELAC_1) ! (>L:S_OH_FLT_CTL_ELAC_1) 1 (>L:S_OH_FLT_CTL_ELAC_1_Anim)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl ELAC 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_ELAC_1) 0 == if{ 0 (>L:S_OH_FLT_CTL_ELAC_1_Anim) } (L:S_OH_FLT_CTL_ELAC_1) 1 == if{ 2 (>L:S_OH_FLT_CTL_ELAC_1_Anim) }"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl ELAC 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_ELAC_2) ! (>L:S_OH_FLT_CTL_ELAC_2) 1 (>L:S_OH_FLT_CTL_ELAC_2_Anim)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl ELAC 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_ELAC_2) 0 == if{ 0 (>L:S_OH_FLT_CTL_ELAC_2_Anim) } (L:S_OH_FLT_CTL_ELAC_2) 1 == if{ 2 (>L:S_OH_FLT_CTL_ELAC_2_Anim) }"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl FAC 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_FAC_1) ! (>L:S_OH_FLT_CTL_FAC_1) 1 (>L:S_OH_FLT_CTL_FAC_1_Anim)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl FAC 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_FAC_1) 0 == if{ 0 (>L:S_OH_FLT_CTL_FAC_1_Anim) } (L:S_OH_FLT_CTL_FAC_1) 1 == if{ 2 (>L:S_OH_FLT_CTL_FAC_1_Anim) }"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl FAC 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_FAC_2) ! (>L:S_OH_FLT_CTL_FAC_2) 1 (>L:S_OH_FLT_CTL_FAC_2_Anim)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl FAC 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_FAC_2) 0 == if{ 0 (>L:S_OH_FLT_CTL_FAC_2_Anim) } (L:S_OH_FLT_CTL_FAC_2) 1 == if{ 2 (>L:S_OH_FLT_CTL_FAC_2_Anim) }"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl SEC 1 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_SEC_1) ! (>L:S_OH_FLT_CTL_SEC_1) 1 (>L:S_OH_FLT_CTL_SEC_1_Anim)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl SEC 1 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_SEC_1) 0 == if{ 0 (>L:S_OH_FLT_CTL_SEC_1_Anim) } (L:S_OH_FLT_CTL_SEC_1) 1 == if{ 2 (>L:S_OH_FLT_CTL_SEC_1_Anim) }"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl SEC 2 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_SEC_2) ! (>L:S_OH_FLT_CTL_SEC_2) 1 (>L:S_OH_FLT_CTL_SEC_2_Anim)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl SEC 2 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_SEC_2) 0 == if{ 0 (>L:S_OH_FLT_CTL_SEC_2_Anim) } (L:S_OH_FLT_CTL_SEC_2) 1 == if{ 2 (>L:S_OH_FLT_CTL_SEC_2_Anim) }"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl SEC 3 Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_SEC_3) ! (>L:S_OH_FLT_CTL_SEC_3) 1 (>L:S_OH_FLT_CTL_SEC_3_Anim)"
+	},
+	"FenixSim.A320.Flight Controls.FNX320 FlightControl SEC 3 Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_FLT_CTL_SEC_3) 0 == if{ 0 (>L:S_OH_FLT_CTL_SEC_3_Anim) } (L:S_OH_FLT_CTL_SEC_3) 1 == if{ 2 (>L:S_OH_FLT_CTL_SEC_3_Anim) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 Bank Angle Selector 10": {
+		"method": "calcCode",
+		"code": "0 (L:switch_389_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 38902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 38901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\n"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 Bank Angle Selector 15": {
+		"method": "calcCode",
+		"code": "10 (L:switch_389_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 38902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 38901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 Bank Angle Selector 20": {
+		"method": "calcCode",
+		"code": "20 (L:switch_389_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 38902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 38901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 Bank Angle Selector 25": {
+		"method": "calcCode",
+		"code": "30 (L:switch_389_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 38902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 38901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 Bank Angle Selector 30": {
+		"method": "calcCode",
+		"code": "40 (L:switch_389_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 38902 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 38901 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Main Panel DUs OUTBD PFD": {
+		"method": "calcCode",
+		"code": "0 (L:switch_335_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 33507 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 33508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Main Panel DUs NORM": {
+		"method": "calcCode",
+		"code": "10 (L:switch_335_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 33507 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 33508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Main Panel DUs ENG PRI": {
+		"method": "calcCode",
+		"code": "20 (L:switch_335_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 33507 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 33508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Main Panel DUs PFD": {
+		"method": "calcCode",
+		"code": "30 (L:switch_335_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 33507 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 33508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Main Panel DUs MFD": {
+		"method": "calcCode",
+		"code": "40 (L:switch_335_73X,number) - 10 div s0 \n:1 \nl0 0 > if{ 33507 (>K:ROTOR_BRAKE) l0 -- s0 g1 } \nl0 0 < if{ 33508 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L Baro Select Knob InHg": {
+		"method": "calcCode",
+		"code": "(L:switch_366_73X) 0 == if{ 36601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L Baro Select Knob HPa": {
+		"method": "calcCode",
+		"code": "(L:switch_366_73X) 0 != if{ 36601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.EFIS.Output.PMDG B737 EFIS L Baro Select Knob": {
+		"method": "calcCode",
+		"code": "(L:switch_366_73X, number)"
+	},
+	"PMDG.B737-700.EFIS.Output.PMDG B737 EFIS L Baro STD On": {
+		"method": "calcCode",
+		"code": "(L:mf_STD_Push,number)"
+	},
+	"Fly By Wire.A320-Dev.Navigation.Input.A32NX ATC Alt Rptg Select OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_SWITCH_ATC_ALT,number)"
+	},
+	"Fly By Wire.A320-Dev.Navigation.Input.A32NX ATC Alt Rptg Select ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_SWITCH_ATC_ALT,number)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD1_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_15) 5 - 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_15) 15 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD1_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_15) 5 + 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_15) 15 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD2_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_16) 5 - 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_16) 16 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD2_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_16) 5 + 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_16) 16 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_MFD_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_17) 5 - 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_17) 17 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_MFD_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_17) 5 + 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_17) 17 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD1_GTC_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_18) 5 - 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_18) 18 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD1_GTC_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_18) 5 + 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_18) 18 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD2_GTC_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_19) 5 - 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_19) 19 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PFD2_GTC_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_19) 5 + 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_19) 19 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_MFD_GTC_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_20) 5 - 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_20) 20 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_MFD_GTC_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_20) 5 + 0 max 100 min d (>L:LIGHTING_POTENTIOMETER_20) 20 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PANEL_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT PANEL POWER SETTING:1, Percent) 5 - 0 max 1 (>K:2:PANEL_LIGHTS_POWER_SETTING_SET) (A:LIGHT PANEL:1, Bool) (A:LIGHT PANEL POWER SETTING:1, Percent) 0 == and if{ 1 0 (>K:2:PANEL_LIGHTS_SET) }"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PANEL_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT PANEL:1, Bool) ! if{ 1 1 (>K:2:PANEL_LIGHTS_SET) } (A:LIGHT PANEL POWER SETTING:1, Percent) 5 + 100 min 1 (>K:2:PANEL_LIGHTS_POWER_SETTING_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_FLOOD_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT CABIN:3, Bool) ! if{ 3 1 (>K:2:CABIN_LIGHTS_SET) } (A:LIGHT CABIN POWER SETTING:3, Percent) 5 + 100 min 3 (>K:2:CABIN_LIGHTS_POWER_SETTING_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_FLOOD_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT CABIN POWER SETTING:3, Percent) 5 - 0 max 3 (>K:2:CABIN_LIGHTS_POWER_SETTING_SET) (A:LIGHT CABIN:3, Bool) (A:LIGHT CABIN POWER SETTING:3, Percent) 0 == and if{ 3 0 (>K:2:CABIN_LIGHTS_SET) }"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PILOT_FLOOD_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT CABIN POWER SETTING:1, Percent) 5 - 0 max 1 (>K:2:CABIN_LIGHTS_POWER_SETTING_SET) (A:LIGHT CABIN:1, Bool) (A:LIGHT CABIN POWER SETTING:1, Percent) 0 == and if{ 1 0 (>K:2:CABIN_LIGHTS_SET) }"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_PILOT_FLOOD_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT CABIN:1, Bool) ! if{ 1 1 (>K:2:CABIN_LIGHTS_SET) } (A:LIGHT CABIN POWER SETTING:1, Percent) 5 + 100 min 1 (>K:2:CABIN_LIGHTS_POWER_SETTING_SET)"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_COPILOT_FLOOD_LIGHT_DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT CABIN POWER SETTING:2, Percent) 5 - 0 max 2 (>K:2:CABIN_LIGHTS_POWER_SETTING_SET) (A:LIGHT CABIN:2, Bool) (A:LIGHT CABIN POWER SETTING:2, Percent) 0 == and if{ 2 0 (>K:2:CABIN_LIGHTS_SET) }"
+	},
+	"Asobo.Longitude.Lights.Input (Potentiometer).LONGITUDE_COPILOT_FLOOD_LIGHT_INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT CABIN:2, Bool) ! if{ 2 1 (>K:2:CABIN_LIGHTS_SET) } (A:LIGHT CABIN POWER SETTING:2, Percent) 5 + 100 min 2 (>K:2:CABIN_LIGHTS_POWER_SETTING_SET)"
+	},
+	"PMDG.B737-700.Electrical.Output.PMDG B737 APU EGT Gauge": {
+		"method": "calcCode",
+		"code": "(L:switch_35_73X, number)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 ADSF Test 1 Switch Press": {
+		"method": "calcCode",
+		"code": "34202 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 ADSF Test Switch Release": {
+		"method": "calcCode",
+		"code": "34204 (>K:ROTOR_BRAKE)"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_GND_SPLRS_LEVER_ARM-DISARM_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:A_FC_SPEEDBRAKE) ! (>L:A_FC_SPEEDBRAKE)"
+	},
+	"PMDG.B737-700.Lights.Output.PMDG_B737_ANTI-COLLISION_LIGHT_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_124_73X, number) 100 /"
+	},
+	"PMDG.B737-700.Lights.Output.PMDG_B737_WING_LIGHT_LED": {
+		"method": "calcCode",
+		"code": "(L:switch_125_73X, number) 100 /"
+	},
+	"FenixSim.A320.EFIS.Output.FNX320 EFIS_1_BARO_MODE_STATUS": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_BARO_MODE)"
+	},
+	"FenixSim.A320.EFIS.Output.FNX320 EFIS_2_BARO_MODE_STATUS": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS2_BARO_MODE)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_1_NAV_1_SWITCH_ADF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_NAV1)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_1_NAV_1_SWITCH_OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_NAV1)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_1_NAV_1_SWITCH_VOR": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS1_NAV1)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_1_NAV_2_SWITCH_ADF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS1_NAV2)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_1_NAV_2_SWITCH_OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS1_NAV2)\n"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_1_NAV_2_SWITCH_VOR": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS1_NAV2)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_2_NAV_1_SWITCH_ADF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_NAV1)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_2_NAV_1_SWITCH_OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_NAV1)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_2_NAV_1_SWITCH_VOR": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS2_NAV1)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_2_NAV_2_SWITCH_ADF": {
+		"method": "calcCode",
+		"code": "0 (>L:S_FCU_EFIS2_NAV2)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_2_NAV_2_SWITCH_VOR": {
+		"method": "calcCode",
+		"code": "2 (>L:S_FCU_EFIS2_NAV2)"
+	},
+	"FenixSim.A320.EFIS.Input.FNX320_EFIS_2_NAV_2_SWITCH_OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:S_FCU_EFIS2_NAV2)\n"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_SPD_KNOB_INC": {
+		"method": "calcCode",
+		"code": "16384 6 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_SPD_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "8192 6 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_HDG_KNOB_PULL": {
+		"method": "calcCode",
+		"code": "536870912 13 + (>L:fgcp_event,number) "
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_HDG_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "8192 13 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_HDG_KNOB_INC": {
+		"method": "calcCode",
+		"code": "16384 13 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_VS_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "16384 14 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_VS_KNOB_INC": {
+		"method": "calcCode",
+		"code": "8192 14 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_BANK_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "8192 12 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_BANK_KNOB_INC": {
+		"method": "calcCode",
+		"code": "16384 12 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_ALT_KNOB_PULL": {
+		"method": "calcCode",
+		"code": "536870912 23 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_ALT_KNOB_DEC": {
+		"method": "calcCode",
+		"code": "8192 23 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_ALT_KNOB_INC": {
+		"method": "calcCode",
+		"code": "16384 23 + (>L:fgcp_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Gear.Input.MD_82_VC_PARKING_BRAKE_ON": {
+		"method": "calcCode",
+		"code": "(L:vc_parking_brake_knob, bool) ! if{ 536870912 1 + (>L:cockpit_event,number) }"
+	},
+	"Leonardo.MadDog MD-82.Gear.Input.MD_82_VC_PARKING_BRAKE_OFF": {
+		"method": "calcCode",
+		"code": "(L:vc_parking_brake_knob, bool) if{ 536870912 1 + (>L:cockpit_event,number) }"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_OVHD_FLOOD_SWITCH_OFF": {
+		"method": "calcCode",
+		"code": "(L:ovhd_ckpt_flood_switch1, enum) 1 == if{ 2147483648 90 + (>L:overhead_event,number) } (L:ovhd_ckpt_flood_switch1, enum) 2 == if{ 2147483648 90 + (>L:overhead_event,number) (SLEEP:100)  2147483648 90 + (>L:overhead_event,number) } "
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_OVHD_FLOOD_SWITCH_ON": {
+		"method": "calcCode",
+		"code": "#(L:ovhd_ckpt_flood_switch1, enum) 2 == if{ 2147483648 90 + (>L:overhead_event,number) } (L:ovhd_ckpt_flood_switch1, enum) 0 == if{ 536870912 90 + (>L:overhead_event,number) }"
+	},
+	"Leonardo.MadDog MD-82.Lights.Input.MD82_OVHD_FLOOD_SWITCH_ALT": {
+		"method": "calcCode",
+		"code": "(L:ovhd_ckpt_flood_switch1, enum) 0 == if{ 536870912 90 + (>L:overhead_event,number) (SLEEP:100) 536870912 90 + (>L:overhead_event,number) } (L:ovhd_ckpt_flood_switch1, enum) 1 == if{ 536870912 90 + (>L:overhead_event,number) } "
+	},
+	"FenixSim.A320.EFIS.Output.FNX320 EFIS1_BARO_STD Status": {
+		"method": "calcCode",
+		"code": "(L:S_FCU_EFIS1_BARO_STD)"
+	},
+	"PMDG.B737-700.Engines.Output.PMDG B737 Eng1 Eec1 ON": {
+		"method": "calcCode",
+		"code": "(L:switch_268_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Engines.Output.PMDG B737 Eng2 Eec1 ON": {
+		"method": "calcCode",
+		"code": "(L:switch_271_73X, number) 0 >"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Bleed air duct pressure LEFT needle": {
+		"method": "calcCode",
+		"code": "(L:switch_197_73X, number)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Bleed air duct pressure RIGHT needle": {
+		"method": "calcCode",
+		"code": "(L:switch_198_73X, number)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output. Outflow valve position indicator needle": {
+		"method": "calcCode",
+		"code": "(L:switch_221_73X, number)"
+	},
+	"PMDG.B737-700.Fuel.Output.Fuel temperature indicator no.1 tank": {
+		"method": "calcCode",
+		"code": "(L:switch_57_73X, number)\n"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Cabin rate of climb indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_184_73X, number)\n"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Cabin altimeter long needle (pressure difference)": {
+		"method": "calcCode",
+		"code": "(L:switch_182_73X, number)\n"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Cabin altimeter short needle (cabin altitude)": {
+		"method": "calcCode",
+		"code": "(L:switch_181_73X, number)\n"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Deice Boots Inflate": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_DEICE_SURFACE, enum)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Deice Boots Off": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_DEICE_SURFACE, enum)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Deice Boots Auto": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_DEICE_SURFACE, enum)"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Input.Air temp source: Pass cabin": {
+		"method": "calcCode",
+		"code": "(L:switch_187_73X, number) 0 == if{ 18701 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Input.Air temp source: Supply duct": {
+		"method": "calcCode",
+		"code": "(L:switch_187_73X, number) 100 == if{ 18701 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Air temp Indicator Needle": {
+		"method": "calcCode",
+		"code": "(L:switch_190_73X, number)\n"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Air mix valve: Control cabin indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_185_73X, number)\n"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Air mix valve: Passenger cabin indicator": {
+		"method": "calcCode",
+		"code": "(L:switch_186_73X, number)\n"
+	},
+	"PMDG.B737-700.Air Condition / Pressurization.Output.Flight crew oxygen pressure indicator needle": {
+		"method": "calcCode",
+		"code": "(L:switch_262_73X, number)\n"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Prop Deice On": {
+		"method": "calcCode",
+		"code": "(>K:ANTI_ICE_ON)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Prop Deice Off": {
+		"method": "calcCode",
+		"code": "(>K:ANTI_ICE_OFF)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Windshield Heat On": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_DEICE_WINDSHLD, bool)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Windshield Heat Off": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_DEICE_WINDSHLD, bool)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Pitot Heat On": {
+		"method": "calcCode",
+		"code": "(>K:PITOT_HEAT_ON)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Pitot Heat Off": {
+		"method": "calcCode",
+		"code": "(>K:PITOT_HEAT_OFF)"
+	},
+	"FenixSim.A320.MCDU.Input.FNX320_CDU1_KEY_DIR_Press": {
+		"method": "calcCode",
+		"code": "(L:S_CDU1_KEY_DIR) 2 + (>L:S_CDU1_KEY_DIR)"
+	},
+	"Milviz.Cessna 310R.Avionics.Input.C310R Avionics Master On": {
+		"method": "calcCode",
+		"code": "(A:AVIONICS MASTER SWITCH:1, Bool) 0 == if{ 1 (>K:TOGGLE_AVIONICS_MASTER) }"
+	},
+	"Milviz.Cessna 310R.Avionics.Input.C310R Avionics Master Off": {
+		"method": "calcCode",
+		"code": "(A:AVIONICS MASTER SWITCH:1, Bool) 1 == if{ 1 (>K:TOGGLE_AVIONICS_MASTER) }"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Wing Ice Lights On": {
+		"method": "calcCode",
+		"code": "1 (>K:WING_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Wing Ice Lights Off": {
+		"method": "calcCode",
+		"code": "0 (>K:WING_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Beacon Lights  On": {
+		"method": "calcCode",
+		"code": "1 (>K:BEACON_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Beacon Lights Off": {
+		"method": "calcCode",
+		"code": "0 (>K:BEACON_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Strobe Lights On": {
+		"method": "calcCode",
+		"code": "(>K:STROBES_ON)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Strobe Lights Off": {
+		"method": "calcCode",
+		"code": "(>K:STROBES_OFF)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Nav Lights On": {
+		"method": "calcCode",
+		"code": "1 (>K:NAV_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Nav Lghts Off": {
+		"method": "calcCode",
+		"code": "0 (>K:NAV_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Taxi Lights On": {
+		"method": "calcCode",
+		"code": "1 (>K:TAXI_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Taxi Lights Off": {
+		"method": "calcCode",
+		"code": "0 (>K:TAXI_LIGHTS_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Landing Lights Extend": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_LIGHTS_LANDING, enum)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Landing Lights Off": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_LIGHTS_LANDING, enum)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Landing Lights Retract": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_LIGHTS_LANDING, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Pump Left High": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_FUEL_PUMP_LEFT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Pump Left  Off": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_FUEL_PUMP_LEFT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Pump Left  Low": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_FUEL_PUMP_LEFT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Pump Right High": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_FUEL_PUMP_RIGHT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Pump Right Off": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_FUEL_PUMP_RIGHT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Pump Right Low": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_FUEL_PUMP_RIGHT, enum)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Start Left Engine": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_STARTER1)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Start Right Engine": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_STARTER2)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Primer Left": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_PRIMER, enum)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Primer off": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_PRIMER, enum)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Primer Right": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_PRIMER, enum)"
+	},
+	"Milviz.Cessna 310R.Electrical.Input.C310R Left Alt On": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:1, Bool) 0 == if{ 1 (>K:TOGGLE_ALTERNATOR1) }"
+	},
+	"Milviz.Cessna 310R.Electrical.Input.C310R Left Alt Off": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:1, Bool) 1 == if{ 1 (>K:TOGGLE_ALTERNATOR1) }"
+	},
+	"Milviz.Cessna 310R.Electrical.Input.C310R Right Alt On": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:2, Bool) 0 == if{ 1 (>K:TOGGLE_ALTERNATOR2) }"
+	},
+	"Milviz.Cessna 310R.Electrical.Input.C310R Right Alt Off": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:2, Bool) 1 == if{ 1 (>K:TOGGLE_ALTERNATOR2) }"
+	},
+	"Milviz.Cessna 310R.Electrical.Input.C310R Battery On": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, Bool) 0 == if{ 1 (>K:TOGGLE_MASTER_BATTERY) }"
+	},
+	"Milviz.Cessna 310R.Electrical.Input.C310R Battery Off": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, Bool) 1 == if{ 1 (>K:TOGGLE_MASTER_BATTERY) }"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Mag 1 On": {
+		"method": "calcCode",
+		"code": "1 (>A:RECIP ENG LEFT MAGNETO:1, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Mag 1 Off": {
+		"method": "calcCode",
+		"code": "0 (>A:RECIP ENG LEFT MAGNETO:1, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Mag 2 On": {
+		"method": "calcCode",
+		"code": "1 (>A:RECIP ENG RIGHT MAGNETO:1, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Mag 2 Off": {
+		"method": "calcCode",
+		"code": "0 (>A:RECIP ENG RIGHT MAGNETO:1, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Mag 1 On": {
+		"method": "calcCode",
+		"code": "1 (>A:RECIP ENG LEFT MAGNETO:2, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Mag 1 Off": {
+		"method": "calcCode",
+		"code": "0 (>A:RECIP ENG LEFT MAGNETO:2, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Mag 2 On": {
+		"method": "calcCode",
+		"code": "1 (>A:RECIP ENG RIGHT MAGNETO:2, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Mag 2 Off": {
+		"method": "calcCode",
+		"code": "0 (>A:RECIP ENG RIGHT MAGNETO:2, Bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Engine EDM Step Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_EDML_L, bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Engine EDM Step Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_EDML_L, bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Engine EDM LF Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_EDML_R, bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Left Engine EDM LF Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_EDML_R, bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Engine EDM Step Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_EDMR_L, bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Engine EDM Step Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_EDMR_L, bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Engine EDM LF Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_EDMR_R, bool)"
+	},
+	"Milviz.Cessna 310R.Engine.Input.C310R Right Engine EDM LF Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_EDMR_R, bool)"
+	},
+	"Milviz.Cessna 310R.Avionics.Input.C310R Nav 1 Select": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_NAV_SELECTOR, bool)"
+	},
+	"Milviz.Cessna 310R.Avionics.Input.C310R Nav 2 Select": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_NAV_SELECTOR, bool)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Cabin Heat On": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_HEATER, enum)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Cabin Heat Off": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_HEATER, enum)"
+	},
+	"Milviz.Cessna 310R.Anti-Ice.Input.C310R Cabin Heat Fan": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_HEATER, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Gauge Main": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_FUEL_IND, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Gauge Selected": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_FUEL_IND, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Fuel Gauge Aux": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_FUEL_IND, enum)"
+	},
+	"PMDG.B737-700.Engines.Output.PMDG_B737_ENGINE_START_RIGHT_KNOB": {
+		"method": "calcCode",
+		"code": "(L:switch_121_73X, number)"
+	},
+	"PMDG.B737-700.Engines.Output.PMDG_B737_ENGINE_START_LEFT_KNOB": {
+		"method": "calcCode",
+		"code": "(L:switch_119_73X, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737_FLIGHT_DIRECTOR_RIGHT_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:switch_407_73X, number)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737_FLIGHT_DIRECTOR_LEFT_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:switch_378_73X, number)"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737_ENGINE_START_LEFT_LEVER_CUTOFF": {
+		"method": "calcCode",
+		"code": "68802 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737_ENGINE_START_LEFT_LEVER_IDLE": {
+		"method": "calcCode",
+		"code": "68801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737_ENGINE_START_RIGHT_LEVER_CUTOFF": {
+		"method": "calcCode",
+		"code": "68902 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Engines.Input.PMDG_B737_ENGINE_START_RIGHT_LEVER_IDLE": {
+		"method": "calcCode",
+		"code": "68901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Autopilot.Output.PMDG_B737_A/T_ARM_SWITCH": {
+		"method": "calcCode",
+		"code": "(L:switch_380_73X, number)"
+	},
+	"Fly By Wire.A320-Dev.Safety.Input.A32NX_CABIN_SEATBELTS_ALERT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE)"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Flap Position Indicator Left Needle": {
+		"method": "calcCode",
+		"code": "(L:switch_458_73X, number)"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Flap Position Indicator Right Needle": {
+		"method": "calcCode",
+		"code": "(L:switch_4581_73X, number)"
+	},
+	"PMDG.B737-700.Gear.Output.PMDG B737 Brake Press Indicator Needle": {
+		"method": "calcCode",
+		"code": "(L:switch_448_73X, number)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Left Fuel Selector Off": {
+		"method": "calcCode",
+		"code": "3 (>L:C310_SW_FUEL_SEL_LEFT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Left Fuel Selector Left Main": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_FUEL_SEL_LEFT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Left Fuel Selector Left Aux": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_FUEL_SEL_LEFT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Left Fuel Selector Right Main": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_FUEL_SEL_LEFT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Right Fuel Selector Off": {
+		"method": "calcCode",
+		"code": "3 (>L:C310_SW_FUEL_SEL_RIGHT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Right Fuel Selector Right Main": {
+		"method": "calcCode",
+		"code": "2 (>L:C310_SW_FUEL_SEL_RIGHT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Right Fuel Selector Right Aux": {
+		"method": "calcCode",
+		"code": "1 (>L:C310_SW_FUEL_SEL_RIGHT, enum)"
+	},
+	"Milviz.Cessna 310R.Fuel.Input.C310R Right Fuel Selector Left Main": {
+		"method": "calcCode",
+		"code": "0 (>L:C310_SW_FUEL_SEL_RIGHT, enum)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_R_Range_Dec": {
+		"method": "calcCode",
+		"code": "41708 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_R_Range_Inc": {
+		"method": "calcCode",
+		"code": "41707 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_R_Mode_Dec": {
+		"method": "calcCode",
+		"code": "41508 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_R_Mode_Inc": {
+		"method": "calcCode",
+		"code": "41507 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_R_TFC": {
+		"method": "calcCode",
+		"code": "41801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG_B737_EFIS_R_Mode_CTR": {
+		"method": "calcCode",
+		"code": "41601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Alternate Flaps Down Release": {
+		"method": "calcCode",
+		"code": "7501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Alternate Flaps Up Press": {
+		"method": "calcCode",
+		"code": "7502 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Alternate Flaps Up Release": {
+		"method": "calcCode",
+		"code": "7501 (>K:ROTOR_BRAKE)"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input (Potentiometer).Overhead Air Cond Cockpit Selector Knob (Analog)": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min (>L:A32NX_OVHD_COND_CKPT_SELECTOR_KNOB)"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input (Potentiometer).Overhead Air Cond Forward Cabin Selector Knob (Analog)": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min (>L:A32NX_OVHD_COND_FWD_SELECTOR_KNOB)"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input (Potentiometer).Overhead Air Cond Aft Cabin Selector Knob (Analog)": {
+		"method": "calcCode",
+		"code": "@ 3.41 / 0 max 300 min (>L:A32NX_OVHD_COND_AFT_SELECTOR_KNOB)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input (Potentiometer).Overhead Integ Light Set (analog)": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min 86 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_NO_SMOKING_OFF_AUTO_ON_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_OH_SIGNS_SMOKING, Number) ++ 3 % (>L:S_OH_SIGNS_SMOKING, Number)"
+	},
+	"FenixSim.A320.Safety.Input.FNX320_SAFETY_EMER_EXIT_LT_OFF_ARM_ON_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_OH_INT_LT_EMER, Number) ++ 3 % (>L:S_OH_INT_LT_EMER, Number)"
+	},
+	"FenixSim.A320.Navigation.Input.FNX320_OVHD_IR1_KNOB_OFF-NAV-ATT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_IR1_MODE, Number) ++ 3 % (>L:S_OH_NAV_IR1_MODE, Number)"
+	},
+	"Asobo.TBM 930.Avionics.Input.TSC 2 Softkey 1": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_SoftKey_1) \n1 (>O:_ButtonAnimVar) "
+	},
+	"FenixSim.A320.Navigation.Input.FNX320_OVHD_IR2_KNOB_OFF-NAV-ATT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_IR2_MODE, Number) ++ 3 % (>L:S_OH_NAV_IR2_MODE, Number)"
+	},
+	"FenixSim.A320.Navigation.Input.FNX320_OVHD_IR3_KNOB_OFF-NAV-ATT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_OH_NAV_IR3_MODE, Number) ++ 3 % (>L:S_OH_NAV_IR3_MODE, Number)"
+	},
+	"Asobo.TBM 930.Avionics.Input.TSC 2 Softkey 2": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_SoftKey_2) \n1 (>O:_ButtonAnimVar) "
+	},
+	"Asobo.TBM 930.Avionics.Input.TSC 2 Softkey 3": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_SoftKey_3) \n1 (>O:_ButtonAnimVar) "
+	},
+	"Asobo.TBM 930.Avionics.Input.TSC 2 Bottom Knob DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_BottomKnob_Small_DEC)"
+	},
+	"Asobo.TBM 930.Avionics.Input.TSC 2 Bottom Knob INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_BottomKnob_Small_INC)"
+	},
+	"FenixSim.A320.Lights.Input.FNX320_OVHD_ANN_LT_DIM-BRT-TEST_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_OH_IN_LT_ANN_LT, Number) ++ 3 % (>L:S_OH_IN_LT_ANN_LT, Number)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 Act/Stby": {
+		"method": "calcCode",
+		"code": "721001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 Test": {
+		"method": "calcCode",
+		"code": "721101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 Mode Dn": {
+		"method": "calcCode",
+		"code": "721201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 Mode Up": {
+		"method": "calcCode",
+		"code": "721301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 1": {
+		"method": "calcCode",
+		"code": "721401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 2": {
+		"method": "calcCode",
+		"code": "721501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 3": {
+		"method": "calcCode",
+		"code": "721601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 4": {
+		"method": "calcCode",
+		"code": "721701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 5": {
+		"method": "calcCode",
+		"code": "721801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 6": {
+		"method": "calcCode",
+		"code": "721901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 7": {
+		"method": "calcCode",
+		"code": "722001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 8": {
+		"method": "calcCode",
+		"code": "722101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 9": {
+		"method": "calcCode",
+		"code": "722201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 0": {
+		"method": "calcCode",
+		"code": "722301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR1 Clr": {
+		"method": "calcCode",
+		"code": "722401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 Act/Stby": {
+		"method": "calcCode",
+		"code": "722501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 Test": {
+		"method": "calcCode",
+		"code": "722601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 Mode Dn": {
+		"method": "calcCode",
+		"code": "722701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 Mode Up": {
+		"method": "calcCode",
+		"code": "722801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 1": {
+		"method": "calcCode",
+		"code": "722901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 2": {
+		"method": "calcCode",
+		"code": "723001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 3": {
+		"method": "calcCode",
+		"code": "723101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 4": {
+		"method": "calcCode",
+		"code": "723201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 5": {
+		"method": "calcCode",
+		"code": "723401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 6": {
+		"method": "calcCode",
+		"code": "723501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 7": {
+		"method": "calcCode",
+		"code": "723601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 8": {
+		"method": "calcCode",
+		"code": "723701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 9": {
+		"method": "calcCode",
+		"code": "723801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 0": {
+		"method": "calcCode",
+		"code": "723901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR2 Clr": {
+		"method": "calcCode",
+		"code": "724001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 Act/Stby": {
+		"method": "calcCode",
+		"code": "724101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 Test": {
+		"method": "calcCode",
+		"code": "724201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 Mode Dn": {
+		"method": "calcCode",
+		"code": "724301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 Mode Up": {
+		"method": "calcCode",
+		"code": "724401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 1": {
+		"method": "calcCode",
+		"code": "724501 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 2": {
+		"method": "calcCode",
+		"code": "724601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 3": {
+		"method": "calcCode",
+		"code": "724701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 4": {
+		"method": "calcCode",
+		"code": "724801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 5": {
+		"method": "calcCode",
+		"code": "724901 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 6": {
+		"method": "calcCode",
+		"code": "725001 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 7": {
+		"method": "calcCode",
+		"code": "725101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 8": {
+		"method": "calcCode",
+		"code": "725201 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 9": {
+		"method": "calcCode",
+		"code": "725301 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 0": {
+		"method": "calcCode",
+		"code": "725401 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 MMR3 Clr": {
+		"method": "calcCode",
+		"code": "725501 (>K:ROTOR_BRAKE)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_1": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_1) 2 + (>L:S_PED_ATC_1)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_2": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_2) 2 + (>L:S_PED_ATC_2)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_3": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_3) 2 + (>L:S_PED_ATC_3)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_4": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_4) 2 + (>L:S_PED_ATC_4)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_5": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_5) 2 + (>L:S_PED_ATC_5)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_6": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_6) 2 + (>L:S_PED_ATC_6)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_7": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_7) 2 + (>L:S_PED_ATC_7)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_0": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_0) 2 + (>L:S_PED_ATC_0)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_CLR": {
+		"method": "calcCode",
+		"code": "(L:S_PED_ATC_CLR) 2 + (>L:S_PED_ATC_CLR)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_OPERATION_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_XPDR_OPERATION, Number) ++ 3 % (>L:S_XPDR_OPERATION, Number)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_MODE_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:S_XPDR_MODE) ++ 3 % (>L:S_XPDR_MODE)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320_TRANSPONDER_KEY_IDENT": {
+		"method": "calcCode",
+		"code": "(L:S_XPDR_IDENT) 2 + (>L:S_XPDR_IDENT)"
+	},
+	"Fly By Wire.A320-Dev.Fire.Output.Overhead Eng 1 Fire Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_FIRE_TEST_ENG1,bool) (A:ENG ON FIRE:1, bool) or (L:A32NX_OVHD_INTLT_ANN) 0 == or \n(L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED,bool) \n(L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED,bool) or \n(L:A32NX_ELEC_AC_2_BUS_IS_POWERED,bool) or and "
+	},
+	"Fly By Wire.A320-Dev.Fire.Output.Overhead Eng 2 Fire Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_FIRE_TEST_ENG2, bool) (A:ENG ON FIRE:2,  bool) or (L:A32NX_OVHD_INTLT_ANN) 0 == or \n(L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, bool) \n(L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, bool) or \n(L:A32NX_ELEC_AC_2_BUS_IS_POWERED, bool) or and "
+	},
+	"Fly By Wire.A320-Dev.Fire.Output.Overhead APU Fire Button Annunciator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_FIRE_TEST_APU, bool) \n(A:APU ON FIRE DETECTED, bool) or \n(L:A32NX_OVHD_INTLT_ANN) 0 == or \n(L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, bool) \n(L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, bool) or \n(L:A32NX_ELEC_AC_1_BUS_IS_POWERED, bool) or and "
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Flight Instrument Lighting INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_FLT_INST) 5 + 100 min (>L:C310_SW_LIGHTS_FLT_INST) (L:C310_SW_LIGHTS_FLT_INST) (>K:LIGHT_POTENTIOMETER_4_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Flight Instrument Lighting DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_FLT_INST) 5 - 0 max (>L:C310_SW_LIGHTS_FLT_INST) (L:C310_SW_LIGHTS_FLT_INST) (>K:LIGHT_POTENTIOMETER_4_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Radio Lighting INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_RADIO) 5 + 100 min (>L:C310_SW_LIGHTS_RADIO) (L:C310_SW_LIGHTS_RADIO, enum) (>K:LIGHT_POTENTIOMETER_5_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Radio Lighting DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_RADIO) 5 - 0 max (>L:C310_SW_LIGHTS_RADIO) (L:C310_SW_LIGHTS_RADIO, enum) (>K:LIGHT_POTENTIOMETER_5_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Engine Instrument Lighting INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_ENG_INST) 5 + 100 min (>L:C310_SW_LIGHTS_ENG_INST) (L:C310_SW_LIGHTS_ENG_INST, enum) (>K:LIGHT_POTENTIOMETER_6_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Engine Instrument Lighting DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_ENG_INST) 5 - 0 max (>L:C310_SW_LIGHTS_ENG_INST) (L:C310_SW_LIGHTS_ENG_INST, enum) (>K:LIGHT_POTENTIOMETER_6_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Left Switch Panel Lighting INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_SIDE) 5 + 100 min (>L:C310_SW_LIGHTS_SIDE) (L:C310_SW_LIGHTS_SIDE, enum) (>K:LIGHT_POTENTIOMETER_7_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Left Switch Panel Lighting DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_LIGHTS_SIDE) 5 - 0 max (>L:C310_SW_LIGHTS_SIDE) (L:C310_SW_LIGHTS_SIDE, enum) (>K:LIGHT_POTENTIOMETER_7_SET)"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Front Cabin Light INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_FLOOD_CENTER) 5 + 100 min (>L:C310_SW_FLOOD_CENTER) (L:C310_SW_FLOOD_CENTER, enum) (>K:LIGHT_POTENTIOMETER_9_SET) (L:C310_SW_FLOOD_CENTER, enum) if{ (A:CIRCUIT SWITCH ON:53, bool) ! if{ 53 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } }"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Front Cabin Light DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_FLOOD_CENTER) 5 - 0 max (>L:C310_SW_FLOOD_CENTER) (L:C310_SW_FLOOD_CENTER, enum) (>K:LIGHT_POTENTIOMETER_9_SET) (L:C310_SW_FLOOD_CENTER, enum) ! if{ (A:CIRCUIT SWITCH ON:53, bool) if{ 53 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } }"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Forward Cabin Light INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_FLOOD_LEFT) 5 + 100 min (>L:C310_SW_FLOOD_LEFT) (L:C310_SW_FLOOD_LEFT, enum) (>K:LIGHT_POTENTIOMETER_8_SET) (L:C310_SW_FLOOD_LEFT, enum) if{ (A:CIRCUIT SWITCH ON:23, bool) ! if{ 23 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } }"
+	},
+	"Milviz.Cessna 310R.Lights.Input.C310R Forward Cabin Light DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_FLOOD_LEFT) 5 - 0 max (>L:C310_SW_FLOOD_LEFT) (L:C310_SW_FLOOD_LEFT, enum) (>K:LIGHT_POTENTIOMETER_8_SET) (L:C310_SW_FLOOD_LEFT, enum) ! if{ (A:CIRCUIT SWITCH ON:23, bool) if{ 23 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } }"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Window Defrost INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_DEFROST) 5 + 100 min (>L:C310_SW_DEFROST)"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Window Defrost DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_DEFROST) 5 - 0 max (>L:C310_SW_DEFROST)"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Temperature Control INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_TEMP_CONTROL) 5 + 100 min (>L:C310_SW_TEMP_CONTROL)"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Temperature Control DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_TEMP_CONTROL) 5 - 0 max (>L:C310_SW_TEMP_CONTROL)"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Cabin Air Control INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_CABIN_AIR) 5 + 100 min (>L:C310_SW_CABIN_AIR)"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Cabin Air Control DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_CABIN_AIR) 5 - 0 max (>L:C310_SW_CABIN_AIR)"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Forward Cabin Air Control INC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_FWD_CABIN_AIR) 5 + 100 min (>L:C310_SW_FWD_CABIN_AIR)"
+	},
+	"Milviz.Cessna 310R.Air Conditioning / Pressurisation / Ventilation.Input.C310R Forward Cabin Air Control DEC": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_FWD_CABIN_AIR) 5 - 0 max (>L:C310_SW_FWD_CABIN_AIR)"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R AP HDG HOLD": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MASTER, Bool) if{ (>K:AP_PANEL_HEADING_HOLD) }"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R AP NAV HOLD": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MASTER, Bool) if{ (>K:AP_NAV1_HOLD) }"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R AP ALT HOLD": {
+		"method": "calcCode",
+		"code": "(>H:KAP140_PUSH_ALT)"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R Altitude INC +100": {
+		"method": "calcCode",
+		"code": "100 (>K:AP_ALT_VAR_INC)"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C319 Altitude DEC -100": {
+		"method": "calcCode",
+		"code": "100 (>K:AP_ALT_VAR_DEC)"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R Altitude INC +1000": {
+		"method": "calcCode",
+		"code": "1000 (>K:AP_ALT_VAR_INC)"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R Altitude DEC - 1000": {
+		"method": "calcCode",
+		"code": "1000 (>K:AP_ALT_VAR_DEC)"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R APR HOLD": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MASTER, Bool) if{ (>K:AP_APR_HOLD) }"
+	},
+	"Milviz.Cessna 310R.Autopilot.Input.C310R AP ON/OFF": {
+		"method": "calcCode",
+		"code": "(L:C310_SW_AVIONICS) if{ (A:AUTOPILOT DISENGAGED, Bool) ! if{ (>K:AP_MASTER) } }"
+	},
+	"Milviz.Cessna 310R.Controls.Input.Elevator Trim Slow UP": {
+		"method": "calcCode",
+		"code": "(A:ELEVATOR TRIM PCT, Percent) 163.83 * 81.915 + 16383 min (>K:ELEVATOR_TRIM_SET)"
+	},
+	"Milviz.Cessna 310R.Controls.Input.Elevator Trim Slow DOWN": {
+		"method": "calcCode",
+		"code": "(A:ELEVATOR TRIM PCT, Percent) 163.83 * 81.915 - -16383 max (>K:ELEVATOR_TRIM_SET)"
+	},
+	"Milviz.Cessna 310R.Miscellaneous.Input.Pilot Window Shade Up": {
+		"method": "calcCode",
+		"code": "(L:WindowShadeLeft) 0.05 - 0 max (>L:WindowShadeLeft)"
+	},
+	"Milviz.Cessna 310R.Miscellaneous.Input.Pilot Window Shade Down": {
+		"method": "calcCode",
+		"code": "(L:WindowShadeLeft) 0.05 + 1 min (>L:WindowShadeLeft)"
+	},
+	"Milviz.Cessna 310R.Miscellaneous.Input.Copilot Window Shade Down": {
+		"method": "calcCode",
+		"code": "(L:WindowShadeLeft) 0.05 + 1 min (>L:WindowShadeLeft)"
+	},
+	"Milviz.Cessna 310R.Miscellaneous.Input.Copilot Window Shade Up": {
+		"method": "calcCode",
+		"code": "(L:WindowShadeRight) 0.05 - 0 max (>L:WindowShadeRight)"
+	},
+	"Fly By Wire.A320.Autopilot.Input.A320NX_APPR_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_APPR_PUSH)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX Autopilot AP 1 Push": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_AP_1_PUSH)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX Autopilot AP 2 Push": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_AP_2_PUSH)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX Autopilot ATHR Push": {
+		"method": "calcCode",
+		"code": "(>K:AUTO_THROTTLE_ARM)"
+	},
+	"Microsoft.Generic.Anti-Ice.Input (Potentiometer).Carb Heat Slider": {
+		"method": "calcCode",
+		"code": "@ 255 - 16383 0 255 - / * 0 max 16383 min (>K:ANTI_ICE_GRADUAL_SET_ENG1)"
+	},
+	"PMDG.B737-700.Engines.Output.PMDG_B737_IGNITION SELECT Switch": {
+		"method": "calcCode",
+		"code": "(L:switch_120_73X, number)"
+	},
+	"Carenado.M20R OVATION.Flight Instrumentation.Output.Standby Vacuum Pump ": {
+		"method": "calcCode",
+		"code": "(L:M20R_SWITCH_STANDBY_VACUUM)"
+	},
+	"Just Flight.Piper Arrow III.Autopilot.Input.AutoPilot Mode Increase": {
+		"method": "calcCode",
+		"code": "(L:AUTOPILOT_mode) ++ (>L:AUTOPILOT_mode)"
+	},
+	"Just Flight.Piper Arrow III.Autopilot.Input.AutoPilot Mode Decrease": {
+		"method": "calcCode",
+		"code": "(L:AUTOPILOT_mode) -- (>L:AUTOPILOT_mode)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG B737 SELCAL HF1": {
+		"method": "calcCode",
+		"code": "93701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.Input.PMDG B737 SELCAL HF2": {
+		"method": "calcCode",
+		"code": "93801 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Autopilot.Input.PMDGDC6_AP_NEUTRAL": {
+		"method": "calcCode",
+		"code": "95701 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Lights.Input.PMDGDC6_PositionLights": {
+		"method": "calcCode",
+		"code": "Steady - onPress: 4008 (>K:ROTOR_BRAKE) onRelease: 4007 (>K:ROTOR_BRAKE)\nFlashing - onPress: 4007 (>K:ROTOR_BRAKE) onRelease: 04008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Fuel.Input.PMDGDC6_FUEL_TANK_SELECTOR_1": {
+		"method": "calcCode",
+		"code": "OFF onPress: 52008 (>K:ROTOR_BRAKE) onRelease: 52007 (>K:ROTOR_BRAKE)\nMAIN onPress: 52007 (>K:ROTOR_BRAKE) onRelease: 52008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Fuel.Input.PMDGDC6_FUEL_TANK_SELECTOR_2": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 52108 (>K:ROTOR_BRAKE) onRelease: 52107 (>K:ROTOR_BRAKE)\nMAIN - onPress: 52107 (>K:ROTOR_BRAKE) onRelease: 52108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Fuel.Input.PMDGDC6_FUEL_TANK_SELECTOR_3": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 52208 (>K:ROTOR_BRAKE) onRelease: 52207 (>K:ROTOR_BRAKE)\nMAIN - onPress: 52207 (>K:ROTOR_BRAKE) onRelease: 52208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Fuel.Input.PMDGDC6_FUEL_TANK_SELECTOR_4": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 52308 (>K:ROTOR_BRAKE) onRelease: 52307 (>K:ROTOR_BRAKE)\nMAIN - onPress: 52307 (>K:ROTOR_BRAKE) onRelease: 52308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_MIXTURE_1": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 40008 (>K:ROTOR_BRAKE) onRelease: 40007 (>K:ROTOR_BRAKE)\nRICH - onPress: 40007 (>K:ROTOR_BRAKE) onRelease 40008 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_MIXTURE_2": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 40108 (>K:ROTOR_BRAKE) onRelease: 40107 (>K:ROTOR_BRAKE)\nRICH - onPress: 40107 (>K:ROTOR_BRAKE) onRelease 40108 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_MIXTURE_3": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 40208 (>K:ROTOR_BRAKE) onRelease: 40207 (>K:ROTOR_BRAKE)\nRICH - onPress: 40207 (>K:ROTOR_BRAKE) onRelease 40208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_MIXTURE_4": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 40308 (>K:ROTOR_BRAKE) onRelease: 40307 (>K:ROTOR_BRAKE)\nRICH - onPress: 40307 (>K:ROTOR_BRAKE) onRelease 40308 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_XFEED_LEFT": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 53907 (>K:ROTOR_BRAKE) onRelease: 53908 (>K:ROTOR_BRAKE)\nALL - onPress: 53908 (>K:ROTOR_BRAKE) onRelease: 53907 (>K:ROTOR_BRAKE)\n"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_XFEED_RIGHT": {
+		"method": "calcCode",
+		"code": "OFF - onPress: 54007 (>K:ROTOR_BRAKE) onRelease: 54008 (>K:ROTOR_BRAKE)\nALL - onPress: 54008 (>K:ROTOR_BRAKE) onRelease: 54007 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_WATER_INJECTION_1": {
+		"method": "calcCode",
+		"code": "onPress: 2301 (>K:ROTOR_BRAKE) onRelease: 2301 (>:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_WATER_INJECTION_2": {
+		"method": "calcCode",
+		"code": "onPress: 2401 (>K:ROTOR_BRAKE) onRelease: 2401 (>:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_WATER_INJECTION_3": {
+		"method": "calcCode",
+		"code": "onPress: 2501 (>K:ROTOR_BRAKE) onRelease: 2501 (>:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Engines.Input.PMDGDC6_WATER_INJECTION_4": {
+		"method": "calcCode",
+		"code": "onPress: 2601 (>K:ROTOR_BRAKE) onRelease: 2601 (>:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Lights.Input.PMDGDC6_LANDING_LIGHTS_POSITION": {
+		"method": "calcCode",
+		"code": "Extend - onPress: 12208 (>K:ROTOR_BRAKE) onRelease: 12207 (>K:ROTOR_BRAKE)\nRetract - onPress: 12207 (>K:ROTOR_BRAKE) onRelease: 12208 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Lights.Input.PMDGDC6_LANDING_LIGHTS": {
+		"method": "calcCode",
+		"code": "onPress: 12101 (>K:ROTOR_BRAKE) onRelease: 12101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 1 (CA) VHF1": {
+		"method": "calcCode",
+		"code": "(L:switch_9041_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 1 (CA) VHF2": {
+		"method": "calcCode",
+		"code": "(L:switch_9042_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 1 (CA) VHF3": {
+		"method": "calcCode",
+		"code": "(L:switch_9043_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 1 (CA) HF1": {
+		"method": "calcCode",
+		"code": "(L:switch_9044_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 1 (CA) AM": {
+		"method": "calcCode",
+		"code": "(L:switch_9045_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 1 (CA) HF2": {
+		"method": "calcCode",
+		"code": "(L:switch_9046_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 COM Unit 1 (CA) Multi Select  LED": {
+		"method": "calcCode",
+		"code": "(L:switch_720_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 2 (FO) VHF1": {
+		"method": "calcCode",
+		"code": "(L:switch_926_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 2 (FO) VHF2": {
+		"method": "calcCode",
+		"code": "(L:switch_928_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 2 (FO) VHF3": {
+		"method": "calcCode",
+		"code": "(L:switch_930_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 2 (FO) HF1": {
+		"method": "calcCode",
+		"code": "(L:switch_932_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 2 (FO) AM": {
+		"method": "calcCode",
+		"code": "(L:switch_934_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 2 (FO) HF2": {
+		"method": "calcCode",
+		"code": "(L:switch_936_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 3 (FO) VHF1": {
+		"method": "calcCode",
+		"code": "(L:switch_955_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 3 (FO) VHF2": {
+		"method": "calcCode",
+		"code": "(L:switch_957_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 3 (FO) VHF3": {
+		"method": "calcCode",
+		"code": "(L:switch_959_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 3 (FO) HF1": {
+		"method": "calcCode",
+		"code": "(L:switch_961_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 3 (FO) AM": {
+		"method": "calcCode",
+		"code": "(L:switch_963_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 3 (FO) HF2": {
+		"method": "calcCode",
+		"code": "(L:switch_965_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 COM Unit 3 (FO) Multi Select": {
+		"method": "calcCode",
+		"code": "(L:switch_965_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 SELCAL VHF1": {
+		"method": "calcCode",
+		"code": "(L:switch_939_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 SELCAL VHF2": {
+		"method": "calcCode",
+		"code": "(L:switch_940_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 SELCAL VHF3": {
+		"method": "calcCode",
+		"code": "(L:switch_941_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 SELCAL HF1": {
+		"method": "calcCode",
+		"code": "(L:switch_942_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.PMDG B737 SELCAL HF2": {
+		"method": "calcCode",
+		"code": "(L:switch_943_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 COM Unit 1 (CA) Offside tuning light": {
+		"method": "calcCode",
+		"code": "(L:switch_720_73X, number) 0 >"
+	},
+	"Fly By Wire.A320-Dev.EFIS.Output.EFIS R CSTR 2 Active": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_R_OPTION, enum) 1 =="
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_WIPER_CAPT_DEC": {
+		"method": "calcCode",
+		"code": "(L:S_MISC_WIPER_CAPT) -- 0 max (>L:S_MISC_WIPER_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_WIPER_CAPT_INC": {
+		"method": "calcCode",
+		"code": "(L:S_MISC_WIPER_CAPT) ++ 2 min (>L:S_MISC_WIPER_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_WIPER_FO_DEC": {
+		"method": "calcCode",
+		"code": "(L:S_MISC_WIPER_FO) -- 0 max (>L:S_MISC_WIPER_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_WIPER_FO_INC": {
+		"method": "calcCode",
+		"code": "(L:S_MISC_WIPER_FO) ++ 2 min (>L:S_MISC_WIPER_FO)"
+	},
+	"Microsoft.Generic.Controls.Input.RUDDER TRIM LEFT": {
+		"method": "calcCode",
+		"code": "(>K:RUDDER_TRIM_LEFT)"
+	},
+	"Microsoft.Generic.Controls.Input.RUDDER TRIM RIGHT": {
+		"method": "calcCode",
+		"code": "(>K:RUDDER_TRIM_RIGHT)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320 OH Elec Bat1 Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_BAT1) ! (>L:S_OH_ELEC_BAT1) \n1 (>L:S_OH_ELEC_BAT1_Anim)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320 OH Elec Bat1 Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_BAT1) 0 == if{ 0 (>L:S_OH_ELEC_BAT1_Anim) } \n(L:S_OH_ELEC_BAT1) 1 == if{ 2 (>L:S_OH_ELEC_BAT1_Anim) }"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320 OH Elec Bat2 Press": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_BAT2) ! (>L:S_OH_ELEC_BAT2) \n1 (>L:S_OH_ELEC_BAT2_Anim)"
+	},
+	"FenixSim.A320.Electrical.Input.FNX320 OH Elec Bat2 Release": {
+		"method": "calcCode",
+		"code": "(L:S_OH_ELEC_BAT2) 0 == if{ 0 (>L:S_OH_ELEC_BAT2_Anim) } \n(L:S_OH_ELEC_BAT2) 1 == if{ 2 (>L:S_OH_ELEC_BAT2_Anim) }"
+	},
+	"Hype Performance Group.H145.Avionics.Input.H145 AVIONICS 1 ON": {
+		"method": "calcCode",
+		"code": "1 (>K:AVIONICS_MASTER_1_SET)"
+	},
+	"Hype Performance Group.H145.Avionics.Input.H145 AVIONICS 2 ON": {
+		"method": "calcCode",
+		"code": "1 (>K:AVIONICS_MASTER_2_SET)"
+	},
+	"Hype Performance Group.H145.Avionics.Input.H145 AVIONICS 2 OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:AVIONICS_MASTER_2_SET)"
+	},
+	"Hype Performance Group.H145.Avionics.Input.H145 AVIONICS 1 OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:AVIONICS_MASTER_1_SET)"
+	},
+	"Hype Performance Group.H145.Electrical.Input.(DISCONTINUED) H145_SDK_OH_STANDBY_BATTERY ON": {
+		"method": "calcCode",
+		"code": "1 (>K:H145_SDK_OH_STANDBY_BATTERY_SET)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot ALT Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_ALT)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot HDG Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_HDG)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot VNAV Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_VNAV)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot V/L Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_VL)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot BLOC Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_BLOC)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot TURB Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_TURB)"
+	},
+	"Just Flight.BAE146.Autopilot.Input.Autopilot LNAV Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_LNAV)"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot VNAV Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_VNAV_i, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot VL Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_VL_il, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot TURB Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_TURB_il, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot GSL Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_GSL_il, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Autopilot.Output.Autopilot BLOC Indication": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_BLOC_il, bool) if{ 1 } els{ 0 }"
+	},
+	"Just Flight.BAE146.Navigation.Output.NAV1 Course": {
+		"method": "calcCode",
+		"code": "(L:MCP_NAV1_dig1, number) 100 * (L:MCP_NAV1_dig2, number) 10 * + (L:MCP_NAV1_dig3, number) +"
+	},
+	"Just Flight.BAE146.Navigation.Output.NAV2 Course": {
+		"method": "calcCode",
+		"code": "(L:MCP_NAV2_dig1, number) 100 * (L:MCP_NAV2_dig2, number) 10 * + (L:MCP_NAV2_dig3, number) +"
+	},
+	"Working Title.CJ4.Air Condition / Pressurization.Output.Pilot fan": {
+		"method": "calcCode",
+		"code": "(L:PASSENGER_KNOB_AIR_1)"
+	},
+	"Working Title.CJ4.Air Condition / Pressurization.Output.Climate Control": {
+		"method": "calcCode",
+		"code": "(L:CLIMATE_CONTROL) "
+	},
+	"Just Flight.BAE146.Autopilot System.Input.Autopilot ALT SEL Increment": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_sel_knob) ++ (>L:MCP_Alt_sel_knob)"
+	},
+	"Just Flight.BAE146.Autopilot System.Input.Autopilot ALT SEL Decrement": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_sel_knob) -- (>L:MCP_Alt_sel_knob)"
+	},
+	"Flysimware.Cessna 414A.Electrical.Input.C414A_Master_Battery_Toggle": {
+		"method": "calcCode",
+		"code": "(L:ELECTRICAL_Switch_Battery_Master,Bool) ! (>L:ELECTRICAL_Switch_Battery_Master,Bool) \n(L:ELECTRICAL_Switch_Battery_Master,Bool) 0 == (A:BUS CONNECTION ON:6,Bool) 1 == and \nif{ 6 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }\n(L:ELECTRICAL_Switch_Battery_Master,Bool) 1 == (A:BUS CONNECTION ON:6,Bool) 0 == and \nif{ 6 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }\n(L:ELECTRICAL_Switch_Battery_Master,Bool) 1 == (L:MASTER_BAR,Bool) 0 == and \nif{ 1 (>L:MASTER_BAR,Bool) }"
+	},
+	"Flysimware.Cessna 414A.Electrical.Input.C414A_Alternator_Left_Toggle": {
+		"method": "calcCode",
+		"code": "(L:ALTERNATOR_LEFT,Bool) 1 == (A:GENERAL ENG MASTER ALTERNATOR:1, Bool) 1 == and \nif{ (>K:TOGGLE_ALTERNATOR1) }\n(L:ALTERNATOR_LEFT,Bool) 0 == (A:GENERAL ENG MASTER ALTERNATOR:1, Bool) 0 == and \nif{ (>K:TOGGLE_ALTERNATOR1) }\n(L:ALTERNATOR_LEFT,Bool) ! (>L:ALTERNATOR_LEFT,Bool) \n1 (>L:MASTER_BAR,Bool)\n"
+	},
+	"Flysimware.Cessna 414A.Electrical.Input.C414A_Alternator_Right_Toggle": {
+		"method": "calcCode",
+		"code": "(L:ALTERNATOR_RIGHT,Bool) 1 == (A:GENERAL ENG MASTER ALTERNATOR:2, Bool) 1 == and \nif{ (>K:TOGGLE_ALTERNATOR2) }\n(L:ALTERNATOR_RIGHT,Bool) 0 == (A:GENERAL ENG MASTER ALTERNATOR:2, Bool) 0 == and \nif{ (>K:TOGGLE_ALTERNATOR2) }\n(L:ALTERNATOR_RIGHT,Bool) ! (>L:ALTERNATOR_RIGHT,Bool)\n1 (>L:MASTER_BAR,Bool)\n"
+	},
+	"Fly By Wire.A320-Dev.Radio.Input.A32NX_RMP_L_VHF1_BUTTON_PRESSED": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_RMP_L_VHF1_BUTTON_PRESSED)"
+	},
+	"Microsoft.Generic.Miscellaneous.Output.Blinking LED Medium": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME, second) 2 * near 2 %"
+	},
+	"Microsoft.Generic.Miscellaneous.Output.Blinking LED Slow": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME, second) near 2 % "
+	},
+	"Microsoft.Generic.Miscellaneous.Output.Blinking LED Fast": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME, second) 3 * near 2 %"
+	},
+	"Just Flight.BAE146.Warning.Input.Master Warning System - Amber Button": {
+		"method": "calcCode",
+		"code": "1 (>L:L_COAMING_MWS_Amber)"
+	},
+	"Just Flight.BAE146.Warning.Input.Master Warning System - Red Button": {
+		"method": "calcCode",
+		"code": "1 (>L:L_COAMING_MWS_Red)"
+	},
+	"Just Flight.BAE146.Warning.Output.Master Warning System - Red Light": {
+		"method": "calcCode",
+		"code": "(L:L_COAMING_MWS_Red_il)"
+	},
+	"Just Flight.BAE146.Warning.Output.Master Warning System - Amber Light": {
+		"method": "calcCode",
+		"code": "(L:L_COAMING_MWS_Amber_il)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Outer Knob 2": {
+		"method": "calcCode",
+		"code": "0 (L:switch_466_73X) - 10 div s0\n:1\nl0 0 > if{ 46607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Outer Knob 1": {
+		"method": "calcCode",
+		"code": "10 (L:switch_466_73X) - 10 div s0\n:1\nl0 0 > if{ 46607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Outer Knob Auto": {
+		"method": "calcCode",
+		"code": "20 (L:switch_466_73X) - 10 div s0\n:1\nl0 0 > if{ 46607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 N1 Set Outer Knob Both": {
+		"method": "calcCode",
+		"code": "30 (L:switch_466_73X) - 10 div s0\n:1\nl0 0 > if{ 46607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Spd Ref Outer Knob SET": {
+		"method": "calcCode",
+		"code": "0 (L:switch_464_73X) - 10 div s0\n:1\nl0 0 > if{ 46407 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Spd Ref Outer Knob AUTO": {
+		"method": "calcCode",
+		"code": "10 (L:switch_464_73X) - 10 div s0\n:1\nl0 0 > if{ 46407 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Spd Ref Outer Knob V1": {
+		"method": "calcCode",
+		"code": "20 (L:switch_464_73X) - 10 div s0\n:1\nl0 0 > if{ 46407 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Spd Ref Outer Knob VR": {
+		"method": "calcCode",
+		"code": "30 (L:switch_464_73X) - 10 div s0\n:1\nl0 0 > if{ 46407 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Spd Ref Outer Knob WT": {
+		"method": "calcCode",
+		"code": "40 (L:switch_464_73X) - 10 div s0\n:1\nl0 0 > if{ 46407 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Spd Ref Outer Knob VREF": {
+		"method": "calcCode",
+		"code": "50 (L:switch_464_73X) - 10 div s0\n:1\nl0 0 > if{ 46407 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Spd Ref Outer Knob BUG": {
+		"method": "calcCode",
+		"code": "60 (L:switch_464_73X) - 10 div s0\n:1\nl0 0 > if{ 46407 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 46408 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 FD Switch Capt On": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_FDLeft,bool) ! if{ 37801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 FD Switch Capt Off": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_FDLeft,bool) if{ 37801 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 FD Switch FO On": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_FDRight,bool) ! if{ 40701 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 FD Switch FO Off": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_FDRight,bool) if{ 40701 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 MCP AT Switch On": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_ATArm,bool) ! if{ 38001  (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG B737 MCP AT Switch Off": {
+		"method": "calcCode",
+		"code": "(L:ngx_MCP_ATArm,bool) if{ 38001  (>K:ROTOR_BRAKE) }"
+	},
+	"Microsoft.Generic.Avionics.Input.BAROMETRIC STD PRESSURE": {
+		"method": "calcCode",
+		"code": "(>K:BAROMETRIC_STD_PRESSURE)"
+	},
+	"SimWorks Studios.Kodiak 100.Fuel.Input.Kodiak 100 Firewall Fuel Cutoff On": {
+		"method": "calcCode",
+		"code": "1 (>K:SET_FUEL_VALVE_ENG1)"
+	},
+	"SimWorks Studios.Kodiak 100.Fuel.Input.Kodiak 100 Firewall Fuel Cutoff Off": {
+		"method": "calcCode",
+		"code": "0 (>K:SET_FUEL_VALVE_ENG1)"
+	},
+	"PMDG.B737-700.Electrical.Output.PMDG B737 Ovhd Master Battery Switch": {
+		"method": "calcCode",
+		"code": "(L:switch_01_73X) 0 >"
+	},
+	"WB Sim.Cessna 172 analog.Avionics.Input.C172-analog-transponder-inc": {
+		"method": "calcCode",
+		"code": "(L:172X_XPNDR_KNOB, Number) 4 < if{\n  (L:172X_XPNDR_KNOB, Number) 1 + (>L:172X_XPNDR_KNOB, Number)\n}"
+	},
+	"WB Sim.Cessna 172 analog.Avionics.Input.C172-analog-transponder-dec": {
+		"method": "calcCode",
+		"code": "(L:172X_XPNDR_KNOB, Number) 0 > if{\n  (L:172X_XPNDR_KNOB, Number) 1 - (>L:172X_XPNDR_KNOB, Number)\n}"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L MINS KNOB BARO": {
+		"method": "calcCode",
+		"code": "(L:swtich_356_73X) 0 == if{ 35601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L MINS KNOB RADIO": {
+		"method": "calcCode",
+		"code": "(L:swtich_356_73X) 0 != if{ 35601 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R MINS KNOB BARO": {
+		"method": "calcCode",
+		"code": "(L:swtich_412_73X) 0 == if{ 41201 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R MINS KNOB RADIO": {
+		"method": "calcCode",
+		"code": "(L:swtich_412_73X) 0 != if{ 41201 (>K:ROTOR_BRAKE) }"
+	},
+	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_STANDBY_BATTERY_ON": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_STANDBY_BATTERY_ON)"
+	},
+	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_STANDBY_BATTERY_OFF": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_STANDBY_BATTERY_OFF)"
+	},
+	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_PITOT_1_ON": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_PITOT_1_ON)"
+	},
+	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_PITOT_1_OFF": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_PITOT_1_OFF)"
+	},
+	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_PITOT_2_ON": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_PITOT_2_ON)"
+	},
+	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_PITOT_2_OFF": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_PITOT_2_OFF)"
+	},
+	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_COCKPIT_LIGHT_REAR_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_COCKPIT_LIGHT_REAR_TOGGLE)"
+	},
+	"Hype Performance Group.H145.Lights.Input.H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL_DAY": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL_DAY)"
+	},
+	"Hype Performance Group.H145.Lights.Input.H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL_NIGHT": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL_NIGHT)"
+	},
+	"Hype Performance Group.H145.Lights.Input.H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL_NVG": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_OH_INT_LIGHT_INSTRUMENT_PANEL_NVG)"
+	},
+	"Hype Performance Group.H145.Lights.Input.H145_SDK_MASTERBRIGHTNESS_INC": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_MASTERBRIGHTNESS_INC)"
+	},
+	"Hype Performance Group.H145.Lights.Input.H145_SDK_MASTERBRIGHTNESS_DEC": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_MASTERBRIGHTNESS_DEC)"
+	},
+	"Hype Performance Group.H145.Engines.Input.H145_SDK_ECP_MAIN_1_UP": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_ECP_MAIN_1_UP)"
+	},
+	"Hype Performance Group.H145.Engines.Input.H145_SDK_ECP_MAIN_1_DOWN": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_ECP_MAIN_1_DOWN)"
+	},
+	"Hype Performance Group.H145.Engines.Input.H145_SDK_ECP_MAIN_2_UP": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_ECP_MAIN_2_UP)"
+	},
+	"Hype Performance Group.H145.Engines.Input.H145_SDK_ECP_MAIN_2_DOWN": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_ECP_MAIN_2_DOWN)"
+	},
+	"Hype Performance Group.H145.Miscellaneous.Input.H145_SDK_TABLET_OPENCLOSE": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_TABLET_OPENCLOSE)"
+	},
+	"PMDG.B737-700.Autopilot.Input.PMDG_B737_MCP_A/T_TOGGLE": {
+		"method": "calcCode",
+		"code": "38001  (>K:ROTOR_BRAKE)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).CP-PFD brightness-DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:88,percent) 5 - 0 max 88 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).CP-PFD brightness-INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:88,percent) 5 + 100 min 88 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).FO- PFD Brightness-DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:90,percent) 5 - 0 max 90 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).FO- PFD Brightness-INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:90,percent) 5 + 100 min 90 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).CP-MFD brightness-DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:89,percent) 5 - 0 max 89 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).CP-MFD brightness-INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:89,percent) 5 + 100 min 89 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).FO-MFD brightness-DEC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:91,percent) 5 - 0 max 91 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Fly By Wire.A320.Avionics.Input (Potentiometer).FO-MFD brightness-INC": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:91,percent) 5 + 100 min 91 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 1 Switch On": {
+		"method": "calcCode",
+		"code": "1 (A:CIRCUIT SWITCH ON:39, Bool) != \nif{ 39 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:39, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
+	},
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 1 Switch Off": {
+		"method": "calcCode",
+		"code": "0 (A:CIRCUIT SWITCH ON:39, Bool) != \nif{ 39 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:39, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
+	},
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 2 Switch On": {
+		"method": "calcCode",
+		"code": "1 (A:CIRCUIT SWITCH ON:40, Bool) != \nif{ 40 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:40, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
+	},
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 2 Switch Off": {
+		"method": "calcCode",
+		"code": "0 (A:CIRCUIT SWITCH ON:40, Bool) != \nif{ 40 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:40, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
+	},
+	"Asobo.Cessna 172 Classic.Avionics.Input.C172N Airspeed True Calibrator Knob Inc": {
+		"method": "calcCode",
+		"code": "(A:AIRSPEED TRUE CALIBRATE, degrees) ++ 30 min (>A:AIRSPEED TRUE CALIBRATE, degrees)"
+	},
+	"Asobo.Cessna 172 Classic.Avionics.Input.C172N Airspeed True Calibrator Knob Dec": {
+		"method": "calcCode",
+		"code": "(A:AIRSPEED TRUE CALIBRATE, degrees) -- 0 max (>A:AIRSPEED TRUE CALIBRATE, degrees)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Fuel Flow Switch Release": {
+		"method": "calcCode",
+		"code": "46804 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Fuel Flow Switch Reset": {
+		"method": "calcCode",
+		"code": "46802 (>K:ROTOR_BRAKE)"
+	},
+	"Microsoft.Generic.Electrical.Output.BATTERY CONNECTION ON": {
+		"method": "calcCode",
+		"code": "(A:BATTERY CONNECTION ON, Bool)"
+	},
+	"Microsoft.Generic.Electrical.Output.BATTERY BREAKER PULLED": {
+		"method": "calcCode",
+		"code": "(A:BATTERY BREAKER PULLED, Bool)"
+	},
+	"Microsoft.Generic.Electrical.Output.ELECTRICAL BATTERY ESTIMATED CAPACITY PCT": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL BATTERY ESTIMATED CAPACITY PCT, Percent)"
+	},
+	"Fly By Wire.A320-Dev.Electrical.Output.A32NX ELEC BAT1 VOLTAGE": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ELEC_BAT_1_POTENTIAL, number)"
+	},
+	"Fly By Wire.A320-Dev.Electrical.Output.A32NX ELEC BAT2 VOLTAGE": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ELEC_BAT_2_POTENTIAL, number)"
+	},
+	"Microsoft.Generic.Gear.Input.ANTISKID BRAKES TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:ANTISKID_BRAKES_TOGGLE)"
+	},
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_CRS2_PRESSED": {
+		"method": "calcCode",
+		"code": "(A:HEADING INDICATOR, degrees) sp0 (L:WT_CJ4_LNAV_MODE, Number) 2 == if{ \n\t l0 (>K:VOR2_SET) \n} els{ \n\t l0 (>K:VOR1_SET) }"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Output.A32NX_SPD_MACH_MODE_DISPLAY": {
+		"method": "calcCode",
+		"code": "(>LSPDLEDON)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.Autopilot airspeed indication": {
+		"method": "calcCode",
+		"code": "(L:md_ipc_ap_spd)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.Autopilot heading indication": {
+		"method": "calcCode",
+		"code": "(L:md_ipc_ap_hdg)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.Autopilot altitude indication": {
+		"method": "calcCode",
+		"code": "(L:md_ipc_ap_alt)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.Autopilot vertical speed indication": {
+		"method": "calcCode",
+		"code": "(L:md_ipc_ap_vs)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.Nav 1 course indication": {
+		"method": "calcCode",
+		"code": "(L:md_ipc_nav1_course)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Output.Nav 2 course indication": {
+		"method": "calcCode",
+		"code": "(L:md_ipc_nav2_course)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_NAV1_CRS_DEC_KNOB": {
+		"method": "calcCode",
+		"code": "8192 2 + (>L:NAV1_event,number)"
+	},
+	"Leonardo.MadDog MD-82.Autopilot.Input.MD82_FGCP_NAV1_CRS_INC_KNOB": {
+		"method": "calcCode",
+		"code": "16384 2 + (>L:NAV1_event,number)"
+	},
+	"Working Title.CJ4.Autopilot.Input.WT CJ4 AP Disengage Bar Up": {
+		"method": "calcCode",
+		"code": "1 (>K:AUTOPILOT_DISENGAGE_SET)"
+	},
+	"Working Title.CJ4.Autopilot.Input.WT CJ4 AP Disengage Bar Down": {
+		"method": "calcCode",
+		"code": "0 (>K:AUTOPILOT_DISENGAGE_SET)"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 2 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2241_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 1 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2242_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 4 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2243_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 3 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2244_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 2 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2245_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 1 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2246_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 1 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2247_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 2 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2248_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 3 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2249_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 4 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2250_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 1 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2251_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 2 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2252_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 4 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2253_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 3 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2254_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 2 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2255_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 1 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2256_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 3 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2257_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 4 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2258_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 5 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2259_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 6 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2260_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 7 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2261_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 8 Extended": {
+		"method": "calcCode",
+		"code": "(L:switch_2262_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 8 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2263_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 7 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2264_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 6 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2265_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 5 Mid": {
+		"method": "calcCode",
+		"code": "(L:switch_2266_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 3 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2267_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Flaps 4 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2268_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 5 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2269_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 6 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2270_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 7 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2271_73X,number) 0 >"
+	},
+	"PMDG.B737-700.Controls.Output.PMDG B737 Ovhd LE Dev Slats 8 Transit": {
+		"method": "calcCode",
+		"code": "(L:switch_2272_73X,number) 0 >"
+	},
+	"Microsoft.Generic.Avionics.Input.AS1000_PFD_VOL_1_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_PFD_VOL_1_INC)"
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_CAPT_TAKEOVER_PB_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FC_CAPT_INST_DISCONNECT) ++ (>L:S_FC_CAPT_INST_DISCONNECT) "
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_CAPT_TAKEOVER_PB_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FC_CAPT_INST_DISCONNECT) ++ (>L:S_FC_CAPT_INST_DISCONNECT) "
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FO_TAKEOVER_PB_PUSH": {
+		"method": "calcCode",
+		"code": "(L:S_FC_FO_INST_DISCONNECT) ++ (>L:S_FC_FO_INST_DISCONNECT) "
+	},
+	"FenixSim.A320.Flight Controls.Input.FNX320_FC_FO_TAKEOVER_PB_RELEASE": {
+		"method": "calcCode",
+		"code": "(L:S_FC_FO_INST_DISCONNECT) ++ (>L:S_FC_FO_INST_DISCONNECT) "
+	},
+	"M Gharib.HJET HA420.Autopilot.Output.HA420 AP ALT VAR": {
+		"method": "calcCode",
+		"code": "(L:HJET_AP_ALT_VAR,Number)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Output.HA420 AP VS HOLD VAR": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD VAR,Feet/minute)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Output.HA420 AP AIRSPEED HOLD VAR": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT AIRSPEED HOLD VAR,Knots)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Output.HA420 AP HEADING LOCK DIR": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT HEADING LOCK DIR,Degrees)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP HEADING KNOB DEC": {
+		"method": "calcCode",
+		"code": "1 (>K:HEADING_BUG_DEC)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP HEADING KNOB INC": {
+		"method": "calcCode",
+		"code": "1 (>K:HEADING_BUG_INC)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP ALT KNOB DEC": {
+		"method": "calcCode",
+		"code": "(L:HJET_AP_ALT_VAR,number) 100 - (>L:HJET_AP_ALT_VAR,number)\n(>H:AP_KNOB_Up)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP ALT KNOB INC": {
+		"method": "calcCode",
+		"code": "(L:HJET_AP_ALT_VAR,number) 100 + (>L:HJET_AP_ALT_VAR,number) \n(>H:AP_KNOB_Up)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP SPEED KNOB DEC": {
+		"method": "calcCode",
+		"code": "(>K:AP_SPD_VAR_DEC)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP SPEED KNOB INC": {
+		"method": "calcCode",
+		"code": "(>K:AP_SPD_VAR_INC)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP VS KNOB DEC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD VAR, feet/minute) 100 - (>K:AP_VS_SET)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP VS KNOB INC": {
+		"method": "calcCode",
+		"code": "(>K:AP_VS_VAR_INC)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP VS BUTTON": {
+		"method": "calcCode",
+		"code": "(L:VS_Pushed,bool) ! (>L:VS_Pushed)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP SPEED BUTTON": {
+		"method": "calcCode",
+		"code": "(L:FLC_Pushed,bool) ! (>L:FLC_Pushed)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP ALT HOLD BUTTON": {
+		"method": "calcCode",
+		"code": "(L:VNAV_Armed,bool) ! (>L:VNAV_Armed)\n(L:XMLVAR_VNAVButtonValue,bool) ! (>L:XMLVAR_VNAVButtonValue)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP HEADING BUTTON": {
+		"method": "calcCode",
+		"code": "(L:HDG_Pushed,bool) ! (>L:HDG_Pushed)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP CSC BUTTON": {
+		"method": "calcCode",
+		"code": "(L:CSC Pushed,bool) ! (>L:CSC Pushed)"
+	},
+	"M Gharib.HJET HA420.Autopilot.Input.HA420 AP CO BUTTON": {
+		"method": "calcCode",
+		"code": "(>K:AP_MANAGED_SPEED_IN_MACH_TOGGLE) \n(L:XMLVAR_AirSpeedIsInMach,bool) ! (>L:XMLVAR_AirSpeedIsInMach)"
+	},
+	"FenixSim.A320.Gear.Input.FNX320 MainPanel Brake Fan Button Press": {
+		"method": "calcCode",
+		"code": "(L:S_MIP_BRAKE_FAN) ! (>L:S_MIP_BRAKE_FAN) \n1 (>L:S_MIP_BRAKE_FAN_Anim) "
+	},
+	"FenixSim.A320.Gear.Input.FNX320 MainPanel Brake Fan Button Release": {
+		"method": "calcCode",
+		"code": "(L:S_MIP_BRAKE_FAN) 0 == if{ 0 (>L:S_MIP_BRAKE_FAN_Anim) } \n(L:S_MIP_BRAKE_FAN) 1 == if{ 2 (>L:S_MIP_BRAKE_FAN_Anim) } "
+	},
+	"Carenado.C170B.Lights.Input (Potentiometer).C170B_PANEL_LIGHT_SET": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min s0 \n(>K:2:PANEL_LIGHTS_SET) \nl0 3 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Carenado.C170B.Lights.Input.C170B_MAP_LIGHT_ON": {
+		"method": "calcCode",
+		"code": "3 1 (>K:2:CABIN_LIGHTS_SET) "
+	},
+	"Carenado.C170B.Lights.Input.C170B_MAP_LIGHT_OFF": {
+		"method": "calcCode",
+		"code": "3 0 (>K:2:CABIN_LIGHTS_SET) "
+	},
+	"Carenado.C170B.Lights.Input.C170B_RED_CABIN_LIGHT_ON": {
+		"method": "calcCode",
+		"code": "1 1 (>K:2:CABIN_LIGHTS_SET) "
+	},
+	"Carenado.C170B.Lights.Input.C170B_RED_CABIN_LIGHT_OFF": {
+		"method": "calcCode",
+		"code": "1 0 (>K:2:CABIN_LIGHTS_SET) "
+	},
+	"Carenado.C170B.Lights.Input.C170B_WHITE_CABIN_LIGHT_ON": {
+		"method": "calcCode",
+		"code": "2 1 (>K:2:CABIN_LIGHTS_SET) "
+	},
+	"Carenado.C170B.Lights.Input.C170B_WHITE_CABIN_LIGHT_OFF": {
+		"method": "calcCode",
+		"code": "2 0 (>K:2:CABIN_LIGHTS_SET) "
+	},
+	"Carenado.C170B.Lights.Input.C170B_MAP_LIGHT_TOGGLE": {
+		"method": "calcCode",
+		"code": "3 (>K:TOGGLE_CABIN_LIGHTS)"
+	},
+	"Carenado.C170B.Lights.Input.C170B_RED_CABIN_LIGHT_TOGGLE": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_CABIN_LIGHTS)"
+	},
+	"Carenado.C170B.Lights.Input.C170B_WHITE_CABIN_LIGHT_TOGGLE": {
+		"method": "calcCode",
+		"code": "2 (>K:TOGGLE_CABIN_LIGHTS)"
+	},
+	"Asobo.XCub.Lights.Output.XCUB_PLACARDS_VALUE": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:3, Percent)"
+	},
+	"Asobo.XCub.Lights.Input.XCUB_PLACARDS_DIMMER": {
+		"method": "calcCode",
+		"code": "@ s0 (>L:LIGHTING_PANEL_1) l0 3 (>K:2:LIGHT_POTENTIOMETER_SET) "
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 Eng 2 Fire Warn/Disch Handle Up": {
+		"method": "calcCode",
+		"code": "699101 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R VOR/ADF VOR1": {
+		"method": "calcCode",
+		"code": "0 (L:switch_414_73X) - 50 div s0\n:1\nl0 0 > if{ 41401 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 41402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R VOR/ADF OFF": {
+		"method": "calcCode",
+		"code": "50 (L:switch_414_73X) - 50 div s0\n:1\nl0 0 > if{ 41401 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 41402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R VOR/ADF ADF1": {
+		"method": "calcCode",
+		"code": "100 (L:switch_414_73X) - 50 div s0\n:1\nl0 0 > if{ 41401 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 41402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L VOR2/ADF2 OFF": {
+		"method": "calcCode",
+		"code": "50 (L:switch_368_73X) - 50 div s0\n:1\nl0 0 > if{ 36801 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 36802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L VOR2/ADF2 ADF2": {
+		"method": "calcCode",
+		"code": "100 (L:switch_368_73X) - 50 div s0\n:1\nl0 0 > if{ 36801 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 36802 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R VOR2/ADF2 VOR2": {
+		"method": "calcCode",
+		"code": "0 (L:switch_424_73X) - 50 div s0\n:1\nl0 0 > if{ 42401 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 42402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R VOR2/ADF2 OFF": {
+		"method": "calcCode",
+		"code": "50 (L:switch_424_73X) - 50 div s0\n:1\nl0 0 > if{ 42401 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 42402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R VOR2/ADF2 ADF2": {
+		"method": "calcCode",
+		"code": "100 (L:switch_424_73X) - 50 div s0\n:1\nl0 0 > if{ 42401 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 42402 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"Working Title.CJ4.Autopilot.Output.WT CJ4 AP Airspeed Is in Mach": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach, Bool)"
+	},
+	"Fly By Wire.A320-Dev.EFIS.Input.A32NX_EFIS_TERR_L_ACTIVE": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_TERR_L_ACTIVE,bool) ! (>L:A32NX_EFIS_TERR_L_ACTIVE)"
+	},
+	"Fly By Wire.A320-Dev.EFIS.Input.A32NX_EFIS_TERR_R_ACTIVE": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_TERR_R_ACTIVE,bool) ! (>L:A32NX_EFIS_TERR_R_ACTIVE)"
+	},
+	"Fly By Wire.A320-Dev.EFIS.Output.A32NX_EFIS_TERR_R_ACTIVE": {
+		"method": "calcCode",
+		"code": "L:A32NX_EFIS_TERR_R_ACTIVE"
+	},
+	"Fly By Wire.A320-Dev.EFIS.Output.A32NX_EFIS_TERR_L_ACTIVE": {
+		"method": "calcCode",
+		"code": "L:A32NX_EFIS_TERR_L_ACTIVE"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX Autobrake Max Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_AUTOBRK_MAX_ON_IS_PRESSED, bool)"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX Autobrake Max Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_AUTOBRK_MAX_ON_IS_PRESSED, bool)"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX Autobrake Med Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_AUTOBRK_MED_ON_IS_PRESSED, bool)"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX Autobrake Med Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_AUTOBRK_MED_ON_IS_PRESSED, bool)"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX Autobrake Lo Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_AUTOBRK_LOW_ON_IS_PRESSED, bool)"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX Autobrake Lo Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_AUTOBRK_LOW_ON_IS_PRESSED, bool)"
+	},
+	"Carenado.C170B.Interaction.C170B_DOOR_PILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(A:INTERACTIVE POINT GOAL:0, percent over 100) 0 == \nif{ 1 (>A:INTERACTIVE POINT GOAL:0, percent over 100) } \nels{ 0 (>A:INTERACTIVE POINT GOAL:0, percent over 100) }"
+	},
+	"Carenado.C170B.Interaction.C170B_DOOR_COPILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(A:INTERACTIVE POINT GOAL:1, percent over 100) 0 == \nif{ 1 (>A:INTERACTIVE POINT GOAL:1, percent over 100) } \nels{ 0 (>A:INTERACTIVE POINT GOAL:1, percent over 100) }"
+	},
+	"Carenado.C170B.Interaction.C170B_WINDOW_PILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(A:INTERACTIVE POINT GOAL:3, percent over 100) 0 == \nif{ 1 (>A:INTERACTIVE POINT GOAL:3, percent over 100) } \nels{ 0 (>A:INTERACTIVE POINT GOAL:3, percent over 100) }"
+	},
+	"Carenado.C170B.Interaction.C170B_WINDOW_COPILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(A:INTERACTIVE POINT GOAL:4, percent over 100) 0 == \nif{ 1 (>A:INTERACTIVE POINT GOAL:4, percent over 100) } \nels{ 0 (>A:INTERACTIVE POINT GOAL:4, percent over 100) }"
+	},
+	"Carenado.C170B.Interaction.C170B_DOOR_PILOT_OPEN": {
+		"method": "calcCode",
+		"code": "1 (>A:INTERACTIVE POINT GOAL:0, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_DOOR_PILOT_CLOSE": {
+		"method": "calcCode",
+		"code": "0 (>A:INTERACTIVE POINT GOAL:0, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_DOOR_COPILOT_OPEN": {
+		"method": "calcCode",
+		"code": "1 (>A:INTERACTIVE POINT GOAL:1, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_DOOR_COPILOT_CLOSE": {
+		"method": "calcCode",
+		"code": "0 (>A:INTERACTIVE POINT GOAL:1, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_WINDOW_PILOT_OPEN": {
+		"method": "calcCode",
+		"code": "1 (>A:INTERACTIVE POINT GOAL:3, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_WINDOW_PILOT_CLOSE": {
+		"method": "calcCode",
+		"code": "0 (>A:INTERACTIVE POINT GOAL:3, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_WINDOW_COPILOT_OPEN": {
+		"method": "calcCode",
+		"code": "1 (>A:INTERACTIVE POINT GOAL:4, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_WINDOW_COPILOT_CLOSE": {
+		"method": "calcCode",
+		"code": "0 (>A:INTERACTIVE POINT GOAL:4, percent over 100)"
+	},
+	"Carenado.C170B.Interaction.C170B_SUNVISOR_PILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:SUNVISOR1, number) 0 == \nif{ 1 (>L:SUNVISOR1, number) } \nels{ 0 (>L:SUNVISOR1, number) }"
+	},
+	"Carenado.C170B.Interaction.C170B_SUNVISOR_COPILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:SUNVISOR2, number) 0 == \nif{ 1 (>L:SUNVISOR2, number) } \nels{ 0 (>L:SUNVISOR2, number) }"
+	},
+	"Carenado.C170B.Fuel.C170B_FUEL_SELECTOR_BOTH_ON": {
+		"method": "calcCode",
+		"code": "16 (>K:FUEL_SELECTOR_SET)"
+	},
+	"Carenado.C170B.Fuel.C170B_FUEL_SELECTOR_LEFT_TANK": {
+		"method": "calcCode",
+		"code": "2 (>K:FUEL_SELECTOR_SET)"
+	},
+	"Carenado.C170B.Fuel.C170B_FUEL_SELECTOR_RIGHT_TANK": {
+		"method": "calcCode",
+		"code": "3 (>K:FUEL_SELECTOR_SET)"
+	},
+	"Carenado.C170B.Fuel.C170B_FUEL_SELECTOR_BOTH_OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:FUEL_SELECTOR_SET)"
+	},
+	"Carenado.C170B.Fuel.C170B_FUEL_SELECTOR_INC": {
+		"method": "calcCode",
+		"code": "(A:FUEL TANK SELECTOR:1, Enum) s0 0 == \nif{ 2 (>K:FUEL_SELECTOR_SET) } \nels{ l0 2 == if{ 16 (>K:FUEL_SELECTOR_SET) } els{ l0 16 == if{ 3 (>K:FUEL_SELECTOR_SET) } els{ 0 (>K:FUEL_SELECTOR_SET) } } }"
+	},
+	"Carenado.C170B.Fuel.C170B_FUEL_SELECTOR_DEC": {
+		"method": "calcCode",
+		"code": "(A:FUEL TANK SELECTOR:1, Enum) s0 0 == \nif{ 3 (>K:FUEL_SELECTOR_SET) } \nels{ l0 3 == if{ 16 (>K:FUEL_SELECTOR_SET) } els{ l0 16 == if{ 2 (>K:FUEL_SELECTOR_SET) } els{ 0 (>K:FUEL_SELECTOR_SET) } } }"
+	},
+	"Carenado.C170B.Lights.C170B_LIGHTS_LANDING_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:LANDING_LIGHTS_TOGGLE)"
+	},
+	"Carenado.C170B.Lights.C170B_LIGHTS_BEACON_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_BEACON_LIGHTS)"
+	},
+	"Carenado.C170B.Lights.C170B_LIGHTS_NAVIGATION_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_NAV_LIGHTS)"
+	},
+	"Carenado.C170B.Engines.C170B_MIXTURE_SET": {
+		"method": "calcCode",
+		"code": "@ 16.0147 * 0 max 16383 min (>K:MIXTURE_SET)"
+	},
+	"Carenado.C170B.Engines.C170B_THROTTLE_SET": {
+		"method": "calcCode",
+		"code": "@ 16.0147 * 0 max 16383 min (>K:THROTTLE_SET)"
+	},
+	"Carenado.C170B.Gear.C170B_PARKING_BRAKE_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:PARKING_BRAKES)"
+	},
+	"Carenado.C170B.Electrical.C170B_BATTERY_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_MASTER_BATTERY)"
+	},
+	"Carenado.C170B.Avionics.C170B_RADIO_POWER_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_AVIONICS_MASTER)"
+	},
+	"Carenado.C170B.Fuel.C170B_PRIMER_PULL": {
+		"method": "calcCode",
+		"code": "1 (>L:XMLVAR_PUSH_PRIMER_BTN)"
+	},
+	"Carenado.C170B.Interaction.C170B_AIR_VENT_PILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:SWITCH_DUMMY_WINDOWS, Bool) 0 == if{ 1 (>L:SWITCH_DUMMY_WINDOWS) } els{ 0 (>L:SWITCH_DUMMY_WINDOWS) }"
+	},
+	"Carenado.C170B.Interaction.C170B_AIR_VENT_COPILOT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:SWITCH_DUMMY_AIR_TEMP, Bool) 0 == if{ 1 (>L:SWITCH_DUMMY_AIR_TEMP) } els{ 0 (>L:SWITCH_DUMMY_AIR_TEMP) }"
+	},
+	"Carenado.C170B.Avionics.C170B_GPS_VISIBILITY_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:GPS_VIS, Bool) 0 == if{ 1 (>L:GPS_VIS) } els{ 0 (>L:GPS_VIS) }"
+	},
+	"Carenado.C170B.Engines.C170B_MAGNETO_OFF": {
+		"method": "calcCode",
+		"code": "(>K:MAGNETO_OFF)"
+	},
+	"Carenado.C170B.Engines.C170B_MAGNETO_RIGHT": {
+		"method": "calcCode",
+		"code": "(>K:MAGNETO_RIGHT)"
+	},
+	"Carenado.C170B.Engines.C170B_MAGNETO_LEFT": {
+		"method": "calcCode",
+		"code": "(>K:MAGNETO_LEFT)"
+	},
+	"Carenado.C170B.Engines.C170B_MAGNETO_BOTH": {
+		"method": "calcCode",
+		"code": "(>K:MAGNETO1_BOTH)"
+	},
+	"Carenado.C170B.Engines.C170B_STARTER_PULL": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_STARTER1)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_IDENT": {
+		"method": "calcCode",
+		"code": "1 (>L:XMLVAR_CUSTOM_TRANSPONDER_TEST)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_1_INC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_1_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_1_DEC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_1_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_10_INC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_10_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_10_DEC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_10_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_100_INC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_100_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_100_DEC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_100_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_1000_INC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_1000_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_1000_DEC": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_1000_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_OFF": {
+		"method": "calcCode",
+		"code": "0 (>A:TRANSPONDER STATE:1, Enum)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_SBY": {
+		"method": "calcCode",
+		"code": "1 (>A:TRANSPONDER STATE:1, Enum)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_ON": {
+		"method": "calcCode",
+		"code": "3 (>A:TRANSPONDER STATE:1, Enum)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_ALT": {
+		"method": "calcCode",
+		"code": "4 (>A:TRANSPONDER STATE:1, Enum)"
+	},
+	"Carenado.C170B.Radio.C170B_TRANSPONDER_TST": {
+		"method": "calcCode",
+		"code": "2 (>A:TRANSPONDER STATE:1, Enum)"
+	},
+	"Carenado.C170B.Radio.C170B_COM_VOLUME_INC": {
+		"method": "calcCode",
+		"code": "(>K:COM1_VOLUME_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_COM_VOLUME_DEC": {
+		"method": "calcCode",
+		"code": "(>K:COM1_VOLUME_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_COM_FREQUENCY_FRACT_INC": {
+		"method": "calcCode",
+		"code": "(>K:COM_RADIO_FRACT_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_COM_FREQUENCY_FRACT_DEC": {
+		"method": "calcCode",
+		"code": "(>K:COM_RADIO_FRACT_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_COM_FREQUENCY_WHOLE_INC": {
+		"method": "calcCode",
+		"code": "(>K:COM_RADIO_WHOLE_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_COM_FREQUENCY_WHOLE_DEC": {
+		"method": "calcCode",
+		"code": "(>K:COM_RADIO_WHOLE_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_COM_STBY_SWAP": {
+		"method": "calcCode",
+		"code": "(>K:COM_STBY_RADIO_SWAP)"
+	},
+	"Carenado.C170B.Radio.C170B_NAV_FREQUENCY_FRACT_INC": {
+		"method": "calcCode",
+		"code": "(>K:NAV1_RADIO_FRACT_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_NAV_FREQUENCY_FRACT_DEC": {
+		"method": "calcCode",
+		"code": "(>K:NAV1_RADIO_FRACT_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_NAV_FREQUENCY_WHOLE_INC": {
+		"method": "calcCode",
+		"code": "(>K:NAV1_RADIO_WHOLE_INC)"
+	},
+	"Carenado.C170B.Radio.C170B_NAV_FREQUENCY_WHOLE_DEC": {
+		"method": "calcCode",
+		"code": "(>K:NAV1_RADIO_WHOLE_DEC)"
+	},
+	"Carenado.C170B.Radio.C170B_NAV_STBY_SWAP": {
+		"method": "calcCode",
+		"code": "(>K:NAV1_RADIO_SWAP)"
+	},
+	"Carenado.C170B.Flight Instrumentation.C170B_BAROMETER_INC": {
+		"method": "calcCode",
+		"code": "(>K:KOHLSMAN_INC)"
+	},
+	"Carenado.C170B.Flight Instrumentation.C170B_BAROMETER_DEC": {
+		"method": "calcCode",
+		"code": "(>K:KOHLSMAN_DEC)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_HEIGHT_SWITCH_DOWN": {
+		"method": "calcCode",
+		"code": "0 (>L:S_SEAT_HEIGHT_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_HEIGHT_SWITCH_DOWN_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_HEIGHT_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_HEIGHT_SWITCH_UP": {
+		"method": "calcCode",
+		"code": "2 (>L:S_SEAT_HEIGHT_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_HEIGHT_SWITCH_UP_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_HEIGHT_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_DISTANCE_SWITCH_FORWARD": {
+		"method": "calcCode",
+		"code": "0 (>L:S_SEAT_DISTANCE_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_DISTANCE_SWITCH_FORWARD_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_DISTANCE_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_DISTANCE_SWITCH_BACKWARDS": {
+		"method": "calcCode",
+		"code": "2 (>L:S_SEAT_DISTANCE_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_CAPT_DISTANCE_SWITCH_BACKWARDS_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_DISTANCE_CAPT)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_HEIGHT_SWITCH_DOWN": {
+		"method": "calcCode",
+		"code": "0 (>L:S_SEAT_HEIGHT_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_HEIGHT_SWITCH_DOWN_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_HEIGHT_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_HEIGHT_SWITCH_UP": {
+		"method": "calcCode",
+		"code": "2 (>L:S_SEAT_HEIGHT_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_HEIGHT_SWITCH_UP_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_HEIGHT_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_DISTANCE_SWITCH_FORWARD": {
+		"method": "calcCode",
+		"code": "0 (>L:S_SEAT_DISTANCE_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_DISTANCE_SWITCH_FORWARD_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_DISTANCE_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_DISTANCE_SWITCH_BACKWARDS": {
+		"method": "calcCode",
+		"code": "2 (>L:S_SEAT_DISTANCE_FO)"
+	},
+	"FenixSim.A320.Miscellaneous.Input.FNX320_SEAT_FO_DISTANCE_SWITCH_BACKWARDS_STOP": {
+		"method": "calcCode",
+		"code": "1 (>L:S_SEAT_DISTANCE_FO)"
+	},
+	"Flysimware.Cessna 414A.Electrical.Input.C414A Master Electrical Bar Toggle ": {
+		"method": "calcCode",
+		"code": "(L:MASTER_BAR,Bool) ! (>L:MASTER_BAR,Bool) \n0 (>L:ALTERNATOR_LEFT,Bool) 0 (>L:ALTERNATOR_RIGHT,Bool)\n(L:MASTER_BAR,Bool) 0 == (A:BUS CONNECTION ON:6,Bool) 1 == and \n  if{ ( 6 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } \n(L:MASTER_BAR,Bool) 0 == (L:ELECTRICAL_Switch_Battery_Master,Bool) 1 == and if{ 0 (>L:ELECTRICAL_Switch_Battery_Master,Bool)  }\n(L:MASTER_BAR,Bool) 0 == (A:GENERAL ENG MASTER ALTERNATOR:1,Bool) 1 == and if{ (>K:TOGGLE_ALTERNATOR1) }\n(L:MASTER_BAR,Bool) 0 == (A:GENERAL ENG MASTER ALTERNATOR:2,Bool) 1 == and if{ (>K:TOGGLE_ALTERNATOR2 }\n"
 	}
 }
