@@ -1,5 +1,5 @@
 <!--
-Button that can be toggled and shows the current value
+Button that can be toggled between two states and shows the current value
 -->
 <template>
 	<div @click="clicked" :class="'instrument toggleable inline-block' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
@@ -7,8 +7,8 @@ Button that can be toggled and shows the current value
 			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
 				<span v-html="label"></span>
 			</div>
-			<div class="val" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')" :data-internal-value="dataStore.state[method]?.[refName]?.internalValue">
-				<span v-html="dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
+			<div class="val" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
+				<span v-html="dataStore.state[readMethod]?.[readRefName]?.valueHtml ?? dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
 			</div>
 		</div>
 	</div>
@@ -18,12 +18,20 @@ Button that can be toggled and shows the current value
 module.exports = {
 	props: [
 		'method', 'refName', 'label', 'dataStore', 'eventHandlers',  //required
+		'readMethod', 'readRefName',  //optional
 		'setValue', 'options',  //optional
 	],
 	methods: {
 		clicked(event) {  //NOTE: can NOT use arrow functions, then "this" wouldn't be bound (https://v3.vuejs.org/guide/data-methods.html#methods)
 			let p = this.$props;
-			p.eventHandlers.singleClick(event, p.method, p.refName, p.dataStore.state[p.method]?.[p.refName]?.internalValue, p.setValue, p.options);
+			p.eventHandlers.singleClick(
+				event,
+				p.method,
+				p.refName,
+				p.dataStore.state[p.readMethod]?.[p.readRefName]?.internalValue ?? p.dataStore.state[p.method]?.[p.refName]?.internalValue,
+				p.setValue,
+				p.options,
+			);
 		},
 	},
 }

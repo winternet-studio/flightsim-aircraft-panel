@@ -59,6 +59,7 @@ if (UserFsuipc) {
 var debug = true;
 var connection;
 var simControls = null;
+var storedPanelConfig = {};  //for holding panel specific configuration
 
 var audioObj = document.createElement('audio');
 audioObj.src = 'media/one-click.wav';
@@ -111,7 +112,7 @@ if (!urlParams.has('config')) {
 	 */
 	const eventHandlers = {
 		singleClick: (event, method, refName, currInternalValue, newInternalValue, options) => {
-			console.log('Single click: '+ method +':'+ refName);
+			console.log('Single click: '+ method +':'+ JSON.stringify(refName));
 			if (!options) options = {};
 
 			if (options.defectWrite) return false;
@@ -122,15 +123,16 @@ if (!urlParams.has('config')) {
 			}
 
 			// Handle click
-			var newValue, offsetsData;
+			var newValue, offsetsData, inputOptions;
 
 			if (method === 'offset') {
 				// Direct writing to offsets
+				inputOptions = storedPanelConfig?.offset[refName]?.inputOptions ?? offsetMap[refName];
 
-				if (typeof offsetMap[refName] === 'undefined') {
-					Common.showError('Offset name '+ refName +' was not found in the map.', {timeout: 6000});
+				if (typeof inputOptions === 'undefined') {
+					Common.showError('Offset name '+ JSON.stringify(refName) +' was not found in the map.', {timeout: 6000});
 					return;
-				} else if (offsetMap[refName].type === 'bits') {
+				} else if (inputOptions.type === 'bits') {
 					// a value that is a given bit in an offset
 
 					// find the new value
@@ -138,9 +140,9 @@ if (!urlParams.has('config')) {
 
 					offsetsData = [
 						{
-							name: offsetMap[refName].address,
+							name: inputOptions.address,
 							value: [
-								{ bit: offsetMap[refName].bit, value: newValue },
+								{ bit: inputOptions.bit, value: newValue },
 							],
 						},
 					];
@@ -148,8 +150,8 @@ if (!urlParams.has('config')) {
 					// regular offset
 					if (newInternalValue != null) {
 						newValue = newInternalValue;
-					} else if (typeof offsetMap[refName].toggleValues !== 'undefined') {
-						newValue = Common.getNextToggleValue(offsetMap[refName].toggleValues, currInternalValue);
+					} else if (inputOptions?.toggleValues) {
+						newValue = Common.getNextToggleValue(inputOptions.toggleValues, currInternalValue);
 					} else {
 						console.error('Dont know how to determine new value for offset name '+ refName + '.');
 					}
@@ -169,10 +171,11 @@ if (!urlParams.has('config')) {
 				}
 
 			} else if (method === 'lVar') {
+				inputOptions = storedPanelConfig?.lVar[refName]?.inputOptions ?? lVarOptions[refName];
 				if (newInternalValue != null) {
 					newValue = newInternalValue;
-				} else if (typeof lVarOptions[refName].toggleValues !== 'undefined') {
-					newValue = Common.getNextToggleValue(lVarOptions[refName].toggleValues, currInternalValue);
+				} else if (inputOptions.toggleValues) {
+					newValue = Common.getNextToggleValue(inputOptions.toggleValues, currInternalValue);
 				} else {
 					console.error('Dont know how to determine new value for lVar name '+ refName + '.');
 				}
@@ -202,7 +205,18 @@ if (!urlParams.has('config')) {
 				});
 
 			} else if (method === 'presetCommand') {
-				sendPresetCommand(refName);
+				if (typeof refName === 'object') {
+					// Complex type where we need to determine which command to send based on what the current value is, eg.: {0: 'FNX320_LIGHT_RWY_TURNOFF_OFF', 1: 'FNX320_LIGHT_RWY_TURNOFF_ON'}
+					newValue = Common.getNextToggleValue(Object.keys(refName), currInternalValue);
+					if (typeof refName[newValue] !== 'undefined') {
+						sendPresetCommand(refName[newValue]);
+					} else {
+						Common.showError('Missing present command to be sent for the internal value of '+ newValue +'. Only these are available: '+ JSON.stringify(refName));
+					}
+				} else {
+					// Simple type where refName is just a string
+					sendPresetCommand(refName);
+				}
 
 			} else if (method === 'hVar') {
 				var theHVar = refName;
@@ -238,9 +252,9 @@ if (!urlParams.has('config')) {
 			// Handle click
 			var refProps, newValue;
 			if (method === 'offset') {
-				refProps = offsetMap[refName];
+				refProps = storedPanelConfig?.offset[refName]?.inputOptions ?? offsetMap[refName];
 			} else if (method === 'lVar') {
-				refProps = lVarOptions[refName];
+				refProps = storedPanelConfig?.lVar[refName]?.inputOptions ?? lVarOptions[refName];
 			}
 
 			if (typeof refProps.validValues !== 'undefined') {
@@ -329,9 +343,9 @@ if (!urlParams.has('config')) {
 			if (self.knobTouchRuntime.mechanism == 'range') {
 				var refProps;
 				if (method === 'offset') {
-					refProps = offsetMap[refName];
+					refProps = storedPanelConfig?.offset[refName]?.inputOptions ?? offsetMap[refName];
 				} else if (method === 'lVar') {
-					refProps = lVarOptions[refName];
+					refProps = storedPanelConfig?.lVar[refName]?.inputOptions ?? lVarOptions[refName];
 				}
 				if (typeof refProps.min === 'undefined' || typeof refProps.max === 'undefined') {
 					Common.showError('The '+ method +' '+ refName + ' is missing its min/max values.'); return;
@@ -470,14 +484,22 @@ if (!urlParams.has('config')) {
 			eventHandlers.knobTouchRuntime = {};
 		},
 
-		aircraftInited: (aircraftValues) => {
+		aircraftInited: (panelValues) => {
 			console.log('Aircraft panel initializing...');
-			connection = new FsuipcConnection( (Config && Config.fsuipcUrl ? Config.fsuipcUrl : 'ws://localhost:2048/fsuipc'), aircraftPanelId, aircraftValues, offsetMap, function(method, refName, internalValue) {
+			storedPanelConfig = panelValues;
+			connection = new FsuipcConnection( (Config && Config.fsuipcUrl ? Config.fsuipcUrl : 'ws://localhost:2048/fsuipc'), aircraftPanelId, panelValues, offsetMap, function(method, refName, internalValue) {
 				// Convert the final value to its HTML representation
 				var valueHtml;
-				if (typeof aircraftValues[method][refName] == 'string') {
-					// The string is the name of a method in FsuipcHtml
-					var htmlMethod = aircraftValues[method][refName];
+
+				if (typeof panelValues[method][refName] == 'string' || typeof panelValues[method][refName] == 'function') {  //convert shorthand to standard object
+					panelValues[method][refName] = {
+						toHtml: panelValues[method][refName],
+					};
+				}
+
+				if (typeof panelValues[method][refName].toHtml == 'string') {
+					// The string is the name of a method in FsuipcHtml (or UserFsuipcHtml)
+					var htmlMethod = panelValues[method][refName].toHtml;
 					if (typeof FsuipcHtml[htmlMethod] !== 'undefined') {
 						valueHtml = FsuipcHtml[htmlMethod](internalValue);
 					} else if (typeof UserFsuipcHtml[htmlMethod] !== 'undefined') {
@@ -485,8 +507,9 @@ if (!urlParams.has('config')) {
 					} else {
 						Common.showError('Failed to find method named '+ method +':'+ refName +' to convert value to HTML representation.');
 					}
-				} else if (typeof aircraftValues[method][refName] == 'function') {
-					valueHtml = aircraftValues[method][refName](internalValue);
+				} else if (typeof panelValues[method][refName].toHtml == 'function') {
+					// A function defined directly in the aircraft panel file
+					valueHtml = panelValues[method][refName].toHtml(internalValue);
 				}
 
 				dataStore.setStoreValue(method, refName, internalValue, valueHtml);

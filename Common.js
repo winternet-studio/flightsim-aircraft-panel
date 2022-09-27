@@ -4,7 +4,9 @@
 export default class Common {
 
 	static getNextToggleValue(toggleValues, currentValue) {
-		var currIndx = toggleValues.indexOf(currentValue);
+		// var currIndx = toggleValues.indexOf(currentValue);  //is type sensitive, therefore we cannot use it since toggleValues might be either [0, 1] or ['0', '1'] (since Object.keys() always return strings), and currentValue might just be an integer (see https://stackoverflow.com/questions/70388534/is-indexof-type-sensitive-in-javascript)
+		var currIndx = toggleValues.findIndex(e => e == currentValue);
+
 		if (currIndx < toggleValues.length - 1 && currIndx !== -1) {
 			return toggleValues[currIndx + 1];
 		} else {

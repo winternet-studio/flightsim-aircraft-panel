@@ -88,7 +88,7 @@ export default class Fsuipc {
 	/**
 	 * Options for common LVars
 	 *
-	 * `toggleValues`, `validValues`, `min`, `max`, `step` must be based on the internal converted values, not the raw values coming from FSUIPC
+	 * For the value, see documentation on `inputOptions` on the object being passed to eventHandlers.aircraftInited().
 	 *
 	 * @return {object}
 	 */

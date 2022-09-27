@@ -18,6 +18,14 @@ You're welcome to take a look at my online services at [aviation.allanville.com]
 - [FSUIPC7](http://fsuipc.com/) (free)
 - [FSUIPC WebSocket Server](http://fsuipcwebsockets.paulhenty.com/) (free)
 
+### Tech Stack
+
+- HTML/CSS
+- Javascript
+- Vue.js 3 (standalone script, no build step => Node.js not needed)
+- Bootstrap 5
+- Some utility scripts in PHP
+
 ## What is this?
 
 The idea is to have a touch screen with a browser window where you can easily click buttons, turn knobs etc in your aircraft
@@ -71,12 +79,66 @@ JUST INCOMPLETE NOTES SO FAR.
 
 | Method value | Description | refName examples | Other attributes used |
 |--------------|-----|------|------|
-| offset | FSUIPC offsets, defined in map() in Fsuipc.js | pitotHeat | |
-| lVar | WASM LVars, defined in lVarOptions() in Fsuipc.js | AS1000\_MFD\_Brightness |  |
+| offset | FSUIPC offsets, defined in map() in Fsuipc.js | `pitotHeat` | |
+| lVar | WASM LVars, defined in lVarOptions() in Fsuipc.js | `AS1000_MFD_Brightness` |  |
 | hVar | WASM HVars | AS1000\_PFD\_RANGE\_INC |  |
-| simControl | Native sim control, defined in /databases/MsfsControlsList.txt | MASTER\_WARNING\_ACKNOWLEDGE | setValue="0" |
-| presetCommand | MobiFlight presets from HubHop, defined in /databases/MobiFlightHubHopPresets.js. Can be extended or overwritten by our own presets defined in presetCommands() in Fsuipc.js. | Asobo.Cessna 172.Autopilot.C\_172\_AP <br><br> autoSetAltimeter | |
-| calcCode | Execute WASM "Calculator Code" | 25 (>K:ELECTRICAL\_CIRCUIT\_TOGGLE) 2 (>K:ELECTRICAL\_BUS\_TO\_BUS\_CONNECTION\_TOGGLE) | |
+| simControl | Native sim control, defined in /databases/MsfsControlsList.txt | `MASTER_WARNING_ACKNOWLEDGE` | `setValue="0"` |
+| presetCommand | MobiFlight presets from HubHop, defined in /databases/MobiFlightHubHopPresets.js.<br>Can be extended or overwritten by our own presets defined in presetCommands() in Fsuipc.js. | `refName="Asobo.Cessna 172.Autopilot.C_172_AP"` <br><br> `refName="autoSetAltimeter"` <br><br> Use two different presets for the toggle (note the colon before refName!):<br>`:refName="{0: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_OFF', 1: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_ON'}"`<br>0 and 1 are the internal converted values, not necessarily the raw values coming from FSUIPC. | |
+| calcCode | Execute WASM "Calculator Code" | `25 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)` | |
+
+All methods can be used for setting values (input), but only offsets and LVars can be used for monitoring values (output).
+
+#### Setup of the aircraft
+
+All values that are going to be displayed (output) for this aircraft must be defined in the setup function of the aircraft panel,
+specifically in the object passed to `aircraftInited()`.
+
+For offsets, the key is the name from map() in Fsuipc.js.
+For LVars, the key is the actual LVar name (usually specific to the aircraft).
+
+The value determine how the value is being displayed on the panel, it can be:
+
+- An object with these possible keys:
+	- `toHtml` : A string or function:
+		- A string, in which case it refers to a method in `FsuipcHtml` which holds commonly used formatting. They will return HTML.
+		- A function that will format and return HTML - which is defined within the setup() function. Used for aircraft-specific formatting.
+	- `inputOptions`: One of these objects (where the values must be based on the internal converted values, not necessarily the raw values coming from FSUIPC):
+		- `{toggleValues: [3, 1] }` : Toggle between these values
+		- `{validValues: [0, 1, 2, 3, 4] }` : A list of valid values
+		- `{min: 0, max: 100, step: 5}` : The minimum and maximum allowed values. `step` is optional and defaults to 1.
+- A string or function can be used as a shorthand for just specifying the `toHtml` value that we would have specified if we had provided an object.
+
+For example:
+
+```
+	setup(props) {
+		function flapsHtml(value) {
+			if (value == 0) {
+				return '<span class="cdarkgray">UP</span>';
+			} else if (value < 8300) {
+				return 'TAKEOFF';
+			} else {
+				return 'DOWN';
+			}
+		}
+
+		props.eventHandlers.aircraftInited({
+			offset: {
+				batteryMaster: 'brightOffValue',
+				gearHandle: 'gearHandle',
+				flapsPositionLeft: flapsHtml,
+				lightsNav: 'brightOnValue',
+			},
+			lVar: {
+				AS1000_MFD_Brightness: 'pass',
+				S_OH_EXT_LT_RWY_TURNOFF: {
+					inputOptions: { toggleValues: [0, 1] },
+					toHtml: 'brightOnValue',
+				},
+			},
+		});
+	},
+```
 
 ### Customizing/creating instruments
 

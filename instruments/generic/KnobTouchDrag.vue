@@ -5,8 +5,8 @@ Indicator that where dragging up/down/left/right increases or decreases the valu
 	<div :class="'instrument knob-touch-drag inline-block' + (options?.classes ? ' '+ options.classes : '')">
 		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
 		<div @click="pushed" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd" :class="'knob-indicator bordered' + (pushRefName ? ' pressable' : '')">
-			<div class="val" v-if="!options?.hideValue" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[method]?.[refName]?.internalValue">
-				<span v-html="dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
+			<div class="val" v-if="!options?.hideValue" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
+				<span v-html="dataStore.state[readMethod]?.[readRefName]?.valueHtml ?? dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
 			</div>
 		</div>
 		<div v-if="pullRefName && !dataStore.appConfig.enableMultiTouch" @click="pulled" class="pull-knob-trigger bordered pressable">P</div>
@@ -17,6 +17,7 @@ Indicator that where dragging up/down/left/right increases or decreases the valu
 module.exports = {
 	props: [
 		'method', 'refName', 'label', 'dataStore', 'eventHandlers',  //required (except refName if refNameIncr and refNameDecr is set instead)
+		'readMethod', 'readRefName',  //optional
 		'pushMethod', 'pushRefName', 'pullMethod', 'pullRefName', 'stepScale', 'options',  //optional
 		'refNameIncr', 'refNameDecr', 'triggerDist',  //optional  (can be used instead of refName when no specific values and scale exist)
 	],
@@ -24,9 +25,23 @@ module.exports = {
 		touchStart(event) {  //NOTE: can NOT use arrow functions, then "this" wouldn't be bound (https://v3.vuejs.org/guide/data-methods.html#methods)
 			let p = this.$props;
 			if (p.refName) {
-				p.eventHandlers.knobTouchStart(event, p.method, p.refName, p.dataStore.state[p.method]?.[p.refName]?.internalValue, p.stepScale, p.options);
+				p.eventHandlers.knobTouchStart(
+					event,
+					p.method,
+					p.refName,
+					p.dataStore.state[p.readMethod]?.[p.readRefName]?.internalValue ?? p.dataStore.state[p.method]?.[p.refName]?.internalValue,
+					p.stepScale,
+					p.options,
+				);
 			} else {
-				p.eventHandlers.knobTouchStart(event, p.method, {incr: p.refNameIncr, decr: p.refNameDecr}, null, p.triggerDist, p.options);
+				p.eventHandlers.knobTouchStart(
+					event,
+					p.method,
+					{incr: p.refNameIncr, decr: p.refNameDecr},
+					null,
+					p.triggerDist,
+					p.options,
+				);
 			}
 		},
 		touchMove(event) {
