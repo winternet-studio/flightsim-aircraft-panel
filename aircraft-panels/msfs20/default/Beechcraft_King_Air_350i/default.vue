@@ -16,6 +16,9 @@
 	<table align="center" class="std-spacing">
 	<tr>
 		<td>
+			<Button label="FD" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FD1" :eventHandlers="eventHandlers" />
+			<Button label="FLC" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FLC" :eventHandlers="eventHandlers" />
+			<Button label="SYNC HDG" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_Push_Heading" :eventHandlers="eventHandlers" />
 			<Toggleable label="YD" method="offset" refName="yawDamper" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		</td>
 	</tr>
@@ -92,6 +95,15 @@
 	</table>
 
 	<div style="height: 20px"></div>
+
+	<table align="left" class="std-spacing" style="margin-right: 10px">
+	<tr>
+		<td>
+			<Button label="IGN LEFT" method="presetCommand" refName="Asobo.King Air 350i.Engines.KA_ENG1_START_TOGGLE" :eventHandlers="eventHandlers" />
+			<Button label="IGN RIGHT" method="presetCommand" refName="Asobo.King Air 350i.Engines.KA_ENG2_START_TOGGLE" :eventHandlers="eventHandlers" />
+		</td>
+	</tr>
+	</table>
 
 	<table align="right" class="std-spacing" style="margin-right: 10px">
 	<tr>
