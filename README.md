@@ -79,11 +79,11 @@ JUST INCOMPLETE NOTES SO FAR.
 
 | Method value | Description | refName examples | Other attributes used |
 |--------------|-----|------|------|
-| offset | FSUIPC offsets, defined in map() in Fsuipc.js | `pitotHeat` | |
-| lVar | WASM LVars, defined in lVarOptions() in Fsuipc.js | `AS1000_MFD_Brightness` |  |
-| hVar | WASM HVars | AS1000\_PFD\_RANGE\_INC |  |
-| simControl | Native sim control, defined in /databases/MsfsControlsList.txt | `MASTER_WARNING_ACKNOWLEDGE` | `setValue="0"` |
-| presetCommand | MobiFlight presets from HubHop, defined in /databases/MobiFlightHubHopPresets.js.<br>Can be extended or overwritten by our own presets defined in presetCommands() in Fsuipc.js. | `refName="Asobo.Cessna 172.Autopilot.C_172_AP"` <br><br> `refName="autoSetAltimeter"` <br><br> Use two different presets for the toggle (note the colon before refName!):<br>`:refName="{0: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_OFF', 1: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_ON'}"`<br>0 and 1 are the internal converted values, not necessarily the raw values coming from FSUIPC. | |
+| offset | FSUIPC offsets, defined in map() in Fsuipc.js | `refName="pitotHeat"` | |
+| lVar | WASM LVars, defined in lVarOptions() in Fsuipc.js | `refName="AS1000_MFD_Brightness"` |  |
+| hVar | WASM HVars | `refName="AS1000_PFD_RANGE_INC"` |  |
+| simControl | Native sim control, defined in /databases/MsfsControlsList.txt | `refName="MASTER_WARNING_ACKNOWLEDGE"` | `setValue="0"` |
+| presetCommand | MobiFlight presets from HubHop, defined in /databases/MobiFlightHubHopPresets.js.<br>Can be extended or overwritten by our own presets defined in presetCommands() in Fsuipc.js. | `refName="Asobo.Cessna 172.Autopilot.C_172_AP"` <br><br> `refName="autoSetAltimeter"` <br><br> Use two different presets for a toggle:<br>`:refName="{0: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_OFF', 1: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_ON'}"`<br>0 and 1 are the internal converted values, not necessarily the raw values coming from FSUIPC. _Note the colon before refName!_ | |
 | calcCode | Execute WASM "Calculator Code" | `25 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)` | |
 
 All methods can be used for setting values (input), but only offsets and LVars can be used for monitoring values (output).
