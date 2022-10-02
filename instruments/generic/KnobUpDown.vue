@@ -2,11 +2,11 @@
 Indicator that has up and down buttons and showing current value
 -->
 <template>
-	<div :class="'instrument knob-up-down inline-block' + (options?.classes ? ' '+ options.classes : '')">
+	<div :class="'instrument std-height knob-up-down inline-block' + (options?.classes ? ' '+ options.classes : '')">
 		<span @click="clickedDown" class="knob-down pressable"></span>
 		<span class="knob-indicator bordered">
-			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
-			<div class="val" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
+			<div class="std-lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
+			<div class="std-val" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
 				<span v-html="dataStore.state[readMethod]?.[readRefName]?.valueHtml ?? dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
 			</div>
 		</span>
@@ -54,6 +54,7 @@ module.exports = {
 .knob-indicator {
 	height: 45px;
 	width: 85px;
+	position: relative;
 }
 .knob-up-down {
 	text-align: center;
@@ -63,16 +64,16 @@ module.exports = {
 }
 .knob-up, .knob-down {
 	position: relative;
-	top: -9px;
 	width: 45px;
 	height: 45px;
 	background-color: #353d42;
 	border-radius: 5px;
 }
 .knob-up::after, .knob-down::after {
-	position: relative;
+	position: absolute;
 	font-size: 25px;
-	top: 5px;
+	top: 4px;
+	left: 10px;
 	color: #656a6d;
 }
 .knob-up::after {

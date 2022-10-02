@@ -453,14 +453,11 @@ export default {
 	height: 40px !important;
 	margin: 2px;
 }
-.g1000-buttons .bordered {
-	padding: 2px;
-}
-.g1000-buttons .lbl {
+.g1000-buttons .std-lbl {
 	font-size: 9px !important;
 	line-height: 10px !important;
 }
-.g1000-buttons.softkey .lbl {
+.g1000-buttons.softkey .std-lbl {
 	opacity: 0.3;
 	font-size: 10px;
 }

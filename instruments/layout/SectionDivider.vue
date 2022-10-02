@@ -1,5 +1,5 @@
 <template>
-	<div class="spacer"></div>
+	<div class="spacer std-height"></div>
 </template>
 
 <script>
@@ -13,9 +13,7 @@ module.exports = {
 <style scoped>
 .spacer {
 	border: 1px solid gray;
-	height: 30px;
 	width: 0px;
-	top: 4px;
 	position: relative;
 	display: inline-block;
 }

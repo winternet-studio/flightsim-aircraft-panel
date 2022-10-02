@@ -18,10 +18,26 @@ body {
 	text-transform: uppercase;
 }
 
-.lbl {
+.instrument {
+	position: relative;
+}
+.std-height {
+	height: 45px;
+}
+
+.std-lbl, .std-lbl-color {
 	color: #B0B4B7;
 }
-.val {
+.std-lbl {
+	position: absolute;
+	width: 100%;
+	top: 4px;
+	padding: 2px;
+}
+.std-val {
+	position: absolute;
+	top: 18px;
+	width: 100%;
 	font-weight: bold;
 	font-size: 160%;
 }
@@ -119,9 +135,19 @@ body {
 .pressable {
 	cursor: pointer;
 }
+.pressable:active {
+	border: 1px solid #7f7f7f;
+	box-shadow: 0 0 20px white;
+}
+.pressable.defect-write:active {
+	/*background-color: red;*/
+	border: 1px solid red;
+	box-shadow: 0 0 20px red;
+}
 
 .bordered {
-	padding: 3px;
+	width: 100%;
+	height: 100%;
 	border-radius: 3px;
 	border: 1px solid #1C2021;
 	text-align: center;
@@ -130,22 +156,13 @@ body {
 .bordered.defect-write {
 	border-color: #640101;
 }
-.bordered:active {
-	border: 1px solid #7f7f7f;
-	box-shadow: 0 0 20px white;
-}
-.bordered.defect-write:active {
-	/*background-color: red;*/
-	border: 1px solid red;
-	box-shadow: 0 0 20px red;
-}
 
 .bordered.small {
 	width: 65px;
 	margin: 4px 2px;
 	padding-top: 5px;
 }
-.bordered.small .lbl {
+.bordered.small .std-lbl {
 	font-size: 70%;
 }
 

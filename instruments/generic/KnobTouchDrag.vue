@@ -3,9 +3,9 @@ Indicator that where dragging up/down/left/right increases or decreases the valu
 -->
 <template>
 	<div :class="'instrument knob-touch-drag inline-block' + (options?.classes ? ' '+ options.classes : '')">
-		<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
+		<div class="custom-lbl std-lbl-color" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
 		<div @click="pushed" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd" :class="'knob-indicator bordered' + (pushRefName ? ' pressable' : '')">
-			<div class="val" v-if="!options?.hideValue" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
+			<div class="std-val" v-if="!options?.hideValue" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
 				<span v-html="dataStore.state[readMethod]?.[readRefName]?.valueHtml ?? dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
 			</div>
 		</div>
@@ -69,6 +69,14 @@ module.exports = {
 </script>
 
 <style scoped>
+.knob-touch-drag {
+	text-align: center;
+	width: 75px;
+	height: 65px;
+}
+.knob-touch-drag > span {
+	display: inline-block;
+}
 .knob-indicator {
 	height: 45px;
 	width: 45px;
@@ -83,19 +91,13 @@ module.exports = {
 	height: 40px;
 	width: 40px;
 }
-.instrument .val {
+.std-val {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 80%;
 	font-weight: normal;
 	color: #8d9093;
-}
-.knob-touch-drag {
-	text-align: center;
-}
-.knob-touch-drag > span {
-	display: inline-block;
 }
 .pull-knob-trigger {
 	margin-left: 10px;

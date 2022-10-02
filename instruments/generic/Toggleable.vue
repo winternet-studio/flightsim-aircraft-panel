@@ -2,12 +2,12 @@
 Button that can be toggled between two states and shows the current value
 -->
 <template>
-	<div @click="clicked" :class="'instrument toggleable inline-block' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
+	<div @click="clicked" :class="'instrument std-height toggleable inline-block' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
 		<div class="bordered pressable">
-			<div class="lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
+			<div class="std-lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
 				<span v-html="label"></span>
 			</div>
-			<div class="val" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
+			<div class="std-val" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
 				<span v-html="dataStore.state[readMethod]?.[readRefName]?.valueHtml ?? dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
 			</div>
 		</div>
@@ -39,10 +39,22 @@ module.exports = {
 
 <style scoped>
 .instrument {
-	height: 45px;   /* .toggleable should match this */
 	width: 85px;
 }
-.bordered {
-	width: 100%;
+
+.small {
+	width: 56px !important;
+	margin: 2px;
+}
+.small .bordered {
+	padding: 2px;
+}
+.small .std-lbl {
+	font-size: 11px !important;
+	line-height: 12px !important;
+}
+.small .std-val {
+	font-size: 9px !important;
+	line-height: 10px !important;
 }
 </style>

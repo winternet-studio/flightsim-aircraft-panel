@@ -40,13 +40,15 @@
 	</tr>
 	</table>
 
-	<Toggleable label="NAV/GPS" method="offset" refName="navGpsSw" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+	<div class="std-spacing">
+		<Toggleable label="NAV/GPS" method="offset" refName="navGpsSw" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
 
-	<div style="width: 20px; display: inline-block"></div>
+		<div style="width: 20px; display: inline-block"></div>
 
-	<Toggleable label="GEAR" method="offset" refName="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		<Toggleable label="GEAR" method="offset" refName="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
-	<Toggleable label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		<Toggleable label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+	</div>
 
 	<table align="center">
 	<tr>
@@ -60,7 +62,7 @@
 
 	<div style="height: 10px"></div>
 
-	<table align="center">
+	<table align="center" class="std-spacing">
 	<tr>
 		<td style="padding: 30px">
 
@@ -96,7 +98,7 @@
 	</tr>
 	</table>
 
-	<table align="center">
+	<table align="center" class="std-spacing">
 	<tr>
 		<td style="padding: 0 10px 0 10px">
 
@@ -107,7 +109,7 @@
 	</tr>
 	</table>
 
-	<table align="center">
+	<table align="center" class="std-spacing">
 	<tr>
 		<td>
 
