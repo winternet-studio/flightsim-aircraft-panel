@@ -132,20 +132,22 @@ export default {
 			}
 		}
 
-		props.eventHandlers.aircraftInited({
-			offset: {
-				flapsPositionLeft: flapsHtml,
-				lightsStrobe: 'brightOnValue',
-				lightsBeacon: 'brightOnValue',
-				lightsNav: 'brightOnValue',
-				lightsTaxi: 'brightOnValue',
-				lightsLanding: 'brightOnValue',
-				lightsRecognition: 'brightOnValue',
-				lightsCabin: 'brightOnValue',
-				parkingBrake: 'brightOnValue',
-				pitotHeat: 'brightOffValue',
-				transponderState: 'transponderState',
-				yawDamper: 'brightOnValue',
+		props.eventHandlers.onPanelLoad({
+			watchValues: {
+				offset: {
+					flapsPositionLeft: flapsHtml,
+					lightsStrobe: 'brightOnValue',
+					lightsBeacon: 'brightOnValue',
+					lightsNav: 'brightOnValue',
+					lightsTaxi: 'brightOnValue',
+					lightsLanding: 'brightOnValue',
+					lightsRecognition: 'brightOnValue',
+					lightsCabin: 'brightOnValue',
+					parkingBrake: 'brightOnValue',
+					pitotHeat: 'brightOffValue',
+					transponderState: 'transponderState',
+					yawDamper: 'brightOnValue',
+				},
 			},
 		});
 	},

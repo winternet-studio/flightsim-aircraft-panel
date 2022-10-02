@@ -205,33 +205,35 @@ export default {
 			}
 		}
 
-		props.eventHandlers.aircraftInited({
-			offset: {
-				batteryMaster: 'brightOffValue',
-				antiIceWing: 'brightOnValue',
-				antiIceEng1: 'brightOnValue',
-				antiIceEng2: 'brightOnValue',
-				avionicsMaster: 'brightOffValue',
-				alternator1Master: 'brightOffValue',
-				fuelPumpEng1: 'brightOnValue',
-				gearHandle: 'gearHandle',
-				gearNose: 'gearPosition',
-				gearRight: 'gearPosition',
-				gearLeft: 'gearPosition',
-				flapsPositionLeft: flapsHtml,
-				lightsStrobe: 'brightOnValue',
-				lightsBeacon: 'brightOnValue',
-				lightsNav: 'brightOnValue',
-				lightsTaxi: 'brightOnValue',
-				lightsLanding: 'brightOnValue',
-				// lightsLogo: 'brightOnValue',  //merged with nav light in A320
-				lightsWing: 'brightOnValue',
-				lightsInstruments: 'brightOnValue',
-				lightsCabin: 'brightOnValue',
-				cowlFlapEngine1: 'cowlFlapPosition',
-				parkingBrake: 'brightOnValue',
-				seatBelts: 'brightOnValue',
-				spoilersArm: 'spoilerPosition',
+		props.eventHandlers.onPanelLoad({
+			watchValues: {
+				offset: {
+					batteryMaster: 'brightOffValue',
+					antiIceWing: 'brightOnValue',
+					antiIceEng1: 'brightOnValue',
+					antiIceEng2: 'brightOnValue',
+					avionicsMaster: 'brightOffValue',
+					alternator1Master: 'brightOffValue',
+					fuelPumpEng1: 'brightOnValue',
+					gearHandle: 'gearHandle',
+					gearNose: 'gearPosition',
+					gearRight: 'gearPosition',
+					gearLeft: 'gearPosition',
+					flapsPositionLeft: flapsHtml,
+					lightsStrobe: 'brightOnValue',
+					lightsBeacon: 'brightOnValue',
+					lightsNav: 'brightOnValue',
+					lightsTaxi: 'brightOnValue',
+					lightsLanding: 'brightOnValue',
+					// lightsLogo: 'brightOnValue',  //merged with nav light in A320
+					lightsWing: 'brightOnValue',
+					lightsInstruments: 'brightOnValue',
+					lightsCabin: 'brightOnValue',
+					cowlFlapEngine1: 'cowlFlapPosition',
+					parkingBrake: 'brightOnValue',
+					seatBelts: 'brightOnValue',
+					spoilersArm: 'spoilerPosition',
+				},
 			},
 		});
 	},

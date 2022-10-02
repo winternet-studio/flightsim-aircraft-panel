@@ -88,7 +88,7 @@ export default class Fsuipc {
 	/**
 	 * Options for common LVars
 	 *
-	 * For the value, see documentation on `inputOptions` on the object being passed to eventHandlers.aircraftInited().
+	 * For the value, see documentation on `inputOptions` on the object being passed to eventHandlers.onPanelLoad().
 	 *
 	 * @return {object}
 	 */

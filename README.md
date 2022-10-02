@@ -91,7 +91,7 @@ All methods can be used for setting values (input), but only offsets and LVars c
 #### Setup of the aircraft
 
 All values that are going to be displayed (output) for this aircraft must be defined in the setup function of the aircraft panel,
-specifically in the object passed to `aircraftInited()`.
+specifically in the object passed to `onPanelLoad()`.
 
 For offsets, the key is the name from map() in Fsuipc.js.
 For LVars, the key is the actual LVar name (usually specific to the aircraft).
@@ -122,18 +122,20 @@ For example:
 			}
 		}
 
-		props.eventHandlers.aircraftInited({
-			offset: {
-				batteryMaster: 'brightOffValue',
-				gearHandle: 'gearHandle',
-				flapsPositionLeft: flapsHtml,
-				lightsNav: 'brightOnValue',
-			},
-			lVar: {
-				AS1000_MFD_Brightness: 'pass',
-				S_OH_EXT_LT_RWY_TURNOFF: {
-					inputOptions: { toggleValues: [0, 1] },
-					toHtml: 'brightOnValue',
+		props.eventHandlers.onPanelLoad({
+			watchValues: {
+				offset: {
+					batteryMaster: 'brightOffValue',
+					gearHandle: 'gearHandle',
+					flapsPositionLeft: flapsHtml,
+					lightsNav: 'brightOnValue',
+				},
+				lVar: {
+					AS1000_MFD_Brightness: 'pass',
+					S_OH_EXT_LT_RWY_TURNOFF: {
+						inputOptions: { toggleValues: [0, 1] },
+						toHtml: 'brightOnValue',
+					},
 				},
 			},
 		});

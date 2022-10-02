@@ -80,16 +80,18 @@ export default {
 	components,
 	props: ['dataStore', 'eventHandlers'],
 	setup(props) {
-		props.eventHandlers.aircraftInited({
-			offset: {
-				lightsStrobe: 'brightOnValue',
-				lightsBeacon: 'brightOnValue',
-				lightsNav: 'brightOnValue',
-				lightsLanding: 'brightOnValue',
-				lightsCabin: 'brightOnValue',
-				parkingBrake: 'brightOnValue',
-				// pitotHeat: 'brightOffValue',
-				transponderState: 'transponderState',
+		props.eventHandlers.onPanelLoad({
+			watchValues: {
+				offset: {
+					lightsStrobe: 'brightOnValue',
+					lightsBeacon: 'brightOnValue',
+					lightsNav: 'brightOnValue',
+					lightsLanding: 'brightOnValue',
+					lightsCabin: 'brightOnValue',
+					parkingBrake: 'brightOnValue',
+					// pitotHeat: 'brightOffValue',
+					transponderState: 'transponderState',
+				},
 			},
 		});
 	},

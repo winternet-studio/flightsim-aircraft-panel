@@ -396,31 +396,33 @@ export default {
 			}
 		}
 
-		props.eventHandlers.aircraftInited({
-			offset: {
-				avionicsMaster: 'brightOffValue',
-				alternator1Master: 'brightOffValue',
-				autopilotAltitude: 'pass',
-				batteryMaster: 'brightOffValue',
-				fuelPumpEng1: 'brightOnValue',
-				flapsPositionLeft: flapsHtml,
-				lightsStrobe: 'brightOnValue',
-				lightsBeacon: 'brightOnValue',
-				lightsNav: 'brightOnValue',
-				lightsTaxi: 'brightOnValue',
-				lightsLanding: 'brightOnValue',
-				lightsInstruments: 'brightOnValue',
-				lightsCabin: 'brightOnValue',
-				parkingBrake: 'brightOnValue',
-				pitotHeat: 'brightOffValue',
-				starterSwitchEngine1Prop: 'starterSwitchEngine1Prop',
-				transponderState: 'transponderState',
+		props.eventHandlers.onPanelLoad({
+			watchValues: {
+				offset: {
+					avionicsMaster: 'brightOffValue',
+					alternator1Master: 'brightOffValue',
+					autopilotAltitude: 'pass',
+					batteryMaster: 'brightOffValue',
+					fuelPumpEng1: 'brightOnValue',
+					flapsPositionLeft: flapsHtml,
+					lightsStrobe: 'brightOnValue',
+					lightsBeacon: 'brightOnValue',
+					lightsNav: 'brightOnValue',
+					lightsTaxi: 'brightOnValue',
+					lightsLanding: 'brightOnValue',
+					lightsInstruments: 'brightOnValue',
+					lightsCabin: 'brightOnValue',
+					parkingBrake: 'brightOnValue',
+					pitotHeat: 'brightOffValue',
+					starterSwitchEngine1Prop: 'starterSwitchEngine1Prop',
+					transponderState: 'transponderState',
+				},
+				lVar: {
+					AS1000_MFD_Brightness: 'pass',
+					ParkingBrake_Position: 'pass',
+					PFD_CDI_Source: 'pass',  //TODO: make HTML formatting function
+				},
 			},
-			lVar: {
-				AS1000_MFD_Brightness: 'pass',
-				ParkingBrake_Position: 'pass',
-				PFD_CDI_Source: 'pass',  //TODO: make HTML formatting function
-			}
 		});
 	},
 }
