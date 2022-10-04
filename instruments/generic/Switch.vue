@@ -2,7 +2,7 @@
 Button that can be toggled between two states and shows the current value
 -->
 <template>
-	<div @click="clicked" :class="'instrument std-height toggleable inline-block' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
+	<div @click="clicked" :class="'instrument std-width std-height toggle inline-block' + (options?.classes ? ' '+ options.classes : '') + (options?.defectWrite ? ' defect-write' : '')">
 		<div class="bordered pressable">
 			<div class="std-lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
 				<span v-html="label"></span>
@@ -38,22 +38,18 @@ module.exports = {
 </script>
 
 <style scoped>
-.instrument {
-	width: 85px;
-}
-
-.small {
+.small-instr {
 	width: 56px !important;
 	margin: 2px;
 }
-.small .bordered {
+.small-instr .bordered {
 	padding: 2px;
 }
-.small .std-lbl {
+.small-instr .std-lbl {
 	font-size: 11px !important;
 	line-height: 12px !important;
 }
-.small .std-val {
+.small-instr .std-val {
 	font-size: 9px !important;
 	line-height: 10px !important;
 }

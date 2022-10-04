@@ -41,13 +41,13 @@
 	</table>
 
 	<div class="std-spacing">
-		<Toggleable label="NAV/GPS" method="offset" refName="navGpsSw" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+		<Switch label="NAV/GPS" method="offset" refName="navGpsSw" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
 
 		<div style="width: 20px; display: inline-block"></div>
 
-		<Toggleable label="GEAR" method="offset" refName="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		<Switch label="GEAR" method="offset" refName="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
-		<Toggleable label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 	</div>
 
 	<table align="center">
@@ -66,23 +66,23 @@
 	<tr>
 		<td style="padding: 30px">
 
-			<Toggleable label="BAT MASTER" method="offset" refName="batteryMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="ALTERNATOR" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="AVIONICS" method="offset" refName="avionicsMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{defectWrite: true}" />
-			<Toggleable label="FUEL PUMP" method="offset" refName="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="BAT MASTER" method="offset" refName="batteryMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="ALTERNATOR" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="AVIONICS" method="offset" refName="avionicsMaster" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{defectWrite: true}" />
+			<Switch label="FUEL PUMP" method="offset" refName="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<SectionDivider />
 
-			<Toggleable label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 			<SectionDivider />
 
-			<Toggleable label="PANEL" method="offset" refName="lightsInstruments" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="PROBE HEAT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PANEL" method="offset" refName="lightsInstruments" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="PROBE HEAT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 	</tr>
@@ -102,7 +102,7 @@
 	<tr>
 		<td style="padding: 0 10px 0 10px">
 
-			<Toggleable label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			<Indicator label="COWL FLAPS" method="offset" refName="cowlFlapEngine1" :dataStore="dataStore" />
 
 		</td>
@@ -118,7 +118,7 @@
 
 			<div style="height: 30px"></div>
 
-			<Toggleable label="Fuel Selector" method="offset" refName="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+			<Switch label="Fuel Selector" method="offset" refName="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
 			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
 
 		</td>
@@ -129,7 +129,7 @@
 <script>
 var components = {};
 import Button from '../../../../instruments/generic/Button.vue'; components.Button = Button;
-import Toggleable from '../../../../instruments/generic/Toggleable.vue'; components.Toggleable = Toggleable;
+import Switch from '../../../../instruments/generic/Switch.vue'; components.Switch = Switch;
 import KnobUpDown from '../../../../instruments/generic/KnobUpDown.vue'; components.KnobUpDown = KnobUpDown;
 import Indicator from '../../../../instruments/generic/Indicator.vue'; components.Indicator = Indicator;
 import SectionDivider from '../../../../instruments/layout/SectionDivider.vue'; components.SectionDivider = SectionDivider;

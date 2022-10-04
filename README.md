@@ -67,11 +67,12 @@ JUST INCOMPLETE NOTES SO FAR.
 | Name | Description |
 | ---- | ----------- |
 | Button | A button that triggers a single action, doesn't show state |
-| Toggleable | A button that toggles between two states |
-| Indicator | Only an indicator of a given state, with a label (not a button) |
-| Annunciator | Like an indicator but without any label, only a light or text that can be on/off |
+| Toggle | A button that toggles between two states, showing only a label and styling indicates its state |
+| Switch | A button that toggles between two states, showing a label and a separate text for the state |
 | KnobUpDown | A "knob" that can be set to several different states by clicking |
 | KnobTouchDrag | A "knob" that can be set to several different states by dragging |
+| Indicator | Only an indicator of a given state, with a label (not a button that can be pressed) |
+| Annunciator | Like an indicator but without any label, only a light or text that can be on/off |
 
 #### Instrument/button methods
 

@@ -20,39 +20,39 @@ Complete API:
 
 					<!--
 					DOESN'T CURRENTLY WORK
-					<Toggleable label="10" method="lVar" refName="A320_Neo_MFD_Range" lvarValue="0" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="20" method="lVar" refName="A320_Neo_MFD_Range" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="FUEL" method="hVar" refName="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_FUEL" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="ENG" method="hVar" refName="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_ENG" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="10" method="lVar" refName="A320_Neo_MFD_Range" lvarValue="0" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="20" method="lVar" refName="A320_Neo_MFD_Range" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="FUEL" method="hVar" refName="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_FUEL" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="ENG" method="hVar" refName="A320_Neo_EICAS_2_ECAM_CHANGE_PAGE_ENG" lvarValue="1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 					-->
 
 					<div class="section">Elec</div>
-					<Toggleable label="BAT" method="offset" refName="batteryMaster" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="BAT" method="offset" refName="batteryMaster" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 					<div>&nbsp;</div>
 
-					<Toggleable label="GEN 1" method="offset" refName="genEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="APU GEN" method="offset" refName="genApu" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="GEN 2" method="offset" refName="genEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="GEN 1" method="offset" refName="genEng1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="APU GEN" method="offset" refName="genApu" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="GEN 2" method="offset" refName="genEng2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 					<div style="height: 250px"></div>
 
-					<Toggleable label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="WING" method="offset" refName="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="NAV & LOGO" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="WING" method="offset" refName="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="NAV & LOGO" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 					<div style="height: 15px"></div>
 
-					<Toggleable label="----" method="" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" style="opacity: 0" /><!-- just for proper spacing -->
-					<Toggleable label="LANDING LTS" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" style="width: 178px" />
-					<Toggleable label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="----" method="" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" style="opacity: 0" /><!-- just for proper spacing -->
+					<Switch label="LANDING LTS" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" style="width: 178px" />
+					<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 				</td>
 				<td style="padding: 0 10px 0 10px">
 					<div class="section">Fuel</div>
 
-					<!-- TODO: some of these are to be Toggleable instead of Indicator -->
+					<!-- TODO: some of these are to be Switch instead of Indicator -->
 
 					<Indicator label="L BOOST<br/>PUMP" method="offset" refName="fuelPump1" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 					<Indicator label="R BOOST<br/>PUMP" method="offset" refName="fuelPump2" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
@@ -88,13 +88,13 @@ Complete API:
 
 					<div class="section">Anti-Ice</div>
 
-					<Toggleable label="WING" method="offset" refName="antiIceWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="ENG 1" method="offset" refName="antiIceEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-					<Toggleable label="ENG 2" method="offset" refName="antiIceEng2" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="WING" method="offset" refName="antiIceWing" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="ENG 1" method="offset" refName="antiIceEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="ENG 2" method="offset" refName="antiIceEng2" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 					<div style="height: 137px"></div>
 
-					<Toggleable label="SEAT BELT" method="offset" refName="seatBelts" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="SEAT BELT" method="offset" refName="seatBelts" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 				</td>
 			</tr>
@@ -124,7 +124,7 @@ Complete API:
 			<tr>
 				<td></td>
 				<td>
-					<Toggleable label="Spoilers" method="offset" refName="spoilersArm" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="Spoilers" method="offset" refName="spoilersArm" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 				</td>
 				<td></td>
 				<td></td>
@@ -132,15 +132,15 @@ Complete API:
 			<tr>
 				<td style="width: 35%; text-align: left">
 
-					<Toggleable label="NAV/GPS" method="offset" refName="navGpsSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="NAV/GPS" method="offset" refName="navGpsSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 				</td>
 				<td>
 
 					<Indicator label="Speed Break" method="offset" refName="spdBreak" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
-					<Toggleable label="Gear" method="offset" refName="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="Gear" method="offset" refName="gearHandle" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 					<br>
-					<Toggleable label="Parking Break" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+					<Switch label="Parking Break" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 					<Indicator label="Flaps" method="offset" refName="flaps" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
 					<br>
 					<Indicator label="ENG 1 FUEL" method="offset" refName="eng1CutoffSw" :options="{classes: 'INOPERABLE'}" :dataStore="dataStore" />
@@ -183,7 +183,7 @@ Complete API:
 <script>
 var components = {};
 import Button from '../../../../instruments/generic/Button.vue'; components.Button = Button;
-import Toggleable from '../../../../instruments/generic/Toggleable.vue'; components.Toggleable = Toggleable;
+import Switch from '../../../../instruments/generic/Switch.vue'; components.Switch = Switch;
 import Indicator from '../../../../instruments/generic/Indicator.vue'; components.Indicator = Indicator;
 import Annunciator from '../../../../instruments/generic/Annunciator.vue'; components.Annunciator = Annunciator;
 import SectionDivider from '../../../../instruments/layout/SectionDivider.vue'; components.SectionDivider = SectionDivider;

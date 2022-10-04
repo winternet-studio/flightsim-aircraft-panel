@@ -242,7 +242,7 @@
 	<table class="std-spacing">
 	<tr>
 		<td>
-			<Toggleable label="MASTER ALT" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="MASTER ALT" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		</td>
 		<td>
 			<Button label="MASTER BAT" method="simControl" refName="TOGGLE_MASTER_BATTERY" setValue="1" :eventHandlers="eventHandlers" />
@@ -289,11 +289,11 @@
 		</td>
 		<td>
 
-			<Toggleable label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 
 		</td>
 	</tr>
@@ -313,8 +313,8 @@
 		</td>
 		<td>
 
-			<Toggleable label="FUEL PUMP" method="offset" refName="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="PROBE HEAT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="FUEL PUMP" method="offset" refName="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="PROBE HEAT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 
 		</td>
 	</tr>
@@ -329,7 +329,7 @@
 		</td>
 		<td style="padding-left: 380px; vertical-align: middle">
 
-			<Toggleable label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 		<td>
@@ -350,7 +350,7 @@
 	</tr>
 	<tr>
 		<td class="std-spacing">
-			<Toggleable label="Fuel Selector" method="offset" refName="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+			<Switch label="Fuel Selector" method="offset" refName="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
 		</td>
 	</tr>
 	</table>
@@ -358,7 +358,7 @@
 	<table align="right" class="std-spacing">
 	<tr>
 		<td>
-			<Toggleable label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		</td>
 		<td style="padding-right: 10px">
 			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
@@ -371,7 +371,7 @@
 <script>
 var components = {};
 import Button from '../../../../instruments/generic/Button.vue'; components.Button = Button;
-import Toggleable from '../../../../instruments/generic/Toggleable.vue'; components.Toggleable = Toggleable;
+import Switch from '../../../../instruments/generic/Switch.vue'; components.Switch = Switch;
 import KnobUpDown from '../../../../instruments/generic/KnobUpDown.vue'; components.KnobUpDown = KnobUpDown;
 import KnobTouchDrag from '../../../../instruments/generic/KnobTouchDrag.vue'; components.KnobTouchDrag = KnobTouchDrag;
 import Indicator from '../../../../instruments/generic/Indicator.vue'; components.Indicator = Indicator;

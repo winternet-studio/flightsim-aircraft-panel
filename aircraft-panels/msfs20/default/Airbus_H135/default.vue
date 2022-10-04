@@ -8,8 +8,8 @@
 
 			<!--
 			DISABLED SINCE ONLY ONE WORKS
-			<Toggleable label="PITOT COPILOT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="PITOT PILOT" method="offset" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PITOT COPILOT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PITOT PILOT" method="offset" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 			-->
 
 		</td>
@@ -23,10 +23,10 @@
 		</td>
 		<td>
 
-			<Toggleable label="LAND" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="POS" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Toggleable label="ACOL" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="LAND" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="POS" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="ACOL" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 	</tr>
@@ -38,7 +38,7 @@
 	<tr>
 		<td>
 
-			<Toggleable label="ROTOR BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="ROTOR BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 	</tr>
@@ -60,7 +60,7 @@
 	<table align="right" class="std-spacing" style="margin-right: 10px">
 	<tr>
 		<td>
-			<Toggleable label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		</td>
 		<td>
 			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
@@ -73,7 +73,7 @@
 <script>
 var components = {};
 import Button from '../../../../instruments/generic/Button.vue'; components.Button = Button;
-import Toggleable from '../../../../instruments/generic/Toggleable.vue'; components.Toggleable = Toggleable;
+import Switch from '../../../../instruments/generic/Switch.vue'; components.Switch = Switch;
 import KnobUpDown from '../../../../instruments/generic/KnobUpDown.vue'; components.KnobUpDown = KnobUpDown;
 
 export default {

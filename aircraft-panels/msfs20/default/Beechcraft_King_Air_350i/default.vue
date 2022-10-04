@@ -19,7 +19,7 @@
 			<Button label="FD" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FD1" :eventHandlers="eventHandlers" />
 			<Button label="FLC" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FLC" :eventHandlers="eventHandlers" />
 			<Button label="SYNC HDG" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_Push_Heading" :eventHandlers="eventHandlers" />
-			<Toggleable label="YD" method="offset" refName="yawDamper" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="YD" method="offset" refName="yawDamper" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		</td>
 	</tr>
 	</table>
@@ -40,18 +40,18 @@
 	<tr>
 		<td>
 
-			<Toggleable label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="ICE" method="offset" refName="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false, classes: 'INOPERABLE'}" /><!-- ONLY TURNING IT ON WORKS CURRENTLY -->
-			<Toggleable label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="RECOG" method="offset" refName="lightsRecognition" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="ICE" method="offset" refName="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false, classes: 'INOPERABLE'}" /><!-- ONLY TURNING IT ON WORKS CURRENTLY -->
+			<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="RECOG" method="offset" refName="lightsRecognition" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		</td>
 		<td style="padding-left: 50px; padding-right: 50px">
 			<SectionDivider />
 		</td>
 		<td>
-			<Toggleable label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Toggleable label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 
 		</td>
 	</tr>
@@ -60,7 +60,7 @@
 
 <!--
 			HAVEN'T FOUND TRIGGER FOR THE "RIGHT" PITOT SO SKIP IT ALLTOGETHER
-			<Toggleable label="PITOT LEFT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="PITOT LEFT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 -->
 
 		</td>
@@ -73,7 +73,7 @@
 	<tr>
 		<td>
 
-			<Toggleable label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 		</td>
 		<td>
@@ -108,7 +108,7 @@
 	<table align="right" class="std-spacing" style="margin-right: 10px">
 	<tr>
 		<td>
-			<Toggleable label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		</td>
 		<td>
 			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
@@ -121,7 +121,7 @@
 <script>
 var components = {};
 import Button from '../../../../instruments/generic/Button.vue'; components.Button = Button;
-import Toggleable from '../../../../instruments/generic/Toggleable.vue'; components.Toggleable = Toggleable;
+import Switch from '../../../../instruments/generic/Switch.vue'; components.Switch = Switch;
 import KnobUpDown from '../../../../instruments/generic/KnobUpDown.vue'; components.KnobUpDown = KnobUpDown;
 import KnobTouchDrag from '../../../../instruments/generic/KnobTouchDrag.vue'; components.KnobTouchDrag = KnobTouchDrag;
 import Indicator from '../../../../instruments/generic/Indicator.vue'; components.Indicator = Indicator;
