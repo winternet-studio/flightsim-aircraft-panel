@@ -114,10 +114,10 @@
 			</tr>
 			<tr>
 				<td>
-					<KnobTouchDrag label="FMS" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Lower_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Lower_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'larger'}" />
+					<KnobTouchDrag label="FMS" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Lower_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Lower_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'larger-instr'}" />
 				</td>
 				<td>
-					<KnobTouchDrag label="&nbsp;" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Upper_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Upper_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'smaller'}" />
+					<KnobTouchDrag label="&nbsp;" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Upper_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_PFD_FMS_Upper_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'smaller-instr'}" />
 				</td>
 			</tr>
 			</table>
@@ -225,10 +225,10 @@
 			</tr>
 			<tr>
 				<td>
-					<KnobTouchDrag label="FMS" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Lower_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Lower_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'larger'}" />
+					<KnobTouchDrag label="FMS" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Lower_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Lower_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'larger-instr'}" />
 				</td>
 				<td>
-					<KnobTouchDrag label="&nbsp;" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Upper_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Upper_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'smaller'}" />
+					<KnobTouchDrag label="&nbsp;" method="presetCommand" refNameIncr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Upper_INC" refNameDecr="Microsoft.Generic.Avionics.AS1000_MFD_FMS_Upper_DEC" triggerDist="30" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'smaller-instr'}" />
 				</td>
 			</tr>
 			</table>

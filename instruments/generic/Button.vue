@@ -2,7 +2,7 @@
 Button that can be clicked but no value to display
 -->
 <template>
-	<div @click="clicked" :class="'instrument std-height button inline-block' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
+	<div @click="clicked" :class="'instrument std-width std-height button inline-block' + (options?.classes ? ' '+ options.classes : '')" :style="(options?.style ? objectToCss(options.style) : '')">
 		<div class="bordered pressable">
 			<div class="std-lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')"><span v-html="label"></span></div>
 		</div>
@@ -28,20 +28,11 @@ module.exports = {
 </script>
 
 <style scoped>
-.instrument {
-	width: 85px;
-}
 .button .std-lbl {
 	color: #8d9093;
 	font-size: 11px;
 	line-height: 14px;
 	top: 50%;
 	transform: translateY(-50%);
-}
-.button.small {
-	height: 45px;
-}
-.button.small .std-lbl {
-	font-size: 10px;
 }
 </style>

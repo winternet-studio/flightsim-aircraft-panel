@@ -83,11 +83,11 @@ module.exports = {
 	border-radius: 100px;
 	/*user-select: none;*/
 }
-.instrument.larger .knob-indicator {
+.instrument.larger-instr .knob-indicator {
 	height: 50px;
 	width: 50px;
 }
-.instrument.smaller .knob-indicator {
+.instrument.smaller-instr .knob-indicator {
 	height: 40px;
 	width: 40px;
 }

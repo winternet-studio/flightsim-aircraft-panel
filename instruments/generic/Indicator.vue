@@ -2,7 +2,7 @@
 Indicator that displays a value but cannot be clicked
 -->
 <template>
-	<div :class="'instrument std-height indicator inline-block'+ (options?.classes ? ' '+ options.classes : '')" :style="(options?.invisible ? {opacity: 0} : {})">
+	<div :class="'instrument std-width std-height indicator inline-block'+ (options?.classes ? ' '+ options.classes : '')" :style="(options?.invisible ? {opacity: 0} : {})">
 		<div class="bordered">
 			<div class="std-lbl" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">
 				<span v-html="label"></span>
@@ -24,7 +24,4 @@ module.exports = {
 </script>
 
 <style scoped>
-.instrument {
-	width: 85px;
-}
 </style>

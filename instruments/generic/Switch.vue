@@ -38,19 +38,4 @@ module.exports = {
 </script>
 
 <style scoped>
-.small-instr {
-	width: 56px !important;
-	margin: 2px;
-}
-.small-instr .bordered {
-	padding: 2px;
-}
-.small-instr .std-lbl {
-	font-size: 11px !important;
-	line-height: 12px !important;
-}
-.small-instr .std-val {
-	font-size: 9px !important;
-	line-height: 10px !important;
-}
 </style>
