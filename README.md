@@ -60,6 +60,19 @@ JUST INCOMPLETE NOTES SO FAR.
 
 JUST INCOMPLETE NOTES SO FAR.
 
+- have <div> surrounding the entire panel with these classes:
+	- `panel-container` (to make it use full width)
+	- name folder it is in (eg. `flybywire`)
+	- name of aircraft (eg. `airbus-320`)
+- do not use inline CSS since it can't be overriden by others
+
+Common classes:
+	- grid-container : TODO describe
+	- center-text : TODO describe
+	- std-spacing : TODO describe
+
+The panels have been adjusted for an HD monitor in landscape mode (1920x1080).
+
 #### Instrument/button types
 
 JUST INCOMPLETE NOTES SO FAR.

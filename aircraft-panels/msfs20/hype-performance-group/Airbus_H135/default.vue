@@ -1,72 +1,49 @@
 <template>
 
-	<div style="height: 615px"></div>
+	<div class="panel-container hype-performance-group airbus-h135">
 
-	<table align="center" class="std-spacing">
-	<tr>
-		<td>
+		<div class="grid-container center-text std-spacing section1">
+			<div>
 
-			<!--
-			DISABLED SINCE ONLY ONE WORKS
-			<Switch label="PITOT COPILOT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Switch label="PITOT PILOT" method="offset" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			-->
+				<!--
+				DISABLED SINCE ONLY ONE WORKS
+				<Switch label="PITOT COPILOT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+				<Switch label="PITOT PILOT" method="offset" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+				-->
 
-		</td>
-		<td>
+			</div>
+			<div>
 
-		</td>
-	</tr>
-	<tr>
-		<td>
-			
-		</td>
-		<td>
+				<Switch label="LAND" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+				<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+				<Switch label="POS" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+				<Switch label="ACOL" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
-			<Switch label="LAND" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Switch label="POS" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			<Switch label="ACOL" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			</div>
+		</div>
 
-		</td>
-	</tr>
-	</table>
+		<div class="grid-container std-spacing otherstuff1">
+			<div>
+				<Switch label="ROTOR BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			</div>
+		</div>
 
-	<div style="height: 100px"></div>
+		<div class="grid-container center-text std-spacing section2">
+			<div>
+				<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			</div>
+		</div>
 
-	<table align="right" class="std-spacing" style="margin-right: 10px">
-	<tr>
-		<td>
+		<div class="grid-container std-spacing otherstuff2">
+			<div>
+				<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			</div>
+			<div>
+				<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
+			</div>
+		</div>
 
-			<Switch label="ROTOR BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
-		</td>
-	</tr>
-	</table>
-	<div style="clear: both"></div>
-
-	<div style="height: 20px"></div>
-
-	<table align="center" class="std-spacing">
-	<tr>
-		<td>
-			<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
-
-	<div style="height: 100px"></div>
-
-	<table align="right" class="std-spacing" style="margin-right: 10px">
-	<tr>
-		<td>
-			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		</td>
-		<td>
-			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
+	</div>
 
 </template>
 
@@ -98,6 +75,17 @@ export default {
 }
 </script>
 
-<style>
-/* nothing yet */
+<style scoped>
+.panel-container {
+	margin-top: 580px;
+}
+.otherstuff1,
+.otherstuff2 {
+	text-align: right;
+	margin-right: 10px;
+	margin-top: 100px;
+}
+.section2 {
+	margin-top: 20px;
+}
 </style>
