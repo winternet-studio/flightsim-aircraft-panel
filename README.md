@@ -60,16 +60,31 @@ JUST INCOMPLETE NOTES SO FAR.
 
 JUST INCOMPLETE NOTES SO FAR.
 
-- have <div> surrounding the entire panel with these classes:
-	- `panel-container` (to make it use full width)
-	- name folder it is in (eg. `flybywire`)
-	- name of aircraft (eg. `airbus-320`)
+- have <div> surrounding the entire panel: `<div :class="'panel-container '+ panelInfo.path.join(' ')"> ... </div>`
 - do not use inline CSS since it can't be overriden by others
 
 Common classes:
 	- grid-container : TODO describe
-	- center-text : TODO describe
+	- text-left : TODO describe
+	- text-center : TODO describe
+	- text-rigth : TODO describe
 	- std-spacing : TODO describe
+
+A typical three column layout with text-align: left, text-align: center, and text-align: right (any of them can be left out):
+
+```
+<div class="grid-container std-spacing">
+	<div class="left-edge">
+		...
+	</div>
+	<div class="center-column">
+		...
+	</div>
+	<div class="right-edge">
+		...
+	</div>
+</div>
+```
 
 The panels have been adjusted for an HD monitor in landscape mode (1920x1080).
 

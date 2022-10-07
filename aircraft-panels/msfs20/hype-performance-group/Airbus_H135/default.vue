@@ -1,50 +1,47 @@
 <template>
+<div :class="'panel-container '+ panelInfo.path.join(' ')">
 
-	<div class="panel-container hype-performance-group airbus-h135">
+	<div class="grid-container text-center std-spacing section1">
+		<div>
 
-		<div class="grid-container center-text std-spacing section1">
-			<div>
+			<!--
+			DISABLED SINCE ONLY ONE WORKS
+			<Switch label="PITOT COPILOT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PITOT PILOT" method="offset" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			-->
 
-				<!--
-				DISABLED SINCE ONLY ONE WORKS
-				<Switch label="PITOT COPILOT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-				<Switch label="PITOT PILOT" method="offset" refName="" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-				-->
-
-			</div>
-			<div>
-
-				<Switch label="LAND" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-				<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-				<Switch label="POS" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-				<Switch label="ACOL" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
-			</div>
 		</div>
+		<div>
 
-		<div class="grid-container std-spacing otherstuff1">
-			<div>
-				<Switch label="ROTOR BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			</div>
+			<Switch label="LAND" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="POS" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="ACOL" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+
 		</div>
-
-		<div class="grid-container center-text std-spacing section2">
-			<div>
-				<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			</div>
-		</div>
-
-		<div class="grid-container std-spacing otherstuff2">
-			<div>
-				<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-			</div>
-			<div>
-				<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
-			</div>
-		</div>
-
 	</div>
 
+	<div class="grid-container std-spacing otherstuff1">
+		<div class="right-edge">
+			<Switch label="ROTOR BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</div>
+	</div>
+
+	<div class="grid-container text-center std-spacing section2">
+		<div>
+			<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</div>
+	</div>
+
+	<div class="grid-container std-spacing otherstuff2">
+		<div class="right-edge">
+			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<br>
+			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
+		</div>
+	</div>
+
+</div>
 </template>
 
 <script>
@@ -55,7 +52,7 @@ import KnobUpDown from '../../../../instruments/generic/KnobUpDown.vue'; compone
 
 export default {
 	components,
-	props: ['dataStore', 'eventHandlers'],
+	props: ['dataStore', 'eventHandlers', 'panelInfo'],
 	setup(props) {
 		props.eventHandlers.onPanelLoad({
 			watchValues: {
@@ -77,12 +74,11 @@ export default {
 
 <style scoped>
 .panel-container {
-	margin-top: 580px;
+	margin-top: 560px;
+	padding: 20px;
 }
 .otherstuff1,
 .otherstuff2 {
-	text-align: right;
-	margin-right: 10px;
 	margin-top: 100px;
 }
 .section2 {

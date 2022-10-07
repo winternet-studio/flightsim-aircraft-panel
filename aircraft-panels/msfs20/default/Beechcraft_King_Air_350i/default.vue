@@ -1,121 +1,71 @@
 <template>
+<div :class="'panel-container '+ panelInfo.path.join(' ')">
 
-	<div style="height: 465px"></div>
+	<div class="text-center std-spacing section1">
+		<Button label="MASTER WARNING" method="simControl" refName="MASTER_WARNING_ACKNOWLEDGE" setValue="0" :eventHandlers="eventHandlers" />
+		<Button label="MASTER CAUTION" method="simControl" refName="MASTER_CAUTION_ACKNOWLEDGE" setValue="0" :eventHandlers="eventHandlers" />
+	</div>
 
-	<table align="center" class="std-spacing">
-	<tr>
-		<td>
-			<Button label="MASTER WARNING" method="simControl" refName="MASTER_WARNING_ACKNOWLEDGE" setValue="0" :eventHandlers="eventHandlers" />
-			<Button label="MASTER CAUTION" method="simControl" refName="MASTER_CAUTION_ACKNOWLEDGE" setValue="0" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
+	<div class="text-center std-spacing theautopilot">
+		<Button label="FD" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FD1" :eventHandlers="eventHandlers" />
+		<Button label="FLC" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FLC" :eventHandlers="eventHandlers" />
+		<Button label="SYNC HDG" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_Push_Heading" :eventHandlers="eventHandlers" />
+		<Switch label="YD" method="offset" refName="yawDamper" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+	</div>
 
-	<div style="height: 50px"></div>
-
-	<table align="center" class="std-spacing">
-	<tr>
-		<td>
-			<Button label="FD" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FD1" :eventHandlers="eventHandlers" />
-			<Button label="FLC" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_FLC" :eventHandlers="eventHandlers" />
-			<Button label="SYNC HDG" method="presetCommand" refName="Asobo.King Air 350i.Autopilot.KA_Push_Heading" :eventHandlers="eventHandlers" />
-			<Switch label="YD" method="offset" refName="yawDamper" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
-
-	<div style="height: 35px"></div>
-
-	<table align="left" class="std-spacing">
-	<tr>
-		<td style="padding-left: 100px">
+	<div class="grid-container std-spacing section-z">
+		<div class="left-edge">
 			<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
+		</div>
+	</div>
 
-	<div style="height: 100px"></div>
+	<div class="text-center std-spacing thelights">
 
-	<table align="center" class="std-spacing">
-	<tr>
-		<td>
+		<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		<Switch label="ICE" method="offset" refName="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false, classes: 'INOPERABLE'}" /><!-- ONLY TURNING IT ON WORKS CURRENTLY -->
+		<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		<Switch label="RECOG" method="offset" refName="lightsRecognition" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 
-			<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Switch label="ICE" method="offset" refName="lightsWing" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false, classes: 'INOPERABLE'}" /><!-- ONLY TURNING IT ON WORKS CURRENTLY -->
-			<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Switch label="RECOG" method="offset" refName="lightsRecognition" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		</td>
-		<td style="padding-left: 50px; padding-right: 50px">
+		<div class="extra-spacer">
 			<SectionDivider />
-		</td>
-		<td>
-			<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		</div>
 
-		</td>
-	</tr>
-	<tr>
-		<td>
+		<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 
-<!--
-			HAVEN'T FOUND TRIGGER FOR THE "RIGHT" PITOT SO SKIP IT ALLTOGETHER
-			<Switch label="PITOT LEFT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
--->
+	</div>
 
-		</td>
-	</tr>
-	</table>
+	<div class="grid-container std-spacing section-x">
 
-	<div style="height: 100px"></div>
-
-	<table align="right" class="std-spacing" style="margin-right: 10px">
-	<tr>
-		<td>
-
-			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
-		</td>
-		<td>
-
-
-		</td>
-	</tr>
-	</table>
-
-	<table align="center">
-	<tr>
-		<td class="std-spacing" style="text-align: center">
-
+		<div class="left-edge">
+		</div>
+		<div class="center-column">
 			<Indicator label="Trim" method="offset" refName="trim" :dataStore="dataStore" :options="{classes: 'INOPERABLE'}" />
 			<Indicator label="Flaps" method="offset" refName="flapsPositionLeft" :dataStore="dataStore" />
+		</div>
+		<div class="right-edge">
+			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</div>
 
-		</td>
-	</tr>
-	</table>
+	</div>
 
-	<div style="height: 20px"></div>
+	<div class="grid-container std-spacing section-y">
 
-	<table align="left" class="std-spacing" style="margin-right: 10px">
-	<tr>
-		<td>
+		<div class="left-edge">
 			<Button label="IGN LEFT" method="presetCommand" refName="Asobo.King Air 350i.Engines.KA_ENG1_START_TOGGLE" :eventHandlers="eventHandlers" />
 			<Button label="IGN RIGHT" method="presetCommand" refName="Asobo.King Air 350i.Engines.KA_ENG2_START_TOGGLE" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
-
-	<table align="right" class="std-spacing" style="margin-right: 10px">
-	<tr>
-		<td>
+		</div>
+		<div class="center-column">
+		</div>
+		<div class="right-edge">
 			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		</td>
-		<td>
 			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
+		</div>
 
+	</div>
+
+</div>
 </template>
 
 <script>
@@ -129,7 +79,7 @@ import SectionDivider from '../../../../instruments/layout/SectionDivider.vue'; 
 
 export default {
 	components,
-	props: ['dataStore', 'eventHandlers'],
+	props: ['dataStore', 'eventHandlers', 'panelInfo'],
 	setup(props) {
 		/**
 		 * Add aircraft-specific functions here for formatting the shown values. Common formatting methods are available in FsuipcHtml
@@ -167,5 +117,28 @@ export default {
 </script>
 
 <style>
-/* nothing yet */
+.panel-container {
+	margin-top: 415px;
+	padding: 20px;
+}
+.theautopilot {
+	margin-top: 50px;
+	margin-bottom: 35px;
+}
+.thelights {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.extra-spacer {
+	display: inline-block;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.section-x {
+	grid-template-areas: 'left middle right';
+}
+.section-y {
+	grid-template-areas: 'left middle right';
+	margin-top: 20px;
+}
 </style>

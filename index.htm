@@ -542,7 +542,8 @@ if (!urlParams.has('config')) {
 			console[type](...args);
 		},
 	}
-	var app = Vue.createApp(Vue.defineAsyncComponent(() => loadModule('aircraft-panels/'+ aircraftPanelId +'.vue', options)), {dataStore, eventHandlers}).mount('#aircraft-specific-component');
+	var panelInfo = {path: (aircraftPanelId + '-vue').split('/')};
+	var app = Vue.createApp(Vue.defineAsyncComponent(() => loadModule('aircraft-panels/'+ aircraftPanelId +'.vue', options)), {dataStore, eventHandlers, panelInfo}).mount('#aircraft-specific-component');
 }
 
 function sendPresetCommand(commandName) {
