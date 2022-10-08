@@ -11,13 +11,13 @@ export default class FsuipcHtml {
 		if (value == 0) {
 			return 'OFF';
 		} else {
-			return '<span class="cdarkgray">ON</span>';
+			return '<span class="c-darkgray">ON</span>';
 		}
 	}
 
 	static brightOnValue(value) {
 		if (value == 0) {
-			return '<span class="cdarkgray">OFF</span>';
+			return '<span class="c-darkgray">OFF</span>';
 		} else {
 			return 'ON';
 		}
@@ -25,9 +25,9 @@ export default class FsuipcHtml {
 
 	static gearHandle(value) {
 		if (value == 0) {
-			return '<span class="cmediumgray">Up</span>';
+			return '<span class="c-mediumgray">Up</span>';
 		} else {
-			return '<span class="cgreen">Down</span>';
+			return '<span class="c-green">Down</span>';
 		}
 	}
 
@@ -35,42 +35,42 @@ export default class FsuipcHtml {
 		if (value == 0) {
 			return '';  //up
 		} else if (value == 16383) {
-			return '<span class="cgreen">GREEN</span>';
+			return '<span class="c-green">GREEN</span>';
 		} else {
-			return '<span class="cyellow">TRANSITION</span>';
+			return '<span class="c-yellow">TRANSITION</span>';
 		}
 	}
 
 	static spoilerPosition(value) {  //see FSUIPC offset 0BD0
 		if (value == 0) {
-			return '<span class="cdarkgray">STOWED</span>';
+			return '<span class="c-darkgray">STOWED</span>';
 		} else if (value == 4800) {
-			return '<span class="cgreen">ARMED</span>';
+			return '<span class="c-green">ARMED</span>';
 		} else {
 			if (value >= 5620 ) {
 				var base = 5620;
 				var perc = Math.round((value - base) / (16383 - base) * 93) + 7;
-				return '<span class="corange">'+ perc +'%</span>';  //extended/deployed
+				return '<span class="c-orange">'+ perc +'%</span>';  //extended/deployed
 			} else {
-				return '<span class="corange">EXTDD</span>';  //extended/deployed
+				return '<span class="c-orange">EXTDD</span>';  //extended/deployed
 			}
 		}
 	}
 
 	static cowlFlapPosition(value) {
 		if (value == 0) {
-			return '<span class="cdarkgray">CLOSED</span>';
+			return '<span class="c-darkgray">CLOSED</span>';
 		} else {
 			return Math.round(value * 100) +' %';
 		}
 	}
 
 	static apuVoltage(value) {
-		return '<span class="cmediumgray" style="font-size: 70%">'+ value +' kVA</span>';
+		return '<span class="c-mediumgray" style="font-size: 70%">'+ value +' kVA</span>';
 	}
 
 	static apuRpm(perc) {
-		return '<span class="cmediumgray" style="font-size: 70%">'+ perc +'%</span>';
+		return '<span class="c-mediumgray" style="font-size: 70%">'+ perc +'%</span>';
 	}
 
 	static starterSwitchEngine1Prop(value) {

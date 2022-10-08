@@ -120,7 +120,7 @@ export default {
 		 */
 		function flapsHtml(value) {
 			if (value == 0) {
-				return '<span class="cdarkgray">UP</span>';
+				return '<span class="c-darkgray">UP</span>';
 			} else if (value < 8300) {
 				return 'TAKEOFF';
 			} else {

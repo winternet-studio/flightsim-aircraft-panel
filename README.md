@@ -100,7 +100,7 @@ JUST INCOMPLETE NOTES SO FAR.
 | KnobUpDown | A "knob" that can be set to several different states by clicking |
 | KnobTouchDrag | A "knob" that can be set to several different states by dragging |
 | Indicator | Only an indicator of a given state, with a label (not a button that can be pressed) |
-| Annunciator | Like an indicator but without any label, only a light or text that can be on/off |
+| Annunciator | Like an indicator but without any label, only a light or text that can be "on" or "off" |
 
 #### Instrument/button methods
 
@@ -130,6 +130,7 @@ The value determine how the value is being displayed on the panel, it can be:
 - An object with these possible keys:
 	- `toHtml` : A string or function:
 		- A string, in which case it refers to a method in `FsuipcHtml` which holds commonly used formatting. They will return HTML.
+			- For Annunciators the return value will only be used to evaluate whether it is on or off, the actual content will not be used. You will normally use the `pass` method unless you need to convert the raw value.
 		- A function that will format and return HTML - which is defined within the setup() function. Used for aircraft-specific formatting.
 	- `inputOptions`: One of these objects (where the values must be based on the internal converted values, not necessarily the raw values coming from FSUIPC):
 		- `{toggleValues: [3, 1] }` : Toggle between these values
@@ -143,7 +144,7 @@ For example:
 	setup(props) {
 		function flapsHtml(value) {
 			if (value == 0) {
-				return '<span class="cdarkgray">UP</span>';
+				return '<span class="c-darkgray">UP</span>';
 			} else if (value < 8300) {
 				return 'TAKEOFF';
 			} else {

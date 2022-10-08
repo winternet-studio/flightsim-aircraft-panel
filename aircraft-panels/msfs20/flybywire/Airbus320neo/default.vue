@@ -97,15 +97,15 @@ Complete API:
 		</div>
 
 		<div class="text-center std-spacing the-mcp">
-			<Annunciator label="APU VOLTAGE" method="offset" refName="apuVoltage" :dataStore="dataStore" />
-			<Annunciator label="FD" method="offset" refName="mcpFDSw" :dataStore="dataStore" />
-			<Annunciator label="A/P" method="offset" refName="mcpAPAnnun" :dataStore="dataStore" />
-			<Annunciator label="SPEED" method="offset" refName="mcpSpdAnnun" :dataStore="dataStore" />
-			<Annunciator label="N1" method="offset" refName="mcpN1Annun" :dataStore="dataStore" />
-			<Annunciator label="APPR" method="offset" refName="mcpAppAnnun" :dataStore="dataStore" />
-			<Annunciator label="HDG" method="offset" refName="mcpHdgAnnun" :dataStore="dataStore" />
-			<Annunciator label="NAV" method="offset" refName="mcpNav1Annun" :dataStore="dataStore" />
-			<Annunciator label="ALT" method="offset" refName="mcpAltAnnun" :dataStore="dataStore" />
+			<Annunciator text="APU VOLTAGE" method="offset" refName="apuVoltage" :dataStore="dataStore" />
+			<Annunciator text="FD" method="offset" refName="mcpFDSw" :dataStore="dataStore" />
+			<Annunciator text="A/P" method="offset" refName="mcpAPAnnun" :dataStore="dataStore" />
+			<Annunciator text="SPEED" method="offset" refName="mcpSpdAnnun" :dataStore="dataStore" />
+			<Annunciator text="N1" method="offset" refName="mcpN1Annun" :dataStore="dataStore" />
+			<Annunciator text="APPR" method="offset" refName="mcpAppAnnun" :dataStore="dataStore" />
+			<Annunciator text="HDG" method="offset" refName="mcpHdgAnnun" :dataStore="dataStore" />
+			<Annunciator text="NAV" method="offset" refName="mcpNav1Annun" :dataStore="dataStore" />
+			<Annunciator text="ALT" method="offset" refName="mcpAltAnnun" :dataStore="dataStore" />
 		</div>
 
 		<div class="grid-container text-center std-spacing the-pedestal">
@@ -171,7 +171,7 @@ export default {
 		 */
 		function flapsHtml(value) {
 			if (value == 0) {
-				return '<span class="cdarkgray">UP</span>';
+				return '<span class="c-darkgray">UP</span>';
 			} else if (value < 8300) {
 				return 'TAKEOFF';
 			} else {
