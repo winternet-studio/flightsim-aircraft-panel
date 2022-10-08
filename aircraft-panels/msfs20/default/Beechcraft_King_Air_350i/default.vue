@@ -134,11 +134,31 @@ export default {
 	padding-left: 50px;
 	padding-right: 50px;
 }
+
 .section-x {
-	grid-template-areas: 'left middle right';
+	grid-template-areas: 'left-edge center-column right-edge';
 }
+.section-x .left-edge {
+	grid-area: left-edge;
+}
+.section-x .center-column {
+	grid-area: center-column;
+}
+.section-x .right-edge {
+	grid-area: right-edge;
+}
+
 .section-y {
-	grid-template-areas: 'left middle right';
+	grid-template-areas: 'left-edge center-column right-edge';
 	margin-top: 20px;
+}
+.section-y .left-edge {
+	grid-area: left-edge;
+}
+.section-y .center-column {
+	grid-area: center-column;
+}
+.section-y .right-edge {
+	grid-area: right-edge;
 }
 </style>

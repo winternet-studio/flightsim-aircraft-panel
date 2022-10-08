@@ -218,16 +218,31 @@ export default {
 .panel-container {
 	grid-template-areas: 'all-instruments mcdu';
 }
+.all-instruments {
+	grid-area: all-instruments;
+}
 .mcdu {
+	grid-area: mcdu;
 	text-align: right;
 }
 .mcdu iframe {
 	width: 37vw;
 	height: 100vh;
 }
+
 .the-overhead {
 	grid-template-areas: 'overhead-center-left overhead-center-middle overhead-center-right';
 }
+.overhead-center-left {
+	grid-area: overhead-center-left;
+}
+.overhead-center-middle {
+	grid-area: overhead-center-middle;
+}
+.overhead-center-right {
+	grid-area: overhead-center-right;
+}
+
 .the-mcp {
 	margin-top: 30px;
 	margin-bottom: 30px;
