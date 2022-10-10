@@ -39,6 +39,8 @@
 	<div class="grid-container std-spacing section-x">
 
 		<div class="left-edge">
+			<Switch label="L GEN" method="offset" refName="generatorEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="R GEN" method="offset" refName="generatorEng2" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 		</div>
 		<div class="center-column">
 			<Indicator label="Trim" method="offset" refName="trim" :dataStore="dataStore" :options="{classes: 'INOPERABLE'}" />
@@ -98,6 +100,8 @@ export default {
 			watchValues: {
 				offset: {
 					flapsPositionLeft: flapsHtml,
+					generatorEng1: 'brightOffValue',
+					generatorEng2: 'brightOffValue',
 					lightsStrobe: 'brightOnValue',
 					lightsBeacon: 'brightOnValue',
 					lightsNav: 'brightOnValue',

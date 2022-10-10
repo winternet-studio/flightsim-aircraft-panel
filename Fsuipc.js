@@ -63,6 +63,8 @@ export default class Fsuipc {
 			gearLeft: {address: 0x0BF4, type: 'uint', size: 4},
 			gearNose: {address: 0x0BEC, type: 'uint', size: 4},
 			gearRight: {address: 0x0BF0, type: 'uint', size: 4},
+			generatorEng1: {address: 0x3B78, type: 'uint', size: 4, toggleValues: [1, 0]},
+			generatorEng2: {address: 0x3AB8, type: 'uint', size: 4, toggleValues: [1, 0]},
 			lightsBeacon: {address: 0x0D0C, type: 'bits', size: 2, bit: 1},
 			lightsCabin: {address: 0x0D0C, type: 'bits', size: 2, bit: 9},
 			lightsInstruments: {address: 0x0D0C, type: 'bits', size: 2, bit: 5},
