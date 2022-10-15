@@ -5,8 +5,8 @@ Indicator that where dragging up/down/left/right increases or decreases the valu
 	<div :class="'instrument knob-touch-drag inline-block' + (options?.classes ? ' '+ options.classes : '')">
 		<div class="custom-lbl std-lbl-color" :style="(options?.labelStyle ? objectToCss(options.labelStyle) : '')">{{ label }}</div>
 		<div @click="pushed" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd" :class="'knob-indicator bordered' + (pushRefName ? ' pressable' : '')">
-			<div class="std-val" v-if="!options?.hideValue" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
-				<span v-html="dataStore.state[readMethod]?.[readRefName]?.valueHtml ?? dataStore.state[method]?.[refName]?.valueHtml ?? '&nbsp;'"></span>
+			<div class="curr-val" v-if="!options?.hideValue" :style="(options?.valueStyle ? objectToCss(options.valueStyle) : '')" :data-internal-value="dataStore.state[readMethod]?.[readRefName]?.internalValue ?? dataStore.state[method]?.[refName]?.internalValue">
+				<span v-html="dataStore.state[readMethod]?.[readRefName]?.valueHtml ?? dataStore.state[method]?.[refName]?.valueHtml ?? '87'"></span>
 			</div>
 		</div>
 		<div v-if="pullRefName && !dataStore.appConfig.enableMultiTouch" @click="pulled" class="pull-knob-trigger bordered pressable">P</div>
@@ -81,6 +81,7 @@ module.exports = {
 	height: 45px;
 	width: 45px;
 	border-radius: 100px;
+	position: relative;
 	/*user-select: none;*/
 }
 .instrument.larger-instr .knob-indicator {
@@ -91,8 +92,9 @@ module.exports = {
 	height: 40px;
 	width: 40px;
 }
-.std-val {
-	position: relative;
+.curr-val {
+	width: 100%;
+	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 80%;

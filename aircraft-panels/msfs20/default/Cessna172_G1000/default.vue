@@ -1,4 +1,5 @@
 <template>
+<div :class="'panel-container '+ panelInfo.path.join(' ')">
 
 	<div style="height: 35px"></div>
 
@@ -239,133 +240,51 @@
 
 	<div style="height: 30px"></div>
 
-	<table class="std-spacing">
-	<tr>
-		<td>
+	<div class="std-spacing lower-panel">
+		<div class="electrical">
 			<Switch label="MASTER ALT" method="offset" refName="alternator1Master" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		</td>
-		<td>
 			<Button label="MASTER BAT" method="simControl" refName="TOGGLE_MASTER_BATTERY" setValue="1" :eventHandlers="eventHandlers" />
-		</td>
-		<td>
 			<Button label="AVIONICS BUS 1" method="calcCode" refName="24 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)" :eventHandlers="eventHandlers" />
-		</td>
-		<td>
 			<Button label="AVIONICS BUS 2" method="calcCode" refName="25 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)" :eventHandlers="eventHandlers" />
-		</td>
-		<td>
 			<Button label="STBY BATT" method="simControl" refName="TOGGLE_MASTER_BATTERY" setValue="2" :eventHandlers="eventHandlers" />
-		</td>
-		<td style="padding-left: 50px">
-			<KnobUpDown label="XPDR" method="offset" refName="transponderState" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
-
-	<div class="std-spacing" style="padding-left: 10px">
-
-
-		<div style="display: inline-block; width: 50px"></div>
-
-
-	</div>
-
-	<div style="height: 2px"></div>
-
-	<table class="std-spacing">
-	<tr>
-		<td style="padding-left: 10px; text-align: center">
-
+			<KnobUpDown label="XPDR" method="offset" refName="transponderState" :options="{classes: 'xpdr'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</div>
+		<div class="lights">
 			<KnobTouchDrag label="SW/CB PANEL" method="lVar" refName="AS1000_MFD_Brightness" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
-		</td>
-		<td style="text-align: center">
-
 			<KnobTouchDrag label="STBY IND" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
-		</td>
-		<td>
 			<SectionDivider />
-		</td>
-		<td>
-
 			<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-
-		</td>
-	</tr>
-	<tr>
-		<td style="padding-left: 10px; text-align: center">
-
+		</div>
+		<div class="electrical2">
 			<KnobTouchDrag label="PEDESTAL" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
-		</td>
-		<td style="text-align: center">
-
 			<KnobTouchDrag label="AVIONICS" method="lVar" refName="AS1000_MFD_Brightness" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-
-		</td>
-		<td>
 			<SectionDivider />
-		</td>
-		<td>
-
 			<Switch label="FUEL PUMP" method="offset" refName="fuelPumpEng1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 			<Switch label="PROBE HEAT" method="offset" refName="pitotHeat" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-
-		</td>
-	</tr>
-	</table>
-
-	<table>
-	<tr>
-		<td style="padding-left: 10px; vertical-align: middle">
-
+		</div>
+		<div>
 			<KnobUpDown label="MAGNETOS" method="offset" refName="starterSwitchEngine1Prop" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :options="{classes: 'park-brake'}" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</div>
+	</div>
 
-		</td>
-		<td style="padding-left: 380px; vertical-align: middle">
+	<div class="text-center std-spacing">
+		<Indicator label="Trim" method="offset" refName="trim" :dataStore="dataStore" :options="{classes: 'INOPERABLE'}" />
+		<Indicator label="Flaps" method="offset" refName="flapsPositionLeft" :dataStore="dataStore" />
+		<br>
+		<Switch label="Fuel Selector" method="offset" refName="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
+	</div>
 
-			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+	<div class="text-right std-spacing other">
+		<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
+	</div>
 
-		</td>
-		<td>
-
-
-		</td>
-	</tr>
-	</table>
-
-	<table align="center">
-	<tr>
-		<td class="std-spacing" style="text-align: center">
-
-			<Indicator label="Trim" method="offset" refName="trim" :dataStore="dataStore" :options="{classes: 'INOPERABLE'}" />
-			<Indicator label="Flaps" method="offset" refName="flapsPositionLeft" :dataStore="dataStore" />
-
-		</td>
-	</tr>
-	<tr>
-		<td class="std-spacing">
-			<Switch label="Fuel Selector" method="offset" refName="fuelSel" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{classes: 'INOPERABLE'}" />
-		</td>
-	</tr>
-	</table>
-
-	<table align="right" class="std-spacing">
-	<tr>
-		<td>
-			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
-		</td>
-		<td style="padding-right: 10px">
-			<Button label="AUTO BARO" method="presetCommand" refName="autoSetAltimeter" :eventHandlers="eventHandlers" />
-		</td>
-	</tr>
-	</table>
-
+</div>
 </template>
 
 <script>
@@ -379,7 +298,7 @@ import SectionDivider from '../../../../instruments/layout/SectionDivider.vue'; 
 
 export default {
 	components,
-	props: ['dataStore', 'eventHandlers'],
+	props: ['dataStore', 'eventHandlers', 'panelInfo'],
 	setup(props) {
 		/**
 		 * Add aircraft-specific functions here for formatting the shown values. Common formatting methods are available in FsuipcHtml
@@ -462,5 +381,21 @@ export default {
 .g1000-buttons.softkey .std-lbl {
 	opacity: 0.3;
 	font-size: 10px;
+}
+
+.xpdr {
+	padding-left: 50px;
+}
+.lower-panel > div {
+	margin-top: 10px;
+}
+.lights, .electrical2 {
+	padding-left: 5px;
+}
+.park-brake {
+	margin-left: 380px !important;
+}
+.other {
+	padding-right: 10px;
 }
 </style>
