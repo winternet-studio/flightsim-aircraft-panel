@@ -146,7 +146,7 @@ Complete API:
 
 
 
-			<iframe src="http://localhost:8125/sound"></iframe>
+			<iframe src="http://simbridge.local:8380/interfaces/mcdu"></iframe>
 
 
 
@@ -226,7 +226,7 @@ export default {
 	text-align: right;
 }
 .mcdu iframe {
-	width: 37vw;
+	width: 36vw;
 	height: 100vh;
 }
 
