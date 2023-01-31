@@ -1,5 +1,5 @@
 // Credits to https://hubhop.mobiflight.com/ for providing this.
-// Generated from dataset of 2022-09-25 15:51Z
+// Generated from dataset of 2023-01-31 07:40Z
 export default {
 	"Microsoft.Generic.Avionics.AS1000_PFD_VOL_1_DEC": {
 		"method": "calcCode",
@@ -1897,7 +1897,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:TOGGLE_MASTER_IGNITION_SWITCH)"
 	},
-	"Microsoft.Generic.Lights.TOGGLE_NAV_LIGHTS": {
+	"Microsoft.Generic.Lights.Input.TOGGLE_NAV_LIGHTS": {
 		"method": "calcCode",
 		"code": "(>K:TOGGLE_NAV_LIGHTS)"
 	},
@@ -2205,11 +2205,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:VOR_OBS)"
 	},
-	"Microsoft.Generic.Radio.VOR1_OBI_DEC": {
+	"Microsoft.Generic.Radio.Input.VOR1_OBI_DEC": {
 		"method": "calcCode",
 		"code": "(>K:VOR1_OBI_DEC)"
 	},
-	"Microsoft.Generic.Radio.VOR1_OBI_INC": {
+	"Microsoft.Generic.Radio.Input.VOR1_OBI_INC": {
 		"method": "calcCode",
 		"code": "(>K:VOR1_OBI_INC)"
 	},
@@ -2433,13 +2433,13 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_FCP_CRS1_DIRECT)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Autopilot.ASCRJ_FCP_SPEED_SEL_INC": {
+	"Aerosoft.CRJ 550-700-1000.Autopilot.Input.ASCRJ_FCP_SPEED_SEL_INC": {
 		"method": "calcCode",
-		"code": "(L:ASCRJ_FCP_SPEED_CHANGE, 1) ++ (>L:ASCRJ_FCP_SPEED_CHANGE)"
+		"code": "1 (>L:ASCRJ_FCP_SPEED_CHANGE)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Autopilot.ASCRJ_FCP_SPEED_SEL_DEC": {
+	"Aerosoft.CRJ 550-700-1000.Autopilot.Input.ASCRJ_FCP_SPEED_SEL_DEC": {
 		"method": "calcCode",
-		"code": "(L:ASCRJ_FCP_SPEED_CHANGE, 1) -- (>L:ASCRJ_FCP_SPEED_CHANGE)"
+		"code": "-1 (>L:ASCRJ_FCP_SPEED_CHANGE)"
 	},
 	"Aerosoft.CRJ 550-700-1000.Autopilot.ASCRJ_FCP_SPEED_MODE_PRESS": {
 		"method": "calcCode",
@@ -2465,7 +2465,7 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_FCP_HDG_SYNC)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Autopilot.ASCRJ_FCP_ALT_SEL_INC": {
+	"Aerosoft.CRJ 550-700-1000.Autopilot.Input.ASCRJ_FCP_ALT_SEL_INC": {
 		"method": "calcCode",
 		"code": "(L:ASCRJ_FCP_ALT_CHANGE, 1) ++ (>L:ASCRJ_FCP_ALT_CHANGE)"
 	},
@@ -3297,7 +3297,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:KOHLSMAN SETTING HG, Number) 100 / near"
 	},
-	"Fly By Wire.A320.EFIS.(A:KOHLSMAN SETTING HG, Number) 33.866 / near": {
+	"Fly By Wire.A320.EFIS.Output.(A:KOHLSMAN SETTING HG, Number) 33.866 / near": {
 		"method": "calcCode",
 		"code": "(A:KOHLSMAN SETTING HG, Number) 33.866 / near"
 	},
@@ -5393,25 +5393,25 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>K:TOGGLE_EXTERNAL_POWER)"
 	},
-	"Asobo.Longitude.Lights.LONGITUDE_LANDING_LIGHTS_L_TOGGLE": {
+	"Asobo.Longitude.Lights.Input.LONGITUDE_LANDING_LIGHTS_L_TOGGLE": {
 		"method": "calcCode",
-		"code": "(>K:LANDING_LIGHTS_L_TOGGLE)"
+		"code": "(L:LIGHTING_LANDING_1) ! s0 (>L:LIGHTING_LANDING_1)\n1 l0 (>K:2:LANDING_LIGHTS_SET)"
 	},
-	"Asobo.Longitude.Lights.LONGITUDE_LANDING_LIGHTS_R_TOGGLE": {
+	"Asobo.Longitude.Lights.Input.LONGITUDE_LANDING_LIGHTS_R_TOGGLE": {
 		"method": "calcCode",
-		"code": "(>K:LANDING_LIGHTS_R_TOGGLE)"
+		"code": "(L:LIGHTING_LANDING_2) ! s0 (>L:LIGHTING_LANDING_2)\n2 l0 (>K:2:LANDING_LIGHTS_SET) "
 	},
-	"Asobo.Longitude.Lights.LONGITUDE_TAXI_LIGHTS_TOGGLE": {
+	"Asobo.Longitude.Lights.Input.LONGITUDE_TAXI_LIGHTS_TOGGLE": {
 		"method": "calcCode",
-		"code": "(>K:TAXI_LIGHTS_TOGGLE)"
+		"code": "(L:LIGHTING_TAXI_1) ! s0 (>L:LIGHTING_TAXI_1)\n1 l0 (>K:2:TAXI_LIGHTS_SET) \n"
 	},
-	"Asobo.Longitude.Lights.LONGITUDE_RECOG_LIGHTS_TOGGLE": {
+	"Asobo.Longitude.Lights.Input.LONGITUDE_RECOG_LIGHTS_TOGGLE": {
 		"method": "calcCode",
-		"code": "(>K:RECOG_LIGHTS_TOGGLE)"
+		"code": "(L:LIGHTING_NAV_1) ! s0 (>L:LIGHTING_NAV_1) \n1 l0 (>K:2:NAV_LIGHTS_SET) "
 	},
-	"Asobo.Longitude.Lights.LONGITUDE_PULSE_LIGHTS_TOGGLE": {
+	"Asobo.Longitude.Lights.Input.LONGITUDE_PULSE_LIGHTS_TOGGLE": {
 		"method": "calcCode",
-		"code": "(>K:PULSE_LIGHTS_TOGGLE)"
+		"code": "(L:LIGHTING_STROBE_1) ! s0 (>L:LIGHTING_STROBE_1)\n1 l0 (>K:2:STROBES_SET) "
 	},
 	"Asobo.Longitude.Lights.LONGITUDE_WING_INSP_LIGHTS_TOGGLE": {
 		"method": "calcCode",
@@ -5425,17 +5425,17 @@ export default {
 		"method": "calcCode",
 		"code": "(A:LIGHT LANDING ON, Number)"
 	},
-	"Asobo.Longitude.Lights.(A:LIGHT TAXI ON, Number)": {
+	"Asobo.Longitude.Lights.Output.(A:LIGHT TAXI ON, Number)": {
 		"method": "calcCode",
-		"code": "(A:LIGHT TAXI ON, Number)"
+		"code": "(A:LIGHT TAXI ON, Bool)"
 	},
 	"Asobo.Longitude.Lights.(A:LIGHT NAV ON, Number)": {
 		"method": "calcCode",
 		"code": "(A:LIGHT NAV ON, Number)"
 	},
-	"Asobo.Longitude.Lights.(A:LIGHT WING ON, Number)": {
+	"Asobo.Longitude.Lights.Output.(A:LIGHT WING ON, Number)": {
 		"method": "calcCode",
-		"code": "(A:LIGHT WING ON, Number)"
+		"code": "(A:LIGHT WING ON:1, Number)"
 	},
 	"Asobo.Longitude.Lights.(A:WING DEICE ON, Number)": {
 		"method": "calcCode",
@@ -5545,11 +5545,11 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:XMLVAR_Baro_Selector_HPA_1)"
 	},
-	"Bredok3d.737-MAX.EFIS.KNOB_Baro_1_DEC": {
+	"Bredok3d.737-MAX.EFIS.Input.KNOB_Baro_1_DEC": {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ 1 (>K:KOHLSMAN_DEC) }"
 	},
-	"Bredok3d.737-MAX.EFIS.KNOB_Baro_1_INC": {
+	"Bredok3d.737-MAX.EFIS.Input.KNOB_Baro_1_INC": {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ 1 (>K:KOHLSMAN_INC) }"
 	},
@@ -5649,11 +5649,11 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:XMLVAR_Baro_Selector_HPA_2)"
 	},
-	"Bredok3d.737-MAX.EFIS.KNOB_Baro_2_DEC": {
+	"Bredok3d.737-MAX.EFIS.Input.KNOB_Baro_2_DEC": {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ 1 (>K:KOHLSMAN_DEC) }"
 	},
-	"Bredok3d.737-MAX.EFIS.KNOB_Baro_2_INC": {
+	"Bredok3d.737-MAX.EFIS.Input.KNOB_Baro_2_INC": {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ 1 (>K:KOHLSMAN_INC) }"
 	},
@@ -5685,7 +5685,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:AS01B_MFD_2_AUTOPILOT_CTR)"
 	},
-	"Working Title.CJ4.Autopilot.WT_CJ4_AP_ALT_VAR_INC": {
+	"Working Title.CJ4.Autopilot.Input.WT_CJ4_AP_ALT_VAR_INC": {
 		"method": "calcCode",
 		"code": "100 (>K:AP_ALT_VAR_INC)"
 	},
@@ -5969,17 +5969,17 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:Generic_Upr_RANGE_INC)"
 	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO1_DEC": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO1_DEC": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ \n1 (>K:KOHLSMAN_DEC) \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure) 5 - (>L:XMLVAR_Baro1_SavedPressure) }"
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) ! if{ \n1 (>K:KOHLSMAN_DEC) \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure, number) 5 - (>L:XMLVAR_Baro1_SavedPressure) }"
 	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO1_INC": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO1_INC": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ \n1 (>K:KOHLSMAN_INC) \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure) 5 + (>L:XMLVAR_Baro1_SavedPressure) } "
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) ! if{ \n1 (>K:KOHLSMAN_INC) \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure, Number) 5 + (>L:XMLVAR_Baro1_SavedPressure) } "
 	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO1_STD_PUSH": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO1_STD_PUSH": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! (>L:XMLVAR_Baro1_ForcedToSTD) (L:XMLVAR_Baro1_ForcedToSTD) if{ \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) \n1 (>K:BAROMETRIC_STD_PRESSURE) } els{ \n1 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET)\n2 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET) }"
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) ! (>L:XMLVAR_Baro1_ForcedToSTD, bool) (L:XMLVAR_Baro1_ForcedToSTD, bool) if{ \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure, number) \n1 (>K:BAROMETRIC_STD_PRESSURE) } els{ \n1 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET)\n2 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET) }"
 	},
 	"Working Title.CJ4.Avionics.CJ4_Generic_Upr_TILT_INC": {
 		"method": "calcCode",
@@ -6801,11 +6801,11 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:B747_8_XMLVAR_Baro_Selector_HPA_1)"
 	},
-	"Asobo.747-8i.EFIS.B747_8_BARO_DEC": {
+	"Asobo.747-8i.EFIS.Input.B747_8_BARO_DEC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_DEC)"
 	},
-	"Asobo.747-8i.EFIS.B747_8_BARO_INC": {
+	"Asobo.747-8i.EFIS.Input.B747_8_BARO_INC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_INC)"
 	},
@@ -7401,11 +7401,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:KX170_NAV1_inner_knob, enum) -- (>L:KX170_NAV1_inner_knob, enum) (L:KX170_NAV1_inner_knob, enum) 0 < if{ 99 (>L:KX170_NAV1_inner_knob, enum) }"
 	},
-	"Just Flight.Piper Arrow III.EFIS.ALT_baro_knob_left": {
+	"Just Flight.Piper Arrow III.EFIS.Input.ALT_baro_knob_left": {
 		"method": "calcCode",
 		"code": "(L:ALTIMETER_baro_knob, enum) ++  100 min (>L:ALTIMETER_baro_knob, enum) (>K:KOHLSMAN_INC) (L:ALTIMETER_baro_knob, enum) 100 == if{ 0 (>L:ALTIMETER_baro_knob, enum) }"
 	},
-	"Just Flight.Piper Arrow III.EFIS.ALT_baro_knob_right": {
+	"Just Flight.Piper Arrow III.EFIS.Input.ALT_baro_knob_right": {
 		"method": "calcCode",
 		"code": "(L:ALTIMETER_baro_knob, enum) -- 0 max (>L:ALTIMETER_baro_knob, enum) (>K:KOHLSMAN_DEC) (L:ALTIMETER_baro_knob, enum) 0 == if{ 100 (>L:ALTIMETER_baro_knob, enum) }"
 	},
@@ -7569,7 +7569,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT MASTER, bool) ! if{ 0 (>K:TOGGLE_FLIGHT_DIRECTOR) }"
 	},
-	"Asobo.Cessna 172.Autopilot.C_172_AP_HDG": {
+	"Asobo.Cessna 172.Autopilot.Input.C_172_AP_HDG": {
 		"method": "calcCode",
 		"code": "(>K:AP_PANEL_HEADING_HOLD)"
 	},
@@ -8021,17 +8021,17 @@ export default {
 		"method": "calcCode",
 		"code": "2 (>L:XMLVAR_ElecSource, Number) (A:ELECTRICAL MASTER BATTERY, Bool) if{ (>K:TOGGLE_MASTER_BATTERY) } 2 (>L:XMLVAR_ElecGen, Number) (A:GENERAL ENG MASTER ALTERNATOR:1, Bool) if{ (>K:TOGGLE_ALTERNATOR1) } 0 (>L:XMLVAR_CrashLeverPos, Number)"
 	},
-	"Asobo.TBM 930.Electrical.TBM930_ELECTRICAL_SOURCE_GPU": {
+	"Asobo.TBM 930.Electrical.Input.TBM930_ELECTRICAL_SOURCE_GPU": {
 		"method": "calcCode",
-		"code": "0 (>L:XMLVAR_ElecSource, Number) (A:ELECTRICAL MASTER BATTERY, Bool) if{ (>K:TOGGLE_MASTER_BATTERY) }"
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, Bool) if{ 1 (>K:TOGGLE_MASTER_BATTERY) } \n1 (>L:XMLVAR_Battery_GPU_ON) "
 	},
-	"Asobo.TBM 930.Electrical.TBM930_ELECTRICAL_SOURCE_BATT": {
+	"Asobo.TBM 930.Electrical.Input.TBM930_ELECTRICAL_SOURCE_BATT": {
 		"method": "calcCode",
-		"code": "1 (>L:XMLVAR_ElecSource, Number) (A:ELECTRICAL MASTER BATTERY, Bool) ! if{ (>K:TOGGLE_MASTER_BATTERY) }"
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, Bool) ! if{ 1 (>K:TOGGLE_MASTER_BATTERY) } \n0 (>L:XMLVAR_Battery_GPU_ON) "
 	},
-	"Asobo.TBM 930.Electrical.TBM930_ELECTRICAL_SOURCE_OFF": {
+	"Asobo.TBM 930.Electrical.Input.TBM930_ELECTRICAL_SOURCE_OFF": {
 		"method": "calcCode",
-		"code": "2 (>L:XMLVAR_ElecSource, Number) (A:ELECTRICAL MASTER BATTERY, Bool) if{ (>K:TOGGLE_MASTER_BATTERY) }"
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, Bool) if{ 1 (>K:TOGGLE_MASTER_BATTERY) } \n0 (>L:XMLVAR_Battery_GPU_ON) "
 	},
 	"Asobo.TBM 930.Electrical.TBM930_GENERATOR_STANDBY": {
 		"method": "calcCode",
@@ -8333,11 +8333,11 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>K:BAROMETRIC)"
 	},
-	"Asobo.TBM 930.Autopilot.TBM930_BARO_DEC": {
+	"Asobo.TBM 930.Autopilot.Input.TBM930_BARO_DEC": {
 		"method": "calcCode",
 		"code": "1 (>K:KOHLSMAN_DEC) (>H:AP_BARO_DOWN)"
 	},
-	"Asobo.TBM 930.Autopilot.TBM930_BARO_INC": {
+	"Asobo.TBM 930.Autopilot.Input.TBM930_BARO_INC": {
 		"method": "calcCode",
 		"code": "1 (>K:KOHLSMAN_INC) (>H:AP_BARO_UP)"
 	},
@@ -8597,37 +8597,25 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:A32NX_OVHD_AUTOBRK_MAX_ON_IS_PRESSED, bool)"
 	},
-	"Fly By Wire.A320.Gear.Autobrake Low Toggle": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO2_INC": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_AUTOBRK_LOW_ON_IS_PRESSED, bool) ! (>L:A32NX_OVHD_AUTOBRK_LOW_ON_IS_PRESSED, bool)"
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) ! if{ \n1 (>K:KOHLSMAN_INC) \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure, number) 5 + (>L:XMLVAR_Baro1_SavedPressure) }"
 	},
-	"Fly By Wire.A320.Gear.Autobrake Med Toggle": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO2_DEC": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_AUTOBRK_MED_ON_IS_PRESSED, bool) ! (>L:A32NX_OVHD_AUTOBRK_MED_ON_IS_PRESSED, bool)"
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) ! if{ \n\t\t1 (>K:KOHLSMAN_DEC) \n\t\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure, number) 5 - (>L:XMLVAR_Baro1_SavedPressure) }"
 	},
-	"Fly By Wire.A320.Gear.Autobrake Max Toggle": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO2_STD_PUSH": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_AUTOBRK_MAX_ON_IS_PRESSED, bool) ! (>L:A32NX_OVHD_AUTOBRK_MAX_ON_IS_PRESSED, bool)"
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) ! (>L:XMLVAR_Baro1_ForcedToSTD, bool) \n(L:XMLVAR_Baro1_ForcedToSTD, bool) if{ \n\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) \n\t1 (>K:BAROMETRIC_STD_PRESSURE) \n} els{ \n\t1 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET) \n\t2 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET) \n} "
 	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO2_INC": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO3_INC": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ \n1 (>K:KOHLSMAN_INC) \n(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure) 5 + (>L:XMLVAR_Baro1_SavedPressure) }"
+		"code": "(L:XMLVAR_Baro2_ForcedToSTD, bool) ! if{ \n\t\t2 (>K:KOHLSMAN_INC) \n\t\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro2_SavedPressure) } \n	 els{ (L:XMLVAR_Baro2_SavedPressure, number) 5 + (>L:XMLVAR_Baro2_SavedPressure) } "
 	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO2_DEC": {
+	"Working Title.CJ4.Avionics.Input.WT_CJ4_BARO3_DEC": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! if{ \n\t\t1 (>K:KOHLSMAN_DEC) \n\t\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) } \nels{ (L:XMLVAR_Baro1_SavedPressure) 5 - (>L:XMLVAR_Baro1_SavedPressure) }"
-	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO2_STD_PUSH": {
-		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_ForcedToSTD) ! (>L:XMLVAR_Baro1_ForcedToSTD) \n(L:XMLVAR_Baro1_ForcedToSTD) if{ \n\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) \n\t1 (>K:BAROMETRIC_STD_PRESSURE) \n} els{ \n\t1 (L:XMLVAR_Baro1_SavedPressure) (>K:2:KOHLSMAN_SET) \n\t2 (L:XMLVAR_Baro1_SavedPressure) (>K:2:KOHLSMAN_SET) \n} "
-	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO3_INC": {
-		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro2_ForcedToSTD) ! if{ \n\t\t2 (>K:KOHLSMAN_INC) \n\t\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro2_SavedPressure) } \n	 els{ (L:XMLVAR_Baro2_SavedPressure) 5 + (>L:XMLVAR_Baro2_SavedPressure) } "
-	},
-	"Working Title.CJ4.Avionics.WT_CJ4_BARO3_DEC": {
-		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro2_ForcedToSTD) ! if{ \n\t\t2 (>K:KOHLSMAN_DEC) \n\t\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro2_SavedPressure) } \n	 els{ (L:XMLVAR_Baro2_SavedPressure) 5 - (>L:XMLVAR_Baro2_SavedPressure) } "
+		"code": "(L:XMLVAR_Baro2_ForcedToSTD, bool) ! if{ \n\t\t2 (>K:KOHLSMAN_DEC) \n\t\t(A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro2_SavedPressure) } \n	 els{ (L:XMLVAR_Baro2_SavedPressure, number) 5 - (>L:XMLVAR_Baro2_SavedPressure) } "
 	},
 	"Working Title.CJ4.Warning System.WT_CJ4_MASTER_CAUTION_PUSH": {
 		"method": "calcCode",
@@ -8721,11 +8709,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:TOGGLE_FLIGHT_DIRECTOR)"
 	},
-	"Fly By Wire.A320.EFIS.Baro increase": {
+	"Fly By Wire.A320.EFIS.Input.Baro increase": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_INC)"
 	},
-	"Fly By Wire.A320.EFIS.Baro decrease": {
+	"Fly By Wire.A320.EFIS.Input.Baro decrease": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_DEC)"
 	},
@@ -9277,11 +9265,11 @@ export default {
 		"method": "calcCode",
 		"code": "(A:INDICATED ALTITUDE EX1,Feet)"
 	},
-	"Microsoft.Generic.Flight Instrumentation.KOHLSMAN SETTING HG": {
+	"Microsoft.Generic.Flight Instrumentation.Output.KOHLSMAN SETTING HG": {
 		"method": "calcCode",
 		"code": "(A:KOHLSMAN SETTING HG, inHg)"
 	},
-	"Microsoft.Generic.Flight Instrumentation.KOHLSMAN SETTING MB": {
+	"Microsoft.Generic.Flight Instrumentation.Output.KOHLSMAN SETTING MB": {
 		"method": "calcCode",
 		"code": "(A:KOHLSMAN SETTING MB,Millibars)"
 	},
@@ -9957,11 +9945,11 @@ export default {
 		"method": "calcCode",
 		"code": "(A:LIGHT LOGO ON,Bool)"
 	},
-	"Microsoft.Generic.Lights.LIGHT NAV": {
+	"Microsoft.Generic.Lights.Output.LIGHT NAV": {
 		"method": "calcCode",
 		"code": "(A:LIGHT NAV,Bool)"
 	},
-	"Microsoft.Generic.Lights.LIGHT NAV ON": {
+	"Microsoft.Generic.Lights.Output.LIGHT NAV ON": {
 		"method": "calcCode",
 		"code": "(A:LIGHT NAV ON,Bool)"
 	},
@@ -11953,7 +11941,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:COM_STBY_RADIO_SWAP)"
 	},
-	"Microsoft.Generic.Radio.COM1_TRANSMIT_SELECT": {
+	"Microsoft.Generic.Radio.Input.COM1_TRANSMIT_SELECT": {
 		"method": "calcCode",
 		"code": "(>K:COM1_TRANSMIT_SELECT)"
 	},
@@ -11985,7 +11973,7 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:COM2_RADIO_WHOLE_INC)"
 	},
-	"Microsoft.Generic.Radio.COM2_TRANSMIT_SELECT": {
+	"Microsoft.Generic.Radio.Input.COM2_TRANSMIT_SELECT": {
 		"method": "calcCode",
 		"code": "(>K:COM2_TRANSMIT_SELECT)"
 	},
@@ -12493,11 +12481,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:KNEEBOARD_VIEW)"
 	},
-	"Microsoft.Generic.Flight Instrumentation.KOHLSMAN_DEC": {
+	"Microsoft.Generic.Flight Instrumentation.Input.KOHLSMAN_DEC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_DEC)"
 	},
-	"Microsoft.Generic.Flight Instrumentation.KOHLSMAN_INC": {
+	"Microsoft.Generic.Flight Instrumentation.Input.KOHLSMAN_INC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_INC)"
 	},
@@ -13669,9 +13657,9 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:THROTTLE_CUT)"
 	},
-	"Microsoft.Generic.Engines.THROTTLE_DECR": {
+	"Microsoft.Generic.Engines.Input.THROTTLE_DECR": {
 		"method": "calcCode",
-		"code": "Engines"
+		"code": "(>K:THROTTLE_DECR)"
 	},
 	"Microsoft.Generic.Engines.THROTTLE_DECR_SMALL": {
 		"method": "calcCode",
@@ -14041,11 +14029,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:AP_PITCH_REF_SELECT)"
 	},
-	"Microsoft.Generic.Autopilot.AP_SPD_VAR_DEC": {
+	"Microsoft.Generic.Autopilot.Input.AP_SPD_VAR_DEC": {
 		"method": "calcCode",
 		"code": "(>K:AP_SPD_VAR_DEC)"
 	},
-	"Microsoft.Generic.Autopilot.AP_SPD_VAR_INC": {
+	"Microsoft.Generic.Autopilot.Input.AP_SPD_VAR_INC": {
 		"method": "calcCode",
 		"code": "(>K:AP_SPD_VAR_INC)"
 	},
@@ -14201,9 +14189,9 @@ export default {
 		"method": "calcCode",
 		"code": "(A:LIGHT LANDING, Bool)"
 	},
-	"Working Title.CJ4.Lights.WT CJ4 Beacon Lights ON": {
+	"Working Title.CJ4.Lights.Output.WT CJ4 Beacon Lights ON": {
 		"method": "calcCode",
-		"code": "(L:LIGHTING_STROBE_1)"
+		"code": "(L:LIGHTING_BEACON_1)"
 	},
 	"Working Title.CJ4.Lights.WT CJ4 Strobe Lights ON": {
 		"method": "calcCode",
@@ -15269,13 +15257,13 @@ export default {
 		"method": "calcCode",
 		"code": "(A:EXTERNAL POWER AVAILABLE:1,bool) (A:EXTERNAL POWER ON:1,bool) ! and \nif{ 1 (>K:TOGGLE_EXTERNAL_POWER) } els{ \n(A:EXTERNAL POWER ON:1,bool) if{ 1 (>K:TOGGLE_EXTERNAL_POWER) } }"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND ENG1 BLEED TOGGLE": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND ENG1 BLEED TOGGLE": {
 		"method": "calcCode",
-		"code": "1 (>K:ENGINE_BLEED_AIR_SOURCE_TOGGLE)\n(L:XMLVAR_Momentary_PUSH_OVHD_AIRCOND_ENG1BLEED_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_AIRCOND_ENG1BLEED_Pressed)"
+		"code": "1 (>K:ENGINE_BLEED_AIR_SOURCE_TOGGLE) "
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND ENG2 BLEED TOGGLE": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.AIRCOND ENG2 BLEED TOGGLE": {
 		"method": "calcCode",
-		"code": "2 (>K:ENGINE_BLEED_AIR_SOURCE_TOGGLE)\n(L:XMLVAR_Momentary_PUSH_OVHD_AIRCOND_ENG2BLEED_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_AIRCOND_ENG2BLEED_Pressed)"
+		"code": "2 (>K:ENGINE_BLEED_AIR_SOURCE_TOGGLE) "
 	},
 	"Fly By Wire.A320-Dev.Air Condition / Pressurization.AIRCOND APU BLEED TOGGLE": {
 		"method": "calcCode",
@@ -15293,17 +15281,17 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_ELEC_AC_ESS_FEED_PB_IS_NORMAL, bool) ! (>L:A32NX_OVHD_ELEC_AC_ESS_FEED_PB_IS_NORMAL, bool)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.CABIN PRESS MODE SEL MAN": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.CABIN PRESS MODE SEL MAN": {
 		"method": "calcCode",
 		"code": "(L:A32NX_CAB_PRESS_MODE_MAN, bool) ! (>L:A32NX_CAB_PRESS_MODE_MAN, bool)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.CABIN PRESS LDGELEV AUTO INC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.CABIN PRESS LDGELEV AUTO INC": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, Percent) 4 + 0 max 88 min (>L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, percent)"
+		"code": "(L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, Percent) 4 +  100 min (>L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, percent)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.CABIN PRESS LDGELEV AUTO DEC": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.CABIN PRESS LDGELEV AUTO DEC": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, Percent) 4 - 0 max 88 min (>L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, percent)"
+		"code": "(L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, Percent) 4 - 0 max (>L:XMLVAR_KNOB_OVHD_CABINPRESS_LDGELEV, percent)"
 	},
 	"Fly By Wire.A320-Dev.Air Condition / Pressurization.CABIN PRESS MAN VS CTL UP": {
 		"method": "calcCode",
@@ -15361,23 +15349,23 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AUTOPILOT MASTER, bool) ! if{ \n(A:RUDDER TRIM PCT, percent) 0.6250 - 163.83 * -16383 max 16383 min \n(>K:RUDDER_TRIM_SET_EX1) }"
 	},
-	"Working Title.CJ4.Controls.AILERON TRIM RIGHT WING DN": {
+	"Working Title.CJ4.Controls.Input.AILERON TRIM RIGHT WING DN": {
 		"method": "calcCode",
-		"code": "(A:AILERON TRIM PCT, percent) 1 + 163.83 * -16383 max 16383 min \n(>K:AILERON_TRIM_SET_EX1) }"
+		"code": "(A:AILERON TRIM PCT, percent) 1 + 163.83 * -16383 max 16383 min \n(>K:AILERON_TRIM_SET_EX1) "
 	},
-	"Working Title.CJ4.Controls.AILERON TRIM LEFT WING DN": {
+	"Working Title.CJ4.Controls.Input.AILERON TRIM LEFT WING DN": {
 		"method": "calcCode",
-		"code": "(A:AUTOPILOT MASTER, bool) ! if{ \n(A:RUDDER TRIM PCT, percent) 0.6250 - 163.83 * -16383 max 16383 min \n(>K:RUDDER_TRIM_SET_EX1) } 2 (>L:XMLVAR_RudderTrim_Switch_1)"
+		"code": "(A:AILERON TRIM PCT, percent) 1 - 163.83 * -16383 max 16383 min \n(>K:AILERON_TRIM_SET_EX1) "
 	},
-	"Working Title.CJ4.Controls.SECONDARY ELEV TRIM NOSE DOWN": {
+	"Working Title.CJ4.Controls.Input.SECONDARY ELEV TRIM NOSE DOWN": {
 		"method": "calcCode",
-		"code": "(L:SEC_ELEV_TRIM_ENABLE) if{ \n(A:ELEVATOR TRIM PCT, percent) 0.666667 - 163.83 * 16383 min -16383 max (>K:ELEVATOR_TRIM_SET) }"
+		"code": "(L:SEC_ELEV_TRIM_ENABLE) if{ \n(A:ELEVATOR TRIM PCT, percent) 0.666667 - 163.83 * 16383 min -16383 max (>K:ELEVATOR_TRIM_SET) "
 	},
-	"Working Title.CJ4.Controls.SECONDARY ELEV TRIM NOSE UP": {
+	"Working Title.CJ4.Controls.Input.SECONDARY ELEV TRIM NOSE UP": {
 		"method": "calcCode",
-		"code": "(L:SEC_ELEV_TRIM_ENABLE) if{ \n(A:ELEVATOR TRIM PCT, percent) 0.666667 + 163.83 * 16383 min -16383 max (>K:ELEVATOR_TRIM_SET) }"
+		"code": "(L:SEC_ELEV_TRIM_ENABLE) if{ \n(A:ELEVATOR TRIM PCT, percent) 0.666667 + 163.83 * 16383 min -16383 max (>K:ELEVATOR_TRIM_SET) "
 	},
-	"Working Title.CJ4.Controls.SEC ELEV TRIM ENABLE TOGGLE": {
+	"Working Title.CJ4.Controls.Input.SEC ELEV TRIM ENABLE TOGGLE": {
 		"method": "calcCode",
 		"code": "(L:SEC_ELEV_TRIM_ENABLE) ! (>L:SEC_ELEV_TRIM_ENABLE)"
 	},
@@ -15677,7 +15665,7 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:CENTRE_LOWER_alt)"
 	},
-	"Fly By Wire.A320.ECAM.A32NX_ECAM_Current_Page_Index": {
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_Current_Page_Index": {
 		"method": "calcCode",
 		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX)"
 	},
@@ -15733,7 +15721,7 @@ export default {
 		"method": "calcCode",
 		"code": "2 (>L:A32NX_ECAM_ND_XFR_SWITCHING_KNOB)"
 	},
-	"Fly By Wire.A320-Dev.EFIS.AUTOPILOT BARO INC": {
+	"Fly By Wire.A320-Dev.EFIS.Input.AUTOPILOT BARO INC": {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_Baro1_Mode) 2 != (L:XMLVAR_Baro1_Mode) 3 != and if{  \n(L:XMLVAR_Baro_Selector_HPA_1) if{\n1 (A:KOHLSMAN SETTING MB:1, mbars) ++ 16 * (>K:2:KOHLSMAN_SET) \n} els{ 1 (>K:KOHLSMAN_INC) } }"
 	},
@@ -16185,7 +16173,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_BRAKE_FAN, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 == or 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
-	"Fly By Wire.A320-Dev.Warning System.Terr On ND Active": {
+	"Fly By Wire.A320-Dev.Warning System.Output.Terr On ND Active": {
 		"method": "calcCode",
 		"code": "(L:BTN_TERRONND_1_ACTIVE) (L:A32NX_OVHD_INTLT_ANN) 0 == or 0 ! and 1 and (L:A32NX_ELEC_AC_1_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
@@ -16433,7 +16421,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:Aircraft.Transponder.Flash)"
 	},
-	"FlyInside.Bell 47 G.Environment.LOCAL_AIR_PRESSURE_DISPLAY": {
+	"FlyInside.Bell 47 G.Environment.Output.LOCAL_AIR_PRESSURE_DISPLAY": {
 		"method": "calcCode",
 		"code": "(L:Aircraft.Instruments.Altimeter.Kohlsman.HG) 100 *"
 	},
@@ -17789,7 +17777,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:CENTRE_LOWER_pitotheat) ! (>L:CENTRE_LOWER_pitotheat)"
 	},
-	"Just Flight.Piper Arrow III.Fuel.FUEL_PUMP_SELECTOR_SWITCH": {
+	"Just Flight.Piper Arrow III.Fuel.Input.FUEL_PUMP_SELECTOR_SWITCH": {
 		"method": "calcCode",
 		"code": "(L:CENTRE_LOWER_fuelpump) 0 == if{ 1 (>L:CENTRE_LOWER_fuelpump) } els{ (L:CENTRE_LOWER_fuelpump) 1 == if{ 2 (>L:CENTRE_LOWER_fuelpump) } els{ (L:CENTRE_LOWER_fuelpump) 2 == if{ 0 (>L:CENTRE_LOWER_fuelpump) }"
 	},
@@ -18849,19 +18837,19 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:FWD_Stby_Inst_Pwr, bool)"
 	},
-	"Just Flight.Hawk T1.Flight Instrumentation.HT1_FWD_STBY_ALT_Baro_Dec": {
+	"Just Flight.Hawk T1.Flight Instrumentation.Input.HT1_FWD_STBY_ALT_Baro_Dec": {
 		"method": "calcCode",
 		"code": "(L:FWD_STBY_ALT_Baro,enum) -- 0 max (>L:FWD_STBY_ALT_Baro,enum) 2 (>K:KOHLSMAN_DEC) (L:FWD_STBY_ALT_Baro,enum) 0 == if{ 100 (>L:FWD_STBY_ALT_Baro,enum) }"
 	},
-	"Just Flight.Hawk T1.Flight Instrumentation.HT1_FWD_STBY_ALT_Baro_Inc": {
+	"Just Flight.Hawk T1.Flight Instrumentation.Input.HT1_FWD_STBY_ALT_Baro_Inc": {
 		"method": "calcCode",
 		"code": "(L:FWD_STBY_ALT_Baro,enum) ++ 100 min (>L:FWD_STBY_ALT_Baro,enum) 2 (>K:KOHLSMAN_INC) (L:FWD_STBY_ALT_Baro,enum) 100 == if{ 0 (>L:FWD_STBY_ALT_Baro,enum) }"
 	},
-	"Just Flight.Hawk T1.Flight Instrumentation.HT1_FWD_ALT_Baro_Dec": {
+	"Just Flight.Hawk T1.Flight Instrumentation.Input.HT1_FWD_ALT_Baro_Dec": {
 		"method": "calcCode",
 		"code": "(L:FWD_ALT_Baro,enum) -- 0 max (>L:FWD_ALT_Baro,enum) (>K:KOHLSMAN_DEC) (L:FWD_ALT_Baro,enum) 0 == if{ 100 (>L:FWD_ALT_Baro,enum) }"
 	},
-	"Just Flight.Hawk T1.Flight Instrumentation.HT1_FWD_ALT_Baro_Inc": {
+	"Just Flight.Hawk T1.Flight Instrumentation.Input.HT1_FWD_ALT_Baro_Inc": {
 		"method": "calcCode",
 		"code": "(L:FWD_ALT_Baro,enum) ++ 100 min (>L:FWD_ALT_Baro,enum) (>K:KOHLSMAN_INC) (L:FWD_ALT_Baro,enum) 100 == if{ 0 (>L:FWD_ALT_Baro,enum) }"
 	},
@@ -20313,9 +20301,9 @@ export default {
 		"method": "calcCode",
 		"code": "(A:FUEL TRANSFER PUMP ON:1, Bool)  ! if{ 1 (>K:FUEL_TRANSFER_CUSTOM_INDEX_TOGGLE) }"
 	},
-	"Asobo..Fuel.DA40NG_FUEL_TRANSFER_OFF": {
+	"Asobo.DA40NG.Fuel.Input.DA40NG_FUEL_TRANSFER_OFF": {
 		"method": "calcCode",
-		"code": "(A:FUEL TRANSFER PUMP ON:1, Bool)  ! if{ 1 (>K:FUEL_TRANSFER_CUSTOM_INDEX_TOGGLE) }"
+		"code": "(A:FUEL TRANSFER PUMP ON:1, Bool)  if{ 1 (>K:FUEL_TRANSFER_CUSTOM_INDEX_TOGGLE) }"
 	},
 	"Asobo.DA40NG.Controls.DA40NG_FLAPS_INCR": {
 		"method": "calcCode",
@@ -20877,7 +20865,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_KNOB_OVHD_AIRCOND_PACKFLOW_Position)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_AIRCOND_PACK1_FAULT": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_AIRCOND_PACK1_FAULT": {
 		"method": "calcCode",
 		"code": "(L:A32NX_AIRCOND_PACK1_FAULT)"
 	},
@@ -20885,7 +20873,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_AIRCOND_PACK1_TOGGLE)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_AIRCOND_PACK2_FAULT": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_AIRCOND_PACK2_FAULT": {
 		"method": "calcCode",
 		"code": "(L:A32NX_AIRCOND_PACK2_FAULT)"
 	},
@@ -20925,11 +20913,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_ENG_2_PUMP_PB_HAS_FAULT)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_OVHD_HYD_ENG_1_PUMP_PB_IS_AUTO": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_OVHD_HYD_ENG_1_PUMP_PB_IS_AUTO": {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_ENG_1_PUMP_PB_IS_AUTO)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_OVHD_HYD_ENG_2_PUMP_PB_IS_AUTO": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_OVHD_HYD_ENG_2_PUMP_PB_IS_AUTO": {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_ENG_2_PUMP_PB_IS_AUTO)"
 	},
@@ -20941,11 +20929,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_EPUMPY_PB_HAS_FAULT)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_OVHD_HYD_EPUMPB_PB_IS_AUTO": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_OVHD_HYD_EPUMPB_PB_IS_AUTO": {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_EPUMPB_PB_IS_AUTO)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_OVHD_HYD_EPUMPY_PB_IS_AUTO": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_OVHD_HYD_EPUMPY_PB_IS_AUTO": {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_EPUMPY_PB_IS_AUTO)"
 	},
@@ -20953,7 +20941,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_PTU_PB_HAS_FAULT)"
 	},
-	"Fly By Wire.A320-SDK.Unsorted.A32NX_OVHD_HYD_PTU_PB_IS_AUTO": {
+	"Fly By Wire.A320-SDK.Unsorted.Output.A32NX_OVHD_HYD_PTU_PB_IS_AUTO": {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_HYD_PTU_PB_IS_AUTO)"
 	},
@@ -23289,11 +23277,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_PNEU_ENG_2_BLEED_PB_HAS_FAULT)"
 	},
-	"Asobo.TBM 930.Autopilot.TBM930_AP_BARO_3_INC": {
+	"Asobo.TBM 930.Autopilot.Input.TBM930_AP_BARO_3_INC": {
 		"method": "calcCode",
 		"code": "2 (>K:KOHLSMAN_INC) (>H:AP_BARO_Up)"
 	},
-	"Asobo.TBM 930.Autopilot.TBM930_AP_BARO_3_DEC": {
+	"Asobo.TBM 930.Autopilot.Input.TBM930_AP_BARO_3_DEC": {
 		"method": "calcCode",
 		"code": "2 (>K:KOHLSMAN_DEC) (>H:AP_BARO_Down)"
 	},
@@ -23325,7 +23313,7 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_EXTL_LOGO)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Lights.ASCRJ_EXTL_LOGO_SWITCH_OFF": {
+	"Aerosoft.CRJ 550-700-1000.Lights.Input.ASCRJ_EXTL_LOGO_SWITCH_OFF": {
 		"method": "calcCode",
 		"code": "0 (>L:ASCRJ_EXTL_LOGO)"
 	},
@@ -23401,7 +23389,7 @@ export default {
 		"method": "calcCode",
 		"code": "2 (>L:ASCRJ_INTL_COMP)"
 	},
-	"Aerosoft.CRJ 550-700-1000.Lights.ASCRJ_INTL_COMP_SWITCH_OFF": {
+	"Aerosoft.CRJ 550-700-1000.Lights.Input.ASCRJ_INTL_COMP_SWITCH_OFF": {
 		"method": "calcCode",
 		"code": "1 (>L:ASCRJ_INTL_COMP)"
 	},
@@ -24097,11 +24085,11 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>K:BEACON_LIGHTS_SET)"
 	},
-	"Microsoft.Generic.Lights.NAV LIGHTS ON": {
+	"Microsoft.Generic.Lights.Input.NAV LIGHTS ON": {
 		"method": "calcCode",
 		"code": "1 (>K:NAV_LIGHTS_SET)"
 	},
-	"Microsoft.Generic.Lights.NAV LIGHTS OFF": {
+	"Microsoft.Generic.Lights.Input.NAV LIGHTS OFF": {
 		"method": "calcCode",
 		"code": "0 (>K:NAV_LIGHTS_SET)"
 	},
@@ -24501,33 +24489,33 @@ export default {
 		"method": "calcCode",
 		"code": "(A:LIGHT POTENTIOMETER:92,percent) 5 + 100 min 92 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
-	"Fly By Wire.A320-Dev.ECAM.A32NX_ECAM_KNOB_UPPER_DEC": {
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX_ECAM_KNOB_UPPER_DEC": {
 		"method": "calcCode",
 		"code": "(A:LIGHT POTENTIOMETER:92,percent) 5 - 0 max 92 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
-	"Microsoft.Generic.Avionics.BARO_1_INC": {
+	"Microsoft.Generic.Avionics.Input.BARO_1_INC": {
 		"method": "calcCode",
 		"code": "0 (>K:KOHLSMAN_INC)"
 	},
-	"Microsoft.Generic.Avionics.BARO_1_DEC": {
+	"Microsoft.Generic.Avionics.Input.BARO_1_DEC": {
 		"method": "calcCode",
 		"code": "0 (>K:KOHLSMAN_DEC)"
 	},
-	"Microsoft.Generic.Avionics.BARO_2_INC": {
+	"Microsoft.Generic.Avionics.Input.BARO_2_INC": {
 		"method": "calcCode",
 		"code": "1 (>K:KOHLSMAN_INC)"
 	},
-	"Microsoft.Generic.Avionics.BARO_2_DEC": {
+	"Microsoft.Generic.Avionics.Input.BARO_2_DEC": {
 		"method": "calcCode",
 		"code": "1 (>K:KOHLSMAN_DEC)"
 	},
-	"Microsoft.Generic.Avionics.BARO_3_INC": {
+	"Microsoft.Generic.Avionics.Input.BARO_3_INC": {
 		"method": "calcCode",
 		"code": "2 (>K:KOHLSMAN_INC)"
 	},
-	"Microsoft.Generic.Avionics.BARO_3_DEC": {
+	"Microsoft.Generic.Avionics.Input.BARO_3_DEC": {
 		"method": "calcCode",
-		"code": "3 (>K:KOHLSMAN_DEC)"
+		"code": "2 (>K:KOHLSMAN_DEC)"
 	},
 	"SimWorks Studios.Kodiak 100.Engine.Input (Potentiometer).Kodiak 100 Throttle with reverse": {
 		"method": "calcCode",
@@ -25029,11 +25017,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:FLCS) ! (>L:FLCS)"
 	},
-	"SC Designs.F16C.Autopilot.F16C_FRONT_AP_BARO_INC": {
+	"SC Designs.F16C.Autopilot.Input.F16C_FRONT_AP_BARO_INC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_INC) (>H:AP_BARO_Up)"
 	},
-	"SC Designs.F16C.Autopilot.F16C_FRONT_AP_BARO_DEC": {
+	"SC Designs.F16C.Autopilot.Input.F16C_FRONT_AP_BARO_DEC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_DEC) (>H:AP_BARO_Down)"
 	},
@@ -25457,7 +25445,7 @@ export default {
 		"method": "calcCode",
 		"code": "@ 10.23 / 0 max 100 min (>L:ASCRJ_SPOILERS_SET)"
 	},
-	"Fly By Wire.A320-Dev.EFIS.A32NX_KOHLSMAN_SETTING": {
+	"Fly By Wire.A320-Dev.EFIS.Output.A32NX_KOHLSMAN_SETTING": {
 		"method": "calcCode",
 		"code": "(L:XMLVAR_Baro1_Mode) 2 > if{ 99 } els{ (L:XMLVAR_Baro_Selector_HPA_1,bool) ! if{ (A:KOHLSMAN SETTING HG, inHg) 100 * near } els{ (A:KOHLSMAN SETTING HG, mbar) near } }"
 	},
@@ -25917,17 +25905,17 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>H:A32NX_ISIS_PLUS_PRESSED)"
 	},
-	"Fly By Wire.A320.ISIS.ISIS_KNOB_PRESSED": {
+	"Fly By Wire.A320.ISIS.Input.ISIS_KNOB_PRESSED": {
 		"method": "calcCode",
-		"code": "(L:A32NX_ISIS_BUGS_ACTIVE, bool) if{\n 0 (>H:A32NX_ISIS_KNOB_PRESSED, number)\n} els{\n (L:A32NX_ISIS_BARO_MODE, enum) 0 == if{\n 1 (>L:A32NX_ISIS_BARO_MODE, enum)\n(A:KOHLSMAN SETTING MB:2, bars) 16000 * (>0:A32NX_ISIS_BARO_SAVED, number)\n\n2 16211 (>K:2:KOHLSMAN_SET)\n\n} els{\n 0 (>L:A32NX_ISIS_BARO_MODE, enum)\n\n2 (0:A32NX_ISIS_BARO_SAVED, number) (>K:2:KOHLSMAN_SET)\n }\n}"
+		"code": "(L:A32NX_ISIS_BUGS_ACTIVE, bool) if{\n 0 (>H:A32NX_ISIS_KNOB_PRESSED, number)\n} els{\n (L:A32NX_ISIS_BARO_MODE, enum) 0 == if{\n 1 (>L:A32NX_ISIS_BARO_MODE, enum)\n(A:KOHLSMAN SETTING MB:2, bars) 16000 * (>0:A32NX_ISIS_BARO_SAVED, number)\n2 16211 (>K:2:KOHLSMAN_SET)\n} els{\n 0 (>L:A32NX_ISIS_BARO_MODE, enum)\n2 (0:A32NX_ISIS_BARO_SAVED, number) (>K:2:KOHLSMAN_SET) } }"
 	},
-	"Fly By Wire.A320.ISIS.ISIS_KNOB_ANTICLOCKWISE": {
+	"Fly By Wire.A320.ISIS.Input.ISIS_KNOB_ANTICLOCKWISE": {
 		"method": "calcCode",
-		"code": "(L:A32NX_ISIS_BUGS_ACTIVE, enum) 1 == if{\n 0 (>H:A32NX_ISIS_KNOB_ANTI_CLOCKWISE)\n} els{\n (L:A32NX_ISIS_BARO_MODE, enum) 1 != if{\n 2 (>K:KOHLSMAN_DEC)\n }\n}"
+		"code": "(L:A32NX_ISIS_BUGS_ACTIVE, enum) 1 == \nif{ 0 (>H:A32NX_ISIS_KNOB_ANTI_CLOCKWISE) } \nels{ 2 (>K:KOHLSMAN_DEC) }"
 	},
-	"Fly By Wire.A320.ISIS.ISIS_KNOB_CLOCKWISE": {
+	"Fly By Wire.A320.ISIS.Input.ISIS_KNOB_CLOCKWISE": {
 		"method": "calcCode",
-		"code": "(L:A32NX_ISIS_BUGS_ACTIVE, enum) 1 == if{\n 0 (>H:A32NX_ISIS_KNOB_CLOCKWISE)\n} els{\n (L:A32NX_ISIS_BARO_MODE, enum) 1 != if{\n 2 (>K:KOHLSMAN_INC)\n }\n}"
+		"code": "(L:A32NX_ISIS_BUGS_ACTIVE, enum) 1 == \nif{ 0 (>H:A32NX_ISIS_KNOB_CLOCKWISE) } \nels{ 2 (>K:KOHLSMAN_INC) }"
 	},
 	"Fly By Wire.A320.EFIS.A32NX_EFIS_FD2_PUSH": {
 		"method": "calcCode",
@@ -26461,11 +26449,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:GTN750_DirectToPush)"
 	},
-	"Flysimware.Cessna 414A.Navigation.PMS_GTN750U1_Home_Press": {
+	"Flysimware.Cessna 414A.Navigation.Input.PMS_GTN750U1_Home_Short_Long_Press": {
 		"method": "calcCode",
 		"code": "(E:SIMULATION TIME,second) 1.00 + (>L:myTimer)"
 	},
-	"Flysimware.Cessna 414A.Navigation.PMS_GTN750U1_Home_Rls": {
+	"Flysimware.Cessna 414A.Navigation.Input.PMS_GTN750U1_Home_Short_Long_Rls": {
 		"method": "calcCode",
 		"code": "(E:SIMULATION TIME,second) (L:myTimer) < if{ (>H:GTN750_HomePush) } els{ (>H:GTN750_HomePushLong) }"
 	},
@@ -26517,11 +26505,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>H:GTN750_2_DirectToPush)"
 	},
-	"Flysimware.Cessna 414A.Navigation.PMS_GTN750U2_Home_Press": {
+	"Flysimware.Cessna 414A.Navigation.Input.PMS_GTN750U2_Home_Short_Long_Press": {
 		"method": "calcCode",
 		"code": "(E:SIMULATION TIME,second) 1.00 + (>L:myTimer)"
 	},
-	"Flysimware.Cessna 414A.Navigation.PMS_GTN750U2_Home_Rls": {
+	"Flysimware.Cessna 414A.Navigation.Input.PMS_GTN750U2_Home_Short_Long_Rls": {
 		"method": "calcCode",
 		"code": "(E:SIMULATION TIME,second) (L:myTimer) < if{ (>H:GTN750_2_HomePush) } els{ (>H:GTN750_2_HomePushLong) }"
 	},
@@ -26911,7 +26899,7 @@ export default {
 	},
 	"Asobo.747-8i.Engine.Input.ENG 1 FUEL CONTROL OFF": {
 		"method": "calcCode",
-		"code": "5 (>K:FUELSYSTEM_VALVE_TOGGLE)"
+		"code": "(A:FUELSYSTEM VALVE SWITCH:5, Bool) 1 == if{ 5 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
 	},
 	"Asobo.747-8i.Engine.Input.ENG 3 FUEL CONTROL ON": {
 		"method": "calcCode",
@@ -26919,7 +26907,7 @@ export default {
 	},
 	"Asobo.747-8i.Engine.Input.ENG 3 FUEL CONTROL OFF": {
 		"method": "calcCode",
-		"code": "7 (>K:FUELSYSTEM_VALVE_TOGGLE)"
+		"code": "(A:FUELSYSTEM VALVE SWITCH:7, Bool) 1 == if{ 7 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
 	},
 	"Asobo.747-8i.Engine.Input.ENG 2 FUEL CONTROL ON": {
 		"method": "calcCode",
@@ -26927,11 +26915,11 @@ export default {
 	},
 	"Asobo.747-8i.Engine.Input.ENG 2 FUEL CONTROL OFF": {
 		"method": "calcCode",
-		"code": "6 (>K:FUELSYSTEM_VALVE_TOGGLE)"
+		"code": "(A:FUELSYSTEM VALVE SWITCH:6, Bool) 1 == if{ 6 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
 	},
 	"Asobo.747-8i.Engine.Input.ENG 4 FUEL CONTROL OFF": {
 		"method": "calcCode",
-		"code": "8 (>K:FUELSYSTEM_VALVE_TOGGLE)"
+		"code": "(A:FUELSYSTEM VALVE SWITCH:8, Bool) 1 == if{ 8 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
 	},
 	"Asobo.747-8i.Engine.Input.ENG 4 FUEL CONTROL ON": {
 		"method": "calcCode",
@@ -27007,7 +26995,7 @@ export default {
 	},
 	"Fly By Wire.A320-Dev.Passengers/Crew.Input.CABIN_NO_SMOKING_TOGGLE": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position) 0 == if{ 2 (>L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position) } els{ (L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position) 1 == if{ 0 (>L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position) } els{ (L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position) 2 == if{ 1 (>L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position) }"
+		"code": "(L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position) 2 + 3 % (>L:XMLVAR_SWITCH_OVHD_INTLT_NOSMOKING_Position)"
 	},
 	"Fly By Wire.A320-Dev.Passengers/Crew.Input.CABIN_EMERGENCY_LIGHT_TOGGLE": {
 		"method": "calcCode",
@@ -30223,7 +30211,7 @@ export default {
 	},
 	"FenixSim.A320.Engine.Input.FNX320_AUTOTHROTTLE_LEFT_DISC_PUSH": {
 		"method": "calcCode",
-		"code": "(L:S_FC_THR_INST_DISCONNECT1) ++ (>L:S_FC_THR_INST_DISCONNECT1)"
+		"code": "(L:S_FC_THR_INST_DISCONNECT1) ++ (>L:S_FC_THR_INST_DISCONNECT1)\n"
 	},
 	"FenixSim.A320.Engine.Input.FNX320_AUTOTHROTTLE_LEFT_DISC_RELEASE": {
 		"method": "calcCode",
@@ -30365,11 +30353,11 @@ export default {
 		"method": "calcCode",
 		"code": "33507 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Lights.PMDG B737 LOWER DU Dec": {
+	"PMDG.B737-700.Lights.Input.PMDG B737 LOWER DU L Selector Dec": {
 		"method": "calcCode",
 		"code": "33608 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Lights.PMDG B737 LOWER DU Inc": {
+	"PMDG.B737-700.Lights.Input.PMDG B737 LOWER DU L Selector Inc": {
 		"method": "calcCode",
 		"code": "33607 (>K:ROTOR_BRAKE)"
 	},
@@ -35065,7 +35053,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:S_OH_PNEUMATIC_PRESS_MODE) 0 == if{ 0 (>L:S_OH_PNEUMATIC_PRESS_MODE_Anim) } (L:S_OH_PNEUMATIC_PRESS_MODE) 1 == if{ 2 (>L:S_OH_PNEUMATIC_PRESS_MODE_Anim) }"
 	},
-	"FenixSim.A320.Pneumatic.FNX320 Pneumatic Temp Cabin Aft Selector Knob Inc": {
+	"FenixSim.A320.Pneumatic.Input.FNX320 Pneumatic Temp Cabin Aft Selector Knob Inc": {
 		"method": "calcCode",
 		"code": "(L:A_OH_PNEUMATIC_AFT_TEMP) 0.1 + 1 min (>L:A_OH_PNEUMATIC_AFT_TEMP)"
 	},
@@ -36269,11 +36257,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:switch_7621_73X, number) 0 >"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Fwd Cargo Fire Arm LED": {
+	"PMDG.B737-700.Safety.Output.PMDG B737 Fwd Cargo Fire Arm LED": {
 		"method": "calcCode",
 		"code": "(L:switch_764_73X, number) 0 >"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Aft Cargo Fire Arm LED": {
+	"PMDG.B737-700.Safety.Output.PMDG B737 Aft Cargo Fire Arm LED": {
 		"method": "calcCode",
 		"code": "(L:switch_766_73X, number) 0 >"
 	},
@@ -37289,29 +37277,29 @@ export default {
 		"method": "calcCode",
 		"code": "75407 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Fwd Det Select Dec": {
+	"PMDG.B737-700.Safety.Input.PMDG B737 Fwd Det Select Dec": {
 		"method": "calcCode",
-		"code": "76008 (>K:ROTOR_BRAKE)"
+		"code": "76001 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Fwd Det Select Inc": {
+	"PMDG.B737-700.Safety.Input.PMDG B737 Fwd Det Select Inc": {
 		"method": "calcCode",
-		"code": "76007 (>K:ROTOR_BRAKE)"
+		"code": "76002 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Aft Det Select Switch Dec": {
+	"PMDG.B737-700.Safety.Input.PMDG B737 Aft Det Select Switch Dec": {
 		"method": "calcCode",
-		"code": "76108 (>K:ROTOR_BRAKE)"
+		"code": "76101 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Aft Det Select Switch Inc": {
+	"PMDG.B737-700.Safety.Input.PMDG B737 Aft Det Select Switch Inc": {
 		"method": "calcCode",
-		"code": "76107 (>K:ROTOR_BRAKE)"
+		"code": "76102 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Main Det Select Switch Dec": {
+	"PMDG.B737-700.Safety.Input.PMDG B737 Main Det Select Switch Dec": {
 		"method": "calcCode",
-		"code": "761108 (>K:ROTOR_BRAKE)"
+		"code": "761101 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Main Det Select Switch Inc": {
+	"PMDG.B737-700.Safety.Input.PMDG B737 Main Det Select Switch Inc": {
 		"method": "calcCode",
-		"code": "761107 (>K:ROTOR_BRAKE)"
+		"code": "761102 (>K:ROTOR_BRAKE)"
 	},
 	"PMDG.B737-700.Safety.PMDG B737 Fwd Cargo Fire Arm": {
 		"method": "calcCode",
@@ -37329,7 +37317,7 @@ export default {
 		"method": "calcCode",
 		"code": "76801 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Safety.PMDG B737 Cargo Fire Test": {
+	"PMDG.B737-700.Safety.Input.PMDG B737 Cargo Fire Test": {
 		"method": "calcCode",
 		"code": "76901 (>K:ROTOR_BRAKE)"
 	},
@@ -37777,11 +37765,11 @@ export default {
 		"method": "calcCode",
 		"code": "95301 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Radio.PMDG B737 Vhf1": {
+	"PMDG.B737-700.Radio.Input.PMDG B737 Radio 3 Vhf1 Press": {
 		"method": "calcCode",
 		"code": "95401 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Radio.PMDG B737 Vhf2": {
+	"PMDG.B737-700.Radio.Input.PMDG B737 Radio 3 Vhf2 Press": {
 		"method": "calcCode",
 		"code": "95601 (>K:ROTOR_BRAKE)"
 	},
@@ -38549,11 +38537,11 @@ export default {
 		"method": "calcCode",
 		"code": "44007 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Lights.PMDG B737 Lower Du R Dec": {
+	"PMDG.B737-700.Lights.Input.PMDG B737 Lower Du R Selector Dec": {
 		"method": "calcCode",
 		"code": "44108 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Lights.PMDG B737 Lower Du R Inc": {
+	"PMDG.B737-700.Lights.Input.PMDG B737 Lower Du R Selector Inc": {
 		"method": "calcCode",
 		"code": "44107 (>K:ROTOR_BRAKE)"
 	},
@@ -39409,7 +39397,7 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:S_DCDU1_PRINT)"
 	},
-	"FenixSim.A320.CPDLC.FNX320 MainPanel CPDLC Print FO Button Press": {
+	"FenixSim.A320.CPDLC.Input.FNX320 MainPanel CPDLC Print FO Button Press": {
 		"method": "calcCode",
 		"code": "1 (>L:S_DCDU2_PRINT)"
 	},
@@ -42935,11 +42923,11 @@ export default {
 	},
 	"PMDG.B737-700.Autopilot.Input.PMDG B737 FD Switch FO On": {
 		"method": "calcCode",
-		"code": "(L:ngx_MCP_FDRight,bool) ! if{ 40701 (>K:ROTOR_BRAKE) }"
+		"code": "(L:switch_407_73X, number) 100 == if{ 40701 (>K:ROTOR_BRAKE) }"
 	},
 	"PMDG.B737-700.Autopilot.Input.PMDG B737 FD Switch FO Off": {
 		"method": "calcCode",
-		"code": "(L:ngx_MCP_FDRight,bool) if{ 40701 (>K:ROTOR_BRAKE) }"
+		"code": "(L:switch_407_73X, number) 0 == if{ 40701 (>K:ROTOR_BRAKE) }"
 	},
 	"PMDG.B737-700.Autopilot.Input.PMDG B737 MCP AT Switch On": {
 		"method": "calcCode",
@@ -42965,29 +42953,29 @@ export default {
 		"method": "calcCode",
 		"code": "(L:switch_01_73X) 0 >"
 	},
-	"WB Sim.Cessna 172 analog.Avionics.Input.C172-analog-transponder-inc": {
+	"WB Sim.Cessna 172 Classic.Avionics.Input.C172-analog-transponder-inc": {
 		"method": "calcCode",
 		"code": "(L:172X_XPNDR_KNOB, Number) 4 < if{\n  (L:172X_XPNDR_KNOB, Number) 1 + (>L:172X_XPNDR_KNOB, Number)\n}"
 	},
-	"WB Sim.Cessna 172 analog.Avionics.Input.C172-analog-transponder-dec": {
+	"WB Sim.Cessna 172 Classic.Avionics.Input.C172-analog-transponder-dec": {
 		"method": "calcCode",
 		"code": "(L:172X_XPNDR_KNOB, Number) 0 > if{\n  (L:172X_XPNDR_KNOB, Number) 1 - (>L:172X_XPNDR_KNOB, Number)\n}"
 	},
 	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L MINS KNOB BARO": {
 		"method": "calcCode",
-		"code": "(L:swtich_356_73X) 0 == if{ 35601 (>K:ROTOR_BRAKE) }"
+		"code": "(L:switch_356_73X) 0 == if{ 35601 (>K:ROTOR_BRAKE) }"
 	},
 	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS L MINS KNOB RADIO": {
 		"method": "calcCode",
-		"code": "(L:swtich_356_73X) 0 != if{ 35601 (>K:ROTOR_BRAKE) }"
+		"code": "(L:switch_356_73X) 0 != if{ 35601 (>K:ROTOR_BRAKE) }"
 	},
 	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R MINS KNOB BARO": {
 		"method": "calcCode",
-		"code": "(L:swtich_412_73X) 0 == if{ 41201 (>K:ROTOR_BRAKE) }"
+		"code": "(L:switch_412_73X) 0 == if{ 41201 (>K:ROTOR_BRAKE) }"
 	},
 	"PMDG.B737-700.EFIS.Input.PMDG B737 EFIS R MINS KNOB RADIO": {
 		"method": "calcCode",
-		"code": "(L:swtich_412_73X) 0 != if{ 41201 (>K:ROTOR_BRAKE) }"
+		"code": "(L:switch_412_73X) 0 != if{ 41201 (>K:ROTOR_BRAKE) }"
 	},
 	"Hype Performance Group.H145.Electrical.Input.H145_SDK_OH_STANDBY_BATTERY_ON": {
 		"method": "calcCode",
@@ -43093,27 +43081,27 @@ export default {
 		"method": "calcCode",
 		"code": "(A:LIGHT POTENTIOMETER:91,percent) 5 + 100 min 91 (>K:2:LIGHT_POTENTIOMETER_SET)"
 	},
-	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 1 Switch On": {
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172sp Avionics Bus 1 Switch On": {
 		"method": "calcCode",
 		"code": "1 (A:CIRCUIT SWITCH ON:39, Bool) != \nif{ 39 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:39, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
 	},
-	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 1 Switch Off": {
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172sp Avionics Bus 1 Switch Off": {
 		"method": "calcCode",
 		"code": "0 (A:CIRCUIT SWITCH ON:39, Bool) != \nif{ 39 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:39, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
 	},
-	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 2 Switch On": {
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172sp Avionics Bus 2 Switch On": {
 		"method": "calcCode",
 		"code": "1 (A:CIRCUIT SWITCH ON:40, Bool) != \nif{ 40 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:40, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
 	},
-	"Asobo.Cessna 172 Classic.Electrical.Input.C172N Avionics Bus 2 Switch Off": {
+	"Asobo.Cessna 172 Classic.Electrical.Input.C172sp Avionics Bus 2 Switch Off": {
 		"method": "calcCode",
 		"code": "0 (A:CIRCUIT SWITCH ON:40, Bool) != \nif{ 40 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } \n(A:CIRCUIT SWITCH ON:40, Bool) 1 (A:1:BUS CONNECTION ON:4, Bool) != \nif{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) }"
 	},
-	"Asobo.Cessna 172 Classic.Avionics.Input.C172N Airspeed True Calibrator Knob Inc": {
+	"Asobo.Cessna 172 Classic.Avionics.Input.C172sp Airspeed True Calibrator Knob Inc": {
 		"method": "calcCode",
 		"code": "(A:AIRSPEED TRUE CALIBRATE, degrees) ++ 30 min (>A:AIRSPEED TRUE CALIBRATE, degrees)"
 	},
-	"Asobo.Cessna 172 Classic.Avionics.Input.C172N Airspeed True Calibrator Knob Dec": {
+	"Asobo.Cessna 172 Classic.Avionics.Input.C172sp Airspeed True Calibrator Knob Dec": {
 		"method": "calcCode",
 		"code": "(A:AIRSPEED TRUE CALIBRATE, degrees) -- 0 max (>A:AIRSPEED TRUE CALIBRATE, degrees)"
 	},
@@ -43523,11 +43511,11 @@ export default {
 	},
 	"Fly By Wire.A320-Dev.EFIS.Output.A32NX_EFIS_TERR_R_ACTIVE": {
 		"method": "calcCode",
-		"code": "L:A32NX_EFIS_TERR_R_ACTIVE"
+		"code": "(L:A32NX_EFIS_TERR_R_ACTIVE)"
 	},
 	"Fly By Wire.A320-Dev.EFIS.Output.A32NX_EFIS_TERR_L_ACTIVE": {
 		"method": "calcCode",
-		"code": "L:A32NX_EFIS_TERR_L_ACTIVE"
+		"code": "(L:A32NX_EFIS_TERR_L_ACTIVE)"
 	},
 	"Fly By Wire.A320-Dev.Gear.Input.A32NX Autobrake Max Button Press": {
 		"method": "calcCode",
@@ -43641,11 +43629,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:TOGGLE_BEACON_LIGHTS)"
 	},
-	"Carenado.C170B.Lights.C170B_LIGHTS_NAVIGATION_TOGGLE": {
+	"Carenado.C170B.Lights.Input (Potentiometer).C170B_LIGHTS_NAVIGATION_TOGGLE": {
 		"method": "calcCode",
 		"code": "(>K:TOGGLE_NAV_LIGHTS)"
 	},
-	"Carenado.C170B.Engines.C170B_MIXTURE_SET": {
+	"Carenado.C170B.Engines.Input (Potentiometer).C170B_MIXTURE_SET": {
 		"method": "calcCode",
 		"code": "@ 16.0147 * 0 max 16383 min (>K:MIXTURE_SET)"
 	},
@@ -43805,11 +43793,11 @@ export default {
 		"method": "calcCode",
 		"code": "(>K:NAV1_RADIO_SWAP)"
 	},
-	"Carenado.C170B.Flight Instrumentation.C170B_BAROMETER_INC": {
+	"Carenado.C170B.Flight Instrumentation.Input.C170B_BAROMETER_INC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_INC)"
 	},
-	"Carenado.C170B.Flight Instrumentation.C170B_BAROMETER_DEC": {
+	"Carenado.C170B.Flight Instrumentation.Input.C170B_BAROMETER_DEC": {
 		"method": "calcCode",
 		"code": "(>K:KOHLSMAN_DEC)"
 	},
@@ -43880,5 +43868,9757 @@ export default {
 	"Flysimware.Cessna 414A.Electrical.Input.C414A Master Electrical Bar Toggle ": {
 		"method": "calcCode",
 		"code": "(L:MASTER_BAR,Bool) ! (>L:MASTER_BAR,Bool) \n0 (>L:ALTERNATOR_LEFT,Bool) 0 (>L:ALTERNATOR_RIGHT,Bool)\n(L:MASTER_BAR,Bool) 0 == (A:BUS CONNECTION ON:6,Bool) 1 == and \n  if{ ( 6 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } \n(L:MASTER_BAR,Bool) 0 == (L:ELECTRICAL_Switch_Battery_Master,Bool) 1 == and if{ 0 (>L:ELECTRICAL_Switch_Battery_Master,Bool)  }\n(L:MASTER_BAR,Bool) 0 == (A:GENERAL ENG MASTER ALTERNATOR:1,Bool) 1 == and if{ (>K:TOGGLE_ALTERNATOR1) }\n(L:MASTER_BAR,Bool) 0 == (A:GENERAL ENG MASTER ALTERNATOR:2,Bool) 1 == and if{ (>K:TOGGLE_ALTERNATOR2 }\n"
+	},
+	"Asobo.Longitude.Autopilot.Input.LONGITUDE_AUTOPILOT_ALT_FINE_PUSH": {
+		"method": "calcCode",
+		"code": "100 1000 (L:XMLVAR_Autopilot_Altitude_Increment) 100 != ? (>L:XMLVAR_Autopilot_Altitude_Increment)"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 XPNDR Select Knob Position": {
+		"method": "calcCode",
+		"code": "(L:switch_798_73X, number)"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 XPNDR Mode Select Knob Position": {
+		"method": "calcCode",
+		"code": "(L:switch_800_73X, number)"
+	},
+	"PMDG.B737-700.Radio.Output.PMDG B737 XPNDR ALT SOURCE Knob Position": {
+		"method": "calcCode",
+		"code": "(L:switch_803_73X, number)"
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 FWD Cargo Fire Arm Switch On ": {
+		"method": "calcCode",
+		"code": "(L:switch_763_73X,number) 0 > "
+	},
+	"PMDG.B737-700.Safety.Output.PMDG B737 AFT Cargo Fire Arm Switch On": {
+		"method": "calcCode",
+		"code": "(L:switch_765_73X,number) 0 > "
+	},
+	"Microsoft.Generic.Engines.Input.SET_FUEL_VALVE_ENG1 ON": {
+		"method": "calcCode",
+		"code": "1 (>K:SET_FUEL_VALVE_ENG1)\n"
+	},
+	"Microsoft.Generic.Engines.Input.SET_FUEL_VALVE_ENG1 OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:SET_FUEL_VALVE_ENG1)"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 FWD DET Select A ": {
+		"method": "calcCode",
+		"code": "0 (L:switch_760_73X) - 50 div s0\n:1\nl0 0 > if{ 76002 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 76001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 FWD DET Select Norm": {
+		"method": "calcCode",
+		"code": "50 (L:switch_760_73X) - 50 div s0\n:1\nl0 0 > if{ 76002 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 76001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 FWD DET Select B": {
+		"method": "calcCode",
+		"code": "100 (L:switch_760_73X) - 50 div s0\n:1\nl0 0 > if{ 76002 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 76001 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 AFT DET Select A": {
+		"method": "calcCode",
+		"code": "0 (L:switch_761_73X) - 50 div s0\n:1\nl0 0 > if{ 76102 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 76101 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 AFT DET Select Norm": {
+		"method": "calcCode",
+		"code": "50 (L:switch_761_73X) - 50 div s0\n:1\nl0 0 > if{ 76102 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 76101 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Safety.Input.PMDG B737 AFT DET Select B": {
+		"method": "calcCode",
+		"code": "100 (L:switch_761_73X) - 50 div s0\n:1\nl0 0 > if{ 76102 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 76101 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_DIR": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_DIR)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_DATA": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_DATA)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_FPLN": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_FPLN)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_RAD": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_RAD)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_FUEL": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_FUEL)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_SEC": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_SEC)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_ATC": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_ATC)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_MENU": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_MENU)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_AIRPORT": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_AIRPORT)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_PREVPAGE": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_PREVPAGE)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_UP": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_UP)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_NEXTPAGE": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_NEXTPAGE)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_DOWN": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_DOWN)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_A": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_A)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_B": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_B)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_C": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_C)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_D": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_D)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_E": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_E)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_F": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_F)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_G": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_G)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_H": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_H)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_I": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_I)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_J": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_J)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_K": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_K)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_L": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_L)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_M": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_M)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_N": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_N)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_O": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_O)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_P": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_P)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_Q": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_Q)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_R": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_R)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_S": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_S)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_T": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_T)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_U": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_U)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_V": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_V)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_W": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_W)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_X": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_X)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_Y": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_Y)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_Z": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_Z)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_DIV": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_DIV)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_SP": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_SP)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_OVFY": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_OVFY)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_CLR": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_CLR)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_1": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_1)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_2": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_2)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_3": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_3)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_4": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_4)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_5": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_5)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_6": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_6)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_7": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_7)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_8": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_8)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_9": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_9)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_DOT": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_DOT)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_0": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_0)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_PLUSMINUS": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_PLUSMINUS)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_L1": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_L1)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_R1": {
+		"method": "calcCode",
+		"code": "^(>H:A320_Neo_CDU_1_BTN_R1)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_L2": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_L2)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_R2": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_R2)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_L3": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_L3)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_R3": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_R3)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_L4": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_L4)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_R4": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_R4)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_L5": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_L5)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_R5": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_R5)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_L6": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_L6)"
+	},
+	"Fly By Wire.A320-Dev.MCDU.Input.A320_Neo_CDU_1_BTN_R6": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_CDU_1_BTN_R6)"
+	},
+	"Asobo.Longitude.Warning.Input.LONGITUDE MASTER WARNING L PRESS": {
+		"method": "calcCode",
+		"code": "(>K:MASTER_WARNING_ACKNOWLEDGE)"
+	},
+	"Asobo.Longitude.Warning.Input.LONGITUDE MASTER CAUTION PRESS": {
+		"method": "calcCode",
+		"code": "(>K:MASTER_CAUTION_ACKNOWLEDGE)"
+	},
+	"Asobo.Longitude.Lights.Output.(A:LIGHT STROBE, Number)": {
+		"method": "calcCode",
+		"code": "(A:LIGHT STROBE,Bool)"
+	},
+	"Asobo.Longitude.Lights.Output.(A:LIGHT ANTI COLL)": {
+		"method": "calcCode",
+		"code": "(A:LIGHT BEACON:1, Bool)"
+	},
+	"Asobo.Longitude.Lights.Input.LONGITUDE_ANTI_COLL_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_BEACON_LIGHTS)"
+	},
+	"Asobo.Longitude.Lights.Output.(A:LIGHT LOGO ON, Number)": {
+		"method": "calcCode",
+		"code": "(A:LIGHT LOGO ON, Number)"
+	},
+	"Working Title.CJ4.Electrical.Output.WT_CJ4_LOW_VOLTS": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL MAIN BUS VOLTAGE, volts) 24.5 <="
+	},
+	"Working Title.CJ4.Engine.Output.WT_CJ4_LOW_OIL_PRESSURE": {
+		"method": "calcCode",
+		"code": "(A:ENG OIL PRESSURE:1, psi) 25 < (A:ENG OIL PRESSURE:2, psi) 25 < ||"
+	},
+	"Working Title.CJ4.Fuel.Output.WT_CJ4_LOW_FUEL_PRESSURE": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG FUEL PRESSURE:1, psi) 10 <= (A:GENERAL ENG FUEL PRESSURE:2, psi) 10 <= ||"
+	},
+	"Working Title.CJ4.Engine.Output.WT_CJ4_STARTER_ENGAGED": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG STARTER:1, bool) (A:GENERAL ENG STARTER:2, bool) ||"
+	},
+	"Working Title.CJ4.Engine.Output.WT_CJ4_STARTER1_ENGAGED": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG STARTER:1, Bool)"
+	},
+	"Working Title.CJ4.Engine.Output.WT_CJ4_STARTER2_ENGAGED": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG STARTER:2, Bool)"
+	},
+	"Working Title.CJ4.Engine.Output.WT_CJ4_ENG1_RUN": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MIXTURE LEVER POSITION:1, Percent) 0 >"
+	},
+	"Working Title.CJ4.Engine.Output.WT_CJ4_ENG2_RUN": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MIXTURE LEVER POSITION:2, Percent) 0 >"
+	},
+	"Fly By Wire.A320.Warning System.Output.A32NX_GPWS_TERR_OFF": {
+		"method": "calcCode",
+		"code": "(L:A32NX_GPWS_TERR_OFF)"
+	},
+	"Fly By Wire.A320.Warning System.Output.A32NX_GPWS_SYS_OFF": {
+		"method": "calcCode",
+		"code": "(L:A32NX_GPWS_SYS_OFF)"
+	},
+	"Fly By Wire.A320.Warning System.Output.A32NX_GPWS_GS_MODE_OFF": {
+		"method": "calcCode",
+		"code": "(L:A32NX_GPWS_GS_OFF)"
+	},
+	"Fly By Wire.A320.Warning System.Output.A32NX_GPWS_FLAP_MODE_OFF": {
+		"method": "calcCode",
+		"code": "(L:A32NX_GPWS_FLAP_OFF)"
+	},
+	"Fly By Wire.A320.Warning System.Output.A32NX_GPWS_LDG_FLAPS_3_MODE": {
+		"method": "calcCode",
+		"code": "(L:A32NX_GPWS_FLAPS3)"
+	},
+	"Working Title.CJ4.Controls.Output.WT_CJ4_GEAR_CENTER_RED_LED": {
+		"method": "calcCode",
+		"code": "(A:GEAR CENTER POSITION, percent over 100) 0 > (A:GEAR CENTER POSITION, percent over 100) 1 < &&"
+	},
+	"Working Title.CJ4.Controls.Output.WT_CJ4_GEAR_LEFT_RED_LED": {
+		"method": "calcCode",
+		"code": "(A:GEAR LEFT POSITION, percent over 100) 0 > (A:GEAR LEFT POSITION, percent over 100) 1 < &&"
+	},
+	"Working Title.CJ4.Controls.Output.WT_CJ4_GEAR_RIGHT_RED_LED": {
+		"method": "calcCode",
+		"code": "(A:GEAR RIGHT POSITION, percent over 100) 0 > (A:GEAR RIGHT POSITION, percent over 100) 1 < &&"
+	},
+	"Working Title.CJ4.Controls.Output.WT_CJ4_GEAR_CENTER_GREEN_LED": {
+		"method": "calcCode",
+		"code": "(A:GEAR CENTER POSITION, percent over 100) 1 >="
+	},
+	"Working Title.CJ4.Controls.Output.WT_CJ4_GEAR_LEFT_GREEN_LED": {
+		"method": "calcCode",
+		"code": "(A:GEAR LEFT POSITION, percent over 100) 1 >="
+	},
+	"Working Title.CJ4.Controls.Output.WT_CJ4_GEAR_RIGHT_GREEN_LED": {
+		"method": "calcCode",
+		"code": "(A:GEAR RIGHT POSITION, percent over 100) 1 >="
+	},
+	"Fly By Wire.A320-Dev.Engine.Input.A32NX Eng Mode Select Knob Crank": {
+		"method": "calcCode",
+		"code": "0 (>L:XMLVAR_ENG_MODE_SEL)\n0 (>K:TURBINE_IGNITION_SWITCH_SET)"
+	},
+	"Fly By Wire.A320-Dev.Engine.Input.A32NX Eng Mode Select Knob Norm": {
+		"method": "calcCode",
+		"code": "1 (>L:XMLVAR_ENG_MODE_SEL)\n1 (>K:TURBINE_IGNITION_SWITCH_SET1)\n1 (K:TURBINE_IGNITION_SWITCH_SET2)"
+	},
+	"Fly By Wire.A320-Dev.Engine.Input.A32NX Eng Mode Select Knob Ign/Start": {
+		"method": "calcCode",
+		"code": "2 (>L:XMLVAR_ENG_MODE_SEL)\n2 (>K:TURBINE_IGNITION_SWITCH_SET1)\n2 (>K:TURBINE_IGNITION_SWITCH_SET2)\n(>H:A320_Neo_EICAS_2_Ignition_Start) "
+	},
+	"SimWorks Studios.RV-14.Lights.Input.Flasher Switch for Landing Lights (WigWag) On": {
+		"method": "calcCode",
+		"code": "1 (>L:LIGHTING_Switch_Light_WigWag, Bool)"
+	},
+	"SimWorks Studios.RV-14.Lights.Input.Flasher Switch for Landing Lights (WigWag) Off": {
+		"method": "calcCode",
+		"code": "0 (>L:LIGHTING_Switch_Light_WigWag, Bool)"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Aircond Eng1 Bleed is Off": {
+		"method": "calcCode",
+		"code": "(A:BLEED AIR ENGINE:1,bool) !"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Aircond Eng2 Bleed is Off": {
+		"method": "calcCode",
+		"code": "(A:BLEED AIR ENGINE:2,bool)"
+	},
+	"Fly By Wire.A320-Dev.Anti-Ice.Output.A32NX Antiice Eng1": {
+		"method": "calcCode",
+		"code": "(A:ENG ANTI ICE:1, bool)"
+	},
+	"Fly By Wire.A320-Dev.Anti-Ice.Output.A32NX Antiice Eng2": {
+		"method": "calcCode",
+		"code": "(A:ENG ANTI ICE:2,bool)"
+	},
+	"Microsoft.Generic.Avionics.Input.AS430_CDI_Push": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_GPS_DRIVES_NAV2)"
+	},
+	"Asobo.747-8i.Autopilot.Input.FMC 1 AP SPD Hold": {
+		"method": "calcCode",
+		"code": "(>H:B747_8_FMC_1_AP_SPD)"
+	},
+	"Asobo.TBM 930.Gear.Input.TBM930_ParkingBrake_Toggle": {
+		"method": "calcCode",
+		"code": "(L:ParkingBrake_Position) 0 > if{ 0 (>L:ParkingBrake_Position) } els{ 100 (>L:ParkingBrake_Position) }"
+	},
+	"Fly By Wire.A320.Gear.Input.A32NX_PARK_BRAKE_LEVER_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:A32NX_PARK_BRAKE_LEVER_POS) 0 > if{ 0 (>L:A32NX_PARK_BRAKE_LEVER_POS) } els{ 1 (>L:A32NX_PARK_BRAKE_LEVER_POS) }"
+	},
+	"Microsoft.Generic.Avionics.Input.TransponderFUNC": {
+		"method": "calcCode",
+		"code": "(>H:TransponderFUNC)"
+	},
+	"Microsoft.Generic.Avionics.Input.TransponderSTARTSTOP": {
+		"method": "calcCode",
+		"code": "(>H:TransponderSTARTSTOP)"
+	},
+	"Microsoft.Generic.Avionics.Input.TransponderCRSR": {
+		"method": "calcCode",
+		"code": "(>H:TransponderCRSR)"
+	},
+	"FenixSim.A320.Autopilot.Output.A320 FCU SPEED MANAGED DOT": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_SPEED_MANAGED)"
+	},
+	"FenixSim.A320.Autopilot.Output.A320 FCU HEADING MANAGED DOT": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_HEADING_MANAGED)"
+	},
+	"FenixSim.A320.Autopilot.Output.A320 FCU ALTITUDE MANAGED DOT": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_ALTITUDE_MANAGED)"
+	},
+	"Asobo.747-8i.EFIS.Input.B747_8_MFD_KNOB_AUTOPILOT_CTR": {
+		"method": "calcCode",
+		"code": "\n(>H:B747_8_MFD_KNOB_AUTOPILOT_CTR)"
+	},
+	"Asobo.747-8i.Engine.Input.ENG1 STARTER ON": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:1, enum) 15 != if{ \n   15 (K:TURBINE_IGNITION_SWITCH_SET1) }\n(A:GENERAL ENG STARTER:1, bool) ! if{ \n   1 (>K:STARTER1_SET) }\n"
+	},
+	"Asobo.747-8i.Engine.Input.ENG1 STARTER OFF": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:1, enum) 15 != if{\n   15 (K:TURBINE_IGNITION_SWITCH_SET1) }\n(A:GENERAL ENG STARTER:1, bool) if{ \n   0 (>K:STARTER1_SET) }\n(K:TOGGLE_STARTER1)"
+	},
+	"Asobo.747-8i.Engine.Input.ENG2 STARTER ON": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:2, enum) 15 != if{\n   15 (K:TURBINE_IGNITION_SWITCH_SET2) }\n(A:GENERAL ENG STARTER:2, bool) ! if{ \n   1 (>K:STARTER2_SET) }"
+	},
+	"Asobo.747-8i.Engine.Input.ENG2 STARTER OFF": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:2, enum) 15 != if{\n   15 (K:TURBINE_IGNITION_SWITCH_SET2) }\n(A:GENERAL ENG STARTER:2, bool) if{ \n   0 (>K:STARTER2_SET) }\n(K:TOGGLE_STARTER2)"
+	},
+	"Asobo.747-8i.Engine.Input.ENG3 STARTER ON": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:3, enum) 15 != if{ \n   15 (K:TURBINE_IGNITION_SWITCH_SET3) }\n(A:GENERAL ENG STARTER:3, bool) ! if{ \n   1 (>K:STARTER3_SET) }"
+	},
+	"Asobo.747-8i.Engine.Input.ENG3 STARTER OFF": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:3, enum) 15 != if{\n   15 (K:TURBINE_IGNITION_SWITCH_SET3) }\n(A:GENERAL ENG STARTER:3, bool) if{ \n   0 (>K:STARTER3_SET) }\n(K:TOGGLE_STARTER3)"
+	},
+	"Asobo.747-8i.Engine.Input.ENG4 STARTER ON": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:4, enum) 15 != if{\n   15 (K:TURBINE_IGNITION_SWITCH_SET4) }\n(A:GENERAL ENG STARTER:4, bool) ! if{ \n   1 (>K:STARTER4_SET) }"
+	},
+	"Asobo.747-8i.Engine.Input.ENG4 STARTER OFF": {
+		"method": "calcCode",
+		"code": "(A:TURB ENG IGNITION SWITCH EX1:4, enum) 15 != if{\n   15 (K:TURBINE_IGNITION_SWITCH_SET4) }\n(A:GENERAL ENG STARTER:4, bool) if{ \n   0 (>K:STARTER4_SET) }\n(K:TOGGLE_STARTER4)"
+	},
+	"Asobo.Baron G58.EFIS.Input.AS1000_MFD_RANGE_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MFD_RANGE_INC)"
+	},
+	"Asobo.Baron G58.EFIS.Input.AS1000_MFD_RANGE_DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MFD_RANGE_DEC)"
+	},
+	"Asobo.Baron G58.EFIS.Input.H:AS1000_PFD_CRS_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_PFD_CRS_INC)"
+	},
+	"Asobo.Baron G58.EFIS.Input.AS1000_PFD_CRS_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_PFD_CRS_DEC)"
+	},
+	"Asobo.B787-10.EFIS.Input.B787 MFD MAP RANGE INC": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_MFD_1_Range_INC)"
+	},
+	"Asobo.B787-10.EFIS.Input.B787 MFD MAP RANGE DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_MFD_1_Range_DEC)"
+	},
+	"Asobo.B787-10.EFIS.Input.B787 MFD MAP TERRAIN TOGGLE": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_MFD_1_TERR)"
+	},
+	"Asobo.B787-10.EFIS.Input.B787 MFD display ENG page": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_MFD_1_ENG)"
+	},
+	"Asobo.B787-10.EFIS.Input.B787 MFD display SYS page": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_MFD_1_SYS)"
+	},
+	"Asobo.A320.EFIS.Input.A320 MFD MODE ILS": {
+		"method": "calcCode",
+		"code": "1 (>L:A320_Neo_MFD_NAV_MODE\")"
+	},
+	"Asobo.A320.EFIS.Input.A320 MFD MAP RANGE  10 Nm": {
+		"method": "calcCode",
+		"code": "1 (>L:A320_Neo_MFD_Range)"
+	},
+	"Asobo.A320.EFIS.Input.A320 MFD MAP RANGE  20 Nm": {
+		"method": "calcCode",
+		"code": "2 (>L:A320_Neo_MFD_Range)"
+	},
+	"Asobo.A320.EFIS.Input.A320 MFD MAP RANGE  40 Nm": {
+		"method": "calcCode",
+		"code": "3 (>L:A320_Neo_MFD_Range)"
+	},
+	"Asobo.A320.EFIS.Input.A320 MFD MAP RANGE  80 Nm": {
+		"method": "calcCode",
+		"code": "4 (>L:A320_Neo_MFD_Range)"
+	},
+	"Asobo.A320.EFIS.Input.A320 MFD MAP RANGE 160 Nm": {
+		"method": "calcCode",
+		"code": "5 (>L:A320_Neo_MFD_Range)"
+	},
+	"Asobo.A320.EFIS.Input.A320 MFD MAP RANGE 320 Nm": {
+		"method": "calcCode",
+		"code": "6 (>L:A320_Neo_MFD_Range)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_HDG_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_HEADING_HOLD)"
+	},
+	"Asobo.B787-10.Engines.Input.B787 ENG1 FUEL VALVE CLOSE": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM VALVE SWITCH:1, BOOL) 1 == if{\n1 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
+	},
+	"Asobo.B787-10.Engines.Input.B787 ENG1 FUEL VALVE OPEN": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM VALVE SWITCH:1, BOOL) 0 == if{\n1 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
+	},
+	"Asobo.B787-10.Engines.Input.B787 ENG2 FUEL VALVE OPEN": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM VALVE SWITCH:2, BOOL) 0 == if{\n2 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
+	},
+	"Asobo.B787-10.Engines.Input.B787 ENG2 FUEL VALVE CLOSE": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM VALVE SWITCH:2, BOOL) 1 == if{\n2 (>K:FUELSYSTEM_VALVE_TOGGLE) }"
+	},
+	"Asobo.B787-10.Fuel.Output.B787 FUEL PUMP CENTER 1 OFF": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM PUMP SWITCH:1, Bool) 0 =="
+	},
+	"Asobo.B787-10.Fuel.Output.B787 FUEL PUMP CENTER 2 OFF": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM PUMP SWITCH:2, Bool) 0 =="
+	},
+	"Asobo.B787-10.Fuel.Input.B787 FUEL PUMP CENTER 1 SWITCH ON": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM PUMP SWITCH:1, Bool) 0 == if{ \n1 (>K:FUELSYSTEM_PUMP_TOGGLE) }"
+	},
+	"Asobo.B787-10.Fuel.Input.B787 FUEL PUMP CENTER 1 SWITCH OFF": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM PUMP SWITCH:1, Bool) 1 == if{ \n1 (>K:FUELSYSTEM_PUMP_TOGGLE) }"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Eng1_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Eng1)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Eng2_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Eng2)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Eng3_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Eng3)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Eng4_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Eng4)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_To_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_To)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Mct_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Mct)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Tgt_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Tgt)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Desc_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Desc)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Sync_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Sync)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Ctrl_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Ctrl)"
+	},
+	"Just Flight.BAE146.Autothrust System.Input.TMS_Mstr_Switch": {
+		"method": "calcCode",
+		"code": "1 (>L:R_TMS_Mstr)"
+	},
+	"PMDG.DC-6.Autopilot.Input.PMDGDC6_AP_LEVER_OFF": {
+		"method": "calcCode",
+		"code": "40404 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Autopilot.Input.PMDGDC6_AP_LEVER_ON": {
+		"method": "calcCode",
+		"code": "40403 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.DC-6.Lights.Input.PMDGDC6_TABLET_LIGHTING_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:CockpitLighting, enum) (SLEEP:100) 1 (>L:SetCockpitLights, bool)"
+	},
+	"PMDG.DC-6.Lights.Input.PMDGDC6_TABLET_LIGHTING_RED": {
+		"method": "calcCode",
+		"code": "2 (>L:CockpitLighting, enum) (SLEEP:100) 1 (>L:SetCockpitLights, bool)"
+	},
+	"PMDG.DC-6.Lights.Input.PMDGDC6_TABLET_LIGHTING_WHITE": {
+		"method": "calcCode",
+		"code": "1 (>L:CockpitLighting, enum) (SLEEP:100) 1 (>L:SetCockpitLights, bool)"
+	},
+	"PMDG.DC-6.Lights.Input.PMDGDC6_TABLET_LIGHTING_FLOOD": {
+		"method": "calcCode",
+		"code": "3 (>L:CockpitLighting, enum) (SLEEP:100) 1 (>L:SetCockpitLights, bool)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid Com1/2 Swap Push": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_COM_Swap_1_2_Push)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid PA Push": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_PA_Push)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid SPKR Push": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_SPEAKER) \n(>H:AS1000_MID_SPKR_Push)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid MKR MUTE Push": {
+		"method": "calcCode",
+		"code": "0 (>K:MARKER_BEACON_TEST_MUTE) \n(>H:AS1000_MID_MKR_Mute_Push) "
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid DME Push": {
+		"method": "calcCode",
+		"code": "(>K:RADIO_DME1_IDENT_TOGGLE) \n(>H:AS1000_MID_DME_Push) "
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid NAV1 Push": {
+		"method": "calcCode",
+		"code": "(>K:RADIO_VOR1_IDENT_TOGGLE) \n(>H:AS1000_MID_NAV_1_Push)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid NAV 2 Push": {
+		"method": "calcCode",
+		"code": "(>K:RADIO_VOR2_IDENT_TOGGLE) \n(>H:AS1000_MID_NAV_2_Push) "
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid ADF Push": {
+		"method": "calcCode",
+		"code": "(>K:RADIO_ADF_IDENT_TOGGLE) \n(>H:AS1000_MID_ADF_Push)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid AUX Push": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_AUX_Push)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid MAN SQ Push": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_MAN_SQ_Push)"
+	},
+	"Working Title.G1000 NXi.Radio.Input.Mid PLAY Push": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_Play_Push)"
+	},
+	"Working Title.G1000 NXi.Avionics.Input.Mid ICS Isolation PILOT Push": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_Isolate_Pilot_Push) \n(A:INTERCOM MODE, Enum) 0 == (A:INTERCOM SYSTEM ACTIVE, Bool) and if{ (>K:TOGGLE_ICS) } els{ \n (A:INTERCOM SYSTEM ACTIVE, Bool) ! if{ \n   (>K:TOGGLE_ICS) \n   0 (>K:INTERCOM_MODE_SET) } els{ \n\t\t1 2 0 3 (A:INTERCOM MODE, Enum) case (>K:INTERCOM_MODE_SET) } } "
+	},
+	"Working Title.G1000 NXi.Avionics.Input.Mid ICS Isolation COPLT Push": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_Isolate_Copilot_Push) \n(A:INTERCOM MODE, Enum) 2 == (A:INTERCOM SYSTEM ACTIVE, Bool) and if{ (>K:TOGGLE_ICS) } \nels{ (A:INTERCOM SYSTEM ACTIVE, Bool) ! if{ \n(>K:TOGGLE_ICS) 2 (>K:INTERCOM_MODE_SET) } \nels{ 2 0 1 3 (A:INTERCOM MODE, Enum) case (>K:INTERCOM_MODE_SET) } } "
+	},
+	"Working Title.G1000 NXi.Avionics.Input.Mid Display Backup Push": {
+		"method": "calcCode",
+		"code": "(L:AS1000_MID_Display_Backup_Active) ! (>L:AS1000_MID_Display_Backup_Active)"
+	},
+	"Microsoft.Generic.Avionics.Input (Potentiometer).AUDIO PANEL VOLUME SET": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min (>K:AUDIO_PANEL_VOLUME_SET)"
+	},
+	"Microsoft.Generic.Avionics.Input.AUDIO PANEL VOLUME DEC": {
+		"method": "calcCode",
+		"code": "(A:AUDIO PANEL VOLUME,Percent) -- 0 max (>K:AUDIO_PANEL_VOLUME_SET) "
+	},
+	"Microsoft.Generic.Avionics.Input.AUDIO PANEL VOLUME INC": {
+		"method": "calcCode",
+		"code": "(A:AUDIO PANEL VOLUME,Percent) ++ 100 min (>K:AUDIO_PANEL_VOLUME_SET) "
+	},
+	"Working Title.G1000 NXi.Avionics.Input.Mid PASS COPLT Knob DEC ": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_Pass_Copilot_DEC)"
+	},
+	"Working Title.G1000 NXi.Avionics.Input.Mid PASS COPLT Knob INC": {
+		"method": "calcCode",
+		"code": "(>H:AS1000_MID_Pass_Copilot_INC)"
+	},
+	"Working Title.G1000 NXi.Avionics.Input.Mid PASS PILOT Inner Knob DEC": {
+		"method": "calcCode",
+		"code": "(A:AUDIO PANEL VOLUME, percent) -- 0 max (>K:AUDIO_PANEL_VOLUME_SET) "
+	},
+	"Working Title.G1000 NXi.Avionics.Input.Mid PASS PILOT Inner Knob INC": {
+		"method": "calcCode",
+		"code": "(A:AUDIO PANEL VOLUME, percent) ++ 100 min (>K:AUDIO_PANEL_VOLUME_SET) "
+	},
+	"MGharib.HA420.Engines.HA420 Throttle 1 Set": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min d (>L:HA420_ThrottlePos_L,number) \r\n50 - 2 * 100 / (>L:THROTTLE1_SET) "
+	},
+	"MGharib.HA420.Engines.HA420 Throttle 2 Set": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min d (>L:HA420_ThrottlePos_R,number) \r\n50 - 2 * 100 / (>L:THROTTLE2_SET)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 1": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_1)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 2": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_2)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 3": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_3)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 4": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_4)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 5": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_5)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 6": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_6)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 7": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_7)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 8": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_8)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 9": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_9)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 10": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_10)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 11": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_11)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 MFD1 Softkey 12": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_MFD_SOFTKEYS_12)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 1": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_1)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 2": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_2)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 3": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_3)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 4": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_4)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 5": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_5)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 6": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_6)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 7": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_7)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 8": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_8)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 9": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_9)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 10": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_10)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 11": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_11)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD1 Softkey 12": {
+		"method": "calcCode",
+		"code": "(>H:HPFD_SOFTKEYS_12)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 1": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_1)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 2": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_2)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 3": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_3)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 4": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_4)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 5": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_5)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 6": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_6)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 7": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_7)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 8": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_8)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 9": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_9)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 10": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_10)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 11": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_11)"
+	},
+	"MGharib.HA420.Avionics.HA420 G3000 PFD2 Softkey 12": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_PFD_2_SOFTKEYS_12)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Right Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_BottomKnob_Small_INC)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Right Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_BottomKnob_Small_DEC)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Right Inner Knob Push": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_BottomKnob_Push)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Left Large Knob Inc": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_TopKnob_Large_INC)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Left Large Knob Dec": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_TopKnob_Large_DEC)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Left Large Knob Push": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_TopKnob_Large_Push)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Mid Small Knob Inc": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_TopKnob_Small_INC)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Mid Small Knob Dec": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Vertical_2_TopKnob_Small_DEC)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC L Mid Small Knob Push": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_Softkey_2)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC R Right Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "(>H:gauges_ha420_sys_Checklist_scoll_down)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC R Right Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "(>H:gauges_ha420_sys_Checklist_scoll_up)"
+	},
+	"MGharib.HA420.Avionics.HA420 TSC R Right Inner Knob Push": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME,second) 2 + (>L:mf_PressTime) "
+	},
+	"MGharib.HA420.Avionics.HA420 TSC R Right Inner Knob Release": {
+		"method": "calcCode",
+		"code": "(L:mf_PressTime) 0 > if{ \r\n(E:SIMULATION TIME,second) (L:mf_PressTime) < if{ \r\n(>H:gauges_ha420_sys_Checklist_enter) } \r\nels{ (>H:gauges_ha420_sys_Checklist_Longenter) } }\r\n0 (>L:mf_PressTime)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CRS1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:1, degree) ++ dnor (>K:VOR1_SET)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CRS1 Knob Dec": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:1, degree) -- dnor (>K:VOR1_SET)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CRS1 Knob Push": {
+		"method": "calcCode",
+		"code": "(A:HEADING INDICATOR, degrees) (>K:VOR1_SET)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP HDG SEL Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>K:HEADING_BUG_INC)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP HDG SEL Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>K:HEADING_BUG_DEC)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP HDG SEL Knob Push": {
+		"method": "calcCode",
+		"code": "(A:HEADING INDICATOR, degrees) (>K:HEADING_BUG_SET)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP ALT SEL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:HJET_AP_ALT_VAR,number) 100 +  (>L:HJET_AP_ALT_VAR,number)\r\n(>H:AP_KNOB_Up) "
+	},
+	"MGharib.HA420.Autopilot.HA420 AP ALT SEL Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:HJET_AP_ALT_VAR,number) 100 - 0 max (>L:HJET_AP_ALT_VAR,number)\r\n(>H:AP_KNOB_Down) "
+	},
+	"MGharib.HA420.Autopilot.HA420 AP SPD SEL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_INC) } els{ (>K:AP_SPD_VAR_INC) }"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP SPD SEL Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_DEC) }  els{ (>K:AP_SPD_VAR_DEC) }"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP SPD SEL Knob Push": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach, Bool) ! (>L:XMLVAR_AirSpeedIsInMach, Bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP  VS Wheel Up": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT LEVEL CHANGE, Bool) if{ \r\n(L:XMLVAR_AirSpeedIsInMach) if{ \r\n(A:AUTOPILOT MACH HOLD VAR, number) 1 - 0 max (>K:AP_MACH_VAR_SET) \r\n} els{ (A:AUTOPILOT AIRSPEED HOLD VAR, knot) 1 - 0 max (>K:AP_SPD_VAR_SET) \r\n} } els{ (A:AUTOPILOT VERTICAL HOLD:1, Bool) if{ \r\n1 (A:AUTOPILOT VERTICAL HOLD VAR:1, feet per minute) 100 - (>K:2:AP_VS_VAR_SET_ENGLISH) \r\n} els{ (A:AUTOPILOT PITCH HOLD, Bool) if{ \r\n(A:AUTOPILOT PITCH HOLD REF, degrees) 0.2 - 25 / 1 min -1 max 16384 * (>K:AP_PITCH_REF_SET) \r\n} } } "
+	},
+	"MGharib.HA420.Autopilot.HA420 AP VS Wheel Down": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT LEVEL CHANGE, Bool) if{ \r\n(L:XMLVAR_AirSpeedIsInMach) if{ \r\n(A:AUTOPILOT MACH HOLD VAR, number) 1 + 0 max (>K:AP_MACH_VAR_SET) \r\n} els{ (A:AUTOPILOT AIRSPEED HOLD VAR, knot) 1 + 0 max (>K:AP_SPD_VAR_SET) \r\n} } els{ (A:AUTOPILOT VERTICAL HOLD:1, Bool) if{ \r\n1 (A:AUTOPILOT VERTICAL HOLD VAR:1, feet per minute) 100 + (>K:2:AP_VS_VAR_SET_ENGLISH) \r\n} els{ (A:AUTOPILOT PITCH HOLD, Bool) if{ \r\n(A:AUTOPILOT PITCH HOLD REF, degrees) 0.2 + 25 / 1 min -1 max 16384 * (>K:AP_PITCH_REF_SET) \r\n} } } "
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CRS2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:2, degree) ++ dnor (>K:VOR2_SET)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CRS2 Knob Dec": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:2, degree) -- dnor (>K:VOR2_SET)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CRS2 Knob Push": {
+		"method": "calcCode",
+		"code": "(A:HEADING INDICATOR, degrees) (>K:VOR2_SET)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP FD1 button push": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP NAV button push": {
+		"method": "calcCode",
+		"code": "(L:NAV_Pushed,bool) ! (>L:NAV_Pushed,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP HDG button push": {
+		"method": "calcCode",
+		"code": "(L:HDG_Pushed,bool) ! (>L:HDG_Pushed,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP Master button push": {
+		"method": "calcCode",
+		"code": "(>K:AP_MASTER) \r\n(A:AUTOPILOT MASTER, Bool) ! if{ (>H:Generic_Autopilot_Manual_Off) }"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP YD button push": {
+		"method": "calcCode",
+		"code": "(>K:YAW_DAMPER_TOGGLE)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP ALT button push": {
+		"method": "calcCode",
+		"code": "(L:Alt_Pushed,bool) ! (>L:Alt_Pushed,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP VNV button push": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_VNAVButtonValue) ! (>L:XMLVAR_VNAVButtonValue)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP VS button push": {
+		"method": "calcCode",
+		"code": "(L:VS_Pushed,bool) ! (>L:VS_Pushed,bool) "
+	},
+	"MGharib.HA420.Autopilot.HA420 AP FLC button push": {
+		"method": "calcCode",
+		"code": "(L:FLC_Pushed,bool) ! (>L:FLC_Pushed,bool) "
+	},
+	"MGharib.HA420.Autopilot.HA420 AP APR button push": {
+		"method": "calcCode",
+		"code": "(L:HJET_APPROACH_MODE_ARMED,bool) ! (>L:HJET_APPROACH_MODE_ARMED,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP BANK button push": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MAX BANK ID, number) 0 == if{ 1 (>K:AP_MAX_BANK_SET) } els{ 0 (>K:AP_MAX_BANK_SET) }"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CSC button push": {
+		"method": "calcCode",
+		"code": "(L:CSC Pushed,bool) ! (>L:CSC Pushed,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP CPL button push": {
+		"method": "calcCode",
+		"code": "(L:CPL Pushed,bool) ! (>L:CPL Pushed,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP AFC Servo Pitch push": {
+		"method": "calcCode",
+		"code": "(L:AFCPITCH Pushed,bool) ! (>L:AFCPITCH Pushed,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP AFC Servo Roll push": {
+		"method": "calcCode",
+		"code": "(L:AFCROLL Pushed,bool) ! (>L:AFCROLL Pushed,bool)"
+	},
+	"MGharib.HA420.Autopilot.HA420 AP AFC Servo Yaw push": {
+		"method": "calcCode",
+		"code": "(L:AFCYAW Pushed,bool) ! (>L:AFCYAW Pushed,bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_APR_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT APPROACH HOLD, Bool) (A:AUTOPILOT GLIDESLOPE HOLD, Bool) ! and if{ (>K:AP_APR_HOLD) } (>K:AP_APR_HOLD)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_APR_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT APPROACH HOLD, Bool) (A:AUTOPILOT GLIDESLOPE HOLD, Bool) and"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_FD_TOGGLE=": {
+		"method": "calcCode",
+		"code": "1 if{ 1 (>K:TOGGLE_FLIGHT_DIRECTOR) }"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_HDG_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT HEADING LOCK, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_NAV_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV1 LOCK, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_BC_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT BACKCOURSE HOLD, Bool) ! (>K:AP_BC_HOLD)"
+	},
+	"Asobo.Generic.Radio.Input.AS530_ComVolume_Squelch": {
+		"method": "calcCode",
+		"code": "(>K:RADIO_COMMNAV1_TEST_TOGGLE)"
+	},
+	"Asobo.Generic.Radio.Input.AS530_PushID": {
+		"method": "calcCode",
+		"code": "(>K:RADIO_VOR1_IDENT_TOGGLE)"
+	},
+	"Asobo.Generic.Radio.Input.AS530_ComVolKnob_Left": {
+		"method": "calcCode",
+		"code": "(>K:COM1_VOLUME_DEC)"
+	},
+	"Asobo.Generic.Radio.Input.AS530_ComVolKnob_Right": {
+		"method": "calcCode",
+		"code": "(>K:COM1_VOLUME_INC)"
+	},
+	"Asobo.Generic.Radio.Input.NAV1_VOLUME_DEC": {
+		"method": "calcCode",
+		"code": "(>K:NAV1_VOLUME_DEC)"
+	},
+	"Asobo.Generic.Radio.Input.NAV1_VOLUME_INC": {
+		"method": "calcCode",
+		"code": "(>K:NAV1_VOLUME_INC)"
+	},
+	"Asobo.Generic.Radio.Input.COM2_VOLUME_DEC": {
+		"method": "calcCode",
+		"code": "(>K:COM2_VOLUME_DEC)"
+	},
+	"Asobo.Generic.Radio.Input.COM2_VOLUME_INC": {
+		"method": "calcCode",
+		"code": "(>K:COM2_VOLUME_INC)"
+	},
+	"Asobo.Generic.Radio.Input.NAV2_VOLUME_DEC": {
+		"method": "calcCode",
+		"code": "(>K:NAV2_VOLUME_DEC)"
+	},
+	"Asobo.Generic.Radio.Input.NAV2_VOLUME_INC": {
+		"method": "calcCode",
+		"code": "(>K:NAV2_VOLUME_INC)"
+	},
+	"Working Title.G1000 NXi.Autopilot.Input.PFD AP Push": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT DISENGAGED, Bool) ! if{ \n   (>K:AP_MASTER) \n   (A:AUTOPILOT MASTER, Bool) ! if{ \n	  (>H:Generic_Autopilot_Manual_Off) } \n	  els{ \n	  (A:AUTOPILOT FLIGHT DIRECTOR ACTIVE, Bool) ! if{ \n	  1 (>K:TOGGLE_FLIGHT_DIRECTOR) } } \n(A:AUTOPILOT MASTER, Bool) ! if{ \n\t (A:AUTOPILOT FLIGHT DIRECTOR ACTIVE, Bool) ! if{ \n	  1 (>K:TOGGLE_FLIGHT_DIRECTOR) } } "
+	},
+	"Working Title.G1000 NXi.Autopilot.Input.PFD FD Push": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MASTER, Bool) ! if{ \n0 (>K:TOGGLE_FLIGHT_DIRECTOR) }"
+	},
+	"Working Title.G1000 NXi.Autopilot.Input.PFD HDG Push": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_HEADING_HOLD)"
+	},
+	"Working Title.G1000 NXi.Autopilot.Input.PFD ALT Push": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_HOLD)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_NAV_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV1 LOCK, Bool) ! (>K:AP_NAV1_HOLD)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_BC_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT BACKCOURSE HOLD, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_BANK_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MAX BANK ID, Number) if{ 0 (>K:AP_MAX_BANK_SET) } els{ 1 (>K:AP_MAX_BANK_SET) }"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_XFR_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_PushXFR) ! (>L:XMLVAR_PushXFR)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_AP_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT DISENGAGED, Bool) ! if{ (>K:AP_MASTER) (A:AUTOPILOT MASTER, Bool) ! if{ (>H:Generic_Autopilot_Manual_Off) } els{ (A:AUTOPILOT YAW DAMPER, Bool) ! if{ (>K:YAW_DAMPER_TOGGLE) } } } "
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_YD_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(>K:YAW_DAMPER_TOGGLE)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_ALT_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_HOLD)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_VS_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_VS_HOLD)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_VNV_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_VNAVButtonValue) ! (>L:XMLVAR_VNAVButtonValue)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_FLC_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(>K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, Knots) (>K:AP_SPD_VAR_SET)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_SPD_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach) ! (>L:XMLVAR_AirSpeedIsInMach)"
+	},
+	"Asobo.TBM 930.Autopilot.Input.=TBM930_Improvements_Mod_AUTOPILOT_LVL_TOGGLE=": {
+		"method": "calcCode",
+		"code": "(>K:AP_WING_LEVELER) (A:AUTOPILOT WING LEVELER, Bool) if{ (A:AUTOPILOT MASTER, Bool) (>O:APStateWhenLevelerEnabled) (A:AUTOPILOT MASTER, Bool) ! if{ (>K:AUTOPILOT_ON) } (>K:AP_PITCH_LEVELER_ON) } els{ (>K:AP_PITCH_LEVELER_OFF) (>O:APStateWhenLevelerEnabled) if{ (>K:AUTOPILOT_ON) } els{ (>K:AUTOPILOT_OFF) } }"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_FD_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE:1, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_BANK_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MAX BANK ID, number)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_XFR_Left_LED=": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_PushXFR)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_XFR_Right_LED=": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_PushXFR)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_AP_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MASTER, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_YD_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT YAW DAMPER, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_ALT_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT ALTITUDE LOCK, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_VS_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_VNV_LED=": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_VNAVButtonValue)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_FLC_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT LEVEL CHANGE, Bool)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_SPD_LED=": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach, Number)"
+	},
+	"Asobo.TBM 930.Autopilot.Output.=TBM930_Improvements_Mod_AUTOPILOT_LVL_LED=": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT WING LEVELER, Bool)"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Ovhd Aircond Pack 1 Fault LED": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_COND_PACK_1_PB_HAS_FAULT)"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Ovhd Aircond Pack 2 Fault LED": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_COND_PACK_2_PB_HAS_FAULT)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot Alt Hold Active": {
+		"method": "calcCode",
+		"code": "(L:AP_ALT_HOLD_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot Heading Hold Active": {
+		"method": "calcCode",
+		"code": "(L:AP_HEADING_HOLD_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot APP Armed": {
+		"method": "calcCode",
+		"code": "(L:AP_APP_ARMED)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot FLCH Active": {
+		"method": "calcCode",
+		"code": "(L:AP_FLCH_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot VNAV Armed": {
+		"method": "calcCode",
+		"code": "(L:AP_VNAV_ARMED)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot SPD Active": {
+		"method": "calcCode",
+		"code": "(L:AP_SPD_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot VS Active": {
+		"method": "calcCode",
+		"code": "(L:AP_VS_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot SPD INTV Active": {
+		"method": "calcCode",
+		"code": "(L:AP_SPEED_INTERVENTION_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot VNAV Active": {
+		"method": "calcCode",
+		"code": "(L:AP_VNAV_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot LNAV Armed": {
+		"method": "calcCode",
+		"code": "(L:AP_LNAV_ARMED)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot LOC Armed": {
+		"method": "calcCode",
+		"code": "(L:AP_LOC_ARMED)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot LNAV Active": {
+		"method": "calcCode",
+		"code": "(L:AP_LNAV_ACTIVE)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot Engage L ": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Autopilot_1_Status)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot Engage C": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Autopilot_2_Status)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot Engage R": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Autopilot_3_Status)"
+	},
+	"Salty.747-8i.Autopilot.Input.Autopilot Speed Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach) if{ \n\t1 (A:AUTOPILOT MACH HOLD VAR:1, mach) 0.01 + 100 * (>K:2:AP_MACH_VAR_SET) } \nels{ 1 (A:AUTOPILOT AIRSPEED HOLD VAR:1, knots) 1 + 0 max (>K:2:AP_SPD_VAR_SET) } "
+	},
+	"Salty.747-8i.Autopilot.Input.Autopilot Speed Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach) if{ \n\t1 (A:AUTOPILOT MACH HOLD VAR:1, mach) 0.01 - 100 * (>K:2:AP_MACH_VAR_SET) } \nels{ 1 (A:AUTOPILOT AIRSPEED HOLD VAR:1, knots) 1 - 0 max (>K:2:AP_SPD_VAR_SET) } "
+	},
+	"Fly By Wire.A320-Dev.Miscellaneous.Input.A32NX RCDR CVR TEST PRESS": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_RCDR_TEST)"
+	},
+	"Fly By Wire.A320-Dev.Miscellaneous.Input.A32NX RCDR CVR TEST RELEASE": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_RCDR_TEST)"
+	},
+	"Asobo.Cessna 172.Autopilot.Input.C_172_AP_HDG_INC": {
+		"method": "calcCode",
+		"code": "(>K:HEADING_BUG_INC)"
+	},
+	"Asobo.Cessna 172.Autopilot.Input.C_172_AP_HDG_DEC": {
+		"method": "calcCode",
+		"code": "(>K:HEADING_BUG_DEC)"
+	},
+	"Asobo.Cessna 172.Autopilot.Input.C_172_AP_ALT_INC": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_VAR_INC)"
+	},
+	"Asobo.Cessna 172.Autopilot.Input.C_172_AP_ALT_DEC": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_VAR_DEC)"
+	},
+	"SimWorks Studios.Kodiak 100.Electrical.Input.Battery Master On": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_MASTER_BATTERY)"
+	},
+	"SimWorks Studios.Kodiak 100.Electrical.Input.Battery Master Off": {
+		"method": "calcCode",
+		"code": "0 (>K:TOGGLE_MASTER_BATTERY)"
+	},
+	"Asobo.Cessna 152.Electrical.Output.C152 Safety Indicator Low Voltage": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL BATTERY LOAD:1, amp) 0 >"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Ovhd Press Mode Select Man": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_PRESS_MODE_SEL_PB_IS_AUTO) !"
+	},
+	"Microsoft.Generic.Navigation.Input.ADF VOLUME INC": {
+		"method": "calcCode",
+		"code": "(>K:ADF_VOLUME_INC)"
+	},
+	"Microsoft.Generic.Navigation.Input.ADF VOLUME DEC": {
+		"method": "calcCode",
+		"code": "(>K:ADF_VOLUME_DEC)"
+	},
+	"Microsoft.Generic.Navigation.Input (Potentiometer).ADF VOLUME SET": {
+		"method": "calcCode",
+		"code": "@ 10.23 / 0 max 100 min (>K:ADF_VOLUME_SET)"
+	},
+	"Asobo.Cessna 152.Navigation.Input.C152 ADF Mode Selector BFO": {
+		"method": "calcCode",
+		"code": "0 (>L:XMLVAR_ADF_Mode)"
+	},
+	"Asobo.Cessna 152.Navigation.Input.C152 ADF Mode Selector REC": {
+		"method": "calcCode",
+		"code": "1 (>L:XMLVAR_ADF_Mode)"
+	},
+	"Asobo.Cessna 152.Navigation.Input.C152 ADF Mode Selector ADF": {
+		"method": "calcCode",
+		"code": "2 (>L:XMLVAR_ADF_Mode)"
+	},
+	"Asobo.Cessna 152.Navigation.Input.C152 ADF Mode Selector TEST": {
+		"method": "calcCode",
+		"code": "3 (>L:XMLVAR_ADF_Mode)"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Lower DU L Selector ENG PRI": {
+		"method": "calcCode",
+		"code": "0 (L:switch_336_73X) - 50 div s0\n:1\nl0 0 > if{ 33607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 33608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Lower DU L Selector NORM": {
+		"method": "calcCode",
+		"code": "50 (L:switch_336_73X) - 50 div s0\n:1\nl0 0 > if{ 33607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 33608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Lower DU L Selector ND": {
+		"method": "calcCode",
+		"code": "100 (L:switch_336_73X) - 50 div s0\n:1\nl0 0 > if{ 33607 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 33608 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Lower DU R Selector ENG PRI": {
+		"method": "calcCode",
+		"code": "0 (L:switch_441_73X) - 50 div s0\n:1\nl0 0 > if{ 44108 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 44107 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\n"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Lower DU R Selector NORM": {
+		"method": "calcCode",
+		"code": "50 (L:switch_441_73X) - 50 div s0\n:1\nl0 0 > if{ 44108 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 44107 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\n"
+	},
+	"PMDG.B737-700.Avionics.Input.PMDG B737 Lower DU R Selector ND": {
+		"method": "calcCode",
+		"code": "100 (L:switch_441_73X) - 50 div s0\n:1\nl0 0 > if{ 44108 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\nl0 0 < if{ 44107 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\n"
+	},
+	"Asobo.Generic.Radio.Input (Potentiometer).NAV1_VOLUME_SET": {
+		"method": "calcCode",
+		"code": "@ 10.23 / (>K:NAV1_VOLUME_SET_EX1)"
+	},
+	"Asobo.Generic.Radio.Input (Potentiometer).NAV2_VOLUME_SET": {
+		"method": "calcCode",
+		"code": "@ 10.23 / (>K:NAV2_VOLUME_SET_EX1)"
+	},
+	"IniBuilds.A310.Gear.Output.A310 Parking Brake Status": {
+		"method": "calcCode",
+		"code": "(L:A310_PARKING_BRAKE_STATUS)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Landing Gear Lever Down": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_GEAR_HANDLE_STATUS)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Landing Gear Lever Up": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_GEAR_HANDLE_STATUS)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Landing Gear Lever Mid": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_GEAR_HANDLE_STATUS)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Speed Knob Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_MANAGED_SPEED_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Speed Knob Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_SELECTED_SPEED_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Speed Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_AIRSPEED_DIAL_UP_COMMAND) "
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Speed Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_AIRSPEED_DIAL_DN_COMMAND) "
+	},
+	"SimWorks Studios.Kodiak 100.Electrical.Input.Cabin Lights ON": {
+		"method": "calcCode",
+		"code": "2 (>L:SWS_LIGHTING_Switch_Light_Cabin_12, Bool)"
+	},
+	"SimWorks Studios.Kodiak 100.Electrical.Input.Cabin Lights OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:SWS_LIGHTING_Switch_Light_Cabin_12, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Altitude Dial DN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ALTITUDE_DIAL_DN_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Altitude Dial Up": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ALTITUDE_DIAL_UP_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Altitude Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_ALTITUDE_PULL_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Altitude Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_ALTITUDE_PUSH_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Heading Dial Dn": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_HEADING_DIAL_DN_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Heading Dial UP": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_HEADING_DIAL_UP_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Heading Select": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_SELECTED_HEADING_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Heading Sync": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_SYNC_HEADING_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP VS Dial DN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VVI_DIAL_DN_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP VS Dial Up": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VVI_DIAL_UP_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP VS Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:AP9_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP1 Toggle ": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_AP1_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP2 Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_AP2_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP ALT HLD Button": {
+		"method": "calcCode",
+		"code": "1 (>L:AP1_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP LVL CHG": {
+		"method": "calcCode",
+		"code": "1 (>L:AP2_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP LOC V/L BUTTON": {
+		"method": "calcCode",
+		"code": "1 (>L:AP6_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP LAND Button": {
+		"method": "calcCode",
+		"code": "1 (>L:AP7_BUTTON)"
+	},
+	"IniBuilds.A310.Autothrust System.Input.A310 AP ATHR Button": {
+		"method": "calcCode",
+		"code": "1 (>L:AP8_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP Heading Managed": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_MANAGED_HEADING_BUTTON)"
+	},
+	"Fly By Wire.A320.MCDU.Input.A320_Neo_CDU_L_BTN_BRT": {
+		"method": "calcCode",
+		"code": "(L:A32NX_MCDU_L_BRIGHTNESS) 7.7 min 0.300 + (>L:A32NX_MCDU_L_BRIGHTNESS)"
+	},
+	"Fly By Wire.A320.MCDU.Input.A320_Neo_CDU_L_BTN_DIM": {
+		"method": "calcCode",
+		"code": "(L:A32NX_MCDU_L_BRIGHTNESS) 0.8 max 0.300 - (>L:A32NX_MCDU_L_BRIGHTNESS)"
+	},
+	"Fly By Wire.A320.MCDU.Input.A320_Neo_CDU_R_BTN_BRT": {
+		"method": "calcCode",
+		"code": "(L:A32NX_MCDU_R_BRIGHTNESS) 7.7 min 0.300 + (>L:A32NX_MCDU_R_BRIGHTNESS)"
+	},
+	"Fly By Wire.A320.MCDU.Input.A320_Neo_CDU_R_BTN_DIM": {
+		"method": "calcCode",
+		"code": "(L:A32NX_MCDU_R_BRIGHTNESS) 0.8 max 0.300 - (>L:A32NX_MCDU_R_BRIGHTNESS)"
+	},
+	"FenixSim.A320.Autopilot.Output.FNX320 FCU HDG TRK MODE SELECT": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_TRACK_FPA_MODE)"
+	},
+	"FenixSim.A320.Autopilot.Output.FNX320 FCU SPD MACH MODE SELECT": {
+		"method": "calcCode",
+		"code": "(L:I_FCU_MACH_MODE)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP Airspeed Display": {
+		"method": "calcCode",
+		"code": "(L:A310_Airspeed_Dial)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP HDG Display": {
+		"method": "calcCode",
+		"code": "(L:A310_HEADING_DIAL)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP Altitude Display ": {
+		"method": "calcCode",
+		"code": "(L:A310_Altitude_Dial)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP V/S Display": {
+		"method": "calcCode",
+		"code": "(L:A310_vvi_dial)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP Altitude Hold Light": {
+		"method": "calcCode",
+		"code": "(L:A310_MCU_ALTTUDE_HOLD_LIGHT, bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP LVL/CH Button LIght": {
+		"method": "calcCode",
+		"code": "(L:A310_MCU_LEVEL_CHANGE_LIGHT, bool)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP PROFILE Button": {
+		"method": "calcCode",
+		"code": "1 (>L:AP3_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP HDG SEL Button Light": {
+		"method": "calcCode",
+		"code": "(L:A310_MCU_HDG_SEL_LIGHT, bool)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP NAV Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FCU_MANAGED_HEADING_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP NAV Button Light": {
+		"method": "calcCode",
+		"code": "(L:A310_MCU_NAV_LIGHT, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP V/L Button Light": {
+		"method": "calcCode",
+		"code": "(L:A310_MCU_LOC_LIGHT, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP LAND Button LIght": {
+		"method": "calcCode",
+		"code": "(>L:A310_MCU_LAND_LIGHT, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP AP1 Button On": {
+		"method": "calcCode",
+		"code": "(L:A310_ap1_on, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP AP2 Button On": {
+		"method": "calcCode",
+		"code": "(L:A310_ap2_on, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 AP CWS CMD Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CWS_COMMAND)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP CWS Button Light": {
+		"method": "calcCode",
+		"code": "(L:A300DR_cws_light, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP CMD Button Light": {
+		"method": "calcCode",
+		"code": "(L:A300DR_cmd_light, Bool)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Mode Cpt TEST": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_map_mode_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Mode Cpt ROSE": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_map_mode_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Mode Cpt ARC": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_map_mode_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Mode Cpt MAP": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_map_mode_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Mode Cpt PLAN": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_map_mode_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Range Capt 15": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_map_range_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Range Capt 30": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_map_range_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Range Capt 60": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_map_range_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Range Capt 120": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_map_range_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Range Capt 240": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_map_range_capt_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt CSTR Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_CPT_CSTR_BUTTON)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt WPT Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_CPT_FIXES_BUTTON)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt VOR Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_CPT_VOR_BUTTON)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt NDB Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_CPT_NDB_BUTTON)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt ARPT Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_CPT_ARPT_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 EFIS Cpt CSTR Button Light": {
+		"method": "calcCode",
+		"code": "(L:__EFIS_CSTR_CPTIsPressed, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 EFIS Cpt WPT Button Light": {
+		"method": "calcCode",
+		"code": "(L:__EFIS_WPT_CPTIsPressed, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 EFIS Cpt VOR Button Light": {
+		"method": "calcCode",
+		"code": "(>L:__EFIS_VOR_CPTIsPressed, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 EFIS Cpt NDB Button Light": {
+		"method": "calcCode",
+		"code": "(L:__EFIS_NDB_CPTIsPressed, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 EFIS Cpt ARPT Button Light": {
+		"method": "calcCode",
+		"code": "(L:__EFIS_ARPT_CPTIsPressed, Bool)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt DH Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_DH_COMMAND)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt FPA Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_FPA_COMMAND)"
+	},
+	"IniBuilds.A310.EFIS.Output.A310 EFIS Cpt DH Button Light": {
+		"method": "calcCode",
+		"code": "(L:A310_DH_SELECTED, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 EFIS Cpt FPA Button Light": {
+		"method": "calcCode",
+		"code": "(L:A310_FPA_SELECTED, Bool)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 EFIS Cpt FPA display": {
+		"method": "calcCode",
+		"code": "(L:A310_FPA_SET)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt DH Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FPA_DH_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Cpt DH Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FPA_DH_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 PFD Brightness Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_60) 5 + 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_60) \nl0 60 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 PFD Brightness Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_60) 5 - 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_60) \nl0 60 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 ND Brightness Outer Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_61) 5 + 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_61) \nl0 61 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 ND Brightness Outer Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_61) 5 - 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_61) \nl0 61 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 ND Brightness Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_12) 5 + 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_12) \nl0 12 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 ND Brightness Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_12) 5 - 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_12) \nl0 12 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 FD/FPV  Switch Capt OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_FDIR_SWITCH_CAPT)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 FD/FPV  Switch Capt ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FDIR_SWITCH_CAPT)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 FD/FPV  Switch Capt UP": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_FDIR_SWITCH_CAPT)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Selected Nav Capt Switch VOR": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_efis_selected_nav_capt)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Selected Nav Capt Switch NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_efis_selected_nav_capt)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS Selected Nav Capt Switch ILS": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_efis_selected_nav_capt)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 Autoland Light Test Switch": {
+		"method": "calcCode",
+		"code": "(L:A310_AUTOLAND_LIGHT_TEST) ! (>L:A310_AUTOLAND_LIGHT_TEST)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 Takeoff Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_takeoff_toggle)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 Stop Rudder Input Test Button": {
+		"method": "calcCode",
+		"code": "(L:A310_STOP_RUDDER_INPUT_TEST_BUTTON) ! (>L:A310_STOP_RUDDER_INPUT_TEST_BUTTON)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Strobe On": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_POTENTIOMETER_24)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Strobe Auto": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_POTENTIOMETER_24)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Strobe Off": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_POTENTIOMETER_24)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Beacon On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_BEACON_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Beacon Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_BEACON_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Rwy Turnoff L On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RWY_TURNOFF_L_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Rwy Turnoff L Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_RWY_TURNOFF_L_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Rwy Turnoff R On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RWY_TURNOFF_R_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Rwy Turnoff R Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_RWY_TURNOFF_R_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Nav Logo 2": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_NAV_LOGO_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Nav Logo 1": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_NAV_LOGO_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Nav Logo Off": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_NAV_LOGO_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Nose Light TO": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_TAXI_LIGHTS_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Nose Light TAXI": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TAXI_LIGHTS_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Nose Light OFF": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_TAXI_LIGHTS_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Landing  Light L ON": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_LANDING_LIGHT_L_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Landing  Light L OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_LANDING_LIGHT_L_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Landing  Light L RETRACT": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_LANDING_LIGHT_L_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Landing  Light R ON": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_LANDING_LIGHT_R_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Landing  Light R OFF": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_LANDING_LIGHT_R_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Landing  Light R RETRACT": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_LANDING_LIGHT_R_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Wing Light On": {
+		"method": "calcCode",
+		"code": " 1 (>L:A310_WING_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Extlt Wing Light Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_WING_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd Engine Start 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_STARTER) ! (>L:A310_ENG1_STARTER)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd Engine Start 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_STARTER) ! (>L:A310_ENG2_STARTER)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd Engine Ignition Knob B": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_eng_ignition_switch)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd Engine Ignition Knob A": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_eng_ignition_switch)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd Engine Ignition Knob Crank": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_eng_ignition_switch)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd Engine Ignition Knob Off": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_eng_ignition_switch)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd Engine Ignition Knob Cont Relight": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_eng_ignition_switch)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd APU Master Switch Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_apu_master_switch) ! (>L:A310_apu_master_switch) "
+	},
+	"IniBuilds.A310.Engines.Input.A310 Ovhd APU Start Button": {
+		"method": "calcCode",
+		"code": "(L:A310_apu_master_switch, Bool) if{ 1 (>L:A310_APU_START_BUTTON) }"
+	},
+	"IniBuilds.A310.Engines.Input.A310 APU Fuel Pump Override Button": {
+		"method": "calcCode",
+		"code": "(L:A300_APU_FUEL_OVRD) ! (>L:A300_APU_FUEL_OVRD)"
+	},
+	"IniBuilds.A310.Autothrust System.Output.A310 A/THR Button Light": {
+		"method": "calcCode",
+		"code": "(L:A310_at_on,BOOL)"
+	},
+	"JPLogistics.Cessna 152.Lights.Input (Potentiometer).Panel Light Axis": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 5 max 100 min s0 \nl0 (>L:LIGHTING_POTENTIOMETER_5, Number) \nlo 5 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"JPLogistics.Cessna 152.Lights.Input (Potentiometer).Radio Light Axis": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 5 max 100 min s0 \nl0 (>L:LIGHTING_POTENTIOMETER_6, Number) \nlo 6 (>K:2:LIGHT_POTENTIOMETER_SET) "
+	},
+	"JPLogistics.Cessna 152.Lights.Input (Potentiometer).Night Nav Light Axis": {
+		"method": "calcCode",
+		"code": "@ 655.35 / s0 0 max 100 min \nl0 (>L:LIGHTING_GLARESHIELD_1, Number) \nl0 1 r (>K:2:GLARESHIELD_LIGHTS_SET) \nl0 1 r (>K:LIGHT_POTENTIOMETER_4_SET) "
+	},
+	"WB Sim.Cessna 172 Classic.Lights.Input (Potentiometer).C172-analog-Light Cabin Pilot": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 0 max 100 min s0 \nl0 (>L:LIGHTING_CABIN_1, Number) \nl0 1 r (>K:2:CABIN_LIGHTS_SET) \nl0 1 r (>K:LIGHT_POTENTIOMETER_10_SET)\n"
+	},
+	"WB Sim.Cessna 172 Classic.Lights.Input (Potentiometer).C172-analog-Light Cabin Copilot": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 0 max 100 min s0 \nl0 (>L:LIGHTING_CABIN_2, Number) \nl0 2 r (>K:2:CABIN_LIGHTS_SET) \nl0 2 r (>K:LIGHT_POTENTIOMETER_11_SET)\n"
+	},
+	"WB Sim.Cessna 172 Classic.Lights.Input (Potentiometer).C172-analog-Light Cabin Passengers": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 0 max 100 min s0 \nl0 (>L:LIGHTING_CABIN_1, Number) \nl0 3 r (>K:2:CABIN_LIGHTS_SET) \nl0 3 r (>K:LIGHT_POTENTIOMETER_12_SET)\n"
+	},
+	"WB Sim.Cessna 172 Classic.Lights.Input (Potentiometer).C172-analog-Light Glareshield": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 0 max 100 min (>K:LIGHT_POTENTIOMETER_5_SET)"
+	},
+	"WB Sim.Cessna 172 Classic.Lights.Input (Potentiometer).C172-analog-Light Panel": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 0 max 100 min (>K:LIGHT_POTENTIOMETER_3_SET)"
+	},
+	"WB Sim.Cessna 172 Classic.Lights.Input (Potentiometer).C172-analog-Light Pedestal": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 0 max 100 min (>K:LIGHT_POTENTIOMETER_6_SET)\n"
+	},
+	"WB Sim.Cessna 172 Classic.Lights.Input (Potentiometer).C172-analog-Light Radio": {
+		"method": "calcCode",
+		"code": "@ 655.35 / 0 max 100 min (>K:LIGHT_POTENTIOMETER_7_SET)\n"
+	},
+	"IniBuilds.A310.Engines.Input.A310 Throttle Reverse Thrust Toggle": {
+		"method": "calcCode",
+		"code": "0 (>K:THROTTLE_REVERSE_THRUST_TOGGLE)"
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Anti Ice Eng 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_ANTI_ICE, Bool) ! (>L:A310_ENG1_ANTI_ICE, Bool) "
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Anti Ice Eng 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_ANTI_ICE, Bool) ! (>L:A310_ENG2_ANTI_ICE, Bool) "
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Anti Ice Eng 1 Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_ANTI_ICE, Bool) "
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Anti Ice Wing Supply Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_WING_ANTI_ICE, Bool) "
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Anti Ice Wing Mode ALTN On": {
+		"method": "calcCode",
+		"code": "(L:A310_ANTI_ICE_WING_MODE, Bool) "
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Anti Ice Wing Supply Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_WING_ANTI_ICE, Bool) ! (>L:A310_WING_ANTI_ICE, Bool)"
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Anti Ice Wing ALTN Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_ANTI_ICE_WING_MODE, Bool) ! (>L:A300_ANTI_ICE_WING_MODE, Bool)"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Anti Ice Eng 2 Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_ANTI_ICE, Bool) "
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd Capt Wiper Knob Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_CPT_WIPER_KNOB)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd Capt Wiper Knob Slow": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_WIPER_KNOB)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd Capt Wiper Knob Fast": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_CPT_WIPER_KNOB)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd FO Wiper Knob Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_FO_WIPER_KNOB)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd FO Wiper Knob Slow": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_WIPER_KNOB)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd FO Wiper Knob Fast": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_FO_WIPER_KNOB)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Man V/S Control Up": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_MAN_VS_CONTROL_SWITCH)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Man V/S Control Mid": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MAN_VS_CONTROL_SWITCH)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Man V/S Control Dn": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_MAN_VS_CONTROL_SWITCH)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Man Press Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CABIN_MAN_PRESS_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Man Press Arrow On": {
+		"method": "calcCode",
+		"code": "(L:A300DR_CABIN_MAN_PRESS_ARROW)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Man Press On": {
+		"method": "calcCode",
+		"code": "(L:A300DR_CABIN_MAN_PRESS)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Auto Press Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_CABIN_AUTO_PRESS_ACTUAL) 0.5 + 0 max 10 min (>L:A310_CABIN_AUTO_PRESS_ACTUAL)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Auto Press Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_CABIN_AUTO_PRESS_ACTUAL) 0.5 - 0 max 10 min (>L:A310_CABIN_AUTO_PRESS_ACTUAL)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Press Rate Light": {
+		"method": "calcCode",
+		"code": "(L:A300DR_CABIN_RATE_LIGHT)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Sys1 Regulator Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CABIN_SYS1_REGULATOR_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Sys2 Regulator Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CABIN_SYS2_REGULATOR_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Sys1 Regulator is Off": {
+		"method": "calcCode",
+		"code": "(L:A310_cabin_sys1_regulator, Bool) !"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Sys2 Regulator is Off": {
+		"method": "calcCode",
+		"code": "(L:A310_cabin_sys2_regulator, Bool) !"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Sys1 Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CABIN_SYS1_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Sys2 Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CABIN_SYS2_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Sys1 Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_cabin_sys1, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Sys2 Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_cabin_sys2, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Fuel Qty Left Outer Tank": {
+		"method": "calcCode",
+		"code": "(L:A310_FUEL_WEIGHT_LEFT_OUTER, number) 0.00220462 * "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Fuel Qty Right Outer Tank": {
+		"method": "calcCode",
+		"code": "(L:A310_FUEL_WEIGHT_RIGHT_OUTER, number) 0.00220462 * "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Fuel Qty Left Inner Tank": {
+		"method": "calcCode",
+		"code": "(L:A310_FUEL_WEIGHT_LEFT_INNER) 0.00220462 *"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Fuel Qty Right Inner Tank": {
+		"method": "calcCode",
+		"code": "(L:A310_FUEL_WEIGHT_RIGHT_INNER) 0.00220462 *"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Fuel Qty Center Tank": {
+		"method": "calcCode",
+		"code": "(L:A310_FUEL_WEIGHT_CENTER) 0.00220462 *"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 SPD/MACH Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_SPD_MACH_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed XFeed Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_XBLEED_MODE) ! (>L:A300_XBLEED_MODE)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed XFeed Valve Button": {
+		"method": "calcCode",
+		"code": "(L:A300_XBLEED_MODE, Bool) if{\n(L:A300_XBLEED) ! (>L:A300_XBLEED) }\n(L:A300_XBLEED) (>L:A300_XBLEED_BUTTON) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed Eng1 Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_BLEED) ! (>L:A310_ENG1_BLEED)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed Eng2 Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_BLEED) ! (>L:A310_ENG2_BLEED)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Air Bleed Eng1 Valve On": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_BLEED)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Air Bleed Eng2 Valve On": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_BLEED)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Air Bleed XFeed Mode ": {
+		"method": "calcCode",
+		"code": "(L:A300_XBLEED_MODE)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Air Bleed XFeed Valve Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_XBLEED)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key A": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_A)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key B": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_B)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key C": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_C)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key D": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_D)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key E": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_E)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key F": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_F)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key G": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_G)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key H": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_H)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key I": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_I)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key J": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_J)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key K": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_K)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key M": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_M)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key N": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_N)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key O": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_O)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key P": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_P)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key Q": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_Q)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key S": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_S)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key T": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_T)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key U": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_U)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key V": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_V)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key W": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_W)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key X": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_X)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key Y": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_Y)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key Z": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_Z)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key MINUS": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_MINUS)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key PLUS": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_PLUS)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key SLASH": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_SLASH)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key CLR": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_CLR)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 1": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_1)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 2": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_2)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 3": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_3)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 4": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_4)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 5": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_5)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 6": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_6)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 7": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_7)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 8": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_8)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 9": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_9)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key 0": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_0)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key DOT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_DOT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK1L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK1L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK2L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK2L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK3L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK3L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK4L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK4L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK5L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK5L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK6L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK6L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK1R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK1R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK2R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK2R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK3R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK3R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK4R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK4R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK5R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK5R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key LSK6R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_LSK6R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key DIR TO": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_DIR_TO)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key MODE": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_MODE)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key TACT MODE": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_TACT_MODE)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key INIT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_INIT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key REF": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_REF)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key FPLAN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_FPLAN)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key TO APPR": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_TO_APPR)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key SEC PLAN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_SEC_PLAN)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key MENU": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_MENU)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key ENGOUT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_ENGOUT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key PROG": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_PROG)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key UARROW": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_UARROW)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key DOWN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_DOWN)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Key NEXT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU1_NEXT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Brightness Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_66) 5 + 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_66) \nl0 66 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU1 Brightness Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_66) 5 - 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_66) \nl0 66 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key A": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_A)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key B": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_B)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key C": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_C)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key D": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_D)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key E": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_E)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key F": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_F)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key G": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_G)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key H": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_H)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key I": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_I)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key J": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_J)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key K": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_K)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key M": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_M)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key N": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_N)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key O": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_O)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key P": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_P)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key Q": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_Q)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key S": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_S)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key T": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_T)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key U": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_U)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key V": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_V)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key W": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_W)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key X": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_X)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key Y": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_Y)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key Z": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_Z)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key MINUS": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_MINUS)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key PLUS": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_PLUS)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key SLASH": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_SLASH)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key CLR": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_CLR)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 1": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_1)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 2": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_2)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 3": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_3)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 4": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_4)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 5": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_5)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 6": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_6)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 7": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_7)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 8": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_8)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 9": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_9)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key 0": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_0)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key DOT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_DOT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK1L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK1L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK2L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK2L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK3L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK3L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK4L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK4L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK5L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK5L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK6L": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK6L)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK1R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK1R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK2R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK2R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK3R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK3R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK4R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK4R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK5R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK5R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key LSK6R": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_LSK6R)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key DIR TO": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_DIR_TO)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key MODE": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_MODE)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key TACT MODE": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_TACT_MODE)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key INIT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_INIT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key REF": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_REF)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key FPLAN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_FPLAN)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key TO APPR": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_TO_APPR)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key SEC PLAN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_SEC_PLAN)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key MENU": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_MENU)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key ENGOUT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_ENGOUT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key PROG": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_PROG)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key UARROW": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_UARROW)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key DOWN": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_DOWN)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Key NEXT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MCDU2_NEXT)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Brightness Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_67) 5 + 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_67) \nl0 67 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.MCDU.A310 MCDU2 Brightness Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_67) 5 - 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_67) \nl0 67 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed Eng1 HP Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_eng1_hp_valve) ! (>L:A310_bleed_eng1_hp_valve)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed Eng2 HP Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_eng2_hp_valve) ! (>L:A310_bleed_eng2_hp_valve)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed APU Bleed Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_apu_bleed) ! (>L:A310_apu_bleed)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed APU Bleed On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_apu_bleed)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Air Bleed APU Bleed Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_apu_bleed)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Air Bleed Eng1 HP Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_eng1_hp_valve) !"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Air Bleed Eng2 HP Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_eng2_hp_valve) ! "
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Stby Compass On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_STBY_COMPASS_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Stby Compass Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_STBY_COMPASS_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Ann Lt Switch TEST": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_ANNLT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Ann Lt Switch BRT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ANNLT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Ann Lt Switch DIM": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_ANNLT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Emer Exit Switch ON": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_EMER_EXIT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Emer Exit Switch ARM": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EMER_EXIT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Emer Exit Switch DISARM": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_EMER_EXIT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd No Smoking Switch ON": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_NO_SMOKING_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd No Smoking Switch AUTO": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_NO_SMOKING_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd No Smoking Switch OFF": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_NO_SMOKING_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Seatbelts Switch ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_SEATBELTS_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Seatbelts Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_SEATBELTS_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Dome Light Switch ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_DOME_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Dome Light Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_DOME_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Dome Light Brt Switch BRT": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_DOME_LIGHT_BRT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Dome Light Brt Switch DIM": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_DOME_LIGHT_BRT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Storm Light Switch ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_STORM_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Storm Light Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_STORM_LIGHT_SWITCH)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Pitch Trim1 ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_pitch_trim1)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Pitch Trim1 OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_pitch_trim1)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Pitch Trim2 ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_pitch_trim2)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Pitch Trim2 OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_pitch_trim2)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Yaw Damper 1 ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_yaw_damper1)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Yaw Damper 1 OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_yaw_damper1)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Yaw Damper 2 ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_yaw_damper2)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ovhd Yaw Damper 2 OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_yaw_damper2)"
+	},
+	"IniBuilds.A310.Autothrust System.Input.A310 Ovhd ATS 1 Switch ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_autothrottle_master_switch1)"
+	},
+	"IniBuilds.A310.Autothrust System.Input.A310 Ovhd ATS 1 Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_autothrottle_master_switch1)"
+	},
+	"IniBuilds.A310.Autothrust System.Input.A310 Ovhd ATS 2 Switch ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_autothrottle_master_switch2)"
+	},
+	"IniBuilds.A310.Autothrust System.Input.A310 Ovhd ATS 2 Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_autothrottle_master_switch2)"
+	},
+	"IniBuilds.A310.Autothrust System.Input.A310 Ovhd Engine Trim Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_ENG_TRIM_State) ! if{ 1 (>L:__GUARD_ENG_TRIM_State) }\n(L:A310_ENG_TRIM) ! (>L:A310_ENG_TRIM)"
+	},
+	"IniBuilds.A310.Autothrust System.Output.A310 Ovhd Engine Trim Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG_TRIM) !"
+	},
+	"IniBuilds.A310.Autothrust System.Input.A310 Ovhd Eng Trim Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_ENG_TRIM_State) ! (>L:__GUARD_ENG_TRIM_State)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Outflow Forward Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_CABIN_OUTFLOW_FORWARD_BUTTON) ! (>L:A300_CABIN_OUTFLOW_FORWARD_BUTTON) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Outflow After Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_CABIN_OUTFLOW_AFTER_BUTTON) ! (>L:A300_CABIN_OUTFLOW_AFTER_BUTTON) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Outflow Fwd Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_PRESS_OUTFLOW_FWD_State) ! (>L:__GUARD_PRESS_OUTFLOW_FWD_State)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Cabin Outflow Aft Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_PRESS_OUTFLOW_AFT_State) ! (>L:__GUARD_PRESS_OUTFLOW_AFT_State)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Left TK Pump 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK1_LEFT) ! (>L:A310_INNER_TANK1_LEFT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Left TK Pump 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK2_LEFT) ! (>L:A310_INNER_TANK2_LEFT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Right TK Pump 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK1_RIGHT) ! (>L:A310_INNER_TANK1_RIGHT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Right TK Pump 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK2_RIGHT) ! (>L:A310_INNER_TANK2_RIGHT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Left TK Pump 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK1_LEFT) ! (>L:A310_OUTER_TANK1_LEFT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Left TK Pump 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK2_LEFT) ! (>L:A310_OUTER_TANK2_LEFT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Right TK Pump 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK1_RIGHT) ! (>L:A310_OUTER_TANK1_RIGHT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Right TK Pump 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK2_RIGHT) ! (>L:A310_OUTER_TANK2_RIGHT)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Center TK Pump 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_CENTER_TANK1) ! (>L:A310_CENTER_TANK1)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Center TK Pump 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_CENTER_TANK2) ! (>L:A310_CENTER_TANK2)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Trim TK Pump 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK1) ! (>L:A310_TRIM_TANK1)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Trim TK Pump 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK2) ! (>L:A310_TRIM_TANK2)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Trim TK Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK_MODE) ! (>L:A310_TRIM_TANK_MODE)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Aux Tank Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ACT_TANK) ! (>L:A310_ACT_TANK)\n(L:__AUX_AUTOIsPressed) ! (>L:__AUX_AUTOIsPressed)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Trim TK Iso Valve Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_TRMTK_ISO_State) ! (>L:__GUARD_TRMTK_ISO_State)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Trim TK Iso Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK_ISOL_VALVE) ! (>L:A310_TRIM_TANK_ISOL_VALVE)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Trim TK Pump 1 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_trim_tank_pump1_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Trim TK Pump 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK1, Bool) !"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Trim TK Pump 2 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_trim_tank_pump2_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Trim TK Pump 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK2, Bool) !"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Trim TK Mode FWD Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK_MODE, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd TrimTK Mode Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK_MODE_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Trim TK Isol Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRIM_TANK_ISOL_VALVE, Bool) !"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Center TK Pump 1 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_CENTER_TANK1_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Center TK Pump 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_CENTER_TANK1, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Center TK Pump 2 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_CENTER_TANK2_low_pressure, Bool) "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Aux Tank Fwd Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_ACT_TANK)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Aux Tank Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_ACT_TANK_FAULT)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Center TK Pump 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_CENTER_TANK2, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Left TK Pump 1 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK1_LEFT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Left TK Pump 2 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK2_LEFT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Right TK Pump 1 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK1_RIGHT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Right TK Pump 2 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK2_RIGHT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Left TK Pump 1 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK1_LEFT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Left TK Pump 2 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK2_LEFT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Right TK Pump 1 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK1_RIGHT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Right TK Pump 2 Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK2_RIGHT_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Left TK Pump 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK1_LEFT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Left TK Pump 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK2_LEFT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Right TK Pump 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK1_RIGHT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Right TK Pump 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INNER_TANK2_RIGHT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Left TK Pump 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK1_LEFT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Left TK Pump 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK2_LEFT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Right TK Pump 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK1_RIGHT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Right TK Pump 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OUTER_TANK2_RIGHT, Bool) ! "
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Left TK Iso Valve Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_FUEL_ISO_1_State) ! (>L:__GUARD_FUEL_ISO_1_State)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Left TK Iso Valve Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_FUEL_ISO_2_State) ! (>L:__GUARD_FUEL_ISO_2_State)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Right TK Iso Valve Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_FUEL_ISO_3_State) ! (>L:__GUARD_FUEL_ISO_3_State)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Right TK Iso Valve Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_FUEL_ISO_4_State) ! (>L:__GUARD_FUEL_ISO_4_State)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Left TK Iso Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_outer_tank_left) ! (>L:A310_isolation_valve_outer_tank_left)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Left TK Iso Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_inner_tank_left) ! (>L:A310_isolation_valve_inner_tank_left)"
+	},
+	"Salty.747-8i.Autopilot.Output.Autopilot Altitude Lock Var": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT ALTITUDE LOCK VAR:3, feet)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Inner Right TK Iso Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_inner_tank_right) ! (>L:A310_isolation_valve_inner_tank_right)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Outer Right TK Iso Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_outer_tank_right) ! (>L:A310_isolation_valve_outer_tank_right)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ovhd Xfeed Transfer Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_xfeed_transfer_on) ! (>L:A310_xfeed_transfer_on)"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Left TK Iso Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_outer_tank_left) !"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Left TK Iso Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_inner_tank_left) !"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Inner Right TK Iso Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_inner_tank_right) !"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Outer Right TK Iso Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_isolation_valve_outer_tank_right) !"
+	},
+	"IniBuilds.A310.Fuel.Output.A310 Ovhd Xfeed Transfer Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_xfeed_transfer_on, Bool) "
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd PTU Blue Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_PTU_blue_status) ! (>L:A310_hyd_PTU_blue_status)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd PTU Blue On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_PTU_blue_status)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd PTU Yellow Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_PTU_yellow_status) ! (>L:A310_hyd_PTU_yellow_status)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd PTU Yellow On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_PTU_yellow_status)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Elec Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_elec_status) ! (>L:A310_hyd_elec_status)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Elec On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_elec_status)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Eng1 Blue Pump Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_eng1_switch_pos) ! (>L:A310_hyd_eng1_switch_pos)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Eng1 Green Pump Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_eng1_A_switch_pos) ! (>L:A310_hyd_eng1_A_switch_pos)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Eng2 Green Pump Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_eng2_B_switch_pos) ! (>L:A310_hyd_eng2_B_switch_pos)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Eng2 Yellow Pump Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_eng2_switch_pos) ! (>L:A310_hyd_eng2_switch_pos)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng1 Blue Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_blue_light, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng1 Blue Off Indicator": {
+		"method": "calcCode",
+		"code": "(A310_hyd_eng1_switch_pos, Bool) !"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng1 Green Pump Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_eng1_A_switch_pos) !"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng1 Green Pump Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_green1_light, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng2 Green Pump Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_eng2_B_switch_pos) !"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng2 Green Pump Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_green2_light, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng2 Yellow Pump Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_eng2_switch_pos) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng2 Yellow Pump Low Press Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_yellow_light, Bool)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec Gen1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_eng1_gen_on) ! (>L:A310_eng1_gen_on)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec Apu Gen Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_apu_gen_on) ! (>L:A310_apu_gen_on)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec Ext Pwr Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_gpu_avail, Bool) (A:EXTERNAL POWER ON:1, Bool) ! and if{ \n   1 (>K:TOGGLE_EXTERNAL_POWER)\n} els{ (A:EXTERNAL POWER ON:1, Bool) if{ \n	  1 (>K:TOGGLE_EXTERNAL_POWER) } }"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec Gen2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_eng2_gen_on) ! (>L:A310_eng2_gen_on)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Gen2 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_elec_gen2_fault, Bool)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Gen2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_eng2_gen_on) !"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Apu Gen Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_apu_gen_on) ! "
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Gen1 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_elec_gen1_fault, Bool)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Gen1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_eng1_gen_on, Bool) !"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Ext Pwr Avail": {
+		"method": "calcCode",
+		"code": "(L:A310_gpu_avail, Bool) (A:EXTERNAL POWER ON:1, Bool) ! and"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Ext Power On": {
+		"method": "calcCode",
+		"code": "(L:A310_gpu_avail, Bool) (A:EXTERNAL POWER ON:1, Bool) and"
+	},
+	"Nemeth Designs.Bell 407.Lights.Input.B407_LDG_LTS_SW_UP": {
+		"method": "calcCode",
+		"code": "(A:LIGHT TAXI ON:1, Number) 1 ==\nif{\n2 (>L:switchLandingLight, Number)\n1 (>K:TAXI_LIGHTS_ON)\n1 (>K:WING_LIGHTS_ON)\n}\n(A:LIGHT TAXI ON:1, Number) 0 ==\nif{\n1 (>L:switchLandingLight, Number)\n1 (>K:TAXI_LIGHTS_ON)\n1 (>K:WING_LIGHTS_OFF)\n}"
+	},
+	"Nemeth Designs.Bell 407.Lights.Input.B407_LDG_LTS_SW_DN": {
+		"method": "calcCode",
+		"code": "(A:LIGHT WING ON:1, Number) 1 ==\nif{\n1 (>L:switchLandingLight, Number)\n1 (>K:TAXI_LIGHTS_ON)\n1 (>K:WING_LIGHTS_OFF)\n}\nels{\n0 (>L:switchLandingLight, Number)\n1 (>K:TAXI_LIGHTS_OFF)\n1 (>K:WING_LIGHTS_OFF)\n}"
+	},
+	"Nemeth Designs.Bell 407.Lights.Input.B407_LDG_LTS_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:switchLandingLight, Number) 1 (>K:TAXI_LIGHTS_OFF) 1 (>K:WING_LIGHTS_OFF)"
+	},
+	"Nemeth Designs.Bell 407.Lights.Input.B407_LDG_LTS_FWD": {
+		"method": "calcCode",
+		"code": "1 (>L:switchLandingLight, Number) 1 (>K:TAXI_LIGHTS_ON) 1 (>K:WING_LIGHTS_OFF)"
+	},
+	"Nemeth Designs.Bell 407.Lights.Input.B407_LDG_LTS_BOTH": {
+		"method": "calcCode",
+		"code": "2 (>L:switchLandingLight, Number) 1 (>K:TAXI_LIGHTS_ON) 1 (>K:WING_LIGHTS_ON)\n"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Ped Spoilers Arm Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SPOILERS_ARMED, Bool) ! (L:A310_SPOILERS_HANDLE_POSITION, position 16k) 0 == and \nif{ 1 } els{ 0 } (>K:SPOILERS_ARM_SET) "
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ped Eng1 Fuel Cutoff Lever Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_MIXTURE_COMMAND) ! (>L:A310_ENG1_MIXTURE_COMMAND)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ped Eng2 Fuel Cutoff Lever Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_MIXTURE_COMMAND) ! (>L:A310_ENG2_MIXTURE_COMMAND)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ped Eng1 Fuel Cutoff Lever On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ENG1_MIXTURE_COMMAND)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ped Eng1 Fuel Cutoff Lever Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_ENG1_MIXTURE_COMMAND)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ped Eng2 Fuel Cutoff Lever On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ENG2_MIXTURE_COMMAND)"
+	},
+	"IniBuilds.A310.Fuel.Input.A310 Ped Eng2 Fuel Cutoff Lever Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_ENG2_MIXTURE_COMMAND)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM Left Display Brightness Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_64) 5 - 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_64) \nl0 64 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM Left Display Brightness Knob Inc": {
+		"method": "calcCode",
+		"code": "(>L:LIGHTING_POTENTIOMETER_64) 5 + 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_64) \nl0 64 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM Right Display Brightness Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_65)  5 - 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_65) \nl0 65 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM Right Display Brightness Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_65) 5 + 0 max 100 min \ns0 (>L:LIGHTING_POTENTIOMETER_65) \nl0 65 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM SGU 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SGU1) ! (>L:A310_SGU1)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM SGU 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SGU2) ! (>L:A310_SGU2)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM ENG Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_ENG)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM HYD Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_HYD)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM AC Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_ELEC_AC)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM DC Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_ELEC_DC)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM BLEED Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_BLEED)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM COND Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_COND)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM PRESS Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_PRESS)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM FUEL Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_FUEL)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM APU Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_APU)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM FCTL Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_FCTL)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM DOOR Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_DOOR)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM WHEEL Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_ECAM_WHEEL)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM CLR Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_EWD_CLR)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM EWD STS Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_EWD_STS)"
+	},
+	"IniBuilds.A310.ECAM.Input.A310 ECAM EWD RCL Press": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_EWD_RCL)"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM ENG Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 1 == \n(L:ECAM_CURRENT_STATUS) 0 != and "
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM HYD Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 2 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM AC Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 3 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM DC Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 4 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM BLEED Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 5 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM COND Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 6 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM PRESS Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 7 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM FUEL Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 8 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM APU Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 9 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM FCTL Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 10 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM DOOR Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 11 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM WHEEL Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ecam_active_page, number) 12 == \n(L:ECAM_CURRENT_STATUS) 0 != and"
+	},
+	"IniBuilds.A310.ECAM.Output.A310 ECAM CLR Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_ECAM_CLR_LIGHT, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Mode Switch ABOVE": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_tcas_mode)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Mode Switch N": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_tcas_mode)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Mode Switch BELOW": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_tcas_mode)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Range Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_tcas_range) ! (>L:A310_tcas_range)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS ALT Switch 1": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_tcas_alt_system) "
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS ALT Switch OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_tcas_alt_system) "
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS ALT Switch 2": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_tcas_alt_system) "
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Mode Selector STBY": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_tcas_mode_pedestal)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Mode Selector XPDR": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_tcas_mode_pedestal) "
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Mode Selector TARA": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_tcas_mode_pedestal) "
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Mode Selector TA": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_tcas_mode_pedestal) "
+	},
+	"IniBuilds.A310.Navigation.Input.A310 TCAS Test Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_TCAS_TEST_ACTIVE) ! (>L:A310_TCAS_TEST_ACTIVE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 ATC Ident Toggle": {
+		"method": "calcCode",
+		"code": "(>K:XPNDR_IDENT_TOGGLE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 ATC Select Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_tcas_xpdr) ! (>L:A310_tcas_xpdr)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 ATC XPDR Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRANSPONDER_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 ATC XPDR Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRANSPONDER_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 ATC XPDR Outer Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRANSPONDER_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 ATC XPDR Outer Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRANSPONDER_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 ATC XPDR Code Display": {
+		"method": "calcCode",
+		"code": "(A:TRANSPONDER CODE:1, enum)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Rudder Trim Reset Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RESET_RUDDER_TRIM_COMMAND)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Rudder Trim Reset Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_RESET_RUDDER_TRIM_COMMAND)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Rudder Trim Knob Left": {
+		"method": "calcCode",
+		"code": "(>K:RUDDER_TRIM_LEFT)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Rudder Trim Knob Right": {
+		"method": "calcCode",
+		"code": "(>K:RUDDER_TRIM_RIGHT)"
+	},
+	"IniBuilds.A310.Controls.Output.A310 Total Rudder Trim": {
+		"method": "calcCode",
+		"code": "(L:A310_TOTAL_RUDDER_TRIM)"
+	},
+	"IniBuilds.A310.Controls.Output.A310 Rudder Trim Display 1": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRIM_DISPLAY1)"
+	},
+	"IniBuilds.A310.Controls.Output.A310 Rudder Trim Display 2": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRIM_DISPLAY2)"
+	},
+	"IniBuilds.A310.Controls.Output.A310 Rudder Trim Display 3": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRIM_DISPLAY3)"
+	},
+	"IniBuilds.A310.Autopilot.Output.A310 AP PROFILE Button Light": {
+		"method": "calcCode",
+		"code": "(L:A310_MCU_PROFILE_LIGHT)"
+	},
+	"Working Title.G1000 NXi.Autopilot.Input.AS1000_PFD_FLC_Push": {
+		"method": "calcCode",
+		"code": "(>K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Master Warning Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MASTER_WARNING_ACTIVE)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Master Caution Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_MASTER_CAUTION_ACTIVE)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 GPWS Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_GPWS_PUSH)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 GPWS Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_GPWS_PUSH)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Altimeter Bug Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_CPT_ALTIMETER_BUG, Number) 10 + 1000 % (>L:A310_CPT_ALTIMETER_BUG, Number)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Altimeter Bug Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_CPT_ALTIMETER_BUG, Number) 990 + 1000 % (>L:A310_CPT_ALTIMETER_BUG, Number)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Altimeter Knob STD Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_ALTIMETER_STD_COMMAND)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Altimeter Baro Inc": {
+		"method": "calcCode",
+		"code": "1 (>K:KOHLSMAN_INC) 0 (>L:XMLVAR_Baro1_Mode)\n(L:A310_INSTRUMENTS_LINKED, Bool) if{\n   (A:KOHLSMAN SETTING MB:1, millibar) 16 * (>K:2:KOHLSMAN_SET)\n   (A:KOHLSMAN SETTING MB:1, millibar) 16 * (>K:3:KOHLSMAN_SET)\n   0 (>L:XMLVAR_Baro2_Mode) 0 (>L:XMLVAR_Baro3_Mode) }"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Altimeter Baro Dec": {
+		"method": "calcCode",
+		"code": "1 (>K:KOHLSMAN_DEC) 0 (>L:XMLVAR_Baro1_Mode)\n(L:A310_INSTRUMENTS_LINKED, Bool) if{\n   (A:KOHLSMAN SETTING MB:1, millibar) 16 * (>K:2:KOHLSMAN_SET)\n   (A:KOHLSMAN SETTING MB:1, millibar) 16 * (>K:3:KOHLSMAN_SET) \n   0 (>L:XMLVAR_Baro2_Mode) 0 (>L:XMLVAR_Baro3_Mode) }"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Clock Mode FAST": {
+		"method": "calcCode",
+		"code": "0 (>L:A300DR_CHRONO_GMT_STATUS)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Clock Mode SLOW": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CHRONO_GMT_STATUS)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Clock Mode HLD": {
+		"method": "calcCode",
+		"code": "2 (>L:A300DR_CHRONO_GMT_STATUS)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Clock Mode RUN": {
+		"method": "calcCode",
+		"code": "3 (>L:A300DR_CHRONO_GMT_STATUS)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt Clock Mode STOP": {
+		"method": "calcCode",
+		"code": "4 (>L:A300DR_CHRONO_GMT_STATUS)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt ET/CHRO Start Stop Reset Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CHRONO_START_BUTTON)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Cpt ET/CHRO Run Stop Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ET_TOGGLE_BUTTON)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Stby Altimeter Baro Inc": {
+		"method": "calcCode",
+		"code": "3 (>K:KOHLSMAN_INC) \n(L:A310_INSTRUMENTS_LINKED, Bool) if{\n   (A:KOHLSMAN SETTING MB:3, millibar) 16 * (>K:2:KOHLSMAN_SET)\n   (A:KOHLSMAN SETTING MB:3, millibar) 16 * (>K:1:KOHLSMAN_SET)\n   0 (>L:XMLVAR_Baro1_Mode)  0 (>L:XMLVAR_Baro2_Mode) }"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 Stby Altimeter Baro Dec": {
+		"method": "calcCode",
+		"code": "3 (>K:KOHLSMAN_DEC) \n(L:A310_INSTRUMENTS_LINKED, Bool) if{\n   (A:KOHLSMAN SETTING MB:3, millibar) 16 * (>K:2:KOHLSMAN_SET)\n   (A:KOHLSMAN SETTING MB:3, millibar) 16 * (>K:1:KOHLSMAN_SET)\n   0 (>L:XMLVAR_Baro1_Mode)  0 (>L:XMLVAR_Baro2_Mode) }"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Altimeter Baro Inc": {
+		"method": "calcCode",
+		"code": "2 (>K:KOHLSMAN_INC) 0 (>L:XMLVAR_Baro2_Mode) \n(L:A310_INSTRUMENTS_LINKED, Bool) if{\n   (A:KOHLSMAN SETTING MB:2, millibar) 16 * (>K:1:KOHLSMAN_SET)\n   (A:KOHLSMAN SETTING MB:2, millibar) 16 * (>K:3:KOHLSMAN_SET)\n   0 (>L:XMLVAR_Baro1_Mode)  0 (>L:XMLVAR_Baro3_Mode) }"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Altimeter Baro Dec": {
+		"method": "calcCode",
+		"code": "2 (>K:KOHLSMAN_DEC) 0 (>L:XMLVAR_Baro2_Mode) \n(L:A310_INSTRUMENTS_LINKED, Bool) if{\n   (A:KOHLSMAN SETTING MB:2, millibar) 16 * (>K:1:KOHLSMAN_SET)\n   (A:KOHLSMAN SETTING MB:2, millibar) 16 * (>K:3:KOHLSMAN_SET)\n   0 (>L:XMLVAR_Baro1_Mode)  0 (>L:XMLVAR_Baro3_Mode) }"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Altimeter Knob STD Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_ALTIMETER_STD_COMMAND) "
+	},
+	"IniBuilds.A310.Gear.Input.A310 Antiskid Switch Norm On": {
+		"method": "calcCode",
+		"code": "0 (>L:A300DR_brake_system)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Antiskid Switch Altn On": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_brake_system)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Antiskid Switch Altn Off": {
+		"method": "calcCode",
+		"code": "2 (>L:A300DR_brake_system)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Autobrake Max Button Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ABRK_HI_COMMAND)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Autobrake Med Button Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ABRK_MED_COMMAND)"
+	},
+	"IniBuilds.A310.Gear.Input.A310 Autobrake Low Button Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ABRK_LOW_COMMAND)"
+	},
+	"IniBuilds.A310.Gear.Output.A310 Autobrake Max Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_AUTOBRAKE_HI_DECEL, Bool)"
+	},
+	"IniBuilds.A310.Gear.Output.A310 Autobrake Med Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_AUTOBRAKE_MED_DECEL, Bool)"
+	},
+	"IniBuilds.A310.Gear.Output.A310 Autobrake Low Button Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_AUTOBRAKE_LOW_DECEL, Bool)"
+	},
+	"Fly By Wire.A320.Miscellaneous.Output.A32NX_SQUAWK_CODE": {
+		"method": "calcCode",
+		"code": "(A:TRANSPONDER CODE:1, Number)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Mute Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonAudioMute,bool)\n		  (L:audioMute,bool) ! (>L:audioMute,bool)\n		  (L:buttonSound,enum) ++ (>L:buttonSound,enum)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Tel Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonAudioTel,bool)\n		  (L:audioTelephoneMode,bool) ! (>L:audioTelephoneMode,bool)\n		  (L:buttonSound,enum) ++ (>L:buttonSound,enum)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Ics Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonAudioIcs,bool)\n		  (>K:TOGGLE_ICS)\n		  (L:buttonSound,enum) ++ (>L:buttonSound,enum)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Clock Oatvolt Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonChronoOatVolt,bool)\n		  (L:ChronoOatVolt,bool) ! (>L:ChronoOatVolt,bool)\n		  (L:buttonSound,enum) ++ (>L:buttonSound,enum)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Mode Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonChronoMode,bool)\n		  (L:ChronoMode,bool) ! (>L:ChronoMode,bool)\n		  (L:buttonSound,enum) ++ (>L:buttonSound,enum)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Control Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonChronoControl,bool)\n		  (L:Running chrono,bool) ! (>L:Running chrono,bool)\n		  (L:buttonSound,enum) ++ (>L:buttonSound,enum)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Reset Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonChronoReset,bool)\n		  (L:buttonSound,enum) ++ (>L:buttonSound,enum)"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Button Horn Mute Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonHornMute,bool)\n		  (A:CIRCUIT ON:1,bool) if{ 1 (>L:hornMuted,bool) }\n		  (L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Insrt Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonInstrTest,bool)\n		  (L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Lcd Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonLcdTest,bool)\n		  (L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Button Horn Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonHornTest,bool)\n		  (L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Overspeed Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonOvrspdTest,bool)\n		  (A:CIRCUIT ON:1,bool) if{ 1 (>L:testOvrspd,bool) }\n		  (L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Ann Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonAnnTest,bool)\n		  (L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Button Fuel Qty Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonFuelQty,bool)\n			(A:CIRCUIT ON:1,bool) if{ 1 (>L:fuelQtyMode,bool) }\n			(L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Button Fadec Mode Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonFadecMode,bool)\n			(A:CIRCUIT ON:1,bool) if{ (L:fadecMode,bool) ! (>L:fadecMode,bool) }\n			(L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Switch Starter Collective Press": {
+		"method": "calcCode",
+		"code": "(L:collGripState,enum) 1 == (A:ENG N1 RPM:1,percent) 50 < and if{ 1 (>K:STARTER1_SET) }\n		  1 (>L:switchStarter,bool)"
+	},
+	"Microsoft.Bell 407.Safety.Bell 407 Button Eng Fire Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonFireTest,bool)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Float Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonFloatTest,bool)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Button Xpndr Vfr Press": {
+		"method": "calcCode",
+		"code": "1 (>L:buttonXpndrVfr,bool)\n		  (L:buttonXpndrVfrPressed,bool) ! (A:CIRCUIT ON:1,bool) and if{ 1 (>L:xpndrVfr,bool) }\n		  1 (>L:buttonXpndrVfrPressed,bool)\n		  (L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Lever Rotor Brake Press": {
+		"method": "calcCode",
+		"code": "16383 (>K:AXIS_ROTOR_BRAKE_SET)\n		  (L:leverSound,enum) ++ (>L:leverSound,enum)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Mute Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonAudioMute,bool)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Tel Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonAudioTel,bool)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Ics Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonAudioIcs,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Clock Oatvolt Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonChronoOatVolt,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Mode Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonChronoMode,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Control Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonChronoControl,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Reset Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonChronoReset,bool)"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Button Horn Mute Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonHornMute,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Insrt Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonInstrTest,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Lcd Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonLcdTest,bool)"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Button Horn Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonHornTest,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Overspeed Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:testOvrspd,bool)\n		  0 (>L:buttonOvrspdTest,bool)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Ann Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonAnnTest,bool)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Button Fuel Qty Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonFuelQty,bool)\n			0 (>L:fuelQtyMode,bool)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Button Fadec Mode Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonFadecMode,bool)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Switch Starter Collective Release": {
+		"method": "calcCode",
+		"code": "0 (>L:switchStarter,bool)"
+	},
+	"Microsoft.Bell 407.Safety.Bell 407 Button Eng Fire Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonFireTest,bool)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Float Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonFloatTest,bool)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Button Xpndr Vfr Release": {
+		"method": "calcCode",
+		"code": "0 (>L:buttonXpndrVfr,bool)\n		  0 (>L:buttonXpndrVfrPressed,bool)\n		  0 (>L:xpndrVfr,bool)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Lever Rotor Brake Release": {
+		"method": "calcCode",
+		"code": "0 (>K:AXIS_ROTOR_BRAKE_SET)\n		  (L:leverSound,enum) ++ (>L:leverSound,enum)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuel Valve Cover Toggle": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM VALVE SWITCH:1,bool) if{ (L:switchFuelValveCover,bool) ! (>L:switchFuelValveCover,bool) }\n			(L:switchCoverSound,number) ++ (>L:switchCoverSound,number)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuel Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchFuelValveCover,bool) if{ 1 (>K:FUELSYSTEM_VALVE_TOGGLE) }\n		  (L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Safety.Bell 407 Switch Elt Toggle": {
+		"method": "calcCode",
+		"code": "(>K:ELT_TOGGLE)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Switch Primary Compass Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchPrimaryCompassMode,bool) ! (>L:switchPrimaryCompassMode,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Switch Battery Toggle": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_MASTER_BATTERY)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Pulse Toggle": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_RECOGNITION_LIGHTS)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Strobe Light Toggle": {
+		"method": "calcCode",
+		"code": "(>K:STROBES_TOGGLE)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Beacon Light Toggle": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_BEACON_LIGHTS)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Switch Autotrim Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchAutotrim,bool) ! (>L:switchAutotrim,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Hydraulic.Bell 407 Switch Hydraulic Toggle": {
+		"method": "calcCode",
+		"code": "1 (>K:HYDRAULIC_SWITCH_TOGGLE)\n			(L:HydSwitchTest,bool) ! (>L:HydSwitchTest,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Switch Particle Sep Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchParicleSep,bool) ! (>L:switchParicleSep,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Switch Eng Deice Toggle": {
+		"method": "calcCode",
+		"code": "(>K:ANTI_ICE_TOGGLE,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Switch Pitot Heat Toggle": {
+		"method": "calcCode",
+		"code": "(>K:PITOT_HEAT_TOGGLE)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Switch Defog Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchDefog,bool) ! (>L:switchDefog,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Pos Light Toggle": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_NAV_LIGHTS)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Switch Light Caut Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchCautLtsMode,bool) ! (>L:switchCautLtsMode,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Heater Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchHeater,bool) ! (>L:switchHeater,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Aircond Aft Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchAircondAft,bool) ! (>L:switchAircondAft,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Aircond Fwd Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchAircondFwd,bool) ! (>L:switchAircondFwd,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Switch Force Trim Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchForceTrim,bool) ! (>L:switchForceTrim,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Switch Turncoord Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchturnCoord,bool) ! (>L:switchturnCoord,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Switch Att Gyro Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchAttGyro,bool) ! (>L:switchAttGyro,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Radio.Bell 407 Switch Broadcast Master Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchBroadcastMaster,bool) ! (>L:switchBroadcastMaster,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Avionics.Bell 407 Switch Avionics Master Toggle": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_AVIONICS_MASTER)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuelboost Right Toggle": {
+		"method": "calcCode",
+		"code": "2 (>K:FUELSYSTEM_PUMP_TOGGLE)\n			4 (>K:FUELSYSTEM_PUMP_TOGGLE)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuelboost Left Toggle": {
+		"method": "calcCode",
+		"code": "1 (>K:FUELSYSTEM_PUMP_TOGGLE)\n			3 (>K:FUELSYSTEM_PUMP_TOGGLE)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Radio.Bell 407 Switch Radio Alt Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchRadAlt,bool) ! (>L:switchRadAlt,bool)\n		  (L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Avionics.Bell 407 Switch Fdr Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchAuxSys,bool) ! (>L:switchAuxSys,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Mute Toggle": {
+		"method": "calcCode",
+		"code": "(A:MARKER BEACON TEST MUTE, Bool) ! (>K:MARKER_BEACON_TEST_MUTE)\n			(L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Com2 Xmit Toggle": {
+		"method": "calcCode",
+		"code": "(>K:COM2_TRANSMIT_SELECT)\n			(L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Com1 Xmit Toggle": {
+		"method": "calcCode",
+		"code": "(>K:COM1_TRANSMIT_SELECT)\n			(L:buttonSound,number) ++ (>L:buttonSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Logo Toggle": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_LOGO_LIGHTS)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Switch Cargo Release Toggle": {
+		"method": "calcCode",
+		"code": "(L:switchCargoRelease,bool) ! (>L:switchCargoRelease,bool)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Light.Bell 407 Switch Light Taxi Toggle": {
+		"method": "calcCode",
+		"code": "(>K:LANDING_LIGHTS_TOGGLE)\n			(L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Knob Att Cage Toggle": {
+		"method": "calcCode",
+		"code": "(L:knobAttCage,bool) ! (>L:knobAttCage,bool)\n		  (>K:ATTITUDE_CAGE_BUTTON)\n		  (L:knobAttCageSound,enum) ++ (>L:knobAttCageSound,enum)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Knob Ac Temp Inc": {
+		"method": "calcCode",
+		"code": "(L:knobAcTemp,celsius) 100 < if{ (L:knobAcTemp,celsius) 2 + (>L:knobAcTemp,celsius) }"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Vent Knob Copilot Inc": {
+		"method": "calcCode",
+		"code": "(L:ventKnobCopilot,number) 100 < if{ (L:ventKnobCopilot,number) 4 + (>L:ventKnobCopilot,number) }\n		  (L:pullKnobSound,enum) ++ (>L:pullKnobSound,enum)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Vent Knob Pilot Inc": {
+		"method": "calcCode",
+		"code": "(L:ventKnobPilot,number) 100 < if{ (L:ventKnobPilot,number) 4 + (>L:ventKnobPilot,number) }\n		  (L:pullKnobSound,enum) ++ (>L:pullKnobSound,enum)"
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Switch Generator Inc": {
+		"method": "calcCode",
+		"code": "(L:switchGenerator,enum) 0 > if{ (L:switchGenerator,enum) -- (>L:switchGenerator,enum) )\n		  (L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Cabin Pass Inc": {
+		"method": "calcCode",
+		"code": "(L:switchLtsCabinPass,enum) 0 > if{ (L:switchLtsCabinPass,enum) -- (>L:switchLtsCabinPass,enum) }"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Aircond Mode Inc": {
+		"method": "calcCode",
+		"code": "(L:switchAircondMode,enum) 0 > if{ (L:switchAircondMode,enum) -- (>L:switchAircondMode,enum) }\n		  (L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Knob Light Instr Inc": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:4,percent) 0 > if{ (A:LIGHT POTENTIOMETER:4,percent) -- (>K:LIGHT_POTENTIOMETER_4_SET) }"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Rotation Panel Light Inc": {
+		"method": "calcCode",
+		"code": "(L:panelLightTilt,number) 5 + 100 min (>L:panelLightTilt,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Panel Light Inc": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:5,percent) 5 + 100 min (>K:LIGHT_POTENTIOMETER_5_SET)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Landing Inc": {
+		"method": "calcCode",
+		"code": "(L:switchLandingLight,enum) 0 > if{ (L:switchLandingLight,enum) -- (>L:switchLandingLight,enum) }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Knob Friction Adjust Inc": {
+		"method": "calcCode",
+		"code": "(L:knobFriction,number) 0 > if{ (L:knobFriction,number) 2 - (>L:knobFriction,number) }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Knob Defrost Adjust Inc": {
+		"method": "calcCode",
+		"code": "(L:knobDefrost,number) 0 > if{ (L:knobDefrost,number) 2 - (>L:knobDefrost,number) }"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Window Vent Copilot Inc": {
+		"method": "calcCode",
+		"code": "(L:windowVentCopilot,number) 100 < if{ (L:windowVentCopilot,number) 4 + (>L:windowVentCopilot,number) }\n		  (L:windowVentSound,enum) ++ (>L:windowVentSound,enum)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Window Vent Pilot Inc": {
+		"method": "calcCode",
+		"code": "(L:windowVentPilot,number) 0 > if{ (L:windowVentPilot,number) 4 - (>L:windowVentPilot,number) }\n		  (L:windowVentSound,enum) ++ (>L:windowVentSound,enum)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Adf Gauge Inc": {
+		"method": "calcCode",
+		"code": "(L:adfObs,degrees) -- (>L:adfObs,degrees)\n			(L:adfObs,degrees) 1 < if{ 360 (>L:adfObs,degrees) }"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Knob Attitude Bars Inc": {
+		"method": "calcCode",
+		"code": "(>K:ATTITUDE_BARS_POSITION_DOWN)"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Knob Altimeter Feet Inc": {
+		"method": "calcCode",
+		"code": "(L:kohlsmanKnob,number) -- (>L:kohlsmanKnob,number)\n			(L:kohlsmanKnob,number) 0 < if{ 100 (>L:kohlsmanKnob,number) }\n			(>K:KOHLSMAN_DEC)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Vor Obs Inc": {
+		"method": "calcCode",
+		"code": "(>K:VOR2_OBI_DEC)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Hsi Obs Inc": {
+		"method": "calcCode",
+		"code": "(>K:VOR1_OBI_DEC)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Hsi Mrk Inc": {
+		"method": "calcCode",
+		"code": "(L:needleHsiMarker,number) -- (>L:needleHsiMarker,number)\n			(L:needleHsiMarker,number) 0 < if{ 360 (>L:needleHsiMarker,number) }"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Grip Copilot Inc": {
+		"method": "calcCode",
+		"code": "(L:CollectiveGrip,percent) 100 < if{ (L:CollectiveGrip,percent) ++ (>L:CollectiveGrip,percent) }\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Grip Pilot Inc": {
+		"method": "calcCode",
+		"code": "(L:CollectiveGrip,percent) 100 < if{ \n			15 80 (L:CollectiveGrip,percent) rng if{ (L:CollectiveGrip,percent) 4 + (>L:CollectiveGrip,percent) }\n			els{ (L:CollectiveGrip,percent) ++ (>L:CollectiveGrip,percent) }\n		  }\n		  (L:CollectiveGrip,percent) 163.83 * (>K:PROP_PITCH_SET)\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Arm Copilot Inc": {
+		"method": "calcCode",
+		"code": "(>K:THROTTLE_INCR)\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Arm Pilot Inc": {
+		"method": "calcCode",
+		"code": "(>K:THROTTLE_INCR)\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Knob Ac Temp Dec": {
+		"method": "calcCode",
+		"code": "(L:knobAcTemp,celsius) 0 > if{ (L:knobAcTemp,celsius) 2 - (>L:knobAcTemp,celsius) }"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Vent Knob Copilot Dec": {
+		"method": "calcCode",
+		"code": "(L:ventKnobCopilot,number) 0 > if{ (L:ventKnobCopilot,number) 4 - (>L:ventKnobCopilot,number) }\n		  (L:pullKnobSound,enum) ++ (>L:pullKnobSound,enum)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Vent Knob Pilot Dec": {
+		"method": "calcCode",
+		"code": "(L:ventKnobPilot,number) 0 > if{ (L:ventKnobPilot,number) 4 - (>L:ventKnobPilot,number) }\n		  (L:pullKnobSound,enum) ++ (>L:pullKnobSound,enum)"
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Switch Generator Dec": {
+		"method": "calcCode",
+		"code": "(L:switchGenerator,enum) 2 < if{ (L:switchGenerator,enum) ++ (>L:switchGenerator,enum) }\n		  (L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Cabin Pass Dec": {
+		"method": "calcCode",
+		"code": "(L:switchLtsCabinPass,enum) 2 < if{ (L:switchLtsCabinPass,enum) ++ (>L:switchLtsCabinPass,enum) }"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Aircond Mode Dec": {
+		"method": "calcCode",
+		"code": "(L:switchAircondMode,enum) 2 < if{ (L:switchAircondMode,enum) ++ (>L:switchAircondMode,enum) )\n		  (L:switchSound,number) ++ (>L:switchSound,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Knob Light Instr Dec": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:4,percent) 100 < if{ (A:LIGHT POTENTIOMETER:4,percent) ++ (>K:LIGHT_POTENTIOMETER_4_SET) }"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Rotation Panel Light Dec": {
+		"method": "calcCode",
+		"code": "(L:panelLightTilt,number) 5 - 0 max (>L:panelLightTilt,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Panel Light Dec": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:5,percent) 5 - 0 max (>K:LIGHT_POTENTIOMETER_5_SET)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Landing Dec": {
+		"method": "calcCode",
+		"code": "(L:switchLandingLight,enum) 2 < if{ (L:switchLandingLight,enum) ++ (>L:switchLandingLight,enum) }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Knob Friction Adjust Dec": {
+		"method": "calcCode",
+		"code": "(L:knobFriction,number) 100 < if{ (L:knobFriction,number) 2 + (>L:knobFriction,number) }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Knob Defrost Adjust Dec": {
+		"method": "calcCode",
+		"code": "(L:knobDefrost,number) 100 < if{ (L:knobDefrost,number) 2 + (>L:knobDefrost,number) }"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Window Vent Copilot Dec": {
+		"method": "calcCode",
+		"code": "(L:windowVentCopilot,number) 0 > if{ (L:windowVentCopilot,number) 4 - (>L:windowVentCopilot,number) }\n		  (L:windowVentSound,enum) ++ (>L:windowVentSound,enum)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Window Vent Pilot Dec": {
+		"method": "calcCode",
+		"code": "(L:windowVentPilot,number) 100 < if{ (L:windowVentPilot,number) 4 + (>L:windowVentPilot,number) }\n		  (L:windowVentSound,enum) ++ (>L:windowVentSound,enum)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Adf Gauge Dec": {
+		"method": "calcCode",
+		"code": "(L:adfObs,degrees) ++ (>L:adfObs,degrees)\n			(L:adfObs,degrees) 360 > if{ 1 (>L:adfObs,degrees) }"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Knob Attitude Bars Dec": {
+		"method": "calcCode",
+		"code": "(>K:ATTITUDE_BARS_POSITION_UP)"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Knob Altimeter Feet Dec": {
+		"method": "calcCode",
+		"code": "(L:kohlsmanKnob,number) ++ (>L:kohlsmanKnob,number)\n			(L:kohlsmanKnob,number) 100 > if{ 0 (>L:kohlsmanKnob,number) }\n			(>K:KOHLSMAN_INC)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Vor Obs Dec": {
+		"method": "calcCode",
+		"code": "(>K:VOR2_OBI_INC)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Hsi Obs Dec": {
+		"method": "calcCode",
+		"code": "(>K:VOR1_OBI_INC)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob Hsi Mrk Dec": {
+		"method": "calcCode",
+		"code": "(L:needleHsiMarker,number) ++ (>L:needleHsiMarker,number)\n			(L:needleHsiMarker,number) 360 > if{ 0 (>L:needleHsiMarker,number) }"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Grip Copilot Dec": {
+		"method": "calcCode",
+		"code": "(L:CollectiveGrip,percent) 0 > if{ (L:CollectiveGrip,percent) -- (>L:CollectiveGrip,percent) }\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Grip Pilot Dec": {
+		"method": "calcCode",
+		"code": "(L:CollectiveGrip,percent) 0 > if{\n			15 80 (L:CollectiveGrip,percent) rng if{ (L:CollectiveGrip,percent) 4 - (>L:CollectiveGrip,percent) }\n			els{ (L:CollectiveGrip,percent) -- (>L:CollectiveGrip,percent) }\n		  }\n		  (L:CollectiveGrip,percent) 163.83 * (>K:PROP_PITCH_SET)\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Arm Copilot Dec": {
+		"method": "calcCode",
+		"code": "(>K:THROTTLE_DECR)\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Arm Pilot Dec": {
+		"method": "calcCode",
+		"code": "(>K:THROTTLE_DECR)\n		  (L:collectiveSound,enum) ++ (>L:collectiveSound,enum)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Mute Lvar": {
+		"method": "calcCode",
+		"code": "(L:buttonAudioMute,bool)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Tel": {
+		"method": "calcCode",
+		"code": "(L:buttonAudioTel,bool)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio Ics": {
+		"method": "calcCode",
+		"code": "(L:buttonAudioIcs,bool)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Knob Actemp": {
+		"method": "calcCode",
+		"code": "(L:knobAcTemp,celsius)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Vent Knob Copilot": {
+		"method": "calcCode",
+		"code": "(L:ventKnobCopilot,number)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Vent Knob Pilot": {
+		"method": "calcCode",
+		"code": "(L:ventKnobPilot,number)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuel Valve Cover": {
+		"method": "calcCode",
+		"code": "(L:switchFuelValveCover,bool)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuel Valve": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM VALVE SWITCH:1,bool)"
+	},
+	"Microsoft.Bell 407.Safety.Bell 407 Switch Elt": {
+		"method": "calcCode",
+		"code": "(A:ELT ACTIVATED,bool)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Switch Primary Compass adjust": {
+		"method": "calcCode",
+		"code": "(L:switchPrimaryCompassAdjust,enum)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Switch Primary Compass Mode": {
+		"method": "calcCode",
+		"code": "(L:switchPrimaryCompassMode,bool)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Compass Needle Ccw": {
+		"method": "calcCode",
+		"code": "(L:compassAdjustValue,degree)"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono oatVolt": {
+		"method": "calcCode",
+		"code": "(L:buttonChronoOatVolt,bool) "
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Mode": {
+		"method": "calcCode",
+		"code": "(L:buttonChronoMode,bool) "
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Contr": {
+		"method": "calcCode",
+		"code": "(L:buttonChronoControl,bool) "
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Button Chrono Reset": {
+		"method": "calcCode",
+		"code": "(L:buttonChronoReset,bool) "
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Arm Pilot": {
+		"method": "calcCode",
+		"code": "(A:COLLECTIVE POSITION,percent)"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Button Horn Mute": {
+		"method": "calcCode",
+		"code": "(L:buttonHornMute,bool) "
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Arm Copilot": {
+		"method": "calcCode",
+		"code": "(A:COLLECTIVE POSITION,percent)"
+	},
+	"Microsoft.Bell 407.Avionics.Bell 407 Button Instr Test": {
+		"method": "calcCode",
+		"code": "(L:buttonInstrTest,bool) "
+	},
+	"Microsoft.Bell 407.Avionics.Bell 407 Button Lcd Test": {
+		"method": "calcCode",
+		"code": "(L:buttonLcdTest,bool) "
+	},
+	"Microsoft.Bell 407.Avionics.Bell 407 Collective Grip Pilot": {
+		"method": "calcCode",
+		"code": "(L:CollectiveGrip,percent)"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Button Horn Test": {
+		"method": "calcCode",
+		"code": "(L:buttonHornTest,bool) "
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Collective Grip Copilot": {
+		"method": "calcCode",
+		"code": "(L:CollectiveGrip,percent)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Button Overspeed Test": {
+		"method": "calcCode",
+		"code": "(L:buttonOvrspdTest,bool) "
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Lever RotorBrkae": {
+		"method": "calcCode",
+		"code": "(A:ROTOR BRAKE HANDLE POS, percent)"
+	},
+	"Microsoft.Bell 407.Avionics.Bell 407 Button Annunciator Test": {
+		"method": "calcCode",
+		"code": "(L:buttonAnnTest,bool) "
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Button Fuel Qty": {
+		"method": "calcCode",
+		"code": "(L:buttonFuelQty,bool) "
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Button Fadec Mode": {
+		"method": "calcCode",
+		"code": "(L:buttonFadecMode,bool) "
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Switch Battery": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL MASTER BATTERY:1,bool)"
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Switch Generator": {
+		"method": "calcCode",
+		"code": "(L:switchGenerator,enum) "
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Pulse": {
+		"method": "calcCode",
+		"code": "(A:LIGHT RECOGNITION,bool)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Strobe": {
+		"method": "calcCode",
+		"code": "(A:LIGHT STROBE,bool)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Beacon": {
+		"method": "calcCode",
+		"code": "(A:LIGHT BEACON,bool)"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Switch Autotrim": {
+		"method": "calcCode",
+		"code": "(L:switchAutotrim,bool)"
+	},
+	"Microsoft.Bell 407.Hydraulic.Bell 407 Switch Hydraulic": {
+		"method": "calcCode",
+		"code": "(A:HYDRAULIC SWITCH:1,bool)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Switch Particle Sep": {
+		"method": "calcCode",
+		"code": "(L:switchParicleSep,bool)"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Switch Eng Deice": {
+		"method": "calcCode",
+		"code": "(A:ENG ANTI ICE:1,bool)"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Switch PitotHeat": {
+		"method": "calcCode",
+		"code": "(A:PITOT HEAT,bool)"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Switch Defog": {
+		"method": "calcCode",
+		"code": "(L:switchDefog,bool)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Position": {
+		"method": "calcCode",
+		"code": "(A:LIGHT NAV,bool)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Cabin Pass": {
+		"method": "calcCode",
+		"code": "(L:switchLtsCabinPass,enum) "
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Switch Light Caut Mode": {
+		"method": "calcCode",
+		"code": "(L:switchCautLtsMode,bool) "
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Heater": {
+		"method": "calcCode",
+		"code": "(L:switchHeater,bool)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Aircond Aft": {
+		"method": "calcCode",
+		"code": "(L:switchAircondAft,bool)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Aircond Fwd": {
+		"method": "calcCode",
+		"code": "(L:switchAircondFwd,bool)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Switch Aircond Mode": {
+		"method": "calcCode",
+		"code": "(L:switchAircondMode,enum) "
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Switch ForceTrim": {
+		"method": "calcCode",
+		"code": "(L:switchForceTrim,bool)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Knob Light Instr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:4,percent)"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Switch TurnCoord": {
+		"method": "calcCode",
+		"code": "(L:switchturnCoord,bool)"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Switch AttGyro": {
+		"method": "calcCode",
+		"code": "(L:switchAttGyro,bool)"
+	},
+	"Microsoft.Bell 407.Radio.Bell 407 Switch Broadcast Master": {
+		"method": "calcCode",
+		"code": "(L:switchBroadcastMaster,bool)"
+	},
+	"Microsoft.Bell 407.Avionics.Bell 407 Switch Avionocs Master": {
+		"method": "calcCode",
+		"code": "(A:AVIONICS MASTER SWITCH:1,bool)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuelboost Right": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM PUMP SWITCH:2,bool)"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Switch Fuelboost Left": {
+		"method": "calcCode",
+		"code": "(A:FUELSYSTEM PUMP SWITCH:1,bool)"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Switch RadioAlt": {
+		"method": "calcCode",
+		"code": "(L:switchRadAlt,bool)"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Switch AuxSys": {
+		"method": "calcCode",
+		"code": "(L:switchAuxSys,bool)"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio mute": {
+		"method": "calcCode",
+		"code": "(A:MARKER BEACON TEST MUTE, Bool) "
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio com2 xmit": {
+		"method": "calcCode",
+		"code": "(A:COM TRANSMIT:2,bool) "
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Button Audio com1 xmit": {
+		"method": "calcCode",
+		"code": "(A:COM TRANSMIT:1,bool) "
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Logo": {
+		"method": "calcCode",
+		"code": "(A:LIGHT LOGO,bool)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Rotation Light Panel": {
+		"method": "calcCode",
+		"code": "(L:panelLightTilt,number)"
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Panel": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:5,percent) "
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Switch Cargo Release": {
+		"method": "calcCode",
+		"code": "(L:switchCargoRelease,bool) "
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Switch Starter": {
+		"method": "calcCode",
+		"code": "(L:switchStarter,bool) "
+	},
+	"Microsoft.Bell 407.Safety.Bell 407 Button FireTest": {
+		"method": "calcCode",
+		"code": "(L:buttonFireTest,bool) "
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Switch Float": {
+		"method": "calcCode",
+		"code": "(L:buttonFloatTest,bool) "
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Taxi": {
+		"method": "calcCode",
+		"code": "(A:LIGHT LANDING,bool) "
+	},
+	"Microsoft.Bell 407.Lights.Bell 407 Switch Light Landing": {
+		"method": "calcCode",
+		"code": "(L:switchLandingLight,enum) "
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Knob CollFriction Adjust": {
+		"method": "calcCode",
+		"code": "(L:knobFriction,number)"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Knob Defrost Adjust": {
+		"method": "calcCode",
+		"code": "(L:knobDefrost,number)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Window Vent Copilot": {
+		"method": "calcCode",
+		"code": "(L:windowVentCopilot, number)"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Window Vent Pilot": {
+		"method": "calcCode",
+		"code": "(L:windowVentPilot, number)"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Button Xpndr Vfr": {
+		"method": "calcCode",
+		"code": "(L:buttonXpndrVfr,bool) "
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Knob ADFgauge": {
+		"method": "calcCode",
+		"code": "(L:adfObs,degrees)"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Knob AttitudeCage": {
+		"method": "calcCode",
+		"code": "(L:knobAttCage,bool) "
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Button Fadec Visibility": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:fadecMode,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Flag Vor Stripes": {
+		"method": "calcCode",
+		"code": "(A:NAV TOFROM:2,enum) 0 =="
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Flag Vor From": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:NAV TOFROM:2,enum) 2 == }"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Flag Vor To": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:NAV TOFROM:2,enum) 1 == }"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Flag Hsi Stripes": {
+		"method": "calcCode",
+		"code": "(A:NAV TOFROM:1,enum) 0 =="
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Flag Hsi From": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:NAV TOFROM:1,enum) 2 == }"
+	},
+	"Microsoft.Bell 407.Navigation.Bell 407 Flag Hsi To": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:NAV TOFROM:1,enum) 1 == }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Rpm": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ 95 107 (A:ROTOR RPM PCT:1, percent) rng ! (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Ann Cyclic Centering": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{\n			  (A:SIM ON GROUND,bool) if{\n				-1 1 (A:YOKE X POSITION, percent) rng ! \n				-1 1 (A:YOKE Y POSITION, percent) rng ! or\n			  }\n			  (L:buttonAnnTest,bool) or \n			}"
+	},
+	"Microsoft.Bell 407.Hydraulic.Bell 407 Ann Hydraulic System": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:HYDRAULIC PRESSURE:1,psi) 700 < (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Ann Check Instr": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			  (A:ENG TORQUE PERCENT:1, percent) 95 >\n			  (A:TURB ENG ITT:1, celsius) 710 > or\n			  (A:ENG N1 RPM:1, percent) 105 > or\n			  (L:buttonAnnTest,bool) or \n			}"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Ann Tr Chip": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annTrChip,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Fadec Auto": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:fadecMode,bool) ! (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Fadec Manual": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:fadecMode,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Ann Fuel Low": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:FUEL TOTAL QUANTITY WEIGHT, lbs) 100 < (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Ann Fuel Valve": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:FUELSYSTEM VALVE SWITCH:1,bool) ! (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Ann Fuel Filter": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annLeftFuelFilter,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Air Condition / Pressurization.Bell 407 Ann Heater Overtemp": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annHeaterOvertemp,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Start": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			  (A:GENERAL ENG PCT MAX RPM:1, percent) 50 < if{ (A:GENERAL ENG STARTER ACTIVE:1,bool) } \n			  (L:buttonAnnTest,bool) or \n			}"
+	},
+	"Microsoft.Bell 407.Anti-Ice.Bell 407 Ann Engine Antiice": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG ANTI ICE:1,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Controls.Bell 407 Ann Pedal Stop": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:switchAuxSys,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Eng Ovrspd": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			  (A:GENERAL ENG PCT MAX RPM:1, percent) 102 >\n			  (L:initFlag,bool) if{ (A:ENG COMBUSTION:1,bool) ! } or\n			  (L:buttonOvrspdTest,bool) or\n			  (L:buttonAnnTest,bool) or\n			}"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Xmsn Oiltemp": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG OIL TEMPERATURE:1, celsius) 110 > (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Xmsn Oilpress": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG OIL PRESSURE:1, psi) (L:XmsnPressCorr,psi) / 30 < (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Ann Xmsn Chip": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annXmsnChip,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Fadec Degraded": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			(L:fadecMode,bool)\n			(L:initFlag,bool) if{ (A:ENG COMBUSTION:1,bool) ! } or\n			(L:buttonAnnTest,bool) or \n		  }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Restart Fault": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			  (L:fadecMode,bool)\n			  (L:initFlag,bool) if{ (A:ENG COMBUSTION:1,bool) ! } or\n			  (L:buttonAnnTest,bool) or \n			}"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Ann Right Fuel Xfer": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			(A:FUELSYSTEM TANK LEVEL:2,percent) 1 > if{ (A:FUELSYSTEM PUMP ACTIVE:4,bool) ! } \n			(L:buttonAnnTest,bool) or \n		  }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Ann Left Fuel Xfer": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			(A:FUELSYSTEM TANK LEVEL:2,percent) 1 > if{ (A:FUELSYSTEM PUMP ACTIVE:3,bool) ! }\n		  (L:buttonAnnTest,bool) or\n		  }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Ann Litter Door": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annLitterDoor,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Auto Relight": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			  (A:GENERAL ENG PCT MAX RPM:1, percent) 60 < if{ (A:GENERAL ENG STARTER ACTIVE:1,bool) } \n			  (L:buttonAnnTest,bool) or \n			}"
+	},
+	"Microsoft.Bell 407.Safety.Bell 407 Ann Engine Fire": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG ON FIRE:1, bool) (L:buttonFireTest,bool) or (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Safety.Bell 407 Ann Engine Out": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			  (L:initFlag,bool) if{ (A:ENG N1 RPM:1, percent) 55 < (A:ENG COMBUSTION:1,bool) ! or }\n			  (L:buttonAnnTest,bool) or\n			}"
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Ann Battery Hot": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annBatteryHot,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Ann Battery Relay": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annBatRelay,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Electrical.Bell 407 Ann Gen Fail": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG GENERATOR ACTIVE:1,bool) ! (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Engine Chip": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annEngineChip,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Fadec Fail": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			(L:fadecMode,bool)\n			(L:initFlag,bool) if{ (A:ENG COMBUSTION:1,bool) ! } or\n			(L:buttonAnnTest,bool) or\n		  }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Ann Fadec Fault": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ \n			  (L:fadecMode,bool)\n			  (L:initFlag,bool) if{ (A:ENG COMBUSTION:1,bool) ! } or\n			  (L:buttonAnnTest,bool) or\n			}"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Ann Right Boost": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:FUELSYSTEM PUMP ACTIVE:2,bool) ! (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Ann Left Boost": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:FUELSYSTEM PUMP ACTIVE:1,bool) ! (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Ann Baggage Door": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annBaggaeDoor,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 1": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 0 > } els{ 0 }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Ann Float Arm": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annFloatArm,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 2": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 5 > } els{ 0 }"
+	},
+	"Microsoft.Bell 407.Miscelaneous.Bell 407 Ann Float Test": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:annFloatTest,bool) (L:buttonAnnTest,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 3": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 10 > }"
+	},
+	"Microsoft.Bell 407.Warning.Bell 407 Led Elt": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ELT ACTIVATED,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 4": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 15 > }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Led Turn Rate": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) (L:switchturnCoord,bool) and if{ -45 45 (A:DELTA HEADING RATE, percent) rng ! }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 5": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 20 > }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Landingcone 2 Visibility": {
+		"method": "calcCode",
+		"code": "(A:LIGHT LANDING ON:1,bool)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 6": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 25 > }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Landingcone 1 Visibility": {
+		"method": "calcCode",
+		"code": "(A:LIGHT LANDING ON:1,bool)"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 7": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 30 > }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Taxicone 2 Visibility Alt": {
+		"method": "calcCode",
+		"code": "(L:switchLandingLight,enum) 2 =="
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 8": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 35 > }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Taxicone 2 Visibility": {
+		"method": "calcCode",
+		"code": "(L:switchLandingLight,enum) 2 =="
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 9": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 40 > }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Taxicone 1 Visibility Alt": {
+		"method": "calcCode",
+		"code": "(L:switchLandingLight,enum) 1 =="
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 10": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 42.5 > }"
+	},
+	"Microsoft.Bell 407.Flight Instrumentation.Bell 407 Taxicone 1 Visibility": {
+		"method": "calcCode",
+		"code": "(L:switchLandingLight,enum) 1 =="
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 11": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 45 > }"
+	},
+	"Microsoft.Bell 407.Radio.Bell 407 Led Navcom Nav2": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:NAV SIGNAL:2,number) 10 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 12": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 47.5 > }"
+	},
+	"Microsoft.Bell 407.Radio.Bell 407 Led Navcom Nav1": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:COM TRANSMIT:2,Bool) (A:COM RECEIVE:2,Bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 13": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 50 > }"
+	},
+	"Microsoft.Bell 407.Radio.Bell 407 Led Navcom Com2": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:NAV SIGNAL:1,number) 10 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 14": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 52.5 > }"
+	},
+	"Microsoft.Bell 407.Radio.Bell 407 Led Navcom Com1": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:20,bool) if{ (A:COM TRANSMIT:1,Bool) (A:COM RECEIVE:1,Bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 15": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 55 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Speaker": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:SPEAKER ACTIVE, Bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 16": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 57.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Mute": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:MARKER BEACON TEST MUTE, Bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 17": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 60 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Aux": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:XMLVAR_AudioPanel_1) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 18": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 62.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Tel": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:INTERCOM SYSTEM ACTIVE, Bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 19": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 65 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Adf": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ADF SOUND:0,bool) (A:ADF SOUND:1,bool) or }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 20": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 67.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Mkr": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:MARKER SOUND,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 21": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 70 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Nav2": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:NAV SOUND:2,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 22": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 72.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Nav1": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:NAV SOUND:1,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 23": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 75 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Com2 Xmit": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:COM TRANSMIT:2,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 24": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 77.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Com1 Xmit": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:COM TRANSMIT:1,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 25": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 80 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Com2": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:COM RECEIVE:2,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 26": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 82.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Com1": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:COM RECEIVE:1,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 27": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 85 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Ics Crew": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:INTERCOM MODE, Enum) 2 == }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 28": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 87.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Ics All": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:INTERCOM MODE, Enum) 1 == }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 29": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 90 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Ics Iso": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:INTERCOM MODE, Enum) 0 == }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 30": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 92.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Mkr Lo": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:MARKER BEACON SENSITIVITY HIGH, Bool) ! }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 31": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 95 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Mkr High": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:MARKER BEACON SENSITIVITY HIGH, Bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 32": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 97.5 > }"
+	},
+	"Microsoft.Bell 407.Audio.Bell 407 Led Audio Mkr Aud": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (L:audioAud,bool) }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 33": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 100 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 34": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 102.5 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 25": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 31.0 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 35": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 105 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 24": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 30.5 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 36": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 107.5 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 23": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 30.0 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 37": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 110 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 22": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 28.7 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 38": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 112.5 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 21": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 27.5 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 39": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 115 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 20": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 26.2 > }"
+	},
+	"Microsoft.Bell 407.Engine.Bell 407 Lamp Trq 40": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:ENG TORQUE PERCENT:1, percent) (L:torqueCheck,percent) + 120 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 19": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 25.0 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 1": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 1.2 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 18": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 22.5 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 2": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 2.5 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 17": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 21.2 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 3": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 3.7 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 16": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 20.0 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 4": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 5.0 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 15": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 18.7 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 5": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 6.2 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 14": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 17.5 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 6": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 7.5 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 13": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 16.2 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 7": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 8.7 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 12": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 15.0 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 8": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 10.0 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 11": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 13.7 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 9": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 11.2 > }"
+	},
+	"Microsoft.Bell 407.Fuel.Bell 407 Lamp Fuelpress 10": {
+		"method": "calcCode",
+		"code": "(A:CIRCUIT ON:1,bool) if{ (A:GENERAL ENG FUEL PRESSURE:1, psi) (L:fuelPressCheck,psi) + 12.5 > }"
+	},
+	"IniBuilds.A310.Electrical.Input.Battery 1 On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_BAT1_ON)"
+	},
+	"IniBuilds.A310.Electrical.Input.Battery 1 Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_BAT1_ON)"
+	},
+	"IniBuilds.A310.Electrical.Input.Battery 2 On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_BAT2_ON)"
+	},
+	"IniBuilds.A310.Electrical.Input.Battery 2 Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_BAT2_ON)"
+	},
+	"IniBuilds.A310.Electrical.Input.Battery 3 On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_BAT3_ON)"
+	},
+	"IniBuilds.A310.Electrical.Input.Battery 3 Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_BAT3_ON)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 TERR Button FO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_TERR_ON_FO) ! (>L:A310_TERR_ON_FO)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 TERR Button CPT Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_TERR_ON_CPT) ! (>L:A310_TERR_ON_CPT)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Map Light Cpt Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_16) 5 + 0 max 100 min (>L:A310_POTENTIOMETER_16)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Map Light Cpt Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_16) 5 - 0 max 100 min (>L:A310_POTENTIOMETER_16)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Cap & Ctr Inst Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_26) 5 + 0 max 100 min (>L:A310_POTENTIOMETER_26)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Cap & Ctr Inst Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_26) 5 - 0 max 100 min (>L:A310_POTENTIOMETER_26)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Main Inst Pnl Flood Light Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_25) 5 + 0 min 100 max (>L:A310_POTENTIOMETER_25)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Main Inst Pnl Flood Light Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_25) 5 - 0 min 100 max (>L:A310_POTENTIOMETER_25)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 Cpt ATT HDG Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CAPT_ATT_HDG_COMMAND)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt ATT HDG Button FO3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_att_hdg_fo3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt ATT HDG Button Sys3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_att_hdg_sys3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 Cpt ADC Inst Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_adc_inst_fo1) ! (>L:A300DR_capt_switch_adc_inst_fo1)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt ADC Inst FO1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_adc_inst_fo1, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt ADC Inst Sys2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_adc_inst_sys2, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 Cpt FD Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_fd_fo1) ! (>L:A300DR_capt_switch_fd_fo1)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt FD FO1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_fd_fo1, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt FD Sys2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_fd_sys2, Bool)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 Cpt EFIS SGU Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CAPT_SGU_COMMAND)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt EFIS SGU Sys3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_efis_sgu_sys3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt EFIS SGU FO3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_capt_switch_efis_sgu_fo3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 Cpt PFD/ND XFR Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_pfd_nd_xfr) ! (>L:A300DR_pfd_nd_xfr)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Cpt PFD/ND XFR On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_pfd_nd_xfr, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 Capt Terr Mode GPWS Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_terr_mode) ! (>L:A300DR_terr_mode)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Terr Mode GPWS Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_terr_mode, Bool) ! "
+	},
+	"IniBuilds.A310.Avionics.Output.A310 Terr Mode GPWS Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TERR_MODE_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 GPWS Flap Switch Norm": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_GPWS_FLAP_SWITCH)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 GPWS Flap Switch Flap Ovrd": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_GPWS_FLAP_SWITCH)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 GPWS Flap Switch Off": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_GPWS_FLAP_SWITCH)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX EFIS Cpt Console Floor Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:LIGHT_POTENTIOMETER_8_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX EFIS Cpt Console Floor Switch DIM": {
+		"method": "calcCode",
+		"code": "50 (>K:LIGHT_POTENTIOMETER_8_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX EFIS Cpt Console Floor Switch BRT": {
+		"method": "calcCode",
+		"code": "100 (>K:LIGHT_POTENTIOMETER_8_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX EFIS FO Console Floor Switch OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:LIGHT_POTENTIOMETER_9_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX EFIS FO Console Floor Switch DIM": {
+		"method": "calcCode",
+		"code": "50 (>K:LIGHT_POTENTIOMETER_9_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.A32NX EFIS FO Console Floor Switch BRT": {
+		"method": "calcCode",
+		"code": "100 (>K:LIGHT_POTENTIOMETER_9_SET)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Servo Ctl Blue Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SERVO_BLUE_OFF_LIGHT) ! (>L:A310_SERVO_BLUE_OFF_LIGHT) "
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Servo Ctl Green Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SERVO_GREEN_OFF_LIGHT) ! (>L:A310_SERVO_GREEN_OFF_LIGHT) "
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Hyd Servo Ctl Yellow Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SERVO_YELLOW_OFF_LIGHT) ! (>L:A310_SERVO_YELLOW_OFF_LIGHT) "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Servo Ctl Blue Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SERVO_BLUE_OFF_LIGHT) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng1 Green Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SERVO_GREEN_OFF_LIGHT) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Eng1 Yellow Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SERVO_YELLOW_OFF_LIGHT) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Servo Blue Lo Pr Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_servo_blue_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Servo Green Lo Pr Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_servo_green_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Servo Yellow Lo Pr Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_hyd_servo_yellow_low_pressure, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Servo Blue Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_SERVO_B_State) ! (>L:__GUARD_SERVO_B_State)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Servo Green Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_SERVO_G_State) ! (>L:__GUARD_SERVO_G_State)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Hyd Servo Yellow Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_SERVO_Y_State) ! (>L:__GUARD_SERVO_Y_State)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Splr/Spd Brk 7 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE7) ! (>L:A310_SPEEDBRAKE7)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Splr/Spd Brk 6 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE6) ! (>L:A310_SPEEDBRAKE6)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Splr/Spd Brk 5 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE5) ! (>L:A310_SPEEDBRAKE5)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Splr/Spd Brk 4 & 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE4_1) ! (>L:A310_SPEEDBRAKE4_1)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Splr/Spd Brk 3 & 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE3_2) ! (>L:A310_SPEEDBRAKE3_2)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Pitch Feel 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_PITCH_FEEL1) ! (>L:A310_PITCH_FEEL1)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Pitch Feel 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_PITCH_FEEL2) ! (>L:A310_PITCH_FEEL2)"
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Rud Travel 1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRAVEL1) ! (>L:A310_RUDDER_TRAVEL1) "
+	},
+	"IniBuilds.A310.Hydraulic.Input.A310 Ovhd Rud Travel 2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRAVEL2) ! (>L:A310_RUDDER_TRAVEL2) "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 7 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE7, Bool) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 6 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE6, Bool) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 5 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE5, Bool) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 4 & 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE4_1, Bool) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 3 & 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE3_2, Bool) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 7 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE7_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 6 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE6_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 5 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE5_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 4 & 1 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE4_1_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Splr/Spd Brk 3 & 2 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_SPEEDBRAKE3_2_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Pitch Feel 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_PITCH_FEEL1, Bool) !"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Pitch Feel 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_PITCH_FEEL2, Bool) !"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Rud Travel 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRAVEL1, Bool) !"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Rud Travel 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRAVEL2, Bool) ! "
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Pitch Feel 1 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_PITCH_FEEL1_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Pitch Feel 2 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_PITCH_FEEL2_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Rud Travel 1 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRAVEL1_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Hydraulic.Output.A310 Ovhd Rud Travel 2 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_RUDDER_TRAVEL2_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 MCU Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_28) 5 + 100 min (>L:A310_POTENTIOMETER_28)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 MCU Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_28) 5 - 0 max (>L:A310_POTENTIOMETER_28)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Pedestal Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_3) 5 + 100 min (>L:A310_POTENTIOMETER_3)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Pedestal Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_3) 5 - 0 max (>L:A310_POTENTIOMETER_3)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Read Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_18) 5 + 100 max (>L:A310_POTENTIOMETER_18) "
+	},
+	"IniBuilds.A310.Lights.Input.A310 Read Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_18) 5 - 0 min (>L:A310_POTENTIOMETER_18) "
+	},
+	"IniBuilds.A310.Lights.Input.A310 Cpt Yoke Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_29) 5 + 100 max (>L:A310_POTENTIOMETER_29)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Cpt Yoke Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_29) 5 - 0 min (>L:A310_POTENTIOMETER_29)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 FO Yoke Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_30) 5 + 100 max (>L:A310_POTENTIOMETER_30)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 FO Yoke Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_30) 5 - 0 min (>L:A310_POTENTIOMETER_30)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_4) 5 + 100 max (>L:A310_POTENTIOMETER_4)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Ovhd Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_4) 5 - 0 min (>L:A310_POTENTIOMETER_4)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 Landing Elevation Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_landing_elevation, Number) 50 + (>L:A310_landing_elevation, Number)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 Landing Elevation Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_landing_elevation, Number) 50 - (>L:A310_landing_elevation, Number)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 TRP Mode TOGA Press ": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRP_TOGA_BUTTON)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 TRP Mode MCT Press ": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRP_MCT_BUTTON)"
+	},
+	"IniBuilds.A310.Engines.Input.A310 TRP Mode CL Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRP_CR_BUTTON)"
+	},
+	"IniBuilds.A310.Engines.Output.A310 TRP Mode TOGA Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRP_MODE) 1 =="
+	},
+	"IniBuilds.A310.Engines.Output.A310 TRP Mode MCT Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRP_MODE) 2 =="
+	},
+	"IniBuilds.A310.Engines.Output.A310 TRP Mode CR Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRP_MODE) 4 =="
+	},
+	"IniBuilds.A310.Engines.Output.A310 TRP Mode CL Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRP_MODE) 3 =="
+	},
+	"PMDG.B737-700.Engines.Input.A310 TRP Auto Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TRP_AUTO_BUTTON)"
+	},
+	"PMDG.B737-700.Engines.Output.A310 TRP Auto Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRP_MODE, Number) 5 =="
+	},
+	"PMDG.B737-700.Engines.Output.A310 TRP FLX TO Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TRP_MODE, Number) 6 =="
+	},
+	"PMDG.B737-700.Engines.Input.A310 TRP FLX TO Button Press": {
+		"method": "calcCode",
+		"code": "6 (>L:A310_TRP_MODE)"
+	},
+	"PMDG.B737-700.Engines.Input.A310 TRP Flex Temp Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FLEX_TEMP_UP_COMMAND)"
+	},
+	"PMDG.B737-700.Engines.Input.A310 TRP Flex Temp Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FLEX_TEMP_DN_COMMAND)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS FO CSTR Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_FO_CSTR_BUTTON)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS FO WPT Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_FO_FIXES_BUTTON)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS FO VOR Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_FO_VOR_BUTTON)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS FO NDB Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_FO_NDB_BUTTON)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS FO ARPT Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_EFIS_FO_ARPT_BUTTON)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Mode FO TEST": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_map_mode_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Mode FO ROSE": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_map_mode_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Mode FO ARC": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_map_mode_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Mode FO MAP": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_map_mode_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Mode FO PLAN": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_map_mode_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Range FO 15": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_map_range_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Range FO 30": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_map_range_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Range FO 60": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_map_range_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Range FO 120": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_map_range_fo_switch)"
+	},
+	"Inibuilds.A310.EFIS.Input.A310 EFIS Range FO 240": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_map_range_fo_switch)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS FO DH Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_DH_COMMAND)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS FO FPA Button": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_FPA_COMMAND)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS FO DH Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FPA_DH_KNOB_FO_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.EFIS.Input.A310 EFIS FO DH Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FPA_DH_KNOB_FO_TURNED_CLOCKWISE)"
+	},
+	"Microsoft.Generic.Radio.Input.PILOT TRANSMITTER SET": {
+		"method": "calcCode",
+		"code": "index (>K:PILOT_TRANSMITTER_SET)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec Bat1 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT1_ON) ! (>L:A310_BAT1_ON)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec Bat2 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT2_ON) ! (>L:A310_BAT2_ON)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec Bat3 Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT3_ON) ! (>L:A310_BAT3_ON)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Bat1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT1_ON, Bool) !"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Bat2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT2_ON) ! "
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Bat3 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT3_ON) ! "
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Bat1 Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT1_Light)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Bat2 Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT2_Light)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec Bat3 Light On": {
+		"method": "calcCode",
+		"code": "(L:A310_BAT3_Light)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec DC Norm Bus Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_dc_norm_Bus_off)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec AC Bus1 Off": {
+		"method": "calcCode",
+		"code": "(L:A310_ac_bus1_off)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec AC Bus2 Off": {
+		"method": "calcCode",
+		"code": "(L:A310_ac_bus2_off)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec AC ESS Bus1 Off": {
+		"method": "calcCode",
+		"code": "(L:A310_ac_essential_bus_off)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec AC ESS Bus2 Off": {
+		"method": "calcCode",
+		"code": "(L:A310_ac_essential_bus2_off)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec DC ESS Bus On Bat": {
+		"method": "calcCode",
+		"code": "(L:A310_dc_essential_on_battery)"
+	},
+	"IniBuilds.A310.Electrical.Output.A310 Ovhd Elec AC Emergency On Inv": {
+		"method": "calcCode",
+		"code": "(L:A310_ac_emergency_on_inv)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Isol Valve Left Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_ISOLATION_VALVE_LEFT) ! (>L:A300_ISOLATION_VALVE_LEFT)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Isol Valve Right Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_ISOLATION_VALVE_RIGHT) ! (>L:A300_ISOLATION_VALVE_RIGHT)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Isol Valve Left Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_ISOLATION_VALVE_LEFT) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Isol Valve Right Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_ISOLATION_VALVE_RIGHT) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Isol Valve Left Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_ISOLATION_VALVE_LEFT_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Isol Valve Right Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_ISOLATION_VALVE_RIGHT_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Fwd Cargo Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_6) 5 + 100 min (>L:A310_AIRCOND_LVL_6) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Fwd Cargo Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_6) 5 - 0 max (>L:A310_AIRCOND_LVL_6) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Bulk Cargo Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_5) 5 + 100 min (>L:A310_AIRCOND_LVL_5) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Bulk Cargo Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_5) 5 - 0 max (>L:A310_AIRCOND_LVL_5) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Aft Cabin Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_4) 5 + 100 min (>L:A310_AIRCOND_LVL_4) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Aft Cabin Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_4) 5 - 0 max (>L:A310_AIRCOND_LVL_4) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Mid Cabin Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_3) 5 + 100 min (>L:A310_AIRCOND_LVL_3) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Mid Cabin Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_3) 5 - 0 max (>L:A310_AIRCOND_LVL_3) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Fwd Cabin Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_2) 5 + 100 min (>L:A310_AIRCOND_LVL_2) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Fwd Cabin Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_2) 5 - 0 max (>L:A310_AIRCOND_LVL_2) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Cockpit Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_1) 5 + 100 min (>L:A310_AIRCOND_LVL_1) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Cockpit Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_AIRCOND_LVL_1) 5 - 0 max (>L:A310_AIRCOND_LVL_1) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pressure Selector Cargo Fwd": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_pressure_selector_indicator_actual)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pressure Selector Cargo Bulk": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_pressure_selector_indicator_actual)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pressure Selector CRT": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_pressure_selector_indicator_actual)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pressure Selector Cabin Aft": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_pressure_selector_indicator_actual)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pressure Selector Cabin Mid": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_pressure_selector_indicator_actual)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pressure Selector Cabin Fwd": {
+		"method": "calcCode",
+		"code": "5 (>L:A310_pressure_selector_indicator_actual)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pressure Selector Cockpit": {
+		"method": "calcCode",
+		"code": "6 (>L:A310_pressure_selector_indicator_actual)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Hot Air Supply Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_HOT_AIR_SUPPLY_ON) ! (>L:A300_HOT_AIR_SUPPLY_ON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Hot Air Supply Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_HOT_AIR_SUPPLY_ON, Bool) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Hot Air Supply Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_HOT_AIR_SUPPLY_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pack Valve 1 Press": {
+		"method": "calcCode",
+		"code": "(L:A300_PACK1_BUTTON) ! (>L:A300_PACK1_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Pack Valve 2 Press": {
+		"method": "calcCode",
+		"code": "(L:A300_PACK2_BUTTON) ! (>L:A300_PACK2_BUTTON)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Pack Valve 1 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_PACK1_BUTTON, Bool) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Pack Valve 1 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_PACK1_FAULT, Bool) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Pack Valve 2 Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_PACK2_BUTTON, Bool) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Pack Valve 2 Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_PACK2_FAULT, Bool) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Pack Pressure Pointer": {
+		"method": "calcCode",
+		"code": "(L:A310_eng1_producing_bleed_psi, Number)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Econ Flow Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_econ_flow_selected) ! (>L:A310_econ_flow_selected) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Econ Flow On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_econ_flow_selected) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Max Cool Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_max_cool) ! (>L:A310_max_cool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Max Cool On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_max_cool, Bool) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Ram Air Button Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__GUARD_RAM_AIR_State) ! (>L:__GUARD_RAM_AIR_State)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Compt Ram Air Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_RAM_AIR_ON) ! (>L:A300_RAM_AIR_ON) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Ram Air Open": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_ram_air_open, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Compt Ram Air On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_RAM_AIR_ON, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Outflow After Percent": {
+		"method": "calcCode",
+		"code": "(L:A310_cabin_outflow_aft_percent, Number)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Cabin Outflow Forward Percent": {
+		"method": "calcCode",
+		"code": "(L:A310_cabin_outflow_forward_percent, Number)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Bleed Pack1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_pack1_percent, number) 0.5 >"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Bleed Pack2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_pack2_percent, number) 0.5 >"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS L State Knob OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_IRS1_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS L State Knob NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS1_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS L State Knob ATT": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_IRS1_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS R State Knob OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_IRS2_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS R State Knob NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS2_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS R State Knob ATT": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_IRS2_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS L Align Mode On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS1_IS_ALIGNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS L On Battery On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS1_ON_BATTERY, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS L Battery Warning On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS1_BATTERY_WARNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS L IRS Warning On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS1_IRS_WARNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS C State Knob OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_IRS3_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS C State Knob NAV": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS3_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS C State Knob ATT": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_IRS3_STATE)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS R Align Mode On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS2_IS_ALIGNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS R On Battery On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS2_ON_BATTERY, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS R Battery Warning": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS2_BATTERY_WARNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS R IRS Warning On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS2_IRS_WARNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS C Align Mode On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS3_IS_ALIGNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS C On Battery On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS3_ON_BATTERY, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS C Battery Warning": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS3_BATTERY_WARNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS C IRS Warning On": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS3_IRS_WARNING, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 5 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_5_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 1 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_1_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 2 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_2_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 3 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_3_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 4 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_4_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 6 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_6_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 7 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_7_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 8 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_8_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_9_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 9 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_9_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS ENT Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_ENT_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS 0 Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_0_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS CLR Key": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_CLR_BUTTON)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS ENT Key Light": {
+		"method": "calcCode",
+		"code": "(L:A310_IRS_ENT_LIGHT, Bool)"
+	},
+	"IniBuilds.A310.Navigation.Output.A310 Ovhd IRS CLR Key Light": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_CLR_LIGHT)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 IRS Mode Knob TEST": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_IRS_MODE_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 IRS Mode Knob TK GS": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_MODE_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 IRS Mode Knob PPOS": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_IRS_MODE_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 IRS Mode Knob WIND": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_IRS_MODE_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 IRS Mode Knob HDG STS": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_IRS_MODE_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS Sys Knob OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_IRS_SYS_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS Sys Knob 1": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_IRS_SYS_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS Sys Knob 2": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_IRS_SYS_KNOB)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Ovhd IRS Sys Knob 3": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_IRS_SYS_KNOB)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd CVRD Test Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A300_CVRD_TEST)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd CVRD Test Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A300_CVRD_TEST)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Ovhd Cockpit Door Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_COCKPIT_DOOR_COMMAND)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector Bus1": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector Bus2": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector ESS": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector EMER": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector Gen1": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector Gen2": {
+		"method": "calcCode",
+		"code": "5 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector APU Gen": {
+		"method": "calcCode",
+		"code": "6 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec AC Bus Selector Ext Pwr": {
+		"method": "calcCode",
+		"code": "7 (>L:A310_elec_ind_ac_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec DC Bus Selector Bat1": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_elec_ind_dc_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec DC Bus Selector Bat2": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_elec_ind_dc_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec DC Bus Selector Bat3": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_elec_ind_dc_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec DC Bus Selector ESS": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_elec_ind_dc_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec DC Bus Selector TR1": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_elec_ind_dc_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec DC Bus Selector TR2": {
+		"method": "calcCode",
+		"code": "5 (>L:A310_elec_ind_dc_selector)"
+	},
+	"IniBuilds.A310.Electrical.Input.A310 Ovhd Elec DC Bus Selector ESS Bus": {
+		"method": "calcCode",
+		"code": "7 (>L:A310_elec_ind_dc_selector)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Agent1 Disch Button": {
+		"method": "calcCode",
+		"code": "(L:A300DR_engine1_agent1_disch) ! (>L:A300DR_engine1_agent1_disch)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Agent2 Disch Button": {
+		"method": "calcCode",
+		"code": "(L:A300DR_engine1_agent2_disch) ! (>L:A300DR_engine1_agent2_disch)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Agent1 Disch Button": {
+		"method": "calcCode",
+		"code": "(L:A300DR_engine2_agent1_disch) ! (>L:A300DR_engine2_agent1_disch)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Agent2 Disch Button": {
+		"method": "calcCode",
+		"code": "(L:A300DR_engine2_agent2_disch) ! (>L:A300DR_engine2_agent2_disch)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Agent Disch": {
+		"method": "calcCode",
+		"code": "(L:A310_APU_AGENT1_DISCH) ! (>L:A310_APU_AGENT1_DISCH)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Latch Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_FIRE_LATCH) ! (>L:A310_ENG1_FIRE_LATCH) \n(L:A310_ENG1_FIRE_LATCH, Bool) 0 == if{ 0 (>L:A310_FIRE_HANDLE_ENG1) }"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Latch Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_FIRE_LATCH) ! (>L:A310_ENG2_FIRE_LATCH) \n(L:A310_ENG2_FIRE_LATCH, Bool) 0 == if{ 0 (>L:A310_FIRE_HANDLE_ENG2) }"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire API Fire Latch Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_APU_FIRE_LATCH) ! (>L:A310_APU_FIRE_LATCH)\n(L:A310_APU_FIRE_LATCH, Bool) 0 == if{ 0 (>L:A310_FIRE_HANDLE_APU) }"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Handle Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_eng1_fire_handle_BUTTON)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Handle Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_eng2_fire_handle_BUTTON)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Handle Pull": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_apu_fire_handle_BUTTON)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Loop A Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_LOOP_A_STATE) ! (>L:A310_ENG1_LOOP_A_STATE)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Loop B Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG1_LOOP_B_STATE) ! (>L:A310_ENG1_LOOP_B_STATE)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Loop A Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_LOOP_A_STATE) ! (>L:A310_ENG2_LOOP_A_STATE)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Loop B Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ENG2_LOOP_B_STATE) ! (>L:A310_ENG2_LOOP_B_STATE)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Loop A Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_APU_LOOP_A_STATE) ! (>L:A310_APU_LOOP_A_STATE)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Loop B Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_APU_LOOP_B_STATE) ! (>L:A310_APU_LOOP_B_STATE)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Loop Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ENGINE1_LOOP_TEST_SWITCH)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Loop Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_ENGINE1_LOOP_TEST_SWITCH)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Loop Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ENGINE2_LOOP_TEST_SWITCH)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Loop Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_ENGINE2_LOOP_TEST_SWITCH)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Loop Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_APU_LOOP_TEST_SWITCH)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Loop Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_APU_LOOP_TEST_SWITCH)"
+	},
+	"IniBuilds.A310.Safety.Input.A310 Ovhd Oxygen Low Pressure Supply Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_OXYGEN_LOW_PRESSURE_SUPPLY) ! (>L:A310_OXYGEN_LOW_PRESSURE_SUPPLY) "
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Probe Heat Capt Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_PROBE_HEAT_CAPT) ! (>L:A300_PROBE_HEAT_CAPT) "
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Probe Heat Standby Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_PROBE_HEAT_STANDBY) ! (>L:A300_PROBE_HEAT_STANDBY)"
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Probe Heat FO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_PROBE_HEAT_COPILOT) ! (>L:A300_PROBE_HEAT_COPILOT) "
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Window Heater Left Lat Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT1) ! (>L:A300_WINDOW_HEAT1)"
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Window Heater Left WSLO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT2) ! (>L:A300_WINDOW_HEAT2)"
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Window Heater Right WSLO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT3) ! (>L:A300_WINDOW_HEAT3)"
+	},
+	"IniBuilds.A310.Anti-Ice.Input.A310 Ovhd Window Heater Right Lat Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT4) ! (>L:A300_WINDOW_HEAT4)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack1 Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_pack1_mode) ! (>L:A310_bleed_pack1_mode)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack2 Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_bleed_pack2_mode) ! (>L:A310_bleed_pack2_mode)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack1 Man Ctl Switch Hot Press": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_PACK1_MAN_SWITCH) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack1 Man Ctl Switch Release": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_PACK1_MAN_SWITCH) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack1 Man Ctl Switch Cold Press": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_PACK1_MAN_SWITCH) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack2 Man Ctl Switch Hot Press": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_PACK2_MAN_SWITCH) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack2 Man Ctl Switch Release": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_PACK2_MAN_SWITCH) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Pack2 Man Ctl Switch Cold Press": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_PACK2_MAN_SWITCH) "
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Squib Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ENG1_SQUIB_TEST)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng1 Squib Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_ENG1_SQUIB_TEST)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Squib Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ENG2_SQUIB_TEST)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire Eng2 Squib Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_ENG2_SQUIB_TEST)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Squib Test Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_APU_SQUIB_TEST)"
+	},
+	"IniBuilds.A310.Fire.Input.A310 Ovhd Fire APU Squib Test Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_APU_SQUIB_TEST)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Pedestal PPR ADV Button": {
+		"method": "calcCode",
+		"code": "(L:A310_PRINTER_ADV_BUTTON) ! (>L:A310_PRINTER_ADV_BUTTON) "
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Pedestal Printer TEST Button": {
+		"method": "calcCode",
+		"code": "(L:A310_PRINTER_TEST_BUTTON) ! (>L:A310_PRINTER_TEST_BUTTON)"
+	},
+	"IniBuilds.A310.Miscellaneous.Input.A310 Pedestal Printer ALRTRST Button": {
+		"method": "calcCode",
+		"code": "(L:A310_PRINTER_ALRTRST_BUTTON) ! (>L:A310_PRINTER_ALRTRST_BUTTON)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Pedestal Panel Brightness Outer Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_3) 5 + 100 min (>L:A310_POTENTIOMETER_3)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Pedestal Panel Brightness Outer Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_3) 5 - 0 max (>L:A310_POTENTIOMETER_3)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Pedestal Ovhd Light Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_4) 5 + 100 min (>L:A310_POTENTIOMETER_4)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Pedestal Ovhd Light Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_4) 5 - 0 max (>L:A310_POTENTIOMETER_4)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Sys 1": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_WXR_SYS)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Sys OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_WXR_SYS)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Sys 2": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_WXR_SYS)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Mode OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_WXR_MODE)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Mode TEST": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_WXR_MODE)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Mode WX": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_WXR_MODE)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Mode TURB": {
+		"method": "calcCode",
+		"code": "3 (>L:A310_WXR_MODE)"
+	},
+	"IniBuilds.A310.Radar.Input.wx": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_WXR_MODE)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Mode MAP": {
+		"method": "calcCode",
+		"code": "4 (>L:A310_WXR_MODE)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Gain Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_WXR_GAIN) ++ (>L:A310_WXR_GAIN)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Gain Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_WXR_GAIN) -- (>L:A310_WXR_GAIN)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Tilt Inc": {
+		"method": "calcCode",
+		"code": " (L:A310_WXR_TILT_KNOB) 1.5 + 15 min (>L:A310_WXR_TILT_KNOB)"
+	},
+	"IniBuilds.A310.Radar.Input.A310 Pedestal WX Radar Tilt Dec": {
+		"method": "calcCode",
+		"code": " (L:A310_WXR_TILT_KNOB) 1.5 - -15 max (>L:A310_WXR_TILT_KNOB)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Inner Knob Khz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Inner Knob Khz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Outer Knob Mhz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Outer Knob Mhz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Stby Inner Knob Khz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_STBY_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Stby Inner Knob Khz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_STBY_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Stby Outer Knob Mhz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_STBY_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM1 Stby Outer Knob Mhz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM1_STBY_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF Capt Transfer Right": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_VHF_TRANSFER_SWITCH_COMMAND)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF Capt Transfer Left": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_CPT_VHF_TRANSFER_SWITCH_COMMAND)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF Capt Sql Switch On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_VHF_SQL_SWITCH)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF Capt Sql Switch Disable": {
+		"method": "calcCode",
+		"code": "0- (>L:A310_CPT_VHF_SQL_SWITCH)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal VHF Capt COM1 Active Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_CPT_VHF_TRANSFER_SWITCH, Bool) !"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal VHF Capt COM1 STBY Active Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_CPT_VHF_TRANSFER_SWITCH, Bool) "
+	},
+	"Microsoft.Generic.Gear.Input (Potentiometer).AXIS STEERING SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_STEERING_SET)"
+	},
+	"Microsoft.Generic.Gear.Input (Potentiometer).STEERING SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:STEERING_SET)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 Inner Knob Khz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 Inner Knob Khz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 Outer Knob Mhz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 Outer Knob Mhz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 STBY Inner Knob Khz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_STBY_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 STBY Inner Knob Khz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_STBY_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 STBY Outer Knob Mhz Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_STBY_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF COM2 STBY Outer Knob Mhz Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_COM2_STBY_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF FO Transfer Left": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_FO_VHF_TRANSFER_SWITCH_COMMAND)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF FO Transfer Right": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_VHF_TRANSFER_SWITCH_COMMAND)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF FO Sql Switch On": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_VHF_SQL_SWITCH)"
+	},
+	"IniBuilds.A310.Radio.Input.sql": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_FO_VHF_SQL_SWITCH)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF FO Sql Switch Disable": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_FO_VHF_SQL_SWITCH)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF1 Capt Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VHF1_CPT_BUTTON)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal Capt VHF1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VHF1_CAPTAIN, Bool)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF2 Capt Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VHF2_CPT_BUTTON)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF3 Capt Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VHF3_CPT_BUTTON)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal HF1 Capt Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_HF1_CAPTAIN) ! (>L:A310_HF1_CAPTAIN) "
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal HF2 Capt Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_HF2_CAPTAIN) ! (>L:A310_HF2_CAPTAIN)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal INT Capt Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_INT_CAPTAIN) ! (>L:A310_INT_CAPTAIN)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal PA Capt Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_PA_CAPTAIN) ! (>L:A310_PA_CAPTAIN)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal Capt VHF2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VHF2_CAPTAIN, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal Capt VHF3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VHF3_CAPTAIN, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal Capt HF1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_HF1_CAPTAIN, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal Capt HF2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_HF2_CAPTAIN, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal Capt INT Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INT_CAPTAIN, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal Capt PA Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_PA_CAPTAIN, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal VHF FO COM2 Active Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_FO_VHF_TRANSFER_SWITCH, Bool) !"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal VHF FO COM2 STBY Active Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_FO_VHF_TRANSFER_SWITCH, Bool) "
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF1 FO Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VHF1_FO_BUTTON)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF2 FO Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VHF2_FO_BUTTON)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal VHF3 FO Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VHF3_FO_BUTTON)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal HF1 FO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_HF1_FO) ! (>L:A310_HF1_FO)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal HF2 FO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_HF2_FO) ! (>L:A310_HF2_FO)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal INT FO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_INT_FO) ! (>L:A310_INT_FO)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal PA FO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_PA_FO) ! (>L:A310_PA_FO)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal FO VHF1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VHF1_FO, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal FO VHF2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VHF2_FO, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal FO VHF3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VHF3_FO, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal FO HF1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_HF1_FO, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal FO HF2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_HF2_FO, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal FO INT Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_INT_FO, Bool)"
+	},
+	"IniBuilds.A310.Radio.Output.A310 Pedestal FO PA Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_PA_FO, Bool)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal Cpt Voice Ident Switch Up": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_CPT_VOICE_IDENT_SWITCH)"
+	},
+	"IniBuilds.A310.Radio.Input.A310 Pedestal Cpt Voice Ident Switch Down": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_VOICE_IDENT_SWITCH)"
+	},
+	"Microsoft.Generic.Gear.Input (Potentiometer).Nose Wheel Steering (Custom)": {
+		"method": "calcCode",
+		"code": "16383 (A:GROUND VELOCITY, Knots) 20 - 273.05 * - 0 max 16383 min s1\n512 @ - 512 / d abs * 16383 * l1 -1 *  max l1 min (>K:AXIS_STEERING_SET)"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Probe Heat Capt Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_PROBE_HEAT_CAPT) ! "
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Probe Heat Standby Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_PROBE_HEAT_STANDBY) ! "
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Probe Heat FO Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_PROBE_HEAT_COPILOT) ! "
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Left Lat Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT1) !"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Left Lat Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT1_FAULT) "
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Left WSLO Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT2) !"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Left WSLO Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT2_FAULT)"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Right WSLO Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT3) !"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Right WSLO Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT3_FAULT)"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Right Lat Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT4) !"
+	},
+	"IniBuilds.A310.Anti-Ice.Output.A310 Ovhd Window Heater Right Lat Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300_WINDOW_HEAT4_FAULT)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Warning Sys Norm Cancel Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_EWD_NORM_CANCEL)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Warning Sys Emer Cancel Push": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_EWD_EMER_CANCEL)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Warning Sys Emer Guard Toggle": {
+		"method": "calcCode",
+		"code": "(L:__EMER_GAURD_State) ! (>L:__EMER_GAURD_State)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Takeoff Config Test Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_TAKEOFF_CONFIG_PRESSED)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Takeoff Config Test Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_TAKEOFF_CONFIG_PRESSED)"
+	},
+	"IniBuilds.A310.Warning.Input.A310 Parking Brake Accu Press Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_ACCU_PRESS_BUTTON) ! (>L:A310_ACCU_PRESS_BUTTON)"
+	},
+	"IniBuilds.A310.Autopilot.Input.A310 Yoke Autopilot Disconnect Push": {
+		"method": "calcCode",
+		"code": "1 (>K:AUTOPILOT_OFF)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Capt Yoke Trim Switch Up": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_CPT_YOKE_TRIM_SWITCH)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Capt Yoke Trim Switch Release": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CPT_YOKE_TRIM_SWITCH)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 Capt Yoke Trim Switch Down": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_CPT_YOKE_TRIM_SWITCH)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 FO Inst Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_27) 5 + 100 min (>L:A310_POTENTIOMETER_27)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 FO Inst Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_27) 5 - 0 max (>L:A310_POTENTIOMETER_27)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 FO Yoke Trim Switch Up": {
+		"method": "calcCode",
+		"code": "0 (>L:A310_FO_YOKE_TRIM_SWITCH)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 FO Yoke Trim Switch Release": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_YOKE_TRIM_SWITCH)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 FO Yoke Trim Switch Down": {
+		"method": "calcCode",
+		"code": "2 (>L:A310_FO_YOKE_TRIM_SWITCH)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 TERR Button FO On ND Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TERR_ON_FO)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 TERR Button FO Stby Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TERR_STANDBY_FO, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 TERR Button CPT On ND Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TERR_ON_CAPT, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 TERR Button Capt Stby Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_TERR_STANDBY_CAPT, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 ATT HDG FO Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_ATT_HDG_COMMAND)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 ADC Inst FO Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_adc_inst_fo1) ! (>L:A300DR_fo_switch_adc_inst_fo1)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 FO FD Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_fd_fo1) ! (>L:A300DR_fo_switch_fd_fo1)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 FO EFIS SGU Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_FO_SGU_COMMAND)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 FO PFD/ND XFR Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_pfd_nd_xfr) ! (>L:A300DR_pfd_nd_xfr)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 ATT HDG FO Button Capt3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_att_hdg_sys3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 ATT HDG FO Button Sys3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_att_hdg_fo3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 ADC Inst FO Sys1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_adc_inst_fo1, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 ADC Inst FO Capt2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_adc_inst_sys2, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 FO FD Sys1 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_fd_fo1, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 FO FD Capt2 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_fd_sys2, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 FO EFIS SGU Sys3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_efis_sgu_fo3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 FO EFIS SGU Capt3 Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_fo_switch_efis_sgu_sys3, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Output.A310 FO PFD/ND XFR On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_pfd_nd_xfr, Bool)"
+	},
+	"IniBuilds.A310.Avionics.Input.A310 FO Terr Mode GPWS Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_terr_mode) ! (>L:A310_terr_mode)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Map Light FO Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_17) 5 + 100 min (>L:A310_POTENTIOMETER_17)"
+	},
+	"IniBuilds.A310.Lights.Input.A310 Map Light FO Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_POTENTIOMETER_17) 5 - 0 max (>L:A310_POTENTIOMETER_17)"
+	},
+	"IniBuilds.A310.Controls.Input.A310 GPWS Landing Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_GPWS_LANDING_SWITCH) ! (>L:A310_GPWS_LANDING_SWITCH) "
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal Cpt VOR1 Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR1_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal Cpt VOR1 Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR1_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal Cpt VOR1 Outer Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR1_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal Cpt VOR1 Outer Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR1_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal Cpt CRS1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(>K:VOR1_OBI_INC)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal Cpt CRS1 Knob Dec": {
+		"method": "calcCode",
+		"code": "(>K:VOR1_OBI_DEC)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal Cpt CRS1 Knob Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VOR1_FLIP_COMMAND)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 RMP ILS Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_ILS_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 RMP ILS Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_ILS_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 RMP ILS Outer Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_ILS_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 RMP ILS Outer Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_ILS_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 RMP ILS Course Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_ils_course, number) ++ dnor (>L:A310_ils_course, number)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 RMP ILS Course Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_ils_course, number) -- dnor (>L:A310_ils_course, number)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal FO VOR2 Inner Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR2_INNER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal FO VOR2 Inner Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR2_INNER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal FO VOR2 Outer Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR2_OUTER_KNOB_TURNED_CLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal FO VOR2 Outer Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_RMP_VOR2_OUTER_KNOB_TURNED_ANTICLOCKWISE)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal FO CRS2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(>K:VOR2_OBI_INC)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal FO CRS2 Knob Dec": {
+		"method": "calcCode",
+		"code": "(>K:VOR2_OBI_DEC)"
+	},
+	"IniBuilds.A310.Navigation.Input.A310 Pedestal FO CRS2 Knob Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_VOR2_FLIP_COMMAND)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Gnd Ovrd Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_VENT_GND_OVRD) ! (>L:A310_VENT_GND_OVRD)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Gnd Ctl Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_VENT_GND_CTL) ! (>L:A310_VENT_GND_CTL)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Cargo Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A310_CARGO_VALVE) ! (>L:A310_CARGO_VALVE)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Gnd Ovrd On Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VENT_GND_OVRD, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Gnd Ctl Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VENT_GND_CTL, Bool) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Cargo Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_CARGO_VALVE, Bool) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Ovbd Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_vent_outboard_valve) ! (>L:A300DR_vent_outboard_valve) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Vent Ovbd Valve Off Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_vent_outboard_valve) ! "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Vent Ovbd Valve Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_OVERBOARD_VALVE_FAULT, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Input.A310 Ovhd Vent Extract Valve Toggle": {
+		"method": "calcCode",
+		"code": "(L:A300DR_vent_extract_valve) ! (>L:A300DR_vent_extract_valve) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Vent Extract Valve Ovbd Indicator": {
+		"method": "calcCode",
+		"code": "(L:A300DR_vent_extract_valve, Bool) "
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Vent Extract Valve Flow Indicator": {
+		"method": "calcCode",
+		"code": "(L:A310_VENT_EXTRACT_FLOW, Bool)"
+	},
+	"IniBuilds.A310.Air Condition / Pressurization.Output.A310 Ovhd Vent Inboard Valve Light": {
+		"method": "calcCode",
+		"code": "(L:A310_INBOARD_VALVE_LIGHT, Bool)"
+	},
+	"FenixSim.A320.EFIS.Output.FNX320 EFIS Baro Setting": {
+		"method": "calcCode",
+		"code": " (A:KOHLSMAN SETTING HG, inHg)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_VNAV_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_VNAVButtonValue) ! (>L:XMLVAR_VNAVButtonValue)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_VS_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_VS_HOLD)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_BC_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_BC_HOLD)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_MASTER_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_MASTER)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_HALF_BANK_TOGGLE": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MAX BANK, degrees) 16 < if{ (>K:AP_MAX_BANK_INC) } els{ (>K:AP_MAX_BANK_DEC) }"
+	},
+	"Working Title.CJ4.Lights.Output.WT CJ4 Logo Lights On": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_LOGO_1)"
+	},
+	"Working Title.CJ4.Lights.Output.WT CJ4 Nav Lights On": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_NAV_1)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_HDG_SYNC": {
+		"method": "calcCode",
+		"code": "1 (A:HEADING INDICATOR, degrees) (>K:HEADING_BUG_SET)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_ALT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_HOLD)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_HDG_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_HEADING_HOLD)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_FLC_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:FLIGHT_LEVEL_CHANGE) (A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_FD1_TOGGLE": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_FD2_TOGGLE": {
+		"method": "calcCode",
+		"code": "2 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AS3000_BARO_1_DEC": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) if{ 1 (>H:AP_BARO_Down) } els{ 1 (>K:KOHLSMAN_DEC) (>H:AP_BARO_Down) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AS3000_BARO_3_DEC": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro2_ForcedToSTD, bool) ! if{ 2 (>K:KOHLSMAN_DEC) (A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro2_SavedPressure) } els{ (L:XMLVAR_Baro2_SavedPressure, number) 5 - (>L:XMLVAR_Baro2_SavedPressure) } "
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AS3000_BARO_3_INC": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro2_ForcedToSTD, bool) ! if{ 2 (>K:KOHLSMAN_INC) (A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro2_SavedPressure) } els{ (L:XMLVAR_Baro2_SavedPressure, number) 5 + (>L:XMLVAR_Baro2_SavedPressure) } "
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AS3000_BARO_1_INC": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) if{ 1 (>H:AP_BARO_Up) } els{ 1 (>K:KOHLSMAN_INC) (>H:AP_BARO_Up) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_VS_INC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD, bool) if{ (>K:AP_VS_VAR_INC) } els{ (>K:AP_PITCH_REF_INC_UP) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_VS_DEC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD, bool) if{ (>K:AP_VS_VAR_DEC) } els{ (>K:AP_PITCH_REF_INC_DN) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_SPEED_DEC": {
+		"method": "calcCode",
+		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_DEC) } els{ (>K:AP_SPD_VAR_DEC) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_SPEED_INC": {
+		"method": "calcCode",
+		"code": "(L:XMLVar_AirspeedIsInMach, Bool) if{ (>K:AP_MACH_VAR_INC) } els{ (>K:AP_SPD_VAR_INC) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_NAV_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_NAV1_HOLD)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_YD_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:YAW_DAMPER_TOGGLE)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_SPEED_MODE_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:AP_MANAGED_SPEED_IN_MACH_TOGGLE)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_XFR_PRESSED": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_PushXFR) ! (>L:XMLVAR_PushXFR)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_1_DEC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 1 - dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 1 - dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_1_INC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 1 + dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 1 + dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_1_INC_FAST": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 10 + dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 10 + dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_1_DEC_FAST": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 10 - dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 10 - dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_2_DEC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 1 - dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 1 - dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_2_DEC_FAST": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 10 - dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 10 - dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_2_INC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 1 + dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 1 + dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_2_INC_FAST": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == if{ (A:NAV OBS:1, degree) 10 + dnor (>K:VOR1_SET) } els{ (A:NAV OBS:2, degree) 10 + dnor (>K:VOR2_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_DISC_PRESSED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT DISENGAGED, Bool) if{ 0 (>K:AUTOPILOT_DISENGAGE_SET) } els{ 1 (>K:AUTOPILOT_DISENGAGE_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_1_SYNC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == sp0 \n(A:NAV RADIAL:1, degrees) (A:NAV RADIAL:2, degrees) l0 ? 180 + dnor sp1 \n(A:NAV OBS:1, degrees) (A:NAV OBS:2, degrees) l0 ? sp2 \n(A:NAV HAS NAV:1, Bool) (A:NAV HAS NAV:2, Bool) l0 ? sp3 \nl1 l2 l3 ? \nsp0 (A:AUTOPILOT NAV SELECTED, Number) 1 == if{ \n\t l0 (>K:VOR1_SET) \n} els{ \n\t l0 (>K:VOR2_SET) \n}"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_CRS_2_SYNC": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV SELECTED, Number) 1 == sp0 \n(A:NAV RADIAL:1, degrees) (A:NAV RADIAL:2, degrees) l0 ? 180 + dnor sp1 \n(A:NAV OBS:1, degrees) (A:NAV OBS:2, degrees) l0 ? sp2 \n(A:NAV HAS NAV:1, Bool) (A:NAV HAS NAV:2, Bool) l0 ? sp3 \nl1 l2 l3 ? \nsp0 (A:AUTOPILOT NAV SELECTED, Number) 1 == if{ \n\t l0 (>K:VOR1_SET) \n} els{ \n\t l0 (>K:VOR2_SET) \n}"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MENU_ADV_1_DEC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_MENU_ADV_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MENU_ADV_1_INC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_MENU_ADV_INC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_DATA_1_DEC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_DATA_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_DATA_1_INC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_DATA_INC)"
+	},
+	"Asobo.CJ4 AAU1.Lights.Input.CJ4_LIGHT_PANEL_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_PANEL_1) 5 - 0 5 max max 100 min sp0 \n(L:LIGHTING_PANEL_1) 5 - 100 > if{ \n\t1 0 (>K:2:PANEL_LIGHTS_SET) \n} els{ \n\t(A:LIGHT PANEL:1, Bool) ! if{ \n\t\t1 1 (>K:2:PANEL_LIGHTS_SET) \n\t} els{ \n\t\tl0 (>L:LIGHTING_PANEL_1) \n\t\tl0 3 (>K:2:LIGHT_POTENTIOMETER_SET) \n\t} \n}"
+	},
+	"Asobo.CJ4 AAU1.Lights.Input.CJ4_LIGHT_PANEL_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_PANEL_1) 5 + 0 5 max max 100 min sp0 \n(L:LIGHTING_PANEL_1) 5 + 100 > if{ \n\t1 0 (>K:2:PANEL_LIGHTS_SET) \n} els{ \n\t(A:LIGHT PANEL:1, Bool) ! if{ \n\t\t1 1 (>K:2:PANEL_LIGHTS_SET) \n\t} els{ \n\t\tl0 (>L:LIGHTING_PANEL_1) \n\t\tl0 3 (>K:2:LIGHT_POTENTIOMETER_SET) \n\t} \n}"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_L1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_L1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_L2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_L2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_L3_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_L3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_L4_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_L4)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_L5_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_L5)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_L6_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_L6)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_MSG_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_MSG)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_DIR_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_DIR)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_IDX_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_IDX)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_TUN_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_TUN)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_A_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_A)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_H_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_H)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_O_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_O)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_V_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_V)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_FPLN_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_FPLN)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_B_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_B)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_I_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_I)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_P_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_P)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_W_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_W)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_LEGS_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_LEGS)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_C_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_C)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_J_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_J)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_Q_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_Q)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_X_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_X)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_DEPARR_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_DEPARR)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_D_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_D)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_K_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_K)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_R_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_R)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_Y_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_Y)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_PERF_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_PERF)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_E_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_E)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_L_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_L)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_S_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_S)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_Z_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_Z)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_DSPL_MENU_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_DSPL_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_F_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_F)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_M_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_M)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_T_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_T)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_SP_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_SP)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_MFD_ADV_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_MFD_ADV)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_G_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_G)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_N_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_N)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_U_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_U)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_DIV_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_DIV)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_MFD_DATA_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_MFD_DATA)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_4_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_4)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_7_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_7)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_DOT_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_DOT)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_PREVPAGE_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_PREVPAGE)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_5_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_5)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_8_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_8)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_0_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_0)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_3_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_6_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_6)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_9_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_9)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_PLUSMINUS_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_PLUSMINUS)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_R1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_R1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_R2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_R2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_R3_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_R3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_R4_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_R4)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_R5_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_R5)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_R6_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_R6)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_EXEC_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_EXEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_NEXTPAGE_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_NEXTPAGE)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_L1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_L1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_L2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_L2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_L3_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_L3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_L4_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_L4)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_L5_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_L5)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_L6_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_L6)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_MSG_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_MSG)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_DIR_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_DIR)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_IDX_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_IDX)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_TUN_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_TUN)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_A_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_A)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_H_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_H)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_O_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_O)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_V_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_V)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_FPLN_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_FPLN)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_B_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_B)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_I_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_I)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_P_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_P)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_W_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_W)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_LEGS_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_LEGS)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_C_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_C)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_J_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_J)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_Q_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_Q)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_X_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_X)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_DEPARR_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_DEPARR)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_D_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_D)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_K_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_K)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_R_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_R)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_Y_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_Y)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_PERF_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_PERF)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_E_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_E)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_L_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_L)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_S_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_S)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_Z_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_Z)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_DSPL_MENU_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_DSPL_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_F_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_F)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_M_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_M)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_T_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_T)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_SP_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_SP)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_MFD_ADV_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_MFD_ADV)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_G_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_G)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_N_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_N)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_U_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_U)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_DIV_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_DIV)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_MFD_DATA_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_MFD_DATA)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_4_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_4)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_7_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_7)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_DOT_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_DOT)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_PREVPAGE_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_PREVPAGE)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_5_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_5)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_8_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_8)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_0_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_0)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_3_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_6_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_6)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_9_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_9)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_PLUSMINUS_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_PLUSMINUS)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_R1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_R1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_R2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_R2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_R3_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_R3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_R4_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_R4)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_R5_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_R5)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_R6_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_R6)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_EXEC_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_EXEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_NEXTPAGE_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_NEXTPAGE)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_CLR_SHORT": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_CLR)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_BRT_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_BRT)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_DIM_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_DIM)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_2_CLR_LONG": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_2_BTN_CLR_Long)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_CLR_SHORT": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_CLR)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.CJ4_FMC_1_CLR_LONG": {
+		"method": "calcCode",
+		"code": "(>H:CJ4_FMC_1_BTN_CLR_Long)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_RANGE_1_DEC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_RANGE_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_RANGE_1_INC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_RANGE_INC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_BARO_1_PUSH": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD, bool) ! (>L:XMLVAR_Baro1_ForcedToSTD, bool) (L:XMLVAR_Baro1_ForcedToSTD, bool) if{ (A:KOHLSMAN SETTING MB:1, mbars) 16 * (>L:XMLVAR_Baro1_SavedPressure) 1 (>K:BAROMETRIC_STD_PRESSURE) } els{ 1 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET) 2 (L:XMLVAR_Baro1_SavedPressure, number) (>K:2:KOHLSMAN_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_MENU_ADV_1_INC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_MENU_ADV_INC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_MENU_ADV_1_DEC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_MENU_ADV_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Data_PUSH)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_Data_PUSH)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_MENU_ADV_2_INC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_MENU_ADV_INC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_MENU_ADV_2_DEC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_MENU_ADV_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_1_INC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Data_INC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_1_DEC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Data_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_1_INC_FAST": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Data_INC) (>H:Generic_Upr_1_Data_INC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_1_DEC_FAST": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Data_DEC) (>H:Generic_Upr_1_Data_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_2_DEC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_Data_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_2_DEC_FAST": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_Data_DEC) (>H:Generic_Upr_2_Data_DEC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_2_INC": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_Data_INC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_DATA_2_INC_FAST": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_Data_INC) (>H:Generic_Upr_2_Data_INC)"
+	},
+	"Asobo.CJ4 AAU1.Safety.Input.CJ4_MASTER_CAUTION_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>K:MASTER_CAUTION_ACKNOWLEDGE)"
+	},
+	"Asobo.CJ4 AAU1.Safety.Input.CJ4_MASTER_WARNING_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>K:MASTER_WARNING_ACKNOWLEDGE)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_REFS_MENU_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_REFS_MENU) "
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_REFS_MENU_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_Push_REFS_MENU) "
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_PFD_MENU_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_PFD_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_PFD_MENU_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_2_Push_PFD_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Anti-Ice.Input.CJ4_DEICE_PITOT_L_TOGGLE": {
+		"method": "calcCode",
+		"code": "1 (A:PITOT HEAT SWITCH:1, Bool) ! s0 (>K:2:PITOT_HEAT_SET) l0 (>L:DEICE_Pitot_1)\n"
+	},
+	"Asobo.CJ4 AAU1.Anti-Ice.Input.CJ4_DEICE_PITOT_R_TOGGLE": {
+		"method": "calcCode",
+		"code": "2 (A:PITOT HEAT SWITCH:2, Bool) ! s0 (>K:2:PITOT_HEAT_SET) l0 (>L:DEICE_Pitot_2)"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_BATTERY_1_ON": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, bool) ! if{ 1 (>K:TOGGLE_MASTER_BATTERY) } 0 (>L:XMLVAR_Essential_Bus_ON) 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:2, Bool) (L:XMLVAR_Essential_Bus_ON) == if{ 2 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (L:XMLVAR_Essential_Bus_ON) if{ 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) if{ 1 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) ! if{ 2 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } } els{ 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) ! if{ 1 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) if{ 2 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } }"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_BATTERY_1_OFF": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, bool) if{ 1 (>K:TOGGLE_MASTER_BATTERY) } 0 (>L:XMLVAR_Essential_Bus_ON) 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:2, Bool) (L:XMLVAR_Essential_Bus_ON) == if{ 2 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (L:XMLVAR_Essential_Bus_ON) if{ 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) if{ 1 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) ! if{ 2 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } } els{ 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) ! if{ 1 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) if{ 2 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } }"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_BATTERY_1_EMER": {
+		"method": "calcCode",
+		"code": "(A:ELECTRICAL MASTER BATTERY:1, bool) ! if{ 1 (>K:TOGGLE_MASTER_BATTERY) } 1 (>L:XMLVAR_Essential_Bus_ON) 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:2, Bool) (L:XMLVAR_Essential_Bus_ON) == if{ 2 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (L:XMLVAR_Essential_Bus_ON) if{ 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) if{ 1 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) ! if{ 2 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } } els{ 1 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) ! if{ 1 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, Number) (A:BUS CONNECTION ON:3, Bool) if{ 2 3 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } }"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_AVIONICS_BUS_1_ON": {
+		"method": "calcCode",
+		"code": "1 (>A:BUS LOOKUP INDEX, number) (A:BUS CONNECTION ON:4, bool) ! if{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (A:CIRCUIT SWITCH ON:23, bool) ! if{ 23 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, number) (A:BUS CONNECTION ON:5, bool) ! if{ 5 2 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (A:CIRCUIT SWITCH ON:24, bool) ! if{ 24 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } 0 (>L:XMLVAR_AVIONICS_IsComposite)"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_AVIONICS_BUS_1_OFF": {
+		"method": "calcCode",
+		"code": "1 (>A:BUS LOOKUP INDEX, number) (A:BUS CONNECTION ON:4, bool) if{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (A:CIRCUIT SWITCH ON:23, bool) if{ 23 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, number) (A:BUS CONNECTION ON:5, bool) if{ 5 2 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (A:CIRCUIT SWITCH ON:24, bool) if{ 24 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } 0 (>L:XMLVAR_AVIONICS_IsComposite)"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_AVIONICS_BUS_1_DISPATCH": {
+		"method": "calcCode",
+		"code": "1 (>A:BUS LOOKUP INDEX, number) (A:BUS CONNECTION ON:4, bool) if{ 4 1 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (A:CIRCUIT SWITCH ON:23, bool) if{ 23 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } 2 (>A:BUS LOOKUP INDEX, number) (A:BUS CONNECTION ON:5, bool) ! if{ 5 2 (>K:2:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE) } (A:CIRCUIT SWITCH ON:24, bool) ! if{ 24 (>K:ELECTRICAL_CIRCUIT_TOGGLE) } 1 (>L:XMLVAR_AVIONICS_IsComposite)"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_EMERG_LIGHTS_ARMED": {
+		"method": "calcCode",
+		"code": "1 (>L:CJ4_EMER_LIGHT_ARMED)"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_EMERG_LIGHTS_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:CJ4_EMER_LIGHT_ARMED)"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_ALTERNATOR_1_ON": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:1, bool) ! if{ (>K:TOGGLE_ALTERNATOR1) }"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_ALTERNATOR_1_OFF": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:1, bool) if{ (>K:TOGGLE_ALTERNATOR1) }"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_ALTERNATOR_2_OFF": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:2, bool) if{ (>K:TOGGLE_ALTERNATOR2) }"
+	},
+	"Asobo.CJ4 AAU1.Electrical.Input.CJ4_ELECTRICAL_ALTERNATOR_2_ON": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:2, bool) ! if{ (>K:TOGGLE_ALTERNATOR2) }"
+	},
+	"FenixSim.A320.Radio.Input.FNX320 Transponder TCAS Traffic THRT Mode": {
+		"method": "calcCode",
+		"code": "(L:S_TCAS_RANGE) 0 + 0 min (>L:S_TCAS_RANGE)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320 Transponder TCAS Traffic ALL Mode": {
+		"method": "calcCode",
+		"code": "(L:S_TCAS_RANGE)  1 + 1 min (>L:S_TCAS_RANGE)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320 Transponder TCAS Traffic ABV Mode": {
+		"method": "calcCode",
+		"code": "(L:S_TCAS_RANGE) 1 + 3 min (>L:S_TCAS_RANGE)"
+	},
+	"FenixSim.A320.Radio.Input.FNX320 Transponder TCAS Traffic BLW Mode": {
+		"method": "calcCode",
+		"code": "(L:S_TCAS_RANGE) 1 + 4 min (>L:S_TCAS_RANGE)"
+	},
+	"Asobo.CJ4 AAU1.Autopilot.Input.CJ4_AUTOPILOT_ALT_SYNC": {
+		"method": "calcCode",
+		"code": "(A:INDICATED ALTITUDE, feet) (>K:AP_ALT_VAR_SET_ENGLISH)"
+	},
+	"SimWorks Studios.Kodiak 100.Fuel.Output.KODIAK 100 BOTH FUEL SELECTOR VALVES OFF": {
+		"method": "calcCode",
+		"code": "(A:FUEL TANK SELECTOR:1, Enum) 0 =="
+	},
+	"Microsoft.Generic.Gear.Input (Potentiometer).AXIS LEFT BRAKE SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_LEFT_BRAKE_SET)"
+	},
+	"Microsoft.Generic.Gear.Input (Potentiometer).AXIS RIGHT BRAKE SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_RIGHT_BRAKE_SET)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 Front Door Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_front_door) ! (>L:SF50_front_door)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 Luggage Door Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_luggage_door) ! (>L:SF50_luggage_door) "
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 VAMS Static Storage Cover Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_vams_static_storage_cover) ! (>L:SF50_vams_static_storage_cover)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 VAMS Static Chocks Toggle": {
+		"method": "calcCode",
+		"code": "(L:sf50_vams_static_chocks) ! (>L:sf50_vams_static_chocks) "
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 VAMS Static Covers Toggle": {
+		"method": "calcCode",
+		"code": "(L:sfS5O_vams_static_covers) ! (>L:sfS5O_vams_static_covers)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 VAMS Static Headphones Toggle": {
+		"method": "calcCode",
+		"code": "(L:sfS5O_vams_static_headphones) ! (>L:sfS5O_vams_static_headphones)"
+	},
+	"FlightFX.Visionjet SF50.Gear.Input.SF50 Emergency Gear Door Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_gear_alternate_ext, Bool) ! (>L:SF50_gear_alternate_ext, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Gear.Input.SF50 Emergency Gear Handle Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_gear_alternate_ext_handle, Bool) ! (>L:SF50_gear_alternate_ext_handle) "
+	},
+	"FlightFX.Visionjet SF50.Fuel.Input.SF50 Fuel Tank Selector Left": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_fuel_selector_left) \n0 (>L:SF50_fuel_selector_right)  0 (>L:SF50_fuel_selector_auto)  "
+	},
+	"FlightFX.Visionjet SF50.Fuel.Input.SF50 Fuel Tank Selector Right": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_fuel_selector_right)\n0 (>L:SF50_fuel_selector_left)  0 (>L:SF50_fuel_selector_auto)  "
+	},
+	"FlightFX.Visionjet SF50.Fuel.Input.SF50 Fuel Tank Selector Auto": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_fuel_selector_auto)\n(A:FUEL TANK LEFT MAIN QUANTITY, gallons) (A:FUEL TANK RIGHT MAIN QUANTITY, gallons) > if{\n   2 (>K:FUEL_SELECTOR_SET) } els{ 3  (>K:FUEL_SELECTOR_SET) }\n0 (>L:SF50_fuel_selector_left)  0 (>L:SF50_fuel_selector_right)  "
+	},
+	"FlightFX.Visionjet SF50.Fuel.Input.SF50 AT FMS Manual Mode Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_push_at_fms_man, Bool) ! (>L:SF50_push_at_fms_man) "
+	},
+	"FlightFX.Visionjet SF50.Air Condition / Pressurization.Input.SF50 Bleed Air Switch Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_air_flow_switch, Bool) ! (>L:SF50_air_flow_switch, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 Cockpit TV Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_cockpit_tv, Bool) ! (>L:SF50_cockpit_tv) "
+	},
+	"FlightFX.Visionjet SF50.Warning.Input.SF50 ECS Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_ecs, Bool) ! (L:SF50_ecs)"
+	},
+	"FlightFX.Visionjet SF50.Air Condition / Pressurization.Input.SF50 AC Fan Control Inc": {
+		"method": "calcCode",
+		"code": "(L:SF50_TempFan, number) 0.1 + 0 max 1 min (>L:SF50_TempFan, number)"
+	},
+	"FlightFX.Visionjet SF50.Air Condition / Pressurization.Input.SF50 AC Fan Control Dec": {
+		"method": "calcCode",
+		"code": "(L:SF50_TempFan, number) 0.1 - 0 max 1 min (>L:SF50_TempFan, number)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 Checklists Scroll Up": {
+		"method": "calcCode",
+		"code": "(>H:checklist_scroll_up)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 Checklists Scroll Down": {
+		"method": "calcCode",
+		"code": "(>H:checklist_scroll_down)"
+	},
+	"FlightFX.Visionjet SF50.Miscellaneous.Input.SF50 Checklists Scroll Select": {
+		"method": "calcCode",
+		"code": "(>H:checklist_checklist_select)"
+	},
+	"Asobo.CJ4 AAU1.Lights.Output.Left ceiling light": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_CABIN_1)"
+	},
+	"Asobo.CJ4 AAU1.Lights.Output.Center ceiling light": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_CABIN_3)"
+	},
+	"Asobo.CJ4 AAU1.Lights.Output.Right ceiling light": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_CABIN_2)"
+	},
+	"FlightFX.Visionjet SF50.Fuel.Input.SF50 Fuel Pump Knob Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_knob_stop_run, Bool) d ! (>L:SF50_knob_stop_run) \nif{ 0 (>K:ELECT_FUEL_PUMP_SET) }"
+	},
+	"FlightFX.Visionjet SF50.Engine.Input.SF50 Engine Start Stop Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_knob_stop_run, Bool) if{ 1 (>K:STARTER1_SET) 1 (>K:SET_FUEL_VALVE_ENG1) } \nels{ 0 (>K:STARTER1_SET) 0 (>K:SET_FUEL_VALVE_ENG1) 0 (>K:ELECT_FUEL_PUMP1_SET) }"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_FMC_1_CLR_OnPress": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME,second) (>L:FMC-1-3000-LONGPRESSDELAY)\n(>H:CJ4_FMC_1_BTN_CLR)\n\n"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_FMC_1_CLR_OnRelease": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME, second) (L:FMC-1-3000-LONGPRESSDELAY) - 0.5 > if{\n(>H:CJ4_FMC_1_BTN_CLR_Long) }\n"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_FMC_2_CLR_OnPress": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME,second) (>L:FMC-2-3000-LONGPRESSDELAY)\n(>H:CJ4_FMC_2_BTN_CLR)\n"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_FMC_2_CLR_OnRelease": {
+		"method": "calcCode",
+		"code": "(E:SIMULATION TIME, second) (L:FMC-2-3000-LONGPRESSDELAY) - 0.5 > if{\n(>H:CJ4_FMC_2_BTN_CLR_Long) }"
+	},
+	"Asobo.CJ4 AAU1.Lights.Input.CJ4_SEATBELT_LIGHT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE)"
+	},
+	"Asobo.CJ4 AAU1.Lights.Input.CJ4_SAFETY_LIGHT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:CABIN_NO_SMOKING_ALERT_SWITCH_TOGGLE)"
+	},
+	"Asobo.CJ4 AAU1.Lights.Output.CJ4_LIGHTS_BELT_ON": {
+		"method": "calcCode",
+		"code": "(A:CABIN SEATBELTS ALERT SWITCH,Bool)"
+	},
+	"Asobo.CJ4 AAU1.Lights.Output.CJ4_LIGHTS_SAFETY_ON": {
+		"method": "calcCode",
+		"code": "(A:CABIN NO SMOKING ALERT SWITCH,Bool)"
+	},
+	"Asobo.CJ4 AAU1.Anti-Ice.Input.CJ4_DEICE_WING_ENG_L_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:DEICE_Airframe_1) ! (>L:DEICE_Airframe_1) \n(L:DEICE_Airframe_1) ! \n(L:DEICE_Airframe_2) ! and \n(A:STRUCTURAL DEICE SWITCH, Bool) == \nif{ \n\t(>K:TOGGLE_STRUCTURAL_DEICE) \n} \n1 (A:ENG ANTI ICE:1, Bool) != if{ \n\t (>K:ANTI_ICE_TOGGLE_ENG1) \n}"
+	},
+	"Asobo.CJ4 AAU1.Anti-Ice.Input.CJ4_DEICE_WING_ENG_R_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:DEICE_Airframe_2) ! (>L:DEICE_Airframe_2) \n(L:DEICE_Airframe_1) ! \n(L:DEICE_Airframe_2) ! and \n(A:STRUCTURAL DEICE SWITCH, Bool) == \nif{ \n\t(>K:TOGGLE_STRUCTURAL_DEICE) \n} \n(L:DEICE_Airframe_2) (A:ENG ANTI ICE:2, Bool) != if{ \n\t (>K:ANTI_ICE_TOGGLE_ENG2) \n}"
+	},
+	"PMDG.B737-700.Controls.Input (Potentiometer).PMDG B737 Flaps Set (Potentiometer)": {
+		"method": "calcCode",
+		"code": "@ 20 - 10.03 / near 0 max 100 min s0 \nl0 5 < if{ 714101 (>K:ROTOR_BRAKE) quit } \nl0 15 < if{ 714201 (>K:ROTOR_BRAKE) quit }\nl0 35 < if{ 714301 (>K:ROTOR_BRAKE) quit }\nl0 50 < if{ 714401 (>K:ROTOR_BRAKE) quit }\nl0 64 < if{ 714501 (>K:ROTOR_BRAKE) quit }\nl0 75 < if{ 714601 (>K:ROTOR_BRAKE) quit }\nl0 85 < if{ 714701 (>K:ROTOR_BRAKE) quit }\nl0 98 < if{ 714801 (>K:ROTOR_BRAKE) quit }\n714901 (>K:ROTOR_BRAKE)"
+	},
+	"Carenado.M20R OVATION.Lights.Input.LIGHT_CABIN_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_5) 13 - 0 max 100 min s0 (>L:LIGHTING_POTENTIOMETER_5)\n(L:LIGHTING_POTENTIOMETER_5)\n (>K:LIGHT_POTENTIOMETER_5_SET) \n"
+	},
+	"Carenado.M20R OVATION.Lights.Input.LIGHT_CABIN_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_POTENTIOMETER_5) 13 + 0 max 100 min s0 (>L:LIGHTING_POTENTIOMETER_5)\n(L:LIGHTING_POTENTIOMETER_5)\n (>K:LIGHT_POTENTIOMETER_5_SET) "
+	},
+	"Carenado.M20R OVATION.Lights.Input.LIGHT_PANEL_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_PANEL_1) 5 - 0 max 100 min s0 \n(>L:LIGHTING_PANEL_1) \nl0 3 (>K:2:LIGHT_POTENTIOMETER_SET) \n(A:LIGHT PANEL:1, Bool) s2 \n(L:LIGHTING_PANEL_1) 0 > != if{ \n	l2 ! 1 l0 (>K:2:PANEL_LIGHTS_SET) quit \n}"
+	},
+	"Carenado.M20R OVATION.Lights.Input.LIGHT_PANEL_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_PANEL_1) 5 + 0 max 100 min s0 \n(>L:LIGHTING_PANEL_1) \nl0 3 (>K:2:LIGHT_POTENTIOMETER_SET)\n(A:LIGHT PANEL:1, Bool) s2 \n(L:LIGHTING_PANEL_1) 0 > != if{ \n	l2 ! 1 l0 (>K:2:PANEL_LIGHTS_SET) quit \n}"
+	},
+	"Carenado.M20R OVATION.Autopilot.Input.KAS297_VS_INC": {
+		"method": "calcCode",
+		"code": "(L:GAUGE_ALT_ALERT_MODE, Number) 1 == if{1 (>L:KASVsAltWheelUP) }"
+	},
+	"Carenado.M20R OVATION.Autopilot.Input.KAS297_VS_DEC": {
+		"method": "calcCode",
+		"code": "(L:GAUGE_ALT_ALERT_MODE, Number) 1 == if{1 (>L:KASVsAltWheelDN) }"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A320_Neo_FCU_VS_DEC": {
+		"method": "calcCode",
+		"code": "(>K:A32NX.FCU_VS_DEC)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A320_Neo_FCU_VS_INC": {
+		"method": "calcCode",
+		"code": "(>K:A32NX.FCU_VS_INC)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Elevator Trim Dec": {
+		"method": "calcCode",
+		"code": "67807 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B737-700.Controls.Input.PMDG B737 Elevator Trim Inc": {
+		"method": "calcCode",
+		"code": "67808 (>K:ROTOR_BRAKE)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Altimeter Bug Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A310_FO_ALTIMETER_BUG, Number) 0 <=\n  if{ (L:A310_FO_ALTIMETER BUG, Number) 1000 + (>L:A310_FO_ALTIMETER BUG,) }\nels{  (L:A310_FO_ALTIMETER BUG, Number) 10 - 1000 % (>L:A310_FO_ALTIMETER BUG) }"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Altimeter Bug Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A310_FO_ALTIMETER BUG, Number) 10 + 1000 % (>L:A310_FO_ALTIMETER BUG)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Clock Mode FAST": {
+		"method": "calcCode",
+		"code": "0 (>L:A300DR_CHRONO_GMT_STATUS_FO)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Clock Mode SLOW": {
+		"method": "calcCode",
+		"code": "1 (>L:A300DR_CHRONO_GMT_STATUS_FO)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Clock Mode HLD": {
+		"method": "calcCode",
+		"code": "2 (>L:A300DR_CHRONO_GMT_STATUS_FO)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Clock Mode RUN": {
+		"method": "calcCode",
+		"code": "3 (>L:A300DR_CHRONO_GMT_STATUS_FO)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO Clock Mode SYNC": {
+		"method": "calcCode",
+		"code": "4 (>L:A300DR_CHRONO_GMT_STATUS_FO)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO ET/CHRO Run Stop Toggle": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_ET_TOGGLE_BUTTON_FO)"
+	},
+	"IniBuilds.A310.Flight Instrumentation.Input.A310 FO ET/CHRO Start Stop Reset Push": {
+		"method": "calcCode",
+		"code": "1 (>L:A310_CHRONO_START_BUTTON_FO)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch  GTC 1 Softkey-1": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_SoftKey_1)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 Softkey-2": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_SoftKey_2)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 Softkey-3": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_SoftKey_3)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 TopKnob Large INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_TopKnob_Large_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 TopKnob Large DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_TopKnob_Large_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 TopKnob PUSH": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_TopKnob_Push)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 LowerKnob INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_BottomKnob_Small_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 LowerKnob DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_BottomKnob_Small_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 TopKnob Small INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_TopKnob_Small_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 TopKnob Small DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_TopKnob_Small_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN Perspective Touch GTC 1 LowerKnob PUSH": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_1_BottomKnob_Push)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_NAV__1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_NAV)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_ESC_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_ESC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_ET_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_ET)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_FRMT_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_FRMT)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_TERR_WX_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_TERR_WX)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS3000_TFC_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_Push_TFC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_AS300_AUTO_TILT_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Upr_1_TILT_PUSH)"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Battery 1 Toggle": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_MASTER_BATTERY)"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Battery 2 Toggle": {
+		"method": "calcCode",
+		"code": "2 (>K:TOGGLE_MASTER_BATTERY)"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Battery 1 On": {
+		"method": "calcCode",
+		"code": "1 (A:ELECTRICAL MASTER BATTERY:1, Bool) != if{ \n\t\t1 (>K:TOGGLE_MASTER_BATTERY) }"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Battery 1 Off": {
+		"method": "calcCode",
+		"code": "0 (A:ELECTRICAL MASTER BATTERY:1, Bool) != if{ \n\t\t1 (>K:TOGGLE_MASTER_BATTERY) }"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Battery 2 On": {
+		"method": "calcCode",
+		"code": "1 (A:ELECTRICAL MASTER BATTERY:2, Bool) != if{ \n\t\t2 (>K:TOGGLE_MASTER_BATTERY) }"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Battery 2 Off": {
+		"method": "calcCode",
+		"code": "0 (A:ELECTRICAL MASTER BATTERY:2, Bool) != if{ \n\t\t2 (>K:TOGGLE_MASTER_BATTERY) }"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Gen 1 On": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:1, Bool) ! if{ \n\t 1 1 (>K:2:ALTERNATOR_SET) }"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Gen 1 Off": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:1, Bool) if{ \n\t 1 0 (>K:2:ALTERNATOR_SET) }"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Gen 2 On": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:2, Bool) ! if{ \n\t 2 1 (>K:2:ALTERNATOR_SET) }"
+	},
+	"FlightFX.Visionjet SF50.Electrical.Input.SF50 Elec Gen 2 Off": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG MASTER ALTERNATOR:2, Bool) if{ \n\t 2 0 (>K:2:ALTERNATOR_SET) }"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Lights Strobe On": {
+		"method": "calcCode",
+		"code": "1 s0 1 l0 (>K:2:STROBES_SET) l0 (>L:LIGHTING_STROBE_1)"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Lights Strobe Off": {
+		"method": "calcCode",
+		"code": "0 s0 1 l0 (>K:2:STROBES_SET) l0 (>L:LIGHTING_STROBE_1)"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Lights Landing On": {
+		"method": "calcCode",
+		"code": "1 s0 1 l0 (>K:2:LANDING_LIGHTS_SET) l0 (>L:LIGHTING_LANDING_1)"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Lights Landing Off": {
+		"method": "calcCode",
+		"code": "0 s0 1 l0 (>K:2:LANDING_LIGHTS_SET) l0 (>L:LIGHTING_LANDING_1)"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Lights Wing Ice On": {
+		"method": "calcCode",
+		"code": "1 s0 1 l0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_1)"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Lights Wing Ice Off": {
+		"method": "calcCode",
+		"code": "0 s0 1 l0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_1)"
+	},
+	"FlightFX.Visionjet SF50.Air Condition / Pressurization.Input.SF50 Master Oxygen On": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_oxygen_switch, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Air Condition / Pressurization.Input.SF50 Master Oxygen Off": {
+		"method": "calcCode",
+		"code": "0 (>L:SF50_oxygen_switch, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Air Condition / Pressurization.Input.SF50 Fresh Air Max": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_air_flow_switch, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Air Condition / Pressurization.Input.SF50 Fresh Air Off": {
+		"method": "calcCode",
+		"code": "0 (>L:SF50_air_flow_switch, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Probe Heat On": {
+		"method": "calcCode",
+		"code": "1 s0 1 l0 (>K:2:PITOT_HEAT_SET) l0 (>L:DEICE_Pitot_1)"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Probe Heat Off": {
+		"method": "calcCode",
+		"code": "0 s0 1 l0 (>K:2:PITOT_HEAT_SET) l0 (>L:DEICE_Pitot_1)"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Engine On": {
+		"method": "calcCode",
+		"code": "(A:ENG ANTI ICE:1, Bool) ! if{ (>K:ANTI_ICE_TOGGLE_ENG1) }"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Engine Off": {
+		"method": "calcCode",
+		"code": "(A:ENG ANTI ICE:1, Bool) if{ (>K:ANTI_ICE_TOGGLE_ENG1) }"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Wing Stab On": {
+		"method": "calcCode",
+		"code": "1 s0 (A:STRUCTURAL DEICE SWITCH, Bool) s1 != if{ \n\t (>K:TOGGLE_STRUCTURAL_DEICE) } \nl0 (>L:DEICE_Airframe_1)\n1 (>L:XMLVAR_IsDeiceAirFrame)"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Wing Stab Off": {
+		"method": "calcCode",
+		"code": "0 s0 (A:STRUCTURAL DEICE SWITCH, Bool) != if{ \n\t (>K:TOGGLE_STRUCTURAL_DEICE) } \nl0 (>L:DEICE_Airframe_1)\n0 (>L:XMLVAR_IsDeiceAirFrame)"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Windshield On": {
+		"method": "calcCode",
+		"code": "1 (A:WINDSHIELD DEICE SWITCH, Bool) != if{ \n\t (>K:WINDSHIELD_DEICE_TOGGLE) }"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Windshield Off": {
+		"method": "calcCode",
+		"code": "0 (A:WINDSHIELD DEICE SWITCH, Bool) != if{ \n\t (>K:WINDSHIELD_DEICE_TOGGLE) }"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Windshield High": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_deice_high, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Windshield Norm": {
+		"method": "calcCode",
+		"code": "0 (>L:SF50_deice_high, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Anti-Ice.Input.SF50 Antiice Windshield Max Toggle": {
+		"method": "calcCode",
+		"code": "(L:SF50_deice_max, Bool) ! (>L:SF50_deice_max, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Ovhd Cabin 1 Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_CABIN_1) 5 + 0 max 100 min s0 (>L:LIGHTING_CABIN_1) \nl0 20 (>K:2:LIGHT_POTENTIOMETER_SET) \n(A:LIGHT CABIN:1, Bool) s2 \n(L:LIGHTING_CABIN_1) 0 > != if{ \n\t l2 ! 1 l0 (>K:2:CABIN_LIGHTS_SET) quit }"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Ovhd Cabin 1 Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_CABIN_1) 5 - 0 max 100 min s0 (>L:LIGHTING_CABIN_1) \nl0 20 (>K:2:LIGHT_POTENTIOMETER_SET) \n(A:LIGHT CABIN:1, Bool) s2 \n(L:LIGHTING_CABIN_1) 0 > != if{ \n\t l2 ! 1 l0 (>K:2:CABIN_LIGHTS_SET) quit }"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Ovhd Cabin 2 Light Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_CABIN_2) 5 + 0 max 100 min s0 (>L:LIGHTING_CABIN_2) \nl0 21 (>K:2:LIGHT_POTENTIOMETER_SET) \n(A:LIGHT CABIN:2, Bool) s2 \n(L:LIGHTING_CABIN_2) 0 > != if{ \n\t l2 ! 2 l0 (>K:2:CABIN_LIGHTS_SET) quit }"
+	},
+	"FlightFX.Visionjet SF50.Lights.Input.SF50 Ovhd Cabin 2 Light Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_CABIN_2) 5 - 0 max 100 min s0 (>L:LIGHTING_CABIN_2) \nl0 21 (>K:2:LIGHT_POTENTIOMETER_SET) \n(A:LIGHT CABIN:2, Bool) s2 \n(L:LIGHTING_CABIN_2) 0 > != if{ \n\t l2 ! 2 l0 (>K:2:CABIN_LIGHTS_SET) quit }"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_TopKnob_Large_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_TopKnob_Large_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_TopKnob_Large_DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_TopKnob_Large_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_TopKnob_Small_DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_TopKnob_Small_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_TopKnob_Small_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_TopKnob_Small_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_TopKnob_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_TopKnob_Push)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_Softkey-1": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_SoftKey_1)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_Softkey-2": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_SoftKey_2)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_Softkey-3": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_SoftKey_3)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_LowerKnob_DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_BottomKnob_Small_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_LowerKnob_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_BottomKnob_Small_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_2_LowerKnob_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_2_BottomKnob_Push)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_TopKnob_Large_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_TopKnob_Large_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_TopKnob_Large_DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_TopKnob_Large_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_TopKnob_Small_DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_TopKnob_Small_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_TopKnob_Small_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_TopKnob_Small_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_TopKnob_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_TopKnob_Push)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_Softkey-1": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_SoftKey_1)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_Softkey-2": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_SoftKey_2)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_Softkey-3": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_SoftKey_3)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_LowerKnob_DEC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_BottomKnob_Small_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_LowerKnob_INC": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_BottomKnob_Small_INC)"
+	},
+	"FlightFX.Visionjet SF50.Avionics.Input.GARMIN_Perspective_Touch_GTC_3_LowerKnob_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:AS3000_TSC_Horizontal_3_BottomKnob_Push)"
+	},
+	"PMDG.B737-700.Autopilot.Output. PMDG B737 MCP Speed A B Indicator": {
+		"method": "calcCode",
+		"code": "(L:ngx_SPDsymbols, number)"
+	},
+	"Got Friends.EA-7 Edgley Optica.Safety.Input.Emergency Locator Transmitter ": {
+		"method": "calcCode",
+		"code": "0 (>L:ELT_ON)  -- Set ELT to ON\n1 (>L:ELT_ON)  -- Set ELT to Arm\n(L:ELT_ON)	 -- Read ELT switch state"
+	},
+	"SimWorks Studios.Kodiak 100.Engine.Input.Kodiak 100 Ignition toggle": {
+		"method": "calcCode",
+		"code": "(L:SWS_ENGINE_Switch_Ignition_1, Bool) ! (>L:SWS_ENGINE_Switch_Ignition_1, Bool)"
+	},
+	"SimWorks Studios.Kodiak 100.Engine.Input.Kodiak 100 Ignition On": {
+		"method": "calcCode",
+		"code": "1 (>L:SWS_ENGINE_Switch_Ignition_1, Bool)"
+	},
+	"SimWorks Studios.Kodiak 100.Engine.Input.Kodiak 100 Ignition Off": {
+		"method": "calcCode",
+		"code": "0 (>L:SWS_ENGINE_Switch_Ignition_1, Bool)"
+	},
+	"Just Flight.C208 Caravan.Electrical.Input.Starter - Start": {
+		"method": "calcCode",
+		"code": "2 (>K:1:STARTER1_SET) \n1 (>K:1:TURBINE_IGNITION_SWITCH_SET1)"
+	},
+	"Just Flight.C208 Caravan.Electrical.Input.Starter - OFF": {
+		"method": "calcCode",
+		"code": "0 (>A:TURB ENG IGNITION SWITCH EX1:1, Enum) \n0 (>L:XMLVAR_Ignition)"
+	},
+	"Just Flight.C208 Caravan.Electrical.Input.Starter - Motor": {
+		"method": "calcCode",
+		"code": "1 (>K:1:STARTER1_SET) \n0 (>K:1:TURBINE_IGNITION_SWITCH_SET1)"
+	},
+	"Asobo.Longitude.Autopilot.Input.Longitude AP FLC Toggle": {
+		"method": "calcCode",
+		"code": "(>K:FLIGHT_LEVEL_CHANGE) \n(A:AIRSPEED INDICATED, knots) (>K:AP_SPD_VAR_SET)"
+	},
+	"Asobo.Longitude.Autopilot.Input.Longitude AP APPR Toggle": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT APPROACH HOLD, Bool) (A:AUTOPILOT GLIDESLOPE HOLD, Bool) ! and if{ (>K:AP_APR_HOLD) } (>K:AP_APR_HOLD)"
+	},
+	"Asobo.Longitude.Autopilot.Input.Longitude AP FD Left Toggle": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"Asobo.Longitude.Autopilot.Input.Longitude AP FD Right Toggle": {
+		"method": "calcCode",
+		"code": "2 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"Asobo.Longitude.Autopilot.Output.Longitude AP FD Right Button Indicator": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE:2, Bool)"
+	},
+	"Asobo.Longitude.Autopilot.Output.Longitude AP FD Left Button Indicator": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE:1, Bool)"
+	},
+	"Asobo.Longitude.Autopilot.Input.Longitude AP VS Toggle": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_VS_HOLD)"
+	},
+	"Asobo.Longitude.Autopilot.Output.Longitude AP VS Button LED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD, Bool)"
+	},
+	"Microsoft.Generic.Radio.Input.VOR1_OBI_FAST_DEC": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:1, Degrees) 10 - dnor (>K:VOR1_SET)"
+	},
+	"Microsoft.Generic.Radio.Input.VOR2_OBI_FAST_DEC": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:2, Degrees) 10 - dnor (>K:VOR2_SET)"
+	},
+	"Microsoft.Generic.Radio.Input.VOR1_OBI_FAST_INC": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:1, Degrees) 10 + dnor (>K:VOR1_SET)"
+	},
+	"Microsoft.Generic.Radio.Input.VOR2_OBI_FAST_INC": {
+		"method": "calcCode",
+		"code": "(A:NAV OBS:2, Degrees) 10 + dnor (>K:VOR2_SET)"
+	},
+	"Flysimware.Cessna 414A.Engines.Input.C414A Eng1 Starter Press": {
+		"method": "calcCode",
+		"code": "1 (>L:TOGGLE_STARTER1, Bool)\n1 (>L:STARTER1, Bool)"
+	},
+	"Flysimware.Cessna 414A.Engines.Input.C414A Eng1 Starter Release": {
+		"method": "calcCode",
+		"code": "0 (>L:TOGGLE_STARTER1, Bool)\n0 (>L:STARTER1, Bool)"
+	},
+	"Flysimware.Cessna 414A.Engines.Input.C414A Eng2 Starter Press": {
+		"method": "calcCode",
+		"code": "1 (>L:TOGGLE_STARTER2, Bool)\n1 (>L:STARTER2, Bool)"
+	},
+	"Flysimware.Cessna 414A.Engines.Input.C414A Eng2 Starter Release": {
+		"method": "calcCode",
+		"code": "0 (>L:TOGGLE_STARTER2, Bool)\n0 (>L:STARTER2, Bool)"
+	},
+	"Flysimware.Cessna 414A.Engines.Input.C414A Eng1 Prime  Press": {
+		"method": "calcCode",
+		"code": " 0 (>L:GENERIC_Momentary_PRIMER_SWITCH) \n(>K:TOGGLE_PRIMER1) \n(>H:GENERIC_Momentary_PRIMER_SWITCH) "
+	},
+	"Flysimware.Cessna 414A.Engines.Input.C414A Eng Prime  Release": {
+		"method": "calcCode",
+		"code": "1 (>L:GENERIC_Momentary_PRIMER_SWITCH) \n(>H:GENERIC_Momentary_PRIMER_SWITCH) "
+	},
+	"Flysimware.Cessna 414A.Engines.Input.C414A Eng2 Prime  Press": {
+		"method": "calcCode",
+		"code": "2 (>L:GENERIC_Momentary_PRIMER_SWITCH) \n(>K:TOGGLE_PRIMER2) \n(>H:GENERIC_Momentary_PRIMER_SWITCH)"
+	},
+	"Flysimware.Cessna 414A.Fuel.Input.C414A Aux Fuel Pump 1 Low": {
+		"method": "calcCode",
+		"code": "0 (>L:GENERIC_Momentary_AUX_LEFT_PUMP_SWITCH) \n(A:GENERAL ENG FUEL PUMP SWITCH:1, Bool) 0 == if{ \n\t\t (>K:TOGGLE_ELECT_FUEL_PUMP1) \t} \n(>H:GENERIC_Momentary_AUX_LEFT_PUMP_SWITCH) "
+	},
+	"Flysimware.Cessna 414A.Fuel.Input.C414A Aux Fuel Pump 1 Off": {
+		"method": "calcCode",
+		"code": "1 (>L:GENERIC_Momentary_AUX_LEFT_PUMP_SWITCH) \n(A:GENERAL ENG FUEL PUMP SWITCH:1, Bool) 1 == if{ \n	 (>K:TOGGLE_ELECT_FUEL_PUMP1) } \n(>H:GENERIC_Momentary_AUX_LEFT_PUMP_SWITCH)"
+	},
+	"Flysimware.Cessna 414A.Fuel.Input.C414A Aux Fuel Pump 1 High": {
+		"method": "calcCode",
+		"code": "2 (>L:GENERIC_Momentary_AUX_LEFT_PUMP_SWITCH) \n(A:GENERAL ENG FUEL PUMP SWITCH:1, Bool) 0 == if{ \n	(>K:TOGGLE_ELECT_FUEL_PUMP1) } \n(>H:GENERIC_Momentary_AUX_LEFT_PUMP_SWITCH)"
+	},
+	"Flysimware.Cessna 414A.Fuel.Input.C414A Aux Fuel Pump 2 Low": {
+		"method": "calcCode",
+		"code": "0 (>L:GENERIC_Momentary_AUX_RIGHT_PUMP_SWITCH) \n(A:GENERAL ENG FUEL PUMP SWITCH:2, Bool) 0 == if{ \n\t\t (>K:TOGGLE_ELECT_FUEL_PUMP2) } \n(>H:GENERIC_Momentary_AUX_RIGHT_PUMP_SWITCH)"
+	},
+	"Flysimware.Cessna 414A.Fuel.Input.C414A Aux Fuel Pump 2 Off": {
+		"method": "calcCode",
+		"code": "1 (>L:GENERIC_Momentary_AUX_RIGHT_PUMP_SWITCH) \n(A:GENERAL ENG FUEL PUMP SWITCH:2, Bool) 1 == if{ \n\t\t (>K:TOGGLE_ELECT_FUEL_PUMP2) } \n(>H:GENERIC_Momentary_AUX_RIGHT_PUMP_SWITCH)"
+	},
+	"Flysimware.Cessna 414A.Fuel.Input.C414A Aux Fuel Pump 2 High": {
+		"method": "calcCode",
+		"code": "2 (>L:GENERIC_Momentary_AUX_RIGHT_PUMP_SWITCH) \n(A:GENERAL ENG FUEL PUMP SWITCH:2, Bool) 0 == if{ \n\t\t (>K:TOGGLE_ELECT_FUEL_PUMP2) } \n(>H:GENERIC_Momentary_AUX_RIGHT_PUMP_SWITCH)"
+	},
+	"Fly By Wire.A320-Dev.Controls.Output.A32NX Rudder Trim Angle": {
+		"method": "calcCode",
+		"code": "(L:A32NX_HYD_RUDDER_TRIM_FEEDBACK_ANGLE)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 RADIO FRACT DEC": {
+		"method": "calcCode",
+		"code": "(>K:COM3_RADIO_FRACT_DEC)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 RADIO FRACT INC": {
+		"method": "calcCode",
+		"code": "(>K:COM3_RADIO_FRACT_INC)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 RADIO WHOLE DEC": {
+		"method": "calcCode",
+		"code": "(>K:COM3_RADIO_WHOLE_DEC)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 RADIO WHOLE INC": {
+		"method": "calcCode",
+		"code": "(>K:COM3_RADIO_WHOLE_INC)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 RADIO SWAP": {
+		"method": "calcCode",
+		"code": "(>K:COM3_RADIO_SWAP)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 RECEIVE SELECT": {
+		"method": "calcCode",
+		"code": "(>K:COM3_RECEIVE_SELECT)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 VOLUME SET": {
+		"method": "calcCode",
+		"code": "(>K:COM3_VOLUME_SET)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 VOLUME INC": {
+		"method": "calcCode",
+		"code": "(>K:COM3_VOLUME_INC)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 VOLUME DEC": {
+		"method": "calcCode",
+		"code": "(>K:COM3_VOLUME_DEC)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 STBY RADIO SET": {
+		"method": "calcCode",
+		"code": "(>K:COM3_STBY_RADIO_SET)"
+	},
+	"Microsoft.Generic.Radio.Input.COM3 STBY RADIO SET HZ": {
+		"method": "calcCode",
+		"code": "(>K:COM3_STBY_RADIO_SET_HZ)"
+	},
+	"FenixSim.A320.Flight Controls.Input (Potentiometer).FNX320 Flaps Lever Set": {
+		"method": "calcCode",
+		"code": "@ 255.75 / 0 near max 4 min (>L:S_FC_FLAPS)"
+	},
+	"FenixSim.A320.Flight Controls.Input (Potentiometer).FNX320 Speed Brake Lever Set": {
+		"method": "calcCode",
+		"code": "@ 15 - 336 / 0 max 3 min (>L:A_FC_SPEEDBRAKE)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_UPR_MENU_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_UPR_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_UPR_MENU_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_UPR_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_LWR_MENU_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_LWR_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_LWR_MENU_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_LWR_MENU)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_ENG_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_ENG)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_ENG_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_ENG)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_ESC_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_ESC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_ESC_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_ESC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_TERR_WX_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_TERR_WX)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_TERR_WX_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_TERR_WX)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_TFC_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_TFC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_TFC_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_TFC)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_1_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_MEM1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_1_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_MEM1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_1_1_HOLD": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Hold_MEM1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_1_2_HOLD": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Hold_MEM1)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_2_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_MEM2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_2_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_MEM2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_2_1_HOLD": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Hold_MEM2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_2_2_HOLD": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Hold_MEM2)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_3_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_MEM3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_3_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_MEM3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_3_1_HOLD": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Hold_MEM3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_MEM_3_2_HOLD": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Hold_MEM3)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_SYS_1_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_1_Push_SYS)"
+	},
+	"Asobo.CJ4 AAU1.Avionics.Input.CJ4_MFD_SYS_2_PUSH": {
+		"method": "calcCode",
+		"code": "(>H:Generic_Lwr_2_Push_SYS)"
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_ENG": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 0 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_BLEED": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 1 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_PRESS": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 2 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_ELEC": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 3 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_HYD": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 4 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_FUEL": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 5 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_APU": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 6 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_COND": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 7 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_DOOR": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 8 == "
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_WHEEL": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 9 ==\n"
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_F_CTL": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 10 =="
+	},
+	"Fly By Wire.A320.ECAM.Output.A32NX_ECAM_ACTIVE_PAGE_STS": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 11 =="
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM ENG Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 0 != if{  \n   0 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM BLEED Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 1 != if{  \n   1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM PRESS Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 2 != if{  \n   2 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM ELEC Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 3 != if{  \n   3 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM HYD Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 4 != if{  \n   4 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM FUEL Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 5 != if{  \n   5 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM APU Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 6 != if{  \n   6 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM COND Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 7 != if{  \n   7 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM DOOR Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 8 != if{  \n   8 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM WHEEL Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 9 != if{  \n   9 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM FCTL Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 10 != if{  \n   10 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM ALL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_ECAM_ALL_Push_IsDown)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM ALL Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_ECAM_ALL_Push_IsDown)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM STS Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 11 != if{  \n   11 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM TOCONFIG Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_TOCONFIG)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM EMERCANC Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_EMERCANC)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM CLR Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CLR)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM CLR2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CLR2)"
+	},
+	"Fly By Wire.A320-Dev.ECAM.Input.A32NX ECAM RCL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_RCL)"
+	},
+	"Hype Performance Group.H145.Autopilot.Input.H145_SDK_APCP_IAS_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>H:H145_SDK_APCP_IAS_TOGGLE)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK1L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK1L, Number) ++ (>L:ASCRJ_MCDU1_LSK1L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK2L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK2L, Number) ++ (>L:ASCRJ_MCDU1_LSK2L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK3L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK3L, Number) ++ (>L:ASCRJ_MCDU1_LSK3L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK4L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK4L, Number) ++ (>L:ASCRJ_MCDU1_LSK4L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK5L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK5L, Number) ++ (>L:ASCRJ_MCDU1_LSK5L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK6L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK6L, Number) ++ (>L:ASCRJ_MCDU1_LSK6L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK1R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK1R, Number) ++ (>L:ASCRJ_MCDU1_LSK1R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK2R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK2R, Number) ++ (>L:ASCRJ_MCDU1_LSK2R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK3R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK3R, Number) ++ (>L:ASCRJ_MCDU1_LSK3R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK4R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK4R, Number) ++ (>L:ASCRJ_MCDU1_LSK4R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK5R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK5R, Number) ++ (>L:ASCRJ_MCDU1_LSK5R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LSK6R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LSK6R, Number) ++ (>L:ASCRJ_MCDU1_LSK6R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_MSG": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_MSG, Number) ++ (>L:ASCRJ_MCDU1_MSG)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_DIR_INTC": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_DIR_INTC, Number) ++ (>L:ASCRJ_MCDU1_DIR_INTC)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_FPLN": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_FPLN, Number) ++ (>L:ASCRJ_MCDU1_FPLN)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_DEP_ARR": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_DEP_ARR, Number) ++ (>L:ASCRJ_MCDU1_DEP_ARR)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_HOLD": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_HOLD, Number) ++ (>L:ASCRJ_MCDU1_HOLD)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_UP": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_UP, Number) ++ (>L:ASCRJ_MCDU1_UP)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_PREV_PAGE": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_PREV_PAGE, Number) ++ (>L:ASCRJ_MCDU1_PREV_PAGE)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_NEXT_PAGE": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_NEXT_PAGE, Number) ++ (>L:ASCRJ_MCDU1_NEXT_PAGE)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_INDEX": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_INDEX, Number) ++ (>L:ASCRJ_MCDU1_INDEX)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_FIX": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_FIX, Number) ++ (>L:ASCRJ_MCDU1_FIX)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_LEGS": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_LEGS, Number) ++ (>L:ASCRJ_MCDU1_LEGS)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_SEC_FPLN": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_SEC_FPLN, Number) ++ (>L:ASCRJ_MCDU1_SEC_FPLN)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_VNAV": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_VNAV, Number) ++ (>L:ASCRJ_MCDU1_VNAV)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_DOWN": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_DOWN, Number) ++ (>L:ASCRJ_MCDU1_DOWN)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_MCDU_MENU": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_MCDU_MENU, Number) ++ (>L:ASCRJ_MCDU1_MCDU_MENU)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_EXEC": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_EXEC, Number) ++ (>L:ASCRJ_MCDU1_EXEC)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_RADIO": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_RADIO, Number) ++ (>L:ASCRJ_MCDU1_RADIO)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_PROG": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_PROG, Number) ++ (>L:ASCRJ_MCDU1_PROG)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_PERF": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_PERF, Number) ++ (>L:ASCRJ_MCDU1_PERF)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_MFD_DATA": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_MFD_DATA, Number) ++ (>L:ASCRJ_MCDU1_MFD_DATA)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_MFD_MENU": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_MFD_MENU, Number) ++ (>L:ASCRJ_MCDU1_MFD_MENU)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_MFD_ADV": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_MFD_ADV, Number) ++ (>L:ASCRJ_MCDU1_MFD_ADV)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_0": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_0, Number) ++ (>L:ASCRJ_MCDU1_0)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_1": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_1, Number) ++ (>L:ASCRJ_MCDU1_1)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_2": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_2, Number) ++ (>L:ASCRJ_MCDU1_2)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_3": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_3, Number) ++ (>L:ASCRJ_MCDU1_3)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_4": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_4, Number) ++ (>L:ASCRJ_MCDU1_4)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_5": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_5, Number) ++ (>L:ASCRJ_MCDU1_5)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_6": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_6, Number) ++ (>L:ASCRJ_MCDU1_6)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_7": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_7, Number) ++ (>L:ASCRJ_MCDU1_7)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_8": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_8, Number) ++ (>L:ASCRJ_MCDU1_8)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_9": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_9, Number) ++ (>L:ASCRJ_MCDU1_9)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_PLUS": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_PLUS, Number) ++ (>L:ASCRJ_MCDU1_PLUS)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_PERIOD": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_PERIOD, Number) ++ (>L:ASCRJ_MCDU1_PERIOD)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_A": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_A, Number) ++ (>L:ASCRJ_MCDU1_A)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_B": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_B, Number) ++ (>L:ASCRJ_MCDU1_B)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_C": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_C, Number) ++ (>L:ASCRJ_MCDU1_C)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_D": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_D, Number) ++ (>L:ASCRJ_MCDU1_D)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_E": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_E, Number) ++ (>L:ASCRJ_MCDU1_E)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_F": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_F, Number) ++ (>L:ASCRJ_MCDU1_F)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_G": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_G, Number) ++ (>L:ASCRJ_MCDU1_G)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_H": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_H, Number) ++ (>L:ASCRJ_MCDU1_H)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_I": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_I, Number) ++ (>L:ASCRJ_MCDU1_I)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_J": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_J, Number) ++ (>L:ASCRJ_MCDU1_J)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_K": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_K, Number) ++ (>L:ASCRJ_MCDU1_K)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_L, Number) ++ (>L:ASCRJ_MCDU1_L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_M": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_M, Number) ++ (>L:ASCRJ_MCDU1_M)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_N": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_N, Number) ++ (>L:ASCRJ_MCDU1_N)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_O": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_O, Number) ++ (>L:ASCRJ_MCDU1_O)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_P": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_P, Number) ++ (>L:ASCRJ_MCDU1_P)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_Q": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_Q, Number) ++ (>L:ASCRJ_MCDU1_Q)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_R, Number) ++ (>L:ASCRJ_MCDU1_R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_S": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_S, Number) ++ (>L:ASCRJ_MCDU1_S)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_T": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_T, Number) ++ (>L:ASCRJ_MCDU1_T)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_U": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_U, Number) ++ (>L:ASCRJ_MCDU1_U)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_V": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_V, Number) ++ (>L:ASCRJ_MCDU1_V)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_W": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_W, Number) ++ (>L:ASCRJ_MCDU1_W)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_X": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_X, Number) ++ (>L:ASCRJ_MCDU1_X)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_Y": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_Y, Number) ++ (>L:ASCRJ_MCDU1_Y)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_Z": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_Z, Number) ++ (>L:ASCRJ_MCDU1_Z)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_SP": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_SP, Number) ++ (>L:ASCRJ_MCDU1_SP)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_DEL": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_DEL, Number) ++ (>L:ASCRJ_MCDU1_DEL)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_SLASH": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_SLASH, Number) ++ (>L:ASCRJ_MCDU1_SLASH)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU1_CLR": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU1_CLR, Number) ++ (>L:ASCRJ_MCDU1_CLR)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK1L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK1L, Number) ++ (>L:ASCRJ_MCDU2_LSK1L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK2L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK2L, Number) ++ (>L:ASCRJ_MCDU2_LSK2L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK3L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK3L, Number) ++ (>L:ASCRJ_MCDU2_LSK3L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK4L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK4L, Number) ++ (>L:ASCRJ_MCDU2_LSK4L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK5L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK5L, Number) ++ (>L:ASCRJ_MCDU2_LSK5L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK6L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK6L, Number) ++ (>L:ASCRJ_MCDU2_LSK6L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK1R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK1R, Number) ++ (>L:ASCRJ_MCDU2_LSK1R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK2R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK2R, Number) ++ (>L:ASCRJ_MCDU2_LSK2R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK3R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK3R, Number) ++ (>L:ASCRJ_MCDU2_LSK3R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK4R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK4R, Number) ++ (>L:ASCRJ_MCDU2_LSK4R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK5R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK5R, Number) ++ (>L:ASCRJ_MCDU2_LSK5R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LSK6R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LSK6R, Number) ++ (>L:ASCRJ_MCDU2_LSK6R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_MSG": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_MSG, Number) ++ (>L:ASCRJ_MCDU2_MSG)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_DIR_INTC": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_DIR_INTC, Number) ++ (>L:ASCRJ_MCDU2_DIR_INTC)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_FPLN": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_FPLN, Number) ++ (>L:ASCRJ_MCDU2_FPLN)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_DEP_ARR": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_DEP_ARR, Number) ++ (>L:ASCRJ_MCDU2_DEP_ARR)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_HOLD": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_HOLD, Number) ++ (>L:ASCRJ_MCDU2_HOLD)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_UP": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_UP, Number) ++ (>L:ASCRJ_MCDU2_UP)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_PREV_PAGE": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_PREV_PAGE, Number) ++ (>L:ASCRJ_MCDU2_PREV_PAGE)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_NEXT_PAGE": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_NEXT_PAGE, Number) ++ (>L:ASCRJ_MCDU2_NEXT_PAGE)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_INDEX": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_INDEX, Number) ++ (>L:ASCRJ_MCDU2_INDEX)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_FIX": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_FIX, Number) ++ (>L:ASCRJ_MCDU2_FIX)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_LEGS": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_LEGS, Number) ++ (>L:ASCRJ_MCDU2_LEGS)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_SEC_FPLN": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_SEC_FPLN, Number) ++ (>L:ASCRJ_MCDU2_SEC_FPLN)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_VNAV": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_VNAV, Number) ++ (>L:ASCRJ_MCDU2_VNAV)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_DOWN": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_DOWN, Number) ++ (>L:ASCRJ_MCDU2_DOWN)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_MCDU_MENU": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_MCDU_MENU, Number) ++ (>L:ASCRJ_MCDU2_MCDU_MENU)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_EXEC": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_EXEC, Number) ++ (>L:ASCRJ_MCDU2_EXEC)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_RADIO": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_RADIO, Number) ++ (>L:ASCRJ_MCDU2_RADIO)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_PROG": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_PROG, Number) ++ (>L:ASCRJ_MCDU2_PROG)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_PERF": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_PERF, Number) ++ (>L:ASCRJ_MCDU2_PERF)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_MFD_DATA": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_MFD_DATA, Number) ++ (>L:ASCRJ_MCDU2_MFD_DATA)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_MFD_MENU": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_MFD_MENU, Number) ++ (>L:ASCRJ_MCDU2_MFD_MENU)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_MFD_ADV": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_MFD_ADV, Number) ++ (>L:ASCRJ_MCDU2_MFD_ADV)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_0": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_0, Number) ++ (>L:ASCRJ_MCDU2_0)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_1": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_1, Number) ++ (>L:ASCRJ_MCDU2_1)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_2": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_2, Number) ++ (>L:ASCRJ_MCDU2_2)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_3": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_3, Number) ++ (>L:ASCRJ_MCDU2_3)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_4": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_4, Number) ++ (>L:ASCRJ_MCDU2_4)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_5": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_5, Number) ++ (>L:ASCRJ_MCDU2_5)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_6": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_6, Number) ++ (>L:ASCRJ_MCDU2_6)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_7": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_7, Number) ++ (>L:ASCRJ_MCDU2_7)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_8": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_8, Number) ++ (>L:ASCRJ_MCDU2_8)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_9": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_9, Number) ++ (>L:ASCRJ_MCDU2_9)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_PLUS": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_PLUS, Number) ++ (>L:ASCRJ_MCDU2_PLUS)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_PERIOD": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_PERIOD, Number) ++ (>L:ASCRJ_MCDU2_PERIOD)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_A": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_A, Number) ++ (>L:ASCRJ_MCDU2_A)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_B": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_B, Number) ++ (>L:ASCRJ_MCDU2_B)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_C": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_C, Number) ++ (>L:ASCRJ_MCDU2_C)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_D": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_D, Number) ++ (>L:ASCRJ_MCDU2_D)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_E": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_E, Number) ++ (>L:ASCRJ_MCDU2_E)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_F": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_F, Number) ++ (>L:ASCRJ_MCDU2_F)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_G": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_G, Number) ++ (>L:ASCRJ_MCDU2_G)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_H": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_H, Number) ++ (>L:ASCRJ_MCDU2_H)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_I": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_I, Number) ++ (>L:ASCRJ_MCDU2_I)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_J": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_J, Number) ++ (>L:ASCRJ_MCDU2_J)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_K": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_K, Number) ++ (>L:ASCRJ_MCDU2_K)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_L": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_L, Number) ++ (>L:ASCRJ_MCDU2_L)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_M": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_M, Number) ++ (>L:ASCRJ_MCDU2_M)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_N": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_N, Number) ++ (>L:ASCRJ_MCDU2_N)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_O": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_O, Number) ++ (>L:ASCRJ_MCDU2_O)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_P": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_P, Number) ++ (>L:ASCRJ_MCDU2_P)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_Q": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_Q, Number) ++ (>L:ASCRJ_MCDU2_Q)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_R": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_R, Number) ++ (>L:ASCRJ_MCDU2_R)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_S": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_S, Number) ++ (>L:ASCRJ_MCDU2_S)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_T": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_T, Number) ++ (>L:ASCRJ_MCDU2_T)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_U": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_U, Number) ++ (>L:ASCRJ_MCDU2_U)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_V": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_V, Number) ++ (>L:ASCRJ_MCDU2_V)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_W": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_W, Number) ++ (>L:ASCRJ_MCDU2_W)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_X": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_X, Number) ++ (>L:ASCRJ_MCDU2_X)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_Y": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_Y, Number) ++ (>L:ASCRJ_MCDU2_Y)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_Z": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_Z, Number) ++ (>L:ASCRJ_MCDU2_Z)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_SP": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_SP, Number) ++ (>L:ASCRJ_MCDU2_SP)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_DEL": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_DEL, Number) ++ (>L:ASCRJ_MCDU2_DEL)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_SLASH": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_SLASH, Number) ++ (>L:ASCRJ_MCDU2_SLASH)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.ASCRJ_MCDU2_CLR": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_CLR, Number) ++ (>L:ASCRJ_MCDU2_CLR)"
+	},
+	"Aerosoft.CRJ 550-700-1000.MCDU.Input.ASCRJ_MCDU2_I": {
+		"method": "calcCode",
+		"code": "(L:ASCRJ_MCDU2_I, Number) ++ (>L:ASCRJ_MCDU2_I)"
+	},
+	"FenixSim.A320.Autopilot.Input.FNX320 Misc Captain Sidestick AP Disconnect Push/Release ": {
+		"method": "calcCode",
+		"code": "1\u00b7(>L:S_FC_CAPT_INST_DISCONNECT,\u00b7number)\u00b7(WAIT:50)\u00b70\u00b7(>L:S_FC_CAPT_INST_DISCONNECT,\u00b7number)\n"
+	},
+	"Asobo.CJ4 AAU1.Lights.Input.CJ4_LIGHTS_PULSE_ON_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_RECOGNITION_1) ! s0 1 l0 (>K:2:RECOGNITION_LIGHTS_SET) l0 (>L:LIGHTING_RECOGNITION_1)"
+	},
+	"Asobo.CJ4 AAU1.Safety.Input.CJ4_LIGHTS_PASS_BELT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:CABIN_SEATBELTS_ALERT_SWITCH_TOGGLE)"
+	},
+	"Asobo.CJ4 AAU1.Safety.Input.CJ4_LIGHTS_PASS_SAFETY_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:CABIN_NO_SMOKING_ALERT_SWITCH_TOGGLE)"
+	},
+	"Zibo.B737-800.Miscellaneous.Output.Cockpit Display Light Test Array": {
+		"method": "calcCode",
+		"code": "laminar/B738/dspl_light_test[Index]"
+	},
+	"Zibo.B737-800.Miscellaneous.Output.Cockpit Lights and Displays Test State Array": {
+		"method": "calcCode",
+		"code": "laminar/B738/dspl_light_test[index]"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_NAVIGATION": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_FMC_1_AP_LNAV)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_VERTICALSPEED": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_FMC_1_AP_VSPEED)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_LOCALIZER": {
+		"method": "calcCode",
+		"code": "(>K:AP_LOC_HOLD)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_APPROACH": {
+		"method": "calcCode",
+		"code": "(>K:AP_APR_HOLD)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_HEADING": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_FMC_1_AP_HEADING_HOLD)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_ALTITUDE": {
+		"method": "calcCode",
+		"code": "1 (>L:AP_ALT_HOLD_ACTIVE)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_FLIGHTLEVELCHANGE": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_FMC_1_AP_FLCH)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_AUTOTHROTTLE - Hold": {
+		"method": "calcCode",
+		"code": "(>K:AUTO_THROTTLE_ARM)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_VERTICALNAVIGATION": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_FMC_1_AP_VNAV)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_AUTOPILOT": {
+		"method": "calcCode",
+		"code": "(>K:AP_MASTER)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_SWITCH_FLIGHTDIRECTOR - On": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AP_ALT_VAR_DEC": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_VAR_DEC)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AP_ALT_VAR_INC": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_VAR_INC)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AP_SPD_VAR_DEC": {
+		"method": "calcCode",
+		"code": "(>K:AP_SPD_VAR_DEC)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AP_SPD_VAR_INC": {
+		"method": "calcCode",
+		"code": "(>K:AP_SPD_VAR_INC)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AP_VS_VAR_DEC": {
+		"method": "calcCode",
+		"code": "(>K:AP_VS_VAR_DEC)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AP_VS_VAR_INC": {
+		"method": "calcCode",
+		"code": "(>K:AP_VS_VAR_INC)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_SWITCH_DISENGAGE - On": {
+		"method": "calcCode",
+		"code": "1 (>K:AUTOPILOT_DISENGAGE_SET)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_SWITCH_DISENGAGE - Off": {
+		"method": "calcCode",
+		"code": "0 (>K:AUTOPILOT_DISENGAGE_SET)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_SWITCH_AUTOTHROTTLE_ARM - On": {
+		"method": "calcCode",
+		"code": "{ 0 == (>K:AUTO_THROTTLE_ARM) } ++ { 1 (>L:AS01B_AUTO_THROTTLE_ARM_STATE) }"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_SWITCH_AUTOTHROTTLE_ARM - Off": {
+		"method": "calcCode",
+		"code": "{ 1 == (>K:AUTO_THROTTLE_ARM) } ++ { 0 (>L:AS01B_AUTO_THROTTLE_ARM_STATE) }"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_SWITCH_FLIGHTDIRECTOR - Off": {
+		"method": "calcCode",
+		"code": "0 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"WB Sim.Cessna 152X.Interaction.Input.C152X-Door-Pilot-toggle": {
+		"method": "calcCode",
+		"code": "(L:C152X_DOOR_PILOT, Bool) ! (>L:C152X_DOOR_PILOT, Bool)"
+	},
+	"WB Sim.Cessna 152X.Interaction.Input.C152X-Door-Copilot-toggle": {
+		"method": "calcCode",
+		"code": "(L:C152X_DOOR_COPILOT, Bool) ! (>L:C152X_DOOR_COPILOT, Bool)"
+	},
+	"WB Sim.Cessna 152X.Autopilot.Input.C152X-Instruments-AP-toggle": {
+		"method": "calcCode",
+		"code": "(L:C152X_APVIZ, Number) ! (>L:C152X_APVIZ, Number)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX.FCU_HDG_PUSH": {
+		"method": "calcCode",
+		"code": "(>K:A32NX.FCU_HDG_PUSH)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX.FCU_HDG_PULL": {
+		"method": "calcCode",
+		"code": "(>K:A32NX.FCU_HDG_PULL)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX.FCU_SPD_PUSH": {
+		"method": "calcCode",
+		"code": "(>K:A32NX.FCU_SPD_PUSH)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Input.A32NX.FCU_SPD_PULL": {
+		"method": "calcCode",
+		"code": "(>K:A32NX.FCU_SPD_PULL)"
+	},
+	"FlightFX.Visionjet SF50.Fuel.Input.SF50 Fuel Pump Knob Off": {
+		"method": "calcCode",
+		"code": "(L:SF50_knob_stop_run, Bool) if{ \n   0 (L:SF50_knob_stop_run, Bool)\n   0 (>K:ELECT_FUEL_PUMP1_SET) }"
+	},
+	"FlightFX.Visionjet SF50.Fuel.Input.SF50 Fuel Pump Knob Run": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_knob_stop_run, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP Speed Ref Wheel Inc": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach) if{ \n\t(A:AUTOPILOT MACH HOLD VAR:0, mach) 0.01 + 100 * (>K:2:AP_MACH_VAR_SET) \n} els{ (A:AUTOPILOT AIRSPEED HOLD VAR:0, knots) 1 + (>K:2:AP_SPD_VAR_SET) } "
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP Speed Ref Wheel Dec": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_AirSpeedIsInMach) if{ \n\t(A:AUTOPILOT MACH HOLD VAR:0, mach) 0.01 - 100 * (>K:2:AP_MACH_VAR_SET) \n} els{ (A:AUTOPILOT AIRSPEED HOLD VAR:0, knots) 1 - 0 max (>K:2:AP_SPD_VAR_SET) } "
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_HEADING_SEL": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_FMC_1_AP_HEADING_SEL)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP HDG Toggle": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_HEADING_HOLD)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP NAV Toggle": {
+		"method": "calcCode",
+		"code": "(>K:AP_NAV1_HOLD)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP APR Toggle": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT APPROACH HOLD, Bool) (A:AUTOPILOT GLIDESLOPE HOLD, Bool) ! and if{ (>K:AP_APR_HOLD) } (>K:AP_APR_HOLD) "
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP Heading Sync": {
+		"method": "calcCode",
+		"code": "(A:HEADING INDICATOR, degrees) (>K:HEADING_BUG_SET)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP HDG Knob Inc": {
+		"method": "calcCode",
+		"code": "1 (A:AUTOPILOT HEADING LOCK DIR:1, degrees) 1 + dnor (>K:2:HEADING_BUG_SET)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP HDG Knob Dec": {
+		"method": "calcCode",
+		"code": "1 (A:AUTOPILOT HEADING LOCK DIR:1, degrees) 1 - dnor (>K:2:HEADING_BUG_SET)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP Button Toggle": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT DISENGAGED, Bool) !  if{ (>K:AP_MASTER)\n\t(A:AUTOPILOT MASTER, Bool) ! if{ (>H:Generic_Autopilot_Manual_Off) } } "
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP FD Toggle": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"Asobo.B787-10.Autopilot.Input.AUTOPILOT_PUSH_ALTITUDE_INTERVENTION": {
+		"method": "calcCode",
+		"code": "(>H:AS01B_FMC_1_AP_ALT_INTERVENTION)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP LVL Button Toggle": {
+		"method": "calcCode",
+		"code": "(>K:AP_WING_LEVELER)\n(A:AUTOPILOT WING LEVELER, Bool) if{\n   (A:AUTOPILOT MASTER, Bool) s0 ! if{ \n	  (>K:AUTOPILOT_ON) }\n   (>K:AP_PITCH_LEVELER_ON) } els{ \n	  (>K:AP_PITCH_LEVELER_OFF) \nl0 if{ (>K:AUTOPILOT_ON) } els{ (>K:AUTOPILOT_OFF) } }\n"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.All Exterior Lights - Park/Parking": {
+		"method": "calcCode",
+		"code": "1 (>L:LIGHTING_STROBE_0)\n1 (>L:STROBE_0_Auto) 1 0 r (>K:2:STROBES_SET)\n0 1 (>K:2:BEACON_LIGHTS_SET)\n0 0 s0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_0)\n0 1 (>K:2:NAV_LIGHTS_SET) 0 1 (>K:2:LOGO_LIGHTS_SET)\n0 s0 (>L:LIGHTING_TAXI_2) \n2 l0 (>K:2:TAXI_LIGHTS_SET) \n3 l0 (>K:2:TAXI_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_2)\n1 (>L:LANDING_2_Retracted) 0 2 r (>K:2:LANDING_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_3) \n1 (>L:LANDING_3_Retracted) 0 3 r (>K:2:LANDING_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_1) \n0 1 r (>K:2:LANDING_LIGHTS_SET) \n0 1 r (>K:2:TAXI_LIGHTS_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.All Exterior Lights - Taxi": {
+		"method": "calcCode",
+		"code": "1 (>L:LIGHTING_STROBE_0)\n1 (>L:STROBE_0_Auto) 1 0 r (>K:2:STROBES_SET)\n0 1 (>K:2:BEACON_LIGHTS_SET)\n0 0 s0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_0)\n0 1 (>K:2:NAV_LIGHTS_SET) 0 1 (>K:2:LOGO_LIGHTS_SET)\n1 s0 (>L:LIGHTING_TAXI_2) \n2 l0 (>K:2:TAXI_LIGHTS_SET) \n3 l0 (>K:2:TAXI_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_2)\n1 (>L:LANDING_2_Retracted) 0 2 r (>K:2:LANDING_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_3) \n1 (>L:LANDING_3_Retracted) 0 3 r (>K:2:LANDING_LIGHTS_SET)\n1 (>L:LIGHTING_LANDING_1) \n0 1 r (>K:2:LANDING_LIGHTS_SET) \n1 1 r (>K:2:TAXI_LIGHTS_SET)\n\n"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.All Exterior Lights - Take Off": {
+		"method": "calcCode",
+		"code": "0 (>L:LIGHTING_STROBE_0)\n0 (>L:STROBE_0_Auto) 1 0 r (>K:2:STROBES_SET)\n0 1 (>K:2:BEACON_LIGHTS_SET)\n0 0 s0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_0)\n0 1 (>K:2:NAV_LIGHTS_SET) 0 1 (>K:2:LOGO_LIGHTS_SET)\n0 s0 (>L:LIGHTING_TAXI_2) \n2 l0 (>K:2:TAXI_LIGHTS_SET) \n3 l0 (>K:2:TAXI_LIGHTS_SET)\n0 (>L:LIGHTING_LANDING_2)\n0 (>L:LANDING_2_Retracted) 1 2 r (>K:2:LANDING_LIGHTS_SET)\n0 (>L:LIGHTING_LANDING_3) \n0 (>L:LANDING_3_Retracted) 1 3 r (>K:2:LANDING_LIGHTS_SET)\n0 (>L:LIGHTING_LANDING_1) \n1 1 r (>K:2:LANDING_LIGHTS_SET) \n0 1 r (>K:2:TAXI_LIGHTS_SET)"
+	},
+	"Fly By Wire.A320-Dev.Lights.Input.All Exterior Lights - In Flight": {
+		"method": "calcCode",
+		"code": "0 (>L:LIGHTING_STROBE_0)\n0 (>L:STROBE_0_Auto) 1 0 r (>K:2:STROBES_SET)\n0 1 (>K:2:BEACON_LIGHTS_SET)\n0 0 s0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_0)\n0 1 (>K:2:NAV_LIGHTS_SET) 0 1 (>K:2:LOGO_LIGHTS_SET)\n0 s0 (>L:LIGHTING_TAXI_2) \n2 l0 (>K:2:TAXI_LIGHTS_SET) \n3 l0 (>K:2:TAXI_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_2)\n1 (>L:LANDING_2_Retracted) 0 2 r (>K:2:LANDING_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_3) \n1 (>L:LANDING_3_Retracted) 0 3 r (>K:2:LANDING_LIGHTS_SET)\n2 (>L:LIGHTING_LANDING_1) \n0 1 r (>K:2:LANDING_LIGHTS_SET) \n0 1 r (>K:2:TAXI_LIGHTS_SET)"
+	},
+	"Asobo.C208 Caravan.Lights.Input.Left Flood Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:5, Percent) 1 - 0 max 5 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.C208 Caravan.Lights.Input.Left Flood Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Glareshield_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:5, Percent) 1 + 100 min 5 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.C208 Caravan.Lights.Input.Right Flood Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:6, Percent) 1 - 0 max 6 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Asobo.C208 Caravan.Lights.Input.Right Flood Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Glareshield_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:6, Percent) 1 + 100 min 6 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Pedestal Flood Light Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:7, Percent) 1 - 0 max 7 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Pedestal Flood Light Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Glareshield_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:7, Percent) 1 + 100 min 7 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Pilot instrument Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Panel_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:2, Percent) 1 + 100 min 2 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Pilot instrument Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:2, Percent) 1 - 0 max 2 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Copilot instrument Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Panel_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:3, Percent) 1 + 100 min 3 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Copilot instrument Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:3, Percent) 1 - 0 max 3 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Circuit Breakers Light Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Glareshield_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:8, Percent) 1 + 100 min 8 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Circuit Breakers Light Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:8, Percent) 1 - 0 max 8 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Engine Instruments Light Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Panel_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:4, Percent) 1 + 100 min 4 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Engine Instruments Light Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:4, Percent) 1 - 0 max 4 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Radio Panels Backlight Incr": {
+		"method": "calcCode",
+		"code": "1 (>K:2:Panel_LIGHTS_SET)\n(A:LIGHT POTENTIOMETER:9, Percent) 1 + 100 min 9 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Radio Panels Backlight Decr": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:9, Percent) 1 - 0 max 9 (>K:2:LIGHT_POTENTIOMETER_SET)"
+	},
+	"Just Flight.C208 Caravan.Lights.Input.NAV Lights ON": {
+		"method": "calcCode",
+		"code": "1 (>K:2:NAV_LIGHTS_SET)"
+	},
+	"Just Flight.C208 Caravan.Lights.Input.NAV Lights OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:2:NAV_LIGHTS_SET)"
+	},
+	"Just Flight.C208 Caravan.Lights.Input.Beacon Light ON": {
+		"method": "calcCode",
+		"code": "1 (>K:BEACON_LIGHTS_SET)"
+	},
+	"Just Flight.C208 Caravan.Lights.Input.Beacon Light OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:BEACON_LIGHTS_SET)"
+	},
+	"Just Flight.C208 Caravan.Lights.Input.Strobes Lights ON": {
+		"method": "calcCode",
+		"code": "1 (>K:2:STROBES_SET)"
+	},
+	"Just Flight.C208 Caravan.Lights.Input.Strobes Lights OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:2:STROBES_SET)"
+	},
+	"Just Flight.C208 Caravan.Autopilot.Input.AP Master TOGGLE": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT DISENGAGED, Bool) ! if{ (>K:AP_MASTER) (A:AUTOPILOT MASTER, Bool) if{ (A:AUTOPILOT FLIGHT DIRECTOR ACTIVE, Bool) ! if{ 1 (>K:TOGGLE_FLIGHT_DIRECTOR) } } (A:AUTOPILOT MASTER, bool) ! if{ (H:Generic_Autopilot_Manual_Off) } }"
+	},
+	"Just Flight.C208 Caravan.Autopilot.Input.GPS/NAV Autopilot Source TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_GPS_DRIVES_NAV1)"
+	},
+	"Just Flight.C208 Caravan.Autopilot.Input.AP LNAV MODE (BENDIX KAP 140)": {
+		"method": "calcCode",
+		"code": "(>K:AP_NAV1_HOLD)"
+	},
+	"Just Flight.C208 Caravan.Autopilot.Input.AP V/S DN BUTTON (KAP 140)": {
+		"method": "calcCode",
+		"code": "(>H:KAP140_Push_DN)"
+	},
+	"Just Flight.C208 Caravan.Autopilot.Input.AP V/S UP BUTTON (KAP 140)": {
+		"method": "calcCode",
+		"code": "(>H:KAP140_Push_UP)"
+	},
+	"Just Flight.C208 Caravan.Anti-Ice.Input.A/ICE PITOT HEAT 1-2 ON": {
+		"method": "calcCode",
+		"code": "1 1 (>K:2:PITOT_HEAT_SET) 1 (>L:DEICE_Pitot_1)\n2 1 (>K:2:PITOT_HEAT_SET) 1 (>L:DEICE_Pitot_2)"
+	},
+	"Just Flight.C208 Caravan.Anti-Ice.Input.A/ICE PITOT HEAT 1-2 OFF": {
+		"method": "calcCode",
+		"code": "1 0 (>K:2:PITOT_HEAT_SET) 0 (>L:DEICE_Pitot_1)\n2 0 (>K:2:PITOT_HEAT_SET) 0 (>L:DEICE_Pitot_2)"
+	},
+	"Just Flight.C208 Caravan.Anti-Ice.Input.Windshield MODE": {
+		"method": "calcCode",
+		"code": "0 (>L:var_windshieldDeiceMode)"
+	},
+	"Just Flight.C208 Caravan.Anti-Ice.Input.PROPELLER DEICE MODE": {
+		"method": "calcCode",
+		"code": "0 (>L:var_propDeiceMode)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Cabin Light ON": {
+		"method": "calcCode",
+		"code": "1 (>K:2:CABIN_LIGHTS_SET)"
+	},
+	"Just Flight.C208 Caravan.Light.Input.Cabin Light OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:2:CABIN_LIGHTS_SET)"
+	},
+	"Just Flight.C208 Caravan.Flight Controls.Input.FUEL Tanks Selector Both ON": {
+		"method": "calcCode",
+		"code": "1 (>K:FUEL_SELECTOR_SET)"
+	},
+	"Just Flight.C208 Caravan.Flight Controls.Input.FUEL Tanks Selector Both OFF": {
+		"method": "calcCode",
+		"code": "0 (>K:FUEL_SELECTOR_SET)"
+	},
+	"Just Flight.C208 Caravan.Flight Controls.Input.Fuel Boost MODE": {
+		"method": "calcCode",
+		"code": "1 (>K:ELECT_FUEL_PUMP1_SET)"
+	},
+	"Just Flight.C208 Caravan.Flight Controls.Input.FUEL Condition Lever": {
+		"method": "calcCode",
+		"code": "1 (>K:SET_FUEL_VALVE_ENG1)\n"
+	},
+	"Carenado.M20R OVATION.Lights.Input.LIGHTING_GLARESHIELD_DEC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_GLARESHIELD_1) 5 - 0 max 100 min \ns0 (>L:LIGHTING_GLARESHIELD_1) \nl0 5 (>K:2:LIGHT_POTENTIOMETER_SET) \n(A:LIGHT GLARESHIELD:1, Bool) s2 \n(L:LIGHTING_GLARESHIELD_1) 0 > != if{ \n\t l2 ! 1 l0 (>K:2:GLARESHIELD_LIGHTS_SET) quit \n}"
+	},
+	"Carenado.M20R OVATION.Lights.Input.LIGHTING_GLARESHIELD_INC": {
+		"method": "calcCode",
+		"code": "(L:LIGHTING_GLARESHIELD_1) 5 + 0 max 100 min \ns0 (>L:LIGHTING_GLARESHIELD_1) \nl0 5 (>K:2:LIGHT_POTENTIOMETER_SET) \n(A:LIGHT GLARESHIELD:1, Bool) s2 \n(L:LIGHTING_GLARESHIELD_1) 0 > != if{ \n\t l2 ! 1 l0 (>K:2:GLARESHIELD_LIGHTS_SET) quit \n}"
+	},
+	"Carenado.M20R OVATION.Autopilot.Input.Gauge_TEST_KFC150_OnPress": {
+		"method": "calcCode",
+		"code": "1 (>L:Gauge_TEST_KFC150)"
+	},
+	"Microsoft.Generic.Avionics.Output.KAP140_ALT_ALERTER": {
+		"method": "calcCode",
+		"code": "(L:KAP140_ALT_ALERTER, Number)"
+	},
+	"Carenado.M20R OVATION.Autopilot.Input.Gauge_TEST_KFC150_OnRelease": {
+		"method": "calcCode",
+		"code": "0 (>L:Gauge_TEST_KFC150)"
 	}
 }
