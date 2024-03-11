@@ -10,6 +10,13 @@ export default class DefaultAircraftPanels {
 				],
 			},
 			{
+				path: 'msfs20/default/BonanzaG36',
+				name: 'Beechcraft Bonanza G36',
+				panels: [
+					{file: 'default', name: 'Default'},
+				],
+			},
+			{
 				path: 'msfs20/default/Beechcraft_King_Air_350i',
 				name: 'Beechcraft King Air 350i',
 				panels: [
@@ -17,8 +24,8 @@ export default class DefaultAircraftPanels {
 				],
 			},
 			{
-				path: 'msfs20/default/BonanzaG36',
-				name: 'Beechcraft Bonanza G36',
+				path: 'msfs20/fenix/Airbus320',
+				name: 'Airbus A320',
 				panels: [
 					{file: 'default', name: 'Default'},
 				],
