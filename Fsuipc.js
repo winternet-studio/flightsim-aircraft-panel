@@ -195,7 +195,11 @@ export default class Fsuipc {
 		Fsuipc.loadMsfs20Controls();
 
 		if (typeof Fsuipc.simControls[name] === 'undefined') {
-			console.error('Sim control '+ name +' not found');
+			if (/^\d+$/.test(name)) {  //allow passing through the actual number/integer
+				return name;
+			} else {
+				console.error('Sim control '+ name +' not found');
+			}
 		}
 
 		return Fsuipc.simControls[name];

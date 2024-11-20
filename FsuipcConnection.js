@@ -70,7 +70,7 @@ export default class FsuipcConnection {
 			});
 
 			// Declare offsets for aircraft and start monitoring them
-			if (typeof myself.aircraftValues.offset !== 'undefined') {
+			if (typeof myself.aircraftValues != 'undefined' && typeof myself.aircraftValues.offset !== 'undefined') {
 				this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(myself.aircraftValues.offset, myself.offsetMap);
 
 				// Declare offsets to monitor
@@ -102,7 +102,7 @@ export default class FsuipcConnection {
 			}
 
 			// Declare vars (Lvars) for aircraft and start monitoring them
-			if (typeof myself.aircraftValues.lVar !== 'undefined') {
+			if (typeof myself.aircraftValues !== 'undefined' && typeof myself.aircraftValues.lVar !== 'undefined') {
 				this.lVarsDeclaration = [];
 				Object.keys(myself.aircraftValues.lVar).forEach((key) => {
 					this.lVarsDeclaration.push({name: key});

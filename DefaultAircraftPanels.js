@@ -44,6 +44,13 @@ export default class DefaultAircraftPanels {
 					{file: 'default', name: 'Default'},
 				],
 			},
+			{
+				path: 'testing-panel',
+				name: 'Testing Panel',
+				panels: [
+					{file: 'default', name: 'Testing'},
+				],
+			},
 		];
 	}
 

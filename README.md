@@ -102,7 +102,7 @@ JUST INCOMPLETE NOTES SO FAR.
 | Indicator | Only an indicator of a given state, with a label (not a button that can be pressed) |
 | Annunciator | Like an indicator but without any label, only a light or text that can be "on" or "off" |
 
-#### Instrument/button methods
+#### Action Methods
 
 JUST INCOMPLETE NOTES SO FAR.
 
@@ -195,3 +195,8 @@ You can send them to me or do a pull request.
 
 - Some buttons stopped working
 	- It might be because you have restarted the simulator without restarting FSUIPC WebSocket Server. Simply restart FSUIPC. If still doesn't work restart the WebSocker Server as well.
+
+### Testing Panel
+
+Opening `index.htm?config=msfs20/default/TestingPanel/default` allows you to easily test sending different actions to the sim
+(hVars, simControls, MobiFlight HubHop presets, and calculator code). Great for testing if a given action actually works.
