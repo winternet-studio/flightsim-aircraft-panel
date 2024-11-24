@@ -47,12 +47,14 @@ You might wonder why there are no auto-pilot or radio functions added yet but th
 JUST INCOMPLETE NOTES SO FAR.
 
 - ...set up FSUIPC and FSUIPC WebSocker Server...
+	- do we need to manually add/adjust hVar files in FSUIPC HvarFiles folder? See also https://forum.simflight.com/topic/90512-best-way-to-make-browser-interface-with-fsuipc/page/3/#comments
 - To overlay eg. the G1000 displays on your panels click on the display in MSFS while holding down the Alt-Gr key (the Alt key on the **right** side of your keyboard). The window will now pop out and your can move it where you want. Keep in mind that you can only do this if you have your panels on the same computer as your flight simulator.
 	- To have the displays show on top of your panel we need to make the Flight Simulator windows top-most and remove title bar
 		- Use command line program [NirCmd](https://www.nirsoft.net/utils/nircmd.html) (no installation)
 			- Resize and position your windows before running these commands. Otherwise the settings will be canceled.
 			- Run command to set top-most:
 				- `nircmd.exe win settopmost process FlightSimulator.exe 1`
+					- NO LONGER WORKS?! WELL MAYBE IT DOES AFTERALL...! Maybe recommend this instead: https://github.com/hawkeye-stan/msfs-popout-panel-manager
 			- Run command to remove title bar:
 				- `nircmd.exe win -style process FlightSimulator.exe 0x00400000`
 
@@ -69,6 +71,7 @@ Common classes:
 	- text-center : TODO describe
 	- text-rigth : TODO describe
 	- std-spacing : TODO describe
+	- TODO: add more
 
 A typical three column layout with text-align: left, text-align: center, and text-align: right (any of them can be left out):
 
@@ -291,7 +294,6 @@ Special classes that can be used:
 - INOPERABLE: class that dims the control to indicate that it is inoperable
 - INVISIBLE-FOR-ALIGNMENT: class that complete hides the control (eg. for aligning one or more controls correctly below each other)
 - defect-write: class that indicates the control cannot write to the sim but is read-only
-- no-sound: don't play sound when button is clicked
 
 
 ## Adding and customizing your own panels and FSUIPC offsets
@@ -306,6 +308,7 @@ You can send them to me or do a pull request.
 
 - Some buttons stopped working
 	- It might be because you have restarted the simulator without restarting FSUIPC WebSocket Server. Simply restart FSUIPC. If still doesn't work restart the WebSocker Server as well.
+	- Also check that the FSUIPC WASM module is not crashing — see https://forum.simflight.com/topic/90512-best-way-to-make-browser-interface-with-fsuipc/page/4/#findComment-595016
 
 ### Testing Panel
 
