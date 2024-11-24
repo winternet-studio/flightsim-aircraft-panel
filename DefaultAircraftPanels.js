@@ -24,6 +24,13 @@ export default class DefaultAircraftPanels {
 				],
 			},
 			{
+				path: 'msfs20/default/Boeing_747_8',
+				name: 'Boeing 747-8',
+				panels: [
+					{file: 'default', name: 'Default'},
+				],
+			},
+			{
 				path: 'msfs20/fenix/Airbus320',
 				name: 'Airbus A320',
 				panels: [

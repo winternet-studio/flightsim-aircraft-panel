@@ -100,6 +100,32 @@ body {
 	text-align: right;
 }
 
+.grid-50-50 {
+	grid-template-columns: 50% 50%;
+}
+.grid-33-33-33 {
+	grid-template-columns: 33.33% 33.33% 33.33%;
+}
+.grid-25-25-25-25 {
+	grid-template-columns: 25% 25% 25% 25%;
+}
+
+/* Spacers */
+.spacer-100 {
+	display: inline-block;
+	padding-left: 100px;
+}
+
+.spacer-50 {
+	display: inline-block;
+	padding-left: 50px;
+}
+
+.spacer-25 {
+	display: inline-block;
+	padding-left: 25px;
+}
+
 .bordered {
 	width: 100%;
 	height: 100%;
@@ -114,6 +140,10 @@ body {
 
 .INOPERABLE {
 	opacity: 0.2;
+}
+.INVISIBLE-FOR-ALIGNMENT {
+	opacity: 0.0;
+	pointer-events: none;
 }
 
 .pressable {

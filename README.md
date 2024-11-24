@@ -117,6 +117,114 @@ JUST INCOMPLETE NOTES SO FAR.
 
 All methods can be used for setting values (input), but only offsets and LVars can be used for monitoring values (output).
 
+#### Instrument/button configuration
+
+TODO: complete the documentation of the attributes each instrument, with examples.
+
+<table>
+<tr>
+	<th>Attribute</th>
+	<th>Description</th>
+	<th>Examples</th>
+	<th>Button</th>
+	<th>Toggle</th>
+	<th>Switch</th>
+	<th>KnobUpDown</th>
+	<th>KnobTouchDrag</th>
+	<th>Indicator</th>
+	<th>Annunciator</th>
+</tr>
+<tr>
+	<td>refName</td>
+	<td>Using offset</td>
+	<td>antiIceEng1</td>
+	<td>Yes</td> <!-- Button -->
+	<td>Yes</td> <!-- Toggle -->
+	<td>Yes</td> <!-- Switch -->
+	<td></td> <!-- KnobUpDown -->
+	<td></td> <!-- KnobTouchDrag -->
+	<td></td> <!-- Indicator -->
+	<td></td> <!-- Annunciator -->
+</tr>
+<tr>
+	<td>:refName</td>
+	<td>Using presetCommand</td>
+	<td>
+		{0: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_OFF', 1: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_DIM', 2: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_BRT'}
+	</td>
+	<td></td> <!-- Button -->
+	<td></td> <!-- Toggle -->
+	<td></td> <!-- Switch -->
+	<td>Yes</td> <!-- KnobUpDown -->
+	<td></td> <!-- KnobTouchDrag -->
+	<td></td> <!-- Indicator -->
+	<td></td> <!-- Annunciator -->
+</tr>
+<tr>
+	<td>refName</td>
+	<td>Using lVar</td>
+	<td>
+		XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW
+	</td>
+	<td></td> <!-- Button -->
+	<td></td> <!-- Toggle -->
+	<td></td> <!-- Switch -->
+	<td>Yes 1)</td> <!-- KnobUpDown -->
+	<td></td> <!-- KnobTouchDrag -->
+	<td></td> <!-- Indicator -->
+	<td></td> <!-- Annunciator -->
+</tr>
+<tr>
+	<td>readMethod</td>
+	<td></td>
+	<td>lVar</td>
+	<td></td> <!-- Button -->
+	<td></td> <!-- Toggle -->
+	<td></td> <!-- Switch -->
+	<td>Yes</td> <!-- KnobUpDown -->
+	<td>Yes</td> <!-- KnobTouchDrag -->
+	<td>Yes</td> <!-- Indicator -->
+	<td></td> <!-- Annunciator -->
+</tr>
+<tr>
+	<td>readRefName</td>
+	<td>Using lVar</td>
+	<td>XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW</td>
+	<td></td> <!-- Button -->
+	<td></td> <!-- Toggle -->
+	<td></td> <!-- Switch -->
+	<td>Yes</td> <!-- KnobUpDown -->
+	<td>Yes</td> <!-- KnobTouchDrag -->
+	<td>Yes</td> <!-- Indicator -->
+	<td></td> <!-- Annunciator -->
+</tr>
+<tr>
+	<td>:options</td>
+	<td></td>
+	<td>{sound: false}</td>
+	<td>Yes</td> <!-- Button -->
+	<td>Yes</td> <!-- Toggle -->
+	<td>Yes</td> <!-- Switch -->
+	<td>Yes</td> <!-- KnobUpDown -->
+	<td>Yes</td> <!-- KnobTouchDrag -->
+	<td></td> <!-- Indicator -->
+	<td></td> <!-- Annunciator -->
+</tr>
+</table>
+
+1) Requires onPanelLoad() config:
+
+	props.eventHandlers.onPanelLoad({
+		watchValues: {
+			lVar: {
+				XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW: {
+					inputOptions: { toggleValues: [0, 1, 2] },
+					toHtml: value => value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW',
+				}
+			},
+		},
+	});
+
 #### Setup of the aircraft
 
 All values that are going to be displayed (output) for this aircraft must be defined in the setup function of the aircraft panel,
@@ -132,9 +240,11 @@ The value determine how the value is being displayed on the panel, it can be:
 		- A string, in which case it refers to a method in `FsuipcHtml` which holds commonly used formatting. They will return HTML.
 			- For Annunciators the return value will only be used to evaluate whether it is on or off, the actual content will not be used. You will normally use the `pass` method unless you need to convert the raw value.
 		- A function that will format and return HTML - which is defined within the setup() function. Used for aircraft-specific formatting.
+			- Eg. `value => value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW'`
 	- `inputOptions`: One of these objects (where the values must be based on the internal converted values, not necessarily the raw values coming from FSUIPC):
 		- `{toggleValues: [3, 1] }` : Toggle between these values
 		- `{validValues: [0, 1, 2, 3, 4] }` : A list of valid values
+		- `{validValues: [0, 1, 2, 3, 4], inverseDirection: true }` : Inverse the direction of values when using up/down button
 		- `{min: 0, max: 100, step: 5}` : The minimum and maximum allowed values. `step` is optional and defaults to 1.
 - A string or function can be used as a shorthand for just specifying the `toHtml` value that we would have specified if we had provided an object.
 
@@ -179,6 +289,7 @@ JUST INCOMPLETE NOTES SO FAR.
 Special classes that can be used:
 
 - INOPERABLE: class that dims the control to indicate that it is inoperable
+- INVISIBLE-FOR-ALIGNMENT: class that complete hides the control (eg. for aligning one or more controls correctly below each other)
 - defect-write: class that indicates the control cannot write to the sim but is read-only
 - no-sound: don't play sound when button is clicked
 

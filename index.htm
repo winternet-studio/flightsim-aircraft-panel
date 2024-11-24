@@ -241,6 +241,7 @@ if (!urlParams.has('config')) {
 		 * Handle up/down knobs that sends commands to the sim
 		 *
 		 * @param {object} event The Javascript event
+		 * @param {string} direction `down` or `up`
 		 */
 		knobUpDownClick: (event, method, refName, currInternalValue, direction, customStep, options) => {
 			console.log('Knob '+ direction +': '+ method +':'+ refName);
@@ -261,10 +262,19 @@ if (!urlParams.has('config')) {
 
 			if (typeof refProps.validValues !== 'undefined') {
 				// ok
-			} else if (refProps.min !== 'undefined' && refProps.max !== 'undefined') {
+			} else if (typeof refProps.min !== 'undefined' && typeof refProps.max !== 'undefined') {
 				// ok
 			} else {
 				Common.showError('The '+ method +' '+ refName + ' is missing its valid values for up/down changes.'); return;
+			}
+
+			// If the sim values are opposite the natural order for up/down
+			if (refProps.inverseDirection) {
+				if (direction == 'down') {
+					direction = 'up';
+				} else {
+					direction = 'down';
+				}
 			}
 
 			if (typeof refProps.validValues !== 'undefined') {
