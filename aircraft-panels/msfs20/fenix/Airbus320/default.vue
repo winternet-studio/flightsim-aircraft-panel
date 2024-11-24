@@ -33,7 +33,7 @@
 
 				<div class="section aircond">Air Cond</div>
 
-				<Switch label="APU BLEED" method="presetCommand" refName="FenixSim.A320.Pneumatic.FNX320 Pneumatic APU Bleed Button Press" readMethod="lVar" readRefName="I_OH_PNEUMATIC_APU_BLEED_L" :dataStore="dataStore" />
+				<Switch label="APU BLEED" method="presetCommand" refName="FenixSim.A320.Pneumatic.Input.FNX320 Pneumatic APU Bleed Button Press" readMethod="lVar" readRefName="I_OH_PNEUMATIC_APU_BLEED_L" :dataStore="dataStore" :eventHandlers="eventHandlers" />
 
 				<div class="section apu">APU</div>
 
@@ -292,6 +292,7 @@ export default {
 					I_OH_ELEC_APU_MASTER_L: 'brightOnValue',  // "ON"
 					I_OH_ELEC_APU_START_U: value => (value == 1 ? 'AVAIL' : ''),  // "AVAIL"
 					I_OH_ELEC_APU_START_L: value => (value == 1 ? 'ON' : ''),  // "ON"
+					I_OH_PNEUMATIC_APU_BLEED_L: 'brightOnValue',
 				},
 			},
 		});
