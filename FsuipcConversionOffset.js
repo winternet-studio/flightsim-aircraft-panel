@@ -11,19 +11,19 @@ export default class FsuipcConversionOffset {
 		this.gearLeft = new FsuipcDefaultConversion();
 
 		this.aircraftAltitude = new FsuipcDefaultConversion();
-		// this.aircraftAltitude.from = function(value) {
+		// this.aircraftAltitude.from = (value) => {
 		// 	return value * 2;
 		// };
 		// this.aircraftAltitude.from = this.testConversion;
 
 		this.apuVoltage = new FsuipcDefaultConversion();
-		this.apuVoltage.from = function(value) {
+		this.apuVoltage.from = (value) => {
 			//NOTE: This is probably not correct!!
 			return Math.floor(value / (1106247575/30));
 		};
 
 		this.apuRpm = new FsuipcDefaultConversion();
-		this.apuRpm.from = function(value) {
+		this.apuRpm.from = (value) => {
 			//NOTE: This is probably not correct!!
 			var perc = Math.round((theValue-112)/11204033*1000)/10;
 			if (perc.toString().match(/\./) === null) {
@@ -33,11 +33,11 @@ export default class FsuipcConversionOffset {
 		};
 
 		this.autopilotAltitude = new FsuipcDefaultConversion();
-		this.autopilotAltitude.from = function(value) {
+		this.autopilotAltitude.from = (value) => {
 			// raw value is: metres*65536
 			return Math.round(value / 65536 * 3.28084);
 		};
-		this.autopilotAltitude.to = function(value) {
+		this.autopilotAltitude.to = (value) => {
 			return Math.round(value / 3.28084 * 65536);
 		};
 

@@ -67,12 +67,12 @@ if (Config && Config.userAircraft !== 'undefined') {
 }
 
 var $aircraftList = $('#aircraft-list');
-Object.keys(aircraft).forEach(function(key) {
+Object.keys(aircraft).forEach((key) => {
 	var $aircraft = $('<div class="aircraft">');
 	$aircraft.append('<h3>'+ aircraft[key].name +'</h3>');
 
 	var $panels = $('<div class="panels">');
-	Object.values(aircraft[key].panels).forEach(function(panel) {
+	Object.values(aircraft[key].panels).forEach((panel) => {
 		$panels.append('<a href="index.htm?config='+ aircraft[key].path +'/'+ panel.file +'" class="btn btn-secondary the-panel">'+ panel.name +'</a>');
 	});
 

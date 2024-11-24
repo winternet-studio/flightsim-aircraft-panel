@@ -499,7 +499,7 @@ if (!urlParams.has('config')) {
 		onPanelLoad: (panelConfig) => {
 			console.log('Aircraft panel initializing...');
 			storedPanelConfig = panelConfig;
-			connection = new FsuipcConnection( (Config && Config.fsuipcUrl ? Config.fsuipcUrl : 'ws://localhost:2048/fsuipc'), aircraftPanelId, panelConfig.watchValues, offsetMap, function(method, refName, internalValue) {
+			connection = new FsuipcConnection( (Config && Config.fsuipcUrl ? Config.fsuipcUrl : 'ws://localhost:2048/fsuipc'), aircraftPanelId, panelConfig.watchValues, offsetMap, (method, refName, internalValue) => {
 				// Convert the final value to its HTML representation
 				var valueHtml;
 				var vars = panelConfig.watchValues;
