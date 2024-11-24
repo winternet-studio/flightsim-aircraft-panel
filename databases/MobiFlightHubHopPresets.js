@@ -1,5 +1,5 @@
 // Credits to https://hubhop.mobiflight.com/ for providing this.
-// Generated from dataset of 2024-09-12 18:55Z
+// Generated from dataset of 2024-11-23 08:11Z
 export default {
 	"Microsoft.Generic.Avionics.AS1000_PFD_VOL_1_DEC": {
 		"method": "calcCode",
@@ -3181,9 +3181,9 @@ export default {
 		"method": "calcCode",
 		"code": "(A:AIRSPEED TRUE:0, Knots) flr"
 	},
-	"Aerosoft.CRJ 550-700-1000.Environment.PLANE HEADING": {
+	"Aerosoft.CRJ 550-700-1000.Environment.Output.PLANE HEADING": {
 		"method": "calcCode",
-		"code": "(A:PLANE HEADING DEGREES TRUE:0, Radians) 57.2957795131 * flr"
+		"code": "(A:PLANE HEADING DEGREES TRUE:0, degress) near"
 	},
 	"Aerosoft.CRJ 550-700-1000.Environment.PLANE ALTITUDE": {
 		"method": "calcCode",
@@ -4659,7 +4659,7 @@ export default {
 	},
 	"Fly By Wire.A320.Air Condition / Pressurization.Output.A32NX OVHD AIRCOND APU BLEED IS ON": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_PNEU_APU_BLEED_PB_IS_ON, Bool)"
+		"code": "(L:A32NX_OVHD_PNEU_APU_BLEED_PB_IS_ON, Bool) (L:A32NX_OVHD_INTLT_ANN) 0 ==  (L:A32NX_ELEC_DC_2_BUS_IS_POWERED, Bool) and or 1 and (L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
 	"Fly By Wire.A320.Electrical.A32NX_ELEC_COMMERCIAL_TOGGLE_OFF": {
 		"method": "calcCode",
@@ -4741,7 +4741,7 @@ export default {
 		"method": "calcCode",
 		"code": "(A:EXTERNAL POWER AVAILABLE:1, Bool) (A:EXTERNAL POWER ON:1, Bool) ! and if{ 1 (>K:TOGGLE_EXTERNAL_POWER) } els{ (A:EXTERNAL POWER ON:1, Bool) if{ 1 (>K:TOGGLE_EXTERNAL_POWER) } }"
 	},
-	"Fly By Wire.A320.Fuel.Input.A32NX_OVHD_FUELSYSTEM_CTKPUMP1_TOGGLE": {
+	"Fly By Wire.A320.Fuel.Input.A32NX OVHD FUEL CTK L XFR Toggle": {
 		"method": "calcCode",
 		"code": "9 (>K:FUELSYSTEM_VALVE_TOGGLE) "
 	},
@@ -4753,7 +4753,7 @@ export default {
 		"method": "calcCode",
 		"code": "3 (>K:FUELSYSTEM_PUMP_TOGGLE) "
 	},
-	"Fly By Wire.A320.Fuel.Input.A32NX_OVHD_FUELSYSTEM_CTKPUMP2_TOGGLE": {
+	"Fly By Wire.A320.Fuel.Input.A32NX OVHD FUEL CTK R XFR Button Toggle": {
 		"method": "calcCode",
 		"code": "10 (>K:FUELSYSTEM_VALVE_TOGGLE) "
 	},
@@ -8993,13 +8993,13 @@ export default {
 		"method": "calcCode",
 		"code": "(A:ATTITUDE CAGE,Bool)"
 	},
-	"Microsoft.Generic.Flight Instrumentation.ATTITUDE INDICATOR BANK DEGREES": {
+	"Microsoft.Generic.Flight Instrumentation.Output.ATTITUDE INDICATOR BANK DEGREES": {
 		"method": "calcCode",
-		"code": "(A:ATTITUDE INDICATOR BANK DEGREES,Radians)"
+		"code": "(A:ATTITUDE INDICATOR BANK DEGREES,Degrees)"
 	},
-	"Microsoft.Generic.Flight Instrumentation.ATTITUDE INDICATOR PITCH DEGREES": {
+	"Microsoft.Generic.Flight Instrumentation.Output.ATTITUDE INDICATOR PITCH DEGREES": {
 		"method": "calcCode",
-		"code": "(A:ATTITUDE INDICATOR PITCH DEGREES,Radians)"
+		"code": "(A:ATTITUDE INDICATOR PITCH DEGREES,degrees)"
 	},
 	"Microsoft.Generic.Flight Instrumentation.BARBER POLE MACH": {
 		"method": "calcCode",
@@ -9121,9 +9121,9 @@ export default {
 		"method": "calcCode",
 		"code": "(A:PARTIAL PANEL VERTICAL VELOCITY,Enum)"
 	},
-	"Microsoft.Generic.Flight Instrumentation.PLANE HEADING DEGREES GYRO": {
+	"Microsoft.Generic.Flight Instrumentation.Output.PLANE HEADING DEGREES GYRO": {
 		"method": "calcCode",
-		"code": "(A:PLANE HEADING DEGREES GYRO,Radians)"
+		"code": "(A:PLANE HEADING DEGREES GYRO,Degrees)"
 	},
 	"Microsoft.Generic.Flight Instrumentation.Output.RADIO HEIGHT": {
 		"method": "calcCode",
@@ -9905,25 +9905,25 @@ export default {
 		"method": "calcCode",
 		"code": "(A:DESIGN SPEED VS1,Feet per second)"
 	},
-	"Microsoft.Generic.Miscellaneous.DISK BANK ANGLE": {
+	"Microsoft.Generic.Miscellaneous.Output.DISK BANK ANGLE": {
 		"method": "calcCode",
-		"code": "(A:DISK BANK ANGLE,Radians)"
+		"code": "(A:DISK BANK ANGLE:index,Degrees)"
 	},
-	"Microsoft.Generic.Miscellaneous.DISK BANK PCT": {
+	"Microsoft.Generic.Miscellaneous.Output.DISK BANK PCT": {
 		"method": "calcCode",
-		"code": "(A:DISK BANK PCT,Percent over 100)"
+		"code": "(A:DISK BANK PCT:index,Percent over 100)"
 	},
-	"Microsoft.Generic.Miscellaneous.DISK CONING PCT": {
+	"Microsoft.Generic.Miscellaneous.Output.DISK CONING PCT": {
 		"method": "calcCode",
-		"code": "(A:DISK CONING PCT,Percent over 100)"
+		"code": "(A:DISK CONING PCT:index,Percent over 100)"
 	},
-	"Microsoft.Generic.Miscellaneous.DISK PITCH ANGLE": {
+	"Microsoft.Generic.Miscellaneous.Output.DISK PITCH ANGLE": {
 		"method": "calcCode",
-		"code": "(A:DISK PITCH ANGLE,Radians)"
+		"code": "(A:DISK PITCH ANGLE:index,Degrees)"
 	},
-	"Microsoft.Generic.Miscellaneous.DISK PITCH PCT": {
+	"Microsoft.Generic.Miscellaneous.Output.DISK PITCH PCT": {
 		"method": "calcCode",
-		"code": "(A:DISK PITCH PCT,Percent over 100)"
+		"code": "(A:DISK PITCH PCT:index,Percent over 100)"
 	},
 	"Microsoft.Generic.Miscellaneous.DROPPABLE OBJECTS UI NAME": {
 		"method": "calcCode",
@@ -10129,9 +10129,9 @@ export default {
 		"method": "calcCode",
 		"code": "(A:PROP ROTATION ANGLE,Radians)"
 	},
-	"Microsoft.Generic.Miscellaneous.PUSHBACK ANGLE": {
+	"Microsoft.Generic.Miscellaneous.Output.PUSHBACK ANGLE": {
 		"method": "calcCode",
-		"code": "(A:PUSHBACK ANGLE,Radians)"
+		"code": "(A:PUSHBACK ANGLE,Degrees)"
 	},
 	"Microsoft.Generic.Miscellaneous.PUSHBACK CONTACTX": {
 		"method": "calcCode",
@@ -10661,17 +10661,17 @@ export default {
 		"method": "calcCode",
 		"code": "(A:PLANE ALT ABOVE GROUND MINUS CG,Feet)"
 	},
-	"Microsoft.Generic.Position and Speed.PLANE BANK DEGREES": {
+	"Microsoft.Generic.Position and Speed.Output.PLANE BANK DEGREES": {
 		"method": "calcCode",
-		"code": "(A:PLANE BANK DEGREES,Radians)"
+		"code": "(A:PLANE BANK DEGREES,Degrees)"
 	},
-	"Microsoft.Generic.Position and Speed.PLANE HEADING DEGREES MAGNETIC": {
+	"Microsoft.Generic.Position and Speed.Output.PLANE HEADING DEGREES MAGNETIC": {
 		"method": "calcCode",
-		"code": "(A:PLANE HEADING DEGREES MAGNETIC,Radians)"
+		"code": "(A:PLANE HEADING DEGREES MAGNETIC,Degrees)"
 	},
-	"Microsoft.Generic.Position and Speed.PLANE HEADING DEGREES TRUE": {
+	"Microsoft.Generic.Position and Speed.Output.PLANE HEADING DEGREES TRUE": {
 		"method": "calcCode",
-		"code": "(A:PLANE HEADING DEGREES TRUE,Radians)"
+		"code": "(A:PLANE HEADING DEGREES TRUE,Degrees)"
 	},
 	"Microsoft.Generic.Position and Speed.PLANE LATITUDE": {
 		"method": "calcCode",
@@ -11077,9 +11077,9 @@ export default {
 		"method": "calcCode",
 		"code": "(A:GENERAL ENG OIL LEAKED PERCENT:index,Percent)"
 	},
-	"Microsoft.Generic.Engines.GENERAL ENG OIL PRESSURE:index": {
+	"Microsoft.Generic.Engines.Output.GENERAL ENG OIL PRESSURE:index": {
 		"method": "calcCode",
-		"code": "(A:GENERAL ENG OIL PRESSURE:index,Psf)"
+		"code": "(A:GENERAL ENG OIL PRESSURE:index,Psi)"
 	},
 	"Microsoft.Generic.Engines.GENERAL ENG OIL TEMPERATURE:index": {
 		"method": "calcCode",
@@ -14853,11 +14853,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_FIRE_BUTTON_APU) if{ 1 (>L:A32NX_FIRE_APU_AGENT1_Discharge) }"
 	},
-	"Fly By Wire.A320-Dev.Fuel.Input.A32NX OVHD FUEL CTK PUMP1 PRESS": {
+	"Fly By Wire.A320-Dev.Fuel.Input.A32NX OVHD FUEL CTK L XFR Button Press": {
 		"method": "calcCode",
 		"code": "9 (>K:FUELSYSTEM_VALVE_TOGGLE)"
 	},
-	"Fly By Wire.A320-Dev.Fuel.Input.A32NX OVHD FUEL CTK PUMP2 PRESS": {
+	"Fly By Wire.A320-Dev.Fuel.Input.A32NX OVHD FUEL CTK R XFR Button Press": {
 		"method": "calcCode",
 		"code": "10 (>K:FUELSYSTEM_VALVE_TOGGLE)"
 	},
@@ -15033,9 +15033,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_ELEC_AC_ESS_FEED_PB_IS_NORMAL, bool) ! (>L:A32NX_OVHD_ELEC_AC_ESS_FEED_PB_IS_NORMAL, bool)"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.CABIN PRESS MODE SEL MAN": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.A32NX OVHD CABIN PRESS MODE SEL MAN": {
 		"method": "calcCode",
-		"code": "(L:A32NX_CAB_PRESS_MODE_MAN, bool) ! (>L:A32NX_CAB_PRESS_MODE_MAN, bool)"
+		"code": "(L:A32NX_OVHD_PRESS_MODE_SEL_PB_IS_AUTO) ! (>L:A32NX_OVHD_PRESS_MODE_SEL_PB_IS_AUTO)"
 	},
 	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Input.CABIN PRESS LDGELEV AUTO INC": {
 		"method": "calcCode",
@@ -15649,9 +15649,9 @@ export default {
 		"method": "calcCode",
 		"code": "@ 32.0303 * 16383 - -16383 max 16383 min (>K:RUDDER_SET)"
 	},
-	"Microsoft.Generic.Engines.MIXTURE_SET": {
+	"Microsoft.Generic.Engines.Input (Potentiometer).MIXTURE_SET": {
 		"method": "calcCode",
-		"code": "@ 16.0147 * 0 max 16383 min (>K:MIXTURE_SET)"
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:MIXTURE_SET)"
 	},
 	"Microsoft.Generic.Engines.PROPELLER PITCH SET": {
 		"method": "calcCode",
@@ -15673,21 +15673,21 @@ export default {
 		"method": "calcCode",
 		"code": "@ 16.0147 * 0 max 16383 min (>K:PROP_PITCH4_SET)"
 	},
-	"Microsoft.Generic.Engines.MIXTURE 1 SET": {
+	"Microsoft.Generic.Engines.Input (Potentiometer).MIXTURE 1 SET": {
 		"method": "calcCode",
-		"code": "@ 16.0147 * 0 max 16383 min (>K:MIXTURE1_SET)"
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:MIXTURE1_SET)"
 	},
-	"Microsoft.Generic.Engines.MIXTURE 2 SET": {
+	"Microsoft.Generic.Engines.Input (Potentiometer).MIXTURE 2 SET": {
 		"method": "calcCode",
-		"code": "@ 16.0147 * 0 max 16383 min (>K:MIXTURE2_SET)"
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:MIXTURE2_SET)"
 	},
-	"Microsoft.Generic.Engines.MIXTURE 3 SET": {
+	"Microsoft.Generic.Engines.Input (Potentiometer).MIXTURE 3 SET": {
 		"method": "calcCode",
-		"code": "@ 16.0147 * 0 max 16383 min (>K:MIXTURE3_SET)"
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:MIXTURE3_SET)"
 	},
-	"Microsoft.Generic.Engines.MIXTURE 4 SET": {
+	"Microsoft.Generic.Engines.Input (Potentiometer).MIXTURE 4 SET": {
 		"method": "calcCode",
-		"code": "@ 16.0147 * 0 max 16383 min (>K:MIXTURE4_SET)"
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:MIXTURE4_SET)"
 	},
 	"Microsoft.Generic.Controls.Input (Potentiometer).ELEVATOR_TRIM_SET": {
 		"method": "calcCode",
@@ -15741,7 +15741,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_INTLT_ANN) 0 == 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
-	"Fly By Wire.A320-Dev.Fuel.Output.A32NX OVHD FUEL Pump 1 Off": {
+	"Fly By Wire.A320-Dev.Fuel.Output.A32NX OVHD FUEL CTK L XFR OFF Annunciator": {
 		"method": "calcCode",
 		"code": "(A:FUELSYSTEM VALVE SWITCH:9, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * "
 	},
@@ -15749,7 +15749,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A32NX_OVHD_INTLT_ANN) 0 == 1 and (L:A32NX_ELEC_AC_1_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
-	"Fly By Wire.A320-Dev.Fuel.Output.A32NX OVHD FUEL Pump 2 Off": {
+	"Fly By Wire.A320-Dev.Fuel.Output.A32NX OVHD FUEL CTK R XFR OFF Annunciator": {
 		"method": "calcCode",
 		"code": "(A:FUELSYSTEM VALVE SWITCH:10, Enum) 0 == (L:A32NX_OVHD_INTLT_ANN) 0 == or (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * "
 	},
@@ -18925,7 +18925,7 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:FWD_AIM9_Reject_IsDown) (L:FWD_AIM9_Reject_MinReleaseTime) (E:SIMULATION TIME, seconds) < if{ } els{ 1 (>L:FWD_AIM9_Reject_LeftLeaveToRun) }"
 	},
-	"Fly By Wire.A320-Dev.Controls.A32NX_SPOILERS_SET": {
+	"Fly By Wire.A320-Dev.Controls.Input (Potentiometer).A32NX SPOILERS SET": {
 		"method": "calcCode",
 		"code": "@ 15 - 16.253 * 0 max 16383 min s0  (>K:SPOILERS_SET) \nl0 0 == if{ (>K:SPOILERS_ARM_ON) 1 (>L:A32NX_SPOILERS_ARMED) }"
 	},
@@ -26997,7 +26997,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:L_HSI_Hdg_bug, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737_MCP_CPT_FD_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP CPT FD IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_FDLeft,Number)"
 	},
@@ -27005,91 +27005,91 @@ export default {
 		"method": "calcCode",
 		"code": "37801 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_IAS_MACH_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 IAS MACH IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_SPDwindow, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_CPT_CRS": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 CPT CRS Display": {
 		"method": "calcCode",
 		"code": "(L:ngx_CRSwindowL, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_FO_CRS": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 FO CRS": {
 		"method": "calcCode",
 		"code": "(L:ngx_CRSwindowR, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_HDG": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737-7 HDG Display": {
 		"method": "calcCode",
 		"code": "(L:ngx_HDGwindow, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_ALT": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 AP ALT Display": {
 		"method": "calcCode",
 		"code": "(L:ngx_ALTwindow, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_V_SPEED": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 V SPEED": {
 		"method": "calcCode",
 		"code": "(L:ngx_VSwindow, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CMD_A_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP CMD A IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_CMDA, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CMD_B_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP CMD B IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_CMDB, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CWS_A_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP CWS A IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_CWSA, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_CWS_B_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP CWS B IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_CWSB, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_AT_ARM_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP AT ARM IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_ATArm, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_VNAV_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP VNAV IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_VNav, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_LNAV_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP LNAV IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_LNav, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_VOR_LOC_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP VOR LOC IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_VORLock, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_N1_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP N1 IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_N1, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_SPEED_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP SPEED IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_Speed, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_LVL_CHANGE_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP LVL CHANGE IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_LvlChg, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_HDG_SEL_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP HDG SEL IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_HdgSel, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_APP_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP APP IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_App, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_ALT_HOLD_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP ALT HOLD IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_AltHold, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_VS_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP VS IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_VS, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737_MCP_FO_FD_IND": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP FO FD IND": {
 		"method": "calcCode",
 		"code": "(L:ngx_MCP_FDRight,Number)"
 	},
@@ -27197,7 +27197,7 @@ export default {
 		"method": "calcCode",
 		"code": "38901 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737-7_MCP_BANK_ANGLE": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 MCP BANK ANGLE": {
 		"method": "calcCode",
 		"code": "(L:switch_389_73X, number)"
 	},
@@ -29757,11 +29757,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A_DISPLAY_BRIGHTNESS_ECAM_L) 0.05 - 0 max (>L:A_DISPLAY_BRIGHTNESS_ECAM_L)\n"
 	},
-	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_FCU_INC": {
+	"FenixSim.A320.Lights.Input.FNX320 FCU DISPLAY BRIGHTNESS INC": {
 		"method": "calcCode",
 		"code": "(L:A_FCU_LIGHTING_TEXT) 0.05 + 1 min (>L:A_FCU_LIGHTING_TEXT)\n"
 	},
-	"FenixSim.A320.Lights.Input.FNX32_DISPLAY_BRIGHTNESS_FCU_DEC": {
+	"FenixSim.A320.Lights.Input.FNX320 FCU DISPLAY BRIGHTNESS DEC": {
 		"method": "calcCode",
 		"code": "(L:A_FCU_LIGHTING_TEXT) 0.05 - 0 max (>L:A_FCU_LIGHTING_TEXT)\n"
 	},
@@ -29797,11 +29797,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:A_MIP_LIGHTING_FLOOD_PEDESTAL) 0.05 - 0 max (>L:A_MIP_LIGHTING_FLOOD_PEDESTAL)\n"
 	},
-	"FenixSim.A320.Lights.Input.FNX32_FCU_INTG_LIGHTING_INC": {
+	"FenixSim.A320.Lights.Input.FNX320 FCU INTG BRIGHTNESS INC": {
 		"method": "calcCode",
 		"code": "(L:A_FCU_LIGHTING) 0.05 + 1 min (>L:A_FCU_LIGHTING)\n"
 	},
-	"FenixSim.A320.Lights.Input.FNX32_FCU_INTG_LIGHTING_DEC": {
+	"FenixSim.A320.Lights.Input.FNX320 FCU INTG BRIGHTNESS DEC": {
 		"method": "calcCode",
 		"code": "(L:A_FCU_LIGHTING) 0.05 - 0 max (>L:A_FCU_LIGHTING)\n"
 	},
@@ -34581,13 +34581,13 @@ export default {
 		"method": "calcCode",
 		"code": "(L:S_OH_PNEUMATIC_DITCHING) ! (>L:S_OH_PNEUMATIC_DITCHING) "
 	},
-	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Landing Elevation Knob Dec": {
+	"FenixSim.A320.Air Conditioning and Pressurization.Input.FNX320 Pressurization Landing Elevation Knob Dec": {
 		"method": "calcCode",
-		"code": "(L:A_OH_PNEUMATIC_LDG_ELEV) 0.1 - 0 max (>L:A_OH_PNEUMATIC_LDG_ELEV)"
+		"code": "(L:A_OH_PNEUMATIC_LDG_ELEV) 0.25 - -3 max (>L:A_OH_PNEUMATIC_LDG_ELEV)"
 	},
-	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Landing Elevation Knob Inc": {
+	"FenixSim.A320.Air Conditioning and Pressurization.Input.FNX320 Pressurization Landing Elevation Knob Inc": {
 		"method": "calcCode",
-		"code": "(L:A_OH_PNEUMATIC_LDG_ELEV) 0.1 + 1 min (>L:A_OH_PNEUMATIC_LDG_ELEV)"
+		"code": "(L:A_OH_PNEUMATIC_LDG_ELEV) 0.25 + 14 min (>L:A_OH_PNEUMATIC_LDG_ELEV)"
 	},
 	"FenixSim.A320.Air Conditioning and Pressurization.FNX320 Pressurization Manual Vertical Speed Control Down": {
 		"method": "calcCode",
@@ -40497,22 +40497,6 @@ export default {
 		"method": "calcCode",
 		"code": "(L:S_ENG_MASTER_2) ! (>L:S_ENG_MASTER_2)\n"
 	},
-	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Left Button Press": {
-		"method": "calcCode",
-		"code": "1 (>L:S_FC_THR_INST_DISCONNECT1)\n"
-	},
-	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Left Button Release": {
-		"method": "calcCode",
-		"code": "0 (>L:S_FC_THR_INST_DISCONNECT1)\n"
-	},
-	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Right Button Press": {
-		"method": "calcCode",
-		"code": "1 (>L:S_FC_THR_INST_DISCONNECT2)\n"
-	},
-	"FenixSim.A320.Engines.Input.FNX320 Throttle Autothrottle Disconnect Right Button Release": {
-		"method": "calcCode",
-		"code": "0 (>L:S_FC_THR_INST_DISCONNECT2)\n"
-	},
 	"FenixSim.A320.Miscellaneous.Input.FNX320_OH_CALLS_MECH-SWITCH": {
 		"method": "calcCode",
 		"code": "(L:S_OH_CALLS_MECH) ++ (>L:S_OH_CALLS_MECH)"
@@ -41253,11 +41237,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:switch_119_73X, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737_FLIGHT_DIRECTOR_RIGHT_SWITCH": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 FLIGHT DIRECTOR RIGHT SWITCH": {
 		"method": "calcCode",
 		"code": "(L:switch_407_73X, number)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737_FLIGHT_DIRECTOR_LEFT_SWITCH": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 FLIGHT DIRECTOR LEFT SWITCH": {
 		"method": "calcCode",
 		"code": "(L:switch_378_73X, number)"
 	},
@@ -41277,7 +41261,7 @@ export default {
 		"method": "calcCode",
 		"code": "68901 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B737-700.Autopilot.Output.PMDG_B737_A/T_ARM_SWITCH": {
+	"PMDG.B737-700.Autopilot.Output.PMDG B737 A/T ARM SWITCH": {
 		"method": "calcCode",
 		"code": "(L:switch_380_73X, number)"
 	},
@@ -43359,11 +43343,11 @@ export default {
 	},
 	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Aircond Eng1 Bleed is Off": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_PNEU_ENG_1_BLEED_PB_IS_AUTO, bool) !"
+		"code": "(L:A32NX_OVHD_PNEU_ENG_1_BLEED_PB_IS_AUTO, bool) ! (L:A32NX_OVHD_INTLT_ANN) 0 ==  (L:A32NX_ELEC_DC_2_BUS_IS_POWERED, Bool) and or 1 and (L:A32NX_ELEC_AC_1_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
 	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX OVHD Aircond Eng2 Bleed is Off": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_PNEU_ENG_2_BLEED_PB_IS_AUTO, bool) !"
+		"code": "(L:A32NX_OVHD_PNEU_ENG_2_BLEED_PB_IS_AUTO, bool) ! (L:A32NX_OVHD_INTLT_ANN) 0 ==  (L:A32NX_ELEC_DC_2_BUS_IS_POWERED, Bool) and or 1 and (L:A32NX_ELEC_AC_2_BUS_IS_POWERED, Bool) and (L:A32NX_OVHD_INTLT_ANN, number) 2 == if{ 0.1 } els{ 1 } * (A:CIRCUIT GENERAL PANEL ON, Bool) *"
 	},
 	"Fly By Wire.A320-Dev.Anti-Ice.Output.A32NX Antiice Eng1": {
 		"method": "calcCode",
@@ -43385,9 +43369,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:ParkingBrake_Position) 0 > if{ 0 (>L:ParkingBrake_Position) } els{ 100 (>L:ParkingBrake_Position) }"
 	},
-	"Fly By Wire.A320.Gear.Input.A32NX_PARK_BRAKE_LEVER_TOGGLE": {
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX Park Brake LEVER TOGGLE": {
 		"method": "calcCode",
-		"code": "(L:A32NX_PARK_BRAKE_LEVER_POS) 0 > if{ 0 (>L:A32NX_PARK_BRAKE_LEVER_POS) } els{ 1 (>L:A32NX_PARK_BRAKE_LEVER_POS) }"
+		"code": "(L:A32NX_PARK_BRAKE_LEVER_POS) ! (>L:A32NX_PARK_BRAKE_LEVER_POS)"
 	},
 	"Microsoft.Generic.Avionics.Input.TransponderFUNC": {
 		"method": "calcCode",
@@ -44305,9 +44289,9 @@ export default {
 		"method": "calcCode",
 		"code": "(A:ELECTRICAL BATTERY LOAD:1, amp) 0 >"
 	},
-	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Ovhd Press Mode Select Man": {
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Ovhd Press Mode Select Man Indicator": {
 		"method": "calcCode",
-		"code": "(L:A32NX_OVHD_PRESS_MODE_SEL_PB_IS_AUTO) !"
+		"code": "(L:A32NX_OVHD_PRESS_MODE_SEL_PB_IS_AUTO) ! (L:A32NX_OVHD_INTLT_ANN) 0 ==\n(L:A32NX_ELEC_DC_2_BUS_IS_POWERED,Bool) and or 1 and \n(L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) \n(L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, Bool) or and\n(L:A32NX_OVHD_INTLT_ANN,Number) 2 == if{ 0.1 } els{ 1 } *"
 	},
 	"Microsoft.Generic.Navigation.Input.ADF VOLUME INC": {
 		"method": "calcCode",
@@ -54145,27 +54129,27 @@ export default {
 		"method": "calcCode",
 		"code": "0 (L:XMLVAR_Autopilot_Altitude_Increment) (>K:2:AP_ALT_VAR_DEC)"
 	},
-	"Asobo.Bonanza G36.Electrical.Input.G36_ENGINE_STARTE_ON": {
+	"Black Square.Bonanza G36.Electrical.Input.G36_ENGINE_STARTE_ON": {
 		"method": "calcCode",
 		"code": "1 (>K:SET_STARTER1_HELD)"
 	},
-	"Asobo.Bonanza G36.Electrical.Input.G36_ENGINE_START_OFF": {
+	"Black Square.Bonanza G36.Electrical.Input.G36_ENGINE_START_OFF": {
 		"method": "calcCode",
 		"code": "0 (>K:SET_STARTER1_HELD)"
 	},
-	"Asobo.Bonanza G36.Electrical.Input.G36_MAGNETO_OFF": {
+	"Black Square.Bonanza G36.Electrical.Input.G36_MAGNETO_OFF": {
 		"method": "calcCode",
 		"code": "0 (>L:BKSQ_IgnitionPosition_1)"
 	},
-	"Asobo.Bonanza G36.Electrical.Input.G36_MAGNETO_RIGHT": {
+	"Black Square.Bonanza G36.Electrical.Input.G36_MAGNETO_RIGHT": {
 		"method": "calcCode",
 		"code": "1 (>L:BKSQ_IgnitionPosition_1)"
 	},
-	"Asobo.Bonanza G36.Electrical.Input.G36_MAGNETO_LEFT": {
+	"Black Square.Bonanza G36.Electrical.Input.G36_MAGNETO_LEFT": {
 		"method": "calcCode",
 		"code": "3 (>L:BKSQ_IgnitionPosition_1)"
 	},
-	"Asobo.Bonanza G36.Electrical.Input.G36_MAGNETO_BOTH": {
+	"Black Square.Bonanza G36.Electrical.Input.G36_MAGNETO_BOTH": {
 		"method": "calcCode",
 		"code": "3 (>L:BKSQ_IgnitionPosition_1)"
 	},
@@ -55913,10 +55897,6 @@ export default {
 		"method": "calcCode",
 		"code": "(L:MSATR_ENGS_START2_FAULT_LT)"
 	},
-	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Input.MSATR AUTOPILOT IAS BUTTON": {
-		"method": "calcCode",
-		"code": "1 (>L:MSATR_FGCP_IAS)"
-	},
 	"Microsoft.ATR 42-600, ATR 72-600.Electrical.Input.MSATR ELEC MASTER BATTERY SWITCH OVRD": {
 		"method": "calcCode",
 		"code": "0 (>L:MSATR_ELEC_BAT_SWITCH)"
@@ -56755,11 +56735,11 @@ export default {
 	},
 	"Microsoft.ATR 42-600, ATR 72-600.Engines.Output.MSATR ENG ATPCS ARM ANNUNCIATOR": {
 		"method": "calcCode",
-		"code": "(L:MSATR_ENG_ATPCS_ARM_LT)"
+		"code": "(L:MSATR_ATPCS_ARM_LT)"
 	},
 	"Microsoft.ATR 42-600, ATR 72-600.Engines.Output.MSATR ENG ATPCS OFF ANNUNCIATOR": {
 		"method": "calcCode",
-		"code": "(L:MSATR_ENG_ATPCS_OFF_LT)"
+		"code": "(L:MSATR_ATPCS_OFF_LT)"
 	},
 	"Microsoft.ATR 42-600, ATR 72-600.Anti-Ice.Input.MSATR DE ICING ENG 1 BUTTON PRESS": {
 		"method": "calcCode",
@@ -58023,7 +58003,7 @@ export default {
 	},
 	"Microsoft.ATR 42-600, ATR 72-600.Safety.Output.MSATR DOOR CABIN UNLK LT": {
 		"method": "calcCode",
-		"code": "(L:MSATR_DOOR_CABING_UNLK_LT)"
+		"code": "(L:MSATR_DOOR_CABIN_UNLK_LT)"
 	},
 	"Microsoft.ATR 42-600, ATR 72-600.Avionics.Output.MSATR FCTL TLU LO SPD SWITCH": {
 		"method": "calcCode",
@@ -58743,7 +58723,7 @@ export default {
 	},
 	"FenixSim.A320.Engines.Input (Potentiometer).FNX320 THROTTLE LEFT LEVER SET": {
 		"method": "calcCode",
-		"code": "@ 1023 / 3 * 2 +2 max 5 min (>L:A_FC_THROTTLE_LEFT_INPUT)"
+		"code": "@ 1023 / 3 * 2 + 2 max 5 min (>L:A_FC_THROTTLE_LEFT_INPUT)"
 	},
 	"FenixSim.A320.Engines.Input (Potentiometer).FNX320 THROTTLE RIGHT LEVER SET": {
 		"method": "calcCode",
@@ -59471,11 +59451,11 @@ export default {
 	},
 	"Fly By Wire.A320-Dev.Fire.Input.A32NX FIRE TEST CARGO ON": {
 		"method": "calcCode",
-		"code": "1 (L:A32NX_FIRE_TEST_CARGO)"
+		"code": "1 (>L:A32NX_FIRE_TEST_CARGO)"
 	},
 	"Fly By Wire.A320-Dev.Fire.Input.A32NX FIRE TEST CARGO OFF": {
 		"method": "calcCode",
-		"code": "0 (L:A32NX_FIRE_TEST_CARGO)"
+		"code": "0 (>L:A32NX_FIRE_TEST_CARGO)"
 	},
 	"Fly By Wire.A320-Dev.Fire.Output.A32NX Fire Eng1 Agent1 Discharge Annun On": {
 		"method": "calcCode",
@@ -59737,7 +59717,7 @@ export default {
 		"method": "calcCode",
 		"code": "(L:MSATR_Switch_PROP_BRAKE_Lock) ! s0 (>L:MSATR_Switch_PROP_BRAKE_Lock)\nl0 if{ 5 } els{ 0 } (>L:MSATR_Switch_PROP_BRAKE_Lock_CNT)"
 	},
-	"Microsoft.ATR 42-600, ATR 72-600.Engine.Input.MSATR ENG PROP BRAKE TOGGLE": {
+	"Microsoft.ATR 42-600, ATR 72-600.Engines.Input.MSATR ENG PROP BRAKE TOGGLE": {
 		"method": "calcCode",
 		"code": "(L:MSATR_ENGS_PROP_BRK) ! (>L:MSATR_ENGS_PROP_BRK) "
 	},
@@ -60003,7 +59983,7 @@ export default {
 	},
 	"Asobo.Longitude.Autopilot.Input.Longitude AP Baro 1 Force Std Toggle": {
 		"method": "calcCode",
-		"code": "(L:XMLVAR_Baro1_ForcedToSTD) 0 == if{ (A:KOHLSMAN SETTING HG,mbar) 16 * (>L:XMLVAR_Baro1_SavedPressure) 1 (>L:XMLVAR_Baro1_ForcedToSTD) } els{ 0 (>L:XMLVAR_Baro1_ForcedToSTD) }"
+		"code": "(L:XMLVAR_Baro1_ForcedToSTD) 0 == if{ (A:KOHLSMAN SETTING HG,mbar) 16 * (>L:XMLVAR_Baro1_SavedPressure) 1 (>L:XMLVAR_Baro1_ForcedToSTD) } els{ (L:XMLVAR_Baro1_SavedPressure) 0.0625* (>K:1:KOHLSMAN_SET)  0 (>L:XMLVAR_Baro1_ForcedToSTD) }"
 	},
 	"Fly By Wire.A320-Dev.Anti-Ice.Input.A32NX OVHD ANTI ICE ENG 1 OFF": {
 		"method": "calcCode",
@@ -62937,9 +62917,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:RealisticParkingBrake, Number) 0 == if{ (L:ParkingBrakePosition, bool) ! (>L:ParkingBrakePosition, bool) 1 (>H:A2A_PARKING_BRAKE_POSITION) } els{ (L:ParkingBrakePosition, bool) 1 == if{ 0 (>L:ParkingBrakePosition, bool) 1 (>H:A2A_PARKING_BRAKE_POSITION) } els{ (L:BrakeLPosition, percent) 25 > (L:BrakeRPosition, percent) 25 > || if{ 1 (>L:ParkingBrakePosition, bool) 1 (>H:A2A_PARKING_BRAKE_POSITION) } } }"
 	},
-	"A2A SIM.Comanche 250.Gear.PA24 250 Parking Brake Toggle": {
+	"A2A SIM.Comanche 250.Gear.Input.PA24 250 Parking Brake Toggle": {
 		"method": "calcCode",
-		"code": "(L:ParkingBrakePosition, bool) ! (>L:ParkingBrakePosition, bool) 1 (>H:A2A_PARKING_BRAKE_POSITION)"
+		"code": "(L:ParkingBrakePosition, bool) ! s0 (>L:ParkingBrakePosition, bool) \nl0 (>L:ParkingBrakeActive, bool) \n(>H:A2A_PARKING_BRAKE_POSITION)"
 	},
 	"A2A SIM.Comanche 250.Anti-Ice.PA24 250 Pitot Heat Off": {
 		"method": "calcCode",
@@ -65681,7 +65661,7 @@ export default {
 		"method": "calcCode",
 		"code": "0 (>L:var_PilotCws_IsDown, Number)"
 	},
-	"Black Square.TBM850.dsf.BS TBM850 Yoke Btn Rudder Trim Left": {
+	"Black Square.TBM850.Controls.Input.BS TBM850 Yoke Btn Rudder Trim Left": {
 		"method": "calcCode",
 		"code": " 6 (>A:BUS LOOKUP INDEX, Number) (A:CIRCUIT CONNECTION ON:7, Bool) (A:ELECTRICAL MAIN BUS VOLTAGE:6, Volts) 22 > and if{ (A:RUDDER TRIM PCT, Percent) 0.2 - 163.83 * 16383 min -16383 max (>K:RUDDER_TRIM_SET_EX1) } (L:var_trimDisabled, bool) ! (>A:CIRCUIT SWITCH ON:7, Bool)"
 	},
@@ -66749,7 +66729,7 @@ export default {
 		"method": "calcCode",
 		"code": "1 (>L:FSS_EXX_OVHD_AIRCOND_BLEED_1_BTN)"
 	},
-	"FSS.E1XX.Air Conditioning.AIR COND Bleed 2 Off": {
+	"FSS.E1XX.Air Conditioning.Input.AIR COND Bleed 2 Off": {
 		"method": "calcCode",
 		"code": "0 (>L:FSS_EXX_OVHD_AIRCOND_BLEED_2_BTN)"
 	},
@@ -74005,7 +73985,7 @@ export default {
 		"method": "calcCode",
 		"code": "@ 1023 / 0 max 1 min (>L:A_MIP_LIGHTING_MAP_R)\n"
 	},
-	"FenixSim.A320.Lights.Input (Potentiometer).FNX320 FCU INTEG LIGHTING KNOB SET": {
+	"FenixSim.A320.Lights.Input (Potentiometer).FNX320 FCU INTEG BRIGHTNESS KNOB SET": {
 		"method": "calcCode",
 		"code": "@ 1023 / 0 max 1 min (>L:A_FCU_LIGHTING)"
 	},
@@ -75353,9 +75333,9 @@ export default {
 		"method": "calcCode",
 		"code": "(L:INI_managed_speed)"
 	},
-	"IniBuilds.A320.Autopilot.INI320_FCU_SPEED_DASHED": {
+	"IniBuilds.A320.Autopilot.Output.INI320_FCU_SPEED_DASHED": {
 		"method": "calcCode",
-		"code": "(L:INI_managed_speed) 1 == (L:FCU_SPD_TIMER) 0 == && if{ 1 } els{ 0 }"
+		"code": "(L:INI_FCU_SPD_DASHED)"
 	},
 	"IniBuilds.A320.Autopilot.INI320_FCU_SPD_MACH_MODE_SELECT": {
 		"method": "calcCode",
@@ -75605,9 +75585,9 @@ export default {
 		"method": "calcCode",
 		"code": " p0 1 min 0 max (>O:HANDLING_Tow_Release_Position) (>K:TOW_PLANE_RELEASE)  1 (>O:_ButtonAnimVar) "
 	},
-	"Fly By Wire.A320-Dev.Navigation.Output.Waypoint Distance": {
+	"Fly By Wire.A320-Dev.Navigation.Output.A32NX EFIS R Waypoint Distance": {
 		"method": "calcCode",
-		"code": "(>L:A32NX_EFIS_R_TO_WPT_DISTANCE,NM)"
+		"code": "(L:A32NX_EFIS_R_TO_WPT_DISTANCE,NM)"
 	},
 	"Asobo.CJ4 AAU1.Flight Instrumentation.Output.CJ4 AOA INDICATOR UP": {
 		"method": "calcCode",
@@ -78251,7 +78231,7 @@ export default {
 	},
 	"PMDG.B777 300ER.Electrical.Output.PMDG B777 Battery On Annunciator": {
 		"method": "calcCode",
-		"code": "(L:switch_59_a, bool) 100 == "
+		"code": "(L:switch_01_a, bool) 100 == "
 	},
 	"PMDG.B777 300ER.Electrical.Output.PMDG B777 Battery Off Annunciator": {
 		"method": "calcCode",
@@ -78749,7 +78729,7 @@ export default {
 		"method": "calcCode",
 		"code": "22801 (>K:ROTOR_BRAKE)"
 	},
-	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP FD1 Switch": {
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP FD1 Switch Toggle": {
 		"method": "calcCode",
 		"code": "20201 (>K:ROTOR_BRAKE)"
 	},
@@ -78833,11 +78813,11 @@ export default {
 		"method": "calcCode",
 		"code": "50 (L:switch_2181_a) - 10 div s0\n:1\nl0 0 < if{ 218101 (>K:ROTOR_BRAKE) l0 ++ s0 g1 }\nl0 0 > if{ 218102 (>K:ROTOR_BRAKE) l0 -- s0 g1 }\n"
 	},
-	"IniBuilds.A320.EFIS.Input.INI320_EFIS_ALTIMETER_CPT_PUSH_COMMAND": {
+	"IniBuilds.A320.EFIS.Input.INI320 EFIS ALTIMETER CPT PUSH COMMAND": {
 		"method": "calcCode",
 		"code": "1 (>L:INI_1_ALTIMETER_PUSH_COMMAND)"
 	},
-	"IniBuilds.A320.EFIS.Input.INI320_EFIS_ALTIMETER_CPT_PULL_COMMAND": {
+	"IniBuilds.A320.EFIS.Input.INI320 EFIS ALTIMETER CPT PULL COMMAND": {
 		"method": "calcCode",
 		"code": "1 (>L:INI_1_ALTIMETER_PULL_COMMAND)"
 	},
@@ -80689,7 +80669,7 @@ export default {
 		"method": "calcCode",
 		"code": "80 95 (L:CABINTempKnob,number) rng if{ 1 (>L:CABINTempKnob, number) } els{ (L:CABINTempKnob, number) 1 + 75 min (>L:CABINTempKnob, number)"
 	},
-	"PMDG.B777 300ER.Air Conditioning and Pressurization.PMDG B777 Cabin Temp Decv": {
+	"PMDG.B777 300ER.Air Conditioning and Pressurization.Input.PMDG B777 Cabin Temp Dec": {
 		"method": "calcCode",
 		"code": "80 95 (L:CABINTempKnob,number) rng if{ 74 (>L:CABINTempKnob, number) } els{ (L:CABINTempKnob, number) 1 - 1 max (>L:CABINTempKnob, number)"
 	},
@@ -87001,11 +86981,11 @@ export default {
 		"method": "calcCode",
 		"code": "(L:ngx_SPDmode)"
 	},
-	"Carr\u00e9 noir.AnalogBonanza.Instruments de vol.Entr\u00e9e (potentiom\u00e8tre).RADIO ALTIMETER DECISION HEIGHT cw": {
+	"Black Square.AnalogBonanza.Flight Instruments.Input (Potentiometer).RADIO ALTIMETER DECISION HEIGHT cw": {
 		"method": "calcCode",
 		"code": "(>K:INCREASE_DECISION_HEIGHT)"
 	},
-	"Carr\u00e9 noir.AnalogBonanza.Instruments de vol.Entr\u00e9e (potentiom\u00e8tre).RADIO ALTIMETER DECISION HEIGHT (ccw)": {
+	"Black Square.AnalogBonanza.Flight Instruments.Input (Potentiometer).RADIO ALTIMETER DECISION HEIGHT (ccw)": {
 		"method": "calcCode",
 		"code": "(>K:DECREASE_DECISION_HEIGHT)"
 	},
@@ -87071,7 +87051,7 @@ export default {
 	},
 	"TFDi.MD11.Lights.Input.Landing Light Switch Right Down  ": {
 		"method": "calcCode",
-		"code": "OVHD_LTS_LDG_R_SW_LEFT_BUTTON_DOWN#90259 (>L:CEVENT)"
+		"code": "OVHD_LTS_LDG_R_SW_Right_BUTTON_DOWN#90259 (>L:CEVENT)"
 	},
 	"TFDi.MD11.Lights.Input.Landing Light Switch Right Down ": {
 		"method": "calcCode",
@@ -87156,5 +87136,10485 @@ export default {
 	"Black Square.Analog King Air.Navigation.Input.GPS APR (ARM)": {
 		"method": "calcCode",
 		"code": "0 (>L:XMLVAR_GPS_Approach, number)"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP CLB CON Button Press": {
+		"method": "calcCode",
+		"code": "20601 (>K:ROTOR_BRAKE)"
+	},
+	"PMDG.B777 300ER.Autopilot.Input. PMDG B777 MCP FD1 Switch Down": {
+		"method": "calcCode",
+		"code": "(L:switch_202_a) 0 == if{ 20201 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP FD1 Switch Up": {
+		"method": "calcCode",
+		"code": "(L:switch_202_a) 100 == if{ 20201 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP FD2 Switch Down": {
+		"method": "calcCode",
+		"code": "(L:switch_230_a) 0 == if{ 23001 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP FD2 Switch Up": {
+		"method": "calcCode",
+		"code": "(L:switch_230_a) 100 == if{ 23001 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP AT Arm L Switch Down": {
+		"method": "calcCode",
+		"code": "(L:switch_204_a) 0 == if{ 20401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP AT Arm L Switch Up": {
+		"method": "calcCode",
+		"code": "(L:switch_204_a) 100 == if{ 20401 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP AT Arm R Switch Down": {
+		"method": "calcCode",
+		"code": "(L:switch_205_a) 0 == if{ 20501 (>K:ROTOR_BRAKE) }"
+	},
+	"PMDG.B777 300ER.Autopilot.Input.PMDG B777 MCP AT Arm R Switch Up": {
+		"method": "calcCode",
+		"code": "(L:switch_205_a) 100 == if{ 20501 (>K:ROTOR_BRAKE) }"
+	},
+	"FenixSim.A320.Lights.Input (Potentiometer).FNX320 FCU DISPLAY BRIGHTNESS KNOB SET": {
+		"method": "calcCode",
+		"code": "@ 1023 / 0 max 1 min (>L:A_FCU_LIGHTING_TEXT)"
+	},
+	"PMDG.B737-700.BRAKES.Output.ANTI-SKID INOP": {
+		"method": "calcCode",
+		"code": "(L:switch_4611_73X) 0 >"
+	},
+	"SimWorks Studios.PC-12.Electrical.Input.Battery 1 On": {
+		"method": "calcCode",
+		"code": "1 (>L:ELECTRICAL_Switch_BATTERY_Bus_1, Bool)"
+	},
+	"SimWorks Studios.PC-12.Electrical.Input.Battery 1 Off": {
+		"method": "calcCode",
+		"code": "0 (>L:ELECTRICAL_Switch_BATTERY_Bus_1, Bool)"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input (Potentiometer).A32NX Tiller Axis Set": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_STEERING_SET)"
+	},
+	"Fly By Wire.A320-Dev.Gear.Input.A32NX REALISTIC TILLER ENABLED ": {
+		"method": "calcCode",
+		"code": "(L:A32NX_REALISTIC_TILLER_ENABLED) ! (>L:A32NX_REALISTIC_TILLER_ENABLED)"
+	},
+	"Microsoft.Generic.Engines.Input (Potentiometer).AXIS MIXTURE SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_MIXTURE_SET)"
+	},
+	"Microsoft.Generic.Engines.Input (Potentiometer).AXIS MIXTURE1 SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_MIXTURE1_SET)"
+	},
+	"Microsoft.Generic.Engines.Input (Potentiometer).AXIS MIXTURE2 SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_MIXTURE2_SET)"
+	},
+	"Microsoft.Generic.Engines.Input (Potentiometer).AXIS MIXTURE3 SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_MIXTURE3_SET)"
+	},
+	"Microsoft.Generic.Engines.Input (Potentiometer).AXIS MIXTURE4 SET": {
+		"method": "calcCode",
+		"code": "@ 32.0293 * 16383 - -16383 max 16383 min (>K:AXIS_MIXTURE4_SET)"
+	},
+	"Fly By Wire.A320.Navigation.Input.A320_Neo_CDU_1_BTN_SLASH": {
+		"method": "calcCode",
+		"code": ">H:A320_Neo_CDU_1_BTN_DIV"
+	},
+	"Black Square.Analog King Air.O2 System.Input.PASSENGER OXYGEN READY": {
+		"method": "calcCode",
+		"code": "1 (>L:var_PassOxygenReady, Number)"
+	},
+	"Black Square.Analog King Air.O2 System.Input.PASSENGER OXYGEN READY (DOWN)": {
+		"method": "calcCode",
+		"code": "0 (>L:var_PassOxygenReady, Number)"
+	},
+	"Black Square.Analog King Air.O2 System.Input.PASSENGER OXYGEN MANUAL (ARRIBA)": {
+		"method": "calcCode",
+		"code": "1 (>L:var_PassOxygenManual, Number)"
+	},
+	"Black Square.Analog King Air.O2 System.Input.PASSENGER OXYGEN MANUAL (ABAJO)": {
+		"method": "calcCode",
+		"code": "0 (>L:var_PassOxygenManual, Number)"
+	},
+	"PMDG.B777 300ER.Air Conditioning and Pressurization.Input.PMDG B777 Cabin Temp Inc": {
+		"method": "calcCode",
+		"code": "80 95 (L:CABINTempKnob,number) rng\nif{ 1 (>L:CABINTempKnob, number) }\nels{ (L:CABINTempKnob, number) 1 + 60 min (>L:CABINTempKnob, number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.B727_BATT_ON": {
+		"method": "calcCode",
+		"code": "1 (>L:FSS_B727_FE_ELEC_DC_BATT_SWITCH, Number)\n"
+	},
+	"FSS.B727-200 F.Electrical.Input.B727_BATT_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:FSS_B727_FE_ELEC_DC_BATT_SWITCH, Number)\n"
+	},
+	"Microsoft.Generic.Engine.Output.HELI COLLECTIVE POSITION": {
+		"method": "calcCode",
+		"code": "(A:COLLECTIVE POSITION, percent)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR BRAKE ACTIVE": {
+		"method": "calcCode",
+		"code": "(A:ROTOR BRAKE ACTIVE,Bool)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR BRAKE HANDLE POS": {
+		"method": "calcCode",
+		"code": "(A:ROTOR BRAKE HANDLE POS,Percent over 100)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR CLUTCH ACTIVE": {
+		"method": "calcCode",
+		"code": "(A:ROTOR CLUTCH ACTIVE,Bool)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR CLUTCH SWITCH POS": {
+		"method": "calcCode",
+		"code": "(A:ROTOR CLUTCH SWITCH POS, Bool)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR COLLECTIVE BLADE PITCH PCT": {
+		"method": "calcCode",
+		"code": "(A:ROTOR COLLECTIVE BLADE PITCH PCT,Percent over 100)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR CYCLIC BLADE MAX PITCH POSITION": {
+		"method": "calcCode",
+		"code": "(A:ROTOR CYCLIC BLADE MAX PITCH POSITION,Degrees)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR CYCLIC BLADE PITCH PCT": {
+		"method": "calcCode",
+		"code": "(A:ROTOR CYCLIC BLADE PITCH PCT,Percent over 100)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR GOV ACTIVE": {
+		"method": "calcCode",
+		"code": "(A:ROTOR GOV ACTIVE:index,Bool)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR GOV SWITCH POS": {
+		"method": "calcCode",
+		"code": "(A:ROTOR GOV SWITCH POS:index,Bool)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR LATERAL TRIM PCT": {
+		"method": "calcCode",
+		"code": "(A:ROTOR LATERAL TRIM PCT,Percent over 100)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR LONGITUDINAL TRIM PCT": {
+		"method": "calcCode",
+		"code": "(A:ROTOR LONGITUDINAL TRIM PCT, Percent over 100)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Output.SF50 AP FD LED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE:1,  Bool)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR ROTATION ANGLE": {
+		"method": "calcCode",
+		"code": "(A:ROTOR ROTATION ANGLE:index,Degrees)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR RPM": {
+		"method": "calcCode",
+		"code": "(A:ROTOR RPM:index,RPM)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ROTOR RPM PCT": {
+		"method": "calcCode",
+		"code": "(A:ROTOR RPM PCT:index,Percent over 100)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI TAIL ROTOR BLADE PITCH PCT": {
+		"method": "calcCode",
+		"code": "(A:TAIL ROTOR BLADE PITCH PCT,Percent over 100)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI TAIL ROTOR PEDAL POSITION": {
+		"method": "calcCode",
+		"code": "(A:TAIL ROTOR PEDAL POSITION,Percent over 100)"
+	},
+	"Microsoft.Generic.Controls.Output.HELI ENG ROTOR RPM": {
+		"method": "calcCode",
+		"code": "(A:ENG ROTOR RPM:index,Percent scalar 16K)"
+	},
+	"Microsoft.Generic.Engines.Output.HELI ENG TORQUE PERCENT": {
+		"method": "calcCode",
+		"code": "(A:ENG TORQUE PERCENT:index,Percent scalar 16k)"
+	},
+	"Microsoft.Generic.Engine.Output.HELICOPTER MASTER THROTTLE POSITION": {
+		"method": "calcCode",
+		"code": "(A:HELICOPTER_MASTER_THROTTLE_POSITION,Percent over 100)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Output.SF50 AP NAV LED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT NAV1 LOCK, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Output.SF50 AP LED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT MASTER, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Output.SF50 AP LVL LED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT WING LEVELER, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP VNAV TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_VNAVButtonValue) ! (>L:XMLVAR_VNAVButtonValue)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Output.SF50 AP VNAV LED": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_VNAVButtonValue)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP VS Toggle": {
+		"method": "calcCode",
+		"code": "(>K:AP_PANEL_VS_HOLD)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Output.SF50 AP VS LED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP ALT Toggle": {
+		"method": "calcCode",
+		"code": "(>K:AP_ALT_HOLD)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Output.SF50 AP ALT LED": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT ALTITUDE LOCK, Bool)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP ALT SEL INC": {
+		"method": "calcCode",
+		"code": "(>K:2:AP_ALT_VAR_INC)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP ALT SEL DEC": {
+		"method": "calcCode",
+		"code": "(>K:2:AP_ALT_VAR_DEC)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP ALT SEL PUSH SYNC": {
+		"method": "calcCode",
+		"code": "(A:INDICATED ALTITUDE, feet) (>K:AP_ALT_VAR_SET_ENGLISH)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP VERTICAL SPEED  WHEEL UP": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT LEVEL CHANGE, Bool) if{ \n(L:XMLVAR_AirSpeedIsInMach) if{ \n(A:AUTOPILOT MACH HOLD VAR, number) 1 - 0 max (>K:AP_MACH_VAR_SET) \n} els{ (A:AUTOPILOT AIRSPEED HOLD VAR, knot) 1 - 0 max (>K:AP_SPD_VAR_SET) \n} } els{ (A:AUTOPILOT VERTICAL HOLD:1, Bool) if{ \n1 (A:AUTOPILOT VERTICAL HOLD VAR:1, feet per minute) 100 - (>K:2:AP_VS_VAR_SET_ENGLISH) \n} els{ (A:AUTOPILOT PITCH HOLD, Bool) if{ \n(A:AUTOPILOT PITCH HOLD REF, degrees) 0.2 - 25 / 1 min -1 max 16384 * (>K:AP_PITCH_REF_SET) \n} } } "
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP VERTICAL SPEED WHEEL DOWN": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT LEVEL CHANGE, Bool) if{ \n(L:XMLVAR_AirSpeedIsInMach) if{ \n(A:AUTOPILOT MACH HOLD VAR, number) 1 + 0 max (>K:AP_MACH_VAR_SET) \n} els{ (A:AUTOPILOT AIRSPEED HOLD VAR, knot) 1 + 0 max (>K:AP_SPD_VAR_SET) \n} } els{ (A:AUTOPILOT VERTICAL HOLD:1, Bool) if{ \n1 (A:AUTOPILOT VERTICAL HOLD VAR:1, feet per minute) 100 + (>K:2:AP_VS_VAR_SET_ENGLISH) \n} els{ (A:AUTOPILOT PITCH HOLD, Bool) if{ \n(A:AUTOPILOT PITCH HOLD REF, degrees) 0.2 + 25 / 1 min -1 max 16384 * (>K:AP_PITCH_REF_SET) \n} } } "
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP VS DEC": {
+		"method": "calcCode",
+		"code": "1 (>B:AUTOPILOT_VerticalSpeed_Dec)"
+	},
+	"FlightFX.Visionjet SF50.Autopilot.Input.SF50 AP VS INC": {
+		"method": "calcCode",
+		"code": "1 (>B:AUTOPILOT_VerticalSpeed_Inc)"
+	},
+	"Asobo.CT-415 Canadair.Miscellaneous.Input.Waterdrop CT_415": {
+		"method": "calcCode",
+		"code": "(>IE:INSTRUMENT_HANDLING_Yoke_Switch_WATERDROP_L)"
+	},
+	"Fly By Wire.A320-Dev.Air Condition / Pressurization.Output.A32NX Ovhd Press Mode Select Fault Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_PRESS_MODE_SEL_PB_HAS_FAULT) (L:A32NX_OVHD_INTLT_ANN) 0 ==\n(L:A32NX_ELEC_DC_2_BUS_IS_POWERED,Bool) and or 1 and \n(L:A32NX_ELEC_AC_ESS_SHED_BUS_IS_POWERED, Bool) \n(L:A32NX_ELEC_AC_STAT_INV_BUS_IS_POWERED, Bool) or and\n(L:A32NX_OVHD_INTLT_ANN,Number) 2 == if{ 0.1 } els{ 1 } *"
+	},
+	"IniBuilds.A320.Autopilot.Output.INI320_FCU_HDG_MANAGED_DOT": {
+		"method": "calcCode",
+		"code": "(L:INI_FCU_HDG_DOT)"
+	},
+	"IniBuilds.A320.Autopilot.Output.INI320_FCU_ALT_MANAGED_DOT": {
+		"method": "calcCode",
+		"code": "(L:INI_FCU_ALT_DOT)"
+	},
+	"IniBuilds.A320.Autopilot.Output.INI320_FCU_HDG_DASHED": {
+		"method": "calcCode",
+		"code": "(L:INI_FCU_HDG_DASHED)"
+	},
+	"IniBuilds.A320.Autopilot.Output.INI320_FCU_VS_DASHED": {
+		"method": "calcCode",
+		"code": "(L:INI_FCU_VS_DASHED)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot Heading Mode On": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_HDG_SEL)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot Heading Hold On": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_HDG_HLD)"
+	},
+	"TFDi.MD11.Radios.Radio frequency MHz increase (captain side)": {
+		"method": "calcCode",
+		"code": "69632 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency MHz decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69633 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency kHz increase (captain side)": {
+		"method": "calcCode",
+		"code": "69634 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency kHz decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69635 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency MHz increase (first officer side)": {
+		"method": "calcCode",
+		"code": "69636 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency MHz decrease (first officer side)": {
+		"method": "calcCode",
+		"code": "69637 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency kHz increase (first officer side)": {
+		"method": "calcCode",
+		"code": "69638 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency kHz decrease (first officer side)": {
+		"method": "calcCode",
+		"code": "69639 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency MHz increase (observer side)": {
+		"method": "calcCode",
+		"code": "69640 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency MHz decrease (observer side)": {
+		"method": "calcCode",
+		"code": "69641 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency kHz increase (observer side)": {
+		"method": "calcCode",
+		"code": "69642 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio frequency kHz decrease (observerside)": {
+		"method": "calcCode",
+		"code": "69643 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio transfer button press (captain side)": {
+		"method": "calcCode",
+		"code": "69644 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio transfer button release (captain side)": {
+		"method": "calcCode",
+		"code": "69645 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio transfer button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69646 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio transfer button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69647 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio transfer button press (observer side)": {
+		"method": "calcCode",
+		"code": "69648 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.Radio transfer button release (observer side)": {
+		"method": "calcCode",
+		"code": "69649 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF1 button press (captain side)": {
+		"method": "calcCode",
+		"code": "69650 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF1 button release (captain side)": {
+		"method": "calcCode",
+		"code": "69651 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF2 button press (captain side)": {
+		"method": "calcCode",
+		"code": "69652 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF2 button release (captain side)": {
+		"method": "calcCode",
+		"code": "69653 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF3 button press (captain side)": {
+		"method": "calcCode",
+		"code": "69654 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF3 button release (captain side)": {
+		"method": "calcCode",
+		"code": "69655 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF1 button press (captain side)": {
+		"method": "calcCode",
+		"code": "69656 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF1 button release (captain side)": {
+		"method": "calcCode",
+		"code": "69657 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF2 button press (captain side)": {
+		"method": "calcCode",
+		"code": "69658 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF2 button release (captain side)": {
+		"method": "calcCode",
+		"code": "69659 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF1 button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69660 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF1 button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69661 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF2 button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69662 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF2 button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69663 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF3 button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69664 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF3 button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69665 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF1 button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69666 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF1 button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69667 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF2 button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69668 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF2 button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69669 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF1 button press (observer side)": {
+		"method": "calcCode",
+		"code": "69670 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF1 button release (observer side)": {
+		"method": "calcCode",
+		"code": "69671 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF2 button press (observer side)": {
+		"method": "calcCode",
+		"code": "69672 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF2 button release (observer side)": {
+		"method": "calcCode",
+		"code": "69673 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF3 button press (observer side)": {
+		"method": "calcCode",
+		"code": "69674 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.VHF3 button release (observer side)": {
+		"method": "calcCode",
+		"code": "69675 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF1 button press (observer side)": {
+		"method": "calcCode",
+		"code": "69676 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF1 button release (observer side)": {
+		"method": "calcCode",
+		"code": "69677 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF2 button press (observer side)": {
+		"method": "calcCode",
+		"code": "69678 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Radios.HF2 button release (observer side)": {
+		"method": "calcCode",
+		"code": "69679 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF1 mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69680 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF1 mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69681 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF2 mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69682 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF2 mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69683 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF3 mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69684 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF3 mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69685 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF1 mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69686 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF1 mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69687 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF2 mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69688 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF2 mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69689 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.SATCOM mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69690 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.SATCOM mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69691 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Intercom mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69692 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Intercom mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69693 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Cabin mic button press (captain side)": {
+		"method": "calcCode",
+		"code": "69694 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Cabin mic button release (captain side)": {
+		"method": "calcCode",
+		"code": "69695 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF1 mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69696 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF1 mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69697 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF2 mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69698 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF2 mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69699 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF3 mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69700 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF3 mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69701 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF1 mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69702 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF1 mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69703 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF2 mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69704 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.HF2 mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69705 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.SATCOM mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69706 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.SATCOM mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69707 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Intercom mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69708 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Intercom mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69709 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Cabin mic button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69710 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Cabin mic button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69711 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF1 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69712 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF1 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69713 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF1 volume button press (captain side)": {
+		"method": "calcCode",
+		"code": "69714 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF2 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69715 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF2 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69716 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF2 volume button press (captain side)": {
+		"method": "calcCode",
+		"code": "69717 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.VHF3 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69718 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69719 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69720 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69721 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69722 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69723 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69724 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69725 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69726 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69727 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69728 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69729 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69730 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69731 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69732 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69733 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69734 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69735 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69736 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69737 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69738 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69739 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69740 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69741 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69742 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69743 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69744 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69745 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69746 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69747 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69748 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69749 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69750 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69751 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69752 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69753 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69754 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69755 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69756 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel MKR volume increase (captain side)": {
+		"method": "calcCode",
+		"code": "69757 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel MKR volume decrease (captain side)": {
+		"method": "calcCode",
+		"code": "69758 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel MKR volume left button press (captain side)": {
+		"method": "calcCode",
+		"code": "69759 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 volume increase (first officer side)": {
+		"method": "calcCode",
+		"code": "69760 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 volume decrease (first officer side)": {
+		"method": "calcCode",
+		"code": "69761 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 volume left button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69762 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 volume increase (first officer side)": {
+		"method": "calcCode",
+		"code": "69763 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 volume decrease (first officer side)": {
+		"method": "calcCode",
+		"code": "69764 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 volume left button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69765 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 volume increase (first officer side)": {
+		"method": "calcCode",
+		"code": "69766 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 volume decrease (first officer side)": {
+		"method": "calcCode",
+		"code": "69767 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 volume left button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69768 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69769 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69770 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69771 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69772 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69773 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69774 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69775 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69776 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69777 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69778 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69779 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69780 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69781 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69782 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69783 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69784 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69785 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69786 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69787 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69788 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69789 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69790 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69791 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69792 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69793 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69794 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69795 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69796 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69797 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69798 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69799 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69800 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69801 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69802 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69803 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69804 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel MKR volume increase (FO side)": {
+		"method": "calcCode",
+		"code": "69805 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel MKR volume decrease (FO side)": {
+		"method": "calcCode",
+		"code": "69806 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel MKR left button press (FO side)": {
+		"method": "calcCode",
+		"code": "69807 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.IDENT button press (captain side)": {
+		"method": "calcCode",
+		"code": "69808 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.IDENT button release (captain side)": {
+		"method": "calcCode",
+		"code": "69809 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.IDENT button press (first officer side)": {
+		"method": "calcCode",
+		"code": "69810 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.IDENT button release (first officer side)": {
+		"method": "calcCode",
+		"code": "69811 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Captain audio panel intercom radio left press": {
+		"method": "calcCode",
+		"code": "69812 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Captain audio panel intercom radio right press": {
+		"method": "calcCode",
+		"code": "69813 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.First officer audio panel intercom radio left press": {
+		"method": "calcCode",
+		"code": "69814 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.First officer audio panel intercom radio right press": {
+		"method": "calcCode",
+		"code": "69815 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU1 brightness decrease (pedestal)": {
+		"method": "calcCode",
+		"code": "69816 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU1 brightness increase (pedestal)": {
+		"method": "calcCode",
+		"code": "69817 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU2 brightness decrease (pedestal)": {
+		"method": "calcCode",
+		"code": "69818 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU2 brightness increase (pedestal)": {
+		"method": "calcCode",
+		"code": "69819 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU3 brightness decrease (pedestal)": {
+		"method": "calcCode",
+		"code": "69820 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU3 brightness increase (pedestal)": {
+		"method": "calcCode",
+		"code": "69821 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU4 brightness decrease (pedestal)": {
+		"method": "calcCode",
+		"code": "69822 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU4 brightness increase (pedestal)": {
+		"method": "calcCode",
+		"code": "69823 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU5 brightness decrease (pedestal)": {
+		"method": "calcCode",
+		"code": "69824 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU5 brightness increase (pedestal)": {
+		"method": "calcCode",
+		"code": "69825 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU6 brightness decrease (pedestal)": {
+		"method": "calcCode",
+		"code": "69826 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.DU6 brightness increase (pedestal)": {
+		"method": "calcCode",
+		"code": "69827 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Engine SD button press": {
+		"method": "calcCode",
+		"code": "69828 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Engine SD button release": {
+		"method": "calcCode",
+		"code": "69829 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.ND SD button press": {
+		"method": "calcCode",
+		"code": "69830 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.ND SD button release": {
+		"method": "calcCode",
+		"code": "69831 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Consequences SD button press": {
+		"method": "calcCode",
+		"code": "69832 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Consequences SD button release": {
+		"method": "calcCode",
+		"code": "69833 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Status SD button press": {
+		"method": "calcCode",
+		"code": "69834 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Status SD button release": {
+		"method": "calcCode",
+		"code": "69835 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Hydraulic SD button press": {
+		"method": "calcCode",
+		"code": "69836 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Hydraulic SD button release": {
+		"method": "calcCode",
+		"code": "69837 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Electric SD button press": {
+		"method": "calcCode",
+		"code": "69838 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Electric SD button release": {
+		"method": "calcCode",
+		"code": "69839 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Air SD button press": {
+		"method": "calcCode",
+		"code": "69840 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Air SD button release": {
+		"method": "calcCode",
+		"code": "69841 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Fuel SD button press": {
+		"method": "calcCode",
+		"code": "69842 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Fuel SD button release": {
+		"method": "calcCode",
+		"code": "69843 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Config SD button press": {
+		"method": "calcCode",
+		"code": "69844 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Config SD button release": {
+		"method": "calcCode",
+		"code": "69845 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Miscellaneous SD button press": {
+		"method": "calcCode",
+		"code": "69846 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Systems Display panel.Miscellaneous SD button release": {
+		"method": "calcCode",
+		"code": "69847 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Pedestal rudder trim left press": {
+		"method": "calcCode",
+		"code": "69848 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Pedestal rudder trim left release": {
+		"method": "calcCode",
+		"code": "69849 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Pedestal rudder trim right press": {
+		"method": "calcCode",
+		"code": "69850 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Pedestal rudder trim right release": {
+		"method": "calcCode",
+		"code": "69851 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Pedestal aileron trim increase": {
+		"method": "calcCode",
+		"code": "69852 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Pedestal aileron trim decrease": {
+		"method": "calcCode",
+		"code": "69853 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Pedestal transponder altitude reporting press": {
+		"method": "calcCode",
+		"code": "69854 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Pedestal transponder select press": {
+		"method": "calcCode",
+		"code": "69855 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 1 button press": {
+		"method": "calcCode",
+		"code": "69856 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 1 button release": {
+		"method": "calcCode",
+		"code": "69857 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 2 button press": {
+		"method": "calcCode",
+		"code": "69858 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 2 button release": {
+		"method": "calcCode",
+		"code": "69859 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 3 button press": {
+		"method": "calcCode",
+		"code": "69860 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 3 button release": {
+		"method": "calcCode",
+		"code": "69861 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 4 button press": {
+		"method": "calcCode",
+		"code": "69862 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 4 button release": {
+		"method": "calcCode",
+		"code": "69863 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 5 button press": {
+		"method": "calcCode",
+		"code": "69864 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 5 button release": {
+		"method": "calcCode",
+		"code": "69865 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 6 button press": {
+		"method": "calcCode",
+		"code": "69866 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 6 button release": {
+		"method": "calcCode",
+		"code": "69867 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 7 button press": {
+		"method": "calcCode",
+		"code": "69868 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 7 button release": {
+		"method": "calcCode",
+		"code": "69869 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 0 button press": {
+		"method": "calcCode",
+		"code": "69870 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder 0 button release": {
+		"method": "calcCode",
+		"code": "69871 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder clear button press": {
+		"method": "calcCode",
+		"code": "69872 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder clear button release": {
+		"method": "calcCode",
+		"code": "69873 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Pedestal transponder above/below switch left press": {
+		"method": "calcCode",
+		"code": "69874 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Pedestal transponder above/below switch right press": {
+		"method": "calcCode",
+		"code": "69875 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Pedestal transponder mode left press": {
+		"method": "calcCode",
+		"code": "69876 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Pedestal transponder mode right press": {
+		"method": "calcCode",
+		"code": "69877 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder test button press": {
+		"method": "calcCode",
+		"code": "69878 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder test button release": {
+		"method": "calcCode",
+		"code": "69879 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder IDENT button press": {
+		"method": "calcCode",
+		"code": "69880 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Transponder.Transponder IDENT button release": {
+		"method": "calcCode",
+		"code": "69881 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Pedestal ADG lever left press": {
+		"method": "calcCode",
+		"code": "69882 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar off button press": {
+		"method": "calcCode",
+		"code": "69883 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar off button release": {
+		"method": "calcCode",
+		"code": "69884 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar test button press": {
+		"method": "calcCode",
+		"code": "69885 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar test button release": {
+		"method": "calcCode",
+		"code": "69886 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar WX+T button press": {
+		"method": "calcCode",
+		"code": "69887 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar WX+T button release": {
+		"method": "calcCode",
+		"code": "69888 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar WX button press": {
+		"method": "calcCode",
+		"code": "69889 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar WX button release": {
+		"method": "calcCode",
+		"code": "69890 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar MAP button press": {
+		"method": "calcCode",
+		"code": "69891 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar MAP button release": {
+		"method": "calcCode",
+		"code": "69892 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar SYS button press": {
+		"method": "calcCode",
+		"code": "69893 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar SYS button release": {
+		"method": "calcCode",
+		"code": "69894 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar IDENT button press": {
+		"method": "calcCode",
+		"code": "69895 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar IDENT button release": {
+		"method": "calcCode",
+		"code": "69896 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar STAB button press": {
+		"method": "calcCode",
+		"code": "69897 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Weather radar STAB button release": {
+		"method": "calcCode",
+		"code": "69898 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Pedestal weather radar gain decrease": {
+		"method": "calcCode",
+		"code": "69899 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Pedestal weather radar gain increase": {
+		"method": "calcCode",
+		"code": "69900 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Pedestal weather radar tilt decrease": {
+		"method": "calcCode",
+		"code": "69901 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Weather Radar.Pedestal weather radar tilt increase": {
+		"method": "calcCode",
+		"code": "69902 (>L:CEVENT)"
+	},
+	"TFDi.MD11.APU.Overhead APU start button press": {
+		"method": "calcCode",
+		"code": "73728 (>L:CEVENT)"
+	},
+	"TFDi.MD11.APU.Overhead APU start button release": {
+		"method": "calcCode",
+		"code": "73729 (>L:CEVENT)"
+	},
+	"TFDi.MD11.APU.Overhead APU generator button press": {
+		"method": "calcCode",
+		"code": "73730 (>L:CEVENT)"
+	},
+	"TFDi.MD11.APU.Overhead APU generator button release": {
+		"method": "calcCode",
+		"code": "73731 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 1 fire left press": {
+		"method": "calcCode",
+		"code": "73732 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 1 fire right press": {
+		"method": "calcCode",
+		"code": "73733 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 1 fire increase": {
+		"method": "calcCode",
+		"code": "73734 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 1 fire decrease": {
+		"method": "calcCode",
+		"code": "73735 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 2 fire left press": {
+		"method": "calcCode",
+		"code": "73736 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 2 fire right press": {
+		"method": "calcCode",
+		"code": "73737 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 2 fire increase": {
+		"method": "calcCode",
+		"code": "73738 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 2 fire decrease": {
+		"method": "calcCode",
+		"code": "73739 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 3 fire left press": {
+		"method": "calcCode",
+		"code": "73740 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 3 fire right press": {
+		"method": "calcCode",
+		"code": "73741 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 3 fire increase": {
+		"method": "calcCode",
+		"code": "73742 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead engine 3 fire decrease": {
+		"method": "calcCode",
+		"code": "73743 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead APU fire left press": {
+		"method": "calcCode",
+		"code": "73744 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead APU fire right press": {
+		"method": "calcCode",
+		"code": "73745 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead APU fire increase": {
+		"method": "calcCode",
+		"code": "73746 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead APU fire decrease": {
+		"method": "calcCode",
+		"code": "73747 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead fire test button press": {
+		"method": "calcCode",
+		"code": "73748 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead fire test button release": {
+		"method": "calcCode",
+		"code": "73749 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead forward cargo smoke vent left press": {
+		"method": "calcCode",
+		"code": "73750 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead forward cargo smoke agent 1 button press": {
+		"method": "calcCode",
+		"code": "73751 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead forward cargo smoke agent 1 button release": {
+		"method": "calcCode",
+		"code": "73752 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead forward cargo smoke agent 1 guard left press": {
+		"method": "calcCode",
+		"code": "73753 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead forward cargo smoke agent 2 button press": {
+		"method": "calcCode",
+		"code": "73754 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead forward cargo smoke agent 2 button release": {
+		"method": "calcCode",
+		"code": "73755 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead forward cargo smoke agent 2 guard left press": {
+		"method": "calcCode",
+		"code": "73756 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead cargo smoke test button press": {
+		"method": "calcCode",
+		"code": "73757 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead cargo smoke test button release": {
+		"method": "calcCode",
+		"code": "73758 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead aft cargo smoke vent left press": {
+		"method": "calcCode",
+		"code": "73759 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead aft cargo smoke agent 1 button press": {
+		"method": "calcCode",
+		"code": "73760 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead aft cargo smoke agent 1 button release": {
+		"method": "calcCode",
+		"code": "73761 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead aft cargo smoke agent 1 guard left press": {
+		"method": "calcCode",
+		"code": "73762 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead aft cargo smoke agent 2 button press": {
+		"method": "calcCode",
+		"code": "73763 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead aft cargo smoke agent 2 button release": {
+		"method": "calcCode",
+		"code": "73764 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fire Protection.Overhead aft cargo smoke agent 2 guard left press": {
+		"method": "calcCode",
+		"code": "73765 (>L:CEVENT)"
+	},
+	"TFDi.MD11.GPWS.Overhead GPWS terrain override button press": {
+		"method": "calcCode",
+		"code": "73766 (>L:CEVENT)"
+	},
+	"TFDi.MD11.GPWS.Overhead GPWS terrain override button release": {
+		"method": "calcCode",
+		"code": "73767 (>L:CEVENT)"
+	},
+	"TFDi.MD11.GPWS.Overhead GPWS terrain override guard left press": {
+		"method": "calcCode",
+		"code": "73768 (>L:CEVENT)"
+	},
+	"TFDi.MD11.GPWS.Overhead GPWS switch left press": {
+		"method": "calcCode",
+		"code": "73769 (>L:CEVENT)"
+	},
+	"TFDi.MD11.GPWS.Overhead GPWS switch right press": {
+		"method": "calcCode",
+		"code": "73770 (>L:CEVENT)"
+	},
+	"TFDi.MD11.GPWS.Overhead GPWS guard left press": {
+		"method": "calcCode",
+		"code": "73771 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Evacuation.Overhead evacuation horn shut-off left press": {
+		"method": "calcCode",
+		"code": "73772 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Evacuation.Overhead evacuation switch left press": {
+		"method": "calcCode",
+		"code": "73773 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Evacuation.Overhead evacuation switch right press": {
+		"method": "calcCode",
+		"code": "73774 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Evacuation.Overhead evacuation guard left press": {
+		"method": "calcCode",
+		"code": "73775 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Speedbrake handle button press (left)": {
+		"method": "calcCode",
+		"code": "77828 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight controls.Speedbrake handle button press (right)": {
+		"method": "calcCode",
+		"code": "77829 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Flap latch button press (left)": {
+		"method": "calcCode",
+		"code": "77830 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Flap latch button press (right)": {
+		"method": "calcCode",
+		"code": "77831 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Dial-a-flap range wheel up": {
+		"method": "calcCode",
+		"code": "77832 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Dial-a-flap range wheel down": {
+		"method": "calcCode",
+		"code": "77833 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Left throttle fuel switch button press (left)": {
+		"method": "calcCode",
+		"code": "77834 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Center throttle fuel switch button press (left)": {
+		"method": "calcCode",
+		"code": "77835 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Right throttle fuel switch button press (left)": {
+		"method": "calcCode",
+		"code": "77836 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Left throttle start switch button press (left)": {
+		"method": "calcCode",
+		"code": "77837 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Center throttle start switch button press (left)": {
+		"method": "calcCode",
+		"code": "77838 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Right throttle start switch button press (left)": {
+		"method": "calcCode",
+		"code": "77839 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle longitudinal trim switch button press (left)": {
+		"method": "calcCode",
+		"code": "77840 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle longitudinal trim switch button release (left)": {
+		"method": "calcCode",
+		"code": "77841 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle longitudinal trim switch button press (right)": {
+		"method": "calcCode",
+		"code": "77842 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle longitudinal trim switch button release (right)": {
+		"method": "calcCode",
+		"code": "77843 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle quadrant right ATS button press": {
+		"method": "calcCode",
+		"code": "77846 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle quadrant right ATS button release": {
+		"method": "calcCode",
+		"code": "77847 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle parking lever button press (left)": {
+		"method": "calcCode",
+		"code": "77848 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle quadrant gear horn button press": {
+		"method": "calcCode",
+		"code": "77849 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle quadrant gear horn button release": {
+		"method": "calcCode",
+		"code": "77850 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle quadrant go-around button press": {
+		"method": "calcCode",
+		"code": "77851 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Throttle Quadrant.Throttle quadrant go-around button release": {
+		"method": "calcCode",
+		"code": "77852 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flaps.Center slat stow button press (left)": {
+		"method": "calcCode",
+		"code": "81920 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flaps.Center slat stow button release (left)": {
+		"method": "calcCode",
+		"code": "81921 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flaps.Center slat stow guard button press": {
+		"method": "calcCode",
+		"code": "81922 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC scratchpad button press (left)": {
+		"method": "calcCode",
+		"code": "81923 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC scratchpad button release (left)": {
+		"method": "calcCode",
+		"code": "81924 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 1L button press": {
+		"method": "calcCode",
+		"code": "81925 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 1L button release": {
+		"method": "calcCode",
+		"code": "81926 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 2L button press": {
+		"method": "calcCode",
+		"code": "81927 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 2L button release": {
+		"method": "calcCode",
+		"code": "81928 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 3L button press": {
+		"method": "calcCode",
+		"code": "81929 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 3L button release": {
+		"method": "calcCode",
+		"code": "81930 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 4L button press": {
+		"method": "calcCode",
+		"code": "81931 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 4L button release": {
+		"method": "calcCode",
+		"code": "81932 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 5L button press": {
+		"method": "calcCode",
+		"code": "81933 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 5L button release": {
+		"method": "calcCode",
+		"code": "81934 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 6L button press": {
+		"method": "calcCode",
+		"code": "81935 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 6L button release": {
+		"method": "calcCode",
+		"code": "81936 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 1R button press": {
+		"method": "calcCode",
+		"code": "81937 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 1R button release": {
+		"method": "calcCode",
+		"code": "81938 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 2R button press": {
+		"method": "calcCode",
+		"code": "81939 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 2R button release": {
+		"method": "calcCode",
+		"code": "81940 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 3R button press": {
+		"method": "calcCode",
+		"code": "81941 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 3R button release": {
+		"method": "calcCode",
+		"code": "81942 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 4R button press": {
+		"method": "calcCode",
+		"code": "81943 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 4R button release": {
+		"method": "calcCode",
+		"code": "81944 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 5R button press": {
+		"method": "calcCode",
+		"code": "81945 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 5R button release": {
+		"method": "calcCode",
+		"code": "81946 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 6R button press": {
+		"method": "calcCode",
+		"code": "81947 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC LSK 6R button release": {
+		"method": "calcCode",
+		"code": "81948 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).Left MCDU brightness knob decrease": {
+		"method": "calcCode",
+		"code": "81949 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).Left MCDU brightness knob increase": {
+		"method": "calcCode",
+		"code": "81950 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC DIR/INTC button press": {
+		"method": "calcCode",
+		"code": "81951 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC DIR/INTC button release": {
+		"method": "calcCode",
+		"code": "81952 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC NAV/RAD button press": {
+		"method": "calcCode",
+		"code": "81953 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC NAV/RAD button release": {
+		"method": "calcCode",
+		"code": "81954 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC PERF button press": {
+		"method": "calcCode",
+		"code": "81955 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC PERF button release": {
+		"method": "calcCode",
+		"code": "81956 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC INIT button press": {
+		"method": "calcCode",
+		"code": "81957 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC INIT button release": {
+		"method": "calcCode",
+		"code": "81958 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC TO/APPR button press": {
+		"method": "calcCode",
+		"code": "81959 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC TO/APPR button release": {
+		"method": "calcCode",
+		"code": "81960 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC FPLN button press": {
+		"method": "calcCode",
+		"code": "81961 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC FPLN button release": {
+		"method": "calcCode",
+		"code": "81962 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC PROG button press": {
+		"method": "calcCode",
+		"code": "81963 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC PROG button release": {
+		"method": "calcCode",
+		"code": "81964 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC FIX button press": {
+		"method": "calcCode",
+		"code": "81965 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC FIX button release": {
+		"method": "calcCode",
+		"code": "81966 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC SEC FPLN button press": {
+		"method": "calcCode",
+		"code": "81967 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC SEC FPLN button release": {
+		"method": "calcCode",
+		"code": "81968 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC REF button press": {
+		"method": "calcCode",
+		"code": "81969 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC REF button release": {
+		"method": "calcCode",
+		"code": "81970 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC ENG OUT button press": {
+		"method": "calcCode",
+		"code": "81971 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC ENG OUT button release": {
+		"method": "calcCode",
+		"code": "81972 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC menu button press (left)": {
+		"method": "calcCode",
+		"code": "81973 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC menu button release (left)": {
+		"method": "calcCode",
+		"code": "81974 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC up button press (left)": {
+		"method": "calcCode",
+		"code": "81975 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC up button release (left)": {
+		"method": "calcCode",
+		"code": "81976 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC next page button press (left)": {
+		"method": "calcCode",
+		"code": "81977 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC next page button release (left)": {
+		"method": "calcCode",
+		"code": "81978 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC down button press (left)": {
+		"method": "calcCode",
+		"code": "81979 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC down button release (left)": {
+		"method": "calcCode",
+		"code": "81980 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 1 press (left)": {
+		"method": "calcCode",
+		"code": "81981 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 1 release (left)": {
+		"method": "calcCode",
+		"code": "81982 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 2 press (left)": {
+		"method": "calcCode",
+		"code": "81983 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 2 release (left)": {
+		"method": "calcCode",
+		"code": "81984 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 3 press (left)": {
+		"method": "calcCode",
+		"code": "81985 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 3 release (left)": {
+		"method": "calcCode",
+		"code": "81986 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 4 press (left)": {
+		"method": "calcCode",
+		"code": "81987 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 4 release (left)": {
+		"method": "calcCode",
+		"code": "81988 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 5 press (left)": {
+		"method": "calcCode",
+		"code": "81989 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 5 release (left)": {
+		"method": "calcCode",
+		"code": "81990 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 6 press (left)": {
+		"method": "calcCode",
+		"code": "81991 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 6 release (left)": {
+		"method": "calcCode",
+		"code": "81992 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 7 press (left)": {
+		"method": "calcCode",
+		"code": "81993 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 7 release (left)": {
+		"method": "calcCode",
+		"code": "81994 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 8 press (left)": {
+		"method": "calcCode",
+		"code": "81995 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 8 release (left)": {
+		"method": "calcCode",
+		"code": "81996 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 9 press (left)": {
+		"method": "calcCode",
+		"code": "81997 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 9 release (left)": {
+		"method": "calcCode",
+		"code": "81998 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC slash button press (left)": {
+		"method": "calcCode",
+		"code": "81999 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC slash button release (left)": {
+		"method": "calcCode",
+		"code": "82000 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 0 press (left)": {
+		"method": "calcCode",
+		"code": "82001 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button 0 release (left)": {
+		"method": "calcCode",
+		"code": "82002 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC dot button press (left)": {
+		"method": "calcCode",
+		"code": "82003 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC dot button release (left)": {
+		"method": "calcCode",
+		"code": "82004 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button A press (left)": {
+		"method": "calcCode",
+		"code": "82005 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button A release (left)": {
+		"method": "calcCode",
+		"code": "82006 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button B press (left)": {
+		"method": "calcCode",
+		"code": "82007 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button B release (left)": {
+		"method": "calcCode",
+		"code": "82008 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button C press (left)": {
+		"method": "calcCode",
+		"code": "82009 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button C release (left)": {
+		"method": "calcCode",
+		"code": "82010 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button D press (left)": {
+		"method": "calcCode",
+		"code": "82011 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button D release (left)": {
+		"method": "calcCode",
+		"code": "82012 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button E press (left)": {
+		"method": "calcCode",
+		"code": "82013 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button E release (left)": {
+		"method": "calcCode",
+		"code": "82014 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button F press (left)": {
+		"method": "calcCode",
+		"code": "82015 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button F release (left)": {
+		"method": "calcCode",
+		"code": "82016 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button G press (left)": {
+		"method": "calcCode",
+		"code": "82017 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button G release (left)": {
+		"method": "calcCode",
+		"code": "82018 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button H press (left)": {
+		"method": "calcCode",
+		"code": "82019 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button H release (left)": {
+		"method": "calcCode",
+		"code": "82020 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button I press (left)": {
+		"method": "calcCode",
+		"code": "82021 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button I release (left)": {
+		"method": "calcCode",
+		"code": "82022 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button J press (left)": {
+		"method": "calcCode",
+		"code": "82023 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button J release (left)": {
+		"method": "calcCode",
+		"code": "82024 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button K press (left)": {
+		"method": "calcCode",
+		"code": "82025 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button K release (left)": {
+		"method": "calcCode",
+		"code": "82026 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button L press (left)": {
+		"method": "calcCode",
+		"code": "82027 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button L release (left)": {
+		"method": "calcCode",
+		"code": "82028 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button M press (left)": {
+		"method": "calcCode",
+		"code": "82029 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button M release (left)": {
+		"method": "calcCode",
+		"code": "82030 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button N press (left)": {
+		"method": "calcCode",
+		"code": "82031 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button N release (left)": {
+		"method": "calcCode",
+		"code": "82032 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button O press (left)": {
+		"method": "calcCode",
+		"code": "82033 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button O release (left)": {
+		"method": "calcCode",
+		"code": "82034 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button P press (left)": {
+		"method": "calcCode",
+		"code": "82035 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button P release (left)": {
+		"method": "calcCode",
+		"code": "82036 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button Q press (left)": {
+		"method": "calcCode",
+		"code": "82037 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button Q release (left)": {
+		"method": "calcCode",
+		"code": "82038 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button R press (left)": {
+		"method": "calcCode",
+		"code": "82039 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button R release (left)": {
+		"method": "calcCode",
+		"code": "82040 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button S press (left)": {
+		"method": "calcCode",
+		"code": "82041 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button S release (left)": {
+		"method": "calcCode",
+		"code": "82042 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button T press (left)": {
+		"method": "calcCode",
+		"code": "82043 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button T release (left)": {
+		"method": "calcCode",
+		"code": "82044 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button U press (left)": {
+		"method": "calcCode",
+		"code": "82045 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button U release (left)": {
+		"method": "calcCode",
+		"code": "82046 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button V press (left)": {
+		"method": "calcCode",
+		"code": "82047 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button V release (left)": {
+		"method": "calcCode",
+		"code": "82048 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button W press (left)": {
+		"method": "calcCode",
+		"code": "82049 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button W release (left)": {
+		"method": "calcCode",
+		"code": "82050 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button X press (left)": {
+		"method": "calcCode",
+		"code": "82051 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button X release (left)": {
+		"method": "calcCode",
+		"code": "82052 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button Y press (left)": {
+		"method": "calcCode",
+		"code": "82053 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button Y release (left)": {
+		"method": "calcCode",
+		"code": "82054 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button Z press (left)": {
+		"method": "calcCode",
+		"code": "82055 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC button Z release (left)": {
+		"method": "calcCode",
+		"code": "82056 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC minus button press (left)": {
+		"method": "calcCode",
+		"code": "82057 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC minus button release (left)": {
+		"method": "calcCode",
+		"code": "82058 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC plus button press (left)": {
+		"method": "calcCode",
+		"code": "82059 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC plus button release (left)": {
+		"method": "calcCode",
+		"code": "82060 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC SP button press (left)": {
+		"method": "calcCode",
+		"code": "82061 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC SP button release (left)": {
+		"method": "calcCode",
+		"code": "82062 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC CLR button press (left)": {
+		"method": "calcCode",
+		"code": "82063 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (left).FMC CLR button release (left)": {
+		"method": "calcCode",
+		"code": "82064 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC RMCDU scratchpad button press (left)": {
+		"method": "calcCode",
+		"code": "82065 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC RMCDU scratchpad button release (left)": {
+		"method": "calcCode",
+		"code": "82066 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC RMCDU LSK 1L button press": {
+		"method": "calcCode",
+		"code": "82067 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC RMCDU LSK 1L button release": {
+		"method": "calcCode",
+		"code": "82068 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC RMCDU LSK 2L button press": {
+		"method": "calcCode",
+		"code": "82069 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC RMCDU LSK 2L button release": {
+		"method": "calcCode",
+		"code": "82070 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC RMCDU LSK 3L button press": {
+		"method": "calcCode",
+		"code": "82071 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 3L button release": {
+		"method": "calcCode",
+		"code": "82072 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 4L button press": {
+		"method": "calcCode",
+		"code": "82073 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 4L button release": {
+		"method": "calcCode",
+		"code": "82074 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 5L button press": {
+		"method": "calcCode",
+		"code": "82075 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 5L button release": {
+		"method": "calcCode",
+		"code": "82076 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 6L button press": {
+		"method": "calcCode",
+		"code": "82077 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 6L button release": {
+		"method": "calcCode",
+		"code": "82078 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 1R button press": {
+		"method": "calcCode",
+		"code": "82079 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 1R button release": {
+		"method": "calcCode",
+		"code": "82080 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 2R button press": {
+		"method": "calcCode",
+		"code": "82081 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 2R button release": {
+		"method": "calcCode",
+		"code": "82082 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 3R button press": {
+		"method": "calcCode",
+		"code": "82083 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 3R button release": {
+		"method": "calcCode",
+		"code": "82084 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 4R button press": {
+		"method": "calcCode",
+		"code": "82085 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 4R button release": {
+		"method": "calcCode",
+		"code": "82086 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 5R button press": {
+		"method": "calcCode",
+		"code": "82087 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 5R button release": {
+		"method": "calcCode",
+		"code": "82088 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 6R button press": {
+		"method": "calcCode",
+		"code": "82089 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) LSK 6R button release": {
+		"method": "calcCode",
+		"code": "82090 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).Right MCDU brightness knob decrease": {
+		"method": "calcCode",
+		"code": "82091 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).Right MCDU brightness knob increase": {
+		"method": "calcCode",
+		"code": "82092 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) DIR INTC button press": {
+		"method": "calcCode",
+		"code": "82093 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) DIR INTC button release": {
+		"method": "calcCode",
+		"code": "82094 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) NAV RAD button press": {
+		"method": "calcCode",
+		"code": "82095 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) NAV RAD button release": {
+		"method": "calcCode",
+		"code": "82096 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) PERF button press": {
+		"method": "calcCode",
+		"code": "82097 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) PERF button release": {
+		"method": "calcCode",
+		"code": "82098 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) INIT button press": {
+		"method": "calcCode",
+		"code": "82099 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) INIT button release": {
+		"method": "calcCode",
+		"code": "82100 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) TOAPPR button press": {
+		"method": "calcCode",
+		"code": "82101 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) TOAPPR button release": {
+		"method": "calcCode",
+		"code": "82102 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) FPLN button press": {
+		"method": "calcCode",
+		"code": "82103 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) FPLN button release": {
+		"method": "calcCode",
+		"code": "82104 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) PROG button press": {
+		"method": "calcCode",
+		"code": "82105 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) PROG button release": {
+		"method": "calcCode",
+		"code": "82106 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) FIX button press": {
+		"method": "calcCode",
+		"code": "82107 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) FIX button release": {
+		"method": "calcCode",
+		"code": "82108 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) SEC FPLN button press": {
+		"method": "calcCode",
+		"code": "82109 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) SEC FPLN button release": {
+		"method": "calcCode",
+		"code": "82110 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) REF button press": {
+		"method": "calcCode",
+		"code": "82111 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) REF button release": {
+		"method": "calcCode",
+		"code": "82112 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) ENG OUT button press": {
+		"method": "calcCode",
+		"code": "82113 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) ENG OUT button release": {
+		"method": "calcCode",
+		"code": "82114 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) MENU button press": {
+		"method": "calcCode",
+		"code": "82115 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) MENU button release": {
+		"method": "calcCode",
+		"code": "82116 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) UP button press": {
+		"method": "calcCode",
+		"code": "82117 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) UP button release": {
+		"method": "calcCode",
+		"code": "82118 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) NEXTPAGE button press": {
+		"method": "calcCode",
+		"code": "82119 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) NEXTPAGE button release": {
+		"method": "calcCode",
+		"code": "82120 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) DOWN button press": {
+		"method": "calcCode",
+		"code": "82121 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) DOWN button release": {
+		"method": "calcCode",
+		"code": "82122 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 1 button press": {
+		"method": "calcCode",
+		"code": "82123 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 1 button release": {
+		"method": "calcCode",
+		"code": "82124 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 2 button press": {
+		"method": "calcCode",
+		"code": "82125 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 2 button release": {
+		"method": "calcCode",
+		"code": "82126 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 3 button press": {
+		"method": "calcCode",
+		"code": "82127 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 3 button release": {
+		"method": "calcCode",
+		"code": "82128 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 4 button press": {
+		"method": "calcCode",
+		"code": "82129 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 4 button release": {
+		"method": "calcCode",
+		"code": "82130 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 5 button press": {
+		"method": "calcCode",
+		"code": "82131 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 5 button release": {
+		"method": "calcCode",
+		"code": "82132 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 6 button press": {
+		"method": "calcCode",
+		"code": "82133 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 6 button release": {
+		"method": "calcCode",
+		"code": "82134 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 7 button press": {
+		"method": "calcCode",
+		"code": "82135 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 7 button release": {
+		"method": "calcCode",
+		"code": "82136 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 8 button press": {
+		"method": "calcCode",
+		"code": "82137 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 8 button release": {
+		"method": "calcCode",
+		"code": "82138 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 9 button press": {
+		"method": "calcCode",
+		"code": "82139 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 9 button release": {
+		"method": "calcCode",
+		"code": "82140 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) slash button press": {
+		"method": "calcCode",
+		"code": "82141 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) slash button release": {
+		"method": "calcCode",
+		"code": "82142 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 0 button press": {
+		"method": "calcCode",
+		"code": "82143 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) 0 button release": {
+		"method": "calcCode",
+		"code": "82144 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) dot button press": {
+		"method": "calcCode",
+		"code": "82145 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) dot button release": {
+		"method": "calcCode",
+		"code": "82146 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) A button press": {
+		"method": "calcCode",
+		"code": "82147 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) A button release": {
+		"method": "calcCode",
+		"code": "82148 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) B button press": {
+		"method": "calcCode",
+		"code": "82149 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) B button release": {
+		"method": "calcCode",
+		"code": "82150 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) C button press": {
+		"method": "calcCode",
+		"code": "82151 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) C button release": {
+		"method": "calcCode",
+		"code": "82152 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) D button press": {
+		"method": "calcCode",
+		"code": "82153 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) D button release": {
+		"method": "calcCode",
+		"code": "82154 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) E button press": {
+		"method": "calcCode",
+		"code": "82155 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) E button release": {
+		"method": "calcCode",
+		"code": "82156 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) F button press": {
+		"method": "calcCode",
+		"code": "82157 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) F button release": {
+		"method": "calcCode",
+		"code": "82158 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) G button press": {
+		"method": "calcCode",
+		"code": "82159 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) G button release": {
+		"method": "calcCode",
+		"code": "82160 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) H button press": {
+		"method": "calcCode",
+		"code": "82161 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) H button release": {
+		"method": "calcCode",
+		"code": "82162 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) I button press": {
+		"method": "calcCode",
+		"code": "82163 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) I button release": {
+		"method": "calcCode",
+		"code": "82164 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) J button press": {
+		"method": "calcCode",
+		"code": "82165 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) J button release": {
+		"method": "calcCode",
+		"code": "82166 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) K button press": {
+		"method": "calcCode",
+		"code": "82167 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) K button release": {
+		"method": "calcCode",
+		"code": "82168 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) L button press": {
+		"method": "calcCode",
+		"code": "82169 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) L button release": {
+		"method": "calcCode",
+		"code": "82170 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) M button press": {
+		"method": "calcCode",
+		"code": "82171 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).FMC (right) M button release": {
+		"method": "calcCode",
+		"code": "82172 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button N press": {
+		"method": "calcCode",
+		"code": "82173 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button N release": {
+		"method": "calcCode",
+		"code": "82174 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button O press": {
+		"method": "calcCode",
+		"code": "82175 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button O release": {
+		"method": "calcCode",
+		"code": "82176 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button P press": {
+		"method": "calcCode",
+		"code": "82177 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button P release": {
+		"method": "calcCode",
+		"code": "82178 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button Q press": {
+		"method": "calcCode",
+		"code": "82179 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button Q release": {
+		"method": "calcCode",
+		"code": "82180 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button R press": {
+		"method": "calcCode",
+		"code": "82181 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button R release": {
+		"method": "calcCode",
+		"code": "82182 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button S press": {
+		"method": "calcCode",
+		"code": "82183 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button S release": {
+		"method": "calcCode",
+		"code": "82184 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button T press": {
+		"method": "calcCode",
+		"code": "82185 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button T release": {
+		"method": "calcCode",
+		"code": "82186 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button U press": {
+		"method": "calcCode",
+		"code": "82187 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button U release": {
+		"method": "calcCode",
+		"code": "82188 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button V press": {
+		"method": "calcCode",
+		"code": "82189 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button V release": {
+		"method": "calcCode",
+		"code": "82190 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button W press": {
+		"method": "calcCode",
+		"code": "82191 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button W release": {
+		"method": "calcCode",
+		"code": "82192 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button X press": {
+		"method": "calcCode",
+		"code": "82193 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button X release": {
+		"method": "calcCode",
+		"code": "82194 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button Y press": {
+		"method": "calcCode",
+		"code": "82195 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button Y release": {
+		"method": "calcCode",
+		"code": "82196 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button Z press": {
+		"method": "calcCode",
+		"code": "82197 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button Z release": {
+		"method": "calcCode",
+		"code": "82198 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button minus press": {
+		"method": "calcCode",
+		"code": "82199 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button minus release": {
+		"method": "calcCode",
+		"code": "82200 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button plus press": {
+		"method": "calcCode",
+		"code": "82201 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button plus release": {
+		"method": "calcCode",
+		"code": "82202 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button SP press": {
+		"method": "calcCode",
+		"code": "82203 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button SP release": {
+		"method": "calcCode",
+		"code": "82204 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button CLR press": {
+		"method": "calcCode",
+		"code": "82205 (>L:CEVENT)"
+	},
+	"TFDi.MD11.MCDU (right).MCDU right button CLR release": {
+		"method": "calcCode",
+		"code": "82206 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Center auxiliary hydraulic pump button press": {
+		"method": "calcCode",
+		"code": "82207 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Center auxiliary hydraulic pump button release": {
+		"method": "calcCode",
+		"code": "82208 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Brakes.Center anti-skid button press": {
+		"method": "calcCode",
+		"code": "82209 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Brakes.Center anti-skid button release": {
+		"method": "calcCode",
+		"code": "82210 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Brakes.Center autobrake switch left button press": {
+		"method": "calcCode",
+		"code": "82211 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Brakes.Center autobrake switch right button press": {
+		"method": "calcCode",
+		"code": "82212 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 1 switch wheel up": {
+		"method": "calcCode",
+		"code": "82213 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 1 switch wheel down": {
+		"method": "calcCode",
+		"code": "82214 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 2 switch wheel up": {
+		"method": "calcCode",
+		"code": "82215 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 2 switch wheel down": {
+		"method": "calcCode",
+		"code": "82216 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 3 switch wheel up": {
+		"method": "calcCode",
+		"code": "82217 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 3 switch wheel down": {
+		"method": "calcCode",
+		"code": "82218 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 4 switch wheel up": {
+		"method": "calcCode",
+		"code": "82219 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Center flight number 4 switch wheel down": {
+		"method": "calcCode",
+		"code": "82220 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel magnetic true button press": {
+		"method": "calcCode",
+		"code": "86016 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel magnetic true button release": {
+		"method": "calcCode",
+		"code": "86017 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel map button press": {
+		"method": "calcCode",
+		"code": "86018 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel map button release": {
+		"method": "calcCode",
+		"code": "86019 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR button press": {
+		"method": "calcCode",
+		"code": "86020 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR button release": {
+		"method": "calcCode",
+		"code": "86021 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel plan button press": {
+		"method": "calcCode",
+		"code": "86022 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel plan button release": {
+		"method": "calcCode",
+		"code": "86023 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel approach button press": {
+		"method": "calcCode",
+		"code": "86024 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel approach button release": {
+		"method": "calcCode",
+		"code": "86025 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel TCAS button press": {
+		"method": "calcCode",
+		"code": "86026 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel TCAS button release": {
+		"method": "calcCode",
+		"code": "86027 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR1 button press": {
+		"method": "calcCode",
+		"code": "86028 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR1 button release": {
+		"method": "calcCode",
+		"code": "86029 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel increment button press": {
+		"method": "calcCode",
+		"code": "86030 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel increment button release": {
+		"method": "calcCode",
+		"code": "86031 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR2 button press": {
+		"method": "calcCode",
+		"code": "86032 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR2 button release": {
+		"method": "calcCode",
+		"code": "86033 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel ADF1 button press": {
+		"method": "calcCode",
+		"code": "86034 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel ADF1 button release": {
+		"method": "calcCode",
+		"code": "86035 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel decrement button press": {
+		"method": "calcCode",
+		"code": "86036 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel decrement button release": {
+		"method": "calcCode",
+		"code": "86037 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel ADF2 button press": {
+		"method": "calcCode",
+		"code": "86038 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel ADF2 button release": {
+		"method": "calcCode",
+		"code": "86039 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel traffic button press": {
+		"method": "calcCode",
+		"code": "86040 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel traffic button release": {
+		"method": "calcCode",
+		"code": "86041 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel data button press": {
+		"method": "calcCode",
+		"code": "86042 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel data button release": {
+		"method": "calcCode",
+		"code": "86043 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel waypoint button press": {
+		"method": "calcCode",
+		"code": "86044 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel waypoint button release": {
+		"method": "calcCode",
+		"code": "86045 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR/NDB button press": {
+		"method": "calcCode",
+		"code": "86046 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel VOR/NDB button release": {
+		"method": "calcCode",
+		"code": "86047 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel airport button press": {
+		"method": "calcCode",
+		"code": "86048 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel airport button release": {
+		"method": "calcCode",
+		"code": "86049 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel inhibit button press": {
+		"method": "calcCode",
+		"code": "86050 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).Left EFIS control panel inhibit button release": {
+		"method": "calcCode",
+		"code": "86051 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left weather brightness knob press": {
+		"method": "calcCode",
+		"code": "86052 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left weather brightness knob release": {
+		"method": "calcCode",
+		"code": "86053 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left weather brightness knob increase": {
+		"method": "calcCode",
+		"code": "86054 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left weather brightness knob decrease": {
+		"method": "calcCode",
+		"code": "86055 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left baro set knob press": {
+		"method": "calcCode",
+		"code": "86056 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain baro set knob press": {
+		"method": "calcCode",
+		"code": "86057 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain baro set knob release": {
+		"method": "calcCode",
+		"code": "86058 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain baro set knob increase": {
+		"method": "calcCode",
+		"code": "86059 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain baro set knob decrease": {
+		"method": "calcCode",
+		"code": "86060 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left minimums knob press": {
+		"method": "calcCode",
+		"code": "86061 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain minimums knob press": {
+		"method": "calcCode",
+		"code": "86062 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain minimums knob release": {
+		"method": "calcCode",
+		"code": "86063 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain minimums knob increase": {
+		"method": "calcCode",
+		"code": "86064 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (left).EFIS left captain minimums knob decrease": {
+		"method": "calcCode",
+		"code": "86065 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.FGS speed knob push release": {
+		"method": "calcCode",
+		"code": "86071 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master warning button press (left side)": {
+		"method": "calcCode",
+		"code": "86108 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master warning button release (left side)": {
+		"method": "calcCode",
+		"code": "86109 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master caution button press (left side)": {
+		"method": "calcCode",
+		"code": "86110 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master caution button release (left side)": {
+		"method": "calcCode",
+		"code": "86111 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master warning button press (right side)": {
+		"method": "calcCode",
+		"code": "86112 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master warning button release (right side)": {
+		"method": "calcCode",
+		"code": "86113 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master caution button press (right side)": {
+		"method": "calcCode",
+		"code": "86114 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator master caution button release (right side)": {
+		"method": "calcCode",
+		"code": "86115 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator ground service button press (left side)": {
+		"method": "calcCode",
+		"code": "86116 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator ground service button release (left side)": {
+		"method": "calcCode",
+		"code": "86117 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator ground service button press (right side)": {
+		"method": "calcCode",
+		"code": "86118 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator ground service button release (right side)": {
+		"method": "calcCode",
+		"code": "86119 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display inhibit button press": {
+		"method": "calcCode",
+		"code": "86124 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display inhibit button release": {
+		"method": "calcCode",
+		"code": "86125 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right baro set knob press": {
+		"method": "calcCode",
+		"code": "86126 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain baro set knob press": {
+		"method": "calcCode",
+		"code": "86127 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain baro set knob release": {
+		"method": "calcCode",
+		"code": "86128 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain baro set knob increase": {
+		"method": "calcCode",
+		"code": "86129 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain baro set knob decrease": {
+		"method": "calcCode",
+		"code": "86130 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right minimums knob press": {
+		"method": "calcCode",
+		"code": "86131 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain minimums knob press": {
+		"method": "calcCode",
+		"code": "86132 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain minimums knob release": {
+		"method": "calcCode",
+		"code": "86133 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain minimums knob increase": {
+		"method": "calcCode",
+		"code": "86134 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right captain minimums knob decrease": {
+		"method": "calcCode",
+		"code": "86135 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right weather brightness knob press": {
+		"method": "calcCode",
+		"code": "86136 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right weather brightness knob release": {
+		"method": "calcCode",
+		"code": "86137 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right weather brightness knob increase": {
+		"method": "calcCode",
+		"code": "86138 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right weather brightness knob decrease": {
+		"method": "calcCode",
+		"code": "86139 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display traffic button press": {
+		"method": "calcCode",
+		"code": "86140 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display traffic button release": {
+		"method": "calcCode",
+		"code": "86141 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display data button press": {
+		"method": "calcCode",
+		"code": "86142 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display data button release": {
+		"method": "calcCode",
+		"code": "86143 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display waypoint button press": {
+		"method": "calcCode",
+		"code": "86144 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display waypoint button release": {
+		"method": "calcCode",
+		"code": "86145 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display VOR/NDB button press": {
+		"method": "calcCode",
+		"code": "86146 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display VOR/NDB button release": {
+		"method": "calcCode",
+		"code": "86147 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display airport button press": {
+		"method": "calcCode",
+		"code": "86148 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display airport button release": {
+		"method": "calcCode",
+		"code": "86149 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display magnetic/true heading button press": {
+		"method": "calcCode",
+		"code": "86150 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display magnetic/true heading button release": {
+		"method": "calcCode",
+		"code": "86151 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display map button press": {
+		"method": "calcCode",
+		"code": "86152 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display map button release": {
+		"method": "calcCode",
+		"code": "86153 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display VOR button press": {
+		"method": "calcCode",
+		"code": "86154 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display VOR button release": {
+		"method": "calcCode",
+		"code": "86155 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display plan button press": {
+		"method": "calcCode",
+		"code": "86156 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display plan button release": {
+		"method": "calcCode",
+		"code": "86157 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display approach button press": {
+		"method": "calcCode",
+		"code": "86158 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display approach button release": {
+		"method": "calcCode",
+		"code": "86159 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).Control display TCAS button press": {
+		"method": "calcCode",
+		"code": "86160 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right TCAS button release": {
+		"method": "calcCode",
+		"code": "86161 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right VOR1 button press": {
+		"method": "calcCode",
+		"code": "86162 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right VOR1 button release": {
+		"method": "calcCode",
+		"code": "86163 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right increment button press": {
+		"method": "calcCode",
+		"code": "86164 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right increment button release": {
+		"method": "calcCode",
+		"code": "86165 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right VOR2 button press": {
+		"method": "calcCode",
+		"code": "86166 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right VOR2 button release": {
+		"method": "calcCode",
+		"code": "86167 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right ADF1 button press": {
+		"method": "calcCode",
+		"code": "86168 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right ADF1 button release": {
+		"method": "calcCode",
+		"code": "86169 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right decrement button press": {
+		"method": "calcCode",
+		"code": "86170 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right decrement button release": {
+		"method": "calcCode",
+		"code": "86171 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right ADF2 button press": {
+		"method": "calcCode",
+		"code": "86172 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFIS (right).EFIS right ADF2 button release": {
+		"method": "calcCode",
+		"code": "86173 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.IRS 1 knob press": {
+		"method": "calcCode",
+		"code": "90112 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.IRS 2 knob press": {
+		"method": "calcCode",
+		"code": "90114 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.IRS 3 knob press": {
+		"method": "calcCode",
+		"code": "90116 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 1 button press": {
+		"method": "calcCode",
+		"code": "90118 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 1 button release": {
+		"method": "calcCode",
+		"code": "90119 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 1 drive button press": {
+		"method": "calcCode",
+		"code": "90120 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 1 drive button release": {
+		"method": "calcCode",
+		"code": "90121 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator 1 drive switch guard press": {
+		"method": "calcCode",
+		"code": "90122 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 2 button press": {
+		"method": "calcCode",
+		"code": "90123 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 2 button release": {
+		"method": "calcCode",
+		"code": "90124 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 2 drive button press": {
+		"method": "calcCode",
+		"code": "90125 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 2 drive button release": {
+		"method": "calcCode",
+		"code": "90126 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator 2 drive switch guard press": {
+		"method": "calcCode",
+		"code": "90127 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 3 button press": {
+		"method": "calcCode",
+		"code": "90128 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 3 button release": {
+		"method": "calcCode",
+		"code": "90129 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 3 drive button press": {
+		"method": "calcCode",
+		"code": "90130 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead generator 3 drive button release": {
+		"method": "calcCode",
+		"code": "90131 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator 3 drive switch guard press": {
+		"method": "calcCode",
+		"code": "90132 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead cabin bus button press": {
+		"method": "calcCode",
+		"code": "90133 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Cabin bus switch guard press": {
+		"method": "calcCode",
+		"code": "90135 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead AC tie 1 button press": {
+		"method": "calcCode",
+		"code": "90136 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead AC tie 1 button release": {
+		"method": "calcCode",
+		"code": "90137 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead galley external power button press": {
+		"method": "calcCode",
+		"code": "90138 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead galley external power button release": {
+		"method": "calcCode",
+		"code": "90139 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead AC tie 2 button press": {
+		"method": "calcCode",
+		"code": "90140 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead AC tie 2 button release": {
+		"method": "calcCode",
+		"code": "90141 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead external power button press": {
+		"method": "calcCode",
+		"code": "90142 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead external power button release": {
+		"method": "calcCode",
+		"code": "90143 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead APU power button press": {
+		"method": "calcCode",
+		"code": "90144 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead APU power button release": {
+		"method": "calcCode",
+		"code": "90145 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead AC tie 3 button press": {
+		"method": "calcCode",
+		"code": "90146 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead AC tie 3 button release": {
+		"method": "calcCode",
+		"code": "90147 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead ADG electrical button press": {
+		"method": "calcCode",
+		"code": "90148 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead battery button press": {
+		"method": "calcCode",
+		"code": "90150 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead battery button release": {
+		"method": "calcCode",
+		"code": "90151 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Battery switch guard press": {
+		"method": "calcCode",
+		"code": "90152 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead DC tie 1 button press": {
+		"method": "calcCode",
+		"code": "90153 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead DC tie 1 button release": {
+		"method": "calcCode",
+		"code": "90154 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead DC tie 3 button press": {
+		"method": "calcCode",
+		"code": "90155 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead DC tie 3 button release": {
+		"method": "calcCode",
+		"code": "90156 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead system selector button press": {
+		"method": "calcCode",
+		"code": "90157 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Electrical overhead system selector button release": {
+		"method": "calcCode",
+		"code": "90158 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Emergency power knob left press": {
+		"method": "calcCode",
+		"code": "90159 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Emergency power knob right press": {
+		"method": "calcCode",
+		"code": "90160 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Smoke electrical air knob left press": {
+		"method": "calcCode",
+		"code": "90161 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Smoke electrical air knob right press": {
+		"method": "calcCode",
+		"code": "90162 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Galley.Galley bus 1 button press": {
+		"method": "calcCode",
+		"code": "90163 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Galley.Galley bus 1 button release": {
+		"method": "calcCode",
+		"code": "90164 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Galley.Galley bus 2 button press": {
+		"method": "calcCode",
+		"code": "90165 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Galley.Galley bus 2 button release": {
+		"method": "calcCode",
+		"code": "90166 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Galley.Galley bus 3 button press": {
+		"method": "calcCode",
+		"code": "90167 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Galley.Galley bus 3 button release": {
+		"method": "calcCode",
+		"code": "90168 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic pump 1-3 button press": {
+		"method": "calcCode",
+		"code": "90169 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic pump 1-3 button release": {
+		"method": "calcCode",
+		"code": "90170 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic pump 2-3 button press": {
+		"method": "calcCode",
+		"code": "90171 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic pump 2-3 button release": {
+		"method": "calcCode",
+		"code": "90172 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Auxiliary hydraulic pump 1 button press": {
+		"method": "calcCode",
+		"code": "90173 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Auxiliary hydraulic pump 1 button release": {
+		"method": "calcCode",
+		"code": "90174 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Auxiliary hydraulic pump 2 button press": {
+		"method": "calcCode",
+		"code": "90175 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Auxiliary hydraulic pump 2 button release": {
+		"method": "calcCode",
+		"code": "90176 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic system selector button press": {
+		"method": "calcCode",
+		"code": "90177 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic system selector button release": {
+		"method": "calcCode",
+		"code": "90178 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 1 left button press": {
+		"method": "calcCode",
+		"code": "90179 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 1 left button release": {
+		"method": "calcCode",
+		"code": "90180 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 1 right button press": {
+		"method": "calcCode",
+		"code": "90181 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 1 right button release": {
+		"method": "calcCode",
+		"code": "90182 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 2 left button press": {
+		"method": "calcCode",
+		"code": "90183 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 2 left button release": {
+		"method": "calcCode",
+		"code": "90184 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 2 right button press": {
+		"method": "calcCode",
+		"code": "90185 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 2 right button release": {
+		"method": "calcCode",
+		"code": "90186 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 3 left button press": {
+		"method": "calcCode",
+		"code": "90187 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 3 left button release": {
+		"method": "calcCode",
+		"code": "90188 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 3 right button press": {
+		"method": "calcCode",
+		"code": "90189 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic EDP 3 right button release": {
+		"method": "calcCode",
+		"code": "90190 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic system test button press": {
+		"method": "calcCode",
+		"code": "90191 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic system test button release": {
+		"method": "calcCode",
+		"code": "90192 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Hydraulics.Hydraulic test switch guard press": {
+		"method": "calcCode",
+		"code": "90193 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 fill button press": {
+		"method": "calcCode",
+		"code": "90194 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 fill button release": {
+		"method": "calcCode",
+		"code": "90195 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 pump button press": {
+		"method": "calcCode",
+		"code": "90196 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 pump button release": {
+		"method": "calcCode",
+		"code": "90197 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 crossfeed button press": {
+		"method": "calcCode",
+		"code": "90198 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 crossfeed button release": {
+		"method": "calcCode",
+		"code": "90199 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 fill button press": {
+		"method": "calcCode",
+		"code": "90200 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 fill button release": {
+		"method": "calcCode",
+		"code": "90201 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 pump button press": {
+		"method": "calcCode",
+		"code": "90202 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 pump button release": {
+		"method": "calcCode",
+		"code": "90203 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 crossfeed button press": {
+		"method": "calcCode",
+		"code": "90204 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 crossfeed button release": {
+		"method": "calcCode",
+		"code": "90205 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 fill button press": {
+		"method": "calcCode",
+		"code": "90206 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 fill button release": {
+		"method": "calcCode",
+		"code": "90207 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 pump button press": {
+		"method": "calcCode",
+		"code": "90208 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 pump button release": {
+		"method": "calcCode",
+		"code": "90209 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 crossfeed button press": {
+		"method": "calcCode",
+		"code": "90210 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 crossfeed button release": {
+		"method": "calcCode",
+		"code": "90211 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel system selector button press": {
+		"method": "calcCode",
+		"code": "90212 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel system selector button release": {
+		"method": "calcCode",
+		"code": "90213 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 transfer button press": {
+		"method": "calcCode",
+		"code": "90214 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 1 transfer button release": {
+		"method": "calcCode",
+		"code": "90215 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 transfer button press": {
+		"method": "calcCode",
+		"code": "90216 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 2 transfer button release": {
+		"method": "calcCode",
+		"code": "90217 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 transfer button press": {
+		"method": "calcCode",
+		"code": "90218 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tank 3 transfer button release": {
+		"method": "calcCode",
+		"code": "90219 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel dump button press": {
+		"method": "calcCode",
+		"code": "90220 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel dump button release": {
+		"method": "calcCode",
+		"code": "90221 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel dump switch guard press": {
+		"method": "calcCode",
+		"code": "90222 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel left transfer button press": {
+		"method": "calcCode",
+		"code": "90223 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel left transfer button release": {
+		"method": "calcCode",
+		"code": "90224 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel right transfer button press": {
+		"method": "calcCode",
+		"code": "90225 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel right transfer button release": {
+		"method": "calcCode",
+		"code": "90226 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tail transfer button press": {
+		"method": "calcCode",
+		"code": "90227 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel tail transfer button release": {
+		"method": "calcCode",
+		"code": "90228 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel alternate pump button press": {
+		"method": "calcCode",
+		"code": "90229 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel alternate pump button release": {
+		"method": "calcCode",
+		"code": "90230 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel manifold drain button press": {
+		"method": "calcCode",
+		"code": "90231 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel manifold drain button release": {
+		"method": "calcCode",
+		"code": "90232 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel manifold drain switch guard press": {
+		"method": "calcCode",
+		"code": "90233 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel quantity test button press": {
+		"method": "calcCode",
+		"code": "90234 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel quantity test button release": {
+		"method": "calcCode",
+		"code": "90235 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Dome light button press": {
+		"method": "calcCode",
+		"code": "90236 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Dome light button release": {
+		"method": "calcCode",
+		"code": "90237 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Outer overhead panel flood knob decrease": {
+		"method": "calcCode",
+		"code": "90238 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Outer overhead panel flood knob increase": {
+		"method": "calcCode",
+		"code": "90239 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Inner overhead panel flood knob decrease": {
+		"method": "calcCode",
+		"code": "90240 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Inner overhead panel flood knob increase": {
+		"method": "calcCode",
+		"code": "90241 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Emergency lights switch press (left)": {
+		"method": "calcCode",
+		"code": "90242 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Emergency lights switch press (right)": {
+		"method": "calcCode",
+		"code": "90243 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Emergency lights test button press": {
+		"method": "calcCode",
+		"code": "90244 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Emergency lights test button release": {
+		"method": "calcCode",
+		"code": "90245 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).No smoking sign switch press (left)": {
+		"method": "calcCode",
+		"code": "90246 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).No smoking sign switch press (right)": {
+		"method": "calcCode",
+		"code": "90247 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Seat belts sign switch press (left)": {
+		"method": "calcCode",
+		"code": "90248 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Seat belts sign switch press (right)": {
+		"method": "calcCode",
+		"code": "90249 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Thunderstorm lights switch press (left)": {
+		"method": "calcCode",
+		"code": "90250 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Outer instrument pedestal panel flood knob decrease": {
+		"method": "calcCode",
+		"code": "90251 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Outer instrument pedestal panel flood knob increase": {
+		"method": "calcCode",
+		"code": "90252 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Inner instrument pedestal panel flood knob decrease": {
+		"method": "calcCode",
+		"code": "90253 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Inner instrument pedestal panel flood knob increase": {
+		"method": "calcCode",
+		"code": "90254 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Standby compass light button press": {
+		"method": "calcCode",
+		"code": "90255 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Standby compass light button release": {
+		"method": "calcCode",
+		"code": "90256 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Left landing light switch press (left)": {
+		"method": "calcCode",
+		"code": "90257 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Left landing light switch press (right)": {
+		"method": "calcCode",
+		"code": "90258 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Right landing light switch press (left)": {
+		"method": "calcCode",
+		"code": "90259 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Right landing light switch press (right)": {
+		"method": "calcCode",
+		"code": "90260 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Nose light switch press (left)": {
+		"method": "calcCode",
+		"code": "90261 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Nose light switch press (right)": {
+		"method": "calcCode",
+		"code": "90262 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Runway turnoff left light button press": {
+		"method": "calcCode",
+		"code": "90263 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Runway turnoff left light button release": {
+		"method": "calcCode",
+		"code": "90264 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Runway turnoff right light button press": {
+		"method": "calcCode",
+		"code": "90265 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Runway turnoff right light button release": {
+		"method": "calcCode",
+		"code": "90266 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Navigation light button press": {
+		"method": "calcCode",
+		"code": "90267 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Navigation light button release": {
+		"method": "calcCode",
+		"code": "90268 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Logo light button press": {
+		"method": "calcCode",
+		"code": "90269 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Logo light button release": {
+		"method": "calcCode",
+		"code": "90270 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Beacon light button press": {
+		"method": "calcCode",
+		"code": "90271 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).Beacon light button release": {
+		"method": "calcCode",
+		"code": "90272 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).High intensity light button press": {
+		"method": "calcCode",
+		"code": "90273 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (exterior).High intensity light button release": {
+		"method": "calcCode",
+		"code": "90274 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Forward cargo temperature left button press": {
+		"method": "calcCode",
+		"code": "90275 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Forward cargo temperature right button press": {
+		"method": "calcCode",
+		"code": "90276 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Aft cargo temperature left button press": {
+		"method": "calcCode",
+		"code": "90277 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Aft cargo temperature right button press": {
+		"method": "calcCode",
+		"code": "90278 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Cockpit temperature left button press": {
+		"method": "calcCode",
+		"code": "90279 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Cockpit temperature right button press": {
+		"method": "calcCode",
+		"code": "90280 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Forward cabin temperature left button press": {
+		"method": "calcCode",
+		"code": "90281 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Forward cabin temperature right button press": {
+		"method": "calcCode",
+		"code": "90282 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Mid cabin temperature left button press": {
+		"method": "calcCode",
+		"code": "90283 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Mid cabin temperature right button press": {
+		"method": "calcCode",
+		"code": "90284 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Aft cabin temperature left button press": {
+		"method": "calcCode",
+		"code": "90285 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Aft cabin temperature right button press": {
+		"method": "calcCode",
+		"code": "90286 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Outflow valve position switch left press": {
+		"method": "calcCode",
+		"code": "90287 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Outflow valve position switch right press": {
+		"method": "calcCode",
+		"code": "90288 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic pack 1 button press": {
+		"method": "calcCode",
+		"code": "90289 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic pack 1 button release": {
+		"method": "calcCode",
+		"code": "90290 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic pack 2 button press": {
+		"method": "calcCode",
+		"code": "90291 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic pack 2 button release": {
+		"method": "calcCode",
+		"code": "90292 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic pack 3 button press": {
+		"method": "calcCode",
+		"code": "90293 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic pack 3 button release": {
+		"method": "calcCode",
+		"code": "90294 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic system selector button press": {
+		"method": "calcCode",
+		"code": "90295 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic system selector button release": {
+		"method": "calcCode",
+		"code": "90296 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic econ button press": {
+		"method": "calcCode",
+		"code": "90297 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic econ button release": {
+		"method": "calcCode",
+		"code": "90298 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic 1-2 isolation button press": {
+		"method": "calcCode",
+		"code": "90299 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic 1-2 isolation button release": {
+		"method": "calcCode",
+		"code": "90300 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic 1-3 isolation button press": {
+		"method": "calcCode",
+		"code": "90301 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic 1-3 isolation button release": {
+		"method": "calcCode",
+		"code": "90302 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic trim air button press": {
+		"method": "calcCode",
+		"code": "90303 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic trim air button release": {
+		"method": "calcCode",
+		"code": "90304 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 1 off button press": {
+		"method": "calcCode",
+		"code": "90305 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 1 off button release": {
+		"method": "calcCode",
+		"code": "90306 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 1 manifold temperature high button press": {
+		"method": "calcCode",
+		"code": "90307 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 1 manifold temperature high button release": {
+		"method": "calcCode",
+		"code": "90308 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 2 off button press": {
+		"method": "calcCode",
+		"code": "90309 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 2 off button release": {
+		"method": "calcCode",
+		"code": "90310 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 2 manifold temperature high button press": {
+		"method": "calcCode",
+		"code": "90311 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 2 manifold temperature high button release": {
+		"method": "calcCode",
+		"code": "90312 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic APU bleed button press": {
+		"method": "calcCode",
+		"code": "90313 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic APU bleed button release": {
+		"method": "calcCode",
+		"code": "90314 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 3 off button press": {
+		"method": "calcCode",
+		"code": "90315 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 3 off button release": {
+		"method": "calcCode",
+		"code": "90316 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 3 manifold temperature high button press": {
+		"method": "calcCode",
+		"code": "90317 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic bleed 3 manifold temperature high button release": {
+		"method": "calcCode",
+		"code": "90318 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic avionics fan button press": {
+		"method": "calcCode",
+		"code": "90319 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic avionics fan button release": {
+		"method": "calcCode",
+		"code": "90320 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic masks button press": {
+		"method": "calcCode",
+		"code": "90321 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic masks button release": {
+		"method": "calcCode",
+		"code": "90322 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic masks switch guard press": {
+		"method": "calcCode",
+		"code": "90323 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatics cabin descent button press (left)": {
+		"method": "calcCode",
+		"code": "90324 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatics cabin descent button release (left)": {
+		"method": "calcCode",
+		"code": "90325 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatics cabin descent button press (right)": {
+		"method": "calcCode",
+		"code": "90326 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatics cabin descent button release (right)": {
+		"method": "calcCode",
+		"code": "90327 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic cabin system selector button press": {
+		"method": "calcCode",
+		"code": "90328 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic cabin system selector button release": {
+		"method": "calcCode",
+		"code": "90329 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatics molding altitude knob increase": {
+		"method": "calcCode",
+		"code": "90330 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatics molding altitude knob decrease": {
+		"method": "calcCode",
+		"code": "90331 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic ditching button press": {
+		"method": "calcCode",
+		"code": "90332 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic ditching button release": {
+		"method": "calcCode",
+		"code": "90333 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Pneumatic ditching switch guard press": {
+		"method": "calcCode",
+		"code": "90334 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.100 pax load switch press (left)": {
+		"method": "calcCode",
+		"code": "90335 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.100 pax load switch press (right)": {
+		"method": "calcCode",
+		"code": "90336 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.10 pax load switch press (left)": {
+		"method": "calcCode",
+		"code": "90337 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.10 pax load switch press (right)": {
+		"method": "calcCode",
+		"code": "90338 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.1 pax load switch press (left)": {
+		"method": "calcCode",
+		"code": "90339 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.1 pax load switch press (right)": {
+		"method": "calcCode",
+		"code": "90340 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine FADEC 1 button press": {
+		"method": "calcCode",
+		"code": "90341 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine FADEC 1 button release": {
+		"method": "calcCode",
+		"code": "90342 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine 1 FADEC switch guard press": {
+		"method": "calcCode",
+		"code": "90343 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine FADEC 2 button press": {
+		"method": "calcCode",
+		"code": "90344 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine FADEC 2 button release": {
+		"method": "calcCode",
+		"code": "90345 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine 2 FADEC switch guard press": {
+		"method": "calcCode",
+		"code": "90346 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine FADEC 3 button press": {
+		"method": "calcCode",
+		"code": "90347 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine FADEC 3 button release": {
+		"method": "calcCode",
+		"code": "90348 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine 3 FADEC switch guard press": {
+		"method": "calcCode",
+		"code": "90349 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine A button press": {
+		"method": "calcCode",
+		"code": "90350 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine A button release": {
+		"method": "calcCode",
+		"code": "90351 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine B button press": {
+		"method": "calcCode",
+		"code": "90352 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine B button release": {
+		"method": "calcCode",
+		"code": "90353 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine ignition override button press": {
+		"method": "calcCode",
+		"code": "90354 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine ignition override button release": {
+		"method": "calcCode",
+		"code": "90355 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cargo door test button press": {
+		"method": "calcCode",
+		"code": "90356 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cargo door test button release": {
+		"method": "calcCode",
+		"code": "90357 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cockpit voice recorder test button press": {
+		"method": "calcCode",
+		"code": "90358 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cockpit voice recorder test button release": {
+		"method": "calcCode",
+		"code": "90359 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cockpit voice recorder erase button press": {
+		"method": "calcCode",
+		"code": "90360 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cockpit voice recorder erase button release": {
+		"method": "calcCode",
+		"code": "90361 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator bus 1 reset button press": {
+		"method": "calcCode",
+		"code": "90362 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator bus 1 reset button release": {
+		"method": "calcCode",
+		"code": "90363 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Overhead gen bus 1 reset button guard press": {
+		"method": "calcCode",
+		"code": "90364 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator bus 2 reset button press": {
+		"method": "calcCode",
+		"code": "90365 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator bus 2 reset button release": {
+		"method": "calcCode",
+		"code": "90366 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Overhead gen bus 2 reset button guard press": {
+		"method": "calcCode",
+		"code": "90367 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator bus 3 reset button press": {
+		"method": "calcCode",
+		"code": "90368 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Generator bus 3 reset button release": {
+		"method": "calcCode",
+		"code": "90369 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Overhead gen bus 3 reset button guard press": {
+		"method": "calcCode",
+		"code": "90370 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Call reset button press": {
+		"method": "calcCode",
+		"code": "90371 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Call reset button release": {
+		"method": "calcCode",
+		"code": "90372 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Left rain repellent button press": {
+		"method": "calcCode",
+		"code": "90373 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Left rain repellent button release": {
+		"method": "calcCode",
+		"code": "90374 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Left wiper button press (left)": {
+		"method": "calcCode",
+		"code": "90375 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Left wiper button press (right)": {
+		"method": "calcCode",
+		"code": "90376 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel dump stop button press": {
+		"method": "calcCode",
+		"code": "90377 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel dump stop button release": {
+		"method": "calcCode",
+		"code": "90378 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Overhead fuel dump stop button guard press": {
+		"method": "calcCode",
+		"code": "90379 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Right rain repellent button press": {
+		"method": "calcCode",
+		"code": "90380 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Right rain repellent button release": {
+		"method": "calcCode",
+		"code": "90381 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Right wiper button press (left)": {
+		"method": "calcCode",
+		"code": "90382 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous controls.Right wiper button press (right)": {
+		"method": "calcCode",
+		"code": "90383 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Flight controls flap limiter button press (left)": {
+		"method": "calcCode",
+		"code": "90384 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Flight controls flap limiter button press (right)": {
+		"method": "calcCode",
+		"code": "90385 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Flight controls elevator feel knob increase": {
+		"method": "calcCode",
+		"code": "90388 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Flight controls elevator feel knob decrease": {
+		"method": "calcCode",
+		"code": "90389 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control upper yaw damper A button press": {
+		"method": "calcCode",
+		"code": "90390 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control upper yaw damper A button release": {
+		"method": "calcCode",
+		"code": "90391 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control upper yaw damper B button press": {
+		"method": "calcCode",
+		"code": "90392 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control upper yaw damper B button release": {
+		"method": "calcCode",
+		"code": "90393 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower yaw damper A button press": {
+		"method": "calcCode",
+		"code": "90394 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower yaw damper A button release": {
+		"method": "calcCode",
+		"code": "90395 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower yaw damper B button press": {
+		"method": "calcCode",
+		"code": "90396 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower yaw damper B button release": {
+		"method": "calcCode",
+		"code": "90397 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower left outboard aileron button press": {
+		"method": "calcCode",
+		"code": "90398 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower left outboard aileron button release": {
+		"method": "calcCode",
+		"code": "90399 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower left inboard aileron button press": {
+		"method": "calcCode",
+		"code": "90400 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower left inboard aileron button release": {
+		"method": "calcCode",
+		"code": "90401 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower right inboard aileron button press": {
+		"method": "calcCode",
+		"code": "90402 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower right inboard aileron button release": {
+		"method": "calcCode",
+		"code": "90403 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower right outboard aileron button press": {
+		"method": "calcCode",
+		"code": "90404 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Control Panel.Flight control lower right outboard aileron button release": {
+		"method": "calcCode",
+		"code": "90405 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator lights bright/dim button press": {
+		"method": "calcCode",
+		"code": "90406 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator lights bright/dim button release": {
+		"method": "calcCode",
+		"code": "90407 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator lights test button press": {
+		"method": "calcCode",
+		"code": "90408 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Annunciator Panel.Annunciator lights test button release": {
+		"method": "calcCode",
+		"code": "90409 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel used reset button press": {
+		"method": "calcCode",
+		"code": "90410 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Fuel used reset button release": {
+		"method": "calcCode",
+		"code": "90411 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine maximum pointer reset button press": {
+		"method": "calcCode",
+		"code": "90412 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Engines.Engine maximum pointer reset button release": {
+		"method": "calcCode",
+		"code": "90413 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice engine 1 button press": {
+		"method": "calcCode",
+		"code": "90414 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice engine 1 button release": {
+		"method": "calcCode",
+		"code": "90415 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice engine 2 button press": {
+		"method": "calcCode",
+		"code": "90416 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice engine 2 button release": {
+		"method": "calcCode",
+		"code": "90417 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice engine 3 button press": {
+		"method": "calcCode",
+		"code": "90418 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice engine 3 button release": {
+		"method": "calcCode",
+		"code": "90419 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice wing button press": {
+		"method": "calcCode",
+		"code": "90420 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice wing button release": {
+		"method": "calcCode",
+		"code": "90421 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice tail button press": {
+		"method": "calcCode",
+		"code": "90422 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice tail button release": {
+		"method": "calcCode",
+		"code": "90423 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield anti-ice left button press": {
+		"method": "calcCode",
+		"code": "90424 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield anti-ice left button release": {
+		"method": "calcCode",
+		"code": "90425 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield anti-ice button press": {
+		"method": "calcCode",
+		"code": "90426 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield anti-ice button release": {
+		"method": "calcCode",
+		"code": "90427 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield anti-ice right button press": {
+		"method": "calcCode",
+		"code": "90428 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield anti-ice right button release": {
+		"method": "calcCode",
+		"code": "90429 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield defog button press": {
+		"method": "calcCode",
+		"code": "90430 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Windshield defog button release": {
+		"method": "calcCode",
+		"code": "90431 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cockpit door lock button press (left)": {
+		"method": "calcCode",
+		"code": "90432 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Cockpit door lock button press (right)": {
+		"method": "calcCode",
+		"code": "90433 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Miscellaneous Controls.Standby compass switch press (left)": {
+		"method": "calcCode",
+		"code": "90434 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Upper auxiliary bypass button press": {
+		"method": "calcCode",
+		"code": "90435 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Upper auxiliary bypass button release": {
+		"method": "calcCode",
+		"code": "90436 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Forward auxiliary left transfer button press": {
+		"method": "calcCode",
+		"code": "90437 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Forward auxiliary left transfer button release": {
+		"method": "calcCode",
+		"code": "90438 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Forward auxiliary right transfer button press": {
+		"method": "calcCode",
+		"code": "90439 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Forward auxiliary right transfer button release": {
+		"method": "calcCode",
+		"code": "90440 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice auto button press": {
+		"method": "calcCode",
+		"code": "90441 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice auto button release": {
+		"method": "calcCode",
+		"code": "90442 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice system selector button press": {
+		"method": "calcCode",
+		"code": "90443 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Anti-Ice.Anti-ice system selector button release": {
+		"method": "calcCode",
+		"code": "90444 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Cabin air button press": {
+		"method": "calcCode",
+		"code": "90445 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Cabin air button release": {
+		"method": "calcCode",
+		"code": "90446 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Pneumatic.Overhead cabin air button guard press": {
+		"method": "calcCode",
+		"code": "90447 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Fuel.Overhead fuel upraux bypass guard button press": {
+		"method": "calcCode",
+		"code": "90448 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel timer button press": {
+		"method": "calcCode",
+		"code": "94208 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel timer button release": {
+		"method": "calcCode",
+		"code": "94209 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel timer switch left press": {
+		"method": "calcCode",
+		"code": "94210 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel timer switch right press": {
+		"method": "calcCode",
+		"code": "94211 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Left side panel floor switch left press": {
+		"method": "calcCode",
+		"code": "94212 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Left side panel floor switch right press": {
+		"method": "calcCode",
+		"code": "94213 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Left side panel briefcase increase": {
+		"method": "calcCode",
+		"code": "94214 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Left side panel briefcase decrease": {
+		"method": "calcCode",
+		"code": "94215 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Left side panel push-to-talk button press": {
+		"method": "calcCode",
+		"code": "94216 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Left side panel push-to-talk button release": {
+		"method": "calcCode",
+		"code": "94217 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Left side panel flight director off button press": {
+		"method": "calcCode",
+		"code": "94218 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Left side panel flight director off button release": {
+		"method": "calcCode",
+		"code": "94219 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Left side panel flight director button press": {
+		"method": "calcCode",
+		"code": "94220 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Left side panel flight director button release": {
+		"method": "calcCode",
+		"code": "94221 (>L:CEVENT)"
+	},
+	"TFDi.MD11.CADC.Left side panel CADC button press": {
+		"method": "calcCode",
+		"code": "94222 (>L:CEVENT)"
+	},
+	"TFDi.MD11.CADC.Left side panel CADC button release": {
+		"method": "calcCode",
+		"code": "94223 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel IRS button press": {
+		"method": "calcCode",
+		"code": "94224 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel IRS button release": {
+		"method": "calcCode",
+		"code": "94225 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel FMS button press": {
+		"method": "calcCode",
+		"code": "94226 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel FMS button release": {
+		"method": "calcCode",
+		"code": "94227 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel VOR button press": {
+		"method": "calcCode",
+		"code": "94228 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel VOR button release": {
+		"method": "calcCode",
+		"code": "94229 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel approach button press": {
+		"method": "calcCode",
+		"code": "94230 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Left side panel approach button release": {
+		"method": "calcCode",
+		"code": "94231 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EIS.Left side panel EIS left press": {
+		"method": "calcCode",
+		"code": "94232 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EIS.Left side panel EIS right press": {
+		"method": "calcCode",
+		"code": "94233 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel captain event marker switch left press": {
+		"method": "calcCode",
+		"code": "94464 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EFB.EFB toggle left press": {
+		"method": "calcCode",
+		"code": "94465 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Yoke trim switch left press": {
+		"method": "calcCode",
+		"code": "94723 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Yoke trim switch left release": {
+		"method": "calcCode",
+		"code": "94724 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Yoke trim switch right press": {
+		"method": "calcCode",
+		"code": "94725 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Yoke trim switch right release": {
+		"method": "calcCode",
+		"code": "94726 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel gear switch left press": {
+		"method": "calcCode",
+		"code": "94976 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel center gear button press": {
+		"method": "calcCode",
+		"code": "94977 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel center gear guard left press": {
+		"method": "calcCode",
+		"code": "94979 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel handle release button press": {
+		"method": "calcCode",
+		"code": "94980 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel handle release button release": {
+		"method": "calcCode",
+		"code": "94981 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.ISIS barometer button press": {
+		"method": "calcCode",
+		"code": "94982 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.ISIS barometer button release": {
+		"method": "calcCode",
+		"code": "94983 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel standby altimeter barometer decrease": {
+		"method": "calcCode",
+		"code": "94984 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel standby altimeter barometer increase": {
+		"method": "calcCode",
+		"code": "94985 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel standby attitude indicator cage button press": {
+		"method": "calcCode",
+		"code": "94986 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel timer button press": {
+		"method": "calcCode",
+		"code": "95488 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel timer button release": {
+		"method": "calcCode",
+		"code": "95489 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel timer switch left press": {
+		"method": "calcCode",
+		"code": "95490 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel timer switch right press": {
+		"method": "calcCode",
+		"code": "95491 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Right side panel floor switch left press": {
+		"method": "calcCode",
+		"code": "95492 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Lights (interior).Right side panel floor switch right press": {
+		"method": "calcCode",
+		"code": "95493 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Right side panel briefcase increase": {
+		"method": "calcCode",
+		"code": "95494 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Electrical.Right side panel briefcase decrease": {
+		"method": "calcCode",
+		"code": "95495 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Right side panel push-to-talk button press": {
+		"method": "calcCode",
+		"code": "95496 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio Panel.Right side panel push-to-talk button release": {
+		"method": "calcCode",
+		"code": "95497 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Right side panel flight director off button press": {
+		"method": "calcCode",
+		"code": "95498 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Right side panel flight director off button release": {
+		"method": "calcCode",
+		"code": "95499 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Right side panel flight director button press": {
+		"method": "calcCode",
+		"code": "95500 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Right side panel flight director button release": {
+		"method": "calcCode",
+		"code": "95501 (>L:CEVENT)"
+	},
+	"TFDi.MD11.CADC.Right side panel CADC button press": {
+		"method": "calcCode",
+		"code": "95502 (>L:CEVENT)"
+	},
+	"TFDi.MD11.CADC.Right side panel CADC button release": {
+		"method": "calcCode",
+		"code": "95503 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel IRS button press": {
+		"method": "calcCode",
+		"code": "95504 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel IRS button release": {
+		"method": "calcCode",
+		"code": "95505 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel FMS button press": {
+		"method": "calcCode",
+		"code": "95506 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel FMS button release": {
+		"method": "calcCode",
+		"code": "95507 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel VOR button press": {
+		"method": "calcCode",
+		"code": "95508 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel VOR button release": {
+		"method": "calcCode",
+		"code": "95509 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel approach button press": {
+		"method": "calcCode",
+		"code": "95510 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Navigation.Right side panel approach button release": {
+		"method": "calcCode",
+		"code": "95511 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EIS.Right side panel EIS left press": {
+		"method": "calcCode",
+		"code": "95512 (>L:CEVENT)"
+	},
+	"TFDi.MD11.EIS.Right side panel EIS right press": {
+		"method": "calcCode",
+		"code": "95513 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Main instrument panel.Main instrument panel first officer event marker switch left press": {
+		"method": "calcCode",
+		"code": "95744 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Right yoke trim switch left press": {
+		"method": "calcCode",
+		"code": "96000 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Right yoke trim switch left release": {
+		"method": "calcCode",
+		"code": "96001 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Right yoke trim switch right press": {
+		"method": "calcCode",
+		"code": "96002 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Flight Controls.Right yoke trim switch right release": {
+		"method": "calcCode",
+		"code": "96003 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Right yoke autopilot button press": {
+		"method": "calcCode",
+		"code": "96004 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Autopilot.Right yoke autopilot button release": {
+		"method": "calcCode",
+		"code": "96005 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF1 mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96256 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF1 mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96257 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF2 mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96258 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF2 mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96259 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF3 mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96260 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF3 mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96261 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF1 mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96262 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF1 mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96263 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF2 mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96264 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF2 mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96265 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel SATCOM mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96266 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel SATCOM mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96267 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel intercom mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96268 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel intercom mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96269 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel cabin mic button press (observer)": {
+		"method": "calcCode",
+		"code": "96270 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel cabin mic button release (observer)": {
+		"method": "calcCode",
+		"code": "96271 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF1 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96272 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF1 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96273 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF1 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96274 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF2 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96275 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF2 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96276 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF2 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96277 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF3 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96278 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF3 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96279 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VHF3 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96280 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF1 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96281 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF1 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96282 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF1 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96283 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF2 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96284 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF2 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96285 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel HF2 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96286 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel SATCOM volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96287 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel SATCOM volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96288 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel SATCOM volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96289 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel intercom volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96290 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel intercom volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96291 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel intercom volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96292 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel cabin volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96293 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel cabin volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96294 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel cabin volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96295 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel PA volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96296 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel PA volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96297 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel PA volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96298 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VOR1 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96299 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VOR1 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96300 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VOR1 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96301 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VOR2 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96302 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VOR2 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96303 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel VOR2 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96304 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ILS1 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96305 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ILS1 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96306 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ILS1 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96307 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ILS2 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96308 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ILS2 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96309 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ILS2 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96310 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ADF1 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96311 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ADF1 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96312 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ADF1 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96313 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ADF2 volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96314 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ADF2 volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96315 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ADF2 volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96316 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel marker volume increase (observer)": {
+		"method": "calcCode",
+		"code": "96317 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel marker volume decrease (observer)": {
+		"method": "calcCode",
+		"code": "96318 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel marker volume left button press (observer)": {
+		"method": "calcCode",
+		"code": "96319 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ident button press (observer)": {
+		"method": "calcCode",
+		"code": "96320 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel ident button release (observer)": {
+		"method": "calcCode",
+		"code": "96321 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel intercom radio switch left button press (observer)": {
+		"method": "calcCode",
+		"code": "96322 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Audio panel.Audio panel intercom radio switch right button press (observer)": {
+		"method": "calcCode",
+		"code": "96323 (>L:CEVENT)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Cockpit dome light": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:1, percent)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Glareshield (CGS) flood light": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:16, percent)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Overhead flood light": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:17, percent)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Briefcase flood light (left)": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:3, percent)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Briefcase flood light (right)": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:4, percent)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Pedestal and MIP flood light": {
+		"method": "calcCode",
+		"code": "(A:LIGHT POTENTIOMETER:2, percent)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Overhead panel backlight": {
+		"method": "calcCode",
+		"code": "(L:MD11_LTS_OVHD_INTEG, Number)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Glareshield (CGS) backlight": {
+		"method": "calcCode",
+		"code": "(L:MD11_LTS_CGS_INTEG, Number)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Pedestal and main panel backlight": {
+		"method": "calcCode",
+		"code": "(L:MD11_LTS_INSTPED_INTEG, Number)"
+	},
+	"TFDi.MD11.Backlights and flood lights.Overhead standby compass light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_STBY_COMP_LT, Number)"
+	},
+	"TFDi.MD11.Miscellaneous.Seatbelt sign": {
+		"method": "calcCode",
+		"code": "(L:MD11_CAB_SEATBELT_LT, bool)"
+	},
+	"TFDi.MD11.Miscellaneous.No smoking sign": {
+		"method": "calcCode",
+		"code": "(L:MD11_CAB_NOSMOKE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Passenger address light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_PA_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Passenger address light on": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_PA_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.All stations light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_ALL_STA_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Forward attendant light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_FWD_ATTND_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Forward attendant call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_FWD_ATTND_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Mid attendant light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_MID_ATTND_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Mid attendant call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_MID_ATTND_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Overwing attendant light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_OVW_ATTND_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Overwing attendant call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_OVW_ATTND_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Aft attendant light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_AFT_ATTND_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Aft attendant call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_AFT_ATTND_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Maintenance interphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_MAINT_INTP_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Maintenance interphone light on": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_MAINT_INTP_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Mechanic light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_MECH_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Mechanic call light on": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_MECH_CALL_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Passenger address in use light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_PAINUSE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Movie light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_MOVIE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Crew rest light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_CREW_REST_LT, bool)"
+	},
+	"TFDi.MD11.Overhead annunciator panel.Crew rest call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_CREW_REST_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Center console.Cockpit door fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CKPTDOOR_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Center console.Cockpit door auto light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CKPTDOOR_AUTO_LT, bool)"
+	},
+	"TFDi.MD11.Center Pedestal Display Unit (CDU).Center CDU display light": {
+		"method": "calcCode",
+		"code": "(L:MD11_CMCDU_DSPY_LT, bool)"
+	},
+	"TFDi.MD11.Center Pedestal Display Unit (CDU).Center CDU fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_CMCDU_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Center Pedestal Display Unit (CDU).Center CDU message light": {
+		"method": "calcCode",
+		"code": "(L:MD11_CMCDU_MSG_LT, bool)"
+	},
+	"TFDi.MD11.Center Pedestal Display Unit (CDU).Center CDU offset light": {
+		"method": "calcCode",
+		"code": "(L:MD11_CMCDU_OFST_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Aileron deflection override light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AIL_DEFL_OVRD_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine A manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_A_MAN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine B manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_B_MAN_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF1 light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_RADIO_PNL_VHF1_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF2 light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_RADIO_PNL_VHF2_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF3 light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_RADIO_PNL_VHF3_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel HF1 light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_RADIO_PNL_HF1_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel HF2 light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_RADIO_PNL_HF2_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF1 light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_RADIO_PNL_VHF1_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF2 light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_RADIO_PNL_VHF2_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF3 light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_RADIO_PNL_VHF3_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel HF1 light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_RADIO_PNL_HF1_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel HF2 light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_RADIO_PNL_HF2_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF1 light (observer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_OBS_RADIO_PNL_VHF1_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF2 light (observer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_OBS_RADIO_PNL_VHF2_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel VHF3 light (observer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_OBS_RADIO_PNL_VHF3_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel HF1 light (observer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_OBS_RADIO_PNL_HF1_LT, bool)"
+	},
+	"TFDi.MD11.Radios.Radio panel HF2 light (observer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_OBS_RADIO_PNL_HF2_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF1_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 call light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF1_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF2_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 call light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF2_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF3_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 call light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF3_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_HF1_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 call light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_HF1_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_HF2_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 call light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_HF2_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_SAT_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT telephone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_SAT_TEL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_INT_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT mechanic light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_INT_MECH_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB microphone light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_CAB_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB call light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_CAB_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF1_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 call light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF1_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF2_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 call light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF2_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF3_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 call light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF3_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_HF1_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 call light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_HF1_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_HF2_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 call light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_HF2_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_SAT_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel SAT telephone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_SAT_TELL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_INT_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT mechanic light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_INT_MECH_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB microphone light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_CAB_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB call light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_CAB_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VHF3_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_HF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_HF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_INT_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_CAB_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_PA_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VOR1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_VOR2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_ILS1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_ILS2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_ADF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_ADF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel marker volume light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_MKR_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF1 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF2 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VHF3 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VHF3_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF1 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_HF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel HF2 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_HF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel INT volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_INT_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel CAB volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_CAB_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel PA volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_PA_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR1 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VOR1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel VOR2 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_VOR2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS1 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_ILS1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ILS2 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_ILS2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF1 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_ADF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ADF2 volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_ADF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel marker volume light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_MKR_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ident light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_CPT_AUDIO_PNL_IDENT_LT, bool)"
+	},
+	"TFDi.MD11.Audio Panel.Audio panel ident light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_FO_AUDIO_PNL_IDENT_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.System display engine light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_SD_ENG_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.System display hydraulics light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_SD_HYD_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.System display electrical light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_SD_ELEC_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.System display air light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_SD_AIR_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.System display fuel light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_SD_FUEL_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.System display configuration light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_SD_CONFIG_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.System display miscellaneous light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_SD_MISC_LT, bool)"
+	},
+	"TFDi.MD11.Systems display panel.Transponder fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_PED_XPNDR_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APU_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APU_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU fuel light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APU_FUEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APU_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU door light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APU_DOOR_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU blank light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APU_BLANK_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU generator light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APU_GEN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 1 fire light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG1FIRE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 2 fire light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG2FIRE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 3 fire light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG3FIRE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.APU fire light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_APUFIRE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 1 agent 1 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG1AGENT1LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 1 agent 2 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG1AGENT2LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 2 agent 1 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG2AGENT1LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 2 agent 2 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG2AGENT2LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 3 agent 1 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG3AGENT1LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Engine 3 agent 2 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ENG3AGENT2LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward heat light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_HEAT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward smoke light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_SMOKE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward vent disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_VENTDISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward vent off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_VENTOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward agent 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_AGNT1_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward agent 1 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_AGNT1LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward agent 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_AGNT2_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke forward agent 2 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_FWD_AGNT2LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke test light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_TEST_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft heat light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_HEAT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft smoke light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_SMOKE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft vent disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_VENTDISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft vent off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_VENTOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft agent 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_AGNT1_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft agent 1 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_AGNT1LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft agent 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_AGNT2_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Cargo smoke aft agent 2 low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_CRGSMK_AFT_AGNT2LO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.GPWS terrain override light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_GPWS_TERROVRD_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.Electrical evacuation alarm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_ELEC_EVAC_ALARM_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.Flight director off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_FLTDIROFF_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.Flight director captain 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_FLTDIRCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.Flight director first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_FLTDIRFO1_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.CADC captain 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_CADCCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.CADC first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_CADCFO1_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.IRS captain auxiliary light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_IRS_CAPTAUX_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.IRS first officer auxiliary light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_IRS_FOAUX_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.FMS captain 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_FMSCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.FMS first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_FMSFO1_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.VOR captain 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_VORCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.VOR first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_VORFO1_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.Approach captain 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_APPRCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.Approach first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_APPRFO1_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.EIS first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_EIS_FO1_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.EIS auxiliary light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_EIS_FOAUX_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.EIS auxiliary light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_EIS_CAPAUX_LT, bool)"
+	},
+	"TFDi.MD11.Left Side Panel.EIS light (captain 2)": {
+		"method": "calcCode",
+		"code": "(L:MD11_LSIDE_INP_EIS_CAP2_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Center gear light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_CTR_GEAR_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Nose gear red light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_NOSE_RED_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Nose gear green light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_NOSE_GREEN_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Left gear red light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_LEFT_RED_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Left gear green light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_LEFT_GREEN_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Center gear red light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_CTR_RED_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Center gear green light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_CTR_GREEN_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Right gear red light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_RIGHT_RED_LT, bool)"
+	},
+	"TFDi.MD11.Main Instrument Panel.Right gear green light": {
+		"method": "calcCode",
+		"code": "(L:MD11_MIP_RIGHT_GREEN_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.Flight director off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_FLTDIROFF_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.Flight director captain 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_FLTDIRCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.Flight director first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_FLTDIRFO1_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.CADC captain 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_CADCCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.CADC first officer 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_CADCFO1_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.IRS auxiliary light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_IRS_CAPTAUX_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.IRS auxiliary light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_IRS_FOAUX_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.FMS light (captain 2)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_FMSCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.FMS light (first officer 1)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_FMSFO1_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.VOR light (captain 2)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_VORCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.VOR light (first officer 1)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_VORFO1_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.Approach light (captain 2)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_APPRCAP2_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.Approach light (first officer 1)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_APPRFO1_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.EIS light (first officer 1)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_EIS_FO1_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.EIS auxiliary light (first officer)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_EIS_FOAUX_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.EIS auxiliary light (captain)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_EIS_CAPAUX_LT, bool)"
+	},
+	"TFDi.MD11.Right Side Panel.EIS light (captain 2)": {
+		"method": "calcCode",
+		"code": "(L:MD11_RSIDE_INP_EIS_CAP2_LT, bool)"
+	},
+	"TFDi.MD11.Throttle quadrant.Left fuel light": {
+		"method": "calcCode",
+		"code": "(L:MD11_THR_L_FUEL_LT, bool)"
+	},
+	"TFDi.MD11.Throttle quadrant.Center fuel light": {
+		"method": "calcCode",
+		"code": "(L:MD11_THR_C_FUEL_LT, bool)"
+	},
+	"TFDi.MD11.Throttle quadrant.Right fuel light": {
+		"method": "calcCode",
+		"code": "(L:MD11_THR_R_FUEL_LT, bool)"
+	},
+	"TFDi.MD11.Throttle quadrant.Left start light": {
+		"method": "calcCode",
+		"code": "(L:MD11_THR_L_START_LT, bool)"
+	},
+	"TFDi.MD11.Throttle quadrant.Center start light": {
+		"method": "calcCode",
+		"code": "(L:MD11_THR_C_START_LT, bool)"
+	},
+	"TFDi.MD11.Throttle quadrant.Right start light": {
+		"method": "calcCode",
+		"code": "(L:MD11_THR_R_START_LT, bool)"
+	},
+	"TFDi.MD11.Throttle quadrant.Park light": {
+		"method": "calcCode",
+		"code": "(L:MD11_THR_PARK_LT, bool)"
+	},
+	"TFDi.MD11.Center Console.Slat stow light": {
+		"method": "calcCode",
+		"code": "(L:MD11_CTR_SLAT_STOW_LT, bool)"
+	},
+	"TFDi.MD11.Left MCDU.Display light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LMCDU_DSPY_LT, bool)"
+	},
+	"TFDi.MD11.Left MCDU.Fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LMCDU_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Left MCDU.Message light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LMCDU_MSG_LT, bool)"
+	},
+	"TFDi.MD11.Left MCDU.Offset light": {
+		"method": "calcCode",
+		"code": "(L:MD11_LMCDU_OFST_LT, bool)"
+	},
+	"TFDi.MD11.Right MCDU.Display light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RMCDU_DSPY_LT, bool)"
+	},
+	"TFDi.MD11.Right MCDU.Fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RMCDU_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Right MCDU.Message light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RMCDU_MSG_LT, bool)"
+	},
+	"TFDi.MD11.Right MCDU.Offset light": {
+		"method": "calcCode",
+		"code": "(L:MD11_RMCDU_OFST_LT, bool)"
+	},
+	"TFDi.MD11.Center Console.Auxiliary hydraulic pump light": {
+		"method": "calcCode",
+		"code": "(L:MD11_CTR_AUX_HYD_PUMP_LT, bool)"
+	},
+	"TFDi.MD11.Center Console.Antiskid light": {
+		"method": "calcCode",
+		"code": "(L:MD11_CTR_ANTISKID_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Engine fail light (left)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSL_ENG_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Master warning light (left)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSL_MST_WRN_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Master caution light (left)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSL_MST_CAUT_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Engine fail light (right)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSR_ENG_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Master warning light (right)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSR_MST_WRN_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Master caution light (right)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSR_MST_CAUT_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Below glide slope light (left)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSL_BELOW_GS_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Glide slope inhibit light (left)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSL_GS_INHIBIT_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Below glide slope light (right)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSR_BELOW_GS_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Glide slope inhibit light (right)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSR_GS_INHIBIT_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Autobrake disarm light (left)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSL_ABS_DISARM_LT, bool)"
+	},
+	"TFDi.MD11.Ground Service Panel.Autobrake disarm light (right)": {
+		"method": "calcCode",
+		"code": "(L:MD11_GSR_ABS_DISARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.IRS 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_IRS_1_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.IRS 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_IRS_2_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Panel.IRS 3 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_IRS_3_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 1 arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN1_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 1 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN1_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 1 drive disconnect light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN1_DRIVE_DISCONNECT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 1 drive fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN1_DRIVE_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 2 arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN2_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 2 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN2_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 2 drive disconnect light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN2_DRIVE_DISCONNECT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 2 drive fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN2_DRIVE_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 3 arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN3_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 3 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN3_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 3 drive disconnect light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN3_DRIVE_DISCONNECT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator 3 drive fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GEN3_DRIVE_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Cabin bus off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_CABIN_BUS_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Left emergency AC off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_L_EMER_AC_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 1 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC1_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 2 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC2_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC ground service off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC_GND_SVC_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.APU power on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_APU_PWR_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.APU power available light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_APU_PWR_AVAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 3 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC3_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Right emergency AC off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_R_EMER_AC_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Emergency power off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_EMER_PWR_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Emergency power on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_EMER_PWR_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 1 tie arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC1_TIE_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 1 tie off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC1_TIE_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Galley external power on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GLY_EXT_PWR_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Galley external power available light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GLY_EXT_PWR_AVAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 2 tie arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC2_TIE_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 2 tie off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC2_TIE_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.External power on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_EXT_PWR_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.External power available light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_EXT_PWR_AVAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 3 tie arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC3_TIE_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.AC bus 3 tie off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_AC3_TIE_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.ADG electrical on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_ADG_ELEC_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Battery off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_BATT_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Battery bus off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_BATT_BUS_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Left emergency DC off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_L_EMER_DC_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.DC bus 1 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_DC1_BUS_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.DC bus 1 tie off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_DC1_TIE_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.DC bus 2 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_DC2_BUS_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.DC ground service off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_DC_GND_SVC_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.DC bus 3 tie off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_DC3_TIE_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.DC bus 3 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_DC3_BUS_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Right emergency DC off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_R_EMER_DC_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.System select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_SYS_SEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.System manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_SYS_MANUAL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Galley bus 1 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GALLEY_BUS_1_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Galley bus 2 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GALLEY_BUS_2_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Galley bus 3 light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ELEC_GALLEY_BUS_3_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.System 1 pressure light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_SYS_1_PRESS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.System 2 pressure light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_SYS_2_PRESS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.System 3 pressure light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_SYS_3_PRESS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.Auxiliary pump 1 on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_AUX_PUMP_1_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.Auxiliary pump 2 on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_AUX_PUMP_2_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.System select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_SYS_SELECT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.System manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_SYS_MANUAL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.1/3 RMP on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_1_3_RMP_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.1/3 RMP disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_1_3_RMP_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.2/3 RMP on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_2_3_RMP_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.2/3 RMP disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_2_3_RMP_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 1 left fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_1_L_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 1 left off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_1_L_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 1 right fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_1_R_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 1 right off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_1_R_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 2 left fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_2_L_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 2 left off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_2_L_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 2 right fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_2_R_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 2 right off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_2_R_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 3 left fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_3_L_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 3 left off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_3_L_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 3 right fault light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_3_R_FAULT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.EDP 3 right off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_EDP_3_R_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Hydraulics.Hydraulics test light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_HYD_TEST_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 1 fill arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_1_FILL_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 1 fill light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_1_FILL_FILL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 1 pump low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_1_PUMP_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 1 pump off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_1_PUMP_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 1 crossfeed on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_1_XFEED_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 1 crossfeed disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_1_XFEED_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 fill arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_FILL_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 fill light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_FILL_FILL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 pump low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_PUMP_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 pump off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_PUMP_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 crossfeed on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_XFEED_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 crossfeed disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_XFEED_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 fill arm light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_FILL_ARM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 fill light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_FILL_FILL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 pump low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_PUMP_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 pump off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_PUMP_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 crossfeed on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_XFEED_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 crossfeed disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_XFEED_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.System select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_SYSTEM_SEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.System manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_SYSTEM_MAN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 1 transfer light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_1_TRANS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 transfer light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_TRANS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 2 transfer low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_2_TRANS_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 transfer light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_TRANS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tank 3 transfer low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TANK_3_TRANS_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Fuel dump light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_DUMP_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Left transfer on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_LEFT_TRANS_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Left transfer low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_LEFT_TRANS_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Right transfer on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_RIGHT_TRANS_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Right transfer low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_RIGHT_TRANS_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tail transfer on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TAIL_TRANS_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Tail transfer low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_TAIL_TRANS_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Alternate pump on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_ALT_PUMP_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Alternate pump low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_ALT_PUMP_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Manifold drain light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_MANF_DRAIN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.Standby compass light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_STBY_COMP_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.Runway turnoff light (left)": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_RWY_TURNOFF_L_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.Runway turnoff light (right)": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_RWY_TURNOFF_R_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.Navigation light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_NAV_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.Logo light on": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_LOGO_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.Logo light off": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_LOGO_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.Beacon light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_BCN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Lights.High intensity light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LTS_HI_INT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Pack 1 flow light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_PACK_1_FLOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Pack 1 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_PACK_1_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Pack 2 flow light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_PACK_2_FLOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Pack 2 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_PACK_2_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Pack 3 flow light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_PACK_3_FLOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Pack 3 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_PACK_3_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.System select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_SYSTEM_SEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.System manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_SYSTEM_MAN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Econ cabin altitude light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_ECON_CAB_ALT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Econ off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_ECON_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Trim air avionics overheat light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_TRIM_AIR_AVIONICS_OVHT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Trim air off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_TRIM_AIR_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Cabin system select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_CABIN_SYSTEM_SEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Cabin system manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_CABIN_SYSTEM_MAN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Outflow closed light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_OUTFLOW_CLOSED_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 1 pressure light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_1_PRESS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 1 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_1_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 1 manifold light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_1_MANF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 1 temperature high light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_1_TEMP_HI_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 2 pressure light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_2_PRESS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 2 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_2_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 2 manifold light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_2_MANF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 2 temperature high light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_2_TEMP_HI_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 3 pressure light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_3_PRESS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 3 off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_3_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 3 manifold light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_3_MANF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Bleed 3 temperature high light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_BLEED_3_TEMP_HI_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.APU on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_APU_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.APU use engine air light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_APU_USE_ENG_AIR_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Avionics fan flow light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_AVIONICS_FAN_FLOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Avionics fan override light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_AVIONICS_FAN_OVRD_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.No masks light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_NO_MASKS_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Isolation valve 1-2 on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_ISOL_1_2_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Isolation valve 1-2 disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_ISOL_1_2_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Isolation valve 1-3 on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_ISOL_1_3_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Isolation valve 1-3 disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_ISOL_1_3_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Ditching light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_DITCHING_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.FADEC 1 select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_FADEC_1_SEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.FADEC 2 select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_FADEC_2_SEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.FADEC 3 select light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_FADEC_3_SEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.FADEC 1 alternate light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_FADEC_1_ALTN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.FADEC 2 alternate light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_FADEC_2_ALTN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.FADEC 3 alternate light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_FADEC_3_ALTN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.Ignition off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_IGN_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.Engine A light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_A_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.Engine B light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_B_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Engine.Ignition override light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_ENG_IGN_OVRD_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Cargo.Cargo door test light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_CRG_DOOR_TEST_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator bus 1 reset light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_GEN_BUS_1_RESET_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator bus 2 reset light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_GEN_BUS_2_RESET_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Electrical.Generator bus 3 reset light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_GEN_BUS_3_RESET_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Fuel dump stop light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_DUMP_STOP_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.Flap limit light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_FLAPLIM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.Elevator feel light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_ELEVFEEL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.UYDA fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_UYDAFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.UYDA off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_UYDAOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.UYDB fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_UYDBFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.UYDB off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_UYDBOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LYDA fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LYDAFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LYDA off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LYDAOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LYDB fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LYDBFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LYDB off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LYDBOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LLO fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LLOFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LLO off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LLOFOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LLI fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LLIFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.LLI off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_LLIFOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.RLI fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_RLIFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.RLI off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_RLIFOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.RLO fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_RLOFAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Flight Control.RLO off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FLTCTL_RLOFOFF_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Engine 1 anti-ice on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_ENG1_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Engine 1 anti-ice disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_ENG1_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Engine 2 anti-ice on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_ENG2_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Engine 2 anti-ice disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_ENG2_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Engine 3 anti-ice on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_ENG3_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Engine 3 anti-ice disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_ENG3_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Wing anti-ice on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_WING_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Wing anti-ice disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_WING_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Tail anti-ice on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_TAIL_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Tail anti-ice disagree light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_TAIL_DISAG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Left windshield anti-ice on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_WNDSHLD_AICE_L_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.High windshield anti-ice light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_WNDSHLD_AICE_HIGH_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Windshield anti-ice normal light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_WNDSHLD_AICE_NORM_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Right windshield anti-ice on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_WNDSHLD_AICE_R_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Windshield defog light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_WNDSHLD_AICE_DEFOG_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Anti-ice system manual light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_SYSTEM_MAN_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Locks.Lock fail light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LOCK_FAIL_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Locks.Lock auto light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_LOCK_AUTO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Upper auxiliary bypass light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_UPRAUX_BYP_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Forward auxiliary left transfer on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_FWDAUX_LTRANS_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Forward auxiliary left transfer low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_FWDAUX_LTRANS_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Forward auxiliary right transfer on light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_FWDAUX_RTRANS_ON_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Fuel.Forward auxiliary right transfer low light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_FUEL_FWDAUX_RTRANS_LOW_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Anti-Ice.Anti-ice auto light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_AICE_AUTO_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Cabin air smoke light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_CAB_AIR_SMOKE_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Pneumatics.Cabin air off light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OVHD_PNEU_CAB_AIR_OFF_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF1 microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF1_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF1 call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF1_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF2 microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF2_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF2 call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF2_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF3 microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF3_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF3 call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF3_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.HF1 microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_HF1_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.HF1 call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_HF1_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.HF2 microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_HF2_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.HF2 call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_HF2_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.SAT microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_SAT_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.SAT telephone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_SAT_TEL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.INT microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_INT_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.INT mechanic light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_INT_MECH_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.CAB microphone light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_CAB_MIC_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.CAB call light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_CAB_CALL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF1 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF2 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VHF3 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VHF3_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.HF1 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_HF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.HF2 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_HF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.SAT volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_SAT_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.INT volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_INT_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.CAB volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_CAB_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.PA volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_PA_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VOR1 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VOR1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.VOR2 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_VOR2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.ILS1 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_ILS1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.ILS2 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_ILS2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.ADF1 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_ADF1_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.ADF2 volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_ADF2_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.Marker volume light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_MKR_VOL_LT, bool)"
+	},
+	"TFDi.MD11.Observer Audio Panel.Identification light": {
+		"method": "calcCode",
+		"code": "(L:MD11_OBS_AUDIO_PNL_IDENT_LT, bool)"
+	},
+	"TFDi.MD11.Overhead Emergency.Emergency light": {
+		"method": "calcCode",
+		"code": "(L:MD11_AOVHD_EMER_LT, bool)"
+	},
+	"FSS.B727-200 F.APU.Input.APU_START": {
+		"method": "calcCode",
+		"code": "2 (>L:FSS_B727_FE_APU_MASTER_SWITCH, Number)"
+	},
+	"FSS.B727-200 F.APU.Input.APU_ON": {
+		"method": "calcCode",
+		"code": "1  (>L:FSS_B727_FE_APU_MASTER_SWITCH, Number)"
+	},
+	"FSS.B727-200 F.APU.Input.APU_OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:FSS_B727_FE_APU_MASTER_SWITCH, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.EXT_PWR GRD SERVICE": {
+		"method": "calcCode",
+		"code": "0  (>L:FSS_B727_FE_ELEC_EXT_POWER_SWITCH, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.EXT_PWR OFF": {
+		"method": "calcCode",
+		"code": "1  (>L:FSS_B727_FE_ELEC_EXT_POWER_SWITCH, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.EXT_PWR ON": {
+		"method": "calcCode",
+		"code": "2 (>L:FSS_B727_FE_ELEC_EXT_POWER_SWITCH, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.ESS POWER STBY": {
+		"method": "calcCode",
+		"code": "0 (>L:FSS_B727_FE_ELEC_ESS_POWER_SELECTOR, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.ESS POWER APU": {
+		"method": "calcCode",
+		"code": "1 (>L:FSS_B727_FE_ELEC_ESS_POWER_SELECTOR, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.ESS POWER GEN 1": {
+		"method": "calcCode",
+		"code": "2 (>L:FSS_B727_FE_ELEC_ESS_POWER_SELECTOR, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.ESS POWER GEN 2": {
+		"method": "calcCode",
+		"code": "3 (>L:FSS_B727_FE_ELEC_ESS_POWER_SELECTOR, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.ESS POWER GEN 3": {
+		"method": "calcCode",
+		"code": "4 (>L:FSS_B727_FE_ELEC_ESS_POWER_SELECTOR, Number)"
+	},
+	"FSS.B727-200 F.Electrical.Input.ESS POWER EXT PWR": {
+		"method": "calcCode",
+		"code": "5 (>L:FSS_B727_FE_ELEC_ESS_POWER_SELECTOR, Number)"
+	},
+	"A2A SIM.Comanche 250.Gear.Input.PA24 Parking Brake On": {
+		"method": "calcCode",
+		"code": "1 s0 (>L:ParkingBrakePosition, bool) \nl0 (>L:ParkingBrakeActive, bool) \n(>H:A2A_PARKING_BRAKE_POSITION)"
+	},
+	"A2A SIM.Comanche 250.Gear.Input.PA24 Parking Brake Off": {
+		"method": "calcCode",
+		"code": "0 s0 (>L:ParkingBrakePosition, bool) \nl0 (>L:ParkingBrakeActive, bool) \n(>H:A2A_PARKING_BRAKE_POSITION)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Landing Light L on": {
+		"method": "calcCode",
+		"code": "19 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Landing Light L off": {
+		"method": "calcCode",
+		"code": "18 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Landing Light R on": {
+		"method": "calcCode",
+		"code": "21 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Landing Light R off": {
+		"method": "calcCode",
+		"code": "20 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Safety.Input.Seatbelt on": {
+		"method": "calcCode",
+		"code": "16 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Safety.Input.Seatbelt off": {
+		"method": "calcCode",
+		"code": "17 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Taxi light on": {
+		"method": "calcCode",
+		"code": "27 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Taxi light off": {
+		"method": "calcCode",
+		"code": "26 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Logo light on": {
+		"method": "calcCode",
+		"code": "29 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Logo light off": {
+		"method": "calcCode",
+		"code": "28 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.APU.Input.APU ON": {
+		"method": "calcCode",
+		"code": "8 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.APU.Input.APU OFF": {
+		"method": "calcCode",
+		"code": "7 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 1 fuel control lever idle": {
+		"method": "calcCode",
+		"code": "12 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 1 fule lever CUTOFF": {
+		"method": "calcCode",
+		"code": "11 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 2 Fuel lever idle": {
+		"method": "calcCode",
+		"code": "14 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 2 Fuel lever CUTOFF": {
+		"method": "calcCode",
+		"code": "13 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 1 starter counter clock wise": {
+		"method": "calcCode",
+		"code": "3 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 1 starter  clock wise": {
+		"method": "calcCode",
+		"code": "4 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 2 starter counter clock wise": {
+		"method": "calcCode",
+		"code": "5 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine 2 starter clock wise": {
+		"method": "calcCode",
+		"code": "6 (>L:VC_Engine_APU_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Position & Strobe backwards": {
+		"method": "calcCode",
+		"code": "30 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Position & Strobe forward": {
+		"method": "calcCode",
+		"code": "31 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.ANTI COLLISION ON": {
+		"method": "calcCode",
+		"code": "33 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.ANTI COLLISION OFF": {
+		"method": "calcCode",
+		"code": "32 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.WING ON": {
+		"method": "calcCode",
+		"code": "35 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.WING OFF": {
+		"method": "calcCode",
+		"code": "34 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.WHEEL WELL ON": {
+		"method": "calcCode",
+		"code": "37 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.WHEEL WELL OFF": {
+		"method": "calcCode",
+		"code": "36 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autothrust System.Input.TOGA Press": {
+		"method": "calcCode",
+		"code": "15 (>L:VC_Automatic_Flight_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autothrust System.Input.TOGA Release": {
+		"method": "calcCode",
+		"code": "16 (>L:VC_Automatic_Flight_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP LVL CHG": {
+		"method": "calcCode",
+		"code": "49 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP LNAV": {
+		"method": "calcCode",
+		"code": "5 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP AP A CMD": {
+		"method": "calcCode",
+		"code": "7 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP AP B CMD": {
+		"method": "calcCode",
+		"code": "9 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP HDG Decrease": {
+		"method": "calcCode",
+		"code": "27 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP HDG Increase": {
+		"method": "calcCode",
+		"code": "28 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP VOR/LOC": {
+		"method": "calcCode",
+		"code": "29 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP ALT Decrease": {
+		"method": "calcCode",
+		"code": "31 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP ALT Increase": {
+		"method": "calcCode",
+		"code": "32 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP V/S Decrease": {
+		"method": "calcCode",
+		"code": "35 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP V/S Increase": {
+		"method": "calcCode",
+		"code": "36 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP SPD": {
+		"method": "calcCode",
+		"code": "47 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP HDG Select": {
+		"method": "calcCode",
+		"code": "51 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP APP": {
+		"method": "calcCode",
+		"code": "53 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP ALT HLD": {
+		"method": "calcCode",
+		"code": "55 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP V/S": {
+		"method": "calcCode",
+		"code": "57 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot APP Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_APP_L)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot VS Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_VS)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot VNAV ALT Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_VNAV_ALT)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot ALT Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_ALT)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot AP Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_AP)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot YD Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_YD)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP SPD Increase": {
+		"method": "calcCode",
+		"code": "22 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP SPD Decrease": {
+		"method": "calcCode",
+		"code": "21 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Lights.Input.Taxi Lights ON": {
+		"method": "calcCode",
+		"code": "27 (>L:VC_Miscellaneous_trigger_VAL)"
+	},
+	"iFly.737-Max8.Lights.Input.Taxi Lights OFF": {
+		"method": "calcCode",
+		"code": "26 (>L:VC_Miscellaneous_trigger_VAL)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP VNAV": {
+		"method": "calcCode",
+		"code": "3 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot IAS Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_IAS)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot BC Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_BC)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot CPL Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_CPL)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Autopilot.Output.MSATR Autopilot MAN SPD Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_FGCP_STAT_MAN_SPD)"
+	},
+	"Asobo.Longitude.Avionics.Input.AP_NAV_SRC_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:WTGarmin_Nav_ActiveNavSource:1) ++ 3 % (>L:WTGarmin_Nav_ActiveNavSource:1, enum)"
+	},
+	"iFly.737-Max8.Autopilot.Input.SPD INTV": {
+		"method": "calcCode",
+		"code": "23 (>L:VC_Automatic_Flight_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Input.ALT INTV": {
+		"method": "calcCode",
+		"code": " 33 (>L:VC_Automatic_Flight_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Input.A/T ARM SWITCH ON": {
+		"method": "calcCode",
+		"code": "1 (>L:VC_Automatic_Flight_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Input.CAPT FLIGHT DIRECTOR ON": {
+		"method": "calcCode",
+		"code": "42 (>L:VC_Automatic_Flight_trigger_VAL,number)\n"
+	},
+	"iFly.737-Max8.Autopilot.Input.CAPT FLIGHT DIRECTOR OFF": {
+		"method": "calcCode",
+		"code": "41 (>L:VC_Automatic_Flight_trigger_VAL,number)\n"
+	},
+	"iFly.737-Max8.Autopilot.Output.CMD A PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_CMD_A_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.CMD B PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_CMD_B_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.A/T ARM LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_AT_ARM_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.N1 PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_N1_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.SPEED PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_SPEED_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.VNAV PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_VNAV_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.LVL CHG PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_LVL_CHG_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.HDG SEL PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_HDG_SEL_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.LNAV PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_LNAV_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.VORLOC PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_VOR_LOC_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.APP PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_APP_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.ALT HLD PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_ALT_HLD_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.V/S PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_VS_SW_LIGHT_VAL,number)\n"
+	},
+	"iFly.737-Max8.Miscellaneous.Input.HUD": {
+		"method": "calcCode",
+		"code": "158 (>L:VC_Instruments_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Miscellaneous.Input.HUD STOW/DEPLOY": {
+		"method": "calcCode",
+		"code": "(L:VC_HUD_MOVE_VAL,number)"
+	},
+	"iFly.737-Max8.Gear.Input.LANDING GEAR UP": {
+		"method": "calcCode",
+		"code": "1 (>L:VC_Gear_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Gear.Input.LANDING GEAR DOWN": {
+		"method": "calcCode",
+		"code": "2 (>L:VC_Gear_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.IAS VALUE (DOES NOT WORK)": {
+		"method": "calcCode",
+		"code": "(L:VC_IASMACH_SW_VAL,number)"
+	},
+	"Microsoft.Generic.Autopilot.Input.AP_HDG_VAR_INC": {
+		"method": "calcCode",
+		"code": "(>K:AP_HDG_VAR_INC)"
+	},
+	"Microsoft.Generic.Autopilot.Input.AP_HDG_VAR_DEC": {
+		"method": "calcCode",
+		"code": "(>K:AP_HDG_VAR_DEC)"
+	},
+	"iFly.737-Max8.Lights.Output.Pedestal Flood Brightness": {
+		"method": "calcCode",
+		"code": "(L:VC_Aft_Electronics_Flood_Light_SW_VAL,number)"
+	},
+	"iFly.737-Max8.Lights.Output.Pedestal Panel Brightness": {
+		"method": "calcCode",
+		"code": "(L:VC_Aft_Electronics_Panel_Light_SW_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.HEADING VALUE": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT HEADING LOCK DIR, degrees)"
+	},
+	"iFly.737-Max8.Autopilot.Output.ALTITUDE VALUE": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT ALTITUDE LOCK VAR:3, Feet)"
+	},
+	"iFly.737-Max8.Autopilot.Output.V/S VALUE": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT VERTICAL HOLD VAR,Feet/minute)"
+	},
+	"Black Square.AnalogBaron.Avionics.Input.B58 Edm 760 Step Short Push": {
+		"method": "calcCode",
+		"code": "(>H:bksq_JpiButton_1_L_Short)"
+	},
+	"Black Square.AnalogBaron.Avionics.Input.B58 Edm 760 Step long Push": {
+		"method": "calcCode",
+		"code": "(>H:bksq_JpiButton_1_L_Long)"
+	},
+	"Black Square.AnalogBaron.Avionics.Input.B58 Edm 760 Lean find Short Push": {
+		"method": "calcCode",
+		"code": "(>H:bksq_JpiButton_1_R_Short)"
+	},
+	"Black Square.AnalogBaron.Avionics.Input.B58 Edm 760 Lean find Long Push": {
+		"method": "calcCode",
+		"code": "(>H:bksq_JpiButton_1_R_Long)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Position Light UP/Strobe": {
+		"method": "calcCode",
+		"code": "30(>L:VCMiscellaneoustriggerVALnumber)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Position Light DOWN/Nav": {
+		"method": "calcCode",
+		"code": "31(>L:VCMiscellaneoustriggerVALnumber)"
+	},
+	"Black Square.Analog King Air.Navigation.Input.HDG CENTER": {
+		"method": "calcCode",
+		"code": "(A:HEADING INDICATOR degrees) (>K:1:HEADINGBUGSET)"
+	},
+	"Hype Performance Group.H145.Lights (exterior).Input.H145HISLON": {
+		"method": "calcCode",
+		"code": "(>H:H145SDKHISLLAMPON)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 1": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_1)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 2": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_2)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 3": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_3)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 4": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_4)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 5": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_5)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 6": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_6)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 7": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_7)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 8": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_8)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 9": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_9)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key 0": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_0)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key DOT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_DOT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key PLUSMINUS": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_PLUSMINUS)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key A": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_A)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key B": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_B)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key C": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_C)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key D": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_D)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key E": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_E)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key F": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_F)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key G": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_G)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key H": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_H)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key I": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_I)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key J": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_J)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key L": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_L)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key M": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_M)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key N": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_N)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key O": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_O)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key P": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_P)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key Q": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_Q)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key R": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_R)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key S": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_S)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key T": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_T)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key U": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_U)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key V": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_V)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key W": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_W)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key X": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_X)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key Y": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_Y)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key Z": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_Z)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key ESC": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_ESC)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key UP": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_UP)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key RIGHT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_RIGHT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key DOWN": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_DOWN)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key LEFT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_LEFT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key DIR": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_DIR)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key PERF": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_PERF)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key INIT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_INIT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key NAVAID": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_NAVAID)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key MAILBOX": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_MAILBOX)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key FPLN": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_FPLN)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key DEST": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_DEST)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key SECINDEX": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_SECINDEX)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key SURV": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_SURV)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key ATCCOM": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_ATCCOM)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key ND": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_ND)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key SLASH": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_SLASH)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key ESC2": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_ESC2)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key KBD": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_KBD)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key REWIND": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_REWIND)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key FORWARD": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_FORWARD)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key ENT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_ENT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key BACKSPACE": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_BACKSPACE)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key SP": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_SP)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU L Key CLRINFO": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_L_CLRINFO)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 1": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_1)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 2": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_2)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 3": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_3)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 4": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_4)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 5": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_5)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 6": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_6)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 7": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_7)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 8": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_8)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 9": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_9)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key 0": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_0)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key DOT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_DOT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key PLUSMINUS": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_PLUSMINUS)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key A": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_A)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key B": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_B)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key C": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_C)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key D": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_D)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key E": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_E)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key F": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_F)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key G": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_G)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key H": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_H)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key I": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_I)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key J": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_J)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key L": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_L)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key M": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_M)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key N": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_N)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key O": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_O)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key P": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_P)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key Q": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_Q)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key R": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_R)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key S": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_S)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key T": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_T)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key U": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_U)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key V": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_V)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key W": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_W)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key X": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_X)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key Y": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_Y)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key Z": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_Z)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key ESC": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_ESC)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key UP": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_UP)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key RIGHT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_RIGHT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key DOWN": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_DOWN)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key LEFT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_LEFT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key DIR": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_DIR)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key PERF": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_PERF)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key INIT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_INIT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key NAVAID": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_NAVAID)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key MAILBOX": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_MAILBOX)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key FPLN": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_FPLN)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key DEST": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_DEST)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key SECINDEX": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_SECINDEX)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key SURV": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_SURV)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key ATCCOM": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_ATCCOM)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key ND": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_ND)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key SLASH": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_SLASH)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key ESC2": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_ESC2)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key KBD": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_KBD)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key REWIND": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_REWIND)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key FORWARD": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_FORWARD)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key ENT": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_ENT)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key BACKSPACE": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_BACKSPACE)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key SP": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_SP)"
+	},
+	"Fly By Wire.A380X.MCDU.A380X KCCU R Key CLRINFO": {
+		"method": "calcCode",
+		"code": "(>H:A32NX_KCCU_R_CLRINFO)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Beacon Lights On": {
+		"method": "calcCode",
+		"code": "1 s0 0 r (>K:2:BEACON_LIGHTS_SET) l0 (>L:LIGHTING_BEACON_0)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Beacon Lights Off": {
+		"method": "calcCode",
+		"code": "0 s0 0 r (>K:2:BEACON_LIGHTS_SET) l0 (>L:LIGHTING_BEACON_0)"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X OVHD ENG MODE SELECT KNOB IGN START": {
+		"method": "calcCode",
+		"code": "2 (>L:XMLVAR_ENG_MODE_SEL) 2 (>K:TURBINE_IGNITION_SWITCH_SET)"
+	},
+	"Just Flight.BAE146.Radio.Input.Transponder/TCAS Mode select knob STBY": {
+		"method": "calcCode",
+		"code": "0 (>L:PED_AFT_XPDR_MODE)"
+	},
+	"Just Flight.BAE146.Radio.Input.Transponder/TCAS Mode select knob ALT OFF": {
+		"method": "calcCode",
+		"code": "1 (>L:PED_AFT_XPDR_MODE)"
+	},
+	"Just Flight.BAE146.Radio.Input.Transponder/TCAS Mode select knob XPNDR": {
+		"method": "calcCode",
+		"code": "2 (>L:PED_AFT_XPDR_MODE)"
+	},
+	"Just Flight.BAE146.Radio.Input.Transponder/TCAS Mode select knob TA": {
+		"method": "calcCode",
+		"code": "3 (>L:PED_AFT_XPDR_MODE)"
+	},
+	"Just Flight.BAE146.Radio.Input.Transponder/TCAS Mode select knob TA/RA": {
+		"method": "calcCode",
+		"code": "4 (>L:PED_AFT_XPDR_MODE)"
+	},
+	"Just Flight.BAE146.Radio.Input.Transponder/TCAS Mode select knob ABV": {
+		"method": "calcCode",
+		"code": "5 (>L:PED_AFT_XPDR_MODE)"
+	},
+	"Just Flight.BAE146.Radio.Input.Transponder/TCAS Mode select knob BLW": {
+		"method": "calcCode",
+		"code": "6 (>L:PED_AFT_XPDR_MODE)"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X OVHD ENG MODE SELECT KNOB CRANK": {
+		"method": "calcCode",
+		"code": "0 (>L:XMLVAR_ENG_MODE_SEL) 0 (>K:TURBINE_IGNITION_SWITCH_SET)"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X OVHD ENG MODE SELECT KNOB NORM": {
+		"method": "calcCode",
+		"code": "1 (>L:XMLVAR_ENG_MODE_SEL) 1 (>K:TURBINE_IGNITION_SWITCH_SET)"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG1 MASTER SWITCH OFF": {
+		"method": "calcCode",
+		"code": "1 (>K:FUELSYSTEM_VALVE_CLOSE)\n(A:GENERAL ENG STARTER:1,Bool) if{ (>K:TOGGLE_STARTER1) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG2 MASTER SWITCH OFF": {
+		"method": "calcCode",
+		"code": "2 (>K:FUELSYSTEM_VALVE_CLOSE)\n(A:GENERAL ENG STARTER:2,Bool) if{ (>K:TOGGLE_STARTER2) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG3 MASTER SWITCH OFF": {
+		"method": "calcCode",
+		"code": "3 (>K:FUELSYSTEM_VALVE_CLOSE)\n(A:GENERAL ENG STARTER:3,Bool) if{ (>K:TOGGLE_STARTER3) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG4 MASTER SWITCH OFF": {
+		"method": "calcCode",
+		"code": "4 (>K:FUELSYSTEM_VALVE_CLOSE)\n(A:GENERAL ENG STARTER:4,Bool) if{ (>K:TOGGLE_STARTER4) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG1 MASTER SWITCH ON": {
+		"method": "calcCode",
+		"code": "1 (>K:FUELSYSTEM_VALVE_OPEN)\n(A:GENERAL ENG STARTER:1,Bool) ! if{ (>K:TOGGLE_STARTER1) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG2 MASTER SWITCH ON": {
+		"method": "calcCode",
+		"code": "2 (>K:FUELSYSTEM_VALVE_OPEN)\n(A:GENERAL ENG STARTER:2,Bool) ! if{ (>K:TOGGLE_STARTER2) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG3 MASTER SWITCH ON": {
+		"method": "calcCode",
+		"code": "3 (>K:FUELSYSTEM_VALVE_OPEN)\n(A:GENERAL ENG STARTER:3,Bool) ! if{ (>K:TOGGLE_STARTER3) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG4 MASTER SWITCH ON": {
+		"method": "calcCode",
+		"code": "4 (>K:FUELSYSTEM_VALVE_OPEN)\n(A:GENERAL ENG STARTER:4,Bool) ! if{ (>K:TOGGLE_STARTER4) }"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG1&2 MASTER SWITCH ON": {
+		"method": "calcCode",
+		"code": "1 (>K:FUELSYSTEM_VALVE_OPEN) 2 (>K:FUELSYSTEM_VALVE_OPEN)"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG1&2 MASTER SWITCH_OFF": {
+		"method": "calcCode",
+		"code": "1 (>K:FUELSYSTEM_VALVE_CLOSE) 2 (>K:FUELSYSTEM_VALVE_CLOSE)"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG3&4 MASTER SWITCH ON": {
+		"method": "calcCode",
+		"code": "3 (>K:FUELSYSTEM_VALVE_OPEN) 4 (>K:FUELSYSTEM_VALVE_OPEN)"
+	},
+	"Fly By Wire.A380X.Engine.Input.A380X ENG3&4 MASTER SWITCH OFF": {
+		"method": "calcCode",
+		"code": "3 (>K:FUELSYSTEM_VALVE_CLOSE) 4 (>K:FUELSYSTEM_VALVE_CLOSE)"
+	},
+	"Fly By Wire.A380X.Fire Protection.Input.A380X OVHD FIRE TEST PB PRESS": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_FIRE_TEST_PB_IS_PRESSED)"
+	},
+	"Fly By Wire.A380X.Fire Protection.Input.A380X OVHD FIRE TEST PB RELEASE": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_FIRE_TEST_PB_IS_PRESSED)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X AUTOBRAKES SELECTED MODE DISARM": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_AUTOBRAKES_SELECTED_MODE)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X AUTOBRAKES SELECTED MODE BTV": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_AUTOBRAKES_SELECTED_MODE)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X_AUTOBRAKES_SELECTED_MODE_LO": {
+		"method": "calcCode",
+		"code": "2 (>L:A32NX_AUTOBRAKES_SELECTED_MODE)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X AUTOBRAKES SELECTED MODE 2": {
+		"method": "calcCode",
+		"code": "3 (>L:A32NX_AUTOBRAKES_SELECTED_MODE)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X AUTOBRAKES SELECTED MODE 3": {
+		"method": "calcCode",
+		"code": "4 (>L:A32NX_AUTOBRAKES_SELECTED_MODE)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X AUTOBRAKES SELECTED MODE HI": {
+		"method": "calcCode",
+		"code": "5 (>L:A32NX_AUTOBRAKES_SELECTED_MODE)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM CHECK Button L Press ": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CHECK_LH)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM CHECK Button L Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_CHECK_LH)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM CHECK Button R Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CHECK_RH)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM CHECK Button R Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_CHECK_RH)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM UP Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_UP)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM UP Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_UP)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM DOWN Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_DOWN)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM DOWN Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_DOWN)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VHF_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_HF_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_TEL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 SQWK Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_SQWK_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 BLANK Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_BLANK_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 MENU Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_MENU_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_NAV_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 ADK 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_ADK_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 ADK 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_ADK_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 ADK 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_ADK_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 MSG CLR Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_MSG_CLR_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 LSK 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_LSK_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 LSK 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_LSK_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 LSK 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_LSK_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 RST Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_RST_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 UP Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_UP_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DOWN Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DOWN_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 0 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_0_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 4 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_4_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 5 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_5_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 6 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_6_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 7 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_7_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 8 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_8_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT 9 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_9_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT DOT Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_DOT_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DIGIT CLR Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DIGIT_CLR_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF CALL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VHF_CALL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF CALL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VHF_CALL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF CALL 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VHF_CALL_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VHF_VOL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VHF_VOL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VHF_VOL_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_1) ++ 100 min 0 max s0 (>L:A380X_RMP_1_VHF_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_1)\n   l0 (>L:A380X_RMP_3_VHF_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_2) ++ 100 min 0 max s0 (>L:A380X_RMP_1_VHF_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_2)\n   l0 (>L:A380X_RMP_3_VHF_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 3 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_3) ++ 100 min 0 max s0 (>L:A380X_RMP_1_VHF_VOL_3)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_3)\n   l0 (>L:A380X_RMP_3_VHF_VOL_3) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF VOL 1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_HF_VOL_1) ++ 100 min 0 max s0 (>L:A380X_RMP_1_HF_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_HF_VOL_1)\n   l0 (>L:A380X_RMP_3_HF_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF VOL 2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_HF_VOL_2) ++ 100 min 0 max s0 (>L:A380X_RMP_1_HF_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_HF_VOL_2)\n   l0 (>L:A380X_RMP_3_HF_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL VOL 1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_TEL_VOL_1) ++ 100 min 0 max s0 (>L:A380X_RMP_1_TEL_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_TEL_VOL_1)\n   l0 (>L:A380X_RMP_3_TEL_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL VOL 2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_TEL_VOL_2) ++ 100 min 0 max s0 (>L:A380X_RMP_1_TEL_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_TEL_VOL_2)\n   l0 (>L:A380X_RMP_3_TEL_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 INT VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_INT_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_1_INT_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_INT_VOL)\n   l0 (>L:A380X_RMP_3_INT_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 CAB VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_CAB_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_1_CAB_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_CAB_VOL)\n   l0 (>L:A380X_RMP_3_CAB_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 PA VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_PA_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_1_PA_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_PA_VOL)\n   l0 (>L:A380X_RMP_3_PA_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_NAV_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_1_NAV_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_NAV_VOL)\n   l0 (>L:A380X_RMP_3_NAV_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DUMMY VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_DUMMY_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_1_DUMMY_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_DUMMY_VOL)\n   l0 (>L:A380X_RMP_3_DUMMY_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 1 Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_1) -- 100 min 0 max s0 (>L:A380X_RMP_1_VHF_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_1)\n   l0 (>L:A380X_RMP_3_VHF_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 2 Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_2) -- 100 min 0 max s0 (>L:A380X_RMP_1_VHF_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_2)\n   l0 (>L:A380X_RMP_3_VHF_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 3 Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_3) -- 100 min 0 max s0 (>L:A380X_RMP_1_VHF_VOL_3)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_3)\n   l0 (>L:A380X_RMP_3_VHF_VOL_3) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF VOL 1 Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_HF_VOL_1) -- 100 min 0 max s0 (>L:A380X_RMP_1_HF_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_HF_VOL_1)\n   l0 (>L:A380X_RMP_3_HF_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF VOL 2 Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_HF_VOL_2) -- 100 min 0 max s0 (>L:A380X_RMP_1_HF_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_HF_VOL_2)\n   l0 (>L:A380X_RMP_3_HF_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL VOL 1 Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_TEL_VOL_1) -- 100 min 0 max s0 (>L:A380X_RMP_1_TEL_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_TEL_VOL_1)\n   l0 (>L:A380X_RMP_3_TEL_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL VOL 2 Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_TEL_VOL_2) -- 100 min 0 max s0 (>L:A380X_RMP_1_TEL_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_TEL_VOL_2)\n   l0 (>L:A380X_RMP_3_TEL_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 INT VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_INT_VOL) -- 100 min 0 max s0 (>L:A380X_RMP_1_INT_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_INT_VOL)\n   l0 (>L:A380X_RMP_3_INT_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 CAB VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_CAB_VOL) -- 100 min 0 max s0 (>L:A380X_RMP_1_CAB_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_CAB_VOL)\n   l0 (>L:A380X_RMP_3_CAB_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 PA VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_PA_VOL) -- 100 min 0 max s0 (>L:A380X_RMP_1_PA_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_PA_VOL)\n   l0 (>L:A380X_RMP_3_PA_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_NAV_VOL) -- 100 min 0 max s0 (>L:A380X_RMP_1_NAV_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_NAV_VOL)\n   l0 (>L:A380X_RMP_3_NAV_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DUMMY VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_DUMMY_VOL) -- 100 min 0 max s0 (>L:A380X_RMP_1_DUMMY_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_DUMMY_VOL)\n   l0 (>L:A380X_RMP_3_DUMMY_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV SEL Knob ADF 1": {
+		"method": "calcCode",
+		"code": "0 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV SEL Knob ADF 2": {
+		"method": "calcCode",
+		"code": "1 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV SEL Knob LS": {
+		"method": "calcCode",
+		"code": "2 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV SEL Knob VOR 1": {
+		"method": "calcCode",
+		"code": "3 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV SEL Knob VOR 2": {
+		"method": "calcCode",
+		"code": "4 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV SEL Knob MKR": {
+		"method": "calcCode",
+		"code": "5 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 1 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_RX_SWITCH_1) ! s0 (>L:A380X_RMP_1_VHF_VOL_RX_SWITCH_1) \n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_VHF_VOL_RX_SWITCH_1) \n  l0 (>L:A380X_RMP_3_VHF_VOL_RX_SWITCH_1) } "
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 2 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_RX_SWITCH_2) ! s0 (>L:A380X_RMP_1_VHF_VOL_RX_SWITCH_2) \n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_VHF_VOL_RX_SWITCH_2) \n  l0 (>L:A380X_RMP_3_VHF_VOL_RX_SWITCH_2) } "
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VHF VOL 3 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_RX_SWITCH_3) ! s0 (>L:A380X_RMP_1_VHF_VOL_RX_SWITCH_3) \n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_VHF_VOL_RX_SWITCH_3) \n  l0 (>L:A380X_RMP_3_VHF_VOL_RX_SWITCH_3) } "
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF CALL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_HF_CALL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF CALL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_HF_CALL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF VOL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_HF_VOL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 HF VOL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_HF_VOL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL CALL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_TEL_CALL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL CALL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_TEL_CALL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL VOL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_TEL_VOL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 TEL VOL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_TEL_VOL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 MECH CALL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_MECH_CALL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 INT VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_INT_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 CAB CALL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_CAB_CALL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 CAB VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_CAB_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 PA CALL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_PA_CALL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 PA VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_PA_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 VOICE Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_VOICE_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 NAV VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_NAV_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 BLANK2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_BLANK2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DUMMY VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DUMMY_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 DUMMY2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_DUMMY2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP1 STBY RAD NAV Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_1_STBY_RAD_NAV_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VHF_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_HF_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_TEL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 SQWK Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_SQWK_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 BLANK Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_BLANK_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 MENU Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_MENU_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_NAV_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 ADK 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_ADK_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 ADK 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_ADK_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 ADK 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_ADK_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 MSG CLR Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_MSG_CLR_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 LSK 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_LSK_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 LSK 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_LSK_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 LSK 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_LSK_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 RST Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_RST_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 UP Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_UP_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DOWN Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DOWN_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 0 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_0_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 4 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_4_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 5 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_5_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 6 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_6_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 7 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_7_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 8 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_8_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT 9 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_9_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT DOT Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_DOT_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DIGIT CLR Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DIGIT_CLR_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF CALL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VHF_CALL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF CALL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VHF_CALL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF CALL 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VHF_CALL_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VHF_VOL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VHF_VOL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 3 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VHF_VOL_3_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_VHF_VOL_1) ++ 100 min 0 max s0 (>L:A380X_RMP_2_VHF_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_1)\n   l0 (>L:A380X_RMP_3_VHF_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_VHF_VOL_2) ++ 100 min 0 max s0 (>L:A380X_RMP_2_VHF_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_2)\n   l0 (>L:A380X_RMP_3_VHF_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 3 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_VHF_VOL_3) ++ 100 min 0 max s0 (>L:A380X_RMP_2_VHF_VOL_3)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_VHF_VOL_3)\n   l0 (>L:A380X_RMP_3_VHF_VOL_3) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF VOL 1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_HF_VOL_1) ++ 100 min 0 max s0 (>L:A380X_RMP_2_HF_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_HF_VOL_1)\n   l0 (>L:A380X_RMP_3_HF_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF VOL 2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_HF_VOL_2) ++ 100 min 0 max s0 (>L:A380X_RMP_2_HF_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_HF_VOL_2)\n   l0 (>L:A380X_RMP_3_HF_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL VOL 1 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_TEL_VOL_1) ++ 100 min 0 max s0 (>L:A380X_RMP_2_TEL_VOL_1)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_TEL_VOL_1)\n   l0 (>L:A380X_RMP_3_TEL_VOL_1) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL VOL 2 Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_TEL_VOL_2) ++ 100 min 0 max s0 (>L:A380X_RMP_2_TEL_VOL_2)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_TEL_VOL_2)\n   l0 (>L:A380X_RMP_3_TEL_VOL_2) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 INT VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_INT_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_2_INT_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_INT_VOL)\n   l0 (>L:A380X_RMP_3_INT_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 CAB VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_CAB_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_2_CAB_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_CAB_VOL)\n   l0 (>L:A380X_RMP_3_CAB_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 PA VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_PA_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_2_PA_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_PA_VOL)\n   l0 (>L:A380X_RMP_3_PA_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_NAV_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_2_NAV_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_NAV_VOL)\n   l0 (>L:A380X_RMP_3_NAV_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DUMMY VOL Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_2_DUMMY_VOL) ++ 100 min 0 max s0 (>L:A380X_RMP_2_DUMMY_VOL)\n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n   l0 (>L:A380X_RMP_2_DUMMY_VOL)\n   l0 (>L:A380X_RMP_3_DUMMY_VOL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 1 Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 2 Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 3 Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF VOL 1 Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF VOL 2 Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL VOL 1 Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL VOL 2 Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 INT VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 CAB VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 PA VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DUMMY VOL Knob Dec": {
+		"method": "calcCode",
+		"code": "#REF!"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV SEL Knob ADF 1": {
+		"method": "calcCode",
+		"code": "0 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV SEL Knob ADF 2": {
+		"method": "calcCode",
+		"code": "1 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV SEL Knob LS": {
+		"method": "calcCode",
+		"code": "2 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV SEL Knob VOR 1": {
+		"method": "calcCode",
+		"code": "3 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV SEL Knob VOR 2": {
+		"method": "calcCode",
+		"code": "4 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV SEL Knob MKR": {
+		"method": "calcCode",
+		"code": "5 s0 (>L:A380X_RMP_1_NAV_SEL) \n(L:32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_NAV_SEL) \n  l0 (>L:A380X_RMP_3_NAV_SEL) }"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 1 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_RX_SWITCH_1) ! s0 (>L:A380X_RMP_1_VHF_VOL_RX_SWITCH_1) \n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_VHF_VOL_RX_SWITCH_1) \n  l0 (>L:A380X_RMP_3_VHF_VOL_RX_SWITCH_1) } "
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 2 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_RX_SWITCH_2) ! s0 (>L:A380X_RMP_1_VHF_VOL_RX_SWITCH_2) \n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_VHF_VOL_RX_SWITCH_2) \n  l0 (>L:A380X_RMP_3_VHF_VOL_RX_SWITCH_2) } "
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VHF VOL 3 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A380X_RMP_1_VHF_VOL_RX_SWITCH_3) ! s0 (>L:A380X_RMP_1_VHF_VOL_RX_SWITCH_3) \n(L:A32NX_FO_SYNC_EFIS_ENABLED, Bool) if{ \n  l0 (>L:A380X_RMP_2_VHF_VOL_RX_SWITCH_3) \n  l0 (>L:A380X_RMP_3_VHF_VOL_RX_SWITCH_3) } "
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF CALL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_HF_CALL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF CALL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_HF_CALL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF VOL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_HF_VOL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 HF VOL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_HF_VOL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL CALL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_TEL_CALL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL CALL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_TEL_CALL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL VOL 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_TEL_VOL_1_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 TEL VOL 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_TEL_VOL_2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 MECH CALL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_MECH_CALL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 INT VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_INT_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 CAB CALL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_CAB_CALL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 CAB VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_CAB_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 PA CALL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_PA_CALL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 PA VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_PA_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 VOICE Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_VOICE_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 NAV VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_NAV_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 BLANK2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_BLANK2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DUMMY VOL Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DUMMY_VOL_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 DUMMY2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_DUMMY2_PRESSED)"
+	},
+	"Fly By Wire.A380X.Radios.A380X RMP2 STBY RAD NAV Button Press": {
+		"method": "calcCode",
+		"code": "(>H:RMP_2_STBY_RAD_NAV_PRESSED)"
+	},
+	"Microsoft.Cessna 172.Flight Controls.Input (Potentiometer).Trim Wheel": {
+		"method": "calcCode",
+		"code": "@ 17 - 32.603 * 16383 - -16383 max 16383 min (>K:ELEVATOR_TRIM_SET)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU LOC Button Press": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_LOC_PUSH)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU AP 1 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_AP_1_PUSH)"
+	},
+	"Fly By Wire.A380X.Autopilot.Output.A380X FCU AP 1 Active Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_AUTOPILOT_1_ACTIVE,Bool)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU AP 2 Button Press": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_AP_2_PUSH)"
+	},
+	"Fly By Wire.A380X.Autopilot.Output.A380X FCU AP 2 Active Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_AUTOPILOT_2_ACTIVE,Bool)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU FD Button Press": {
+		"method": "calcCode",
+		"code": "1 (>K:TOGGLE_FLIGHT_DIRECTOR)\n2 (>K:TOGGLE_FLIGHT_DIRECTOR)"
+	},
+	"Fly By Wire.A380X.Autopilot.Output.A380X FCU FD Active Indicator": {
+		"method": "calcCode",
+		"code": "(A:AUTOPILOT FLIGHT DIRECTOR ACTIVE:1,Bool)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU ATHR Button Press": {
+		"method": "calcCode",
+		"code": "1 (>K:AUTO_THROTTLE_ARM)"
+	},
+	"Fly By Wire.A380X.Autopilot.Output.A380X FCU ATHR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_AUTOTHRUST_STATUS,Enum) 0 >"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU APPR Button Press": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_APPR_PUSH)"
+	},
+	"Fly By Wire.A380X.Autopilot.Output.A380X FCU APPR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_FCU_APPR_MODE_ACTIVE,Bool)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU VS Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A32NX_TRK_FPA_MODE_ACTIVE,Bool) 1 == if{ \n  (>H:A320_Neo_FCU_VS_INC_FPA)\n} els{ (>H:A320_Neo_FCU_VS_INC_VS) }\n(>H:A320_Neo_CDU_VS) "
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU VS Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A32NX_TRK_FPA_MODE_ACTIVE,Bool) 1 == if{ \n  (>H:A320_Neo_FCU_VS_DEC_FPA)\n} els{ (>H:A320_Neo_FCU_VS_DEC_VS) }\n(>H:A320_Neo_CDU_VS) "
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU VS Knob Push": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_VS_PUSH)\n(>H:A320_Neo_CDU_VS)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU VS Knob Pull": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_VS_PULL)\n(>H:A320_Neo_CDU_VS)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU Altitude Increment Toggle": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Autopilot_Altitude_Increment, number) 100 == if{ 1000 }\nels{ 100 } (>L:XMLVAR_Autopilot_Altitude_Increment, number) "
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L CSTR Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_CSTR_BUTTON_IS_ON,Bool) ! (>L:A380X_EFIS_L_CSTR_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L CSTR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_CSTR_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L WPT Button Press": {
+		"method": "calcCode",
+		"code": "0 1 (L:A380X_EFIS_L_ACTIVE_FILTER) 1 == ? (>L:A380X_EFIS_L_ACTIVE_FILTER)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L VORD Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A380X_EFIS_L_ACTIVE_FILTER) 2 == ? (>L:A380X_EFIS_L_ACTIVE_FILTER)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L VORD Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_FILTER) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L NDB Button Press": {
+		"method": "calcCode",
+		"code": "0 3 (L:A380X_EFIS_L_ACTIVE_FILTER) 3 == ? (>L:A380X_EFIS_L_ACTIVE_FILTER)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L ARPT Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ARPT_BUTTON_IS_ON,Bool) ! (>L:A380X_EFIS_L_ARPT_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L VOR1 Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A32NX_EFIS_L_NAVAID_1_MODE) 2 == ? (>L:A32NX_EFIS_L_NAVAID_1_MODE)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L WX Button Press": {
+		"method": "calcCode",
+		"code": "0 1 (L:A380X_EFIS_L_ACTIVE_OVERLAY) 1 == ? (>L:A380X_EFIS_L_ACTIVE_OVERLAY)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L TERR Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A380X_EFIS_L_ACTIVE_OVERLAY) 2 == ? (>L:A380X_EFIS_L_ACTIVE_OVERLAY)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L TRAF Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_TRAF_BUTTON_IS_ON,Bool) ! (L:A380X_EFIS_L_TRAF_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L VOR2 Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A32NX_EFIS_L_NAVAID_2_MODE) 2 == ? (>L:A32NX_EFIS_L_NAVAID_2_MODE)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L ADF Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_L_NAVAID_2_MODE) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L WPT Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_FILTER) 1 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L NDB Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_FILTER) 3 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L ARPT Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ARPT_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L VOR1 Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_L_NAVAID_1_MODE) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L WX Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_OVERLAY) 1 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L TERR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_OVERLAY) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L TRAF Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_TRAF_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L VOR2 Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_L_NAVAID_2_MODE) 2 =="
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X OVHD ELEC Battery ESS Button Auto": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_ELEC_BAT_ESS_PB_IS_AUTO) "
+	},
+	"FenixSim.A320.Lights.Output.FNX320 FCU INTEG BRIGHTNESS VALUE": {
+		"method": "calcCode",
+		"code": "(L:A_FCU_LIGHTING)"
+	},
+	"FenixSim.A320.Lights.Output.FNX320 FCU DISPLAY BRIGHTNESS VALUE": {
+		"method": "calcCode",
+		"code": "(L:A_FCU_LIGHTING_TEXT)"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380 OVHD ELEC Battery ESS Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_ELEC_BAT_ESS_PB_IS_AUTO) ! (>L:A32NX_OVHD_ELEC_BAT_ESS_PB_IS_AUTO)"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X OVHD ELEC Battery ESS Button Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_ELEC_BAT_ESS_PB_IS_AUTO) "
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R CSTR Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_R_CSTR_BUTTON_IS_ON,Bool) ! (>L:A380X_EFIS_R_CSTR_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R WPT Button Press": {
+		"method": "calcCode",
+		"code": "0 1 (L:A380X_EFIS_R_ACTIVE_FILTER) 1 == ? (>L:A380X_EFIS_R_ACTIVE_FILTER)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R VORD Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A380X_EFIS_R_ACTIVE_FILTER) 2 == ? (>L:A380X_EFIS_R_ACTIVE_FILTER)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R NDB Button Press": {
+		"method": "calcCode",
+		"code": "0 3 (L:A380X_EFIS_R_ACTIVE_FILTER) 3 == ? (>L:A380X_EFIS_R_ACTIVE_FILTER)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R ARPT Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_R_ARPT_BUTTON_IS_ON,Bool) ! (>L:A380X_EFIS_R_ARPT_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R VOR1 Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A32NX_EFIS_R_NAVAID_1_MODE) 2 == ? (>L:A32NX_EFIS_R_NAVAID_1_MODE)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R WX Button Press": {
+		"method": "calcCode",
+		"code": "0 1 (L:A380X_EFIS_R_ACTIVE_OVERLAY) 1 == ? (>L:A380X_EFIS_R_ACTIVE_OVERLAY)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R TERR Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A380X_EFIS_R_ACTIVE_OVERLAY) 2 == ? (>L:A380X_EFIS_R_ACTIVE_OVERLAY)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R TRAF Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_R_TRAF_BUTTON_IS_ON,Bool) ! (L:A380X_EFIS_R_TRAF_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS R VOR2 Button Press": {
+		"method": "calcCode",
+		"code": "0 2 (L:A32NX_EFIS_R_NAVAID_2_MODE) 2 == ? (>L:A32NX_EFIS_R_NAVAID_2_MODE)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R CSTR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_R_CSTR_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R WPT Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_FILTER) 1 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R VORD Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_FILTER) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R NDB Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_ACTIVE_FILTER) 3 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R ARPT Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_R_ARPT_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R VOR1 Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_R_NAVAID_1_MODE) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R WX Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_R_ACTIVE_OVERLAY) 1 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R TERR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_R_ACTIVE_OVERLAY) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R TRAF Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_TRAF_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS R VOR2 Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_R_NAVAID_2_MODE) 2 =="
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Mode Select Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_L_ND_MODE) 3 == (L:A32NX_EFIS_L_ND_RANGE) 7 < and if{\n  (L:A32NX_EFIS_L_ND_RANGE) 0 > if{\n	(L:A32NX_EFIS_L_ND_RANGE) ++ (>L:A32NX_EFIS_L_ND_RANGE) } }\n(L:A32NX_EFIS_L_ND_MODE) ++ 0 max 4 min s0 (>L:A32NX_EFIS_L_ND_MODE)\nl0 3 == (L:A32NX_EFIS_L_ND_RANGE) 1 > and if{ \n  (L:A32NX_EFIS_L_ND_RANGE) -- 1 max (>L:A32NX_EFIS_L_ND_RANGE) }\nl0 2 < if{ 4 (>L:A32NX_EFIS_L_OANS_RANGE) \n  (L:A32NX_EFIS_L_ND_RANGE) 0 == if{\n	1 (>L:A32NX_EFIS_L_ND_RANGE) } }"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Mode Select Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_L_ND_MODE) 3 == (L:A32NX_EFIS_L_ND_RANGE) 7 < and if{\n  (L:A32NX_EFIS_L_ND_RANGE) 0 > if{\n	(L:A32NX_EFIS_L_ND_RANGE) ++ (>L:A32NX_EFIS_L_ND_RANGE) } }\n(L:A32NX_EFIS_L_ND_MODE) -- 0 max 4 min s0 (>L:A32NX_EFIS_L_ND_MODE)\nl0 3 == (L:A32NX_EFIS_L_ND_RANGE) 1 > and if{ \n  (L:A32NX_EFIS_L_ND_RANGE) -- 1 max (>L:A32NX_EFIS_L_ND_RANGE) }\nl0 2 < if{ 4 (>L:A32NX_EFIS_L_OANS_RANGE) \n  (L:A32NX_EFIS_L_ND_RANGE) 0 == if{\n	1 (>L:A32NX_EFIS_L_ND_RANGE) } }"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Range Select Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_L_ND_MODE) 0 == (L:A32NX_EFIS_L_ND_MODE) 1 == or \n(L:A32NX_EFIS_L_OANS_RANGE) 4 != and if{ \n  4 (>L:A32NX_EFIS_L_OANS_RANGE) }\n(L:A32NX_EFIS_L_ND_RANGE) 7 < (L:A32NX_EFIS_L_OANS_RANGE) 4 == and if{ \n  (L:A32NX_EFIS_L_ND_RANGE) ++ (>L:A32NX_EFIS_L_ND_RANGE) }\n(L:A32NX_EFIS_L_OANS_RANGE) 4 < (L:A32NX_EFIS_L_ND_RANGE) 0 == and if{ \n  (L:A32NX_EFIS_L_OANS_RANGE) ++ (>L:A32NX_EFIS_L_OANS_RANGE) }\n(L:A32NX_EFIS_L_ND_RANGE) 0 > (L:A32NX_EFIS_L_OANS_RANGE) 4 != and if{ \n   4 (>L:A32NX_EFIS_L_OANS_RANGE) }\n(L:A32NX_EFIS_L_ND_MODE) 0 == (L:A32NX_EFIS_L_ND_MODE) 1 == or\n (L:A32NX_EFIS_L_ND_RANGE) 0 == and if{ \n  1 (> L:A32NX_EFIS_L_ND_RANGE) }"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Range Select Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A32NX_EFIS_L_ND_MODE) 0 == (L:A32NX_EFIS_L_ND_MODE) 1 == or \n(L:A32NX_EFIS_L_OANS_RANGE) 4 != and if{ \n  4 (>L:A32NX_EFIS_L_OANS_RANGE) }\n(L:A32NX_EFIS_L_ND_RANGE) 0 == (L:A32NX_EFIS_L_OANS_RANGE) 0 > and if{ \n  (L:A32NX_EFIS_L_OANS_RANGE) -- (>L:A32NX_EFIS_L_OANS_RANGE) }\n(L:A32NX_EFIS_L_ND_RANGE) 0 > if{ \n  (L:A32NX_EFIS_L_ND_RANGE) -- (>L:A32NX_EFIS_L_ND_RANGE) }\n(L:A32NX_EFIS_L_ND_RANGE) 0 > (L:A32NX_EFIS_L_OANS_RANGE) 4 != and if{ \n   4 (>L:A32NX_EFIS_L_OANS_RANGE) }\n(L:A32NX_EFIS_L_ND_MODE) 0 == (L:A32NX_EFIS_L_ND_MODE) 1 == or\n (L:A32NX_EFIS_L_ND_RANGE) 0 == and if{ \n  1 (> L:A32NX_EFIS_L_ND_RANGE) }"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Baro Knob Pull": {
+		"method": "calcCode",
+		"code": "3 (>L:XMLVAR_Baro1_Mode)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Baro Knob Push": {
+		"method": "calcCode",
+		"code": "1 (>L:XMLVAR_Baro1_Mode)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Baro Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro1_Mode) 2 != (L:XMLVAR_Baro1_Mode) 3 != and if{\n  (L:XMLVAR_Baro_Selector_HPA_1) if{\n	1 (A:KOHLSMAN SETTING MB:1, mbars) -- 16 * (>K:2:KOHLSMAN_SET) }\n  els{ 1 (>K:KOHLSMAN_DEC) }\nels{ (>H:A380X_FCU_BARO_PRESEL_DEC) }"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Baro Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro1_Mode) 2 != (L:XMLVAR_Baro1_Mode) 3 != and if{\n  (L:XMLVAR_Baro_Selector_HPA_1) if{\n	1 (A:KOHLSMAN SETTING MB:1, mbars) ++ 16 * (>K:2:KOHLSMAN_SET) }\n  els{ 1 (>K:KOHLSMAN_INC) }\nels{ (>H:A380X_FCU_BARO_PRESEL_INC) }"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L Baro Selector HPA Toggle": {
+		"method": "calcCode",
+		"code": "(L:XMLVAR_Baro_Selector_HPA_1) ! (>L:XMLVAR_Baro_Selector_HPA_1)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L TAXI Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ELEC_DC_ESS_BUS_IS_POWERED, Bool) if{ }\n"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L LS Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_LS_BUTTON_IS_ON,Bool) ! (>L:A380X_EFIS_L_LS_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L LS Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_LS_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Input.A380X EFIS L VV Button Press": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_VV_BUTTON_IS_ON,Bool) ! (L:A380X_EFIS_L_VV_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.EFIS.Output.A380X EFIS L VV Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A380X_EFIS_L_VV_BUTTON_IS_ON,Bool)"
+	},
+	"Fly By Wire.A380X.Miscellaneous.Input.A380X EFIS L CHRONO Button Press": {
+		"method": "calcCode",
+		"code": "0 (>H:A32NX_EFIS_L_CHRONO_PUSHED)"
+	},
+	"Fly By Wire.A380X.Warning.Input.A380 MASTER WARNING L Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_AUTOPILOT_MASTERWAN_L)"
+	},
+	"Fly By Wire.A380X.Warning.Input.A380 MASTER WARNING L Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:PUSH_AUTOPILOT_MASTERWAN_L)"
+	},
+	"Fly By Wire.A380X.Warning.Input.A380X MASTER CAUTION Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:PUSH_AUTOPILOT_MASTERCAUT_L)"
+	},
+	"Fly By Wire.A380X.Warning.Input.A380X MASTER CAUTION Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:PUSH_AUTOPILOT_MASTERCAUT_L)"
+	},
+	"Fly By Wire.A380X.Warning.Input.A380X DCDU ATC MSG ACK": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_DCDU_ATC_MSG_ACK)\n(L:XMLVAR_Momentary_PUSH_GLARESHIELD_CS_ATCMSG_Pressed) ! (>L:XMLVAR_Momentary_PUSH_GLARESHIELD_CS_ATCMSG_Pressed)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM ABN PROC Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_ABNPROC)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM ABN PROC Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_ABNPROC)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM CALL FOR CHECKLIST Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CL)"
+	},
+	"Fly By Wire.A380X.Avionics.Input.A380X ECAM CALL FOR CHECKLIST Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_CL)"
+	},
+	"PMDG.B737-700.Autopilot.Output.VS diisplay": {
+		"method": "calcCode",
+		"code": "(L:ngx_V/Swindow, number)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Strobe Lights On": {
+		"method": "calcCode",
+		"code": "0 (>L:LIGHTING_STROBE_0)\n0 (>L:STROBE_0_Auto) 1 0 r (>K:2:STROBES_SET)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Strobe Lights Auto": {
+		"method": "calcCode",
+		"code": "1 (>L:LIGHTING_STROBE_0)\n1 (>L:STROBE_0_Auto) 1 0 r (>K:2:STROBES_SET)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Strobe Lights Off": {
+		"method": "calcCode",
+		"code": "2 (>L:LIGHTING_STROBE_0)\n0 (>L:STROBE_0_Auto) 0 0 r (>K:2:STROBES_SET)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Nav Lights On": {
+		"method": "calcCode",
+		"code": "1 (>L:LIGHTING_NAV_0)\n0 1 (>K:2:NAV_LIGHTS_SET) 0 1 (>K:2:LOGO_LIGHTS_SET)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Nav Lights Off": {
+		"method": "calcCode",
+		"code": "0 (>L:LIGHTING_NAV_0)\n0 0 (>K:2:NAV_LIGHTS_SET) 0 0 (>K:2:LOGO_LIGHTS_SET)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Wing Lights On": {
+		"method": "calcCode",
+		"code": "1 s0 0 l0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_0)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Wing Lights Off": {
+		"method": "calcCode",
+		"code": "0 s0 0 l0 (>K:2:WING_LIGHTS_SET) l0 (>L:LIGHTING_WING_0)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Rwy Turn Off & Camera Lights On": {
+		"method": "calcCode",
+		"code": "1 (>L:LIGHTING_TAXI_2) \n2 1 (>K:2:TAXI_LIGHTS_SET) 3 1 (>K:2:TAXI_LIGHTS_SET)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Rwy Turn Off & Camera Lights Off": {
+		"method": "calcCode",
+		"code": "0 (>L:LIGHTING_TAXI_2) \n2 0 (>K:2:TAXI_LIGHTS_SET) 3 0 (>K:2:TAXI_LIGHTS_SET)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380 OVHD Landing Lights On": {
+		"method": "calcCode",
+		"code": "1 s0 2 l0 (>K:2:LANDING_LIGHTS_SET)\nl0 (>L:LIGHTING_LANDING_2)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380 OVHD Landing Lights Off": {
+		"method": "calcCode",
+		"code": "0 s0 2 l0 (>K:2:LANDING_LIGHTS_SET)\nl0 (>L:LIGHTING_LANDING_2)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Nose Lights TO": {
+		"method": "calcCode",
+		"code": "0 (>L:LIGHTING_LANDING_1) \n1 1 (>K:2:LANDING_LIGHTS_SET) \n1 1 (>K:2:TAXI_LIGHTS_SET) "
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Nose Lights Taxi": {
+		"method": "calcCode",
+		"code": "1 (>L:LIGHTING_LANDING_1) \n1 0 (>K:2:LANDING_LIGHTS_SET) \n1 1 (>K:2:TAXI_LIGHTS_SET) "
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Nose Lights Off": {
+		"method": "calcCode",
+		"code": "2 (>L:LIGHTING_LANDING_1) \n1 0 (>K:2:LANDING_LIGHTS_SET) \n1 0 (>K:2:TAXI_LIGHTS_SET) "
+	},
+	"Fly By Wire.A380X.Lights.Input.A380 OVHD Ann Lt TEST": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_INTLT_ANN)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380 OVHD Ann Lt BRT": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_INTLT_ANN)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380 OVHD Ann Lt DIM": {
+		"method": "calcCode",
+		"code": "2 (>L:A32NX_OVHD_INTLT_ANN)"
+	},
+	"Microsoft.ATR 42-600, ATR 72-600.Lights.Output.MSATR ANNLT Switch Status": {
+		"method": "calcCode",
+		"code": "(L:MSATR_ITLS_ANNLT)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Emer Exit Lt On": {
+		"method": "calcCode",
+		"code": "0 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Emer Exit Lt Arm": {
+		"method": "calcCode",
+		"code": "1 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position)"
+	},
+	"Fly By Wire.A380X.Lights.Input.A380X OVHD Emer Exit Lt Off": {
+		"method": "calcCode",
+		"code": "2 (>L:XMLVAR_SWITCH_OVHD_INTLT_EMEREXIT_Position)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM TO CONFIG Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_TOCONFIG)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CL)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM ABN PROC Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_ABNPROC)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM EMER CANC Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_EMERCANC)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CLR Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CLR)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM RCL Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_RCL)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM MORE Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_MORE)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CLR2 Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_BTN_CLR2)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM TO CONFIG Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_TOCONFIG)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CL Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_CL)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM ABN PROC Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_ABNPROC)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM EMER CANC Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_EMERCANC)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CLR Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_CLR)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM RCL LAST Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_RCL)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM MORE Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_MORE)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CLR2 Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_BTN_CLR2)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM ENG Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 0 != if{ 0 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM BLEED Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 1 != if{ 1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM PRESS Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 2 != if{ 2 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM EL/AC Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 3 != if{ 3 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM FUEL Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 4 != if{ 4 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM HYD Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 5 != if{ 5 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM APU Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 7 != if{ 7 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM COND Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 8 != if{ 8 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM DOOR Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 9 != if{ 9 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM EL/DC Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 10 != if{ 10 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM WHEEL Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 11 != if{ 11 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM FCTL Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 12 != if{ 12 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM VIDEO Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 13 != if{ 13 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CB Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 14 != if{ 14 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM STS Button Press": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 15 != if{ 15 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) } \nels{ -1 (>L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) }\n(>H:A32NX_SD_PAGE_CHANGED)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM ENG Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 0 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM BLEED Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 1 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM PRESS Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 2 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM EL/AC Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 3 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM FUEL Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 4 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM HYD Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 5 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM APU Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 7 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM COND Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 8 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM DOOR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 9 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM EL/DC Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 10 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM WHEEL Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 11 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM F CTL Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 12 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM VIDEO Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 13 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CB Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 14 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM STS Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_ECAM_SD_CURRENT_PAGE_INDEX) 15 =="
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM TO CONFIG Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_TOCONFIG)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CL Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_CL)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM ABN PROC Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_ABNPROC)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM EMER CANC Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_EMERCANC)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CLR Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_CLR)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM RCL Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_RCL)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM MORE Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_MORE)"
+	},
+	"Fly By Wire.A380X.Avionics.A380X ECAM CLR2 Button Indicator": {
+		"method": "calcCode",
+		"code": "(L:A32NX_BTN_CLR2)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot HDG Increment": {
+		"method": "calcCode",
+		"code": "(L:MCP_HDG_sel) ++ (>L:MCP_HDG_sel)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot HDG Decrement": {
+		"method": "calcCode",
+		"code": "(L:MCP_HDG_sel) -- (>L:MCP_HDG_sel)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Left Course Sel Increment": {
+		"method": "calcCode",
+		"code": "(L:MCP_CRS1_sel) ++ (>L:MCP_CRS1_sel)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Left Course Sel Decrement": {
+		"method": "calcCode",
+		"code": "(L:MCP_CRS1_sel) -- (>L:MCP_CRS1_sel)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Right Course Increment": {
+		"method": "calcCode",
+		"code": "(L:MCP_CRS2_sel)++(>L:MCP_CRS2_sel)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Right Course Decrement": {
+		"method": "calcCode",
+		"code": "(L:MCP_CRS2_sel)--(>L:MCP_CRS2_sel)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot Altitude Sel Increment": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_sel_knob)++(>L:MCP_Alt_sel_knob)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot Altitude Sel Decrement": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_sel_knob)--(>L:MCP_Alt_sel_knob)"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380 OVHD ELEC Battery APU Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_ELEC_BAT_APU_PB_IS_AUTO) ! (>L:A32NX_OVHD_ELEC_BAT_APU_PB_IS_AUTO)\n"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X OVHD ELEC Battery APU Button Auto": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_ELEC_BAT_APU_PB_IS_AUTO) \n"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X OVHD ELEC Battery APU Button Off": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_ELEC_BAT_APU_PB_IS_AUTO) "
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot Alt Sel Increment": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_sel_knob) ++ (>L:MCP_Alt_sel_knob)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot Alt Sel Decrement": {
+		"method": "calcCode",
+		"code": "(L:MCP_Alt_sel_knob) -- (>L:MCP_Alt_sel_knob)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.LNAV Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_LNAV)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.VNAV Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_VNAV)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Auto Pilot 1": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_NAV1)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot 2": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_NAV2)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot FLCH Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_LvlChg)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot VS Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_VS)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot ALT HOLD Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_ALT)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot VOR LOC Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_VL)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot APP Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_APP)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot HDG Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_HDG)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot THRUST Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_Thrust)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Autopilot C/O Button": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_Mode_CO)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Left Flight Director Toggle Press": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_FD_L_switch)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Left Flight Director Toggle Release": {
+		"method": "calcCode",
+		"code": "0 (>L:MCP_FD_L_switch)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input. Right Flight Director Toggle Press": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_FD_R_switch)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Right Flight Director Toggle Release": {
+		"method": "calcCode",
+		"code": "0 (>L:MCP_FD_R_switch)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Auto Throttle Toggle Press": {
+		"method": "calcCode",
+		"code": "1 (>L:MCP_AT_switch)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.Auto Throttle Toggle Release": {
+		"method": "calcCode",
+		"code": "0 (>L:MCP_AT_switch)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380 FCU HDG Knob Dec": {
+		"method": "calcCode",
+		"code": "(L:A32NX_TRK_FPA_MODE_ACTIVE, bool) 1 == if{\n	 (>H:A320_Neo_FCU_HDG_DEC_TRACK)\n} els{\n	(>H:A320_Neo_FCU_HDG_DEC_HEADING)\n}"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380 FCU HDG Knob Inc": {
+		"method": "calcCode",
+		"code": "(L:A32NX_TRK_FPA_MODE_ACTIVE, bool) 1 == if{\n	 (>H:A320_Neo_FCU_HDG_INC_TRACK)\n} els{\n	(>H:A320_Neo_FCU_HDG_INC_HEADING)\n}"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380 FCU ALT Knob Inc": {
+		"method": "calcCode",
+		"code": "3 (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) + (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) % - 49000 min (>K:2:AP_ALT_VAR_SET_ENGLISH)\n(>H:AP_KNOB_Up)\n(>H:A320_Neo_CDU_AP_INC_ALT)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380 FCU ALT Knob Dec": {
+		"method": "calcCode",
+		"code": "3 (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) - (L:XMLVAR_Autopilot_Altitude_Increment) (A:AUTOPILOT ALTITUDE LOCK VAR:3, feet) (L:XMLVAR_Autopilot_Altitude_Increment) % - (L:XMLVAR_Autopilot_Altitude_Increment) % + 100 max (>K:2:AP_ALT_VAR_SET_ENGLISH)\n(>H:AP_KNOB_Down)\n(>H:A320_Neo_CDU_AP_DEC_ALT)\n"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380 FCU SPEED Knob Inc": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_SPEED_INC)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380 FCU SPEED Knob Dec": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_SPEED_DEC)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS A Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_A)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS B Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_B)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS C Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_C)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS D Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_D)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS E Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_E)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS F Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_F)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS G Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_G)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS H Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_H)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS I Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_I)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS J Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_J)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS K Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_K)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS L Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_L)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS M Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_M)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS N Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_N)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS O Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_O)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS P Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_P)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Q Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Q)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS R Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_R)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS S Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_S)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS T Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_T)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS U Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_U)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS W Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_W)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS X Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_X)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Y Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Y)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Z Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Z)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS SP Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Sp)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS DEL Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Del)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ FMS SLASH Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Div)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS CLR Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Clr)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ FMS PLUS MINUS Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_PlusMinus)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT  FMS DOT Key": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Dot)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT  FMS Key 1": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_1)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 2": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_2)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 3": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_3)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 4": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_4)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 5": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_5)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 6": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_6)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 7": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_7)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 8": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_8)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key 9": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_9)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS Key ZERO": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_0)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS INIT REF": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_InitRef)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS RTE": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Rte)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS DEP ARR": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_DepArr)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS VNAV": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Vnav)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS FIX": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Fix)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LEGS": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Legs)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS HOLD": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_hold)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS PROG": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Prog)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS EXEC BUTTON": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Exec)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS MENU": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_menu)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS NAV RAD": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_NavRad)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS PREV PAGE": {
+		"method": "calcCode",
+		"code": "(>L:GNLU910_L_FMS_PrvNxt) (>L:PED_FWD_L_FMS_Prev)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS NEXT PAGE": {
+		"method": "calcCode",
+		"code": "2  (>L:GNLU910_L_FMS_PrvNxt) (>L:PED_FWD_L_FMS_Next)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 1L": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_1L)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 2L": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_2L)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 3L": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_3L)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 4L": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_4L)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 5L": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_5L)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 6L": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_6L)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 1R": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_1R)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK R2": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_2R)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK R3": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_3R)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 4R": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_4R)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK R5": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_5R)"
+	},
+	"Just Flight.Avro RJ.FMS.Input.JF RJ LEFT FMS LSK 6R": {
+		"method": "calcCode",
+		"code": "1 (>L:GNLU910_L_FMS_Lsk_6R)"
+	},
+	"Just Flight.Avro RJ.FMS.Output.JF RJ LEFT FMS EXEC ANNOUNCIATOR": {
+		"method": "calcCode",
+		"code": "(L:JF_RJ_FMS_L_power, bool) (L:GNLU910_L_FMS_Exec_light, bool)"
+	},
+	"Just Flight.Avro RJ.FMS.Output.JF RJ LEFT FMS MSG ANNOUNCIATOR": {
+		"method": "calcCode",
+		"code": "(L:JF_RJ_FMS_L_power, bool) (L:GNLU910_L_FMS_Msg, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT VNAV INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_VNAV_i, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT LNAV INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_LNAV_iL, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT VOR LOC INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_VL_il, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT HDG INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_HDG_iL, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT APP INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_APP_il, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT AP1 INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_NAV1_il1, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT LVL CHG INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_LvlChg_il, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT VS INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_VS_iL, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT ALT HOLD INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_ALT_iL, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT THRUST INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_Thrust_il, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT A/T LED INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_AT_il1, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT FD1 MA INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_MA_left_il1, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.JF RJ AUTOPILOT FD2 MA INDICATOR": {
+		"method": "calcCode",
+		"code": "(L:MCP_Mode_MA_right_il1, bool)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Input.IAS/MACH SELECTOR - INCREASE": {
+		"method": "calcCode",
+		"code": "(L:MCP_Speed_sel_inc) -- (>L:MCP_Speed_sel_inc)"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X OVHD ELEC BUS TIE Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_ELEC_BUS_TIE_PB_IS_AUTO,Bool) ! (>L:A32NX_OVHD_ELEC_BUS_TIE_PB_IS_AUTO,Bool)"
+	},
+	"Fly By Wire.A380X.Anti Ice.Input.A380X_OH_ANTIICE_ENG1_TOG": {
+		"method": "calcCode",
+		"code": "(>K:ANTI_ICE_TOGGLE_ENG1) (L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG1_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG1_Pressed)"
+	},
+	"Fly By Wire.A380X.Anti Ice.Input.A380X_OH_ANTIICE_ENG2_TOG": {
+		"method": "calcCode",
+		"code": "(>K:ANTI_ICE_TOGGLE_ENG2) (L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG2_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG2_Pressed)"
+	},
+	"Fly By Wire.A380X.Anti Ice.Input.A380X_OH_ANTIICE_ENG3_TOG": {
+		"method": "calcCode",
+		"code": "(>K:ANTI_ICE_TOGGLE_ENG3) (L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG3_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG3_Pressed)"
+	},
+	"Fly By Wire.A380X.Anti Ice.Input.A380X_OH_ANTIICE_ENG4_TOG": {
+		"method": "calcCode",
+		"code": "#(>K:ANTI_ICE_TOGGLE_ENG4) (L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG4_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_ENG4_Pressed)"
+	},
+	"Fly By Wire.A380X.Anti Ice.Input.A380X_OVHD_ANTIICE_WING_TOGGLE": {
+		"method": "calcCode",
+		"code": "(>K:TOGGLE_STRUCTURAL_DEICE) (L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_WING_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_ANTIICE_WING_Pressed) "
+	},
+	"Fly By Wire.A380X.Anti Ice.Input.A380X_OVHD_PROBE_WINDOW_HEAT_TOGGLE": {
+		"method": "calcCode",
+		"code": "(L:A32NX_MAN_PITOT_HEAT,Bool) ! (>L:A32NX_MAN_PITOT_HEAT) (L:XMLVAR_Momentary_PUSH_OVHD_PROBESWINDOW_Pressed) ! (>L:XMLVAR_Momentary_PUSH_OVHD_PROBESWINDOW_Pressed) "
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X_OH_ELEC_EXTPWR_TOG1": {
+		"method": "calcCode",
+		"code": "(A:EXTERNAL POWER AVAILABLE:1, Bool) (A:EXTERNAL POWER ON:1, Bool) ! and if{ 1 (>K:TOGGLE_EXTERNAL_POWER) } els{ (A:EXTERNAL POWER ON:1, Bool) if{ 1 (>K:TOGGLE_EXTERNAL_POWER) } }"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X_OH_ELEC_EXTPWR_TOG2": {
+		"method": "calcCode",
+		"code": "(A:EXTERNAL POWER AVAILABLE:2, Bool) (A:EXTERNAL POWER ON:2, Bool) ! and if{ 2 (>K:TOGGLE_EXTERNAL_POWER) } els{ (A:EXTERNAL POWER ON:2, Bool) if{ 2 (>K:TOGGLE_EXTERNAL_POWER) } }"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X_OH_ELEC_EXTPWR_TOG3": {
+		"method": "calcCode",
+		"code": "(A:EXTERNAL POWER AVAILABLE:3, Bool) (A:EXTERNAL POWER ON:3, Bool) ! and if{ 3 (>K:TOGGLE_EXTERNAL_POWER) } els{ (A:EXTERNAL POWER ON:3, Bool) if{ 3 (>K:TOGGLE_EXTERNAL_POWER) } }"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380X_OH_ELEC_EXTPWR_TOG4": {
+		"method": "calcCode",
+		"code": "(A:EXTERNAL POWER AVAILABLE:4, Bool) (A:EXTERNAL POWER ON:4, Bool) ! and if{ 4 (>K:TOGGLE_EXTERNAL_POWER) } els{ (A:EXTERNAL POWER ON:4, Bool) if{ 4 (>K:TOGGLE_EXTERNAL_POWER) } }"
+	},
+	"DC Designs.Concorde.Autopilot.Output.altimeter": {
+		"method": "calcCode",
+		"code": "(L:ALT_AP_VALUE, Feet)"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380 OVHD ELEC Battery 1 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO) ! (>L:A32NX_OVHD_ELEC_BAT_1_PB_IS_AUTO)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Turn Off L off": {
+		"method": "calcCode",
+		"code": "22 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Turn Off L on": {
+		"method": "calcCode",
+		"code": "23 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Turn Off R off": {
+		"method": "calcCode",
+		"code": "24 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights (exterior).Input.Turn Off R on": {
+		"method": "calcCode",
+		"code": "25 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Safety.Input.No Smoking off": {
+		"method": "calcCode",
+		"code": "15 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Safety.Input.No Smoking on": {
+		"method": "calcCode",
+		"code": "14 (>L:VC_Miscellaneous_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Lights.Input.Emergency Exit Light on": {
+		"method": "calcCode",
+		"code": "12 (>L:VC_Miscellaneous_trigger_VAL)"
+	},
+	"iFly.737-Max8.Lights.Input.Emergency Exit Light off": {
+		"method": "calcCode",
+		"code": "13 (>L:VC_Miscellaneous_trigger_VAL)"
+	},
+	"Fly By Wire.A320-Dev.Brakes.Input.A32NX PED PARK BRAKE ON": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_PARK_BRAKE_LEVER_POS)"
+	},
+	"Fly By Wire.A320-Dev.Brakes.Input.A32NX PED PARK BRAKE OFF": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_PARK_BRAKE_LEVER_POS)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X AUTOBRAKES RTO ARM Button Press": {
+		"method": "calcCode",
+		"code": "1 (>L:A32NX_OVHD_AUTOBRK_RTO_ARM_IS_PRESSED)"
+	},
+	"Fly By Wire.A380X.Brakes.Input.A380X AUTOBRAKES RTO ARM Button Release": {
+		"method": "calcCode",
+		"code": "0 (>L:A32NX_OVHD_AUTOBRK_RTO_ARM_IS_PRESSED)"
+	},
+	"Microsoft.Generic.Fuel.Input.FUEL PUMP ON": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG FUEL PUMP SWITCH:1,Bool) ! if{ (>K:TOGGLE_ELECT_FUEL_PUMP) }"
+	},
+	"Microsoft.Generic.Fuel.Input.FUEL PUMP OFF": {
+		"method": "calcCode",
+		"code": "(A:GENERAL ENG FUEL PUMP SWITCH:1,Bool) if{ (>K:TOGGLE_ELECT_FUEL_PUMP) }"
+	},
+	"iFly.737-Max8.Engine.Input.Engine Ignition Left": {
+		"method": "calcCode",
+		"code": "0 (>L:VC_Ignition_Select_SW_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine Ignition Both": {
+		"method": "calcCode",
+		"code": "10 (>L:VC_Ignition_Select_SW_VAL,number)"
+	},
+	"iFly.737-Max8.Engine.Input.Engine Ignition Right": {
+		"method": "calcCode",
+		"code": "20 (>L:VC_Ignition_Select_SW_VAL,number)"
+	},
+	"Fly By Wire.A380X.Electrical.Input.A380 OVHD ELEC Battery 2 Button Toggle": {
+		"method": "calcCode",
+		"code": "(L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO) ! (>L:A32NX_OVHD_ELEC_BAT_2_PB_IS_AUTO)"
+	},
+	"FlightFX.Visionjet SF50.Engine.Input.SF50 Engine Master On": {
+		"method": "calcCode",
+		"code": "1 (>L:SF50_knob_stop_run)"
+	},
+	"FlightFX.Visionjet SF50.Engine.Input.SF50 Engine Master Off": {
+		"method": "calcCode",
+		"code": "0 (>L:SF50_knob_stop_run)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.AP IAS Value": {
+		"method": "calcCode",
+		"code": "(L:JF_RJ_AP_IAS,number)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.AP Mach Value": {
+		"method": "calcCode",
+		"code": "(L:JF_RJ_AP_MACH,number)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.AP HDG Value": {
+		"method": "calcCode",
+		"code": "(L:JF_RJ_AP_HDG,number)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.AP ALT Value": {
+		"method": "calcCode",
+		"code": "(L:JF_RJ_AP_Alt,number)"
+	},
+	"Just Flight.Avro RJ.Autopilot.Output.AP V/S Value": {
+		"method": "calcCode",
+		"code": "(L:JF_RJ_AP_VS,number)"
+	},
+	"Microsoft.Generic.Lights (interior).Input (Potentiometer).GLARESHIELD BRIGHTNESS PCT": {
+		"method": "calcCode",
+		"code": "@ 10.24 / 1 (>K:2:GLARESHIELD_LIGHTS_POWER_SETTING_SET)"
+	},
+	"Microsoft.Generic.Lights (interior).Input (Potentiometer).PEDESTAL LIGHTING PERCENT": {
+		"method": "calcCode",
+		"code": "@ 10.24 / 1 (>K:2:PEDESTRAL_LIGHTS_POWER_SETTING_SET)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Engine 1 Anti Ice ON": {
+		"method": "calcCode",
+		"code": "22 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Engine 1 Anti Ice OFF": {
+		"method": "calcCode",
+		"code": "21 (>L:VC_Anti_Ice_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Anti Ice.Input.Engine 2 Anti Ice ON": {
+		"method": "calcCode",
+		"code": "24 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Engine 2 Anti Ice OFF": {
+		"method": "calcCode",
+		"code": "23 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Probe Heat A ON": {
+		"method": "calcCode",
+		"code": "16 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Probe Heat A OFF": {
+		"method": "calcCode",
+		"code": "15 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Probe Heat B ON": {
+		"method": "calcCode",
+		"code": "18 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Probe Heat B OFF": {
+		"method": "calcCode",
+		"code": "17 (>L:VC_Anti_Ice_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 1 ON": {
+		"method": "calcCode",
+		"code": "8 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 1 OFF": {
+		"method": "calcCode",
+		"code": "7 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 2 ON": {
+		"method": "calcCode",
+		"code": "10 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 2 OFF": {
+		"method": "calcCode",
+		"code": "9 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 3 ON": {
+		"method": "calcCode",
+		"code": "12 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 3 OFF": {
+		"method": "calcCode",
+		"code": "11 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 4 ON": {
+		"method": "calcCode",
+		"code": "14 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Window Heat 4 OFF": {
+		"method": "calcCode",
+		"code": "13 (>L:VC_Anti_Ice_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Anti Ice.Input.Wing Anti Ice ON": {
+		"method": "calcCode",
+		"code": "20 (>L:VC_Anti_Ice_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Anti Ice.Input.Wing Anti Ice OFF": {
+		"method": "calcCode",
+		"code": "19 (>L:VC_Anti_Ice_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Hydraulics.Input.ENG 1 Pump ON": {
+		"method": "calcCode",
+		"code": "1 (>L:VC_Hydraulics_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Hydraulics.Input.ENG 1 Pump OFF": {
+		"method": "calcCode",
+		"code": "2 (>L:VC_Hydraulics_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Hydraulics.Input.ELEC 2 Pump ON": {
+		"method": "calcCode",
+		"code": "7 (>L:VC_Hydraulics_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Hydraulics.Input.ELEC 2 Pump OFF": {
+		"method": "calcCode",
+		"code": "8 (>L:VC_Hydraulics_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Hydraulics.Input.ELEC 1 Pump ON": {
+		"method": "calcCode",
+		"code": "5 (>L:VC_Hydraulics_trigger_VAL, Number) "
+	},
+	"iFly.737-Max8.Hydraulics.Input.ELEC 1 Pump OFF": {
+		"method": "calcCode",
+		"code": "6 (>L:VC_Hydraulics_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Hydraulics.Input.ENG 2 Pump ON": {
+		"method": "calcCode",
+		"code": "3 (>L:VC_Hydraulics_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Hydraulics.Input.ENG 2 Pump OFF": {
+		"method": "calcCode",
+		"code": "4 (>L:VC_Hydraulics_trigger_VAL, Number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.CWS A PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_CWS_A_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.CWS B PUSH BUTTON LIGHT": {
+		"method": "calcCode",
+		"code": "(L:VC_CWS_B_SW_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.FD1 LED": {
+		"method": "calcCode",
+		"code": "(L:VC_MA_1_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Output.FD2 LED": {
+		"method": "calcCode",
+		"code": "(L:VC_MA_2_LIGHT_VAL,number)"
+	},
+	"iFly.737-Max8.EFIS.Input.MINS RADIO": {
+		"method": "calcCode",
+		"code": "8 (>L:VC_Instruments_Trigger_VAL)\n7 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.MINS BARO": {
+		"method": "calcCode",
+		"code": "7 (>L:VC_Instruments_Trigger_VAL)\n8 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.BARO INHG": {
+		"method": "calcCode",
+		"code": "28 (>L:VC_Instruments_Trigger_VAL)\n27 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.BARO HPA": {
+		"method": "calcCode",
+		"code": "27 (>L:VC_Instruments_Trigger_VAL)\n28 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.Autopilot.Input.FO FLIGHT DIRECTOR ON": {
+		"method": "calcCode",
+		"code": "44 (>L:VC_Automatic_Flight_trigger_VAL,number)\n"
+	},
+	"iFly.737-Max8.Autopilot.Input.FO FLIGHT DIRECTOR OFF": {
+		"method": "calcCode",
+		"code": "43 (>L:VC_Automatic_Flight_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.Autopilot.Input.A/T ARM SWITCH OFF": {
+		"method": "calcCode",
+		"code": "2 (>L:VC_Automatic_Flight_trigger_VAL,number)"
+	},
+	"iFly.737-Max8.EFIS.Input.BARO STD": {
+		"method": "calcCode",
+		"code": "35 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP CWS A": {
+		"method": "calcCode",
+		"code": "37 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.MCP CWS B": {
+		"method": "calcCode",
+		"code": "39 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.EFIS.Input.MINS RST": {
+		"method": "calcCode",
+		"code": "15 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.MINS DEC": {
+		"method": "calcCode",
+		"code": "11 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.MINS INC": {
+		"method": "calcCode",
+		"code": "12 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.BARO DEC": {
+		"method": "calcCode",
+		"code": "32 (>L:VC_Instruments_Trigger_VAL)\n31 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.BARO INC": {
+		"method": "calcCode",
+		"code": "31 (>L:VC_Instruments_Trigger_VAL)\n32 (>L:VC_Instruments_Trigger_VAL)"
+	},
+	"iFly.737-Max8.EFIS.Input.RANGE DEC": {
+		"method": "calcCode",
+		"code": "51 (>L:VC_Instruments_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.EFIS.Input.RANGE INC": {
+		"method": "calcCode",
+		"code": "52 (>L:VC_Instruments_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.EFIS.Input.MAP MODE DOWN": {
+		"method": "calcCode",
+		"code": "43 (>L:VC_Instruments_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.EFIS.Input.MAP MODE UP": {
+		"method": "calcCode",
+		"code": "44 (>L:VC_Instruments_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Autopilot.Input.CO": {
+		"method": "calcCode",
+		"code": "19 (>L:VC_Automatic_Flight_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.Miscellaneous.Input.FLUSH FORWARD LAVATORY": {
+		"method": "calcCode",
+		"code": "225 (>L:Animation_Trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.EFIS.Input.MAP CTR": {
+		"method": "calcCode",
+		"code": "47 (>L:VC_Instruments_trigger_VAL, 0)"
+	},
+	"iFly.737-Max8.EFIS.Input.TFC": {
+		"method": "calcCode",
+		"code": "55 (>L:VC_Instruments_trigger_VAL, 0)"
+	},
+	"Fly By Wire.A380X.Autopilot.Input.A380X FCU TRUEMAG Push": {
+		"method": "calcCode",
+		"code": "(>H:A320_Neo_FCU_TRUEMAG_PUSH)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Output.FCU LOC  BUTTON LED ON": {
+		"method": "calcCode",
+		"code": "(L:A32NX_FCU_LOC_LIGHT_ON)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Output.AUTOPILOT APPR BUTTON LED ON ******DELETE THIS ONE******": {
+		"method": "calcCode",
+		"code": "(L:A32NX_FCU_APPR_LIGHT_ON)"
+	},
+	"Fly By Wire.A320-Dev.Autopilot.Output.FCU APPR BUTTON LED ON": {
+		"method": "calcCode",
+		"code": "(L:A32NX_FCU_APPR_LIGHT_ON)"
 	}
 }
