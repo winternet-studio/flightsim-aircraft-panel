@@ -183,7 +183,7 @@ TODO: complete the documentation of the attributes each instrument, with example
 	<td>lVar</td>
 	<td></td> <!-- Button -->
 	<td></td> <!-- Toggle -->
-	<td></td> <!-- Switch -->
+	<td>Yes</td> <!-- Switch -->
 	<td>Yes</td> <!-- KnobUpDown -->
 	<td>Yes</td> <!-- KnobTouchDrag -->
 	<td>Yes</td> <!-- Indicator -->
@@ -195,7 +195,7 @@ TODO: complete the documentation of the attributes each instrument, with example
 	<td>XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW</td>
 	<td></td> <!-- Button -->
 	<td></td> <!-- Toggle -->
-	<td></td> <!-- Switch -->
+	<td>Yes</td> <!-- Switch -->
 	<td>Yes</td> <!-- KnobUpDown -->
 	<td>Yes</td> <!-- KnobTouchDrag -->
 	<td>Yes</td> <!-- Indicator -->

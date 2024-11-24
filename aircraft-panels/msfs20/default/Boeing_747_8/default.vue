@@ -40,6 +40,9 @@
 	</div>
 
 	<div class="std-spacing thelights">
+		<Switch label="ENG ANTI-ICE" method="calcCode" refName="(L:B748_Engine_AntiIce_Switch_State:1, number) 1 == if{ 0 0 0 0 } els{ 1 1 1 1 } (>L:B748_Engine_AntiIce_Switch_State:1) (>L:B748_Engine_AntiIce_Switch_State:2) (>L:B748_Engine_AntiIce_Switch_State:3) (>L:B748_Engine_AntiIce_Switch_State:4)" readMethod="lVar" readRefName="B748_Engine_AntiIce_Switch_State:1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: true}" />
+
+		<div class="spacer-100"></div>
 		<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		<SectionDivider />
@@ -193,6 +196,7 @@ export default {
 					parkingBrake: 'brightOnValue',
 				},
 				lVar: {
+					'B748_Engine_AntiIce_Switch_State:1': 'brightOnValue',
 					XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW: {
 						inputOptions: { validValues: [0, 1, 2], inverseDirection: true },
 						toHtml: value => value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW',
