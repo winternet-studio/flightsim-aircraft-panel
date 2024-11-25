@@ -222,7 +222,7 @@ TODO: complete the documentation of the attributes each instrument, with example
 			lVar: {
 				XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW: {
 					inputOptions: { toggleValues: [0, 1, 2] },
-					toHtml: value => value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW',
+					toHtml: (value) => { return value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW' },
 				}
 			},
 		},
@@ -243,7 +243,7 @@ The value determine how the value is being displayed on the panel, it can be:
 		- A string, in which case it refers to a method in `FsuipcHtml` which holds commonly used formatting. They will return HTML.
 			- For Annunciators the return value will only be used to evaluate whether it is on or off, the actual content will not be used. You will normally use the `pass` method unless you need to convert the raw value.
 		- A function that will format and return HTML - which is defined within the setup() function. Used for aircraft-specific formatting.
-			- Eg. `value => value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW'`
+			- Eg. `(value) => { return value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW' }`
 	- `inputOptions`: One of these objects (where the values must be based on the internal converted values, not necessarily the raw values coming from FSUIPC):
 		- `{toggleValues: [3, 1] }` : Toggle between these values
 		- `{validValues: [0, 1, 2, 3, 4] }` : A list of valid values

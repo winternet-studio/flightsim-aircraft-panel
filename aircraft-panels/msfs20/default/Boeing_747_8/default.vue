@@ -199,7 +199,7 @@ export default {
 					'B748_Engine_AntiIce_Switch_State:1': 'brightOnValue',
 					XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW: {
 						inputOptions: { validValues: [0, 1, 2], inverseDirection: true },
-						toHtml: value => value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW',
+						toHtml: (value) => { return value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW' },
 					},
 				},
 			},
