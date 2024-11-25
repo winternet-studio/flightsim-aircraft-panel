@@ -529,6 +529,52 @@ if (!urlParams.has('config')) {
 
 			}, {debug: debug});
 		},
+
+		/**
+		 * @param {object[]} offsets See [[FsuipcConnection.declareAndMonitorOffsets()]]. Instead of offset objects it can also be a string with name of a known offset.
+		 */
+		restartOffsetMonitoring: (offsets, updateAircraftValues) => {
+			if (!connection) {
+				Common.showError('FSUIPC connection has not been established yet.'); return;
+			}
+			if (typeof offsets == 'undefined') {
+				offsets = connection.offsetsDeclaration;
+			} else {
+				// Convert strings with name only
+				offsets = offsets.map(item => {
+					if (typeof item == 'string') {
+						var obj = {};
+						obj[item] = true;  //value is not used for anything
+						var offsetsArray = Fsuipc.makeOffsetsArrayForAircraft(obj, offsetMap);
+						return offsetsArray[0];
+					}
+					return item;
+				});
+			}
+
+			if (updateAircraftValues) connection.options.allowUnknownOffsets = true;  // for testing panel
+			connection.undeclareOffsets('aircraftOffsets');
+			setTimeout(() => {
+				connection.declareAndMonitorOffsets('aircraftOffsets', offsets, updateAircraftValues);
+			}, 1000);
+		},
+
+		/**
+		 * @param {string[]} lVars See [[FsuipcConnection.declareAndMonitorLVars()]]
+		 */
+		restartLvarMonitoring: (lVars, updateAircraftValues) => {
+			if (!connection) {
+				Common.showError('FSUIPC connection has not been established yet.'); return;
+			}
+			if (typeof lVars == 'undefined') {
+				lVars = connection.lVarsDeclaration;
+			}
+
+			connection.undeclareLVars('aircraftLVars');
+			setTimeout(() => {
+				connection.declareAndMonitorLVars('aircraftLVars', lVars, updateAircraftValues);
+			}, 1000);
+		},
 	}
 
 	const options = {

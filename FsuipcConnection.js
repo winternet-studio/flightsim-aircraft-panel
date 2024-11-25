@@ -65,36 +65,17 @@ export default class FsuipcConnection {
 				],
 			});
 
+			// Get general sim values
+			this.sendMessage({
+				command: 'offsets.read',
+				name: 'simInfoOffsets',
+			});
+
 			// Declare offsets for aircraft and start monitoring them
 			if (typeof this.aircraftValues != 'undefined' && typeof this.aircraftValues.offset !== 'undefined') {
 				this.offsetsDeclaration = Fsuipc.makeOffsetsArrayForAircraft(this.aircraftValues.offset, this.offsetMap);
 
-				// Declare offsets to monitor
-				this.sendMessage({
-					command: 'offsets.declare',
-					name: 'aircraftOffsets',
-					offsets: this.offsetsDeclaration
-				});
-
-				// Get general sim values
-				this.sendMessage({
-					command: 'offsets.read',
-					name: 'simInfoOffsets',
-				});
-
-				// Get initial values (can't do this while monitoring on an interval)
-				this.sendMessage({
-					command: 'offsets.read',
-					name: 'aircraftOffsets',
-				});
-
-				// Start monitoring offsets
-				this.sendMessage({
-					command: 'offsets.read', // Tell the server to read offsets
-					name: 'aircraftOffsets', // An ID so we can match the response
-					interval: 100, // Send every 100ms - specify 0 for read once (no repeat)
-					changesOnly: true,
-				});
+				this.declareAndMonitorOffsets('aircraftOffsets', this.offsetsDeclaration);
 			}
 
 			// Declare vars (Lvars) for aircraft and start monitoring them
@@ -104,26 +85,7 @@ export default class FsuipcConnection {
 					this.lVarsDeclaration.push({name: key});
 				});
 
-				// Declare vars to monitor
-				this.sendMessage({
-					command: 'vars.declare',
-					name: 'aircraftLVars',
-					vars: this.lVarsDeclaration
-				});
-
-				// Get initial values (can't do this while monitoring on an interval)
-				this.sendMessage({
-					command: 'vars.read',
-					name: 'aircraftLVars',
-				});
-
-				// Start monitoring vars
-				this.sendMessage({
-					command: 'vars.read', // Tell the server to read vars
-					name: 'aircraftLVars', // An ID so we can match the response
-					interval: 100, // Send every 100ms - specify 0 for read once (no repeat)
-					changesOnly: true,
-				});
+				this.declareAndMonitorLVars('aircraftLVars', this.lVarsDeclaration);
 			}
 
 /*
@@ -189,11 +151,12 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 								if (typeof response.data[refName] != 'undefined') {
 									// regular offset
 									rawValue = response.data[refName];
-								} else if (!this.offsetMap[refName]) {
+								} else if (!this.offsetMap[refName] && !this.options.allowUnknownOffsets) {
 									// offset has not been defined
 									Common.showError('The offset '+ refName +' has not been defined. Skipping.');
 									return true;
 								} else if (
+									typeof this.offsetMap[refName] != 'undefined' &&
 									typeof this.offsetMap[refName].bit != 'undefined' &&
 									typeof response.data[ this.offsetMap[refName].address ] != 'undefined' &&
 									typeof response.data[ this.offsetMap[refName].address ][ this.offsetMap[refName].bit ] != 'undefined') {
@@ -278,6 +241,103 @@ CODE FOR SETTING A GIVEN LAT/LON AND ALTITUDE! (CAN'T BE USED WITHIN BUSH TRIPS 
 			console.log('%cSENT\n'+ JSON.stringify(request, null, 2), 'color: green');
 		}
 		this.ws.send(JSON.stringify(request));
+	}
+
+	/**
+	 * @param {string[]} groupName Your name for this group of offsets
+	 * @param {object[]} offsets Array of offset objects according to http://fsuipcwebsockets.paulhenty.com/#jsonoffsetsdeclare
+	 *                           Can be created using [[Fsuipc.makeOffsetsArrayForAircraft()]]
+	 */
+	declareAndMonitorOffsets(groupName, offsets, updateAircraftValues) {
+		// Declare offsets to monitor
+		this.sendMessage({
+			command: 'offsets.declare',
+			name: groupName,
+			offsets: offsets,
+		});
+
+		if (updateAircraftValues) {  //no need for this when the standard implementation calls this function, it's mainly for the testing panel where we dynamically change values to monitor. And it's needed for processing the incoming responses above.
+			offsets.forEach(item => {
+				if (typeof this.aircraftValues.offset[item.name] == 'undefined') {
+					this.aircraftValues.offset[item.name] = 'pass';
+				}
+			});
+		}
+
+		// Get initial values (can't do this while monitoring on an interval)
+		this.sendMessage({
+			command: 'offsets.read',
+			name: groupName,
+		});
+
+		// Start monitoring offsets
+		this.sendMessage({
+			command: 'offsets.read', // Tell the server to read offsets
+			name: groupName, // An ID so we can match the response
+			interval: 100, // Send every 100ms - specify 0 for read once (no repeat)
+			changesOnly: true,
+		});
+	}
+
+	/**
+	 * @param {string[]} groupName Your name for this group of lVars
+	 * @param {string[]} lVars Array of Lvar names to monitor
+	 */
+	declareAndMonitorLVars(groupName, lVars, updateAircraftValues) {
+		// Declare vars to monitor
+		this.sendMessage({
+			command: 'vars.declare',
+			name: groupName,
+			vars: lVars,
+		});
+
+		if (updateAircraftValues) {  //no need for this when the standard implementation calls this function, it's mainly for the testing panel where we dynamically change values to monitor. And it's needed for processing the incoming responses above.
+			lVars.forEach(item => {
+				if (typeof this.aircraftValues.lVar[item.name] == 'undefined') {
+					this.aircraftValues.lVar[item.name] = 'pass';
+				}
+			});
+		}
+
+		// Get initial values (can't do this while monitoring on an interval)
+		this.sendMessage({
+			command: 'vars.read',
+			name: groupName,
+		});
+
+		// Start monitoring vars
+		this.sendMessage({
+			command: 'vars.read', // Tell the server to read vars
+			name: groupName, // An ID so we can match the response
+			interval: 100, // Send every 100ms - specify 0 for read once (no repeat)
+			changesOnly: true,
+		});
+	}
+
+	undeclareOffsets(groupName) {
+		// Stop monitoring
+		this.sendMessage({
+			command: 'offsets.stop',
+			name: groupName,
+		});
+		// Remove group
+		this.sendMessage({
+			command: 'offsets.remove',
+			name: groupName,
+		});
+	}
+
+	undeclareLVars(groupName) {
+		// Stop monitoring
+		this.sendMessage({
+			command: 'vars.stop',
+			name: groupName,
+		});
+		// Remove group
+		this.sendMessage({
+			command: 'vars.remove',
+			name: groupName,
+		});
 	}
 
 }
