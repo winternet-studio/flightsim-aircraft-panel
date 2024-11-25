@@ -553,7 +553,9 @@ if (!urlParams.has('config')) {
 		},
 	}
 	var panelInfo = {path: (aircraftPanelId + '-vue').split('/')};
-	var app = Vue.createApp(Vue.defineAsyncComponent(() => loadModule('aircraft-panels/'+ aircraftPanelId +'.vue?_='+ new Date().getTime(), options)), {dataStore, eventHandlers, panelInfo}).mount('#aircraft-specific-component');
+	var app = Vue.createApp(Vue.defineAsyncComponent(() => loadModule('aircraft-panels/'+ aircraftPanelId +'.vue?_='+ new Date().getTime(), options)), {dataStore, eventHandlers, panelInfo})
+	// NOT CURRENTLY USED. app.provide('appData', { offsetMap });  //used with inject() within any child component
+	app.mount('#aircraft-specific-component');
 }
 
 function sendPresetCommand(commandName) {

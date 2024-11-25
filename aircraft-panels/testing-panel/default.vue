@@ -95,6 +95,8 @@ export default {
 	setup(props) {
 		props.eventHandlers.onPanelLoad({});  //currently this must be defined even though it's empty...
 
+		// const appData = inject('appData');
+
 		var inputCopies = 7;
 
 		const offset = ref([]);
