@@ -2,10 +2,10 @@
 
 [Microsoft Flight Simulator](https://www.flightsimulator.com/) aircraft panel for touch screens using [FSUIPC WebSocket Server](http://fsuipcwebsockets.paulhenty.com/).
 
-**!!! THIS IS A PROJECT IN DEVELOPMENT !!!**<br>
-Only relevant for you if you are a programmer and know what you are doing. You are welcome to take a look and do pull requests if you have
-any suggestions for improvement.
+**PROJECT IS IN DEVELOPMENT**<br>
+The project is not fully developed but is usable. Some technical knowledge is required though at this point.
 Eventually it will be more polished and well documented so that anyone can set it up.
+You are welcome to take a look and do pull requests if you have any suggestions for improvement.
 
 You're welcome to take a look at my online services at [aviation.allanville.com](https://aviation.allanville.com/).
 
@@ -14,7 +14,7 @@ You're welcome to take a look at my online services at [aviation.allanville.com]
 - A browser! (only tested with Chrome and Firefox (dragging touch events do not work in Firefox though))
 - A touch screen monitor or tablet or phone (otherwise you still have to use the mouse)
 	- Any touch screen will work but of course the larger the better. As of 2020 the best touch screen monitor seems to be the [23" Acer T232HL](https://www.acer.com/ac/en/US/content/model/UM.VT2AA.A01). They also have a [27" version, T272HL](https://www.acer.com/ac/en/US/content/model/UM.HT2AA.003).
-- [Microsoft Flight Simulator 2020](https://www.flightsimulator.com/) or any flight simulator supported by FSUIPC
+- [Microsoft Flight Simulator 2020](https://www.flightsimulator.com/) (and *2024* when FSUIPC supports it) or any flight simulator supported by FSUIPC
 - [FSUIPC7](http://fsuipc.com/) (free)
 - [FSUIPC WebSocket Server](http://fsuipcwebsockets.paulhenty.com/) (free)
 
@@ -33,9 +33,13 @@ when you don't want to use the mouse and don't have a hardware panel.
 You can also monitor other values from your aircraft. So this can even be better than a hardware panel that only has buttons but doesn't give you any feedback on the state of the function. For that very reason I'm not even using all the hardware buttons I have.
 This uses [FSUIPC](http://fsuipc.com/) and is limited to its capabilities.
 
-Nothing speaks better than a visualization - this is a simple example screen:
+Nothing speaks better than a visualization - here are a couple of example screens:
 
-![Example screen of an aircraft panel](https://aviation.allanville.com/media/flightsim-aircraft-panel-example.jpg "Example screen")
+![Example screen of an GA aircraft panel](https://aviation.allanville.com/media/flightsim-aircraft-panel-example.jpg "Example screen")
+
+![Example screen of an Boeing 747-8 aircraft panel](https://aviation.allanville.com/media/flightsim-aircraft-panel-example-747.jpg "Example screen")
+
+The idea is also that it should be simple to add and modify the layouts so you can easily use it for different aircraft and add a new features. The project attempts to wrap all the complex code into simple function and attributes you can use for configuring the panels.
 
 You might wonder why there are no auto-pilot or radio functions added yet but that's because I have a separate hardware panel for that (VRInsight MCP Combo I) so I haven't really had a need to add them yet.
 
@@ -44,10 +48,15 @@ You might wonder why there are no auto-pilot or radio functions added yet but th
 
 ### Installation
 
-JUST INCOMPLETE NOTES SO FAR.
+INCOMPLETE NOTES SO FAR.
 
-- ...set up FSUIPC and FSUIPC WebSocker Server...
+- ...set up FSUIPC and FSUIPC WebSocket Server...
 	- do we need to manually add/adjust hVar files in FSUIPC HvarFiles folder? See also https://forum.simflight.com/topic/90512-best-way-to-make-browser-interface-with-fsuipc/page/3/#comments
+- Run the webserver: `webserver\RebexTinyWebServer.exe` (no installation)
+- Open browser at `http://localhost:1180` (or for a device on your network, replace `localhost` with the server IP shown in Rebex Tiny Web Server window)
+
+#### Special setup
+
 - To overlay eg. the G1000 displays on your panels click on the display in MSFS while holding down the Alt-Gr key (the Alt key on the **right** side of your keyboard). The window will now pop out and your can move it where you want. Keep in mind that you can only do this if you have your panels on the same computer as your flight simulator.
 	- To have the displays show on top of your panel we need to make the Flight Simulator windows top-most and remove title bar
 		- Use command line program [NirCmd](https://www.nirsoft.net/utils/nircmd.html) (no installation)
@@ -310,4 +319,4 @@ You can send them to me or do a pull request.
 ### Testing Panel
 
 Opening `index.htm?config=msfs20/default/TestingPanel/default` allows you to easily test sending different actions to the sim
-(hVars, simControls, MobiFlight HubHop presets, and calculator code). Great for testing if a given action actually works.
+(offsets, lVars, hVars, simControls, MobiFlight HubHop presets, and calculator code). Great for testing if a given action actually works.
