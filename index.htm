@@ -176,10 +176,11 @@ if (!urlParams.has('config')) {
 				inputOptions = storedPanelConfig?.watchValues?.lVar[refName]?.inputOptions ?? lVarOptions[refName];
 				if (newInternalValue != null) {
 					newValue = newInternalValue;
-				} else if (inputOptions.toggleValues) {
+				} else if (inputOptions?.toggleValues) {
 					newValue = Common.getNextToggleValue(inputOptions.toggleValues, currInternalValue);
 				} else {
-					console.error('Dont know how to determine new value for lVar name '+ refName + '.');
+					Common.showError('Dont know how to determine new value for lVar name '+ refName + '. Missing inputOptions.toggleValues?');
+					return;
 				}
 				if (newValue != null) {
 					newValue = Fsuipc.internalToRawConversion(aircraftPanelId, method, refName, newValue);

@@ -39,16 +39,26 @@
 		<Button label="APU START" method="presetCommand" refName="Asobo.747-8i.Electrical.Input.APU START" :eventHandlers="eventHandlers" />
 	</div>
 
-	<div class="std-spacing thelights">
-		<Switch label="ENG ANTI-ICE" method="calcCode" refName="(L:B748_Engine_AntiIce_Switch_State:1, number) 1 == if{ 0 0 0 0 } els{ 1 1 1 1 } (>L:B748_Engine_AntiIce_Switch_State:1) (>L:B748_Engine_AntiIce_Switch_State:2) (>L:B748_Engine_AntiIce_Switch_State:3) (>L:B748_Engine_AntiIce_Switch_State:4)" readMethod="lVar" readRefName="B748_Engine_AntiIce_Switch_State:1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: true}" />
+	<div class="grid-container std-spacing section-y thelights">
 
-		<div class="spacer-100"></div>
-		<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<SectionDivider />
-		<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
-		<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		<div class="left-edge">
+			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</div>
+		<div class="center-column">
+			<Switch label="ENG1 ANTI-ICE" method="calcCode" refName="(L:B748_Engine_AntiIce_Switch_State:1, number) 1 == if{ 0 } els{ 1 } (>L:B748_Engine_AntiIce_Switch_State:1)" readMethod="lVar" readRefName="B748_Engine_AntiIce_Switch_State:1" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: true}" />
+			<Switch label="ENG2 ANTI-ICE" method="calcCode" refName="(L:B748_Engine_AntiIce_Switch_State:2, number) 1 == if{ 0 } els{ 1 } (>L:B748_Engine_AntiIce_Switch_State:2)" readMethod="lVar" readRefName="B748_Engine_AntiIce_Switch_State:2" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: true}" />
+			<Switch label="ENG3 ANTI-ICE" method="calcCode" refName="(L:B748_Engine_AntiIce_Switch_State:3, number) 1 == if{ 0 } els{ 1 } (>L:B748_Engine_AntiIce_Switch_State:3)" readMethod="lVar" readRefName="B748_Engine_AntiIce_Switch_State:3" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: true}" />
+			<Switch label="ENG4 ANTI-ICE" method="calcCode" refName="(L:B748_Engine_AntiIce_Switch_State:4, number) 1 == if{ 0 } els{ 1 } (>L:B748_Engine_AntiIce_Switch_State:4)" readMethod="lVar" readRefName="B748_Engine_AntiIce_Switch_State:4" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: true}" />
+		</div>
+		<div class="right-edge">
+			<Switch label="LANDING" method="offset" refName="lightsLanding" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="TAXI" method="offset" refName="lightsTaxi" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<SectionDivider />
+			<Switch label="BEACON" method="offset" refName="lightsBeacon" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="NAV" method="offset" refName="lightsNav" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+			<Switch label="STROBE" method="offset" refName="lightsStrobe" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
+		</div>
+
 	</div>
 
 	<div class="grid-container grid-33-33-33 mcp-panel">
@@ -130,7 +140,18 @@
 			<Indicator label="Flaps" method="offset" refName="flapsPositionLeft" :dataStore="dataStore" />
 		</div>
 		<div class="right-edge">
+		</div>
+
+	</div>
+
+	<div class="grid-container std-spacing section-y">
+
+		<div class="left-edge">
+		</div>
+		<div class="center-column">
 			<Switch label="PARK BRAKE" method="offset" refName="parkingBrake" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+		</div>
+		<div class="right-edge">
 		</div>
 
 	</div>
@@ -139,12 +160,12 @@
 
 		<div class="left-edge">
 			<Button label="MASTER CAUTION" method="simControl" refName="MASTER_CAUTION_ACKNOWLEDGE" setValue="0" :eventHandlers="eventHandlers" />
-			<KnobUpDown label="TCAS" method="lVar" refName="XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW" readMethod="lVar" readRefName="XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		</div>
 		<div class="center-column">
+			<Switch label="SEATBELTS" method="lVar" refName="WT_SEAT_BELTS_MODE" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		</div>
 		<div class="right-edge">
-			<Switch label="DOME LTS" method="offset" refName="lightsCabin" :dataStore="dataStore" :eventHandlers="eventHandlers" />
+			<KnobUpDown label="TCAS" method="lVar" refName="XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW" readMethod="lVar" readRefName="XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW" :dataStore="dataStore" :eventHandlers="eventHandlers" :options="{sound: false}" />
 		</div>
 
 	</div>
@@ -197,6 +218,13 @@ export default {
 				},
 				lVar: {
 					'B748_Engine_AntiIce_Switch_State:1': 'brightOnValue',
+					'B748_Engine_AntiIce_Switch_State:2': 'brightOnValue',
+					'B748_Engine_AntiIce_Switch_State:3': 'brightOnValue',
+					'B748_Engine_AntiIce_Switch_State:4': 'brightOnValue',
+					WT_SEAT_BELTS_MODE: {
+						inputOptions: { toggleValues: [2, 0] },  //toggle ON/OFF (knob in sim doesn't move though!)
+						toHtml: (value) => { return value == 1 ? 'AUTO' : value == 0 ? 'OFF' : 'ON' },
+					},
 					XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW: {
 						inputOptions: { validValues: [0, 1, 2], inverseDirection: true },
 						toHtml: (value) => { return value == 1 ? 'N' : value == 0 ? 'ABV' : 'BLW' },
