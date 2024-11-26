@@ -116,9 +116,13 @@ JUST INCOMPLETE NOTES SO FAR.
 | hVar | WASM HVars | `refName="AS1000_PFD_RANGE_INC"` |  |
 | simControl | Native sim control, defined in /databases/MsfsControlsList.txt | `refName="MASTER_WARNING_ACKNOWLEDGE"` | `setValue="0"` |
 | presetCommand | MobiFlight presets from HubHop, defined in /databases/MobiFlightHubHopPresets.js.<br>Can be extended or overwritten by our own presets defined in presetCommands() in Fsuipc.js. | `refName="Asobo.Cessna 172.Autopilot.C_172_AP"` <br><br> `refName="autoSetAltimeter"` <br><br> Use two different presets for a toggle:<br>`:refName="{0: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_OFF', 1: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_ON'}"`<br>0 and 1 are the internal converted values, not necessarily the raw values coming from FSUIPC. _Note the colon before refName!_ | |
-| calcCode | Execute WASM "Calculator Code" | `25 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)` | |
+| calcCode | Execute WASM "Calculator Code" | `1 (>L:B748_Engine_AntiIce_Switch_State:1)`<br>`(L:B748_Engine_AntiIce_Switch_State:1, number) 1 == if{ 0 } els{ 1 } (>L:B748_Engine_AntiIce_Switch_State:1)`<br>`25 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)` | |
 
 All methods can be used for setting values (input), but only offsets and LVars can be used for monitoring values (output).
+
+##### SimVar?
+
+Is it possible to work with [SimVars](https://docs.flightsimulator.com/html/Programming_Tools/SimVars/Simulation_Variables.htm) in Calculator Code? MobiFlight HubHop show these as prefixed with `A:`.
 
 #### Instrument/button configuration
 
@@ -130,7 +134,6 @@ TODO: complete the documentation of the attributes each instrument, with example
 	<th>Description</th>
 	<th>Examples</th>
 	<th>Button</th>
-	<th>Toggle</th>
 	<th>Switch</th>
 	<th>KnobUpDown</th>
 	<th>KnobTouchDrag</th>
@@ -142,12 +145,24 @@ TODO: complete the documentation of the attributes each instrument, with example
 	<td>Using offset</td>
 	<td>antiIceEng1</td>
 	<td>Yes</td> <!-- Button -->
-	<td>Yes</td> <!-- Toggle -->
 	<td>Yes</td> <!-- Switch -->
-	<td></td> <!-- KnobUpDown -->
-	<td></td> <!-- KnobTouchDrag -->
-	<td></td> <!-- Indicator -->
-	<td></td> <!-- Annunciator -->
+	<td>Yes</td> <!-- KnobUpDown -->
+	<td>Yes</td> <!-- KnobTouchDrag -->
+	<td>Yes</td> <!-- Indicator -->
+	<td>Yes</td> <!-- Annunciator -->
+</tr>
+<tr>
+	<td>refName</td>
+	<td>Using lVar</td>
+	<td>
+		XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW
+	</td>
+	<td>Yes</td> <!-- Button -->
+	<td>Yes</td> <!-- Switch -->
+	<td>Yes 1)</td> <!-- KnobUpDown -->
+	<td>Yes</td> <!-- KnobTouchDrag -->
+	<td>Yes</td> <!-- Indicator -->
+	<td>Yes</td> <!-- Annunciator -->
 </tr>
 <tr>
 	<td>:refName</td>
@@ -156,23 +171,8 @@ TODO: complete the documentation of the attributes each instrument, with example
 		{0: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_OFF', 1: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_DIM', 2: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_DOME_BRT'}
 	</td>
 	<td></td> <!-- Button -->
-	<td></td> <!-- Toggle -->
 	<td></td> <!-- Switch -->
 	<td>Yes</td> <!-- KnobUpDown -->
-	<td></td> <!-- KnobTouchDrag -->
-	<td></td> <!-- Indicator -->
-	<td></td> <!-- Annunciator -->
-</tr>
-<tr>
-	<td>refName</td>
-	<td>Using lVar</td>
-	<td>
-		XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW
-	</td>
-	<td></td> <!-- Button -->
-	<td></td> <!-- Toggle -->
-	<td></td> <!-- Switch -->
-	<td>Yes 1)</td> <!-- KnobUpDown -->
 	<td></td> <!-- KnobTouchDrag -->
 	<td></td> <!-- Indicator -->
 	<td></td> <!-- Annunciator -->
@@ -181,37 +181,34 @@ TODO: complete the documentation of the attributes each instrument, with example
 	<td>readMethod</td>
 	<td></td>
 	<td>lVar</td>
-	<td></td> <!-- Button -->
-	<td></td> <!-- Toggle -->
+	<td>No</td> <!-- Button -->
 	<td>Yes</td> <!-- Switch -->
 	<td>Yes</td> <!-- KnobUpDown -->
 	<td>Yes</td> <!-- KnobTouchDrag -->
-	<td>Yes</td> <!-- Indicator -->
-	<td></td> <!-- Annunciator -->
+	<td>No</td> <!-- Indicator -->
+	<td>No</td> <!-- Annunciator -->
 </tr>
 <tr>
 	<td>readRefName</td>
 	<td>Using lVar</td>
 	<td>XMLVAR_ATC_AIRSPACE_MODE_ABV_BLW</td>
-	<td></td> <!-- Button -->
-	<td></td> <!-- Toggle -->
+	<td>No</td> <!-- Button -->
 	<td>Yes</td> <!-- Switch -->
 	<td>Yes</td> <!-- KnobUpDown -->
 	<td>Yes</td> <!-- KnobTouchDrag -->
-	<td>Yes</td> <!-- Indicator -->
-	<td></td> <!-- Annunciator -->
+	<td>No</td> <!-- Indicator -->
+	<td>No</td> <!-- Annunciator -->
 </tr>
 <tr>
 	<td>:options</td>
 	<td></td>
 	<td>{sound: false}</td>
 	<td>Yes</td> <!-- Button -->
-	<td>Yes</td> <!-- Toggle -->
 	<td>Yes</td> <!-- Switch -->
 	<td>Yes</td> <!-- KnobUpDown -->
 	<td>Yes</td> <!-- KnobTouchDrag -->
-	<td></td> <!-- Indicator -->
-	<td></td> <!-- Annunciator -->
+	<td>Yes</td> <!-- Indicator -->
+	<td>Yes</td> <!-- Annunciator -->
 </tr>
 </table>
 
