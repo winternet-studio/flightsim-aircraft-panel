@@ -22,6 +22,7 @@
 <script type="module">
 import * as Vue from 'https://unpkg.com/vue@3/dist/vue.runtime.esm-browser.js';
 import { loadModule } from 'https://cdn.jsdelivr.net/npm/vue3-sfc-loader@0.8.4/dist/vue3-sfc-loader.esm.js';
+import Http from 'https://cdn.jsdelivr.net/npm/jensen-js-essentials@1.6.0/src/Http.js';
 import Common from './Common.js';
 import Fsuipc from './Fsuipc.js';
 import FsuipcConnection from './FsuipcConnection.js';
@@ -235,6 +236,8 @@ if (!urlParams.has('config')) {
 					name: 'calc',
 					code: calculatorCode,
 				});
+			} else if (method === 'restApi') {
+				sendRestApiRequest(refName);
 			}
 		},
 
@@ -626,6 +629,26 @@ function sendPresetCommand(commandName) {
 	} else {
 		console.error('Dont know how to handle method '+ presetCommands[commandName].method + ' in event handler.');
 	}
+}
+
+function sendRestApiRequest(refName) {
+	let method, url, jsonBody, urlencodedBody, formDataBody;
+	if (typeof refName === 'object') {
+		method = refName.method ?? 'GET';
+		url = refName.url;
+		jsonBody = refName.jsonBody ?? undefined;
+		urlencodedBody = refName.urlencodedBody ?? undefined;
+		formDataBody = refName.formDataBody ?? undefined;
+	} else {
+		method = 'GET';
+		url = refName;
+	}
+
+	Http.standardRequest(method, url, {
+		jsonBody: jsonBody,
+		urlencodedBody: urlencodedBody,
+		formDataBody: formDataBody,
+	});
 }
 
 console.log('AIRCRAFT PANEL: '+ aircraftPanelId);

@@ -126,6 +126,7 @@ JUST INCOMPLETE NOTES SO FAR.
 | simControl | Native sim control, defined in /databases/MsfsControlsList.txt | `refName="MASTER_WARNING_ACKNOWLEDGE"` | `setValue="0"` |
 | presetCommand | MobiFlight presets from HubHop, defined in /databases/MobiFlightHubHopPresets.js.<br>Can be extended or overwritten by our own presets defined in presetCommands() in Fsuipc.js. | `refName="Asobo.Cessna 172.Autopilot.C_172_AP"` <br><br> `refName="autoSetAltimeter"` <br><br> Use two different presets for a toggle:<br>`:refName="{0: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_OFF', 1: 'FenixSim.A320.Lights.Input.FNX320_LIGHT_RWY_TURNOFF_ON'}"`<br>0 and 1 are the internal converted values, not necessarily the raw values coming from FSUIPC. _Note the colon before refName!_ | |
 | calcCode | Execute WASM "Calculator Code" | `1 (>L:B748_Engine_AntiIce_Switch_State:1)`<br>`(L:B748_Engine_AntiIce_Switch_State:1, number) 1 == if{ 0 } els{ 1 } (>L:B748_Engine_AntiIce_Switch_State:1)`<br>`25 (>K:ELECTRICAL_CIRCUIT_TOGGLE) 2 (>K:ELECTRICAL_BUS_TO_BUS_CONNECTION_TOGGLE)` | |
+| restApi | Call a REST API endpoint | `:refName="{'method': 'POST', 'url': 'http://localhost:8085/fs-volume/up', 'jsonBody': {'level': 15}}"`<br>application/x-www-form-urlencoded: `'urlencodedBody': {'level': 15}`<br>multipart/form-data: `'formDataBody': (() => { let fd = new FormData(); fd.append('level', 15); return fd; })()` | |
 
 All methods can be used for setting values (input), but only offsets and LVars can be used for monitoring values (output).
 
